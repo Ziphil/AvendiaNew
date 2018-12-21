@@ -1,0 +1,13 @@
+﻿\zml?|version="1.0"|>
+\xml?|version="1.0",encoding="UTF-8"|>
+
+\page<
+  \name<Error>
+  \base|href="/error/"|>
+
+  \error<
+    \code<403>
+    \message<Your access has been denied.>
+  >
+
+>

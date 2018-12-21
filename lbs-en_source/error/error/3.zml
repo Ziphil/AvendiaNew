@@ -1,0 +1,13 @@
+﻿\zml?|version="1.0"|>
+\xml?|version="1.0",encoding="UTF-8"|>
+
+\page<
+  \name<Error>
+  \base|href="/error/"|>
+
+  \error<
+    \code<500>
+    \message<An error has occurred on the server.>
+  >
+
+>

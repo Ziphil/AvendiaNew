@@ -1,0 +1,224 @@
+﻿\zml?|version="1.0"|>
+\xml?|version="1.0",encoding="UTF-8"|>
+
+\page<
+  \name<デザインチェック>
+
+  \h1<第 1 見出し>
+  \p<
+    第 1 見出しの直後に段落があるパターンです。
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  >
+  \p<
+    引き続き段落があります。
+    \a<リンク>が文章中に\a<このように>挟まることがあります。
+    \a<\h<1988>> のように、上付き文字がリンク文字に入る可能性があります。
+  >
+  \p<
+    ハイリア数は、上付き文字を用いて \h<2203> のように表示するのが一般的です。
+    また、3\sup<15> や A\sub<2> などの上付き文字や下付き文字の表示も調整してください。
+  >
+  \p<
+    日記などの個人情報を含む資料を公開する場合は、適宜個人名などを削除してください。
+    \red|length="12"|>のようにすると削除できます。
+    なんかこれはこれで怪しさが増しますね。
+  >
+  \h1<第 1 見出し>
+  \h2|number="3"|<第 2 見出し>
+  \p<
+    第 1 見出しの後に第 2 見出しが続き、その後に段落があるパターンです。
+  >
+  \p<
+    シャレイア語表記はエスケープできます。
+    例えば、ZenML の実体参照を用いて &lcub>escaped&rcub> や &lsqb>escaped&rsqb> などともできますが、推奨されません。
+  >
+  \h2|number="5"|<第 2 見出し>
+  \p<
+    第 2 見出しの連続です。
+  >
+  \h2|number="18"|<第 2 見出し>
+  \p<
+    さらに第 2 見出しの連続です。
+  >
+  \h1<シャレイア語 {sâfat a loc}>
+  \h2|number="22"|<{xalér}>
+  \p<
+    見出しにはシャレイア語が入る場合があります。
+  > 
+  \h1<リスト>
+  \h2|number="22"|<番号なしリスト>
+  \p<
+    これは段落です。
+  >
+  \ul<
+    \li<番号なしリスト 1>
+    \li<番号なしリスト 2>
+    \li<sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo>
+  >
+  \p<
+    これは段落です。
+  >
+  \h2|number="24"|<番号ありリスト>
+  \ol<
+    \li<番号なしリスト 1>
+    \li<番号なしリスト 2>
+    \li<sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo>
+  >
+  \p<
+    This is an awesome paragraph.
+  >
+  \h2|number="99"|<多段組>
+  \p<
+    多段組も可能です。
+    2 段組と 3 段組に対応しています。
+    それ以上の段組みには対応してませんが、まあ使うことはあまりないと思うのでこれで良いでしょう。
+  >
+  \ol|class="triple"|<
+    \li<番号なしリスト 1>
+    \li<番号なしリスト 2>
+    \li<番号なしリスト 3>
+    \li<番号なしリスト 4>
+    \li<番号なしリスト 5>
+    \li<番号なしリスト 6>
+    \li<番号なしリスト 7>
+    \li<番号なしリスト 8>
+    \li<番号なしリスト 9>
+    \li<番号なしリスト 10>
+  >
+  \p<
+    This is a paragraph.
+  >
+  \ul|class="triple"|<
+    \li<番号なしリスト 1>
+    \li<番号なしリスト 2>
+    \li<番号なしリスト 3 はときどきある非常に長い箇条書きの項目ですが良い感じに表示されると嬉しいです>
+    \li<番号なしリスト 4>
+    \li<番号なしリスト 5>
+    \li<番号なしリスト 6>
+    \li<番号なしリスト 7>
+    \li<番号なしリスト 8>
+    \li<番号なしリスト 9>
+    \li<番号なしリスト 10>
+  >
+  \h2|number="1"|<羅列リスト>
+  \p<
+    以下のような、項目名とその内容を羅列するタイプのリストもあります。
+    見た目はリストですが、HTML では \m<table> タグで実装しています。
+    ZpML での記述も \m<ul> タグなどとはちょっと違います。
+  >
+  \el<
+    \li<\et<項目 1>\ed<内容 1>>
+    \li<\et<項目 2>\ed<内容 1>>
+    \li<\et<長い項目名>\ed<やっほー>>
+  >
+  \h1<目次>
+  \section-table>
+  \h1<番号付き段落>
+  \p|par="1"|<
+    考察点などを記す際に、どこの文章のことを言っているか分かるように段落の番号を表示することがあります。
+    これは、複数の行にまたがるような長い段落の例です。
+    そう、これは長い段落の例です。
+  >
+  \p|par="2"|<
+    考察点などを記す際に、どこの文章のことを言っているか分かるように段落の番号を表示することがあります。
+    これは、複数の行にまたがるような長い段落の例です。
+    そう、これは長い段落の例です。
+  >
+  \p|par="3"|<
+    短い段落です。
+  >
+  \p|par="10"|<
+    短い段落です。
+  >
+  \p|par="45"|<
+    考察点などを記す際に、どこの文章のことを言っているか分かるように段落の番号を表示することがあります。
+    これは、複数の行にまたがるような長い段落の例です。
+    そう、これは長い段落の例です。
+  >
+  \h1<例文の箇条書き>
+  \p<
+    言語サイトなので、文章の途中に例文が挟まるときがあります。
+  >
+  \xl<
+    \li<\sh<{kiles a tel te tazik e kin ricamos a tel.}>\ja<私は昨日泳ぐことができるようになった。>>
+    \li<\sh<{vade salot a qinat afik e asokes o axodol ebam, ditat yalfesis a loc e cit.}>\ja<この絵画はとても重要で高価なものなので、大切に扱いなさい。>>
+  >
+  \p<
+    段落。
+  >
+  \h1<ソースコード>
+  \p<
+    たまにソースコードを扱うので、等幅フォントで表示させます。
+    コード中に計算を表示して、出力結果などを書きたいときもあります。
+  >
+  \p<
+    コード中の変数 \m<variable> の定義を \c<1 + "sas"> のようにするとダメです。
+    以下がその例です。
+  >
+  \pre~<
+    variable = 1 + "sas"
+    puts(variable)
+    def indent
+      indented_block.each do |i|
+        i += 1
+      end
+    end
+  >
+  \samp~<
+    ****.rb:11:in `+': String can't be coerced into Integer (TypeError)
+      from ****:11:in `&lt>main&gt>'
+  >
+  \h1<会話文>
+  \p<
+    会話形式の講座などで、会話文を表示することがあります。
+  >
+  \tablec<\cz<\p<
+    これは私の台詞です。
+  >
+  \xl<
+    \li<\sh<{sîya.}>\ja<例文が挟まります。>>
+  >>
+  \cf<\p<
+    わーい!
+  >>
+  \cz<\p<
+    Lorsque j'avais six ans j'ai vu, une fois, une magnifique image, dans un livre sur la Forêt Vierge qui s'appelait “Histoires Vécues”.
+    Ça représentait un serpent boa qui avalait un fauve.
+    Voilà la copie du dessin.
+  >
+  \p<
+    On disait dans le livre: “Les serpents boas avalent leur proie tout entière, sans la mâcher.
+    Ensuite ils ne peuvent plus bouger et ils dorment pendant les six mois de leur digestion.”
+  >>>
+  \h1<対訳>
+  \p<
+    歌詞の翻訳などでは、原文と訳文を並べて表示したくなります。
+  >
+  \trans<
+    \li<\ja<歌詞 1>\sh<{salat a fit e lêdik il'atis,}>>
+    \li<\ja<歌詞 2>\sh<{lo salat a fit e lêdik il'aqec.}>>
+    \li<\ja<歌詞 3>\sh<{lo salat a fit e lêdik il'ayos.}>>
+  >
+  \h1<フォーム>
+  \p<
+    以下はテキストエリアです。
+  >
+  \form<
+    \textarea|class="normal",name="content",cols="50",rows="6"|<>\br>
+    \input|type="submit",name="mode",value="決定"|<>
+  >
+  \p<
+    以下は \m<input> タグを用いたフォームとしてのボタンと、\m<a> タグをそれっぽい見た目にしてボタンのように表示しているものです。
+    ほとんど同じ見た目になっていることを確認してください。
+  >
+  \form<
+    \input|type="submit",name="mode",value="ボタン"|> \a|class="form"|<ボタン>
+  >
+  \p<
+    ここにあるフォームは実際には動きません。
+  >
+
+>

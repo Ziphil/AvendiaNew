@@ -1,0 +1,22 @@
+﻿\zml?|version="1.0"|>
+\xml?|version="1.0",encoding="UTF-8"|>
+
+\page<
+  \name<文字フォント>
+  \ver<5 代 5 期>
+
+  \h1<文字フォント>
+  \h2<Shaleian>
+  \img|src="../../file/other/50.png"|>
+  \p<
+    アド様 (\a|href="https://dirdam.github.io/",target="_blank"|<GitHub Pages>) に作っていただいた、新シャレイア文字のフォントです。
+    フォントファイルの著作権はアド様に帰属します。
+  >
+  \p<
+    アルファベットと数字および一部の記号が含まれます。
+  >
+  \form<
+    \a|class="form",href="https://www.dropbox.com/s/cllfqzlusab2pi0/Shaleian.otf?dl=0",target="_blank"|<ダウンロード>
+  >
+
+>

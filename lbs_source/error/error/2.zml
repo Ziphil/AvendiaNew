@@ -1,0 +1,13 @@
+﻿\zml?|version="1.0"|>
+\xml?|version="1.0",encoding="UTF-8"|>
+
+\page<
+  \name<エラー>
+  \base|href="/error/"|>
+
+  \error<
+    \code<403>
+    \message<アクセスが拒否されました。>
+  >
+
+>
