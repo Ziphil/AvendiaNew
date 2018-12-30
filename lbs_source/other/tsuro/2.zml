@@ -28,12 +28,12 @@
   >
   \board<
     \row<\e>\e|q="A",bd="t"|>\e|q="B",bd="t"|>\e|q="C",bd="t"|>\e|q="D",bd="t"|>\e|q="E",bd="t"|>\e|q="F",bd="t"|>\e>>
-    \row<\e|q="1",bd="l"|>\t|hue="220"|<海>\t|hue="30"|<岸>\t|hue="180"|<川>\t|hue="180"|<川>\t|hue="30"|<岸>\t|hue="220"|<海>\e|q="1",bd="r"|>>
+    \row<\e|q="1",bd="l"|>\t|hue="220"|<浜>\t|hue="30"|<岸>\t|hue="180"|<川>\t|hue="180"|<川>\t|hue="30"|<岸>\t|hue="220"|<浜>\e|q="1",bd="r"|>>
     \row<\e|q="2",bd="l"|>\t|hue="30"|<岸>\t|hue="120"|<野>\t|hue="270"|<谷>\t|hue="270"|<谷>\t|hue="120"|<野>\t|hue="30"|<岸>\e|q="2",bd="r"|>>
     \row<\e|q="3",bd="l"|>\t|hue="180"|<川>\t|hue="270"|<谷>\t|hue="0"|<山>\t|hue="0"|<山>\t|hue="270"|<谷>\t|hue="180"|<川>\e|q="3",bd="r"|>>
     \row<\e|q="4",bd="l"|>\t|hue="180"|<川>\t|hue="270"|<谷>\t|hue="0"|<山>\t|hue="0"|<山>\t|hue="270"|<谷>\t|hue="180"|<川>\e|q="4",bd="r"|>>
     \row<\e|q="5",bd="l"|>\t|hue="30"|<岸>\t|hue="120"|<野>\t|hue="270"|<谷>\t|hue="270"|<谷>\t|hue="120"|<野>\t|hue="30"|<岸>\e|q="5",bd="r"|>>
-    \row<\e|q="6",bd="l"|>\t|hue="220"|<海>\t|hue="30"|<岸>\t|hue="180"|<川>\t|hue="180"|<川>\t|hue="30"|<岸>\t|hue="220"|<海>\e|q="6",bd="r"|>>
+    \row<\e|q="6",bd="l"|>\t|hue="220"|<浜>\t|hue="30"|<岸>\t|hue="180"|<川>\t|hue="180"|<川>\t|hue="30"|<岸>\t|hue="220"|<浜>\e|q="6",bd="r"|>>
     \row<\e>\e|q="A",bd="b"|>\e|q="B",bd="b"|>\e|q="C",bd="b"|>\e|q="D",bd="b"|>\e|q="E",bd="b"|>\e|q="F",bd="b"|>\e>>
     \history<2F32T 1E15T 1B30R 1F14T 3F5R 2E19L 1A23R 6E29T 6D9T 4F10R 5A28T 6A13T 6C3B 6B12R 5B21T 2A33T 2B24R 3E22R 3D20B 2D27T 1D4T 4E34T 1C1T 2C0T 3A7L 5F18T 3B17R 5E26R 5D25R 6F2R 3C6L 4A11L 4B8B 4D31T 4C16T>
   >
