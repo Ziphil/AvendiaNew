@@ -17,7 +17,7 @@ class ZiphilConverter
   NAMES = {
     :title => {:ja => "人工言語シャレイア語", :en => "Sheleian Constructed Language"},
     :top => {:ja => "トップページ", :en => "Top"},
-    :conlang => {:ja => "人工言語", :en => "Conlang"},
+    :conlang => {:ja => "シャレイア語", :en => "Shaleian"},
     :conlang_grammer => {:ja => "文法書", :en => "Grammar"},
     :conlang_course => {:ja => "入門書", :en => "Introduction"},
     :conlang_database => {:ja => "データベース", :en => "Database"},
@@ -29,17 +29,14 @@ class ZiphilConverter
     :application => {:ja => "自作ソフト", :en => "Softwares"},
     :application_download => {:ja => "ダウンロード", :en => "Download"},
     :application_web => {:ja => "Web アプリ", :en => "Web Application"},
-    :language => {:ja => "自然言語", :en => "Language"},
-    :language_french => {:ja => "フランス語", :en => "French"},
-    :language_german => {:ja => "ドイツ語", :en => "German"},
-    :language_russian => {:ja => "ロシア語", :en => "Russian"},
     :diary => {:ja => "日記", :en => "Diary"},
-    :diary_conlang => {:ja => "人工言語", :en => "Conlang"},
+    :diary_conlang => {:ja => "シャレイア語", :en => "Shaleian"},
     :diary_mathematics => {:ja => "数学", :en => "Mathematics"},
     :diary_application => {:ja => "プログラミング", :en => "Programming"},
     :diary_game => {:ja => "ゲーム制作", :en => "Game"},
     :other => {:ja => "その他", :en => "Others"},
     :other_mathematics => {:ja => "数学", :en => "Mathematics"},
+    :other_language => {:ja => "自然言語", :en => "Languages"},
     :other_other => {:ja => "その他", :en => "Others"},
     :error => {:ja => "エラー", :en => "Error"},
     :error_error => {:ja => "エラー", :en => "Error"}
@@ -450,14 +447,6 @@ __END__
         </ul>
       </li>
       <li>
-        <a href="#{self.url_prefix}language/">#{NAMES[:language][self.language]}</a>
-        <ul>
-          <li><a href="#{self.url_prefix}language/french/">#{NAMES[:language_french][self.language]}</a></li>
-          <li><a href="#{self.url_prefix}language/german/">#{NAMES[:language_german][self.language]}</a></li>
-          <li><a href="#{self.url_prefix}language/russian/">#{NAMES[:language_russian][self.language]}</a></li>  
-        </ul>
-      </li>
-      <li>
         <a href="#{self.url_prefix}diary/">#{NAMES[:diary][self.language]}</a>
         <ul>
           <li><a href="#{self.url_prefix}diary/conlang/">#{NAMES[:diary_conlang][self.language]}</a></li>
@@ -470,6 +459,7 @@ __END__
         <a href="#{self.url_prefix}other/">#{NAMES[:other][self.language]}</a>
         <ul>
           <li><a href="#{self.url_prefix}other/mathematics/">#{NAMES[:other_mathematics][self.language]}</a></li>
+          <li><a href="#{self.url_prefix}other/language/">#{NAMES[:other_language][self.language]}</a></li>
           <li><a href="#{self.url_prefix}other/other/">#{NAMES[:other_other][self.language]}</a></li>
         </ul>
       </li>
