@@ -37,6 +37,7 @@ class ZiphilConverter
     :other => {:ja => "その他", :en => "Others"},
     :other_mathematics => {:ja => "数学", :en => "Mathematics"},
     :other_language => {:ja => "自然言語", :en => "Languages"},
+    :other_tsuro => {:ja => "Tsuro", :en => "Tsuro"},
     :other_other => {:ja => "その他", :en => "Others"},
     :error => {:ja => "エラー", :en => "Error"},
     :error_error => {:ja => "エラー", :en => "Error"}
@@ -260,6 +261,7 @@ class WholeZiphilConverter
   def create_converter(document, path, language)
     converter = ZiphilConverter.new(document, path, language)
     converter.instance_eval(File.read(File.dirname($0) + "/template.rb"), "template.rb")
+    converter.instance_eval(File.read(File.dirname($0) + "/template_tsuro.rb"), "template_tsuro.rb")
     return converter
   end
 
