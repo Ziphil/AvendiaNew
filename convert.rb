@@ -190,20 +190,16 @@ class WholeZiphilConverter
   def save
     paths = self.paths
     paths.each_with_index do |(path, language), index|
-      before_time = Time.now
-      source = File.read(path)
-      parser = ZenithalParser.new(source)
-      parser.brace_name = "x"
-      parser.bracket_name = "xn"
-      parser.slash_name = "i"
-      document = parser.parse
-      parsing_duration = (Time.now - before_time) * 1000
-      before_time = Time.now
-      converter = ZiphilConverter.new(document, path, language)
-      converter.instance_eval(File.read(File.dirname($0) + "/template.rb"), "template.rb")
-      converter.convert
-      converter.save
-      conversion_duration = (Time.now - before_time) * 1000
+      document = nil
+      parsing_duration = WholeZiphilConverter.measure do
+        parser = create_parser(path)
+        document = parser.parse
+      end
+      conversion_duration = WholeZiphilConverter.measure do
+        converter = create_converter(document, path, language)
+        converter.convert
+        converter.save
+      end
       output = " "
       output << "%3d" % (index + 1)
       output << " : "
@@ -255,8 +251,30 @@ class WholeZiphilConverter
     return paths
   end
 
+  def create_parser(path)
+    source = File.read(path)
+    parser = ZenithalParser.new(source)
+    parser.brace_name = "x"
+    parser.bracket_name = "xn"
+    parser.slash_name = "i"
+    return parser
+  end
+
+  def create_converter(document, path, language)
+    converter = ZiphilConverter.new(document, path, language)
+    converter.instance_eval(File.read(File.dirname($0) + "/template.rb"), "template.rb")
+    return converter
+  end
+
   def self.deepness(path, language)
     return path.split("/").size - ROOT_PATHS[language].count("/") - 2
+  end
+
+  def self.measure(&block)
+    before_time = Time.now
+    block.call
+    duration = (Time.now - before_time) * 1000
+    return duration
   end
 
 end
