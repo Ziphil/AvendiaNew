@@ -35,6 +35,19 @@ end
 
 converter.add(["t"], ["page.board.row"]) do |element|
   tag = TagBuilder.new("td", "tile")
+  row_element = element.parent
+  board_element = row_element.parent
+  row_number = board_element.children.select{|s| s.is_a?(Element) && s.name == "row"}.index(row_element) - 1
+  column_number = row_element.children.select{|s| s.is_a?(Element) && s.name == "t"}.index(element)
+  if board_element.attribute("alt")
+    if (row_number % 2 == 0 && column_number % 2 == 1) || (row_number % 2 == 1 && column_number % 2 == 0)
+      tag["class"] << " alternative"
+    end
+  else
+    if (row_number % 2 == 0 && column_number % 2 == 0) || (row_number % 2 == 1 && column_number % 2 == 1)
+      tag["class"] << " alternative"
+    end
+  end
   query = element.attribute("q").to_s
   if match = query.match(/^([0-9]+)([A-Z])$/)
     number = match[1].to_i
