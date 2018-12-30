@@ -462,6 +462,7 @@ __END__
         <ul>
           <li><a href="#{self.url_prefix}other/mathematics/">#{NAMES[:other_mathematics][self.language]}</a></li>
           <li><a href="#{self.url_prefix}other/language/">#{NAMES[:other_language][self.language]}</a></li>
+          <li><a href="#{self.url_prefix}other/tsuro/">#{NAMES[:other_tsuro][self.language]}</a></li>
           <li><a href="#{self.url_prefix}other/other/">#{NAMES[:other_other][self.language]}</a></li>
         </ul>
       </li>

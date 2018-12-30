@@ -47,6 +47,13 @@ converter.add(["t"], ["page.board.row"]) do |element|
     tag << image_tag
     tag << information_tag
   end
+  explanation_tag = TagBuilder.new("div", "explanation")
+  explanation_tag << apply(element, "page")
+  if element.attribute("hue")
+    hue = element.attribute("hue").to_s
+    explanation_tag["style"] = "background-color: hsla(#{hue}, 100%, 50%, 0.2)"
+  end
+  tag << explanation_tag
   next tag
 end
 
