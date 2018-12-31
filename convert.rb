@@ -73,7 +73,7 @@ class ZiphilConverter
   def convert_element(element, scope)
     @templates.each do |(element_pattern, scope_pattern), block|
       if element_pattern.any?{|s| s === element.name} && scope_pattern.any?{|s| s === scope}
-        return block.call(element)
+        return block.call(element, scope)
       end
     end
     return ""

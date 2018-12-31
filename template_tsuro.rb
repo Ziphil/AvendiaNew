@@ -1,6 +1,7 @@
 ﻿# coding: utf-8
 
 
+COLUMN_SYMBOLS = {"A" => 0, "B" => 1, "C" => 2, "D" => 3, "E" => 4, "F" => 5}
 ROTATION_SYMBOLS = {"T" => 0, "R" => 1, "B" => 2, "L" => 3}
 BORDER_SYMBOLS = {"t" => "top", "r" => "right", "b" => "bottom", "l" => "left"}
 
@@ -23,28 +24,73 @@ end
 
 converter.add(["board"], ["page"]) do |element|
   tag = TagBuilder.new("table", "board")
-  tag << apply(element, "page.board")
+  corner = element.attribute("c").to_s
+  if match = corner.match(/^([0-9])([A-Z])$/)
+    corner_row_number = match[1].to_i - 1
+    corner_column_number = COLUMN_SYMBOLS[match[2]].to_i
+  end
+  row_elements = element.elements.select{|s| s.name == "row"}
+  column_size = row_elements.first.elements.size
+  first_row_tag = TagBuilder.new("tr")
+  first_row_tag << TagBuilder.new("td", "edge")
+  column_size.times do |i|
+    column_number = corner_column_number + i
+    column_tag = TagBuilder.new("td", "edge column")
+    if corner_row_number == 0
+      column_tag["class"] << " border-top"
+    end
+    column_tag << COLUMN_SYMBOLS.invert[column_number]
+    first_row_tag << column_tag
+  end
+  first_row_tag << TagBuilder.new("td", "edge")
+  tag << first_row_tag
+  row_elements.each_with_index do |row_element, i|
+    row_tag = TagBuilder.new("tr")
+    row_number = corner_row_number + i
+    first_column_tag = TagBuilder.new("td", "edge row")
+    if corner_column_number == 0
+      first_column_tag["class"] << " border-left"
+    end
+    first_column_tag << (row_number + 1).to_s
+    row_tag << first_column_tag
+    if row_number % 2 == 0
+      row_tag << apply(row_element, "page.board.row")
+    else
+      row_tag << apply(row_element, "page.board.row-alt")
+    end
+    last_column_tag = TagBuilder.new("td", "edge row")
+    if corner_column_number + column_size == 6
+      last_column_tag["class"] << " border-right"
+    end
+    last_column_tag << (row_number + 1).to_s
+    row_tag << last_column_tag
+    tag << row_tag
+  end
+  last_row_tag = TagBuilder.new("tr")
+  last_row_tag << TagBuilder.new("td", "edge")
+  column_size.times do |i|
+    column_number = corner_column_number + i
+    column_tag = TagBuilder.new("td", "edge column")
+    if corner_row_number + row_elements.size == 6
+      column_tag["class"] << " border-bottom"
+    end
+    column_tag << COLUMN_SYMBOLS.invert[column_number]
+    last_row_tag << column_tag
+  end
+  last_row_tag << TagBuilder.new("td", "edge")
+  tag << last_row_tag
   next tag
 end
 
-converter.add(["row"], ["page.board"]) do |element|
-  tag = TagBuilder.new("tr")
-  tag << apply(element, "page.board.row")
-  next tag
-end
-
-converter.add(["t"], ["page.board.row"]) do |element|
+converter.add(["t"], ["page.board.row", "page.board.row-alt"]) do |element, scope|
   tag = TagBuilder.new("td", "tile")
-  row_element = element.parent
-  board_element = row_element.parent
-  row_number = board_element.children.select{|s| s.is_a?(Element) && s.name == "row"}.index(row_element) - 1
-  column_number = row_element.children.select{|s| s.is_a?(Element) && s.name == "t"}.index(element)
-  if board_element.attribute("alt")
-    if (row_number % 2 == 0 && column_number % 2 == 1) || (row_number % 2 == 1 && column_number % 2 == 0)
+  column_number = element.parent.elements.select{|s| s.name == "t"}.index(element)
+  if scope == "page.board.row"
+    if column_number % 2 == 0
       tag["class"] << " alternative"
     end
   else
-    if (row_number % 2 == 0 && column_number % 2 == 0) || (row_number % 2 == 1 && column_number % 2 == 1)
+    if column_number % 2 == 1
       tag["class"] << " alternative"
     end
   end
@@ -67,20 +113,5 @@ converter.add(["t"], ["page.board.row"]) do |element|
     explanation_tag["style"] = "background-color: hsla(#{hue}, 100%, 50%, 0.2)"
   end
   tag << explanation_tag
-  next tag
-end
-
-converter.add(["e"], ["page.board.row"]) do |element|
-  tag = TagBuilder.new("td", "edge")
-  query = element.attribute("q").to_s
-  if match = query.match(/^([0-9])$/)
-    tag["class"] << " row"
-  elsif match = query.match(/^([A-Z])$/)
-    tag["class"] << " column"
-  end
-  if element.attribute("bd")
-    tag["class"] << " border-" + BORDER_SYMBOLS[element.attribute("bd").to_s]
-  end
-  tag << query
   next tag
 end
