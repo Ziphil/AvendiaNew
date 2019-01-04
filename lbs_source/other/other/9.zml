@@ -26,28 +26,21 @@
     \red|length="12"|>のようにすると削除できます。
     なんかこれはこれで怪しさが増しますね。
   >
-  \h1<第 1 見出し>
+  \h1<{qilxaléh} を含む見出し>
   \h2|number="3"|<第 2 見出し>
   \p<
     第 1 見出しの後に第 2 見出しが続き、その後に段落があるパターンです。
-  >
-  \p<
-    シャレイア語表記はエスケープできます。
-    例えば、ZenML の実体参照を用いて &lcub>escaped&rcub> や &lsqb>escaped&rsqb> などともできますが、推奨されません。
+    シャレイア語を表記する部分は、ZenML の実体参照を用いて &lcub>escaped&rcub> や &lsqb>escaped&rsqb> のようにエスケープできます。
   >
   \h2|number="5"|<第 2 見出し>
   \p<
     第 2 見出しの連続です。
   >
-  \h2|number="18"|<第 2 見出し>
+  \h2|number="18"|<{kilat lakos a tel qi qilxaléh}>
   \p<
     さらに第 2 見出しの連続です。
+    見出しにシャレイア語を含ませることができます。
   >
-  \h1<シャレイア語 {sâfat a loc}>
-  \h2|number="22"|<{xalér}>
-  \p<
-    見出しにはシャレイア語が入る場合があります。
-  > 
   \h1<リスト>
   \h2|number="22"|<番号なしリスト>
   \p<
@@ -143,11 +136,64 @@
     言語サイトなので、文章の途中に例文が挟まるときがあります。
   >
   \xl<
-    \li<\sh<{kiles a tel te tazik e kin ricamos a tel.}>\ja<私は昨日泳ぐことができるようになった。>>
+    \li<\sh<{kiles a tel te tazît e kin ricamos a tel.}>\ja<私は昨日泳ぐことができるようになった。>>
     \li<\sh<{vade salot a qinat afik e asokes o axodol ebam, ditat yalfesis a loc e cit.}>\ja<この絵画はとても重要で高価なものなので、大切に扱いなさい。>>
+    \li<\sh<{kiles a tel te tazît e kin ricamos a tel.}>>
+    \li<\sh<{vade salot a qinat afik e asokes o axodol ebam, ditat yalfesis a loc e cit.}>>
   >
   \p<
-    段落。
+    各例文にグロスを付けることもできます。
+  >
+  \xl<
+    \li<
+      \sh<{kiles a tel te tazît e kin ricamos a tel.}>
+      \ja<私は昨日泳ぐことができるようになった。>
+      \gloss<
+        \li<\sh<{kil}-[e]-[s]>\ex<可能になる\mph<-過-無.自>>>
+        \li<\sh<{a}>\ex<\mph<主>>>
+        \li<\sh<{tel}>\ex<私>>
+        \li<\sh<{te}>\ex<～の時刻に>>
+        \li<\sh<{tazît}>\ex<昨日>>
+        \li<\sh<{e}>\ex<\mph<対>>>
+        \li<\sh<{kin}>\ex<\mph<節>>>
+        \li<\sh<{ricam}-[o]-[s]>\ex<泳ぐ\mph<-通-無.自>>>
+        \li<\sh<{a}>\ex<\mph<主>>>
+        \li<\sh<{tel}>\ex<私>>\li<\sh<[.]>>
+      >
+    >
+  >
+  \h1<グロス>
+  \p<
+    グロスを表示したい場合は以下のようにします。
+  >
+  \gloss<
+    \li<\sh<{e}>\ex<\mph<対>>>
+    \li<\sh<{ʻalis}>\ex<アリス>>\li<\sh<[,]>>
+    \li<\sh<{pôz}-[a]-[c]>\ex<うんざりさせる\mph<-現-経.自>>>
+    \li<\sh<[o]-{vel}>\ex<\mph<副->>>
+    \li<\sh<[e]-{bam}>\ex<\mph<副->とても>>
+    \li<\sh<{zi}>\ex<\mph<奪>>>
+    \li<\sh<{'n}>\ex<\mph<節>>>
+    \li<\sh<{déq}-[a]-[t]>\ex<座る\mph<-現-継.自>>>
+    \li<\sh<{a}>\ex<\mph<主>>>
+    \li<\sh<{'s}>\ex<彼女>>
+    \li<\sh<{ca}>\ex<\mph<与>>>
+    \li<\sh<{zehrisis}>\ex<堤防>>
+    \li<\sh<{vo}>\ex<～の場所で>>
+    \li<\sh<{fîc}>\ex<近く>>
+    \li<\sh<[i]-{ca}>\ex<\mph<非動修-与>>>
+    \li<\sh<{hinof}>\ex<姉>>\li<\sh<[,]>>
+    \li<\sh<{lo}>\ex<そして>>
+    \li<\sh<{kav}-[a]-[t]>\ex<もつ\mph<-現-継.自>>>
+    \li<\sh<{a}>\ex<\mph<主>>>
+    \li<\sh<{'s}>\ex<彼女>>
+    \li<\sh<{e}>\ex<\mph<対>>>
+    \li<\sh<{dat}>\ex<何もない>>
+    \li<\sh<{doz}-[a]-[t]>\ex<しなければならなくする\mph<-現-継.自>>>
+    \li<\sh<{les}-[a]-[s]>\ex<する\mph<-現-無.自>>>
+    \li<\sh<{e}>\ex<\mph<対>>>
+    \li<\sh<{a}>\ex<\mph<主>>>
+    \li<\sh<{'s}>\ex<彼女>>\li<\sh<[.]>>
   >
   \h1<ソースコード>
   \p<
