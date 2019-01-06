@@ -116,7 +116,7 @@
   >
   \h2<ラクット>
   \p<
-    ラクット ([&lsqb>], [&rsqb>]) は、囲まれた部分が会話文であることを表す。
+    ラクット ([«], [»]) は、囲まれた部分が会話文であることを表す。
     日本語や英語などと違い、引用や強調を表す記号と会話内容を表す記号は異なるので注意すること。
     入れ子にすることもできるが、そのとき記号を変えることはしない。
   >
@@ -132,10 +132,10 @@
     閉じラクットの後にデック類やタデックが続く場合は、その間にはスペースを入れない。
   >
   \xl<
-    \li<\sh<{kéces a ces e &lsqb>zedat lanis a'l ca zîdrahit, ri xakalic te tacál.&rsqb>.}>\ja<彼は「もし明日晴れたら、遊園地に行こうと思う。」と言った。>>
-    \li<\sh<{kéces a ces. &lsqb>zedat lanis a'l ca zîdrahit, ri xakalic te tacál.&rsqb>}>\ja<彼は言った。「もし明日晴れたら、遊園地に行こうと思う。」>>
-    \li<\sh<{bava kéces ca tel e &lsqb>di'dukûvis odûg a'c ca cêd!&rsqb>, kûves a tel ca cêd.}>\ja<「そこには絶対入るな!」と言われていたのに、私は入ってしまった。>>
-    \li<\sh<{sitifes a ces e &lsqb>te lôk acál&rsqb>.}>\ja<彼は「また今度ね」と囁いた。>>
+    \li<\sh<{kéces a ces e «zedat lanis a'l ca zîdrahit, ri xakalic te tacál.».}>\ja<彼は「もし明日晴れたら、遊園地に行こうと思う。」と言った。>>
+    \li<\sh<{kéces a ces. «zedat lanis a'l ca zîdrahit, ri xakalic te tacál.»}>\ja<彼は言った。「もし明日晴れたら、遊園地に行こうと思う。」>>
+    \li<\sh<{bava kéces ca tel e «di'dukûvis odûg a'c ca cêd!», kûves a tel ca cêd.}>\ja<「そこには絶対入るな!」と言われていたのに、私は入ってしまった。>>
+    \li<\sh<{sitifes a ces e «te lôk acál».}>\ja<彼は「また今度ね」と囁いた。>>
   >
   \h2<ヴァクット>
   \p<
