@@ -12,7 +12,7 @@ converter.add(["t"], ["page"]) do |element|
     number = match[1].to_i
     rotation = ROTATION_SYMBOLS[match[2]] || 0
     number_tag = TagBuilder.new("span")
-    number_tag << number.to_s
+    number_tag << query
     image_tag = TagBuilder.new("img", nil, false)
     image_tag["src"] = self.url_prefix + "material/tsuro/#{number + 1}.png"
     image_tag["style"] = "transform: rotate(#{rotation * 90}deg)"
