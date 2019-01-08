@@ -40,7 +40,7 @@ converter.add(["page"], [""]) do |element|
   end
   @navigation_string << name_tag
   @main_string << apply(element, "page")
-  next nil
+  next ""
 end
 
 converter.add(["name"], ["page"]) do |element|
