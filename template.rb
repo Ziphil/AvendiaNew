@@ -238,6 +238,15 @@ converter.add(["gloss"], ["page.xl.li"]) do |element|
   next tag
 end
 
+converter.add(nil, ["page.xl.li"]) do |text|
+  if text.previous_sibling && text.next_sibling
+    string = nil
+  else
+    string = ""
+  end
+  next string
+end
+
 converter.add(["el"], ["page"]) do |element|
   tag = TagBuilder.new("table", "list")
   tag << apply(element, "page.el")
