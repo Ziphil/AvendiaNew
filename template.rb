@@ -230,6 +230,14 @@ converter.add(["ja"], ["page.xl.li"]) do |element|
   next tag
 end
 
+converter.add(["gloss"], ["page.xl.li"]) do |element|
+  tag = TagBuilder.new("ul")
+  item_tag = TagBuilder.new("li", "gloss")
+  item_tag << apply(element, "page.gloss")
+  tag << item_tag
+  next tag
+end
+
 converter.add(["el"], ["page"]) do |element|
   tag = TagBuilder.new("table", "list")
   tag << apply(element, "page.el")
@@ -276,6 +284,15 @@ converter.add(["li"], ["page.gloss"]) do |element|
   tag = TagBuilder.new("div", "word")
   tag << apply(element, "page.gloss.li")
   next tag
+end
+
+converter.add(nil, ["page.gloss"]) do |text|
+  if text.previous_sibling && text.next_sibling
+    string = text.to_s
+  else
+    string = ""
+  end
+  next string
 end
 
 converter.add(["sh", "ex"], ["page.gloss.li"]) do |element|
