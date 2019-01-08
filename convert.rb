@@ -71,12 +71,14 @@ class ZiphilConverter
   end
 
   def convert_element(element, scope)
+    tag = nil
     @templates.each do |(element_pattern, scope_pattern), block|
-      if element_pattern.any?{|s| s === element.name} && scope_pattern.any?{|s| s === scope}
-        return block.call(element, scope)
+      if element_pattern != nil && element_pattern.any?{|s| s === element.name} && scope_pattern.any?{|s| s === scope}
+        tag = block.call(element, scope)
+        break
       end
     end
-    return ""
+    return tag || default_element(element, scope)
   end
 
   def pass_element(element, scope, close = true)
@@ -88,7 +90,22 @@ class ZiphilConverter
     return tag
   end
 
-  def convert_text(text)
+  def default_element(element, scope)
+    return ""
+  end
+
+  def convert_text(text, scope)
+    string = nil
+    @templates.each do |(element_pattern, scope_pattern), block|
+      if element_pattern == nil && scope_pattern.any?{|s| s === scope}
+        string = block.call(text, scope)
+        break
+      end
+    end
+    return string || default_text(text, scope)
+  end
+
+  def default_text(text, scope)
     string = text.to_s.clone
     string.gsub!("、", "、 ")
     string.gsub!("。", "。 ")
@@ -116,24 +133,20 @@ class ZiphilConverter
     return string
   end
 
-  def apply(element, scope, &block)
+  def apply(element, scope)
     result = ""
     element.children.each do |inner_element|
       case inner_element
       when Element
-        if block
-          tag = block.call(inner_element)
-          if tag
-            result << tag
-          end
-        else
-          tag = convert_element(inner_element, scope)
-          if tag
-            result << tag
-          end
+        tag = convert_element(inner_element, scope)
+        if tag
+          result << tag
         end
       when Text
-        result << convert_text(inner_element)
+        string = convert_text(inner_element, scope)
+        if string
+          result << string
+        end
       end
     end
     return result
