@@ -152,34 +152,6 @@ converter.add(["p"], ["page"]) do |element|
   next tag
 end
 
-converter.add(["x"], ["page"]) do |element|
-  content = apply(element, "page").to_s
-  url = "#{self.url_prefix}conlang/database/1.cgi"
-  link = @latest && @path =~ /conlang\/.+\/\d+(\-\w{2})?\.zml/
-  tag = WordConverter.convert(content, url, link)
-  next tag
-end
-
-converter.add(["x"], ["page.section-table"]) do |element|
-  content = apply(element, "page.section-table").to_s
-  url = "#{self.url_prefix}conlang/database/1.cgi"
-  tag = WordConverter.convert(content, url, false)
-  next tag
-end
-
-converter.add(["xn"], ["page", "page.section-table"]) do |element|
-  content = apply(element, "page").to_s
-  url = "#{self.url_prefix}conlang/database/1.cgi"
-  tag = WordConverter.convert(content, url, false)
-  next tag
-end
-
-converter.add(["red"], ["page"]) do |element|
-  tag = TagBuilder.new("span", "redact")
-  tag << "&nbsp;" * element.attribute("length").to_s.to_i
-  next tag
-end
-
 converter.add(["img"], ["page"]) do |element|
   tag = TagBuilder.new("img", nil, false)
   tag["alt"] = ""
@@ -230,14 +202,6 @@ converter.add(["ja"], ["page.xl.li"]) do |element|
   next tag
 end
 
-converter.add(["gloss"], ["page.xl.li"]) do |element|
-  tag = TagBuilder.new("ul")
-  item_tag = TagBuilder.new("li", "gloss")
-  item_tag << apply(element, "page.gloss")
-  tag << item_tag
-  next tag
-end
-
 converter.add(nil, ["page.xl.li"]) do |text|
   if text.previous_sibling && text.next_sibling
     string = nil
@@ -279,44 +243,6 @@ end
 
 converter.add(["ja", "sh"], ["page.trans.li"]) do |element|
   tag = TagBuilder.new("td")
-  tag << apply(element, "page")
-  next tag
-end
-
-converter.add(["gloss"], ["page"]) do |element|
-  tag = TagBuilder.new("div", "gloss")
-  tag << apply(element, "page.gloss")
-  next tag
-end
-
-converter.add(["li"], ["page.gloss"]) do |element|
-  tag = TagBuilder.new("div", "word")
-  tag << apply(element, "page.gloss.li")
-  next tag
-end
-
-converter.add(nil, ["page.gloss"]) do |text|
-  if text.previous_sibling && text.next_sibling
-    string = text.to_s
-  else
-    string = ""
-  end
-  next string
-end
-
-converter.add(["sh", "ex"], ["page.gloss.li"]) do |element|
-  case element.name
-  when "sh"
-    tag = TagBuilder.new("div", "name")
-  when "ex"
-    tag = TagBuilder.new("div", "explanation")
-  end
-  tag << apply(element, "page")
-  next tag
-end
-
-converter.add(["mph"], ["page"]) do |element|
-  tag = TagBuilder.new("span", "morpheme")
   tag << apply(element, "page")
   next tag
 end
@@ -402,24 +328,6 @@ converter.add(["textarea"], ["page"]) do |element|
   next tag
 end
 
-converter.add(["error"], ["page"]) do |element|
-  tag = TagBuilder.new("div", "error")
-  tag << apply(element, "page.error")
-  next tag
-end
-
-converter.add(["code"], ["page.error"]) do |element|
-  tag = TagBuilder.new("div", "error-code")
-  tag << apply(element, "page")
-  next tag
-end
-
-converter.add(["message"], ["page.error"]) do |element|
-  tag = TagBuilder.new("div", "message")
-  tag << apply(element, "page")
-  next tag
-end
-
 converter.add(["pdf"], ["page"]) do |element|
   tag = TagBuilder.new("object", "pdf")
   tag["data"] = element.attribute("src").to_s + "#view=FitH&amp;statusbar=0&amp;toolbar=0&amp;navpanes=0&amp;messages=0"
@@ -482,6 +390,34 @@ end
 
 converter.add(["special"], ["page"]) do |element|
   tag = pass_element(element, "page")
+  next tag
+end
+
+converter.add(["x"], ["page"]) do |element|
+  content = apply(element, "page").to_s
+  url = "#{self.url_prefix}conlang/database/1.cgi"
+  link = @latest && @path =~ /conlang\/.+\/\d+(\-\w{2})?\.zml/
+  tag = WordConverter.convert(content, url, link)
+  next tag
+end
+
+converter.add(["x"], ["page.section-table"]) do |element|
+  content = apply(element, "page.section-table").to_s
+  url = "#{self.url_prefix}conlang/database/1.cgi"
+  tag = WordConverter.convert(content, url, false)
+  next tag
+end
+
+converter.add(["xn"], ["page", "page.section-table"]) do |element|
+  content = apply(element, "page").to_s
+  url = "#{self.url_prefix}conlang/database/1.cgi"
+  tag = WordConverter.convert(content, url, false)
+  next tag
+end
+
+converter.add(["red"], ["page"]) do |element|
+  tag = TagBuilder.new("span", "redact")
+  tag << "&nbsp;" * element.attribute("length").to_s.to_i
   next tag
 end
 

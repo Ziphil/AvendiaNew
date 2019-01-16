@@ -235,12 +235,11 @@ class WholeZiphilConverter
         directories = []
         directories << default
         directories.each do |directory|
-          entries = Dir.entries(directory)
-          entries.each do |entry|
-            if /\.zml/ =~ entry
+          Dir.each_child(directory) do |entry|
+            if entry =~ /\.zml/
               paths << [directory + "/" + entry, language]
             end
-            unless /\./ =~ entry
+            unless entry =~ /\./
               directories << directory + "/" + entry
             end
           end
@@ -272,9 +271,13 @@ class WholeZiphilConverter
   end
 
   def create_converter(document, path, language)
-    converter = ZiphilConverter.new(document, path, language)
-    converter.instance_eval(File.read(File.dirname($0) + "/template.rb"), "template.rb")
-    converter.instance_eval(File.read(File.dirname($0) + "/template_tsuro.rb"), "template_tsuro.rb")
+    converter = ZiphilConverter.new(document, path, language) 
+    directory = File.dirname($0) + "/template"
+    Dir.each_child(directory) do |entry|
+      if entry =~ /\.rb/
+        converter.instance_eval(File.read(directory + "/" + entry), entry)
+      end
+    end
     return converter
   end
 
