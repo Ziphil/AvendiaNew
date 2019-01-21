@@ -20,11 +20,11 @@
     \li<
       \sh<{vomac sôdos a tel e sakil.}>\ja<私はリンゴを食べる。>
       \gloss<
-        \li<\sh<{vom}-[a]-[c]>\ex<繰り返す\mph<-現-経.自>>>
-        \li<\sh<{sôd}-[o]-[s]>\ex<食べる\mph<-通-無.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-ac"|<\sh<{vom}>\ex<繰り返す>>
+        \li|conj="-os"|<\sh<{sôd}>\ex<食べる>>
+        \li|auto="a"|>
         \li<\sh<{tel}>\ex<私>>
-        \li<\sh<{e}>\ex<\mph<対>>>
+        \li|auto="e"|>
         \li<\sh<{sakil}>\ex<リンゴ>>\li<\sh<[.]>>
       >
     >
@@ -41,10 +41,10 @@
     \li<
       \sh<{sôdes a tel e sakil.}>\ja<私はリンゴを食べた。>
       \gloss<
-        \li<\sh<{sôd}-[e]-[s]>\ex<食べる\mph<-過-無.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-es"|<\sh<{sôd}>\ex<食べる>>
+        \li|auto="a"|>
         \li<\sh<{tel}>\ex<私>>
-        \li<\sh<{e}>\ex<\mph<対>>>
+        \li|auto="e"|>
         \li<\sh<{sakil}>\ex<リンゴ>>\li<\sh<[.]>>
       >
     >
@@ -58,10 +58,10 @@
     \li<
       \sh<{sôdac a ces e sakil.}>\ja<彼はリンゴを食べている。>
       \gloss<
-        \li<\sh<{sôd}-[a]-[c]>\ex<食べる\mph<-現-経.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-ac"|<\sh<{sôd}>\ex<食べる>>
+        \li|auto="a"|>
         \li<\sh<{ces}>\ex<彼>>
-        \li<\sh<{e}>\ex<\mph<対>>>
+        \li|auto="e"|>
         \li<\sh<{sakil}>\ex<リンゴ>>\li<\sh<[.]>>
       >
     >
@@ -74,10 +74,10 @@
     \li<
       \sh<{sôdat a ces e sakil.}>\ja<彼女はリンゴを食べ終わっている。>
       \gloss<
-        \li<\sh<{sôd}-[a]-[t]>\ex<食べる\mph<-現-継.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-at"|<\sh<{sôd}>\ex<食べる>>
+        \li|auto="a"|>
         \li<\sh<{ces}>\ex<彼女>>
-        \li<\sh<{e}>\ex<\mph<対>>>
+        \li|auto="e"|>
         \li<\sh<{sakil}>\ex<リンゴ>>\li<\sh<[.]>>
       >
     >
@@ -94,10 +94,10 @@
     \li<
       \sh<{sôdet a ces e sakil.}>\ja<彼女はリンゴを食べ終わっていた。>
       \gloss<
-        \li<\sh<{sôd}-[e]-[t]>\ex<食べる\mph<-過-継.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-et"|<\sh<{sôd}>\ex<食べる>>
+        \li|auto="a"|>
         \li<\sh<{ces}>\ex<彼女>>
-        \li<\sh<{e}>\ex<\mph<対>>>
+        \li|auto="e"|>
         \li<\sh<{sakil}>\ex<リンゴ>>\li<\sh<[.]>>
       >
     >
@@ -110,29 +110,29 @@
     \li<
       \sh<{sôdes a yéf i tel e sakil.}>\ja<私の妻はリンゴを食べたことがある。>
       \gloss<
-        \li<\sh<{sôd}-[e]-[s]>\ex<食べる\mph<-過-無.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-es"|<\sh<{sôd}>\ex<食べる>>
+        \li|auto="a"|>
         \li<\sh<{yéf}>\ex<妻>>
-        \li<\sh<[i]-∅>\ex<\mph<非動修->～の>>
+        \li|conj="i-"|<\sh<∅>\ex<～の>>
         \li<\sh<{tel}>\ex<私>>
-        \li<\sh<{e}>\ex<\mph<対>>>
+        \li|auto="e"|>
         \li<\sh<{sakil}>\ex<リンゴ>>\li<\sh<[.]>>
       >
     >
     \li<
       \sh<{zikolat a yéf i tel e'n sôdes a's e sakil.}>\ja<私の妻はリンゴを食べたことがある。>
       \gloss<
-        \li<\sh<{zikol}-[a]-[t]>\ex<経験する\mph<-現-継.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-at"|<\sh<{zikol}>\ex<経験する>>
+        \li|auto="a"|>
         \li<\sh<{yéf}>\ex<妻>>
-        \li<\sh<[i]-∅>\ex<\mph<非動修->～の>>
+        \li|conj="i-"|<\sh<∅>\ex<～の>>
         \li<\sh<{tel}>\ex<私>>
-        \li<\sh<{e}>\ex<\mph<対>>>
-        \li<\sh<{'n}>\ex<\mph<節>>>
-        \li<\sh<{sôd}-[e]-[s]>\ex<食べる\mph<-過-無.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|auto="e"|>
+        \li|auto="'n"|>
+        \li|conj="-es"|<\sh<{sôd}>\ex<食べる>>
+        \li|auto="a"|>
         \li<\sh<{'s}>\ex<彼女>>
-        \li<\sh<{e}>\ex<\mph<対>>>
+        \li|auto="e"|>
         \li<\sh<{sakil}>\ex<リンゴ>>\li<\sh<[.]>>
       >
     >
@@ -150,17 +150,17 @@
     \li<
       \sh<{vomac sôdos a yéf i tel e sakil te taq atov.}>\ja<私の妻はリンゴを毎日食べる。>
       \gloss<
-        \li<\sh<{vom}-[a]-[c]>\ex<繰り返す\mph<-現-経.自>>>
-        \li<\sh<{sôd}-[o]-[s]>\ex<食べる\mph<-通-無.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-ac"|<\sh<{vom}>\ex<繰り返す>>
+        \li|conj="-os"|<\sh<{sôd}>\ex<食べる>>
+        \li|auto="a"|>
         \li<\sh<{yéf}>\ex<妻>>
-        \li<\sh<[i]-∅>\ex<\mph<非動修->～の>>
+        \li|conj="i-"|<\sh<∅>\ex<～の>>
         \li<\sh<{tel}>\ex<私>>
-        \li<\sh<{e}>\ex<\mph<対>>>
+        \li|auto="e"|>
         \li<\sh<{sakil}>\ex<リンゴ>>
         \li<\sh<{te}>\ex<～の時刻に>>
         \li<\sh<{taq}>\ex<日>>
-        \li<\sh<[a]-{tov}>\ex<\mph<形->それぞれの>>\li<\sh<[.]>>
+        \li|conj="a-"|<\sh<{tov}>\ex<それぞれの>>\li<\sh<[.]>>
       >
     >
   >
@@ -174,14 +174,14 @@
     \li<
       \sh<{sôdes a tel o yéf i tel e sakil te tazît.}>\ja<私と私の妻は昨日リンゴを食べた。>
       \gloss<
-        \li<\sh<{sôd}-[e]-[s]>\ex<食べる\mph<-過-無.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-es"|<\sh<{sôd}>\ex<食べる>>
+        \li|auto="a"|>
         \li<\sh<{tel}>\ex<私>>
         \li<\sh<{o}>\ex<と>>
         \li<\sh<{yéf}>\ex<妻>>
-        \li<\sh<[i]-∅>\ex<\mph<非動修->～の>>
+        \li|conj="i-"|<\sh<∅>\ex<～の>>
         \li<\sh<{tel}>\ex<私>>
-        \li<\sh<{e}>\ex<\mph<対>>>
+        \li|auto="e"|>
         \li<\sh<{sakil}>\ex<リンゴ>>
         \li<\sh<{te}>\ex<～の時刻に>>
         \li<\sh<{tazît}>\ex<昨日>>\li<\sh<[.]>>
@@ -196,20 +196,20 @@
     \li<
       \sh<{sôdes a tel o yéf i tel e sakil te zîk ile lattaq aric.}>\ja<私と私の妻は 6 日前にリンゴを食べた。>
       \gloss<
-        \li<\sh<{sôd}-[e]-[s]>\ex<食べる\mph<-過-無.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-es"|<\sh<{sôd}>\ex<食べる>>
+        \li|auto="a"|>
         \li<\sh<{tel}>\ex<私>>
         \li<\sh<{o}>\ex<と>>
         \li<\sh<{yéf}>\ex<妻>>
-        \li<\sh<[i]-∅>\ex<\mph<非動修->～の>>
+        \li|conj="i-"|<\sh<∅>\ex<～の>>
         \li<\sh<{tel}>\ex<私>>
-        \li<\sh<{e}>\ex<\mph<対>>>
+        \li|auto="e"|>
         \li<\sh<{sakil}>\ex<リンゴ>>
         \li<\sh<{te}>\ex<～の時刻に>>
         \li<\sh<{zîk}>\ex<前>>
-        \li<\sh<[i]-{le}>\ex<\mph<非動修->～の数量分の>>
+        \li|conj="i-"|<\sh<{le}>\ex<～の数量分の>>
         \li<\sh<{lattaq}>\ex<1 日>>
-        \li<\sh<[a]-{ric}>\ex<\mph<形->6>>\li<\sh<[.]>>
+        \li|conj="a-"|<\sh<{ric}>\ex<6>>\li<\sh<[.]>>
       >
     >
   >
@@ -224,10 +224,10 @@
     \li<
       \sh<{sôdis a ces e sakil te tacál.}>\ja<彼らは明日リンゴを食べる。>
       \gloss<
-        \li<\sh<{sôd}-[i]-[s]>\ex<食べる\mph<-未-無.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-is"|<\sh<{sôd}>\ex<食べる>>
+        \li|auto="a"|>
         \li<\sh<{ces}>\ex<彼ら>>
-        \li<\sh<{e}>\ex<\mph<対>>>
+        \li|auto="e"|>
         \li<\sh<{sakil}>\ex<リンゴ>>
         \li<\sh<{te}>\ex<～の時刻に>>
         \li<\sh<{tacál}>\ex<明日>>\li<\sh<[.]>>
@@ -236,11 +236,11 @@
     \li<
       \sh<{sôdis a ces avéf e sakil te tacál.}>\ja<彼らは明日リンゴを食べる。>
       \gloss<
-        \li<\sh<{sôd}-[i]-[s]>\ex<食べる\mph<-未-無.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-is"|<\sh<{sôd}>\ex<食べる>>
+        \li|auto="a"|>
         \li<\sh<{ces}>\ex<彼>>
-        \li<\sh<[a]-{véf}>\ex<\mph<形->たち>>
-        \li<\sh<{e}>\ex<\mph<対>>>
+        \li|conj="a-"|<\sh<{véf}>\ex<たち>>
+        \li|auto="e"|>
         \li<\sh<{sakil}>\ex<リンゴ>>
         \li<\sh<{te}>\ex<～の時刻に>>
         \li<\sh<{tacál}>\ex<明日>>\li<\sh<[.]>>
@@ -260,16 +260,16 @@
     \li<
       \sh<{sôdis a ces e sakil te carip ile lattaq aric.}>\ja<彼らは 6 日後にリンゴを食べる。>
       \gloss<
-        \li<\sh<{sôd}-[i]-[s]>\ex<食べる\mph<-未-無.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-is"|<\sh<{sôd}>\ex<食べる>>
+        \li|auto="a"|>
         \li<\sh<{ces}>\ex<彼ら>>
-        \li<\sh<{e}>\ex<\mph<対>>>
+        \li|auto="e"|>
         \li<\sh<{sakil}>\ex<リンゴ>>
         \li<\sh<{te}>\ex<～の時刻に>>
         \li<\sh<{carip}>\ex<後>>
-        \li<\sh<[i]-{le}>\ex<\mph<非動修->～の数量分の>>
+        \li|conj="i-"|<\sh<{le}>\ex<～の数量分の>>
         \li<\sh<{lattaq}>\ex<1 日>>
-        \li<\sh<[a]-{ric}>\ex<\mph<形->6>>\li<\sh<[.]>>
+        \li|conj="a-"|<\sh<{ric}>\ex<6>>\li<\sh<[.]>>
       >
     >
   >
@@ -282,11 +282,11 @@
     \li<
       \sh<{qetat a sakil al'ayos.}>\ja<リンゴが 3 つある。>
       \gloss<
-        \li<\sh<{qet}-[a]-[t]>\ex<ある\mph<-現-継.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-at"|<\sh<{qet}>\ex<ある>>
+        \li|auto="a"|>
         \li<\sh<{sakil}>\ex<リンゴ>>
         \li<\sh<{al'}>\ex<個の>>
-        \li<\sh<[a]-{yos}>\ex<\mph<形->3>>\li<\sh<[.]>>
+        \li|conj="a-"|<\sh<{yos}>\ex<3>>\li<\sh<[.]>>
       >
     >
   >
@@ -303,13 +303,13 @@
     \li<
       \sh<{qetat a sakil avéf vo hif izi dèt.}>\ja<リンゴたちがテーブルの上にある。>
       \gloss<
-        \li<\sh<{qet}-[a]-[t]>\ex<ある\mph<-現-継.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-at"|<\sh<{qet}>\ex<ある>>
+        \li|auto="a"|>
         \li<\sh<{sakil}>\ex<リンゴ>>
-        \li<\sh<[a]-{véf}>\ex<\mph<形->たち>>
+        \li|conj="a-"|<\sh<{véf}>\ex<たち>>
         \li<\sh<{vo}>\ex<～の場所で>>
         \li<\sh<{hif}>\ex<上>>
-        \li<\sh<[i]-{zi}>\ex<\mph<非動修-奪>>>
+        \li|auto="zi",conj="i-"|>
         \li<\sh<{dèt}>\ex<テーブル>>\li<\sh<[.]>>
       >
     >
@@ -327,10 +327,10 @@
     \li<
       \sh<{qetat a sakil adak.}>\ja<リンゴが 1 つもない。>
       \gloss<
-        \li<\sh<{qet}-[a]-[t]>\ex<ある\mph<-現-継.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-at"|<\sh<{qet}>\ex<ある>>
+        \li|auto="a"|>
         \li<\sh<{sakil}>\ex<リンゴ>>
-        \li<\sh<[a]-{dak}>\ex<\mph<形->何も～ない>>\li<\sh<[.]>>
+        \li|conj="a-"|<\sh<{dak}>\ex<何も～ない>>\li<\sh<[.]>>
       >
     >
   >
@@ -343,11 +343,11 @@
     \li<
       \sh<{vomac dusôdos a tel e sakil.}>\ja<私はリンゴを食べない。>
       \gloss<
-        \li<\sh<{vom}-[a]-[c]>\ex<繰り返す\mph<-現-経.自>>>
-        \li<\sh<[du]-{sôd}-[o]-[s]>\ex<\mph<否->食べる\mph<-通-無.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-ac"|<\sh<{vom}>\ex<繰り返す>>
+        \li|conj="du-os"|<\sh<{sôd}>\ex<食べる>>
+        \li|auto="a"|>
         \li<\sh<{tel}>\ex<私>>
-        \li<\sh<{e}>\ex<\mph<対>>>
+        \li|auto="e"|>
         \li<\sh<{sakil}>\ex<リンゴ>>\li<\sh<[.]>>
       >
     >
