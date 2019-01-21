@@ -319,6 +319,10 @@ class TagBuilder
     @content << content
   end
 
+  def insert(index, content)
+    @content.insert(index, content)
+  end
+
   def insert_first(content)
     @content.sub!(/(\A\s*)/m){$1 + content.to_str}
   end

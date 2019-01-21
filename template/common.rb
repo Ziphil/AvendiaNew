@@ -1,6 +1,8 @@
 ﻿# coding: utf-8
 
 
+DICTIONARY_URL = "#{self.url_prefix}conlang/database/1.cgi"
+
 converter.add(["page"], [""]) do |element|
   deepness = WholeZiphilConverter.deepness(@path, @language)
   virtual_deepness = (@path =~ /index\.zml$/) ? deepness - 1 : deepness
@@ -395,23 +397,20 @@ end
 
 converter.add(["x"], ["page"]) do |element|
   content = apply(element, "page").to_s
-  url = "#{self.url_prefix}conlang/database/1.cgi"
   link = @latest && @path =~ /conlang\/.+\/\d+(\-\w{2})?\.zml/
-  tag = WordConverter.convert(content, url, link)
+  tag = WordConverter.convert(content, DICTIONARY_URL, link)
   next tag
 end
 
 converter.add(["x"], ["page.section-table"]) do |element|
   content = apply(element, "page.section-table").to_s
-  url = "#{self.url_prefix}conlang/database/1.cgi"
-  tag = WordConverter.convert(content, url, false)
+  tag = WordConverter.convert(content, DICTIONARY_URL, false)
   next tag
 end
 
 converter.add(["xn"], ["page", "page.section-table"]) do |element|
   content = apply(element, "page").to_s
-  url = "#{self.url_prefix}conlang/database/1.cgi"
-  tag = WordConverter.convert(content, url, false)
+  tag = WordConverter.convert(content, DICTIONARY_URL, false)
   next tag
 end
 
