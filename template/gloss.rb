@@ -70,13 +70,29 @@ converter.add(["li"], ["page.gloss"]) do |element|
       end
     end
   end
+  if element.attribute("punc")
+    punctuation = element.attribute("punc").value
+    name_element = Element.new("sh")
+    shaleia_element = Element.new("xn")
+    shaleia_element << Text.new(punctuation, true, nil, false)
+    name_element << shaleia_element
+    element << name_element
+  end
   tag << apply(element, "page.gloss.li")
   next tag
 end
 
 converter.add(nil, ["page.gloss"]) do |text|
   if text.previous_sibling && text.next_sibling
-    string = text.to_s
+    previous_sibling = text.previous_sibling
+    next_sibling = text.next_sibling
+    if previous_sibling.is_a?(Element) && previous_sibling.attribute("punc")&.value =~ /(\[|«)$/
+      string = ""
+    elsif next_sibling.is_a?(Element) && next_sibling.attribute("punc")&.value =~ /^(\.|,|!|\?)/
+      string = ""
+    else
+      string = text.to_s
+    end
   else
     string = ""
   end
