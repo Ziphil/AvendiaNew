@@ -5,6 +5,8 @@
   \name<用語集>
   \ver<5 代 5 期>
 
+  \h1<目次>
+  \section-table>
   \h1<品詞>
   \h2|id="s"|<品詞\fl<sort>>
   \p<
@@ -159,23 +161,23 @@
     \an|href="#sb"|<特殊副詞>の別名。
   >
   \h1<特殊構文>
-  \h2|id="pusev"|<動詞の助動詞的用法\fl<auxiliary use of verb>>
+  \h2|id="pusev"|<動詞の助動詞的用法\fl<auxiliary use of verbs>>
   \p<
     主節の動詞を修飾する助詞句が {kin} 節句以外に多くとも 1 つしかなく、その助詞句と同じものが {kin} 節の動詞にも付随している場合、その助詞句と {kin} を省略できる構文。
     もしくは、主節に {kin} 節句以外の助詞句がない場合に、{kin} を省略できる構文。
     文法書の\a|href="../grammer/6.html#35"|<該当項目>を参照。
   >
-  \h2|id="buseconj"|<接続詞の副詞的用法\fl<adverbial use of conjunction>>
+  \h2|id="buseconj"|<接続詞の副詞的用法\fl<adverbial use of conjunctions>>
   \p<
     接続詞によって 2 つの節が繋がれているとき、接続詞の前で文を一度切り、次の文を接続詞を文頭にして始めることができる構文。
     文法書の\a|href="../grammer/6.html#46"|<該当項目>を参照。
   >
-  \h2|id="nrusea"|<形容詞の非限定用法\fl<nonrestrictive use of adjective>>
+  \h2|id="nrusea"|<形容詞の非限定用法\fl<nonrestrictive use of adjectives>>
   \p<
     形容詞の前後にタデックを打つことで、それが修飾する名詞の範囲を限定せずに名詞の補足説明をすることができる構文。
     文法書の\a|href="../grammer/6.html#62"|<該当項目>を参照。
   >
-  \h2|id="nruserc"|<限定節の非限定用法\fl<nonrestrictive use of relative clause>>
+  \h2|id="nruserc"|<限定節の非限定用法\fl<nonrestrictive use of relative clauses>>
   \p<
     限定節全体の前後にタデックを打つことで、それが修飾する名詞の範囲を限定せずに名詞の補足説明をすることができる構文。
     文法書の\a|href="../grammer/6.html#43"|<該当項目>を参照。
@@ -248,7 +250,7 @@
     一般論を表現するときに用いる\an|href="#pro"|<代詞>。
     人を表す {ves} のみがある。 
   >
-  \h1<その他>
+  \h1<その他の文法用語>
   \h2|id="pp"|<助詞句\fl<prepositional phrase>>
   \p<
     助詞と名詞 (形容詞のこともある) から成る句。
@@ -333,6 +335,13 @@
     ある単語から合成語を作るときに、合成要素となるその単語の一部分。
     基本的に、単語の最初の音節から単語の途中 (もしくは最後) の音節までが合成成分になる。
     例えば、{kedpasif} という単語は、{kedet} の合成成分である [ked] と {pasif} の合成成分である {pasif} を組み合わせて作られた合成語である。
+  >
+  \h1<その他の文化的用語>
+  \h2|id="trph"|<変音符\fl<transphonemic mark>>
+  \p<
+    新シャレイア文字において、[z], [d], [g], [v], [b], [q], [j], [r], [m], [h] の 10 文字の右下に書かれる縦線のこと。
+    この縦線が付いた文字は縦線を除いた文字の有声音か類似の音を表すので、このように呼ばれる。
+    なお、変音符付きの文字は、変音付を除いた部分と変音符の 2 文字と扱われることはなく、まとめて 1 つの文字として扱われる。
   >
   \h2|id="msq"|<文字魔方陣\fl<magic square of letters>>
   \p<
