@@ -273,6 +273,11 @@ converter.add(["section-table"], ["page"]) do |element|
         link_tag << apply(inner_element, "page.section-table")
         subsection_item_tag << number_tag
         subsection_item_tag << link_tag
+      elsif inner_element.attribute("id")
+        link_tag = TagBuilder.new("a")
+        link_tag["href"] = "#" + inner_element.attribute("id").to_s
+        link_tag << apply(inner_element, "page.section-table")
+        subsection_item_tag << link_tag
       else
         subsection_item_tag << apply(inner_element, "page.section-table")
       end
@@ -420,7 +425,7 @@ converter.add(["red"], ["page"]) do |element|
   next tag
 end
 
-converter.add(["sup", "sub"], ["page"]) do |element|
+converter.add(["sup", "sub"], ["page", "page.section-table"]) do |element|
   tag = pass_element(element, "page")
   next tag
 end
