@@ -149,16 +149,17 @@
       \sh<{kiles a tel te tazît e kin ricamos a tel.}>
       \ja<私は昨日泳ぐことができるようになった。>
       \gloss<
-        \li<\sh<{kil}-[e]-[s]>\ex<可能になる\mph<-過-無.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
+        \li|conj="-es"|<\sh<{kil}>\ex<可能になる>>
+        \li|auto="a"|>
         \li<\sh<{tel}>\ex<私>>
         \li<\sh<{te}>\ex<～の時刻に>>
         \li<\sh<{tazît}>\ex<昨日>>
-        \li<\sh<{e}>\ex<\mph<対>>>
-        \li<\sh<{kin}>\ex<\mph<節>>>
-        \li<\sh<{ricam}-[o]-[s]>\ex<泳ぐ\mph<-通-無.自>>>
-        \li<\sh<{a}>\ex<\mph<主>>>
-        \li<\sh<{tel}>\ex<私>>\li<\sh<[.]>>
+        \li|auto="e"|>
+        \li|auto="kin"|>
+        \li|conj="-os"|<\sh<{ricam}>\ex<泳ぐ>>
+        \li|auto="a"|>
+        \li<\sh<{tel}>\ex<私>>
+        \li|punc="."|>
       >
     >
   >
@@ -167,33 +168,50 @@
     グロスを表示したい場合は以下のようにします。
   >
   \gloss<
-    \li<\sh<{e}>\ex<\mph<対>>>
-    \li<\sh<{ʻalis}>\ex<アリス>>\li<\sh<[,]>>
-    \li<\sh<{pôz}-[a]-[c]>\ex<うんざりさせる\mph<-現-経.自>>>
-    \li<\sh<[o]-{vel}>\ex<\mph<副->>>
-    \li<\sh<[e]-{bam}>\ex<\mph<副->とても>>
-    \li<\sh<{zi}>\ex<\mph<奪>>>
-    \li<\sh<{'n}>\ex<\mph<節>>>
-    \li<\sh<{déq}-[a]-[t]>\ex<座る\mph<-現-継.自>>>
-    \li<\sh<{a}>\ex<\mph<主>>>
+    \li|auto="e"|>
+    \li<\sh<{ʻalis}>\ex<アリス>>
+    \li|punc=","|>
+    \li|conj="-ac"|<\sh<{pôz}>\ex<うんざりさせる>>
+    \li|conj="o-"|<\sh<{vel}>\ex<>>
+    \li|conj="e-"|<\sh<{bam}>\ex<とても>>
+    \li|auto="zi"|>
+    \li|auto="'n"|>
+    \li|conj="-at"|<\sh<{déq}>\ex<座る>>
+    \li|auto="a"|>
     \li<\sh<{'s}>\ex<彼女>>
-    \li<\sh<{ca}>\ex<\mph<与>>>
+    \li|auto="ca"|>
     \li<\sh<{zehrisis}>\ex<堤防>>
     \li<\sh<{vo}>\ex<～の場所で>>
     \li<\sh<{fîc}>\ex<近く>>
-    \li<\sh<[i]-{ca}>\ex<\mph<非動修-与>>>
-    \li<\sh<{hinof}>\ex<姉>>\li<\sh<[,]>>
+    \li|auto="ca",conj="i-"|>
+    \li<\sh<{hinof}>\ex<姉>>
+    \li|punc=","|>
     \li<\sh<{lo}>\ex<そして>>
-    \li<\sh<{kav}-[a]-[t]>\ex<もつ\mph<-現-継.自>>>
-    \li<\sh<{a}>\ex<\mph<主>>>
+    \li|conj="-at"|<\sh<{kav}>\ex<もつ>>
+    \li|auto="a"|>
     \li<\sh<{'s}>\ex<彼女>>
-    \li<\sh<{e}>\ex<\mph<対>>>
+    \li|auto="e"|>
     \li<\sh<{dat}>\ex<何もない>>
-    \li<\sh<{doz}-[a]-[t]>\ex<しなければならなくする\mph<-現-継.自>>>
-    \li<\sh<{les}-[a]-[s]>\ex<する\mph<-現-無.自>>>
-    \li<\sh<{e}>\ex<\mph<対>>>
-    \li<\sh<{a}>\ex<\mph<主>>>
-    \li<\sh<{'s}>\ex<彼女>>\li<\sh<[.]>>
+    \li|conj="-at"|<\sh<{doz}>\ex<しなければならなくする>>
+    \li|conj="-as"|<\sh<{les}>\ex<する>>
+    \li|auto="e"|>
+    \li|auto="a"|>
+    \li<\sh<{'s}>\ex<彼女>>
+    \li|punc="."|>
+    \li|punc="«"|>
+    \li|auto="pa"|>
+    \li|conj="-ot"|<\sh<{sal}>\ex<である>>
+    \li|auto="e"|>
+    \li<\sh<{pil}>\ex<何>> 
+    \li|auto="a"|>
+    \li<\sh<{sokus}>\ex<価値>>
+    \li|conj="i-"|<\sh<∅>\ex<～の>>
+    \li<\sh<{xoq}>\ex<本>>
+    \li|conj="i-"|<\sh<{de}>\ex<～なしで>>
+    \li<\sh<{qinat}>\ex<絵>>
+    \li<\sh<{o}>\ex<と>>
+    \li<\sh<{lek}>\ex<会話>>
+    \li|punc="?»"|>
   >
   \h1<ソースコード>
   \p<
@@ -253,8 +271,8 @@
     以下はテキストエリアです。
   >
   \form<
-    \textarea|class="normal",name="content",cols="50",rows="6"|<>\br>
-    \input|type="submit",name="mode",value="決定"|<>
+    \textarea|class="normal",name="content",cols="50",rows="6"|>\br>
+    \input|type="submit",name="mode",value="決定"|>
   >
   \p<
     以下は \m<input> タグを用いたフォームとしてのボタンと、\m<a> タグをそれっぽい見た目にしてボタンのように表示しているものです。

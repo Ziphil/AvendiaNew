@@ -35,76 +35,85 @@
   \h1<グロス>
   \gloss|par="1"|<
     ## 1
-    \li<\sh<{e}>\ex<\mph<対>>>
-    \li<\sh<{ʻalis}>\ex<アリス>>\li<\sh<[,]>>
-    \li<\sh<{pôz}-[a]-[c]>\ex<うんざりさせる\mph<-現-経.自>>>
-    \li<\sh<[o]-{vel}>\ex<\mph<副->>>
-    \li<\sh<[e]-{bam}>\ex<\mph<副->とても>>
-    \li<\sh<{zi}>\ex<\mph<奪>>>
-    \li<\sh<{'n}>\ex<\mph<節>>>
-    \li<\sh<{déq}-[a]-[t]>\ex<座る\mph<-現-継.自>>>
-    \li<\sh<{a}>\ex<\mph<主>>>
+    \li|auto="e"|>
+    \li<\sh<{ʻalis}>\ex<アリス>>
+    \li|punc=","|>
+    \li|conj="-ac"|<\sh<{pôz}>\ex<うんざりさせる>>
+    \li|conj="o-"|<\sh<{vel}>\ex<>>
+    \li|conj="e-"|<\sh<{bam}>\ex<とても>>
+    \li|auto="zi"|>
+    \li|auto="'n"|>
+    \li|conj="-at"|<\sh<{déq}>\ex<座る>>
+    \li|auto="a"|>
     \li<\sh<{'s}>\ex<彼女>>
-    \li<\sh<{ca}>\ex<\mph<与>>>
+    \li|auto="ca"|>
     \li<\sh<{zehrisis}>\ex<堤防>>
     \li<\sh<{vo}>\ex<～の場所で>>
     \li<\sh<{fîc}>\ex<近く>>
-    \li<\sh<[i]-{ca}>\ex<\mph<非動修-与>>>
-    \li<\sh<{hinof}>\ex<姉>>\li<\sh<[,]>>
+    \li|auto="ca",conj="i-"|>
+    \li<\sh<{hinof}>\ex<姉>>
+    \li|punc=","|>
     \li<\sh<{lo}>\ex<そして>>
-    \li<\sh<{kav}-[a]-[t]>\ex<もつ\mph<-現-継.自>>>
-    \li<\sh<{a}>\ex<\mph<主>>>
+    \li|conj="-at"|<\sh<{kav}>\ex<もつ>>
+    \li|auto="a"|>
     \li<\sh<{'s}>\ex<彼女>>
-    \li<\sh<{e}>\ex<\mph<対>>>
+    \li|auto="e"|>
     \li<\sh<{dat}>\ex<何もない>>
-    \li<\sh<{doz}-[a]-[t]>\ex<しなければならなくする\mph<-現-継.自>>>
-    \li<\sh<{les}-[a]-[s]>\ex<する\mph<-現-無.自>>>
-    \li<\sh<{e}>\ex<\mph<対>>>
-    \li<\sh<{a}>\ex<\mph<主>>>
-    \li<\sh<{'s}>\ex<彼女>>\li<\sh<[.]>>
+    \li|conj="-at"|<\sh<{doz}>\ex<しなければならなくする>>
+    \li|conj="-as"|<\sh<{les}>\ex<する>>
+    \li|auto="e"|>
+    \li|auto="a"|>
+    \li<\sh<{'s}>\ex<彼女>>
+    \li|punc="."|>
     ## 2
-    \li<\sh<{zesqik}-[a]-[s]>\ex<覗く>>
-    \li<\sh<{a}>\ex<\mph<主>>>
+    \li|conj="-as"|<\sh<{zesqik}>\ex<覗く>>
+    \li|auto="a"|>
     \li<\sh<{ces}>\ex<彼女>>
     \li<\sh<{la}>\ex<～の量で>>
     \li<\sh<{tal}>\ex<回>>
     \li<\sh<{al'}>\ex<個の>>
-    \li<\sh<[a]-{tis}>\ex<\mph<形->1>>
+    \li|conj="a-"|<\sh<{tis}>\ex<1>>
     \li<\sh<{é}>\ex<または>>
     \li<\sh<{al'}>\ex<個の>>
-    \li<\sh<[a]-{qec}>\ex<\mph<形->2>>
-    \li<\sh<{e}>\ex<\mph<対>>>
+    \li|conj="a-"|<\sh<{qec}>\ex<2>>
+    \li|auto="e"|>
     \li<\sh<{xoq}>\ex<本>>
-    \li<\sh<{lîd}-[a]-[c]>\ex<読む\mph<-現-経.自>>>
-    \li<\sh<{e}>\ex<\mph<対>>>
-    \li<\sh<{a}>\ex<\mph<主>>>
-    \li<\sh<{hinof}>\ex<姉>>\li<\sh<[,]>>
+    \li|conj="-ac"|<\sh<{lîd}>\ex<読む>>
+    \li|auto="e"|>
+    \li|auto="a"|>
+    \li<\sh<{hinof}>\ex<姉>>
+    \li|punc=","|>
     \li<\sh<{dà}>\ex<しかし>>
-    \li<\sh<[du]-{kav}-[a]-[t]>\ex<\mph<否->もつ\mph<-現-継.自>>>
-    \li<\sh<{a}>\ex<\mph<主>>>
+    \li|conj="du-at"|<\sh<{kav}>\ex<もつ>>
+    \li|auto="a"|>
     \li<\sh<{cit}>\ex<それ>>
-    \li<\sh<{e}>\ex<\mph<対>>>
+    \li|auto="e"|>
     \li<\sh<{qinat}>\ex<絵>>
     \li<\sh<{o}>\ex<と>>
-    \li<\sh<{lek}>\ex<会話>>\li<\sh<[.]>>
+    \li<\sh<{lek}>\ex<会話>>
+    \li|punc="."|>
     ## 3
-    \li<\sh<{lo}>\ex<そして>>\li<\sh<[,]>>
-    \li<\sh<{rev}-[a]-[s]>\ex<思う\mph<-現-無.自>>>
-    \li<\sh<{a}>\ex<\mph<主>>>
-    \li<\sh<{ces}>\ex<彼女>>\li<\sh<[.]>>
+    \li<\sh<{lo}>\ex<そして>>
+    \li|punc=","|>
+    \li|conj="-as"|<\sh<{rev}>\ex<思う>>
+    \li|auto="a"|>
+    \li<\sh<{ces}>\ex<彼女>>
+    \li|punc="."|>
     ## 4
-    \li<\sh<[«]>>\li<\sh<{pa}>\ex<\mph<疑>>>
-    \li<\sh<{sal}-[o]-[t]>\ex<である\mph<-通-継.自>>>
-    \li<\sh<{e}>\ex<\mph<対>>>
+    \li|punc="«"|>
+    \li|auto="pa"|>
+    \li|conj="-ot"|<\sh<{sal}>\ex<である>>
+    \li|auto="e"|>
     \li<\sh<{pil}>\ex<何>> 
-    \li<\sh<{a}>\ex<\mph<主>>>
+    \li|auto="a"|>
     \li<\sh<{sokus}>\ex<価値>>
-    \li<\sh<[i]-∅>\ex<\mph<非動修->～の>>
+    \li|conj="i-"|<\sh<∅>\ex<～の>>
     \li<\sh<{xoq}>\ex<本>>
-    \li<\sh<[i]-{de}>\ex<\mph<非動修->～なしで>>
+    \li|conj="i-"|<\sh<{de}>\ex<～なしで>>
     \li<\sh<{qinat}>\ex<絵>>
     \li<\sh<{o}>\ex<と>>
-    \li<\sh<{lek}>\ex<会話>>\li<\sh<[?»]>>
+    \li<\sh<{lek}>\ex<会話>>
+    \li|punc="?»"|>
   >
   \h1<考察点>
   \p<
