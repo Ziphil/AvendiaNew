@@ -55,8 +55,8 @@
       int[] xx = new int[n];
       int[] yy = new int[n];
 
-      &sol> 最も上 (y 座標が小さい) にある点のインデックスを求める
-      &sol> y 座標が最小の点が複数ある場合はその中の最も左のものにしておく
+      // 最も上 (y 座標が小さい) にある点のインデックスを求める
+      // y 座標が最小の点が複数ある場合はその中の最も左のものにしておく
       int a = 0;
       int minY = 10000000;
       int minX = 10000000;
@@ -80,19 +80,19 @@
           if (b == a) {
             b = c;
           } else {
-            &sol> 2 ベクトル AB, AC の外積を計算
-            &sol> これが正なら直線 AB に対して点 C は左側
+            // 2 ベクトル AB, AC の外積を計算
+            // これが正なら直線 AB に対して点 C は左側
             long v = (long)(xx[a] - xx[b]) * (yy[a] - yy[c]) - (long)(xx[a] - xx[c]) * (yy[a] - yy[b]);
             long ab = (long)(xx[a] - xx[b]) * (xx[a] - xx[b]) + (long)(yy[a] - yy[b]) * (yy[a] - yy[b]);
             long ac = (long)(xx[a] - xx[c]) * (xx[a] - xx[c]) + (long)(yy[a] - yy[c]) * (yy[a] - yy[c]);
-            &sol> 直線 AB 上に点 C がある (外積が 0) 場合は点 C の方が遠いときに更新
+            // 直線 AB 上に点 C がある (外積が 0) 場合は点 C の方が遠いときに更新
             if (v &gt> 0L || (v == 0L &amp>&amp> ac &gt> ab)) {
               b = c;
             }
           }
         }
         a = b;
-      &sol> 1 周するまで繰り返し
+      // 1 周するまで繰り返し
       } while (a != outers.get(0)); 
 
       int m = outers.size();
@@ -101,7 +101,7 @@
         int i = outers.get(k);
         int nextI = (k &lt> m - 1) ? outers.get(k + 1) : outers.get(0);
         int previousI = (k &gt>= 1) ? outers.get(k - 1) : outers.get(m - 1);
-        &sol> 凸包上で隣り合う点との垂直二等分線の角度を計算
+        // 凸包上で隣り合う点との垂直二等分線の角度を計算
         double nextTan = Math.atan2(yy[nextI] - yy[i], xx[nextI] - xx[i]) + Math.PI / 2;
         double previousTan = Math.atan2(yy[i] - yy[previousI], xx[i] - xx[previousI]) + Math.PI / 2;
         if (nextTan &gt> Math.PI) {
@@ -114,7 +114,7 @@
         if (range &lt> 0) {
           range += 2 * Math.PI;
         }
-        &sol> 隣り合う点との垂直二等分線の角度の差を 2π でわったものが確率
+        // 隣り合う点との垂直二等分線の角度の差を 2π でわったものが確率
         probs[i] = range / (2 * Math.PI);
       }
       for (int i = 0 ; i &lt> n ; i ++) {
