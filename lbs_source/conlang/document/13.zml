@@ -27,14 +27,6 @@
     動詞, 名詞, 形容詞, 副詞の 4 種類の品詞用法をとることができる\an|href="#i"|<不定詞>。
     副詞としてして使われるときは、必ず\an|href="#vb"|<動詞修飾型副詞>になる。
   >
-  \h2|id="nvi"|<主格型動詞型不定詞\fl<nominative verbal infinitive>>
-  \p<
-    形容詞として使われたときの被修飾語が、動詞として使われたときの {a} 句に対応する\an|href="#vi"|<動詞型不定詞>。
-  >
-  \h2|id="avi"|<対格型動詞型不定詞\fl<accusative verbal infinitive>>
-  \p<
-    形容詞として使われたときの被修飾語が、動詞として使われたときの {e} 句に対応する\an|href="#vi"|<動詞型不定詞>。
-  >
   \h2|id="ni"|<名詞型不定詞\fl<nominal infinitive>>
   \p<
     名詞のみを品詞用法としてとることができる\an|href="#i"|<不定詞>。
@@ -106,6 +98,14 @@
   \p<
     形容詞と副詞の総称。
   >
+  \h2|id="na"|<主格型形容詞\fl<nominative adjective>>
+  \p<
+    被修飾語が動詞として使われたときの {a} 句に対応する形容詞。
+  >
+  \h2|id="aa"|<対格型形容詞\fl<accusative adjective>>
+  \p<
+    被修飾語が動詞として使われたときの {e} 句に対応する形容詞。
+  >
   \h2|id="vb"|<動詞修飾型副詞\fl<verb-modifying adverb>>
   \p<
     動詞を修飾する副詞。
@@ -159,6 +159,60 @@
   \h2|id="bc"|<C 型副詞\fl<adverb of type C>>
   \p<
     \an|href="#sb"|<特殊副詞>の別名。
+  >
+  \h1<時制>
+  \h2|id="prsts"|<現在時制\fl<present tense>>
+  \p<
+    現在の 1 点を表す時制。
+    他の言語の現在時制と違い、現在を含む期間を表すわけではなく、現在という 1 点のみを表すので注意。
+    ただし、従属節で使われた場合は、主節の動詞の時制と相が表す期間を指すようになる。
+  >
+  \h2|id="pstts"|<過去時制\fl<past tense>>
+  \p<
+    過去の期間を表す時制。
+  >
+  \h2|id="futts"|<未来時制\fl<future tense>>
+  \p<
+    未来の期間を表す時制。
+  >
+  \h2|id="dchts"|<通時時制\fl<diachronic tense>>
+  \p<
+    時間を問わず成立する物事に言及するときや、時間を特に指定せずに動作だけを表したいときに用いる時制。
+  >
+  \h1<相>
+  \h2|id="incpas"|<開始相\fl<inceptive aspect>>
+  \p<
+    動作が開始する瞬間を表す相。
+  >
+  \h2|id="progas"|<経過相\fl<progressive aspect>>
+  \p<
+    動作が開始してから完了するまでの期間を表す相。
+  >
+  \h2|id="perfas"|<完了相\fl<perfect aspect>>
+  \p<
+    動作が完了する瞬間を表す相。
+  >
+  \h2|id="contas"|<継続相\fl<continuous aspect>>
+  \p<
+    動作が完了してからその後の状態が終わるまでの期間を表す相。
+  >
+  \h2|id="termas"|<終了相\fl<terminative aspect>>
+  \p<
+    動作が完了した後の状態が途切れる瞬間を表す相。
+  >
+  \h2|id="indfas"|<無相\fl<indefinite aspect>>
+  \p<
+    動作を始めてから完了するまでの一連を表したいときや、動作の局面を特に指定せずに動作そのものを表したいときに用いる相。
+  >
+  \h2|id="puncas"|<瞬間相\fl<punctual aspect>>
+  \p<
+    \an|href="#incpas"|<開始相>, \an|href="perfas"|<完了相>, \an|href="#termas"|<終了相>の総称。
+    動作の進行の中の 1 点を表す。
+  >
+  \h2|id="durtas"|<期間相\fl<durative aspect>>
+  \p<
+    \an|href="#progas"|<経過相>, \an|href="contss"|<継続相>の総称。
+    動作の進行の中のある期間を表す。
   >
   \h1<特殊構文>
   \h2|id="pusev"|<動詞の助動詞的用法\fl<auxiliary use of verbs>>
