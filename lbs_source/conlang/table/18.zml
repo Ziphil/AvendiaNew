@@ -21,10 +21,10 @@
     \tr<\td<{te}>\td<～に>\td<時刻>\td<\k<○>>\td<\k<○>>>
     \tr<\td<{tezi}>\td<～の前に>\td<*>\td<\k<○>>\td<\k<○>>>
     \tr<\td<{teca}>\td<～の後に>\td<*>\td<\k<○>>\td<\k<○>>>
-    \tr<\td<{teku}>\td<～の間に>\td<*>\td<\k<○>>\td<\k<○>>>
+    \tr<\td<{teku}>\td<～の間中>\td<*>\td<\k<○>>\td<\k<○>>>
     \tr<\td<{zite}>\td<～から, ～以来>\td<期間開始点>\td<\k<○>>\td<\k<○>>>
     \tr<\td<{cate}>\td<～まで>\td<期間終了点>\td<\k<○>>\td<\k<○>>>
-    \tr<\td<*>\td<～までに>\td<期限>\td<\k<○>>\td<\k<○>>>
+    \tr<\td<{dite}>\td<～までに>\td<期限>\td<\k<○>>\td<\k<○>>>
     \tr<\td<{vo}>\td<～で>\td<場所>\td<\k<○>>\td<\k<×>>>
     \tr<\td<{voku}>\td<～の中で>\td<*>\td<\k<○>>\td<\k<×>>>
     \tr<\td<{zisa}>\td<～の方から>\td<方向起点>\td<\k<○>>\td<\k<×>>>
@@ -34,6 +34,7 @@
     \tr<\td<{la}>\td<～で>\td<個数, 量>\td<\k<○>>\td<\k<×>>>
     \tr<\td<{fi}>\td<～とともに>\td<同伴物>\td<\k<○>>\td<\k<×>>>
     \tr<\td<{de}>\td<～なしで>\td<*>\td<\k<○>>\td<\k<×>>>
+    \tr<\td<{se}>\td<～に, ～で>\td<状態>\td<\k<○>>\td<\k<×>>>
     \tr<\td<{vade}>\td<～なので, ～だから>\td<理由>\td<\k<×>>\td<\k<○>>>
     \tr<\td<{bava}>\td<～なのに>\td<逆説理由>\td<\k<×>>\td<\k<○>>>
     \tr<\td<{ziqo}>\td<～というのも, ～なのは>\td<結果>\td<\k<×>>\td<\k<○>>>
@@ -67,6 +68,7 @@
     \tr<\td<{ve}>\td<～の中で>\td<比較範囲, 選択範囲>\td<\k<○>>\td<\k<×>>\td<\k<×>>\td<\k<○>>>
     \tr<\td<{feli}>\td<～のように>\td<比況>\td<\k<○>>\td<\k<○>>\td<\k<×>>\td<\k<○>>>
     \tr<\td<{qife}>\td<～のように, ～といった>\td<例示>\td<\k<○>>\td<\k<○>>\td<\k<○>>\td<\k<×>>>
+    \tr<\td<{tace}>\td<～のような, ～などの>\td<代表>\td<\k<○>>\td<\k<×>>\td<\k<○>>\td<\k<×>>>
     \tr<\td<{ti}>\td<～するほど>\td<程度>\td<\k<×>>\td<\k<○>>\td<\k<×>>\td<\k<○>>>
     \tr<\td<{le}>\td<～の>\td<程度>\td<\k<○>>\td<\k<×>>\td<\k<○>>\td<\k<○>>>
     \tr<\td<{kife}>\td<～の点で, ～について>\td<判断基準>\td<\k<○>>\td<\k<○>>\td<\k<×>>\td<\k<○>>>
