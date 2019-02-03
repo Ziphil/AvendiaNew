@@ -31,7 +31,7 @@ FIXED_NAMES = {
   "e" => ["e", {:ja => "対", :en => "ACC"}],
   "ca" => ["ca", {:ja => "与", :en => "DAT"}],
   "zi" => ["zi", {:ja => "奪", :en => "ABL"}],
-  "li" => ["li", {:ja => "向", :en => "FIN"}],
+  "li" => ["li", {:ja => "被", :en => "PAT"}],
   "pa" => ["pa", {:ja => "疑", :en => "INT"}],
   "kin" => ["kin", {:ja => "節", :en => "COMP"}],
   "'n" => ["'n", {:ja => "節", :en => "COMP"}]
