@@ -86,7 +86,7 @@ converter.add(nil, ["page.gloss"]) do |text|
   if text.previous_sibling && text.next_sibling
     previous_sibling = text.previous_sibling
     next_sibling = text.next_sibling
-    if previous_sibling.is_a?(Element) && previous_sibling.attribute("punc")&.value =~ /(\[|«)$/
+    if previous_sibling.is_a?(Element) && previous_sibling.attribute("punc")&.value =~ /(\[|«|“)$/
       string = ""
     elsif next_sibling.is_a?(Element) && next_sibling.attribute("punc")&.value =~ /^(\.|,|!|\?)/
       string = ""
