@@ -19,6 +19,34 @@
     各例文の見出しには、その例文を Twitter で呟いた日付と、隣に括弧書きでその例文が辞書のどの項目に載っているかを記載した。
   >
   \h1<例文>
+  \h2|id="2567"|<\h<2567> ({qikov})>
+  \xl<
+    \li<
+      \sh<{pa medelat e qikov aquk? xílac olov a cadìq i cit se abig.}>\ja<あのパソコン壊れてるの? ずっと画面が青く光ってるけど。>
+      \gloss<
+        \li|auto="pa"|>
+        \li|conj="-at"|<\sh<{medel}>\ex<壊す>>
+        \li|auto="e"|>
+        \li<\sh<{qikov}>\ex<パソコン>>
+        \li|conj="a-"|<\sh<{quk}>\ex<あの>>
+        \li|punc="?"|>
+        \li|conj="-ac"|<\sh<{xíl}>\ex<光る>>
+        \li|conj="o-"|<\sh<{lov}>\ex<ずっと>>
+        \li|auto="a"|>
+        \li<\sh<{cadìq}>\ex<画面>>
+        \li|conj="i-"|<\sh<∅>\ex<～の>>
+        \li<\sh<{cit}>\ex<それ>>
+        \li<\sh<{se}>\ex<～の状態で>>
+        \li|conj="a-"|<\sh<{big}>\ex<青い>>
+        \li|punc="."|>
+      >
+    >
+  >
+  \p<
+    「青く光る」の「青く」の部分は、動作中や動作後の状態を表す助詞である {se} を用いて表現する。
+    {se} の後ろには形容詞が置かれることが多い。
+    日本語のように「青い」を副詞として使うと、青さを感じさせるような (ある種で共感覚的な) 様子で光ることを表してしまい、青い光を発することは意味しなくなってしまう。
+  >
   \h2|id="2568"|<\h<2568> ({tílirsítpiv})>
   \xl<
     \li<
