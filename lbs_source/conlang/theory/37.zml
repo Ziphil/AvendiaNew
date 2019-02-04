@@ -1,0 +1,48 @@
+﻿\zml?|version="1.0"|>
+\xml?|version="1.0",encoding="UTF-8"|>
+
+\page<
+  \name<シャレイア語 1 日 1 例文>
+  \ver<5 代 5 期>
+
+  \h1<概要>
+  \p<
+    これは、「シャレイア語 1 日 1 例文」と称して Twitter で呟いていたシャレイア語の例文をまとめたページである。
+    例文一覧は \a|href="https://twitter.com/search?f=tweets&q=%23%E3%82%B7%E3%83%A3%E3%83%AC%E3%82%A4%E3%82%A2%E8%AA%9E1%E6%97%A51%E4%BE%8B%E6%96%87",target="_blank"|<Twitter 検索>でも見ることができる。
+  >
+  \p<
+    各例文の見出しには、その例文を Twitter で呟いた日付と、隣に括弧書きでその例文が辞書のどの項目に載っているかを記載した。
+  >
+  \h1<例文>
+  \h2|id="2570"|<\h<2570> ({kevcaq})>
+  \xl<
+    \li<
+      \sh<{kòdet ca kevcaq acik e “e agipik! befolat e kûv!”.}>\ja<その看板には「危険! 立入禁止!」と書かれていた。>
+      \gloss<
+        \li|conj="-et"|<\sh<{kòd}>\ex<書く>>
+        \li|auto="ca"|>
+        \li<\sh<{kevcaq}>\ex<看板>>
+        \li|conj="a-"|<\sh<{cik}>\ex<その>>
+        \li|auto="e"|>
+        \li|punc="“"|>
+        \li|auto="e"|>
+        \li|conj="a-"|<\sh<{gipik}>\ex<危険な>>
+        \li|punc="!"|>
+        \li|conj="-at"|<\sh<{befol}>\ex<禁止する>>
+        \li|auto="e"|>
+        \li<\sh<{kûv}>\ex<入ること>>
+        \li|punc="!”."|>
+      >
+    >
+  >
+  \p<
+    「/S/ に /Z/ と書かれている」は、日本語と同じように「書く」を意味する {kòd} を用いて表現する。
+    英語のように「the sign says」のような表現はしない。
+  >
+  \p<
+    引用内の最初にある {e agipik} は遊離助詞句である。
+    「ここは危険である」という意味の {salat a fêd e agipik} という文が裏に想定されており、この文の {e agipik} のみが抽出された形である。
+    形容詞や名詞を単独で言いたいときに、しばしばこのような動詞のない助詞句のみの文が現れることがある。
+  >
+
+>
