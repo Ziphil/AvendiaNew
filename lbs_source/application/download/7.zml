@@ -14,24 +14,24 @@
     以下は ZenML の例です。
   >
   \pre~<
-    \zml?|version="1.0"|&gt>
-    \xml?|version="1.0",encoding="UTF-8"|&gt>
-    \body&lt>
-      \h1&lt>見出し&gt>
+    \zml?|version="1.0"|`>
+    \xml?|version="1.0",encoding="UTF-8"|`>
+    \body`<
+      \h1`<見出し`>
       ## XML では書けない行コメントが書けます
-      \p|id="hoge"|&lt>
+      \p|id="hoge"|`<
         XHTML を ZenML で書いた例です。
-      &gt>
-      \table|id="foo",class="bar"|&lt>
-        \tr&lt>
-          \th*&lt>見出し&gt>&lt>見出し&gt>&lt>見出し&gt>&lt>見出し&gt>&lt>見出し&gt>
+      `>
+      \table|id="foo",class="bar"|`<
+        \tr`<
+          \th*`<見出し`>`<見出し`>`<見出し`>`<見出し`>`<見出し`>
           ## こんな感じで同じ名前のタグが並ぶなら 2 回目以降の名前を省略できます
-        &gt>
-        \tr&lt>
-          \td*&lt>表組&gt>&lt>表組&gt>&lt>表組&gt>&lt>表組&gt>&lt>表組&gt>
-        &gt>
-      &gt>
-    &gt>
+        `>
+        \tr`<
+          \td*`<表組`>`<表組`>`<表組`>`<表組`>`<表組`>
+        `>
+      `>
+    `>
   >
   \p<
     ZenML を XML の構文木に変換する Ruby スクリプトを公開しています。

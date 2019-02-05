@@ -15,40 +15,40 @@
   >
   \table<
     \tr<\th<音素>\th<音写>>
-    \tr<\td<&sol>t͡ʃ&sol>>\td<[t]>>
-    \tr<\td<&sol>d͡ʒ&sol>>\td<[j]>>
-    \tr<\td<&sol>ŋ&sol>>\td<[n]>>
-    \tr<\td<&sol>w&sol>>\td<[v]>>
+    \tr<\td<`/t͡ʃ`/>\td<[t]>>
+    \tr<\td<`/d͡ʒ`/>\td<[j]>>
+    \tr<\td<`/ŋ`/>\td<[n]>>
+    \tr<\td<`/w`/>\td<[v]>>
   >
   \p<
     母音は以下のようにします。
   >
   \table<
     \tr<\th<音素>\th<音写>>
-    \tr<\td<&sol>ɪ&sol>>\td<[i]>>
-    \tr<\td<&sol>e&sol>>\td<[e]>>
-    \tr<\td<&sol>æ&sol>>\td<[a]>>
-    \tr<\td<&sol>ə&sol>>\td<>>
-    \tr<\td<&sol>ʌ&sol>>\td<[a]>>
-    \tr<\td<&sol>ʊ&sol>>\td<[u]>>
-    \tr<\td<&sol>ɒ&sol>>\td<[o]>>
-    \tr<\td<&sol>iː&sol>>\td<[î]>>
-    \tr<\td<&sol>ɜː&sol>>\td<[ê]>>
-    \tr<\td<&sol>uː&sol>>\td<[û]>>
-    \tr<\td<&sol>ɔː&sol>>\td<[ô]>>
-    \tr<\td<&sol>ɑː&sol>>\td<[â]>>
-    \tr<\td<&sol>eɪ&sol>>\td<[é]>>
-    \tr<\td<&sol>aɪ&sol>>\td<[á]>>
-    \tr<\td<&sol>ɔɪ&sol>>\td<[ô]>>
-    \tr<\td<&sol>əʊ&sol>>\td<[à]>>
-    \tr<\td<&sol>aʊ&sol>>\td<[à]>>
-    \tr<\td<&sol>ɪə&sol>>\td<[ia]>>
-    \tr<\td<&sol>eə&sol>>\td<[ea]>>
-    \tr<\td<&sol>ʊə&sol>>\td<[ua]>>
+    \tr<\td<`/ɪ`/>\td<[i]>>
+    \tr<\td<`/e`/>\td<[e]>>
+    \tr<\td<`/æ`/>\td<[a]>>
+    \tr<\td<`/ə`/>\td<>>
+    \tr<\td<`/ʌ`/>\td<[a]>>
+    \tr<\td<`/ʊ`/>\td<[u]>>
+    \tr<\td<`/ɒ`/>\td<[o]>>
+    \tr<\td<`/iː`/>\td<[î]>>
+    \tr<\td<`/ɜː`/>\td<[ê]>>
+    \tr<\td<`/uː`/>\td<[û]>>
+    \tr<\td<`/ɔː`/>\td<[ô]>>
+    \tr<\td<`/ɑː`/>\td<[â]>>
+    \tr<\td<`/eɪ`/>\td<[é]>>
+    \tr<\td<`/aɪ`/>\td<[á]>>
+    \tr<\td<`/ɔɪ`/>\td<[ô]>>
+    \tr<\td<`/əʊ`/>\td<[à]>>
+    \tr<\td<`/aʊ`/>\td<[à]>>
+    \tr<\td<`/ɪə`/>\td<[ia]>>
+    \tr<\td<`/eə`/>\td<[ea]>>
+    \tr<\td<`/ʊə`/>\td<[ua]>>
   >
   \p<
-    &sol>ə&sol> は英語の単語の綴りに使われている対応する母音字をそのまま使うことにします。
-    また、&sol>aɪə&sol> などの三重母音は二重母音と &sol>ə&sol> の組み合わせなので、まず二重母音の方を上の表に従って転写し、残りの &sol>ə&sol> は [a] で転写することにします。
+    `/ə`/ は英語の単語の綴りに使われている対応する母音字をそのまま使うことにします。
+    また、`/aɪə`/ などの三重母音は二重母音と `/ə`/ の組み合わせなので、まず二重母音の方を上の表に従って転写し、残りの `/ə`/ は [a] で転写することにします。
   >
   \p<
     さて、ここまでは英語の単語をシャレイア語にどう置き換えるかの話でした。

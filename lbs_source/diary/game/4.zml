@@ -15,19 +15,19 @@
   >
   \pre~<
     front_tiles = (@by..@fby).select{|s| tilemap.wall?(@rbx + 1, s)}
-    front_entities = entities.select{|s| @rx &lt>= s.x &amp>&amp> @y &lt>= s.fy &amp>&amp> @fy &gt>= s.y}
+    front_entities = entities.select{|s| @rx `<= s.x `&`& @y `<= s.fy `&`& @fy `>= s.y}
     tile_distance = (@rbx + 1) * TILE_WIDTH - @rx
     entity_distance = front_entities.map{|s| s.x - @rx}.min
     distances = []
-    distances &lt>&lt> tile_distance unless front_tiles.empty?
-    distances &lt>&lt> entity_distance unless front_entities.empty?
+    distances `<`< tile_distance unless front_tiles.empty?
+    distances `<`< entity_distance unless front_entities.empty?
     distance = distances.min
     if distance
       @x += [@vx, distance].min
     else
       @x += @vx
     end
-    if distance &amp>&amp> distance == 0
+    if distance `&`& distance == 0
       @vx = 0
     end
   >

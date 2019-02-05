@@ -16,7 +16,7 @@
     魔法少女になります。
   >
   \p<
-    愚直にやると、\i<i> 回目の実技試験において、特定の数字が書かれているマスの検索を (\i<R>\sub<\i<i>> － \i<L>\sub<\i<i>>)&sol>\i<D> 回行う必要があります。
+    愚直にやると、\i<i> 回目の実技試験において、特定の数字が書かれているマスの検索を (\i<R>\sub<\i<i>> － \i<L>\sub<\i<i>>)`/\i<D> 回行う必要があります。
     検索も何も工夫しなければ \i<O>(\i<HW>) かかり、検索回数も最大で \i<O>(\i<HW>) です。
     この操作を \i<Q> 回やるので、全体の計算量は最大で \i<O>(\i<H>\sup<2>\i<W>\sup<2>\i<Q>) です。
     なんか無理そうです。
@@ -49,8 +49,8 @@
 
       // 各数に対してそれが書かれる座標を保持
       int[][] poss = new int[2][h * w];
-      for (int i = 0 ; i &lt> h ; i ++) {
-        for (int j = 0 ; j &lt> w ; j ++) {
+      for (int i = 0 ; i `< h ; i ++) {
+        for (int j = 0 ; j `< w ; j ++) {
           int num = scanner.nextInt() - 1;
           poss[0][num] = i;
           poss[1][num] = j;
@@ -59,15 +59,15 @@
 
       // 累積和を計算
       long[] accs = new long[h * w];
-      for (int k = 0 ; k &lt> d ; k ++) {
+      for (int k = 0 ; k `< d ; k ++) {
         long acc = 0;
-        for (int num = k + d ; num &lt> h * w ; num += d) {
+        for (int num = k + d ; num `< h * w ; num += d) {
           int diffX = poss[0][num - d] - poss[0][num];
           int diffY = poss[1][num - d] - poss[1][num];
-          if (diffX &lt> 0) {
+          if (diffX `< 0) {
             diffX = -diffX;
           }
-          if (diffY &lt> 0) {
+          if (diffY `< 0) {
             diffY = -diffY;
           }
           acc += diffX + diffY;
@@ -77,7 +77,7 @@
 
       int q = scanner.nextInt();
       StringBuilder output = new StringBuilder();
-      for (int k = 0 ; k &lt> q ; k ++) {
+      for (int k = 0 ; k `< q ; k ++) {
         int l = scanner.nextInt() - 1;
         int r = scanner.nextInt() - 1;
         long result = accs[r] - accs[l];

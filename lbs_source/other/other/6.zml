@@ -34,8 +34,8 @@
   \samp~<
     7
     [nil, nil, nil]
-    ****.rb:7:in `&lt>class:Foo&gt>': undefined local variable or method `c' for Foo:Class (NameError)
-      from ****.rb:6:in `&lt>main&gt>'
+    ****.rb:7:in ``<class:Foo`>': undefined local variable or method `c' for Foo:Class (NameError)
+      from ****.rb:6:in ``<main`>'
   >
   \p<
     上の例では、初めの 3 行で 3 つの束縛が定義される。
@@ -73,7 +73,7 @@
   \p<
     上のソースコードには、トップレベルのスコープ, \m<Test> クラス内のスコープ, \m<foo> メソッド内のスコープの 3 つのスコープが存在する。
     スコープが異なるので、それぞれのスコープで定義された束縛 (ローカル変数の定義) は別のスコープでは共有されない。
-    上のように、ローカル変数の束縛の有無は \m<Kernel&num>local_variables> で確認できる。
+    上のように、ローカル変数の束縛の有無は \m<Kernel`#local_variables> で確認できる。
   >
   \h2<フラットスコープ>
   \p<
@@ -105,8 +105,8 @@
   \samp~<
     0
     1
-    ****.rb:12:in `foo': undefined local variable or method `shared' for &num>&lt>Test:0x00000002a0dc58&gt> (NameError)
-      from ****.rb:20:in `&lt>main&gt>'
+    ****.rb:12:in `foo': undefined local variable or method `shared' for `#`<Test:0x00000002a0dc58`> (NameError)
+      from ****.rb:20:in ``<main`>'
   >
   \h2<ブロック>
   \p<
@@ -114,7 +114,7 @@
     ブロックは、それが定義された時点での束縛を保持し、ブロックが実行されるときはその保持した束縛のもとでコードが実行される。
   >
   \pre~<
-    def foo(&amp>block)
+    def foo(`&block)
       x = 5
       block.call
     end
@@ -136,9 +136,9 @@
   \p<
     ブロックはオブジェクトではないが、オブジェクトに変換することはできる。
     このときにできるのが \m<Proc> クラスのインスタンスである。
-    ブロックから \m<Proc> インスタンスを得るには、\m<Proc.new>, \m<Kernel&num>proc>, \m<Kernel&num>lambda>, 矢印演算子の 4 つの方法がある。
-    \m<Proc.new> と \m<Kernel&num>proc> はどちらを使っても同じインスタンスを返し、\m<Kernel&num>lambda> と矢印演算子の 2 つも同じだが、例えば \m<Proc.new> を使って生成したものと \m<Kernel&num>lambda> を使って生成したものは微妙に違う。
-    \m<Proc.new> や \m<Kernel&num>proc> を用いたものを「proc」と呼び、\m<Kernel&num>lambda> や矢印演算子を用いたものを「lambda」と呼ぶ。
+    ブロックから \m<Proc> インスタンスを得るには、\m<Proc.new>, \m<Kernel`#proc>, \m<Kernel`#lambda>, 矢印演算子の 4 つの方法がある。
+    \m<Proc.new> と \m<Kernel`#proc> はどちらを使っても同じインスタンスを返し、\m<Kernel`#lambda> と矢印演算子の 2 つも同じだが、例えば \m<Proc.new> を使って生成したものと \m<Kernel`#lambda> を使って生成したものは微妙に違う。
+    \m<Proc.new> や \m<Kernel`#proc> を用いたものを「proc」と呼び、\m<Kernel`#lambda> や矢印演算子を用いたものを「lambda」と呼ぶ。
   >
   \p<
     proc と lambda の違いは全てを説明しようとすると非常に複雑だが、主に 2 つである。
@@ -177,14 +177,14 @@
     lambda.call
   >
   \samp~<
-    ****.rb:1:in `block in &lt>main&gt>': undefined local variable or method `x' for main:Object (NameError)
+    ****.rb:1:in `block in `<main`>': undefined local variable or method `x' for main:Object (NameError)
       ****.rb:3:in `call'
-      ****.rb:3:in `&lt>main&gt>'
+      ****.rb:3:in ``<main`>'
   >
   \h2<\m<Method>, \m<UnboundMethod>>
   \p<
     メソッドはオブジェクトではないが、ブロックと同じようにオブジェクトに変換することはできる。
-    これは \m<Object&num>method> により行われ、\m<Method> インスタンスが得られる。
+    これは \m<Object`#method> により行われ、\m<Method> インスタンスが得られる。
     \m<Method> インスタンスはブロックとは異なり、定義時のスコープではなく、生成するときにレシーバに指定したオブジェクトのスコープで評価される。
   >
   \pre~<
@@ -204,9 +204,9 @@
     0
   >
   \p<
-    上のようにして得られた \m<Method> インスタンスに対して \m<Method&num>unbind> を呼ぶか、\m<Module&num>instance_method> を用いるかすると、\m<UnboundMethod> インスタンスが得られる。
+    上のようにして得られた \m<Method> インスタンスに対して \m<Method`#unbind> を呼ぶか、\m<Module`#instance_method> を用いるかすると、\m<UnboundMethod> インスタンスが得られる。
     これは、束縛をもたないメソッドのようなものである。
-    そのままでは実行できないが、\m<UnboundMethod&num>bind> を用いて適当なオブジェクトに束縛すれば実行できるようになる。
+    そのままでは実行できないが、\m<UnboundMethod`#bind> を用いて適当なオブジェクトに束縛すれば実行できるようになる。
     このとき当然だが、束縛するオブジェクトはもとのクラスと同じクラスかそのサブクラスのインスタンスである必要がある。
     もともとがモジュールにあったメソッドであれば、このような制限はない。
   >
@@ -231,7 +231,7 @@
     5
   >
   \p<
-    \m<UnboundMethod> インスタンスは \m<Module&num>define_method> の第 2 引数に渡すことができる。
+    \m<UnboundMethod> インスタンスは \m<Module`#define_method> の第 2 引数に渡すことができる。
   >
   \pre~<
     module Test
@@ -254,8 +254,8 @@
   \p<
     Ruby ではほとんど全てのものがオブジェクトなので、束縛もオブジェクトにすることができる。
     束縛は \m<Binding> インスタンスで管理する。
-    \m<Kernel&num>binding> により、このメソッドが呼び出されたスコープ全体の束縛を保持した \m<Binding> インスタンスが取得できる。
-    \m<Binding> インスタンスは \m<Kernel&num>eval> の第 2 引数に指定でき、第 1 引数の文字列をその \m<Binding> インスタンスが保持する束縛のもとで評価される。
+    \m<Kernel`#binding> により、このメソッドが呼び出されたスコープ全体の束縛を保持した \m<Binding> インスタンスが取得できる。
+    \m<Binding> インスタンスは \m<Kernel`#eval> の第 2 引数に指定でき、第 1 引数の文字列をその \m<Binding> インスタンスが保持する束縛のもとで評価される。
   >
   \pre~<
     x = 5
@@ -273,12 +273,12 @@
     したがって、同じスコープ内であればどこで \m<Binding> インスタンスを生成しても同じものが得られる。
   >
   \p<
-    \m<Binding> インスタンスは \m<Proc&num>binding> を用いても生成できる。
+    \m<Binding> インスタンスは \m<Proc`#binding> を用いても生成できる。
     これはレシーバが定義されているスコープ全体の束縛を保持した \m<Binding> インスタンスを返す。
     ブロックが保持する束縛は定義時に存在していたものだけなので、この違いには注意すること。
   >
   \pre~<
-    block = -&gt> {p x}
+    block = -`> {p x}
     x = 3
     block_binding = block.binding
     eval("p x", block_binding)
@@ -286,9 +286,9 @@
   >
   \samp~<
     3
-    ****.rb:1:in `block in &lt>main&gt>': undefined local variable or method `x' for main:Object (NameError)
+    ****.rb:1:in `block in `<main`>': undefined local variable or method `x' for main:Object (NameError)
       from ****.rb:5:in `call'
-      from ****.rb:5:in `&lt>main&gt>'
+      from ****.rb:5:in ``<main`>'
   >
   \p<
     組み込み定数である \m<TOPLEVEL_BINDING> にはトップレベルのスコープの \m<Binding> インスタンスが格納されている。
@@ -322,7 +322,7 @@
   \p<
     オブジェクトは全て特異クラスをもつ。
     特異クラスは継承ができず、オブジェクトの特異メソッドはこの特異クラスに定義される。
-    特異クラスは \m<Object&num>singleton_class> で取得できる。
+    特異クラスは \m<Object`#singleton_class> で取得できる。
     普通のオブジェクトの特異クラスのスーパークラスはそのオブジェクトのクラスである。
   >
   \pre~<
@@ -333,7 +333,7 @@
   >
   \samp~<
     String
-    &num>&lt>Class:&num>&lt>String:0x00000002a2eae8&gt>
+    `#`<Class:`#`<String:0x00000002a2eae8`>
     String
   >
   \p<
@@ -347,9 +347,9 @@
   >
   \samp~<
     Object
-    &num>&lt>Class:String&gt>
-    &num>&lt>Class:Object&gt>
-    &num>&lt>Class:Object&gt>
+    `#`<Class:String`>
+    `#`<Class:Object`>
+    `#`<Class:Object`>
   >
   \p<
     クラスでないモジュールに関しては、普通のオブジェクト同じような挙動を示す。
@@ -361,13 +361,13 @@
   >
   \samp~<
     Module
-    &num>&lt>Class:Kernel&gt>
+    `#`<Class:Kernel`>
     Module
   >
-  \h2<\m<Module&num>include>, \m<Module&num>prepend>, \m<Object&num>extend>>
+  \h2<\m<Module`#include>, \m<Module`#prepend>, \m<Object`#extend>>
   \p<
-    \m<Module&num>include> は、継承チェーンにおいてレシーバとなるモジュールの上に引数のモジュールを追加する。
-    逆に、\m<Module&num>prepend> は、モジュールの下に引数のモジュールを追加する。
+    \m<Module`#include> は、継承チェーンにおいてレシーバとなるモジュールの上に引数のモジュールを追加する。
+    逆に、\m<Module`#prepend> は、モジュールの下に引数のモジュールを追加する。
   >
   \pre~<
     module M
@@ -378,7 +378,7 @@
       prepend M
       include N
     end
-    class D &lt> C
+    class D `< C
     end
     p D.ancestors
   >
@@ -431,7 +431,7 @@
     一方、\m<N> での継承チェーンにおいては、3 行目での \m<M> の追加は 1 回目なので行われる。
   >
   \p<
-    \m<Object&num>extend> を用いることで、レシーバの特異メソッドに引数のモジュールのインスタンスメソッドを追加できる。
+    \m<Object`#extend> を用いることで、レシーバの特異メソッドに引数のモジュールのインスタンスメソッドを追加できる。
   >
   \pre~<
     module Extension
@@ -473,7 +473,7 @@
       end
     end
     class ExtendedClass
-      class &lt>&lt> self
+      class `<`< self
         include Extension
       end
     end
@@ -544,13 +544,13 @@
   \p<
     \c<Test.new.test> が呼ばれた時点で、\m<self> が \m<test> に変わり、メソッド探索が始まる。
     まず、\m<bar> メソッドを探索する。
-    これは \m<test> のクラスである \m<Test> にないので、次に \m<ModuleBeta> を探すがここにもないので、\m<ModuleAlpha> を探してここで見つかるので、\m<ModuleAlpha&num>bar> が実行される。
+    これは \m<test> のクラスである \m<Test> にないので、次に \m<ModuleBeta> を探すがここにもないので、\m<ModuleAlpha> を探してここで見つかるので、\m<ModuleAlpha`#bar> が実行される。
     このメソッドの内部では \m<foo> メソッドが呼ばれているが、レシーバがないので \m<self> に対するメソッド呼び出しだと解釈されて \c<self.foo> と同様の挙動を示す。
     すなわち、ここでは \c<test.foo> と書かれているのと同じように動く。
     したがって、再びメソッド探索が開始する。
-    \m<test> のクラスである \m<Test> には \m<foo> はないので、\m<ModuleBeta> を探しここで見つかるので、\m<ModuleBeta&num>foo> が実行される。
+    \m<test> のクラスである \m<Test> には \m<foo> はないので、\m<ModuleBeta> を探しここで見つかるので、\m<ModuleBeta`#foo> が実行される。
     結果的に、上で示した出力を得る。
-    ソースコードだけを見ると、\m<ModuleAlpha&num>bar> が呼ばれると同じモジュールに定義されている \m<ModuleAlpha&num>foo> が呼ばれそうだが、実際はそうではない。
+    ソースコードだけを見ると、\m<ModuleAlpha`#bar> が呼ばれると同じモジュールに定義されている \m<ModuleAlpha`#foo> が呼ばれそうだが、実際はそうではない。
   >
   \h2<カレントオブジェクト>
   \p<
@@ -578,8 +578,8 @@
     test.foo
   >
   \samp~<
-    [:foo, &num>&lt>Test:0x00000002a2e1d8 @x=10&gt>]
-    [:bar, &num>&lt>Test:0x00000002a2e1d8 @x=11&gt>]
+    [:foo, `#`<Test:0x00000002a2e1d8 @x=10`>]
+    [:bar, `#`<Test:0x00000002a2e1d8 @x=11`>]
   >
   \p<
     モジュール定義 (クラス定義を含む) の内部では、\m<self> はそのモジュールそのものになる。
@@ -596,11 +596,11 @@
   >
   \samp~<
     [:in_class, Test]
-    [:in_method, &num>&lt>Test:0x000000029de570&gt>]
+    [:in_method, `#`<Test:0x000000029de570`>]
   >
   \p<
     上で述べたようなものと同じ機能をもつメソッドのブロック内でも \m<self> が変化する。
-    例えば、クラス定義に相当する \m<Class.new> のブロック内ではその返り値が \m<self> になるし、\m<Module&num>define_method> のブロック内ではメソッドのレシーバが \m<self> になる。
+    例えば、クラス定義に相当する \m<Class.new> のブロック内ではその返り値が \m<self> になるし、\m<Module`#define_method> のブロック内ではメソッドのレシーバが \m<self> になる。
   >
   \h2<カレントモジュール>
   \p<
@@ -612,9 +612,9 @@
     モジュール定義 (クラス定義を含む) の内部では、そのモジュールがカレントモジュールになる。
     メソッドの内部では、カレントオブジェクトのクラスがカレントモジュールになる。
   >
-  \h2<\m<BasicObject&num>instance_eval>, \m<Module&num>class_eval>>
+  \h2<\m<BasicObject`#instance_eval>, \m<Module`#class_eval>>
   \p<
-    \m<BasicObject&num>instance_eval> は、レシーバのコンテキストで与えられたブロックを評価する。
+    \m<BasicObject`#instance_eval> は、レシーバのコンテキストで与えられたブロックを評価する。
     すなわち、与えたブロック内でのカレントオブジェクトをレシーバ自身にし、カレントモジュールをレシーバの特異クラスにする。
     特に前者の効果により、レシーバのインスタンス変数や private なメソッドなどにアクセスができる。
   >
@@ -644,11 +644,11 @@
     5
   >
   \p<
-    \m<Module&num>class_eval> は、レシーバのクラスのコンテキストで与えられたブロックを評価する。
+    \m<Module`#class_eval> は、レシーバのクラスのコンテキストで与えられたブロックを評価する。
     すなわち、与えられたブロック内でのカレントオブジェクトとカレントモジュールをともにレシーバ自身にする。
   >
   \p<
-    なお、\m<BasicObject&num>instance_eval>, \m<Module&num>class_eval> のそれぞれに対して、ブロックに引数を与えることができる \m<BasicObject&num>instance_exec>, \m<Module&num>class_exec> というものもある。
+    なお、\m<BasicObject`#instance_eval>, \m<Module`#class_eval> のそれぞれに対して、ブロックに引数を与えることができる \m<BasicObject`#instance_exec>, \m<Module`#class_exec> というものもある。
   >
   \h2<アクセス制御>
   \p<
@@ -672,7 +672,7 @@
   >
   \samp~<
     foo called
-    ****.rb:10:in `&lt>main&gt>': private method `foo' called for &num>&lt>Foo:0x00000002aae838&gt> (NoMethodError)
+    ****.rb:10:in ``<main`>': private method `foo' called for `#`<Foo:0x00000002aae838`> (NoMethodError)
   >
   \p<
     private メソッドのルールはあくまで「レシーバをつけて呼び出せない」であるので、例えば明示的に \m<self> に対して呼び出そうとするとエラーになる。
@@ -689,8 +689,8 @@
     Foo.new.bar
   >
   \samp~<
-    ****.rb:6:in `bar': private method `foo' called for &num>&lt>Foo:0x00000002a2e8e0&gt> (NoMethodError)
-      from ****.rb:9:in `&lt>main&gt>'
+    ****.rb:6:in `bar': private method `foo' called for `#`<Foo:0x00000002a2e8e0`> (NoMethodError)
+      from ****.rb:9:in ``<main`>'
   >
   \p<
     また、スーパークラスから継承したメソッドはレシーバなしで呼べるので、そのメソッドが private であってもサブクラスから呼び出せる。
@@ -701,7 +701,7 @@
         puts("foo called")
       end
     end
-    class Foo &lt> SuperFoo
+    class Foo `< SuperFoo
       def bar
         foo
       end
@@ -741,15 +741,15 @@
     protected called
     private called
     protected called
-    ****.rb:12:in `bar': private method `private' called for &num>&lt>Foo:0x00000002a2e2a0&gt> (NoMethodError)
-      ****.rb:16:in `&lt>main&gt>'
+    ****.rb:12:in `bar': private method `private' called for `#`<Foo:0x00000002a2e2a0`> (NoMethodError)
+      ****.rb:16:in ``<main`>'
   >
   \p<
     このコードでは、\c<foo.bar> を実行する段階で、9 行目から始まる \m<bar> メソッドの中身を実行し始めるが、ここでの \m<self> は \m<foo> であるから、\m<foo> がもつ protected なメソッドが呼び出せる。
     \c<Foo.new.private> がエラーになるのはすでに述べた通りである。
   >
   \p<
-    \m<Object&num>send> を用いると、可視性に関係なくメソッドを呼び出せる。
+    \m<Object`#send> を用いると、可視性に関係なくメソッドを呼び出せる。
   >
   \pre~<
     class Foo
@@ -768,15 +768,15 @@
     protected called
   >
   \p<
-    メソッドの可視性の設定は、\m<Module&num>private>, \m<Module&num>protected>, \m<Module&num>public> を用いる。
+    メソッドの可視性の設定は、\m<Module`#private>, \m<Module`#protected>, \m<Module`#public> を用いる。
     これらを引数なしで呼び出すと、それ以降で定義されるメソッドがその可視性に設定される。
     シンボルか文字列を引数に渡す (複数指定できる) と、その名前をもつメソッドがその可視性に設定される。
     なお、Ruby 2.1.0 からはメソッド定義式がその名前のシンボルを返すようになったので、上のように \c<private def foo> と書ける。
   >
   \h1<\m<Enumerable>>
-  \h2<\m<Enumerable&num>chunk>>
+  \h2<\m<Enumerable`#chunk>>
   \p<
-    \m<Enumerable&num>chunk> は、要素を初めから順にブロックで評価し、評価値が同じになる部分をグループ化してできる \m<Enumerator> インスタンスを返す。
+    \m<Enumerable`#chunk> は、要素を初めから順にブロックで評価し、評価値が同じになる部分をグループ化してできる \m<Enumerator> インスタンスを返す。
     返される \m<Enumerator> インスタンスは、ブロックの評価値とその評価値になるもとの要素からなる配列のペアを順に回す。
   >
   \pre~<
@@ -850,15 +850,15 @@
     ["-----\n"]
     ["CCCCC"]
   >
-  \h2<\m<Enumerable&num>find> の 第 1 引数>
+  \h2<\m<Enumerable`#find> の 第 1 引数>
   \p<
-    \m<Enumerable&num>find> はブロックを評価して最初に真になる要素を返すが、引数を指定することで真になる要素が見つからなかったときの返り値を指定できる。
+    \m<Enumerable`#find> はブロックを評価して最初に真になる要素を返すが、引数を指定することで真になる要素が見つからなかったときの返り値を指定できる。
     このときの引数は、単なる値ではなく \m<Proc> インスタンス (\m<call> メソッドをもっていれば他のオブジェクトでも良い) である。
     単に \m<call> を呼び出すだけで、引数は与えない。
   >
   \pre~<
     array = [2, 6, 7, 9, 1, 4, 1, 7]
-    proc = -&gt> do 
+    proc = -`> do 
       next :none
     end
     p array.find(proc){|s| s % 5 == 0}
@@ -868,7 +868,7 @@
   >
   \h2<ブロックなしの \m<Enumerable> のメソッド>
   \p<
-    ブロックなしの \m<Enumerable&num>map> は \m<Enumerator> インスタンスを返す。
+    ブロックなしの \m<Enumerable`#map> は \m<Enumerator> インスタンスを返す。
     繰り返しのできるオブジェクト (何でも良い) を \m<Enumerator> インスタンスに変換するという認識で良いのだろうか･･･。
   >
   \pre~<
@@ -892,7 +892,7 @@
     これは、\m<DATA> が \m<File> インスタンス (\m<File> は \m<Enumerable> を Mix-in している) であるため、\m<Enumerator> クラスで定義される \m<with_index> メソッドが呼べないためである。
   >
   \p<
-    \m<Enumerable&num>map> に限らず、ブロックをとる \m<Enumerable> のメソッドは、たいていブロックを指定しないと対応する \m<Enumerator> インスタンスを返すようになっている。
+    \m<Enumerable`#map> に限らず、ブロックをとる \m<Enumerable> のメソッドは、たいていブロックを指定しないと対応する \m<Enumerator> インスタンスを返すようになっている。
     例えば、おもしろくない例だが、以下のような感じである。
   >
   \pre~<
@@ -914,23 +914,23 @@
     アルファベットを省略した場合は \m<%Q> であると解釈される。
   >
   \pre~<
-    p %|A'B'C/D"E"F\u0061=&num>{2*2}|
-    p %Q{A'B'C/D"E"F\u0061=&num>{2*2}}
-    p %q[A'B'C/D"E"F\u0061=&num>{2*2}]
-    p %s$A'B'C/D"E"F\u0061=&num>{2*2}$
-    p %r!A'B'C/D"E"F\u0061=&num>{2*2}!
-    p %W$A'B' C/D "E"F \u0061=&num>{2*2}$
-    p %w$A'B' C/D "E"F \u0061=&num>{2*2}$
+    p %|A'B'C/D"E"F\u0061=`#{2*2}|
+    p %Q{A'B'C/D"E"F\u0061=`#{2*2}}
+    p %q[A'B'C/D"E"F\u0061=`#{2*2}]
+    p %s$A'B'C/D"E"F\u0061=`#{2*2}$
+    p %r!A'B'C/D"E"F\u0061=`#{2*2}!
+    p %W$A'B' C/D "E"F \u0061=`#{2*2}$
+    p %w$A'B' C/D "E"F \u0061=`#{2*2}$
     p %x*echo hello*
   >
   \samp~<
     "A'B'C/D\"E\"Fa=4"
     "A'B'C/D\"E\"Fa=4"
-    "A'B'C/D\"E\"F\\u0061=\&num>{2*2}"
-    :"A'B'C/D\"E\"F\\u0061=\&num>{2*2}"
+    "A'B'C/D\"E\"F\\u0061=\`#{2*2}"
+    :"A'B'C/D\"E\"F\\u0061=\`#{2*2}"
     /A'B'C\/D"E"F\u0061=4/
     ["A'B'", "C/D", "\"E\"F", "a=4"]
-    ["A'B'", "C/D", "\"E\"F", "\\u0061=\&num>{2*2}"]
+    ["A'B'", "C/D", "\"E\"F", "\\u0061=\`#{2*2}"]
     "hello\n"
   >
   \p<
@@ -938,27 +938,27 @@
   >
   \pre~<
     string = "X Y"
-    p %W(A\ B &num>{string}C\sD &num>{3 * 3})
+    p %W(A\ B `#{string}C\sD `#{3 * 3})
   >
   \samp~<
     ["A B", "X YC D", "9"]
   >
   \h2<ヒアドキュメント>
   \p<
-    \m<&lt>&lt>> に続けて、クォートで括られた何らかの識別子を書くと、それの次の行からその識別子だけの行の直前の行までがリテラルになる。
+    \m<`<`<> に続けて、クォートで括られた何らかの識別子を書くと、それの次の行からその識別子だけの行の直前の行までがリテラルになる。
     ダブルクォートを利用した場合は式展開やエスケープが有効になり、シングルクォートを利用した場合は無効になる。
     識別子をクォートで括らなかった場合は、ダブルクォートで囲った場合と同じになる。
   >
   \pre~<
-    p &lt>"EOB"
+    p `<"EOB"
     String Line 1
     String Line 2
     EOB
-    p &lt>EOS
+    p `<EOS
     String Line 1
     String Line 2
     EOS
-    p &lt>`HELLO`
+    p `<`HELLO`
     echo hello
     HELLO
   >
@@ -970,49 +970,49 @@
   \p<
     ヒアドキュメントの終了を示す行は識別子だけからなる必要がある。
     識別子の前後にスペースを入れることはできない上に、コメントも書くことができない。
-    \m<&lt>> の代わりに \m<&lt>-> にすると、ヒアドキュメントの終了を表す識別子をインデントすることができるようになるが、依然としてコメントは書けない。
+    \m<`<> の代わりに \m<`<-> にすると、ヒアドキュメントの終了を表す識別子をインデントすることができるようになるが、依然としてコメントは書けない。
   >
   \pre~<
-    p &lt>"EOB"
+    p `<"EOB"
     String Line 1
     String Line 2
-      EOB  &num> comment
+      EOB  `# comment
     String Line 3
     EOB
-    p &lt>-"EOB"
+    p `<-"EOB"
     String Line 1
     String Line 2
       EOB
   >
   \samp~<
-    "String Line 1\nString Line 2\n  EOB  &num> comment\nString Line 3\n"
+    "String Line 1\nString Line 2\n  EOB  `# comment\nString Line 3\n"
     "String Line 1\nString Line 2\n"
     >
   \p<
     文字列リテラルと違い、ヒアドキュメントの中ではクォートをエスケープする必要がない。
     特にシングルクォートによるヒアドキュメントは、完全にソースコードに書かれているそのままの文字列になる。
-    以下の例の \m<">, \m<'>, \m<&bsol>> の挙動について特に注目すること。
+    以下の例の \m<">, \m<'>, \m<`\> の挙動について特に注目すること。
   >
   \pre~<
-    p &lt>"EOB"
-    "AB" 'CD' \"AB\" \'CD\' &num>{3 * 5} 
+    p `<"EOB"
+    "AB" 'CD' \"AB\" \'CD\' `#{3 * 5} 
     EOB
-    p &lt>'EOB'
-    "AB" 'CD' \"AB\" \'CD\' &num>{3 * 5} 
+    p `<'EOB'
+    "AB" 'CD' \"AB\" \'CD\' `#{3 * 5} 
     EOB
   >
   \samp~<
     "\"AB\" 'CD' \"AB\" 'CD' 15 \n"
-    "\"AB\" 'CD' \\\"AB\\\" \\'CD\\' \&num>{3 * 5} \n"
+    "\"AB\" 'CD' \\\"AB\\\" \\'CD\\' \`#{3 * 5} \n"
   >
   \p<
-    \c<&lt>"EOB"> などの部分が式になるので、以下のような記述が可能になる。
+    \c<`<"EOB"> などの部分が式になるので、以下のような記述が可能になる。
   >
   \pre~<
     def method(foo, string, bar)
       p string
     end
-    method(1, &lt>"EOB", 2)
+    method(1, `<"EOB", 2)
     This is a here document.
     line 2
     line 3
@@ -1029,7 +1029,7 @@
       p first_string
       p second_string
     end
-    method(&lt>FIRST, &lt>SECOND)
+    method(`<FIRST, `<SECOND)
     first line 1
     first line 2
     FIRST
@@ -1115,23 +1115,23 @@
     10
   >
   \h1<その他>
-  \h2<\m<Kernel&num>require>, \m<Kernel&num>load>>
+  \h2<\m<Kernel`#require>, \m<Kernel`#load>>
   \p<
-    \m<Kernel&num>require> と \m<Kernel&num>load> は外部ファイルを読み込むためのメソッドである。
+    \m<Kernel`#require> と \m<Kernel`#load> は外部ファイルを読み込むためのメソッドである。
     これらは、第 1 引数に指定された名前のファイルをロードパスから探し、それをトップレベルで実行する。
     したがって、例えば、読み込んだファイルで定数 (クラス名を含む) が定義されていればトップレベルの定数になる。
     ただし、読み込んだファイルのローカル変数は共有されない。
   >
   \p<
     一方、この 2 つのメソッドは、様々な点で異なった挙動を示す。
-    まず、\m<Kernel&num>require> はライブラリを読み込むときに用いるもので、\m<Kernel&num>load> はファイルを読み込むときに用いるとされていて、意味合いが異なる。
-    また、\m<Kernel&num>require> は拡張子を省略できるが、\m<Kernel&num>load> はできない。
-    さらに、\m<Kernel&num>require> は同じファイルは 1 度だけしか実行しないが、\m<Kernel&num>load> は同じファイルであってもこのメソッドが呼ばれれば何度でも実行する。
+    まず、\m<Kernel`#require> はライブラリを読み込むときに用いるもので、\m<Kernel`#load> はファイルを読み込むときに用いるとされていて、意味合いが異なる。
+    また、\m<Kernel`#require> は拡張子を省略できるが、\m<Kernel`#load> はできない。
+    さらに、\m<Kernel`#require> は同じファイルは 1 度だけしか実行しないが、\m<Kernel`#load> は同じファイルであってもこのメソッドが呼ばれれば何度でも実行する。
   >
   \p<
-    なお、\m<Kernel&num>load> の第 2 引数に true を指定すると、定数を読み込まなくなる。
+    なお、\m<Kernel`#load> の第 2 引数に true を指定すると、定数を読み込まなくなる。
     より具体的には、読み込むファイルを実行するときに無名のモジュールが作成され、ファイル内の定数はこのモジュールのもとに定義され、ファイルの実行が終わったらこのモジュールは破棄される。
   >
-  \h2<\m<Kernel&num>require>, \m<Kernel&num>require_relative>>
+  \h2<\m<Kernel`#require>, \m<Kernel`#require_relative>>
 
 >

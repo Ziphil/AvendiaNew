@@ -8,7 +8,7 @@
   \h1<Introduction>
   \h2|number="1"|<Effective Date>
   \p<
-    The grammar of Shaleian language of version 5.5 has been used since 26&sol>09&sol>1504 of the Hairia calendar (07&sol>11&sol>2015 of the Gregorian calendar).
+    The grammar of Shaleian language of version 5.5 has been used since 26`/09`/1504 of the Hairia calendar (07`/11`/2015 of the Gregorian calendar).
     Note that sentences written before that, which are based on an older grammar, cannot be interpreted in the basis of the current one.
   >
   \h2|number="2"|<Notice on Notation>
@@ -101,7 +101,7 @@
     \tr<\td<[-]>\td<{fêk}>\td<makes a compound word>>
     \tr<\td<[:]>\td<{kaltak}>\td<partitions data>>
     \tr<\td<[…]>\td<{fôhak}>\td<indicates a silence or a lingering>>
-    \tr<\td<[&lsqb> &rsqb>]>\td<{rakut}>\td<specifies the expression inside is a conversation>>
+    \tr<\td<[`[ `]]>\td<{rakut}>\td<specifies the expression inside is a conversation>>
     \tr<\td<[“ ”]>\td<{vakut}>\td<specifies the expression inside is a quotation or emphasised>>
   >
   \p<
@@ -162,10 +162,10 @@
   >
   \img|src="../../file/other/36.png"|>
   \p<
-    The letter [l] has complementary allophones; it is pronounced &sol>l&sol> when a vowel follows it, and &sol>ɾ&sol> otherwise.
-    The phoneme &sol>w&sol> appears only between a succession of certain letters.
+    The letter [l] has complementary allophones; it is pronounced `/l`/ when a vowel follows it, and `/ɾ`/ otherwise.
+    The phoneme `/w`/ appears only between a succession of certain letters.
     This will be discussed in detail in \a|href="#12"|<Section 12>.
-    The usage of &sol>ɴ&sol> will be explained later.
+    The usage of `/ɴ`/ will be explained later.
   >
   \p<
     The vowels are the following.
@@ -173,14 +173,14 @@
   >
   \img|src="../../file/other/37.png"|>
   \p<
-    The three vowels &sol>ɪ&sol>, &sol>ʊ&sol> and &sol>ɐ&sol> appear as the second vowel of a diphthong, mentioned in \a|href="#11"|<Section 11>, and do not appear alone.
+    The three vowels `/ɪ`/, `/ʊ`/ and `/ɐ`/ appear as the second vowel of a diphthong, mentioned in \a|href="#11"|<Section 11>, and do not appear alone.
   >
   \p<
     Basically, all letters are pronounced according to the correspondence of letters and phonemes displayed in the preceding tables, except when some phonological changes occur.
     There are, however, a small number of exceptions.
-    For example, {kin} is pronounced &sol>kiɴ&sol>; the phoneme &sol>ɴ&sol> appears only in {kin} and its abbreviation {'n}.
+    For example, {kin} is pronounced `/kiɴ`/; the phoneme `/ɴ`/ appears only in {kin} and its abbreviation {'n}.
     The letter [h] also has a phonological exception.
-    When it is placed at the end of a syllable, it may be pronounced &sol>h&sol>, but in most cases it is not pronounced at all.
+    When it is placed at the end of a syllable, it may be pronounced `/h`/, but in most cases it is not pronounced at all.
   >
   \h2|number="11"|<Long Vowels and Diphthongs>
   \p<
@@ -193,14 +193,14 @@
   >
   \table<
     \tr<\th<letter>\th<pronunciation>>
-    \tr<\td<[á]>\td<&sol>aɪ&sol>>>
-    \tr<\td<[é]>\td<&sol>eɪ&sol>>>
-    \tr<\td<[í]>\td<&sol>iə&sol>>>
-    \tr<\td<[à]>\td<&sol>aʊ&sol>>>
-    \tr<\td<[è]>\td<&sol>eʊ&sol>>>
-    \tr<\td<[ì]>\td<&sol>iʊ&sol>>>
-    \tr<\td<[ò]>\td<&sol>ɔɐ&sol>>>
-    \tr<\td<[ù]>\td<&sol>uɐ&sol>>>
+    \tr<\td<[á]>\td<`/aɪ`/>>
+    \tr<\td<[é]>\td<`/eɪ`/>>
+    \tr<\td<[í]>\td<`/iə`/>>
+    \tr<\td<[à]>\td<`/aʊ`/>>
+    \tr<\td<[è]>\td<`/eʊ`/>>
+    \tr<\td<[ì]>\td<`/iʊ`/>>
+    \tr<\td<[ò]>\td<`/ɔɐ`/>>
+    \tr<\td<[ù]>\td<`/uɐ`/>>
   >
   \p<
     As is the case with the long vowels, these diphthongs have recently been pronounced in the same way as the corresponding short vowels.
@@ -213,18 +213,18 @@
   >
   \table<
     \tr<\th<pattern>\th<pronunciation>>
-    \tr<\td<[ia]>\td<&sol>ija&sol>>>
-    \tr<\td<[ie]>\td<&sol>ije&sol>>>
-    \tr<\td<[io]>\td<&sol>ijɔ&sol>>>
-    \tr<\td<[iu]>\td<&sol>iju&sol>>>
-    \tr<\td<[ua]>\td<&sol>uwa&sol>>>
-    \tr<\td<[ue]>\td<&sol>uwe&sol>>>
-    \tr<\td<[ui]>\td<&sol>uwi&sol>>>
-    \tr<\td<[uo]>\td<&sol>uwɔ&sol>>>
+    \tr<\td<[ia]>\td<`/ija`/>>
+    \tr<\td<[ie]>\td<`/ije`/>>
+    \tr<\td<[io]>\td<`/ijɔ`/>>
+    \tr<\td<[iu]>\td<`/iju`/>>
+    \tr<\td<[ua]>\td<`/uwa`/>>
+    \tr<\td<[ue]>\td<`/uwe`/>>
+    \tr<\td<[ui]>\td<`/uwi`/>>
+    \tr<\td<[uo]>\td<`/uwɔ`/>>
   >
   \p<
-    If two vowels are adjacent between two words, not within a single word, or in other words, if a word ending with a vowel precedes a word starting with a vowel, then &sol>l&sol> is inserted between those two vowels in order to avoid the hiatus. 
-    However, in the case where the second word is a proper noun, &sol>l&sol> is not inserted. 
+    If two vowels are adjacent between two words, not within a single word, or in other words, if a word ending with a vowel precedes a word starting with a vowel, then `/l`/ is inserted between those two vowels in order to avoid the hiatus. 
+    However, in the case where the second word is a proper noun, `/l`/ is not inserted. 
   >
   \h2|number="13"|<Syllable Structure>
   \p<
@@ -485,9 +485,9 @@
   \p<
     When the first sentence is written, there is no information beforehand.
     In such a case, the subject is usually placed at the first.
-    The sentence then gives information {zeqil} to the reader at the end, to impress on him&sol>her that “a table was sold”.
-    Thus, by placing the phrase {e cit} at the first of the second sentence, he&sol>she can easily understand that this “{cit}” is the table mentioned in the previous sentence.
-    Moreover, by putting {e refet} at the end, he&sol>she smoothly realises new information that the table was given by a friend of “{tel}”.
+    The sentence then gives information {zeqil} to the reader at the end, to impress on him`/her that “a table was sold”.
+    Thus, by placing the phrase {e cit} at the first of the second sentence, he`/she can easily understand that this “{cit}” is the table mentioned in the previous sentence.
+    Moreover, by putting {e refet} at the end, he`/she smoothly realises new information that the table was given by a friend of “{tel}”.
   >
   \p<
     Here transpose the prepositional phrases in the second sentence:
@@ -496,9 +496,9 @@
     \li<\sh<{qoletes a tel e zeqil. séqes a refet ca tel e cit.}>\ja<I sold a table. My friend gave me that table.>>
   >
   \p<
-    Having done this, when the reader begins to read the second sentence, he&sol>she would suddenly get new information “a friend” while “a desk” is in his&sol>her head.
-    As a result, he&sol>she would wonder what about the desk and may get confused.
-    When the reader finishes reading the second sentence, he&sol>she would finally see that this sentence says about the desk. 
+    Having done this, when the reader begins to read the second sentence, he`/she would suddenly get new information “a friend” while “a desk” is in his`/her head.
+    As a result, he`/she would wonder what about the desk and may get confused.
+    When the reader finishes reading the second sentence, he`/she would finally see that this sentence says about the desk. 
     This causes a vague understanding.
   >
   \p<
@@ -641,7 +641,7 @@
     The answer {ya} is used when what the question asks is true, while {du} is used when it is false.
   >
   \xl<
-    \li<\sh<{pa séqes ca loc a ces e gisol?} &sol> {du.}>\ja<Did you get money from him? &sol> No.>>
+    \li<\sh<{pa séqes ca loc a ces e gisol?} `/ {du.}>\ja<Did you get money from him? `/ No.>>
   >
   \p<
     Pay special attention to answering {ya} or {du} when the question is a negative sentence.
@@ -649,7 +649,7 @@
     Therefore, they are used in a different manner from English “yes” and “no”.
   >
   \xl<
-    \li<\sh<{pa dusâfakes a loc e dat?} &sol> {ya.}>\ja<Don't you like dogs? &sol> No.>>
+    \li<\sh<{pa dusâfakes a loc e dat?} `/ {ya.}>\ja<Don't you like dogs? `/ No.>>
   >
   \p<
     In this example, the sentence obtained by removing {pa} has the meaning “you do not like dogs”, so a person who answered {ya} does not like them.
@@ -697,14 +697,14 @@
     To answer a nonpolar question, if the answer is a noun, one uses a phrase in the form of a preposition + a noun.
   >
   \xl<
-    \li<\sh<{pa lanes a loc ca amerikas te pet?} &sol> {te tazik.}>\ja<When did you go to America? &sol> Yesterday.>>
+    \li<\sh<{pa lanes a loc ca amerikas te pet?} `/ {te tazik.}>\ja<When did you go to America? `/ Yesterday.>>
   >
   \p<
     In most cases where the interrogative word is {pil}, the answer is a nominal clause.
     In such a case, one answers with the form of a preposition + {kin} + a clause.
   >
   \xl<
-    \li<\sh<{pa leses a loc te tazik e pil?} &sol> {e kin câses a tel e ʻyutih.}>\ja<What did you do yesterday? &sol> I met Yutia.>>
+    \li<\sh<{pa leses a loc te tazik e pil?} `/ {e kin câses a tel e ʻyutih.}>\ja<What did you do yesterday? `/ I met Yutia.>>
   >
   \p<
     When an interrogative adjective is used, the answer is also an adjective.
@@ -712,7 +712,7 @@
     One cannot answer with only an adjective.
   >
   \xl<
-    \li<\sh<{pa sâfat a loc e zas apéf?} &sol> {e zas asafey.}>\ja<What kind of people do you like? &sol> Those who is friendly.>>
+    \li<\sh<{pa sâfat a loc e zas apéf?} `/ {e zas asafey.}>\ja<What kind of people do you like? `/ Those who is friendly.>>
   >
   \h2|number="30"|<Choice Questions>
   \p<
@@ -912,11 +912,11 @@
   >
   \p<
     The following is a summary of the use of the aspects taking the verb “sitting down” as an example.
-    When “sitting down” is used with the inceptive aspect, it indicates the instant someone begins to bend his&sol>her knees to sit down.
-    The progressive aspect indicates the period from the beginning of bending his&sol>her knees until his&sol>her buttocks get on the seat, and the perfect aspect represents that moment of getting seated.
-    Since the continuous aspect represents the period in which the state caused by the act continues, it expresses that his&sol>her buttocks are on the seat at that time.
-    The terminative aspect indicates the moment his&sol>her buttocks get apart from the seat.
-    The indeterminate aspect represents the interval between the moment of beginning to bend his&sol>her knees and that of putting his&sol>her buttocks on the seat, or it expresses the act “sitting down” itself without mentioning its aspect.
+    When “sitting down” is used with the inceptive aspect, it indicates the instant someone begins to bend his`/her knees to sit down.
+    The progressive aspect indicates the period from the beginning of bending his`/her knees until his`/her buttocks get on the seat, and the perfect aspect represents that moment of getting seated.
+    Since the continuous aspect represents the period in which the state caused by the act continues, it expresses that his`/her buttocks are on the seat at that time.
+    The terminative aspect indicates the moment his`/her buttocks get apart from the seat.
+    The indeterminate aspect represents the interval between the moment of beginning to bend his`/her knees and that of putting his`/her buttocks on the seat, or it expresses the act “sitting down” itself without mentioning its aspect.
   >
   \p<
     Some of other languages use an aspect to express iteration, but Shelaian does not treat it as an aspect.

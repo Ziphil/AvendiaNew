@@ -16,10 +16,10 @@
   >
   \pre~<
     // 通常 for 文 (プリミティブ版)
-    for (int i = 0 ; i &lt> number ; i ++) {
+    for (int i = 0 ; i `< number ; i ++) {
     }
     // 通常 for 文 (ラッパークラス版)
-    for (Integer i = 0 ; i &lt> number ; i ++) {
+    for (Integer i = 0 ; i `< number ; i ++) {
     }
   >
   \p<
@@ -28,10 +28,10 @@
   >
   \pre~<
     // 拡張 for 文 (プリミティブ版)
-    for (int i : 0 ..&lt> number) {
+    for (int i : 0 ..`< number) {
     }
     // 拡張 for 文 (ラッパークラス版)
-    for (Integer i : 0 ..&lt> number) {
+    for (Integer i : 0 ..`< number) {
     }
   >
   \p<
@@ -39,10 +39,10 @@
   >
   \pre~<
     // each メソッド (プリミティブ版)
-    (0 ..&lt> number).each() { int i -&gt>
+    (0 ..`< number).each() { int i -`>
     }
     // each メソッド (ラッパークラス版)
-    (0 ..&lt> number).each() { Integer i -&gt>
+    (0 ..`< number).each() { Integer i -`>
     }
   >
   \p<
@@ -63,7 +63,7 @@
     次に速いのは拡張 for 文で、これについてはプリミティブ型でもラッパークラス型でも速度の違いがあまり出ませんでした。
     一番遅いのは \m<each> メソッドで、ダントツで遅いです。
     ただ、同じ \m<each> メソッドでも、こちらはラッパークラスを使った方が速いようです。
-    おそらく、\c<0 ..&lt> number> で \m<Range> オブジェクトを作るときに、内部的に \m<Integer> として数値を扱っているため、プリミティブ型で受け取ろうとするとアンボクシング処理が入るからでしょうか。
+    おそらく、\c<0 ..`< number> で \m<Range> オブジェクトを作るときに、内部的に \m<Integer> として数値を扱っているため、プリミティブ型で受け取ろうとするとアンボクシング処理が入るからでしょうか。
   >
   \p<
     ちなみに、静的コンパイルにしても特に結果は変わりませんでした。

@@ -10,8 +10,8 @@
     問題は\a|href="https://beta.atcoder.jp/contests/agc023/tasks/agc023_c",target="_blank"|<こちら>です。
   >
   \p<
-    面倒なので詳細は省きますが、どんな順列に対しても、そのスコア \i<s> は必ず (\i<N> ＋ 1)&sol>2 ≦ \i<s> ≦ \i<N> － 1 の範囲になります。
-    また、この範囲の \i<s> に対し、スコア \i<s> 以下の順列の個数は (\i<s> － 1)!\i<s>!&sol>(2\i<s> － \i<N>)! で求まります。
+    面倒なので詳細は省きますが、どんな順列に対しても、そのスコア \i<s> は必ず (\i<N> ＋ 1)`/2 ≦ \i<s> ≦ \i<N> － 1 の範囲になります。
+    また、この範囲の \i<s> に対し、スコア \i<s> 以下の順列の個数は (\i<s> － 1)!\i<s>!`/(2\i<s> － \i<N>)! で求まります。
     ということで、階乗の積や商を求めることができればこの問題は解けるのですが、普通に計算したら 8 バイト整数の範囲すら超えるので、10\sup<9> ＋ 7 を法とする積や商の求め方を知っている必要があります。
     以下、\i<P> ＝ 10\sup<9> ＋ 7 とし、合同式は \i<P> を法とします。
   >
@@ -45,11 +45,11 @@
       long[] fact = new long[n];
       long[] invfact = new long[n];
       fact[0] = 1;
-      for (int i = 1 ; i &lt> n ; i ++) {
+      for (int i = 1 ; i `< n ; i ++) {
         fact[i] = (fact[i - 1] * i) % MOD;
       }
       invfact[n - 1] = pow(fact[n - 1], MOD - 2);
-      for (int i = n - 2 ; i &gt>= 0 ; i --) {
+      for (int i = n - 2 ; i `>= 0 ; i --) {
         invfact[i] = invfact[i + 1] * (i + 1) % MOD;
       }
       return new long[][]{fact, invfact};
@@ -67,7 +67,7 @@
 
       long res = 0;
       long prev = 0;
-      for (int s = (n + 1) / 2 ; s &lt>= n - 1 ; s ++) {
+      for (int s = (n + 1) / 2 ; s `<= n - 1 ; s ++) {
         long val = fact[0][s - 1] * fact[0][s] % MOD * fact[1][2 * s - n] % MOD;
         res = (s * (val - prev + MOD) % MOD + res) % MOD;
         prev = val;

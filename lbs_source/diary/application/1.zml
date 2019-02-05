@@ -27,7 +27,7 @@
     それなら、一番外側のペインの高さを内側の要素の高さに設定してやれば良いじゃんないかと思い、\m<TableCell> を自作しました。
   >
   \pre~<
-    public class ContentCell extends TableCell&lt>WordModel, Region&gt> {
+    public class ContentCell extends TableCell`<WordModel, Region`> {
       private VBox container = new VBox()
       protected void updateItem(Region region, boolean isEmpty) {
         super.updateItem(region, isEmpty)
@@ -47,7 +47,7 @@
     データのアップデートが必要になったら、\m<ContentCell> が保持している \m<container> に子要素としてペインを追加し、追加したペインの高さと \m<container> の高さをバインドすることで、何とかしようとしています。
   >
   \pre~<
-    contentRegionColumn.setCellFactory() { TableColumn&lt>WordModel, Region&gt> column -&gt>
+    contentRegionColumn.setCellFactory() { TableColumn`<WordModel, Region`> column -`>
       return new ContentCell()
     }
   >
@@ -65,14 +65,14 @@
   \p<
     こんな感じで迷宮入りして 3 日くらい試行錯誤したんですが、ようやく高さを良い感じに設定することができました。
     まず、\m<ContentCell> クラスの \m<updateItem> が呼ばれたら、即座に表示するペインの高さを変更してやれば良いわけです。
-    子ノードから適切な高さを計算する \m<Parent&num>computePrefHeight> というメソッドがあるので、それを使いたいわけですが、これは残念ながら protected なので、新たにクラスを作成してその中で呼び出ます。
+    子ノードから適切な高さを計算する \m<Parent`#computePrefHeight> というメソッドがあるので、それを使いたいわけですが、これは残念ながら protected なので、新たにクラスを作成してその中で呼び出ます。
     さらに、セルの幅が変わるとそれに応じてペインの高さも変える必要があるので、\m<prefWidthProperty> が変更されたときにも高さを再計算するようにしておきます。
   >
   \pre~<
     public class UtilityBox extends VBox {
       public UtilityBox() {
         super()
-        prefWidthProperty().addListener() { ObservableValue observable, Double oldValue, Double newValue -&gt>
+        prefWidthProperty().addListener() { ObservableValue observable, Double oldValue, Double newValue -`>
           setPrefHeight(computePrefHeight(newValue))
         }
       }
@@ -83,7 +83,7 @@
   >
   \p<
     上の \m<updatePrefWidth> というのが高さを計算するメソッドです。
-    これを使うように、\m<ContentCell&num>updateItem> を書き換えます。
+    これを使うように、\m<ContentCell`#updateItem> を書き換えます。
   >
   \pre~<
     protected void updateItem(Region region, boolean isEmpty) {

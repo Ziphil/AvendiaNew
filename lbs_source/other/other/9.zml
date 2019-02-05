@@ -30,7 +30,7 @@
   \h2|number="3"|<第 2 見出し>
   \p<
     第 1 見出しの後に第 2 見出しが続き、その後に段落があるパターンです。
-    シャレイア語を表記する部分は、ZenML の実体参照を用いて &lcub>escaped&rcub> や &lsqb>escaped&rsqb> のようにエスケープできます。
+    シャレイア語を表記する部分は、ZenML の実体参照を用いて `{escaped`} や `[escaped`] のようにエスケープできます。
   >
   \h2|number="5"|<第 2 見出し>
   \p<
@@ -233,7 +233,7 @@
   >
   \samp~<
     ****.rb:11:in `+': String can't be coerced into Integer (TypeError)
-      from ****:11:in `&lt>main&gt>'
+      from ****:11:in ``<main`>'
   >
   \h1<会話文>
   \p<

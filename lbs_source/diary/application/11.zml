@@ -51,17 +51,17 @@
   >
   \pre~<
     BASIC_ROTATIONS = {
-      :x =&gt> Matrix[  # x 軸周りの回転
+      :x =`> Matrix[  # x 軸周りの回転
         [1, 0, 0],
         [0, 0, -1],
         [0, 1, 0]
       ],
-      :y =&gt> Matrix[  # y 軸周りの回転
+      :y =`> Matrix[  # y 軸周りの回転
         [0, 0, 1],
         [0, 1, 0],
         [-1, 0, 0]
       ],
-      :z =&gt> Matrix[  # z 軸周りの回転
+      :z =`> Matrix[  # z 軸周りの回転
         [0, -1, 0],
         [1, 0, 0],
         [0, 0, 1]
@@ -88,18 +88,18 @@
     ROTATIONS = []
     (0..3).each do |i|
       power = BASIC_ROTATIONS[:z] ** i
-      ROTATIONS &lt>&lt> power
-      ROTATIONS &lt>&lt> power * (BASIC_ROTATIONS[:x] ** 2)
+      ROTATIONS `<`< power
+      ROTATIONS `<`< power * (BASIC_ROTATIONS[:x] ** 2)
     end
     (0..3).each do |i|
       power = BASIC_ROTATIONS[:y] ** i
-      ROTATIONS &lt>&lt> power * BASIC_ROTATIONS[:x]
-      ROTATIONS &lt>&lt> power * (BASIC_ROTATIONS[:x] ** 3)
+      ROTATIONS `<`< power * BASIC_ROTATIONS[:x]
+      ROTATIONS `<`< power * (BASIC_ROTATIONS[:x] ** 3)
     end
     (0..3).each do |i|
       power = BASIC_ROTATIONS[:x] ** i
-      ROTATIONS &lt>&lt> power * BASIC_ROTATIONS[:y]
-      ROTATIONS &lt>&lt> power * (BASIC_ROTATIONS[:y] ** 3)
+      ROTATIONS `<`< power * BASIC_ROTATIONS[:y]
+      ROTATIONS `<`< power * (BASIC_ROTATIONS[:y] ** 3)
     end
   >
   \p<

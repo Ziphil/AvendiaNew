@@ -52,7 +52,7 @@
     public class ConvertPrimitiveTransformation implements ASTTransformation {
       public void visit(ASTNode[] nodes, SourceUnit sourceUnit) {
         MethodNode method = (MethodNode)nodes[1]
-        method.getParameters().each() { Parameter parameter -&gt>
+        method.getParameters().each() { Parameter parameter -`>
           String typeName = parameter.getType().getName()
           if (typeName == "java.lang.Integer") {
             parameter.setType(ClassHelper.make("int"))

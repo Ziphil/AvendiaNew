@@ -95,10 +95,10 @@
     \m<ja> 要素は省略することができる。
   >
   \pre~<
-    \xl&lt>
-      \li&lt>\sh&lt>{salot a fit e lêdik.}&gt>\ja&lt>これは文です。&gt>&gt>
-      \li&lt>\sh&lt>{pa salot a qut e pet?}&gt>\ja&lt>あれは何ですか?&gt>&gt>
-    &gt>
+    \xl`<
+      \li`<\sh`<{salot a fit e lêdik.}`>\ja`<これは文です。`>`>
+      \li`<\sh`<{pa salot a qut e pet?}`>\ja`<あれは何ですか?`>`>
+    `>
   >
   \h2<\m<el>, \m<li>, \m<et>, \m<ed>>
   \p<

@@ -13,7 +13,7 @@
   \pre~<
     walls = [1, 2, 3, 4, 5, 10, 11, 12, 15, 18, 19, 23, 27, 28, 29, 30, 31, 32]
     id = 29
-    p walls.include?(id)  #=&gt> true
+    p walls.include?(id)  #=`> true
   >
   \p<
     ･･･面倒なわけです。
@@ -23,7 +23,7 @@
   \pre~<
     walls = [1..5, 10..12, 15, 18, 19, 23, 27..32]
     id = 29
-    p walls.include?(id)  #=&gt> false
+    p walls.include?(id)  #=`> false
   >
   \p<
     しかし、もちろんこれではダメです。
@@ -33,7 +33,7 @@
   \pre~<
     walls = [1..5, 10..12, 15, 18, 19, 23, 27..32]
     id = 29
-    p walls.any?{|s| (s.class == Range) ? s.include?(id) : s == id}  #=&gt> true
+    p walls.any?{|s| (s.class == Range) ? s.include?(id) : s == id}  #=`> true
   >
   \p<
     はい、正常に動作します。
@@ -50,7 +50,7 @@
   \pre~<
     walls = [1..5, 10..12, 15, 18, 19, 23, 27..32]
     id = 29
-    p walls.any?{|s| s === id}  #=&gt> true
+    p walls.any?{|s| s === id}  #=`> true
   >
   \p<
     こんなところで活躍するとは思ってませんでしたね。

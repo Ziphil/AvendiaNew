@@ -16,38 +16,38 @@
   >
   \table<
     \tr<\th<文字>\th<音素>\th<音象徴>>
-    \tr<\td<[l]>\td<&sol>l&sol>>\td<長い, まっすぐ>>
-    \tr<\td<[n]>\td<&sol>n&sol>>\td<短い, 曲がる>>
-    \tr<\td<[k]>\td<&sol>k&sol>>\td<確実, 安心, 固い>>
-    \tr<\td<[m]>\td<&sol>m&sol>>\td<不明, 不安, 柔らかい>>
-    \tr<\td<[s]>\td<&sol>s&sol>>\td<細い, 冷たい, 速い, 鋭い>>
-    \tr<\td<[b]>\td<&sol>b&sol>>\td<太い, 熱い, 遅い, 鈍い>>
-    \tr<\td<[v]>\td<&sol>v&sol>>\td<大きい, 広い>>
-    \tr<\td<[t]>\td<&sol>t&sol>>\td<小さい, 狭い>>
-    \tr<\td<[p]>\td<&sol>p&sol>>\td<近い, 人工>>
-    \tr<\td<[f]>\td<&sol>f&sol>>\td<遠い, 自然>>
-    \tr<\td<[z]>\td<&sol>z&sol>>\td<強い, 男>>
-    \tr<\td<[r]>\td<&sol>ɹ&sol>>\td<弱い, 女>>
-    \tr<\td<[ħ]>\td<&sol>h&sol>>\td<上, 高い, 軽い, 副次的>>
-    \tr<\td<[d]>\td<&sol>d&sol>>\td<下, 低い, 思い, 主要>>
-    \tr<\td<[š]>\td<&sol>ʃ&sol>>\td<楽しい, 綺麗, 気楽>>
-    \tr<\td<[ž]>\td<&sol>d͡ʒ&sol>>\td<苦しい, 汚い, 格式>>
-    \tr<\td<[j]>\td<&sol>j&sol>>\td<明るい, 良い, 肯定>>
-    \tr<\td<[g]>\td<&sol>ɡ&sol>>\td<暗い, 悪い, 否定>>
-    \tr<\td<[č]>\td<&sol>t͡ʃ&sol>>\td<前>>
-    \tr<\td<[ǩ]>\td<&sol>c&sol>>\td<後ろ>>
-    \tr<\td<[đ]>\td<&sol>ð&sol>>\td<外側>>
-    \tr<\td<[c]>\td<&sol>t͡s&sol>>\td<内側>>
-    \tr<\td<[h]>\td<&sol>x&sol>>\td<多い>>
-    \tr<\td<[ȟ]>\td<&sol>ç&sol>>\td<少ない>>
-    \tr<\td<[ŧ]>\td<&sol>θ&sol>>\td<全体>>
-    \tr<\td<[ǧ]>\td<&sol>ɟ&sol>>\td<部分>>
-    \tr<\td<[a]>\td<&sol>a&sol>>\td<>>
-    \tr<\td<[e]>\td<&sol>e&sol>>\td<>>
-    \tr<\td<[i]>\td<&sol>i&sol>>\td<>>
-    \tr<\td<[o]>\td<&sol>o&sol>>\td<>>
-    \tr<\td<[ø]>\td<&sol>œ&sol>>\td<>>
-    \tr<\td<[u]>\td<&sol>y&sol>>\td<>>
+    \tr<\td<[l]>\td<`/l`/>\td<長い, まっすぐ>>
+    \tr<\td<[n]>\td<`/n`/>\td<短い, 曲がる>>
+    \tr<\td<[k]>\td<`/k`/>\td<確実, 安心, 固い>>
+    \tr<\td<[m]>\td<`/m`/>\td<不明, 不安, 柔らかい>>
+    \tr<\td<[s]>\td<`/s`/>\td<細い, 冷たい, 速い, 鋭い>>
+    \tr<\td<[b]>\td<`/b`/>\td<太い, 熱い, 遅い, 鈍い>>
+    \tr<\td<[v]>\td<`/v`/>\td<大きい, 広い>>
+    \tr<\td<[t]>\td<`/t`/>\td<小さい, 狭い>>
+    \tr<\td<[p]>\td<`/p`/>\td<近い, 人工>>
+    \tr<\td<[f]>\td<`/f`/>\td<遠い, 自然>>
+    \tr<\td<[z]>\td<`/z`/>\td<強い, 男>>
+    \tr<\td<[r]>\td<`/ɹ`/>\td<弱い, 女>>
+    \tr<\td<[ħ]>\td<`/h`/>\td<上, 高い, 軽い, 副次的>>
+    \tr<\td<[d]>\td<`/d`/>\td<下, 低い, 思い, 主要>>
+    \tr<\td<[š]>\td<`/ʃ`/>\td<楽しい, 綺麗, 気楽>>
+    \tr<\td<[ž]>\td<`/d͡ʒ`/>\td<苦しい, 汚い, 格式>>
+    \tr<\td<[j]>\td<`/j`/>\td<明るい, 良い, 肯定>>
+    \tr<\td<[g]>\td<`/ɡ`/>\td<暗い, 悪い, 否定>>
+    \tr<\td<[č]>\td<`/t͡ʃ`/>\td<前>>
+    \tr<\td<[ǩ]>\td<`/c`/>\td<後ろ>>
+    \tr<\td<[đ]>\td<`/ð`/>\td<外側>>
+    \tr<\td<[c]>\td<`/t͡s`/>\td<内側>>
+    \tr<\td<[h]>\td<`/x`/>\td<多い>>
+    \tr<\td<[ȟ]>\td<`/ç`/>\td<少ない>>
+    \tr<\td<[ŧ]>\td<`/θ`/>\td<全体>>
+    \tr<\td<[ǧ]>\td<`/ɟ`/>\td<部分>>
+    \tr<\td<[a]>\td<`/a`/>\td<>>
+    \tr<\td<[e]>\td<`/e`/>\td<>>
+    \tr<\td<[i]>\td<`/i`/>\td<>>
+    \tr<\td<[o]>\td<`/o`/>\td<>>
+    \tr<\td<[ø]>\td<`/œ`/>\td<>>
+    \tr<\td<[u]>\td<`/y`/>\td<>>
   >
   \p<
     子音は 2 つずつペアになっており、ペアの子音は音象徴が対の意味になるようになっています。

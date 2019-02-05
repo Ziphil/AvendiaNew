@@ -60,23 +60,23 @@
       int a = 0;
       int minY = 10000000;
       int minX = 10000000;
-      for (int i = 0 ; i &lt> n ; i ++) {
+      for (int i = 0 ; i `< n ; i ++) {
         int x = scanner.nextInt();
         int y = scanner.nextInt();
         xx[i] = x;
         yy[i] = y;
-        if (y &lt> minY || (y == minY &amp>&amp> x &lt> minX)) {
+        if (y `< minY || (y == minY `&`& x `< minX)) {
           minY = y;
           minX = x;
           a = i;
         }
       }
-      List&lt>Integer&gt> outers = new ArrayList(n);
+      List`<Integer`> outers = new ArrayList(n);
       int b;
       do {
         outers.add(a);
         b = 0;
-        for (int c = 1 ; c &lt> n ; c ++) {
+        for (int c = 1 ; c `< n ; c ++) {
           if (b == a) {
             b = c;
           } else {
@@ -86,7 +86,7 @@
             long ab = (long)(xx[a] - xx[b]) * (xx[a] - xx[b]) + (long)(yy[a] - yy[b]) * (yy[a] - yy[b]);
             long ac = (long)(xx[a] - xx[c]) * (xx[a] - xx[c]) + (long)(yy[a] - yy[c]) * (yy[a] - yy[c]);
             // 直線 AB 上に点 C がある (外積が 0) 場合は点 C の方が遠いときに更新
-            if (v &gt> 0L || (v == 0L &amp>&amp> ac &gt> ab)) {
+            if (v `> 0L || (v == 0L `&`& ac `> ab)) {
               b = c;
             }
           }
@@ -97,27 +97,27 @@
 
       int m = outers.size();
       double[] probs = new double[n];
-      for (int k = 0 ; k &lt> m ; k ++) {
+      for (int k = 0 ; k `< m ; k ++) {
         int i = outers.get(k);
-        int nextI = (k &lt> m - 1) ? outers.get(k + 1) : outers.get(0);
-        int previousI = (k &gt>= 1) ? outers.get(k - 1) : outers.get(m - 1);
+        int nextI = (k `< m - 1) ? outers.get(k + 1) : outers.get(0);
+        int previousI = (k `>= 1) ? outers.get(k - 1) : outers.get(m - 1);
         // 凸包上で隣り合う点との垂直二等分線の角度を計算
         double nextTan = Math.atan2(yy[nextI] - yy[i], xx[nextI] - xx[i]) + Math.PI / 2;
         double previousTan = Math.atan2(yy[i] - yy[previousI], xx[i] - xx[previousI]) + Math.PI / 2;
-        if (nextTan &gt> Math.PI) {
+        if (nextTan `> Math.PI) {
           nextTan -= 2 * Math.PI;
         }
-        if (previousTan &gt> Math.PI) {
+        if (previousTan `> Math.PI) {
           previousTan -= 2 * Math.PI;
         }
         double range = previousTan - nextTan;
-        if (range &lt> 0) {
+        if (range `< 0) {
           range += 2 * Math.PI;
         }
         // 隣り合う点との垂直二等分線の角度の差を 2π でわったものが確率
         probs[i] = range / (2 * Math.PI);
       }
-      for (int i = 0 ; i &lt> n ; i ++) {
+      for (int i = 0 ; i `< n ; i ++) {
         System.out.println(probs[i]);
       }
     }

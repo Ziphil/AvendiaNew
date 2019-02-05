@@ -25,8 +25,8 @@
   >
   \pre~<
     private static boolean nextPermutation(int[] array) {
-      for (int i = array.length - 1 ; i &gt> 0 ; i --) {
-        if (array[i - 1] &lt> array[i]) {
+      for (int i = array.length - 1 ; i `> 0 ; i --) {
+        if (array[i - 1] `< array[i]) {
           int j = find(array, array[i - 1], i, array.length - 1);
           int temp = array[j];
           array[j] = array[i - 1];
@@ -43,7 +43,7 @@
         return f;
       }
       int m = (f + l + 1) / 2;
-      return (array[m] &lt>= dest) ? find(array, dest, f, m - 1) : find(array, dest, m, l);
+      return (array[m] `<= dest) ? find(array, dest, f, m - 1) : find(array, dest, m, l);
     }
   >
   \p<
@@ -61,11 +61,11 @@
       int m = scanner.nextInt();
       int rNum = scanner.nextInt();
       int[] rr = new int[rNum];
-      for (int i = 0 ; i &lt> rNum ; i ++) {
+      for (int i = 0 ; i `< rNum ; i ++) {
         rr[i] = scanner.nextInt() - 1;
       }
       int[][] costs = new int[n][n];
-      for (int i = 0 ; i &lt> m ; i ++) {
+      for (int i = 0 ; i `< m ; i ++) {
         int a = scanner.nextInt() - 1;
         int b = scanner.nextInt() - 1;
         int c = scanner.nextInt();
@@ -75,15 +75,15 @@
 
       // ワーシャル・フロイド法で最短経路をあらかじめ求めておく
       int[][] dd = new int[n][n];
-      for (int i = 0 ; i &lt> n ; i ++) {
-        for (int j = 0 ; j &lt> n ; j ++) {
-          dd[i][j] = (costs[i][j] &gt> 0) ? costs[i][j] : Integer.MAX_VALUE;
+      for (int i = 0 ; i `< n ; i ++) {
+        for (int j = 0 ; j `< n ; j ++) {
+          dd[i][j] = (costs[i][j] `> 0) ? costs[i][j] : Integer.MAX_VALUE;
         }
       }
-      for (int k = 0 ; k &lt> n ; k ++) {
-        for (int i = 0 ; i &lt> n ; i ++) {
-          for (int j = 0 ; j &lt> n ; j ++) {
-            if (dd[i][k] &lt> Integer.MAX_VALUE &amp>&amp> dd[k][j] &lt> Integer.MAX_VALUE &amp>&amp> dd[i][j] &gt> dd[i][k] + dd[k][j]) {
+      for (int k = 0 ; k `< n ; k ++) {
+        for (int i = 0 ; i `< n ; i ++) {
+          for (int j = 0 ; j `< n ; j ++) {
+            if (dd[i][k] `< Integer.MAX_VALUE `&`& dd[k][j] `< Integer.MAX_VALUE `&`& dd[i][j] `> dd[i][k] + dd[k][j]) {
               dd[i][j] = dd[i][k] + dd[k][j];
             }
           }
@@ -93,15 +93,15 @@
       // 順列の全探索
       int min = Integer.MAX_VALUE;
       int[] array = new int[rNum];
-      for (int i = 0 ; i &lt> rNum ; i ++) {
+      for (int i = 0 ; i `< rNum ; i ++) {
         array[i] = i;
       }
       do {
         int d = 0;
-        for (int i = 0 ; i &lt> rNum - 1 ; i ++) {
-          d += dd[rr[array[i&rsqb>][rr[array[i + 1&rsqb>];
+        for (int i = 0 ; i `< rNum - 1 ; i ++) {
+          d += dd[rr[array[i`]][rr[array[i + 1`]];
         }
-        if (d &lt> min) {
+        if (d `< min) {
           min = d;
         }
       } while (nextPermutation(array));

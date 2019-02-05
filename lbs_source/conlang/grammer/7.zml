@@ -72,33 +72,33 @@
     シャレイア語では、標準的に以下の子音を用いる。
     発音記号の左の文字は、その音韻に対応する文字を表す。
     アスタリスクとなっている音素は、特定の文字が連続したときにのみ現れる音で、これについては\a|href="#9"|<第 9 項>で述べる。
-    なお、&lsqb>h&rsqb> は声門摩擦音だが、紙面の都合上、口蓋垂の位置に掲載した。
+    なお、`[h`] は声門摩擦音だが、紙面の都合上、口蓋垂の位置に掲載した。
   >
   \p<
-    [l] の発音は条件異音であり、後ろに母音が伴っているときは &sol>l&sol>、それ以外のときは &sol>ɾ&sol> となる。
+    [l] の発音は条件異音であり、後ろに母音が伴っているときは `/l`/、それ以外のときは `/ɾ`/ となる。
     また、['] の発音も条件異音であり、後続する子音によって以下のように発音が変化する。
     母音が後続することはない。
   >
   \table<
     \tr<\th<後続音>\th<発音>>
-    \tr<\td<[k], [g]>\td<&sol>ŋ&sol>>>
-    \tr<\td<[f], [v]>\td<&sol>ɱ&sol>>>
-    \tr<\td<[p], [b], [m]>\td<&sol>m&sol>>>
-    \tr<\td<[s], [z], [x], [j], [r], [h], [y]>\td<&sol>ɴ&sol>>>
-    \tr<\td<[t], [d], [l], [n]>\td<&sol>n&sol>>>
+    \tr<\td<[k], [g]>\td<`/ŋ`/>>
+    \tr<\td<[f], [v]>\td<`/ɱ`/>>
+    \tr<\td<[p], [b], [m]>\td<`/m`/>>
+    \tr<\td<[s], [z], [x], [j], [r], [h], [y]>\td<`/ɴ`/>>
+    \tr<\td<[t], [d], [l], [n]>\td<`/n`/>>
   >
   \p<
     母音は以下の通りである。
     なお、これ以外に曖昧母音も用いる。
   >
   \p<
-    &sol>ɪ&sol>, &sol>ʊ&sol> は、[ai], [ei], [oi], [au], [ou] などの二重母音の 2 つ目の母音として現れ、単独では現れない。
+    `/ɪ`/, `/ʊ`/ は、[ai], [ei], [oi], [au], [ou] などの二重母音の 2 つ目の母音として現れ、単独では現れない。
   >
   \h2|number="8"|<発音>
   \p<
     シャレイア語で用いる祠字は全て表音文字なので、\a|href="#7"|<第 7 項>の表の通りに発音すれば良い。
     ただし、母音を伴っていない [s], [f], [x] 以外の子音、および語末の全ての子音は、曖昧母音を伴って発音される。
-    例えば、{dork}, {kext} はそれぞれ &sol>doɹəkə&sol>, &sol>keʃtə&sol> と発音される。
+    例えば、{dork}, {kext} はそれぞれ `/doɹəkə`/, `/keʃtə`/ と発音される。
   >
   \p<
     アクセントは強弱アクセントであり、どの単語も第 1 音節の母音にアクセントがつく。
@@ -110,17 +110,17 @@
   >
   \table<
     \tr<\th<語>\th<発音>>
-    \tr<\td<[ia]>\td<&sol>ija&sol>>>
-    \tr<\td<[ie]>\td<&sol>ije&sol>>>
-    \tr<\td<[io]>\td<&sol>ijo&sol>>>
-    \tr<\td<[ea]>\td<&sol>eja&sol>>>
-    \tr<\td<[ua]>\td<&sol>ɯɰa&sol>>>
-    \tr<\td<[ui]>\td<&sol>ɯɰi&sol>>>
-    \tr<\td<[ue]>\td<&sol>ɯɰe&sol>>>
-    \tr<\td<[uo]>\td<&sol>ɯɰo&sol>>>
+    \tr<\td<[ia]>\td<`/ija`/>>
+    \tr<\td<[ie]>\td<`/ije`/>>
+    \tr<\td<[io]>\td<`/ijo`/>>
+    \tr<\td<[ea]>\td<`/eja`/>>
+    \tr<\td<[ua]>\td<`/ɯɰa`/>>
+    \tr<\td<[ui]>\td<`/ɯɰi`/>>
+    \tr<\td<[ue]>\td<`/ɯɰe`/>>
+    \tr<\td<[uo]>\td<`/ɯɰo`/>>
   >
   \p<
-    例えば、[xaleia] は &sol>ʃaleɪa&sol> より &sol>ʃaleɪja&sol> と発音されやすい。
+    例えば、[xaleia] は `/ʃaleɪa`/ より `/ʃaleɪja`/ と発音されやすい。
   >
   \h1<品詞, 活用>
   \h2|number="10"|<品詞, 品詞用法>
@@ -477,14 +477,14 @@
     {ja} は聞かれた内容が正しいとき、{ne} は聞かれた内容が誤りのときに使う。
   >
   \xl<
-    \li<\sh<{iiges a los e kanz to tees sii'?} &sol> {ne.}>\ja<あなたは彼からお金をもらったか? &sol> いいえ。>>
+    \li<\sh<{iiges a los e kanz to tees sii'?} `/ {ne.}>\ja<あなたは彼からお金をもらったか? `/ いいえ。>>
   >
   \p<
     {ja} と {ne} の使い方は、疑問内容が否定文になっているときに特に注意が必要である。
     疑問文から {sii'} を取り除いた文が正しければ {ja}、正しくなければ {ne} を使うので、英語の yes, no とは異なる使い方である。
   >
   \xl<
-    \li<\sh<{nu guutat a los e baog sii'?} &sol> {ja.}>\ja<あなたは犬が嫌いか? &sol> はい。>>
+    \li<\sh<{nu guutat a los e baog sii'?} `/ {ja.}>\ja<あなたは犬が嫌いか? `/ はい。>>
   >
   \p<
     この例文では、{ja} と答えた人は犬が嫌いである。
@@ -541,21 +541,21 @@
     疑問詞疑問文に答える場合は、答えが名詞ならば助詞 ＋ 名詞の形で答える。
   >
   \xl<
-    \li<\sh<{iives ta serg a los de delfaria sii'?} &sol> {ta ketak.}>\ja<あなたはいつデルファリア市に行ったのか? &sol> 昨日だ。>>
+    \li<\sh<{iives ta serg a los de delfaria sii'?} `/ {ta ketak.}>\ja<あなたはいつデルファリア市に行ったのか? `/ 昨日だ。>>
   >
   \p<
     疑問詞が {sevs} のときは、たいてい名詞節が回答となる。
     この場合、助詞 ＋ {ki'} ＋ 節の形で答える。
   >
   \xl<
-    \li<\sh<{ales e sevs ta ketak a los sii'?} &sol> {e ki' akutes a del e yutia.}>\ja<あなたは昨日何をしたのか? &sol> 私はユティアに会った。>>
+    \li<\sh<{ales e sevs ta ketak a los sii'?} `/ {e ki' akutes a del e yutia.}>\ja<あなたは昨日何をしたのか? `/ 私はユティアに会った。>>
   >
   \p<
     形容詞の疑問詞が用いられている場合、答えは形容詞となる。
     この場合は、助詞 ＋ 名詞 ＋ 形容詞の形で答える。
   >
   \xl<
-    \li<\sh<{ha'tat e zas seiv a los sii'?} &sol> {e zas eresk.}>\ja<あなたはどんな人が好きか? &sol> 愛想の良い人だ。>>
+    \li<\sh<{ha'tat e zas seiv a los sii'?} `/ {e zas eresk.}>\ja<あなたはどんな人が好きか? `/ 愛想の良い人だ。>>
   >
   \h2|number="24"|<選択疑問文>
   \p<

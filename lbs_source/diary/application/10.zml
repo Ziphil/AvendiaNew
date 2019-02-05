@@ -23,7 +23,7 @@
       public UnionFind(int max) {
         parents = new int[max];
         ranks = new int[max];
-        for (int i = 0 ; i &lt> max; i ++) {
+        for (int i = 0 ; i `< max; i ++) {
           parents[i] = i;
         }
       }
@@ -42,9 +42,9 @@
         int iRoot = find(i);
         int jRoot = find(j);
         if (iRoot != jRoot) {
-          if (ranks[iRoot] &gt> ranks[jRoot]) {
+          if (ranks[iRoot] `> ranks[jRoot]) {
             parents[jRoot] = iRoot;
-          } else if (ranks[jRoot] &gt> ranks[iRoot]) {
+          } else if (ranks[jRoot] `> ranks[iRoot]) {
             parents[iRoot] = jRoot;
           } else {
             parents[jRoot] = iRoot;
@@ -71,19 +71,19 @@
       int n = scanner.nextInt();
       int m = scanner.nextInt();
       int[] pp = new int[n];
-      for (int i = 0 ; i &lt> n ; i ++) {
+      for (int i = 0 ; i `< n ; i ++) {
         pp[i] = scanner.nextInt() - 1;
       }
 
       UnionFind u = new UnionFind(n);
-      for (int i = 0 ; i &lt> m ; i ++) {
+      for (int i = 0 ; i `< m ; i ++) {
         int x = scanner.nextInt() - 1;
         int y = scanner.nextInt() - 1;
         u.unite(x, y);
       }
 
       int res = 0;
-      for (int i = 0 ; i &lt> n ; i ++) {
+      for (int i = 0 ; i `< n ; i ++) {
         if (u.isConnected(i, pp[i])) {
           res ++;
         }
