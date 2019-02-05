@@ -377,7 +377,7 @@ converter.add(["pre", "samp"], ["page"]) do |element|
   next tag
 end
 
-converter.add(["c", "m"], ["page"]) do |element|
+converter.add(["c", "m"], ["page", "page.section-table"]) do |element|
   case element.name
   when "c"
     tag = TagBuilder.new("span", "code")
@@ -430,19 +430,19 @@ converter.add(["sup", "sub"], ["page", "page.section-table"]) do |element|
   next tag
 end
 
-converter.add(["h"], ["page"]) do |element|
+converter.add(["h"], ["page", "page.section-table"]) do |element|
   tag = TagBuilder.new("span", "hairia")
   tag << apply(element, "page")
   next tag
 end
 
-converter.add(["k"], ["page"]) do |element|
+converter.add(["k"], ["page", "page.section-table"]) do |element|
   tag = TagBuilder.new("span", "japanese")
   tag << apply(element, "page")
   next tag
 end
 
-converter.add(["i"], ["page"]) do |element|
+converter.add(["i"], ["page", "page.section-table"]) do |element|
   tag = pass_element(element, "page")
   next tag
 end
