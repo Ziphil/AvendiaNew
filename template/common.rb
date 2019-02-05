@@ -360,11 +360,11 @@ converter.add(["pre", "samp"], ["page"]) do |element|
   when "samp"
     tag = TagBuilder.new("table", "sample")
   end
-  text = element.texts.map{|s| s.to_s}.join.gsub(/\A\s*?\n/, "")
-  indent_size = text.match(/\A(\s*?)\S/)[1].length
-  text = text.rstrip.deindent
+  string = element.texts.map{|s| s.to_s}.join.gsub(/\A\s*?\n/, "")
+  indent_size = string.match(/\A(\s*?)\S/)[1].length
+  string = string.rstrip.deindent
   tag << "\n"
-  text.each_line do |line|
+  string.each_line do |line|
     row_tag = TagBuilder.new("tr")
     code_tag = TagBuilder.new("td")
     code_tag << line.chomp
