@@ -367,7 +367,11 @@ converter.add(["pre", "samp"], ["page"]) do |element|
   string.each_line do |line|
     row_tag = TagBuilder.new("tr")
     code_tag = TagBuilder.new("td")
-    code_tag << line.chomp
+    if line =~ /^\s*$/
+      code_tag << " "
+    else
+      code_tag << line.chomp
+    end
     row_tag << code_tag
     tag << " " * indent_size
     tag << row_tag
