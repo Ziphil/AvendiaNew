@@ -233,6 +233,34 @@
   \xl<
     \li<
       \sh<{di'dukezisoz a'c li cikik ca fêd. di'dupelnetos a'c te lôk avôl ile meris aqecet. di'dumafetos a'c e levkit.}>\ja<ここに持ち物を置いていくな。20 分以上うろつくな。ガラスに触るな。>
+      \gloss<
+        \li<\sh<{di'}>>
+        \li|conj="du-oz"|<\sh<{kezis}>\ex<残る>>
+        \li|auto="a"|>
+        \li<\sh<{'c}>\ex<あなた>>
+        \li|auto="li"|>
+        \li<\sh<{cikik}>\ex<持ち物>>
+        \li|auto="ca"|>
+        \li<\sh<{fêd}>\ex<ここ>>
+        \li|punc="."|>
+        \li<\sh<{di'}>>
+        \li|conj="du-os"|<\sh<{pelnet}>\ex<うろつく>>
+        \li|auto="a"|>
+        \li<\sh<{'c}>\ex<あなた>>
+        \li<\sh<{te}>\ex<～のときに>>
+        \li<\sh<{lôk}>\ex<時間>>
+        \li|conj="-a"|<\sh<{vôl}>\ex<多い>>
+        \li|conj="i-"|<\sh<{le}>\ex<～の数量で>>
+        \li<\sh<{meris}>\ex<分>>
+        \li|conj="a-"|<\sh<{qecet}>\ex<20>>
+        \li|punc="."|>
+        \li|conj="du-os"|<\sh<{mafet}>\ex<触る>>
+        \li|auto="a"|>
+        \li<\sh<{'c}>\ex<あなた>>
+        \li|auto="e"|>
+        \li<\sh<{levkit}>\ex<ガラス>>
+        \li|punc="."|>
+      >
     >
   >
   \p<
