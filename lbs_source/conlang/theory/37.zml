@@ -232,7 +232,7 @@
   \h2|id="2576"|<\h<2576> ({levkit})>
   \xl<
     \li<
-      \sh<{di'dukezisoz a'c li cikik ca fêd. di'dupelnetos a'c te lôk avôl ile meris aqecet. di'dumafetos a'c e levkit.}>\ja<ここに持ち物を置いていくな。20 分以上うろつくな。ガラスに触るな。>
+      \sh<{di'dukezisoz a'c li cikik ca fêd. di'dupelnetos a'c te lôk avôl ilevo meris aqecet. di'dumafetos a'c e levkit.}>\ja<ここに持ち物を置いていくな。20 分以上うろつくな。ガラスに触るな。>
       \gloss<
         \li<\sh<{di'}>>
         \li|conj="du-oz"|<\sh<{kezis}>\ex<残る>>
@@ -250,7 +250,7 @@
         \li<\sh<{te}>\ex<～のときに>>
         \li<\sh<{lôk}>\ex<時間>>
         \li|conj="-a"|<\sh<{vôl}>\ex<多い>>
-        \li|conj="i-"|<\sh<{le}>\ex<～の数量で>>
+        \li|conj="i-"|<\sh<{levo}>\ex<～の数量以上で>>
         \li<\sh<{meris}>\ex<分>>
         \li|conj="a-"|<\sh<{qecet}>\ex<20>>
         \li|punc="."|>
@@ -264,7 +264,24 @@
     >
   >
   \p<
-    元ネタは『Portal2』というゲームの案内板。
+    命令文を作るには、普通の文の前に {ditat} を置く。
+    文法的には、{ditat} は特殊な動詞 {dit} の現在時制継続相自動詞の形で、それを助動詞的に用いていることになるが、{ditat} で命令文のマーカーになっていると考えて良い。
+    {ditat} に続く文は通常の文でなければならないので、例えば命令対象である {loc} は省略できないことに注意。
+  >
+  \p<
+    命令内容が実際に行われるのは命令した時点より後なので、{ditat} に続く動詞は基本的に未来時制にすることが多い。
+    しかし、この文は案内板に書かれていることを想定しているため、常に禁止するという意味を込めて、{ditat} の後の動詞は全て通時時制になっている。
+  >
+  \p<
+    この文に含まれる 3 つの命令文全てにおいて、{ditat} は {di'} という縮約形として用いられている。
+    また、{di'} に続く命令内容を否定形にすることで、「～するな」という禁止を表している。
+  >
+  \p<
+    「20 分以上」にあるような「以上」を表現するには、数量を表す {le} にこの意味を加えた {levo} を用いる。
+    語法は {le} と全く同じである。
+  >
+  \p<
+    なお、元ネタは『Portal2』というゲームの案内板。
   >
 
 >
