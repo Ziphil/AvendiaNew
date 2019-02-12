@@ -3,6 +3,7 @@
 
 require 'pp'
 require 'fileutils'
+require 'net/ftp'
 require 'rexml/document'
 include REXML
 
@@ -196,12 +197,14 @@ class WholeZiphilConverter
 
   def initialize(args)
     @args = args
+    @upload = !args.empty?
   end
 
   def save
     paths = self.paths
     paths.each_with_index do |(path, language), index|
       document = nil
+      upload_mark = "·"
       parsing_duration = WholeZiphilConverter.measure do
         parser = create_parser(path)
         document = parser.parse
@@ -211,12 +214,29 @@ class WholeZiphilConverter
         converter.convert
         converter.save
       end
+      upload_duration = WholeZiphilConverter.measure do
+        if @upload
+          begin
+            ftp, local_path, remote_path = create_ftp(path, language)
+            ftp.put(local_path, remote_path)
+            upload_mark = "!"
+          rescue
+            upload_mark = "·"
+          ensure
+            ftp&.close
+          end
+        end
+      end
       output = " "
+      output << upload_mark
+      output << " "
       output << "%3d" % (index + 1)
       output << " : "
       output << "%4d" % parsing_duration
       output << " + "
       output << "%4d" % conversion_duration
+      output << " + "
+      output << "%4d" % upload_duration
       output << "  |  "
       output << "#{language} "
       path_array = path.gsub(ROOT_PATHS[language] + "/", "").split("/")
@@ -224,8 +244,8 @@ class WholeZiphilConverter
       output << path_array.join(" ")
       puts(output)
     end
-    puts("--------------------------------------")
-    puts(" " * 28 + "#{"%3d" % paths.size} files")
+    puts("-" * 47)
+    puts(" " * 37 + "#{"%3d" % paths.size} files")
   end
 
   def paths
@@ -279,6 +299,15 @@ class WholeZiphilConverter
       end
     end
     return converter
+  end
+
+  def create_ftp(path, language)
+    config_data = File.read(File.dirname($0) + "/template/config.txt")
+    host, user, password = config_data.split("\n")
+    ftp = Net::FTP.new(host, user, password)
+    local_path = path.gsub("_source", "").gsub(".zml", ".html")
+    remote_path = path.gsub(ROOT_PATHS[language], "").gsub(".zml", ".html")
+    return ftp, local_path, remote_path
   end
 
   def self.deepness(path, language)

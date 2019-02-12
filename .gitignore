@@ -1,6 +1,5 @@
 lbs
 lbs-en
-.git-ignore
-.git-attribute
+template/config.txt
 desktop.ini
 Thumbs.db
