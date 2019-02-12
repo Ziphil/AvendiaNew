@@ -296,6 +296,23 @@
   \xl<
     \li<
       \sh<{salet a sávak i ces e aqonef ebam iti dudéxat a dus teku cal.}>\ja<彼の授業はとてもつまらなく、その間に寝ていない者はいなかった。>
+      \gloss<
+        \li|conj="-et"|<\sh<{sal}>\ex<である>>
+        \li|auto="a"|>
+        \li<\sh<{sácak}>\ex<授業>>
+        \li|conj="i-"|<\sh<∅>\ex<～の>>
+        \li<\sh<{ces}>\ex<彼>>
+        \li|auto="e"|>
+        \li|conj="a-"|<\sh<{qonef}>\ex<つまらない>>
+        \li|conj="e-"|<\sh<{bam}>\ex<とても>>
+        \li|conj="i-"|<\sh<{ti}>\ex<～するほど>>
+        \li|conj="du-at"|<\sh<{déx}>\ex<寝る>>
+        \li|auto="a"|>
+        \li<\sh<{dus}>\ex<誰も～ない>>
+        \li<\sh<{teku}>\ex<～の間中>>
+        \li<\sh<{cal}>\ex<そのこと>>
+        \li|punc="."|>
+      >
     >
   >
   \p<
