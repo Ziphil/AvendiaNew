@@ -204,7 +204,6 @@ class WholeZiphilConverter
     paths = self.paths
     paths.each_with_index do |(path, language), index|
       document = nil
-      upload_mark = "·"
       parsing_duration = WholeZiphilConverter.measure do
         parser = create_parser(path)
         document = parser.parse
@@ -216,20 +215,12 @@ class WholeZiphilConverter
       end
       upload_duration = WholeZiphilConverter.measure do
         if @upload
-          begin
-            ftp, local_path, remote_path = create_ftp(path, language)
-            ftp.put(local_path, remote_path)
-            upload_mark = "!"
-          rescue
-            upload_mark = "·"
-          ensure
-            ftp&.close
-          end
+          ftp, local_path, remote_path = create_ftp(path, language)
+          ftp.put(local_path, remote_path)
+          ftp.close
         end
       end
       output = " "
-      output << upload_mark
-      output << " "
       output << "%3d" % (index + 1)
       output << " : "
       output << "%4d" % parsing_duration
@@ -244,8 +235,8 @@ class WholeZiphilConverter
       output << path_array.join(" ")
       puts(output)
     end
-    puts("-" * 47)
-    puts(" " * 37 + "#{"%3d" % paths.size} files")
+    puts("-" * 45)
+    puts(" " * 35 + "#{"%3d" % paths.size} files")
   end
 
   def paths
