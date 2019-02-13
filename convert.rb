@@ -174,11 +174,11 @@ class WholeZiphilConverter
 
   def initialize(args)
     @args = args
-    @upload = !args.empty?
   end
 
   def save
     paths = self.paths
+    ftp = create_ftp
     paths.each_with_index do |(path, language), index|
       document = nil
       parsing_duration = WholeZiphilConverter.measure do
@@ -192,11 +192,8 @@ class WholeZiphilConverter
         File.write(output_path, result)
       end
       upload_duration = WholeZiphilConverter.measure do
-        if @upload
-          ftp, local_path, remote_path = create_ftp(path, language)
-          ftp.put(local_path, remote_path)
-          ftp.close
-        end
+        local_path, remote_path = create_upload_paths(path, language)
+        ftp.put(local_path, remote_path) if ftp
       end
       output = " "
       output << "%3d" % (index + 1)
@@ -215,6 +212,7 @@ class WholeZiphilConverter
     end
     puts("-" * 45)
     puts(" " * 35 + "#{"%3d" % paths.size} files")
+    ftp.close if ftp
   end
 
   def paths
@@ -250,6 +248,16 @@ class WholeZiphilConverter
     return paths
   end
 
+  def create_ftp
+    ftp = nil
+    unless @args.empty?
+      config_data = File.read(File.dirname($0) + "/template/config.txt")
+      host, user, password = config_data.split("\n")
+      ftp = Net::FTP.new(host, user, password)
+    end
+    return ftp
+  end
+
   def create_parser(path)
     source = File.read(path)
     parser = ZenithalParser.new(source)
@@ -271,13 +279,10 @@ class WholeZiphilConverter
     return converter, output_path
   end
 
-  def create_ftp(path, language)
-    config_data = File.read(File.dirname($0) + "/template/config.txt")
-    host, user, password = config_data.split("\n")
-    ftp = Net::FTP.new(host, user, password)
+  def create_upload_paths(path, language)
     local_path = path.gsub("_source", "").gsub(".zml", ".html")
     remote_path = path.gsub(ROOT_PATHS[language], "").gsub(".zml", ".html")
-    return ftp, local_path, remote_path
+    return local_path, remote_path
   end
 
   def self.measure(&block)
