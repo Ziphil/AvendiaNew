@@ -1,34 +1,37 @@
 ﻿# coding: utf-8
 
 
-DICTIONARY_URL = "#{self.url_prefix}conlang/database/1.cgi"
+LATEST_VERSION_REGEX = /(5\s*代\s*5\s*期|Version\s*5\.5)/
+DICTIONARY_URL = "conlang/database/1.cgi"
 
 converter.add(["page"], [""]) do |element|
-  deepness = WholeZiphilConverter.deepness(@path, @language)
-  virtual_deepness = (@path =~ /index\.zml$/) ? deepness - 1 : deepness
+  path, language = converter.path, converter.language
+  deepness = converter.deepness
+  virtual_deepness = (path =~ /index\.zml$/) ? deepness - 1 : deepness
   name_tag = TagBuilder.new("div", "name")
+  title = ""
   if virtual_deepness >= -1
-    first_category = @path.split("/")[-deepness - 1]
+    first_category = path.split("/")[-deepness - 1]
     first_link_tag = TagBuilder.new("a", "name")
     first_link_tag["href"] = "../../" + first_category
     if virtual_deepness == -1
-      first_link_tag << NAMES[:top][@language]
+      first_link_tag << NAMES[:top][language]
     else
-      first_link_tag << NAMES[first_category.intern][@language]
+      first_link_tag << NAMES[first_category.intern][language]
     end
     name_tag << first_link_tag
   end
   if virtual_deepness >= 1
-    second_category = @path.split("/")[-deepness]
+    second_category = path.split("/")[-deepness]
     united_category = first_category + "_" + second_category
     second_link_tag = TagBuilder.new("a", "name")
     second_link_tag["href"] = "../" + second_category
-    second_link_tag << NAMES[united_category.intern][@language]
+    second_link_tag << NAMES[united_category.intern][language]
     name_tag << second_link_tag
   end
   if virtual_deepness >= 2
     if element.attribute("link")
-      converted_path = @path.match(/([0-9a-z\-]+)\.zml/).to_a[1].to_s
+      converted_path = path.match(/([0-9a-z\-]+)\.zml/).to_a[1].to_s
       converted_path += (element.attribute("link").value == "c") ? ".cgi" : ".html"
       third_link_tag = TagBuilder.new("a", "name")
       third_link_tag["href"] = converted_path
@@ -36,45 +39,40 @@ converter.add(["page"], [""]) do |element|
       third_link_tag = TagBuilder.new("span")
     end
     name_element = element.elements["name"]
+    title = name_element.inner_text(true).gsub("\"", "&quot;")
     third_link_tag << apply(name_element, "page")
     name_tag << third_link_tag
-    @title = flatten_text(name_element.inner_text(true))
   end
-  @navigation_string << name_tag
-  @main_string << apply(element, "page")
-  next ""
+  navigation_string, header_string, main_string = "", "", ""
+  navigation_string << name_tag
+  navigation_string << apply(element, "navigation")
+  header_string << apply(element, "header")
+  main_string << apply(element, "page")
+  result = TEMPLATE.gsub(/#\{(.*?)\}/){self.instance_eval($1)}.gsub(/\r/, "")
+  next result
 end
 
-converter.add(["name"], ["page"]) do |element|
-  next ""
-end
-
-converter.add(["ver"], ["page"]) do |element|
+converter.add(["ver"], ["navigation"]) do |element|
   if element.text == "*" || element.text =~ LATEST_VERSION_REGEX
-    version_tag = TagBuilder.new("div", "version")
-    @latest = true
+    tag = TagBuilder.new("div", "version")
+    converter.configs[:latest] = true
   else
-    version_tag = TagBuilder.new("div", "version-caution")
+    tag = TagBuilder.new("div", "version-caution")
   end
-  version_tag << apply(element, "page")
-  @navigation_string << version_tag
-  next ""
+  tag << apply(element, "page")
+  next tag
 end
 
-converter.add(["import-script"], ["page"]) do |element|
-  script_tag = TagBuilder.new("script")
-  script_tag["src"] = self.url_prefix + "file/script/" + element.attribute("src").to_s
-  @header_string << script_tag
-  @header_string << "\n"
-  next ""
+converter.add(["import-script"], ["header"]) do |element|
+  tag = TagBuilder.new("script")
+  tag["src"] = converter.url_prefix + "file/script/" + element.attribute("src").to_s
+  next tag.to_s + "\n"
 end
 
-converter.add(["base"], ["page"]) do |element|
-  base_tag = TagBuilder.new("base")
-  base_tag["href"] = element.attribute("href").to_s
-  @header_string << base_tag
-  @header_string << "\n"
-  next ""
+converter.add(["base"], ["header"]) do |element|
+  tag = TagBuilder.new("base")
+  tag["href"] = element.attribute("href").to_s
+  next tag.to_s + "\n"
 end
 
 converter.add(["pb"], ["page"]) do |element|
@@ -150,7 +148,6 @@ converter.add(["p"], ["page"]) do |element|
     additional_tag << element.attribute("name").to_s
     tag.insert_first(additional_tag)
   end
-  @description << flatten_text(element.inner_text(true))
   next tag
 end
 
@@ -406,20 +403,23 @@ end
 
 converter.add(["x"], ["page"]) do |element|
   content = apply(element, "page").to_s
-  link = @latest && @path =~ /conlang\/.+\/\d+(\-\w{2})?\.zml/
-  tag = WordConverter.convert(content, DICTIONARY_URL, link)
+  url = converter.url_prefix + DICTIONARY_URL
+  link = !!converter.configs[:latest] && converter.path =~ /conlang\/.+\/\d+(\-\w{2})?\.zml/
+  tag = WordConverter.convert(content, url, link)
   next tag
 end
 
 converter.add(["x"], ["page.section-table"]) do |element|
   content = apply(element, "page.section-table").to_s
-  tag = WordConverter.convert(content, DICTIONARY_URL, false)
+  url = converter.url_prefix + DICTIONARY_URL
+  tag = WordConverter.convert(content, url, false)
   next tag
 end
 
 converter.add(["xn"], ["page", "page.section-table"]) do |element|
   content = apply(element, "page").to_s
-  tag = WordConverter.convert(content, DICTIONARY_URL, false)
+  url = converter.url_prefix + DICTIONARY_URL
+  tag = WordConverter.convert(content, url, false)
   next tag
 end
 
@@ -466,4 +466,21 @@ end
 converter.add(["br"], ["page"]) do |element|
   tag = pass_element(element, "page", false)
   next tag
+end
+
+converter.set_default_text do |text|
+  string = text.to_s.clone
+  string.gsub!("、", "、 ")
+  string.gsub!("。", "。 ")
+  string.gsub!("「", " 「")
+  string.gsub!("」", "」 ")
+  string.gsub!("『", " 『")
+  string.gsub!("』", "』 ")
+  string.gsub!("〈", " 〈")
+  string.gsub!("〉", "〉 ")
+  string.gsub!(/(、|。)\s+(」|』)/){$1 + $2}
+  string.gsub!(/(」|』|〉)\s+(、|。|,|\.)/){$1 + $2}
+  string.gsub!(/(\(|「|『)\s+(「|『)/){$1 + $2}
+  string.gsub!(/(^|>)\s+(「|『)/){$1 + $2}
+  next string
 end

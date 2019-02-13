@@ -14,7 +14,7 @@ converter.add(["t"], ["page"]) do |element|
     number_tag = TagBuilder.new("span")
     number_tag << query
     image_tag = TagBuilder.new("img", nil, false)
-    image_tag["src"] = self.url_prefix + "material/tsuro/#{number + 1}.png"
+    image_tag["src"] = converter.url_prefix + "material/tsuro/#{number + 1}.png"
     image_tag["style"] = "transform: rotate(#{rotation * 90}deg)"
     tag << number_tag
     tag << image_tag
@@ -99,7 +99,7 @@ converter.add(["t"], ["page.board.row", "page.board.row-alt"]) do |element, scop
     number = match[1].to_i
     rotation = ROTATION_SYMBOLS[match[2]]
     image_tag = TagBuilder.new("img", nil, false)
-    image_tag["src"] = self.url_prefix + "material/tsuro/#{number + 1}.png"
+    image_tag["src"] = converter.url_prefix + "material/tsuro/#{number + 1}.png"
     image_tag["style"] = "transform: rotate(#{rotation * 90}deg)"
     information_tag = TagBuilder.new("div", "information")
     information_tag << number.to_s + match[2].to_s

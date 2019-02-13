@@ -13,7 +13,127 @@ Encoding.default_external = "UTF-8"
 $stdout.sync = true
 
 
-class ZiphilConverter
+class PageConverter
+
+  attr_reader :configs
+
+  def initialize(document)
+    @document = document
+    @configs = {}
+    @templates = {}
+    @default_element_template = lambda{|s| ""}
+    @default_text_template = lambda{|s| ""}
+  end
+
+  def convert
+    element = @document.root
+    return convert_element(element, "")
+  end
+
+  def convert_element(element, scope)
+    tag = nil
+    @templates.each do |(element_pattern, scope_pattern), block|
+      if element_pattern != nil && element_pattern.any?{|s| s === element.name} && scope_pattern.any?{|s| s === scope}
+        tag = block.call(element, scope)
+        break
+      end
+    end
+    return tag || @default_element_template.call(element)
+  end
+
+  def pass_element(element, scope, close = true)
+    tag = TagBuilder.new(element.name, nil, close)
+    element.attributes.each_attribute do |attribute|
+      tag[attribute.name] = attribute.to_s
+    end
+    tag << apply(element, scope)
+    return tag
+  end
+
+  def convert_text(text, scope)
+    string = nil
+    @templates.each do |(element_pattern, scope_pattern), block|
+      if element_pattern == nil && scope_pattern.any?{|s| s === scope}
+        string = block.call(text, scope)
+        break
+      end
+    end
+    return string || @default_text_template.call(text)
+  end
+
+  def pass_text(text, scope)
+    string = text.to_s
+    return string
+  end
+
+  def apply(element, scope)
+    result = ""
+    element.children.each do |inner_element|
+      case inner_element
+      when Element
+        tag = convert_element(inner_element, scope)
+        if tag
+          result << tag
+        end
+      when Text
+        string = convert_text(inner_element, scope)
+        if string
+          result << string
+        end
+      end
+    end
+    return result
+  end
+
+  def add(element_pattern, scope_pattern, &block)
+    @templates.store([element_pattern, scope_pattern], block)
+  end
+
+  def set_default_element(&block)
+    @default_element_template = block
+  end
+
+  def set_default_text(&block)
+    @default_text_template = block
+  end
+
+end
+
+
+class ZiphilConverter < PageConverter
+
+  attr_reader :path
+  attr_reader :language
+
+  def initialize(document, path, language)
+    super(document)
+    @path = path
+    @language = language
+  end
+
+  def deepness
+    return @path.split("/").size - WholeZiphilConverter::ROOT_PATHS[@language].count("/") - 2
+  end
+  
+  def url_prefix
+    return "../" * self.deepness
+  end
+  
+  def main_type
+    return (self.deepness.between?(1, 2) && @path =~ /index\.zml/) ? "content-table" : "main"
+  end
+  
+  def online_url
+    root_path = WholeZiphilConverter::ROOT_PATHS[@language]
+    domain = WholeZiphilConverter::DOMAINS[@language]
+    url = path.gsub(root_path + "/", domain).gsub(/\.zml$/, ".html")
+    return url
+  end
+
+end
+
+
+class WholeZiphilConverter
 
   NAMES = {
     :title => {:ja => "人工言語シャレイア語", :en => "Sheleian Constructed Language"},
@@ -43,157 +163,14 @@ class ZiphilConverter
     :error => {:ja => "エラー", :en => "Error"},
     :error_error => {:ja => "エラー", :en => "Error"}
   }
-  LANGUAGE_NAMES = {:ja => "日本語", :en => "English"}
-  DOMAINS = {:ja => "http://ziphil.com/", :en => "http://en.ziphil.com/"}
-  LATEST_VERSION_REGEX = /(5\s*代\s*5\s*期|Version\s*5\.5)/
-  ORIGINAL_DATA = DATA.read
-
-  attr_reader :path
-  attr_reader :language
-  attr_reader :title
-  attr_reader :description
-
-  def initialize(document, path, language)
-    @document = document
-    @path = path
-    @language = language
-    @latest = false
-    @header_string = ""
-    @navigation_string = ""
-    @main_string = ""
-    @title = ""
-    @description = ""
-    @templates = {}
-  end
-
-  def convert
-    element = @document.root
-    convert_element(element, "")
-  end
-
-  def convert_element(element, scope)
-    tag = nil
-    @templates.each do |(element_pattern, scope_pattern), block|
-      if element_pattern != nil && element_pattern.any?{|s| s === element.name} && scope_pattern.any?{|s| s === scope}
-        tag = block.call(element, scope)
-        break
-      end
-    end
-    return tag || default_element(element, scope)
-  end
-
-  def pass_element(element, scope, close = true)
-    tag = TagBuilder.new(element.name, nil, close)
-    element.attributes.each_attribute do |attribute|
-      tag[attribute.name] = attribute.to_s
-    end
-    tag << apply(element, scope)
-    return tag
-  end
-
-  def default_element(element, scope)
-    return ""
-  end
-
-  def convert_text(text, scope)
-    string = nil
-    @templates.each do |(element_pattern, scope_pattern), block|
-      if element_pattern == nil && scope_pattern.any?{|s| s === scope}
-        string = block.call(text, scope)
-        break
-      end
-    end
-    return string || default_text(text, scope)
-  end
-
-  def default_text(text, scope)
-    string = text.to_s.clone
-    string.gsub!("、", "、 ")
-    string.gsub!("。", "。 ")
-    string.gsub!("「", " 「")
-    string.gsub!("」", "」 ")
-    string.gsub!("『", " 『")
-    string.gsub!("』", "』 ")
-    string.gsub!("〈", " 〈")
-    string.gsub!("〉", "〉 ")
-    string.gsub!(/(、|。)\s+(」|』)/){$1 + $2}
-    string.gsub!(/(」|』|〉)\s+(、|。|,|\.)/){$1 + $2}
-    string.gsub!(/(\(|「|『)\s+(「|『)/){$1 + $2}
-    string.gsub!(/(^|>)\s+(「|『)/){$1 + $2}
-    return string
-  end
-
-  def flatten_text(text)
-    string = text.to_s.clone
-    string.gsub!("{", "")
-    string.gsub!("}", "")
-    string.gsub!("[", "")
-    string.gsub!("]", "")
-    string.gsub!("/", "")
-    string.gsub!("\"", "&quot;")
-    return string
-  end
-
-  def apply(element, scope)
-    result = ""
-    element.children.each do |inner_element|
-      case inner_element
-      when Element
-        tag = convert_element(inner_element, scope)
-        if tag
-          result << tag
-        end
-      when Text
-        string = convert_text(inner_element, scope)
-        if string
-          result << string
-        end
-      end
-    end
-    return result
-  end
-
-  def add(element_pattern, scope_pattern, &block)
-    @templates.store([element_pattern, scope_pattern], block)
-  end
-
-  def save
-    path = @path.gsub("_source", "").gsub(".zml", ".html")
-    FileUtils.mkdir_p(File.dirname(path))
-    File.open(path, "w") do |file|
-      output = ORIGINAL_DATA.gsub(/#\{(.*?)\}/){self.instance_eval($1)}.gsub(/\r/, "")
-      file.print(output)
-    end
-  end
-
-  def url_prefix
-    return "../" * WholeZiphilConverter.deepness(@path, @language)
-  end
-
-  def foreign_language
-    return (@language == :ja) ? :en : :ja
-  end
-
-  def main_type
-    deepness = WholeZiphilConverter.deepness(@path, @language)
-    return (deepness.between?(1, 2) && path =~ /index\.zml/) ? "content-table" : "main"
-  end
-
-  def online_url
-    root_path = WholeZiphilConverter::ROOT_PATHS[@language]
-    domain = DOMAINS[@language]
-    return @path.gsub(root_path + "/", domain).gsub(/\.zml$/, ".html")
-  end
-
-end
-
-
-class WholeZiphilConverter
-
   ROOT_PATHS = {
     :ja => File.dirname($0).encode("utf-8") + "/lbs_source",
     :en => File.dirname($0).encode("utf-8") + "/lbs-en_source"
   }
+  FOREIGN_LANGUAGES = {:ja => :en, :en => :ja}
+  LANGUAGE_NAMES = {:ja => "日本語", :en => "English"}
+  DOMAINS = {:ja => "http://ziphil.com/", :en => "http://en.ziphil.com/"}
+  TEMPLATE = File.read(File.dirname($0).encode("utf-8") + "/template/template.html")
 
   def initialize(args)
     @args = args
@@ -209,9 +186,10 @@ class WholeZiphilConverter
         document = parser.parse
       end
       conversion_duration = WholeZiphilConverter.measure do
-        converter = create_converter(document, path, language)
-        converter.convert
-        converter.save
+        converter, output_path = create_converter(document, path, language)
+        result = converter.convert
+        FileUtils.mkdir_p(File.dirname(output_path))
+        File.write(output_path, result)
       end
       upload_duration = WholeZiphilConverter.measure do
         if @upload
@@ -289,7 +267,8 @@ class WholeZiphilConverter
         converter.instance_eval(File.read(directory + "/" + entry), entry)
       end
     end
-    return converter
+    output_path = path.gsub("_source", "").gsub(".zml", ".html")
+    return converter, output_path
   end
 
   def create_ftp(path, language)
@@ -299,10 +278,6 @@ class WholeZiphilConverter
     local_path = path.gsub("_source", "").gsub(".zml", ".html")
     remote_path = path.gsub(ROOT_PATHS[language], "").gsub(".zml", ".html")
     return ftp, local_path, remote_path
-  end
-
-  def self.deepness(path, language)
-    return path.split("/").size - ROOT_PATHS[language].count("/") - 2
   end
 
   def self.measure(&block)
@@ -441,93 +416,3 @@ end
 
 converter = WholeZiphilConverter.new(ARGV)
 converter.save
-
-
-__END__
-<!DOCTYPE html>
-
-<html lang="#{self.language}">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@Ziphil">
-    <meta property="og:url" content="#{self.online_url}">
-    <meta property="og:title" content="#{self.title}">
-    <meta property="og:description" content="#{self.description}">
-    <meta property="og:image" content="#{ZiphilConverter::DOMAINS[self.language]}material/logo/1.png">
-#{@header_string.strip.indent(4)}
-    <link rel="stylesheet" type="text/css" href="#{self.url_prefix}style/reset.css">
-    <link rel="stylesheet" type="text/css" href="#{self.url_prefix}style/1.css">
-    <title>Avendia 19 — #{NAMES[:title][self.language]}</title>
-  </head>
-  <body>
-
-    <div class="header">
-      <div class="title"><a href="#{self.url_prefix}">Avendia<sup>19</sup></a></div>
-      <div class="language"><a href="#{DOMAINS[self.foreign_language]}">#{LANGUAGE_NAMES[self.foreign_language]}</a></div>
-    </div>
-
-    <ul class="menu">
-      <li>
-        <a href="#{self.url_prefix}conlang/">#{NAMES[:conlang][self.language]}</a>
-        <ul>
-          <li><a href="#{self.url_prefix}conlang/grammer/">#{NAMES[:conlang_grammer][self.language]}</a></li>
-          <li><a href="#{self.url_prefix}conlang/course/">#{NAMES[:conlang_course][self.language]}</a></li>
-          <li><a href="#{self.url_prefix}conlang/database/">#{NAMES[:conlang_database][self.language]}</a></li>
-          <li><a href="#{self.url_prefix}conlang/culture/">#{NAMES[:conlang_culture][self.language]}</a></li>
-          <li><a href="#{self.url_prefix}conlang/translation/">#{NAMES[:conlang_translation][self.language]}</a></li>
-          <li><a href="#{self.url_prefix}conlang/theory/">#{NAMES[:conlang_theory][self.language]}</a></li>
-          <li><a href="#{self.url_prefix}conlang/document/">#{NAMES[:conlang_document][self.language]}</a></li>
-          <li><a href="#{self.url_prefix}conlang/table/">#{NAMES[:conlang_table][self.language]}</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#{self.url_prefix}application/">#{NAMES[:application][self.language]}</a>
-        <ul>
-          <li><a href="#{self.url_prefix}application/download/">#{NAMES[:application_download][self.language]}</a></li>
-          <li><a href="#{self.url_prefix}application/web/">#{NAMES[:application_web][self.language]}</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#{self.url_prefix}diary/">#{NAMES[:diary][self.language]}</a>
-        <ul>
-          <li><a href="#{self.url_prefix}diary/conlang/">#{NAMES[:diary_conlang][self.language]}</a></li>
-          <li><a href="#{self.url_prefix}diary/mathematics/">#{NAMES[:diary_mathematics][self.language]}</a></li>
-          <li><a href="#{self.url_prefix}diary/application/">#{NAMES[:diary_application][self.language]}</a></li>
-          <li><a href="#{self.url_prefix}diary/game/">#{NAMES[:diary_game][self.language]}</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#{self.url_prefix}other/">#{NAMES[:other][self.language]}</a>
-        <ul>
-          <li><a href="#{self.url_prefix}other/mathematics/">#{NAMES[:other_mathematics][self.language]}</a></li>
-          <li><a href="#{self.url_prefix}other/language/">#{NAMES[:other_language][self.language]}</a></li>
-          <li><a href="#{self.url_prefix}other/tsuro/">#{NAMES[:other_tsuro][self.language]}</a></li>
-          <li><a href="#{self.url_prefix}other/other/">#{NAMES[:other_other][self.language]}</a></li>
-        </ul>
-      </li>
-    </ul>
-
-    <div class="navigation">
-  #{@navigation_string.strip.indent(4)}
-    </div>
-
-    <div class="#{self.main_type}">
-  #{@main_string.strip.indent(4)}
-    </div>
-
-    <div class="footer">
-      <div class="icon">
-        <a class="twitter" href="https://twitter.com/Ziphil" target="_blank"></a>
-        <a class="youtube" href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/" target="_blank"></a>
-      </div>
-      <div class="copyright">
-        Copyright © 2009–#{Time.now.year} Ziphil, All rights reserved.
-      </div>
-      <div class="counter">
-        <script src="http://counter1.fc2.com/counter.php?id=3102008"></script><noscript><img alt="counter" src="http://counter1.fc2.com/counter_img.php?id=3102008"></noscript> 
-      </div>
-    </div>
-
-  </body>
-</html>

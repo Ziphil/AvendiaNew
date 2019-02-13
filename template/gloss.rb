@@ -63,7 +63,7 @@ converter.add(["li"], ["page.gloss"]) do |element|
         morpheme_element = Element.new("mph")
         shaleia_element << Text.new(name, true, nil, false)
         name_element << shaleia_element
-        morpheme_element << Text.new(kind[@language], true, nil, false)
+        morpheme_element << Text.new(kind[converter.language], true, nil, false)
         explanation_element << morpheme_element
         element << name_element
         element << explanation_element
@@ -119,7 +119,7 @@ converter.add(["sh", "ex"], ["page.gloss.li"]) do |element|
           prefix_tag << prefix
           prefix_results[index] = prefix_tag.to_s + "-"
         when "ex"
-          prefix_results[index] = kind[@language] + "-"
+          prefix_results[index] = kind[converter.language] + "-"
         end
       end
     end
@@ -131,7 +131,7 @@ converter.add(["sh", "ex"], ["page.gloss.li"]) do |element|
           suffix_tag << suffix
           suffix_results[index] = "-" + suffix_tag.to_s
         when "ex"
-          suffix_results[index] = "-" + kind[@language]
+          suffix_results[index] = "-" + kind[converter.language]
         end
       end
     end
