@@ -63,6 +63,10 @@ converter.add(["ver"], ["navigation"]) do |element|
   next tag
 end
 
+converter.add(nil, ["navigation"]) do |text|
+  next ""
+end
+
 converter.add(["import-script"], ["header"]) do |element|
   tag = TagBuilder.new("script")
   tag["src"] = converter.url_prefix + "file/script/" + element.attribute("src").to_s
@@ -73,6 +77,10 @@ converter.add(["base"], ["header"]) do |element|
   tag = TagBuilder.new("base")
   tag["href"] = element.attribute("href").to_s
   next tag.to_s + "\n"
+end
+
+converter.add(nil, ["header"]) do |text|
+  next ""
 end
 
 converter.add(["pb"], ["page"]) do |element|
