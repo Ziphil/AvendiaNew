@@ -241,7 +241,7 @@
   \h2|id="2576"|<\h<2576> ({levkit})>
   \xl<
     \li<
-      \sh<{di'dukezisoz a'c li cikik ca fêd. di'dupelnetos a'c te lôk avôl ilevo meris aqecet. di'dumafetos a'c e levkit.}>\ja<ここに持ち物を置いていくな。20 分以上うろつくな。ガラスに触るな。>
+      \sh<{di'dukezisoz a'c li cikik ca fêd. di'dulesos e'n pelnetas a'c te lôk avôl ilevo meris aqecet. di'dumafetos a'c e levkit.}>\ja<ここに持ち物を置いていくな。20 分以上うろつくな。ガラスに触るな。>
       \gloss<
         \li<\sh<{di'}>>
         \li|conj="du-oz"|<\sh<{kezis}>\ex<残る>>
@@ -253,7 +253,10 @@
         \li<\sh<{fêd}>\ex<ここ>>
         \li|punc="."|>
         \li<\sh<{di'}>>
-        \li|conj="du-os"|<\sh<{pelnet}>\ex<うろつく>>
+        \li|conj="du-os"|<\sh<{les}>\ex<する>>
+        \li|auto="e"|>
+        \li|auto="'n"|>
+        \li|conj="-as"|<\sh<{pelnet}>\ex<うろつく>>
         \li|auto="a"|>
         \li<\sh<{'c}>\ex<あなた>>
         \li<\sh<{te}>\ex<～のときに>>
