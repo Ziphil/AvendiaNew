@@ -89,12 +89,12 @@ class PageConverter
     @templates.store([element_pattern, scope_pattern], block)
   end
 
-  def set_default_element(&block)
-    @default_element_template = block
-  end
-
-  def set_default_text(&block)
-    @default_text_template = block
+  def add_default(element_pattern, &block)
+    if element_pattern
+      @default_element_template = block
+    else
+      @default_text_template = block
+    end
   end
 
 end

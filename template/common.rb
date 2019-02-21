@@ -476,7 +476,7 @@ converter.add(["br"], ["page"]) do |element|
   next tag
 end
 
-converter.set_default_text do |text|
+converter.add_default(nil) do |text|
   string = text.to_s.clone
   string.gsub!("、", "、 ")
   string.gsub!("。", "。 ")
