@@ -38,7 +38,7 @@ converter.add(["page"], [""]) do |element|
     else
       third_link_tag = TagBuilder.new("span")
     end
-    name_element = element.elements["name"]
+    name_element = element.elements.to_a("name").first
     title = name_element.inner_text(true).gsub("\"", "&quot;")
     third_link_tag << apply(name_element, "page")
     name_tag << third_link_tag
