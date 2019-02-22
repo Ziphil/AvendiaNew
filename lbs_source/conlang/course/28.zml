@@ -1,0 +1,21 @@
+\zml?|version="1.0"|>
+\xml?|version="1.0",encoding="UTF-8"|>
+
+\page<
+  \name<『破門 シャレイア語』>
+  \ver<5 代 5 期>
+
+  \h1<情報>
+  \p<
+    題名が物騒ですが、中身はシャレイア語の非文集です。
+    初学者が犯しがちな文法や語法の間違いを挙げ、それを正しく修正した文とともに、関連する文法や語法を解説していくスタイルの語学書です。
+  >
+  \p<
+    現在執筆中です。
+  >
+  \h1<ZenML ソースコード>
+  \p<
+    本の原稿は \a|href="https://github.com/Ziphil/ShaleianNonsentence",target="_blank"|<GitHub> で公開しています。
+  >
+
+>
