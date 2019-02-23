@@ -13,6 +13,8 @@
   \p<
     現在執筆中です。
   >
+  \h1<PDF ファイル>
+  \pdf|src="../../file/course/2.pdf"|>
   \h1<ZenML ソースコード>
   \p<
     本の原稿は \a|href="https://github.com/Ziphil/ShaleianNonsentence",target="_blank"|<GitHub> で公開しています。
