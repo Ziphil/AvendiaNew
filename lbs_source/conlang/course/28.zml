@@ -12,11 +12,19 @@
   >
   \p<
     現在執筆中です。
+    以下の PDF ファイルも随時更新されます。
   >
   \h1<PDF ファイル>
   \pdf|src="../../file/course/2.pdf"|>
+  \p<
+    以下のリンクから PDF ファイルを直接ダウンロードすることもできます。
+  >
+  \form<
+    \a|class="form",href="../../file/course/2.pdf"|<ダウンロード>
+  >
   \h1<ZenML ソースコード>
   \p<
+    この本の本文は、全て XSL-FO を用いて組版しました。
     本の原稿は \a|href="https://github.com/Ziphil/ShaleianNonsentence",target="_blank"|<GitHub> で公開しています。
   >
 
