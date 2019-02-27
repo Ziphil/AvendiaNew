@@ -1,5 +1,6 @@
 lbs
 lbs-en
+*.code-workspace
 template/config.txt
 desktop.ini
 Thumbs.db
