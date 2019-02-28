@@ -1,5 +1,5 @@
-lbs
-lbs-en
+document/lbs
+document/lbs-en
 *.code-workspace
 template/config.txt
 desktop.ini

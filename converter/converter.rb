@@ -7,8 +7,10 @@ require 'net/ftp'
 require 'rexml/document'
 include REXML
 
-Kernel.load(File.dirname($0).encode("utf-8") + "/lbs/file/module/1.rb")
-Kernel.load(File.dirname($0).encode("utf-8") + "/lbs/file/module/2.rb")
+BASE_PATH = File.expand_path("..", File.dirname($0)).encode("utf-8")
+
+Kernel.load(BASE_PATH + "/document/lbs/file/module/1.rb")
+Kernel.load(BASE_PATH + "/document/lbs/file/module/2.rb")
 Encoding.default_external = "UTF-8"
 $stdout.sync = true
 
@@ -164,13 +166,13 @@ class WholeZiphilConverter
     :error_error => {:ja => "エラー", :en => "Error"}
   }
   ROOT_PATHS = {
-    :ja => File.dirname($0).encode("utf-8") + "/lbs_source",
-    :en => File.dirname($0).encode("utf-8") + "/lbs-en_source"
+    :ja => BASE_PATH + "/document/lbs_source",
+    :en => BASE_PATH + "/document/lbs-en_source"
   }
   FOREIGN_LANGUAGES = {:ja => :en, :en => :ja}
   LANGUAGE_NAMES = {:ja => "日本語", :en => "English"}
   DOMAINS = {:ja => "http://ziphil.com/", :en => "http://en.ziphil.com/"}
-  TEMPLATE = File.read(File.dirname($0).encode("utf-8") + "/template/template.html")
+  TEMPLATE = File.read(BASE_PATH + "/template/template.html")
 
   def initialize(args)
     @args = args
@@ -251,7 +253,7 @@ class WholeZiphilConverter
   def create_ftp
     ftp, user = nil, nil
     unless @args.empty?
-      config_data = File.read(File.dirname($0) + "/template/config.txt")
+      config_data = File.read(BASE_PATH + "/template/config.txt")
       host, user, password = config_data.split("\n")
       ftp = Net::FTP.new(host, user, password)
     end
@@ -269,7 +271,7 @@ class WholeZiphilConverter
 
   def create_converter(document, path, language)
     converter = ZiphilConverter.new(document, path, language) 
-    directory = File.dirname($0) + "/template"
+    directory = BASE_PATH + "/template"
     Dir.each_child(directory) do |entry|
       if entry =~ /\.rb/
         converter.instance_eval(File.read(directory + "/" + entry), entry)
