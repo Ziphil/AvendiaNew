@@ -8,43 +8,51 @@ converter.add(["page"], [""]) do |element|
   path, language = converter.path, converter.language
   deepness = converter.deepness
   virtual_deepness = (path =~ /index\.zml$/) ? deepness - 1 : deepness
-  name_tag = TagBuilder.new("div", "name")
   title = ""
+  breadcrumb_tag = Tag.new("ul", "breadcrumb")
+  breadcrumb_tag["itemscope"] = "itemscope"
+  breadcrumb_tag["itemtype"] = "https://schema.org/BreadcrumbList"
   if virtual_deepness >= -1
+    top_item_tag, top_link_tag, top_name_tag = Tag.breadcrumb_items(1)
+    top_link_tag["href"] = "../" * deepness
+    top_name_tag << NAMES[:top][language]
+    top_link_tag << top_name_tag
+    top_item_tag << top_link_tag
+    breadcrumb_tag << top_item_tag
+  end
+  if virtual_deepness >= 0
     first_category = path.split("/")[-deepness - 1]
-    first_link_tag = TagBuilder.new("a", "name")
+    first_item_tag, first_link_tag, first_name_tag = Tag.breadcrumb_items(2)
     first_link_tag["href"] = "../../" + first_category
-    if virtual_deepness == -1
-      first_link_tag << NAMES[:top][language]
-    else
-      first_link_tag << NAMES[first_category.intern][language]
-    end
-    name_tag << first_link_tag
+    first_name_tag << NAMES[first_category.intern][language]
+    first_link_tag << first_name_tag
+    first_item_tag << first_link_tag
+    breadcrumb_tag << first_item_tag
   end
   if virtual_deepness >= 1
     second_category = path.split("/")[-deepness]
     united_category = first_category + "_" + second_category
-    second_link_tag = TagBuilder.new("a", "name")
+    second_item_tag, second_link_tag, second_name_tag = Tag.breadcrumb_items(3)
     second_link_tag["href"] = "../" + second_category
-    second_link_tag << NAMES[united_category.intern][language]
-    name_tag << second_link_tag
+    second_name_tag << NAMES[united_category.intern][language]
+    second_link_tag << second_name_tag
+    second_item_tag << second_link_tag
+    breadcrumb_tag << second_item_tag
   end
   if virtual_deepness >= 2
-    if element.attribute("link")
-      converted_path = path.match(/([0-9a-z\-]+)\.zml/).to_a[1].to_s
-      converted_path += (element.attribute("link").value == "c") ? ".cgi" : ".html"
-      third_link_tag = TagBuilder.new("a", "name")
-      third_link_tag["href"] = converted_path
-    else
-      third_link_tag = TagBuilder.new("span")
-    end
+    converted_path = path.match(/([0-9a-z\-]+)\.zml/).to_a[1].to_s
+    converted_path += (element.attribute("link")&.value == "c") ? ".cgi" : ".html"
     name_element = element.elements.to_a("name").first
     title = name_element.inner_text(true).gsub("\"", "&quot;")
-    third_link_tag << apply(name_element, "page")
-    name_tag << third_link_tag
+    third_item_tag, third_link_tag, third_name_tag = Tag.breadcrumb_items(4)
+    third_link_tag["href"] = converted_path
+    third_name_tag << apply(name_element, "page")
+    third_link_tag << third_name_tag
+    third_item_tag << third_link_tag
+    breadcrumb_tag << third_item_tag
   end
   navigation_string, header_string, main_string = "", "", ""
-  navigation_string << name_tag
+  navigation_string << breadcrumb_tag
   navigation_string << apply(element, "navigation")
   header_string << apply(element, "header")
   main_string << apply(element, "page")
@@ -54,10 +62,10 @@ end
 
 converter.add(["ver"], ["navigation"]) do |element|
   if element.text == "*" || element.text =~ LATEST_VERSION_REGEX
-    tag = TagBuilder.new("div", "version")
+    tag = Tag.new("div", "version")
     converter.configs[:latest] = true
   else
-    tag = TagBuilder.new("div", "version-caution")
+    tag = Tag.new("div", "version-caution")
   end
   tag << apply(element, "page")
   next tag
@@ -68,13 +76,13 @@ converter.add(nil, ["navigation"]) do |text|
 end
 
 converter.add(["import-script"], ["header"]) do |element|
-  tag = TagBuilder.new("script")
+  tag = Tag.new("script")
   tag["src"] = converter.url_prefix + "file/script/" + element.attribute("src").to_s
   next tag.to_s + "\n"
 end
 
 converter.add(["base"], ["header"]) do |element|
-  tag = TagBuilder.new("base")
+  tag = Tag.new("base")
   tag["href"] = element.attribute("href").to_s
   next tag.to_s + "\n"
 end
@@ -84,13 +92,13 @@ converter.add(nil, ["header"]) do |text|
 end
 
 converter.add(["pb"], ["page"]) do |element|
-  tag = TagBuilder.new("div", "index-container")
+  tag = Tag.new("div", "index-container")
   tag << apply(element, "page")
   next tag
 end
 
 converter.add(["hb"], ["page"]) do |element|
-  tag = TagBuilder.new("div", "index-header")
+  tag = Tag.new("h1")
   tag << apply(element, "page")
   next tag
 end
@@ -98,19 +106,19 @@ end
 converter.add(["ab", "abo", "aba", "abd"], ["page"]) do |element|
   case element.name
   when "ab"
-    tag = TagBuilder.new("a", "index")
+    tag = Tag.new("a", "index")
   when "abo"
-    tag = TagBuilder.new("a", "old-index")
+    tag = Tag.new("a", "old-index")
   when "aba"
-    tag = TagBuilder.new("a", "ancient-index")
+    tag = Tag.new("a", "ancient-index")
   when "abd"
-    tag = TagBuilder.new("div", "disabled-index")
+    tag = Tag.new("div", "disabled-index")
   end
   element.attributes.each_attribute do |attribute|
     if attribute.name == "date"
-      date_tag = TagBuilder.new("span", "date")
+      date_tag = Tag.new("span", "date")
       if element.attribute("date").value =~ /^\d+$/
-        hairia_tag = TagBuilder.new("span", "hairia")
+        hairia_tag = Tag.new("span", "hairia")
         hairia_tag << element.attribute("date").to_s
         date_tag << hairia_tag
       else
@@ -121,17 +129,17 @@ converter.add(["ab", "abo", "aba", "abd"], ["page"]) do |element|
       tag[attribute.name] = attribute.to_s
     end
   end
-  content_tag = TagBuilder.new("span", "content")
+  content_tag = Tag.new("span", "content")
   content_tag << apply(element, "page")
   tag << content_tag
   next tag
 end
 
 converter.add(["h1", "h2"], ["page"]) do |element|
-  tag = TagBuilder.new(element.name)
+  tag = Tag.new(element.name)
   element.attributes.each_attribute do |attribute|
     if attribute.name == "number"
-      number_tag = TagBuilder.new("span", "number")
+      number_tag = Tag.new("span", "number")
       number_tag << element.attribute("number").to_s
       tag["id"] = element.attribute("number").to_s
       tag << number_tag
@@ -144,15 +152,15 @@ converter.add(["h1", "h2"], ["page"]) do |element|
 end
 
 converter.add(["p"], ["page"]) do |element|
-  tag = TagBuilder.new("p")
+  tag = Tag.new("p")
   tag << apply(element, "page")
   if element.attribute("par")
-    additional_tag = TagBuilder.new("span", "paragraph")
+    additional_tag = Tag.new("span", "paragraph")
     additional_tag << element.attribute("par").to_s
     tag.insert_first(additional_tag)
   end
   if element.attribute("name")
-    additional_tag = TagBuilder.new("span", "name")
+    additional_tag = Tag.new("span", "name")
     additional_tag << element.attribute("name").to_s
     tag.insert_first(additional_tag)
   end
@@ -160,7 +168,7 @@ converter.add(["p"], ["page"]) do |element|
 end
 
 converter.add(["img"], ["page"]) do |element|
-  tag = TagBuilder.new("img", nil, false)
+  tag = Tag.new("img", nil, false)
   tag["alt"] = ""
   element.attributes.each_attribute do |attribute|
     tag[attribute.name] = attribute.to_s
@@ -175,7 +183,7 @@ converter.add(["a"], ["page"]) do |element|
 end
 
 converter.add(["an"], ["page"]) do |element|
-  tag = TagBuilder.new("a", "normal")
+  tag = Tag.new("a", "normal")
   element.attributes.each_attribute do |attribute|
     tag[attribute.name] = attribute.to_s
   end
@@ -184,26 +192,26 @@ converter.add(["an"], ["page"]) do |element|
 end
 
 converter.add(["xl"], ["page"]) do |element|
-  tag = TagBuilder.new("ul", "conlang")
+  tag = Tag.new("ul", "conlang")
   tag << apply(element, "page.xl")
   next tag
 end
 
 converter.add(["li"], ["page.xl"]) do |element|
-  tag = TagBuilder.new("li")
+  tag = Tag.new("li")
   tag << apply(element, "page.xl.li")
   next tag
 end
 
 converter.add(["sh"], ["page.xl.li"]) do |element|
-  tag = TagBuilder.new
+  tag = Tag.new
   tag << apply(element, "page")
   next tag
 end
 
 converter.add(["ja"], ["page.xl.li"]) do |element|
-  tag = TagBuilder.new("ul")
-  item_tag = TagBuilder.new("li")
+  tag = Tag.new("ul")
+  item_tag = Tag.new("li")
   item_tag << apply(element, "page")
   tag << item_tag
   next tag
@@ -219,45 +227,45 @@ converter.add(nil, ["page.xl.li"]) do |text|
 end
 
 converter.add(["el"], ["page"]) do |element|
-  tag = TagBuilder.new("table", "list")
+  tag = Tag.new("table", "list")
   tag << apply(element, "page.el")
   next tag
 end
 
 converter.add(["li"], ["page.el"]) do |element|
-  tag = TagBuilder.new("tr")
+  tag = Tag.new("tr")
   tag << apply(element, "page.el.li")
   next tag
 end
 
 converter.add(["et", "ed"], ["page.el.li"]) do |element|
-  tag = TagBuilder.new("td")
+  tag = Tag.new("td")
   tag << apply(element, "page")
   next tag
 end
 
 converter.add(["trans"], ["page"]) do |element|
-  tag = TagBuilder.new("table", "translation")
+  tag = Tag.new("table", "translation")
   tag << apply(element, "page.trans")
   next tag
 end
 
 converter.add(["li"], ["page.trans"]) do |element|
-  tag = TagBuilder.new("tr")
+  tag = Tag.new("tr")
   tag << apply(element, "page.trans.li")
   next tag
 end
 
 converter.add(["ja", "sh"], ["page.trans.li"]) do |element|
-  tag = TagBuilder.new("td")
+  tag = Tag.new("td")
   tag << apply(element, "page")
   next tag
 end
 
 converter.add(["section-table"], ["page"]) do |element|
-  tag = TagBuilder.new("ul", "section-table")
-  section_item_tag = TagBuilder.new("li")
-  subsection_tag = TagBuilder.new("ul")
+  tag = Tag.new("ul", "section-table")
+  section_item_tag = Tag.new("li")
+  subsection_tag = Tag.new("ul")
   element.each_xpath("/page/*[name() = 'h1' or name() = 'h2']") do |inner_element|
     case inner_element.name
     when "h1"
@@ -265,21 +273,21 @@ converter.add(["section-table"], ["page"]) do |element|
         section_item_tag << subsection_tag unless subsection_tag.content.empty?
         tag << section_item_tag
       end
-      section_item_tag = TagBuilder.new("li")
-      subsection_tag = TagBuilder.new("ul")
+      section_item_tag = Tag.new("li")
+      subsection_tag = Tag.new("ul")
       section_item_tag << apply(inner_element, "page.section-table")
     when "h2"
-      subsection_item_tag = TagBuilder.new("li")
+      subsection_item_tag = Tag.new("li")
       if inner_element.attribute("number")
-        number_tag = TagBuilder.new("span", "number")
-        link_tag = TagBuilder.new("a")
+        number_tag = Tag.new("span", "number")
+        link_tag = Tag.new("a")
         number_tag << inner_element.attribute("number").to_s
         link_tag["href"] = "#" + inner_element.attribute("number").to_s
         link_tag << apply(inner_element, "page.section-table")
         subsection_item_tag << number_tag
         subsection_item_tag << link_tag
       elsif inner_element.attribute("id")
-        link_tag = TagBuilder.new("a")
+        link_tag = Tag.new("a")
         link_tag["href"] = "#" + inner_element.attribute("id").to_s
         link_tag << apply(inner_element, "page.section-table")
         subsection_item_tag << link_tag
@@ -320,7 +328,7 @@ converter.add(["th", "td"], ["page.table.tr"]) do |element|
 end
 
 converter.add(["thl"], ["page.table.tr"]) do |element|
-  tag = TagBuilder.new("th", "left")
+  tag = Tag.new("th", "left")
   tag << apply(element, "page")
   next tag
 end
@@ -341,15 +349,15 @@ converter.add(["textarea"], ["page"]) do |element|
 end
 
 converter.add(["pdf"], ["page"]) do |element|
-  tag = TagBuilder.new("object", "pdf")
+  tag = Tag.new("object", "pdf")
   tag["data"] = element.attribute("src").to_s + "#view=FitH&amp;statusbar=0&amp;toolbar=0&amp;navpanes=0&amp;messages=0"
   tag["type"] = "application/pdf"
   next tag
 end
 
 converter.add(["slide"], ["page"]) do |element|
-  tag = TagBuilder.new("div", "slide")
-  script_tag = TagBuilder.new("script", "speakerdeck-embed")
+  tag = Tag.new("div", "slide")
+  script_tag = Tag.new("script", "speakerdeck-embed")
   script_tag["async"] = "async"
   script_tag["data-id"] = element.attribute("id").to_s
   script_tag["data-ratio"] = "1.33333333333333"
@@ -361,17 +369,17 @@ end
 converter.add(["pre", "samp"], ["page"]) do |element|
   case element.name
   when "pre"
-    tag = TagBuilder.new("table", "code")
+    tag = Tag.new("table", "code")
   when "samp"
-    tag = TagBuilder.new("table", "sample")
+    tag = Tag.new("table", "sample")
   end
   string = element.texts.map{|s| s.to_s}.join.gsub(/\A\s*?\n/, "")
   indent_size = string.match(/\A(\s*?)\S/)[1].length
   string = string.rstrip.deindent
   tag << "\n"
   string.each_line do |line|
-    row_tag = TagBuilder.new("tr")
-    code_tag = TagBuilder.new("td")
+    row_tag = Tag.new("tr")
+    code_tag = Tag.new("td")
     if line =~ /^\s*$/
       code_tag << " "
     else
@@ -389,9 +397,9 @@ end
 converter.add(["c", "m"], ["page", "page.section-table"]) do |element|
   case element.name
   when "c"
-    tag = TagBuilder.new("span", "code")
+    tag = Tag.new("span", "code")
   when "m"
-    tag = TagBuilder.new("span", "monospace")
+    tag = Tag.new("span", "monospace")
   end
   element.children.each do |inner_element|
     case inner_element
@@ -432,7 +440,7 @@ converter.add(["xn"], ["page", "page.section-table"]) do |element|
 end
 
 converter.add(["red"], ["page"]) do |element|
-  tag = TagBuilder.new("span", "redact")
+  tag = Tag.new("span", "redact")
   tag << "&nbsp;" * element.attribute("length").to_s.to_i
   next tag
 end
@@ -443,13 +451,13 @@ converter.add(["sup", "sub"], ["page", "page.section-table"]) do |element|
 end
 
 converter.add(["h"], ["page", "page.section-table"]) do |element|
-  tag = TagBuilder.new("span", "hairia")
+  tag = Tag.new("span", "hairia")
   tag << apply(element, "page")
   next tag
 end
 
 converter.add(["k"], ["page", "page.section-table"]) do |element|
-  tag = TagBuilder.new("span", "japanese")
+  tag = Tag.new("span", "japanese")
   tag << apply(element, "page")
   next tag
 end
@@ -460,13 +468,13 @@ converter.add(["i"], ["page", "page.section-table"]) do |element|
 end
 
 converter.add(["fl"], ["page"]) do |element|
-  tag = TagBuilder.new("span", "foreign")
+  tag = Tag.new("span", "foreign")
   tag << apply(element, "page")
   next tag
 end
 
 converter.add(["small"], ["page"]) do |element|
-  tag = TagBuilder.new("span", "small")
+  tag = Tag.new("span", "small")
   tag << apply(element, "page")
   next tag
 end

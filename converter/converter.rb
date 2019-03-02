@@ -44,7 +44,7 @@ class PageConverter
   end
 
   def pass_element(element, scope, close = true)
-    tag = TagBuilder.new(element.name, nil, close)
+    tag = Tag.new(element.name, nil, close)
     element.attributes.each_attribute do |attribute|
       tag[attribute.name] = attribute.to_s
     end
@@ -139,7 +139,7 @@ class WholeZiphilConverter
 
   NAMES = {
     :title => {:ja => "人工言語シャレイア語", :en => "Sheleian Constructed Language"},
-    :top => {:ja => "トップページ", :en => "Top"},
+    :top => {:ja => "トップ", :en => "Top"},
     :conlang => {:ja => "シャレイア語", :en => "Shaleian"},
     :conlang_grammer => {:ja => "文法書", :en => "Grammar"},
     :conlang_course => {:ja => "入門書", :en => "Introduction"},
@@ -300,7 +300,7 @@ class WholeZiphilConverter
 end
 
 
-class TagBuilder
+class Tag
 
   attr_accessor :name
   attr_accessor :content
@@ -355,6 +355,23 @@ class TagBuilder
 
   def to_str
     return self.to_s
+  end
+
+  def self.breadcrumb_items(level)
+    item_tag = Tag.new("li")
+    item_tag["itemscope"] = "itemscope"
+    item_tag["itemprop"] = "itemListElement"
+    item_tag["itemtype"] = "https://schema.org/ListItem"
+    link_tag = Tag.new("a")
+    link_tag["itemprop"] = "item"
+    link_tag["itemtype"] = "https://schema.org/Thing"
+    name_tag = Tag.new("span")
+    name_tag["itemprop"] = "name"
+    meta_tag = Tag.new("meta", nil, false)
+    meta_tag["itemprop"] = "position"
+    meta_tag["content"] = level.to_s
+    item_tag << meta_tag
+    return item_tag, link_tag, name_tag
   end
 
 end

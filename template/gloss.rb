@@ -38,21 +38,21 @@ FIXED_NAMES = {
 }
 
 converter.add(["gloss"], ["page.xl.li"]) do |element|
-  tag = TagBuilder.new("ul")
-  item_tag = TagBuilder.new("li", "gloss")
+  tag = Tag.new("ul")
+  item_tag = Tag.new("li", "gloss")
   item_tag << apply(element, "page.gloss")
   tag << item_tag
   next tag
 end
 
 converter.add(["gloss"], ["page"]) do |element|
-  tag = TagBuilder.new("div", "gloss")
+  tag = Tag.new("div", "gloss")
   tag << apply(element, "page.gloss")
   next tag
 end
 
 converter.add(["li"], ["page.gloss"]) do |element|
-  tag = TagBuilder.new("div", "word")
+  tag = Tag.new("div", "word")
   if element.attribute("auto")
     name_query = element.attribute("auto").value
     FIXED_NAMES.each do |code, (name, kind)|
@@ -102,9 +102,9 @@ end
 converter.add(["sh", "ex"], ["page.gloss.li"]) do |element|
   case element.name
   when "sh"
-    tag = TagBuilder.new("div", "name")
+    tag = Tag.new("div", "name")
   when "ex"
-    tag = TagBuilder.new("div", "explanation")
+    tag = Tag.new("div", "explanation")
   end
   tag << apply(element, "page")
   if element.parent.attribute("conj")
@@ -115,7 +115,7 @@ converter.add(["sh", "ex"], ["page.gloss.li"]) do |element|
       if index = prefix_query.index(code)
         case element.name
         when "sh"
-          prefix_tag = TagBuilder.new("span", "sans")
+          prefix_tag = Tag.new("span", "sans")
           prefix_tag << prefix
           prefix_results[index] = prefix_tag.to_s + "-"
         when "ex"
@@ -127,7 +127,7 @@ converter.add(["sh", "ex"], ["page.gloss.li"]) do |element|
       if index = suffix_query.index(code)
         case element.name
         when "sh"
-          suffix_tag = TagBuilder.new("span", "sans")
+          suffix_tag = Tag.new("span", "sans")
           suffix_tag << suffix
           suffix_results[index] = "-" + suffix_tag.to_s
         when "ex"
@@ -138,10 +138,10 @@ converter.add(["sh", "ex"], ["page.gloss.li"]) do |element|
     prefix_addition = prefix_results.join
     suffix_addition = suffix_results.join
     if element.name == "ex"
-      prefix_morpheme_tag = TagBuilder.new("span", "morpheme")
+      prefix_morpheme_tag = Tag.new("span", "morpheme")
       prefix_morpheme_tag << prefix_addition
       prefix_addition = prefix_morpheme_tag.to_s
-      suffix_morpheme_tag = TagBuilder.new("span", "morpheme")
+      suffix_morpheme_tag = Tag.new("span", "morpheme")
       suffix_morpheme_tag << suffix_addition
       suffix_addition = suffix_morpheme_tag.to_s
     end
@@ -152,7 +152,7 @@ converter.add(["sh", "ex"], ["page.gloss.li"]) do |element|
 end
 
 converter.add(["mph"], ["page"]) do |element|
-  tag = TagBuilder.new("span", "morpheme")
+  tag = Tag.new("span", "morpheme")
   tag << apply(element, "page")
   next tag
 end
