@@ -3,6 +3,7 @@
 
 require 'pp'
 require 'fileutils'
+require 'delegate'
 require 'net/ftp'
 require 'rexml/document'
 include REXML
@@ -334,17 +335,19 @@ class Tag
   end
 
   def head
-    object = Struct.new(:tag).new(self)
+    outer_self = self
+    object = SimpleDelegator.new(outer_self)
     object.define_singleton_method(:<<) do |content|
-      self.tag.content.sub!(/(\A\s*)/m){$1 + content.to_str}
+      outer_self.content.sub!(/(\A\s*)/m){$1 + content.to_str}
     end
     return object
   end
 
   def at(index)
-    object = Struct.new(:tag).new(self)
+    outer_self = self
+    object = SimpleDelegator.new(outer_self)
     object.define_singleton_method(:<<) do |content|
-      self.tag.content.insert(index, content)
+      outer_self.content.insert(index, content)
     end
     return object
   end
