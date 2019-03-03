@@ -38,48 +38,54 @@ FIXED_NAMES = {
 }
 
 converter.add(["gloss"], ["page.xl.li"]) do |element|
-  tag = Tag.new("ul")
-  item_tag = Tag.new("li", "gloss")
-  item_tag << apply(element, "page.gloss")
-  tag << item_tag
-  next tag
+  this = ""
+  this << Tag.build("ul") do |this|
+    this << Tag.build("li", "gloss") do |this|
+      this << apply(element, "page.gloss")
+    end
+  end
+  next this
 end
 
 converter.add(["gloss"], ["page"]) do |element|
-  tag = Tag.new("div", "gloss")
-  tag << apply(element, "page.gloss")
-  next tag
+  this = ""
+  this << Tag.build("div", "gloss") do |this|
+    this << apply(element, "page.gloss")
+  end
+  next this
 end
 
 converter.add(["li"], ["page.gloss"]) do |element|
-  tag = Tag.new("div", "word")
-  if element.attribute("auto")
-    name_query = element.attribute("auto").value
-    FIXED_NAMES.each do |code, (name, kind)|
-      if name_query == code
-        name_element = Element.new("sh")
-        shaleia_element = Element.new("x")
-        explanation_element = Element.new("ex")
-        morpheme_element = Element.new("mph")
-        shaleia_element << Text.new(name, true, nil, false)
-        name_element << shaleia_element
-        morpheme_element << Text.new(kind[converter.language], true, nil, false)
-        explanation_element << morpheme_element
-        element << name_element
-        element << explanation_element
+  this = ""
+  this << Tag.build("div", "word") do |this|
+    if element.attribute("auto")
+      name_query = element.attribute("auto").value
+      FIXED_NAMES.each do |code, (name, kind)|
+        if name_query == code
+          element << Element.build("sh") do |element|
+            element << Element.build("x") do |element|
+              element << Text.new(name, true, nil, false)
+            end
+          end
+          element << Element.build("ex") do |element|
+            element << Element.build("mph") do |element|
+              element << Text.new(kind[converter.language], true, nil, false)
+            end
+          end
+        end
       end
     end
+    if element.attribute("punc")
+      punctuation = element.attribute("punc").value
+      element << Element.build("sh") do |element|
+        element << Element.build("xn") do |element|
+          element << Text.new(punctuation, true, nil, false)
+        end
+      end
+    end
+    this << apply(element, "page.gloss.li")
   end
-  if element.attribute("punc")
-    punctuation = element.attribute("punc").value
-    name_element = Element.new("sh")
-    shaleia_element = Element.new("xn")
-    shaleia_element << Text.new(punctuation, true, nil, false)
-    name_element << shaleia_element
-    element << name_element
-  end
-  tag << apply(element, "page.gloss.li")
-  next tag
+  next this
 end
 
 converter.add(nil, ["page.gloss"]) do |text|
@@ -100,59 +106,68 @@ converter.add(nil, ["page.gloss"]) do |text|
 end
 
 converter.add(["sh", "ex"], ["page.gloss.li"]) do |element|
-  case element.name
-  when "sh"
-    tag = Tag.new("div", "name")
-  when "ex"
-    tag = Tag.new("div", "explanation")
-  end
-  tag << apply(element, "page")
-  if element.parent.attribute("conj")
-    conjugation_query = element.parent.attribute("conj").value
-    prefix_query, suffix_query = conjugation_query.split("-", 2)
-    prefix_results, suffix_results = [], []
-    PREFIX_CONJUGATIONS.each do |code, (prefix, kind)|
-      if index = prefix_query.index(code)
-        case element.name
-        when "sh"
-          prefix_tag = Tag.new("span", "sans")
-          prefix_tag << prefix
-          prefix_results[index] = prefix_tag.to_s + "-"
-        when "ex"
-          prefix_results[index] = kind[converter.language] + "-"
+  this = ""
+  this << Tag.build("div") do |this|
+    case element.name
+    when "sh"
+      this.class = "name"
+    when "ex"
+      this.class = "explanation"
+    end
+    this << apply(element, "page")
+    if element.parent.attribute("conj")
+      conjugation_query = element.parent.attribute("conj").value
+      prefix_query, suffix_query = conjugation_query.split("-", 2)
+      prefix_results, suffix_results = [], []
+      PREFIX_CONJUGATIONS.each do |code, (prefix, kind)|
+        if index = prefix_query.index(code)
+          case element.name
+          when "sh"
+            prefix_tag = Tag.build("span", "sans") do |this|
+              this << prefix
+            end
+            prefix_results[index] = prefix_tag.to_s + "-"
+          when "ex"
+            prefix_results[index] = kind[converter.language] + "-"
+          end
         end
       end
-    end
-    SUFFIX_CONJUGATIONS.each do |code, (suffix, kind)|
-      if index = suffix_query.index(code)
-        case element.name
-        when "sh"
-          suffix_tag = Tag.new("span", "sans")
-          suffix_tag << suffix
-          suffix_results[index] = "-" + suffix_tag.to_s
-        when "ex"
-          suffix_results[index] = "-" + kind[converter.language]
+      SUFFIX_CONJUGATIONS.each do |code, (suffix, kind)|
+        if index = suffix_query.index(code)
+          case element.name
+          when "sh"
+            suffix_tag = Tag.build("span", "sans") do |this|
+              this << suffix
+            end
+            suffix_results[index] = "-" + suffix_tag.to_s
+          when "ex"
+            suffix_results[index] = "-" + kind[converter.language]
+          end
         end
       end
+      prefix_addition = prefix_results.join
+      suffix_addition = suffix_results.join
+      if element.name == "ex"
+        prefix_morpheme_tag = Tag.build("span", "morpheme") do |this|
+          this << prefix_addition
+        end
+        suffix_morpheme_tag = Tag.build("span", "morpheme") do |this|
+          this << suffix_addition
+        end
+        prefix_addition = prefix_morpheme_tag.to_s
+        suffix_addition = suffix_morpheme_tag.to_s
+      end
+      this.at(0) << prefix_addition
+      this.at(-1) << suffix_addition
     end
-    prefix_addition = prefix_results.join
-    suffix_addition = suffix_results.join
-    if element.name == "ex"
-      prefix_morpheme_tag = Tag.new("span", "morpheme")
-      prefix_morpheme_tag << prefix_addition
-      prefix_addition = prefix_morpheme_tag.to_s
-      suffix_morpheme_tag = Tag.new("span", "morpheme")
-      suffix_morpheme_tag << suffix_addition
-      suffix_addition = suffix_morpheme_tag.to_s
-    end
-    tag.insert(0, prefix_addition)
-    tag.insert(-1, suffix_addition)
   end
-  next tag
+  next this
 end
 
 converter.add(["mph"], ["page"]) do |element|
-  tag = Tag.new("span", "morpheme")
-  tag << apply(element, "page")
-  next tag
+  this = ""
+  this << Tag.build("span", "morpheme") do |this|
+    this << apply(element, "page")
+  end
+  next this
 end

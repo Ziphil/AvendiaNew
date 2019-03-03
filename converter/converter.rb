@@ -33,14 +33,14 @@ class PageConverter
   end
 
   def convert_element(element, scope)
-    tag = nil
+    result = nil
     @templates.each do |(element_pattern, scope_pattern), block|
       if element_pattern != nil && element_pattern.any?{|s| s === element.name} && scope_pattern.any?{|s| s === scope}
-        tag = block.call(element, scope)
+        result = block.call(element, scope)
         break
       end
     end
-    return tag || @default_element_template.call(element)
+    return result || @default_element_template.call(element)
   end
 
   def pass_element(element, scope, close = true)
@@ -53,14 +53,14 @@ class PageConverter
   end
 
   def convert_text(text, scope)
-    string = nil
+    result = nil
     @templates.each do |(element_pattern, scope_pattern), block|
       if element_pattern == nil && scope_pattern.any?{|s| s === scope}
-        string = block.call(text, scope)
+        result = block.call(text, scope)
         break
       end
     end
-    return string || @default_text_template.call(text)
+    return result || @default_text_template.call(text)
   end
 
   def pass_text(text, scope)
@@ -70,15 +70,15 @@ class PageConverter
 
   def apply(element, scope)
     result = ""
-    element.children.each do |inner_element|
-      case inner_element
+    element.children.each do |child|
+      case child
       when Element
-        tag = convert_element(inner_element, scope)
+        tag = convert_element(child, scope)
         if tag
           result << tag
         end
       when Text
-        string = convert_text(inner_element, scope)
+        string = convert_text(child, scope)
         if string
           result << string
         end
@@ -321,16 +321,32 @@ class Tag
     @attributes[key] = value
   end
 
+  def class
+    @attributes["class"]
+  end
+
+  def class=(clazz)
+    @attributes["class"] = clazz
+  end
+
   def <<(content)
     @content << content
   end
 
-  def insert(index, content)
-    @content.insert(index, content)
+  def head
+    object = Struct.new(:tag).new(self)
+    object.define_singleton_method(:<<) do |content|
+      self.tag.content.sub!(/(\A\s*)/m){$1 + content.to_str}
+    end
+    return object
   end
 
-  def insert_first(content)
-    @content.sub!(/(\A\s*)/m){$1 + content.to_str}
+  def at(index)
+    object = Struct.new(:tag).new(self)
+    object.define_singleton_method(:<<) do |content|
+      self.tag.content.insert(index, content)
+    end
+    return object
   end
 
   def to_s
@@ -358,7 +374,13 @@ class Tag
     return self.to_s
   end
 
-  def self.breadcrumb_items(level)
+  def self.build(name = nil, clazz = nil, close = true, &block)
+    tag = Tag.new(name, clazz, close)
+    block.call(tag)
+    return tag
+  end
+
+  def self.build_breadcrumb_items(level, &block)
     item_tag = Tag.new("li")
     item_tag["itemscope"] = "itemscope"
     item_tag["itemprop"] = "itemListElement"
@@ -372,7 +394,10 @@ class Tag
     meta_tag["itemprop"] = "position"
     meta_tag["content"] = level.to_s
     item_tag << meta_tag
-    return item_tag, link_tag, name_tag
+    block.call(item_tag, link_tag, name_tag)
+    link_tag << name_tag
+    item_tag << link_tag
+    return item_tag
   end
 
 end
@@ -404,6 +429,12 @@ class Element
       end
       return enumerator
     end
+  end
+
+  def self.build(name, &block)
+    element = Element.new(name)
+    block.call(element)
+    return element
   end
 
 end

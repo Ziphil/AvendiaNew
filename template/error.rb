@@ -2,19 +2,25 @@
 
 
 converter.add(["error"], ["page"]) do |element|
-  tag = Tag.new("div", "error")
-  tag << apply(element, "page.error")
-  next tag
+  this = ""
+  this << Tag.build("div", "error") do |this|
+    this << apply(element, "page.error")
+  end
+  next this
 end
 
 converter.add(["code"], ["page.error"]) do |element|
-  tag = Tag.new("div", "error-code")
-  tag << apply(element, "page")
-  next tag
+  this = ""
+  this << Tag.build("div", "error-code") do |this|
+    this << apply(element, "page")
+  end
+  next this
 end
 
 converter.add(["message"], ["page.error"]) do |element|
-  tag = Tag.new("div", "message")
-  tag << apply(element, "page")
-  next tag
+  this = ""
+  this << Tag.build("div", "message") do |this|
+    this << apply(element, "page")
+  end
+  next this
 end
