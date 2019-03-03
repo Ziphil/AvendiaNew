@@ -2,6 +2,6 @@ document/lbs
 document/lbs-en
 *.code-workspace
 .vscode
-template/config.txt
+converter/config.txt
 desktop.ini
 Thumbs.db

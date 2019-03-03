@@ -254,7 +254,7 @@ class WholeZiphilConverter
   def create_ftp
     ftp, user = nil, nil
     unless @args.empty?
-      config_data = File.read(BASE_PATH + "/template/config.txt")
+      config_data = File.read(BASE_PATH + "/converter/config.txt")
       host, user, password = config_data.split("\n")
       ftp = Net::FTP.new(host, user, password)
     end
