@@ -199,17 +199,18 @@ class WholeZiphilConverter
       end
       output = " "
       output << "%3d" % (index + 1)
-      output << " : "
+      output << "\e[37m : \e[36m"
       output << "%4d" % parsing_duration
-      output << " + "
+      output << "\e[37m + \e[36m"
       output << "%4d" % conversion_duration
-      output << " + "
+      output << "\e[37m + \e[35m"
       output << "%4d" % upload_duration
-      output << "  |  "
+      output << "\e[37m  |  \e[33m"
       output << "#{language} "
       path_array = path.gsub(ROOT_PATHS[language] + "/", "").split("/")
       path_array.map!{|s| (s =~ /\d/) ? "%3d" % s.to_i : s.gsub("index.zml", "  *")[0..2]}
       output << path_array.join(" ")
+      output << "\e[37m"
       puts(output)
     end
     puts("-" * 45)
