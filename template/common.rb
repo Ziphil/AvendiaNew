@@ -14,14 +14,14 @@ converter.add(["page"], [""]) do |element|
     this["itemscope"] = "itemscope"
     this["itemtype"] = "https://schema.org/BreadcrumbList"
     if virtual_deepness >= -1
-      this << Tag.build_breadcrumb_items(1) do |item_tag, link_tag, name_tag|
+      this << call(element, "breadcrumb-item", 1) do |item_tag, link_tag, name_tag|
         link_tag["href"] = "../" * deepness
         name_tag << NAMES[:top][language]
       end
     end
     if virtual_deepness >= 0
       first_category = path.split("/")[-deepness - 1]
-      this << Tag.build_breadcrumb_items(2) do |item_tag, link_tag, name_tag|
+      this << call(element, "breadcrumb-item", 2) do |item_tag, link_tag, name_tag|
         link_tag["href"] = "../../" + first_category
         name_tag << NAMES[first_category.intern][language]
       end
@@ -29,7 +29,7 @@ converter.add(["page"], [""]) do |element|
     if virtual_deepness >= 1
       second_category = path.split("/")[-deepness]
       united_category = first_category + "_" + second_category
-      this << Tag.build_breadcrumb_items(3) do |item_tag, link_tag, name_tag|
+      this << call(element, "breadcrumb-item", 3) do |item_tag, link_tag, name_tag|
         link_tag["href"] = "../" + second_category
         name_tag << NAMES[united_category.intern][language]
       end
@@ -39,7 +39,7 @@ converter.add(["page"], [""]) do |element|
       converted_path += (element.attribute("link")&.value == "c") ? ".cgi" : ".html"
       name_element = element.elements.to_a("name").first
       title = name_element.inner_text(true).gsub("\"", "&quot;")
-      this << Tag.build_breadcrumb_items(4) do |item_tag, link_tag, name_tag|
+      this << call(element, "breadcrumb-item", 4) do |item_tag, link_tag, name_tag|
         link_tag["href"] = converted_path
         name_tag << apply(name_element, "page")
       end
@@ -50,6 +50,28 @@ converter.add(["page"], [""]) do |element|
   main_string << apply(element, "page")
   result = TEMPLATE.gsub(/#\{(.*?)\}/){self.instance_eval($1)}.gsub(/\r/, "")
   next result
+end
+
+converter.set("breadcrumb-item") do |element, level, &block|
+  this = ""
+  this << Tag.build("li") do |item_tag|
+    item_tag["itemscope"] = "itemscope"
+    item_tag["itemprop"] = "itemListElement"
+    item_tag["itemtype"] = "https://schema.org/ListItem"
+    item_tag << Tag.build("a") do |link_tag|
+      link_tag["itemprop"] = "item"
+      link_tag["itemtype"] = "https://schema.org/Thing"
+      link_tag << Tag.build("span") do |name_tag|
+        name_tag["itemprop"] = "name"
+        block.call(item_tag, link_tag, name_tag)
+      end
+    end
+    item_tag << Tag.build("meta", nil, false) do |meta_tag|
+      meta_tag["itemprop"] = "position"
+      meta_tag["content"] = level.to_s
+    end
+  end
+  next this
 end
 
 converter.add(["ver"], ["navigation"]) do |element|

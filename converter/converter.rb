@@ -24,13 +24,15 @@ class PageConverter
     @document = document
     @configs = {}
     @templates = {}
+    @functions = {}
     @default_element_template = lambda{|s| ""}
     @default_text_template = lambda{|s| ""}
   end
 
   def convert
-    element = @document.root
-    return convert_element(element, "")
+    result = ""
+    result << convert_element(@document.root, "")
+    return result
   end
 
   def convert_element(element, scope)
@@ -88,8 +90,23 @@ class PageConverter
     return result
   end
 
+  def call(element, name, *args, &arg_block)
+    result = []
+    @functions.each do |function_name, block|
+      if function_name == name
+        result = block.call(element, *args, &arg_block)
+        break
+      end
+    end
+    return result
+  end
+
   def add(element_pattern, scope_pattern, &block)
     @templates.store([element_pattern, scope_pattern], block)
+  end
+
+  def set(name, &block)
+    @functions.store(name, block)
   end
 
   def add_default(element_pattern, &block)
@@ -381,26 +398,6 @@ class Tag
     tag = Tag.new(name, clazz, close)
     block.call(tag)
     return tag
-  end
-
-  def self.build_breadcrumb_items(level, &block)
-    item_tag = Tag.new("li")
-    item_tag["itemscope"] = "itemscope"
-    item_tag["itemprop"] = "itemListElement"
-    item_tag["itemtype"] = "https://schema.org/ListItem"
-    link_tag = Tag.new("a")
-    link_tag["itemprop"] = "item"
-    link_tag["itemtype"] = "https://schema.org/Thing"
-    name_tag = Tag.new("span")
-    name_tag["itemprop"] = "name"
-    meta_tag = Tag.new("meta", nil, false)
-    meta_tag["itemprop"] = "position"
-    meta_tag["content"] = level.to_s
-    item_tag << meta_tag
-    block.call(item_tag, link_tag, name_tag)
-    link_tag << name_tag
-    item_tag << link_tag
-    return item_tag
   end
 
 end
