@@ -12,7 +12,7 @@ BASE_PATH = File.expand_path("..", File.dirname($0)).encode("utf-8")
 
 Kernel.load(BASE_PATH + "/converter/parser.rb")
 Kernel.load(BASE_PATH + "/converter/utility.rb")
-Kernel.load(BASE_PATH + "/document/lbs/file/module/1.rb")
+Kernel.load(BASE_PATH + "/document/lbs/file/module/2.rb")
 Encoding.default_external = "UTF-8"
 $stdout.sync = true
 
