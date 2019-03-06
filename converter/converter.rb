@@ -323,7 +323,7 @@ class Tag
   end
 
   def class
-    @attributes["class"]
+    return @attributes["class"]
   end
 
   def class=(clazz)
