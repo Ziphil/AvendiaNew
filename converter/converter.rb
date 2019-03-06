@@ -30,17 +30,21 @@ class PageConverter
     @default_text_template = lambda{|s| ""}
   end
 
+  def update(document)
+    @document = document
+  end
+
   def convert
     result = ""
     result << convert_element(@document.root, "")
     return result
   end
 
-  def convert_element(element, scope)
+  def convert_element(element, scope, *args)
     result = nil
     @templates.each do |(element_pattern, scope_pattern), block|
       if element_pattern != nil && element_pattern.any?{|s| s === element.name} && scope_pattern.any?{|s| s === scope}
-        result = block.call(element, scope)
+        result = instance_exec(element, scope, *args, &block)
         break
       end
     end
@@ -56,11 +60,11 @@ class PageConverter
     return tag
   end
 
-  def convert_text(text, scope)
+  def convert_text(text, scope, *args)
     result = nil
     @templates.each do |(element_pattern, scope_pattern), block|
       if element_pattern == nil && scope_pattern.any?{|s| s === scope}
-        result = block.call(text, scope)
+        result = instance_exec(text, scope, *args, &block)
         break
       end
     end
@@ -91,11 +95,11 @@ class PageConverter
     return result
   end
 
-  def call(element, name, *args, &arg_block)
+  def call(element, name, *args)
     result = []
     @functions.each do |function_name, block|
       if function_name == name
-        result = block.call(element, *args, &arg_block)
+        result = instance_exec(element, *args, &block)
         break
       end
     end
@@ -132,6 +136,12 @@ class ZiphilConverter < PageConverter
     @language = language
   end
 
+  def update(document, path, language)
+    super(document)
+    @path = path
+    @language = language
+  end
+
   def deepness
     return @path.split("/").size - WholeZiphilConverter::ROOT_PATHS[@language].count("/") - 2
   end
@@ -156,42 +166,14 @@ end
 
 class WholeZiphilConverter
 
-  NAMES = {
-    :title => {:ja => "人工言語シャレイア語", :en => "Sheleian Constructed Language"},
-    :top => {:ja => "トップ", :en => "Top"},
-    :conlang => {:ja => "シャレイア語", :en => "Shaleian"},
-    :conlang_grammer => {:ja => "文法書", :en => "Grammar"},
-    :conlang_course => {:ja => "入門書", :en => "Introduction"},
-    :conlang_database => {:ja => "データベース", :en => "Database"},
-    :conlang_culture => {:ja => "文化", :en => "Culture"},
-    :conlang_translation => {:ja => "翻訳", :en => "Translations"},
-    :conlang_theory => {:ja => "シャレイア語論", :en => "Studies"},
-    :conlang_document => {:ja => "資料", :en => "Data"},
-    :conlang_table => {:ja => "一覧表", :en => "Tables"},
-    :application => {:ja => "自作ソフト", :en => "Softwares"},
-    :application_download => {:ja => "ダウンロード", :en => "Download"},
-    :application_web => {:ja => "Web アプリ", :en => "Web Application"},
-    :diary => {:ja => "日記", :en => "Diary"},
-    :diary_conlang => {:ja => "シャレイア語", :en => "Shaleian"},
-    :diary_mathematics => {:ja => "数学", :en => "Mathematics"},
-    :diary_application => {:ja => "プログラミング", :en => "Programming"},
-    :diary_game => {:ja => "ゲーム制作", :en => "Game"},
-    :other => {:ja => "その他", :en => "Others"},
-    :other_mathematics => {:ja => "数学", :en => "Mathematics"},
-    :other_language => {:ja => "自然言語", :en => "Languages"},
-    :other_tsuro => {:ja => "Tsuro", :en => "Tsuro"},
-    :other_other => {:ja => "その他", :en => "Others"},
-    :error => {:ja => "エラー", :en => "Error"},
-    :error_error => {:ja => "エラー", :en => "Error"}
-  }
   ROOT_PATHS = {
     :ja => BASE_PATH + "/document/lbs_source",
     :en => BASE_PATH + "/document/lbs-en_source"
   }
-  FOREIGN_LANGUAGES = {:ja => :en, :en => :ja}
-  LANGUAGE_NAMES = {:ja => "日本語", :en => "English"}
-  DOMAINS = {:ja => "http://ziphil.com/", :en => "http://en.ziphil.com/"}
-  TEMPLATE = File.read(BASE_PATH + "/template/template.html")
+  DOMAINS = {
+    :ja => "http://ziphil.com/",
+    :en => "http://en.ziphil.com/"
+  }
 
   def initialize(args)
     @args = args
@@ -200,6 +182,7 @@ class WholeZiphilConverter
   def save
     paths = self.paths
     ftp, user = create_ftp
+    converter = create_converter
     paths.each_with_index do |(path, language), index|
       document = nil
       parsing_duration = WholeZiphilConverter.measure do
@@ -207,7 +190,7 @@ class WholeZiphilConverter
         document = parser.parse
       end
       conversion_duration = WholeZiphilConverter.measure do
-        converter, output_path = create_converter(document, path, language)
+        output_path = update_converter(converter, document, path, language)
         result = converter.convert
         FileUtils.mkdir_p(File.dirname(output_path))
         File.write(output_path, result)
@@ -289,16 +272,23 @@ class WholeZiphilConverter
     return parser
   end
 
-  def create_converter(document, path, language)
-    converter = ZiphilConverter.new(document, path, language) 
+  def create_converter
+    converter = ZiphilConverter.new(nil, nil, nil)
     directory = BASE_PATH + "/template"
     Dir.each_child(directory) do |entry|
-      if entry =~ /\.rb/
-        converter.instance_eval(File.read(directory + "/" + entry), entry)
+      if entry.end_with?(".rb")
+        binding = TOPLEVEL_BINDING
+        binding.local_variable_set(:converter, converter)
+        Kernel.eval(File.read(directory + "/" + entry), binding, entry)
       end
     end
+    return converter
+  end
+
+  def update_converter(converter, document, path, language)
+    converter.update(document, path, language)
     output_path = path.gsub("_source", "").gsub(".zml", ".html")
-    return converter, output_path
+    return output_path
   end
 
   def create_upload_paths(user, path, language)
@@ -320,5 +310,5 @@ class WholeZiphilConverter
 end
 
 
-converter = WholeZiphilConverter.new(ARGV)
-converter.save
+whole_converter = WholeZiphilConverter.new(ARGV)
+whole_converter.save

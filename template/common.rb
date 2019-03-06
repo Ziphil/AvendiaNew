@@ -1,6 +1,38 @@
 ﻿# coding: utf-8
 
 
+TEMPLATE = File.read(BASE_PATH + "/template/template.html")
+
+NAMES = {
+  :title => {:ja => "人工言語シャレイア語", :en => "Sheleian Constructed Language"},
+  :top => {:ja => "トップ", :en => "Top"},
+  :conlang => {:ja => "シャレイア語", :en => "Shaleian"},
+  :conlang_grammer => {:ja => "文法書", :en => "Grammar"},
+  :conlang_course => {:ja => "入門書", :en => "Introduction"},
+  :conlang_database => {:ja => "データベース", :en => "Database"},
+  :conlang_culture => {:ja => "文化", :en => "Culture"},
+  :conlang_translation => {:ja => "翻訳", :en => "Translations"},
+  :conlang_theory => {:ja => "シャレイア語論", :en => "Studies"},
+  :conlang_document => {:ja => "資料", :en => "Data"},
+  :conlang_table => {:ja => "一覧表", :en => "Tables"},
+  :application => {:ja => "自作ソフト", :en => "Softwares"},
+  :application_download => {:ja => "ダウンロード", :en => "Download"},
+  :application_web => {:ja => "Web アプリ", :en => "Web Application"},
+  :diary => {:ja => "日記", :en => "Diary"},
+  :diary_conlang => {:ja => "シャレイア語", :en => "Shaleian"},
+  :diary_mathematics => {:ja => "数学", :en => "Mathematics"},
+  :diary_application => {:ja => "プログラミング", :en => "Programming"},
+  :diary_game => {:ja => "ゲーム制作", :en => "Game"},
+  :other => {:ja => "その他", :en => "Others"},
+  :other_mathematics => {:ja => "数学", :en => "Mathematics"},
+  :other_language => {:ja => "自然言語", :en => "Languages"},
+  :other_tsuro => {:ja => "Tsuro", :en => "Tsuro"},
+  :other_other => {:ja => "その他", :en => "Others"},
+  :error => {:ja => "エラー", :en => "Error"},
+  :error_error => {:ja => "エラー", :en => "Error"}
+}
+FOREIGN_LANGUAGES = {:ja => :en, :en => :ja}
+LANGUAGE_NAMES = {:ja => "日本語", :en => "English"}
 LATEST_VERSION_REGEX = /(5\s*代\s*5\s*期|Version\s*5\.5)/
 DICTIONARY_URL = "conlang/database/1.cgi"
 
@@ -14,14 +46,14 @@ converter.add(["page"], [""]) do |element|
     this["itemscope"] = "itemscope"
     this["itemtype"] = "https://schema.org/BreadcrumbList"
     if virtual_deepness >= -1
-      this << call(element, "breadcrumb-item", 1) do |item_tag, link_tag, name_tag|
+      this << Tag.build_breadcrumb_item(1) do |item_tag, link_tag, name_tag|
         link_tag["href"] = "../" * deepness
         name_tag << NAMES[:top][language]
       end
     end
     if virtual_deepness >= 0
       first_category = path.split("/")[-deepness - 1]
-      this << call(element, "breadcrumb-item", 2) do |item_tag, link_tag, name_tag|
+      this << Tag.build_breadcrumb_item(2) do |item_tag, link_tag, name_tag|
         link_tag["href"] = "../../" + first_category
         name_tag << NAMES[first_category.intern][language]
       end
@@ -29,7 +61,7 @@ converter.add(["page"], [""]) do |element|
     if virtual_deepness >= 1
       second_category = path.split("/")[-deepness]
       united_category = first_category + "_" + second_category
-      this << call(element, "breadcrumb-item", 3) do |item_tag, link_tag, name_tag|
+      this << Tag.build_breadcrumb_item(3) do |item_tag, link_tag, name_tag|
         link_tag["href"] = "../" + second_category
         name_tag << NAMES[united_category.intern][language]
       end
@@ -39,7 +71,7 @@ converter.add(["page"], [""]) do |element|
       converted_path += (element.attribute("link")&.value == "c") ? ".cgi" : ".html"
       name_element = element.elements.to_a("name").first
       title = name_element.inner_text(true).gsub("\"", "&quot;")
-      this << call(element, "breadcrumb-item", 4) do |item_tag, link_tag, name_tag|
+      this << Tag.build_breadcrumb_item(4) do |item_tag, link_tag, name_tag|
         link_tag["href"] = converted_path
         name_tag << apply(name_element, "page")
       end
@@ -48,30 +80,8 @@ converter.add(["page"], [""]) do |element|
   navigation_string << apply(element, "navigation")
   header_string << apply(element, "header")
   main_string << apply(element, "page")
-  result = TEMPLATE.gsub(/#\{(.*?)\}/){self.instance_eval($1)}.gsub(/\r/, "")
+  result = TEMPLATE.gsub(/#\{(.*?)\}/){instance_eval($1)}.gsub(/\r/, "")
   next result
-end
-
-converter.set("breadcrumb-item") do |element, level, &block|
-  this = ""
-  this << Tag.build("li") do |item_tag|
-    item_tag["itemscope"] = "itemscope"
-    item_tag["itemprop"] = "itemListElement"
-    item_tag["itemtype"] = "https://schema.org/ListItem"
-    item_tag << Tag.build("a") do |link_tag|
-      link_tag["itemprop"] = "item"
-      link_tag["itemtype"] = "https://schema.org/Thing"
-      link_tag << Tag.build("span") do |name_tag|
-        name_tag["itemprop"] = "name"
-        block.call(item_tag, link_tag, name_tag)
-      end
-    end
-    item_tag << Tag.build("meta", nil, false) do |meta_tag|
-      meta_tag["itemprop"] = "position"
-      meta_tag["content"] = level.to_s
-    end
-  end
-  next this
 end
 
 converter.add(["ver"], ["navigation"]) do |element|
