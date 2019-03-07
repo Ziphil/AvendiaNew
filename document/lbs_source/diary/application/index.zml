@@ -15,6 +15,7 @@
   >
   \hb<一般>
   \pb<
+    \ab|href="15.html",date="19/03/07"|<Haskell との出会いとか \m<guard> とか>
     \ab|href="14.html",date="19/02/05"|<Ruby での文字列のインデックスによる文字参照>
     \ab|href="11.html",date="18/05/15"|<院生室に置いてあったパズルを解いた話>
     \ab|href="5.html",date="17/03/31"|<ZpDIC の akrantiain 実装について>
