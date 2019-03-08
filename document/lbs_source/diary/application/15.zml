@@ -93,23 +93,23 @@
     分かりやすいように括弧を補ったり変数名を変えたりしてます。
   >
   \pre~<
-    (`>`>) :: Monad m =`> forall a b. m a -`> m b -`> m b
-    val `>`> const = val `>`>= (\_ -`> const)
+    (`>`>) :: Monad m =`> m a -`> m b -`> m b
+    left `>`> right = left `>`>= (\_ -`> right)
   >
   \p<
-    \c~<\_ -`> const> というのは定値のラムダ式なので、\m<Maybe> 上での \m<`>`>> は実質以下と同じです。
+    \c~<\_ -`> right> というのは定値のラムダ式なので、\m<Maybe> 上での \m<`>`>> は実質以下と同じです。
   >
   \pre~<
-    (`>`>) :: forall a b. Maybe a -`> Maybe b -`> Maybe b
-    Just val `>`> const = const
-    Nothing `>`> const = Nothing
+    (`>`>) :: Maybe a -`> Maybe b -`> Maybe b
+    Just left `>`> right = right
+    Nothing `>`> right = Nothing
   >
   \p<
     以上で \m<Maybe> 上での \m<guard> と \m<`>`>> の挙動が分かったので、これらを合わせれば以下のように評価されることが分かります。
   >
   \ul<
-    \li<\c<guard True `>`> const> → \c<Just () `>`> const> → \c<const>>
-    \li<\c<guard False `>`> const> → \c<Nothing `>`> const> → \c<Nothing>>
+    \li<\c<guard True `>`> right> → \c<Just () `>`> right> → \c<right>>
+    \li<\c<guard False `>`> right> → \c<Nothing `>`> right> → \c<Nothing>>
   >
   \p<
     これで晴れて、\m<guard> を用いた表現が一番最初の表現と同等であることが分かりました。
