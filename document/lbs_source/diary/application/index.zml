@@ -3,6 +3,11 @@
 
 \page<
 
+  \hb<Haskell>
+  \pb<
+    \ab|href="16.html",date="19/03/08"|<モナドについて>
+    \ab|href="15.html",date="19/03/07"|<Haskell との出会いとか \m<guard> とか>
+  >
   \hb<競技プログラミング>
   \pb<
     \ab|href="13.html",date="18/07/07"|<セグメント木>
