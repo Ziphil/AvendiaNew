@@ -50,8 +50,12 @@
     つまり、\m<h a b> が \m<a -`> m b> になるような型コンストラクタ \m<h> を作れば良いことになります。
     これには \m<Kleisli m> という名前が付いています。
   >
+  \p<
+    なお、実際にはデータ型として定義されていますが、ここでは見やすさを重視して型シノニムにしておきます。
+    型シノニムに対してインスタンス宣言をする場合は、GHC の TypeSynonymInstances 拡張を有効にしておく必要があるので、注意してください。
+  >
   \pre~<
-    newtype Kleisli m a b = Kleisli {runKleisli :: a -`> m b}
+    type Kleisli m a b = a -`> m b
   >
   \p<
     すると、以下のように \m<Kleisli m> を \m<Category> のインスタンスにできます。
@@ -59,13 +63,11 @@
   \pre~<
     instance Monad m =`> Category (Kleisli m) where
       -- 恒等計算
-      -- 実質的には a -`> m a
-      id :: Kleisli m a a
-      id = Kleisli return
+      id :: a -`> m a
+      id = return
       -- 計算の繋ぎ合わせ
-      -- 実質的には (b -`> m c) -`> (a -`> m b) -`> (a -`> m c)
-      (.) :: Kleisli m b c -`> Kleisli m a b -`> Kleisli m a c
-      (Kleisli g) . (Kleisli f) = g `<=`< f
+      (.) :: (b -`> m c) -`> (a -`> m b) -`> (a -`> m c)
+      g . f = g `<=`< f
   >
   \p<
     クライスリ圏は純粋な圏論でも重要な役割を果たしていて、有名なところでは、全てのモナドが関手の随伴対から得られることの証明に使いますね。
@@ -106,13 +108,11 @@
   \pre~<
     instance Monad m =`> Arrow (Kleisli m) where
       -- 関数を計算へ持ち上げ
-      -- 実質的には (a -`> b) -`> (a -`> m b)
-      arr :: (a -`> b) -`> Kleisli m a b
-      arr f = Kleisli $ return . f
+      arr :: (a -`> b) -`> (a -`> m b)
+      arr f = return . f
       -- 計算を並列実行する計算を作成
-      -- 実質的には (a -`> m b) -`> (c -`> m d) -`> ((a, c) -`> m (b, d))
-      (***) :: Kleisli m a b -`> Kleisli m c d -`> Kleisli m (a, c) (b, d)
-      (Kleisli f) *** (Kleisli g) = Kleisli $ \(x, y) -`> do {s <- f x; t <- g y; return (s, t)}
+      (***) :: (a -`> m b) -`> (c -`> m d) -`> ((a, c) -`> m (b, d))
+      f *** g = \(x, y) -`> do {s <- f x; t <- g y; return (s, t)}
   >
   \p<
     \m<Arrow> クラスは \m<Category> クラスを拡張しているので、恒等計算があります。
@@ -130,7 +130,7 @@
   >
   \p<
     モナドには do 記法という手続き型っぽくアクションの実行が書ける特殊な構文が用意されていました。
-    実は、\m<Arrow> に関しても似たような記法をできるようにする GHC 拡張が存在していて、「Arrows」という名前で提供されています。
+    実は、\m<Arrow> に関しても似たような記法をできるように、GHC では Arrows 拡張というものが提供されています。
     これを有効にすると、だいたい以下のような構文が許されるようになります。
   >
   \pre~<
