@@ -5,6 +5,7 @@
 
   \hb<Haskell>
   \pb<
+    \ab|href="18.html",date="19/03/11"|<\m<Monad> と \m<ArrowApply> の同値性>
     \ab|href="17.html",date="19/03/11"|<\m<Category> と \m<Arrow>>
     \ab|href="16.html",date="19/03/08"|<モナドについて>
     \ab|href="15.html",date="19/03/07"|<Haskell との出会いとか \m<guard> とか>
