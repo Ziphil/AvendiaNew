@@ -19,7 +19,7 @@
     概ね、以下のように関数名や変数名を使い分けています。
   >
   \ul<
-    \li<\m<hoge> ･･･ そこで定義する関数>
+    \li<\m<hoge>, \m<fuga> ･･･ そこで定義する関数>
     \li<\m<x>, \m<y>, \m<z> ･･･ 仮引数 (これを消したい)>
     \li<\m<f>, \m<g>, \m<h> ･･･ すでに別の場所で定義されている関数>
     \li<\m<s>, \m<t>, \m<u> ･･･ すでに別の場所で定義されている定数>
@@ -58,6 +58,17 @@
     最初の関数が 3 引数の場合はこうなる。
     4 引数以上の場合がどうなるかは省略するが、括弧と \m<.> が増えるだけである。
   >
+  \pre~<
+    infixr 9 .^
+    (.^) :: (c -`> d) -`> (a -`> b -`> c) -`> (a -`> b -`> d)
+    (.^) = (.) . (.)
+    infixr 9 .^^
+    (.^^) :: (d -`> e) -`> (a -`> b -`> c -`> d) -`> (a -`> b -`> e)
+    (.^^) = (.) . (.) . (.)
+  >
+  \p<
+    多変数関数と 1 変数関数の合成のために、専用の演算子を用意しておくのもアリかもしれない。
+  >
   \h1<引数を複数回使うもの>
   \h2<2 つの関数をそれぞれ適用したものをさらに関数に適用する>
   \pre~<
@@ -76,6 +87,14 @@
   \p<
     特に \m<f> がタプルを構成する \m<(,)> の場合は、\c<liftA2 (,)> と書いても良いが、\a|href="http://hackage.haskell.org/package/base-4.12.0.0/docs/Control-Arrow.html#v:-38--38--38-",target="_blank"|<\m~<&&&>> を使うとさらに簡潔になる。 
   >
+  \pre~<
+    hoge x = (g x) (h x)
+    hoge = liftA2 ($) g h 
+    hoge = ap g h
+  >
+  \p<
+    さらに \m<f> が関数適用の場合は、\c<liftA2 ($)> の代わりに、\a|href="http://hackage.haskell.org/package/base-4.12.0.0/docs/Control-Monad.html#v:ap",target="_blank"|<\m<ap>> が使える。
+  >
   \h2<タプルの要素それぞれに関数を適用する>
   \pre~<
     hoge (x, y) = (f x, g y)
@@ -83,6 +102,27 @@
   >
   \p<
     タプルの左右それぞれの要素に別々の関数を適用して、その結果から成る新たなタプルを得ることについては、まさにその用途のための \a|href="http://hackage.haskell.org/package/base-4.12.0.0/docs/Control-Arrow.html#v:-42--42--42-",target="_blank"|<\m<***>> がある。
+  >
+  \pre~<
+    hoge (x, y) = (f x, y)
+    hoge = f *** id
+    hoge = first f
+    fuga (x, y) = (x, g y)
+    fuga = id *** g
+    fuga = second g
+  >
+  \p<
+    タプルの要素の一方にのみ関数を適用する場合は、\c<f *** id> や \c<id *** g> などとしても良いが、\a|href="http://hackage.haskell.org/package/base-4.12.0.0/docs/Control-Arrow.html#v:first",target="_blank"|<\m<first>> と \a|href="http://hackage.haskell.org/package/base-4.12.0.0/docs/Control-Arrow.html#v:second",target="_blank"|<\m<second>> も使える。
+  >
+  \pre~<
+    hoge (x, y) = h (f x) (g y)
+    hoge = uncurry h . f *** g
+    hoge = uncurry ((. g) . h . f)
+  >
+  \p<
+    応用例として、タプルのそれぞれの要素に関数を適用して、その結果を 2 変数関数に渡す例を挙げた。
+    \m<uncurry> で 2 変数関数からタプルを取る関数に変換して、\m<***> を用いて作ったタプルからタプルへの関数と合成している。
+    \m<***> を用いなくても 3 行目のように書けるが、こちらは何をしているのかパッと見で分かりづらい。
   >
   \h2<1 つの引数を複製して渡す>
   \pre~<
