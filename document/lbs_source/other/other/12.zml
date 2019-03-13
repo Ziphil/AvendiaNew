@@ -136,7 +136,7 @@
   \pre~<
     hoge (x, y) = h (f x) (g y)
     hoge = uncurry h . f *** g
-    hoge = uncurry ((. g) . h . f)
+    hoge = uncurry $ (. g) . h . f
   >
   \p<
     応用例として、タプルのそれぞれの要素に関数を適用して、その結果を 2 変数関数に渡す例を挙げた。
@@ -154,7 +154,7 @@
   >
   \pre~<
     hoge x = f x x x
-    hoge = join (join f)
+    hoge = join $ join f
   >
   \p<
     3 つにコピーしたいなら \m<join> を繋げれば良い。
