@@ -6,9 +6,13 @@
 
   \h1<人工言語, 人工世界>
   \p<
-    2019 年 2 月時点での人工言語作者のリストです。
+    2019 年 3 月時点での人工言語作者のリストです。
     専用のホームページがあるなど、ネット上でまとまった情報が得られるもののみを記載してあります。
+    すでに活動を休止している人も含めています。
     敬称略。
+  >
+  \p<
+    より包括的な人工言語関係者のリストとして\a|href="https://docs.google.com/spreadsheets/d/1t_WxHJ_b39PWXIMauHwnSww_Ac2m_Mw7zC-vQkp59PQ/",target="_blank"|<こちら>もあります。
   >
   \table<
     \tr<\th<言語名>\th<製作者名>\th<Twitter>\th<ホームページ>>
@@ -101,6 +105,18 @@
       \td<高木柳沙>
       \td<>
       \td<\a|href="https://sites.google.com/site/rengongyanyuliuxia/",target="_blank"|<人工言語 柳霞>>
+    >
+    \tr<
+      \td<セルナーダ語>
+      \td<梅津裕一>
+      \td<\a|href="https://twitter.com/u1_umetsu",target="_blank"|<@u1_umetsu>>
+      \td<\a|href="https://sites.google.com/view/yurfa/",target="_blank"|<セルナーダ語文法>>
+    >
+    \tr<
+      \td<レイア語>
+      \td<Calnos Aqua>
+      \td<\a|href="https://twitter.com/Qunoxts",target="_blank"|<@Qunoxts>>
+      \td<\a|href="https://sites.google.com/view/leiane/",target="_blank"|<レイア (Leiane) 語>>
     >
     \tr<
       \td<メイユラング>
