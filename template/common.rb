@@ -26,7 +26,7 @@ NAMES = {
   :other => {:ja => "その他", :en => "Others"},
   :other_mathematics => {:ja => "数学", :en => "Mathematics"},
   :other_language => {:ja => "自然言語", :en => "Languages"},
-  :other_tsuro => {:ja => "Tsolitaire", :en => "Tsolitaire"},
+  :other_tsolitaire => {:ja => "Tsolitaire", :en => "Tsolitaire"},
   :other_other => {:ja => "その他", :en => "Others"},
   :error => {:ja => "エラー", :en => "Error"},
   :error_error => {:ja => "エラー", :en => "Error"}
