@@ -34,9 +34,9 @@ class PageConverter
     @document = document
   end
 
-  def convert
+  def convert(initial_scope = "")
     result = ""
-    result << convert_element(@document.root, "")
+    result << convert_element(@document.root, initial_scope)
     return result
   end
 
@@ -166,20 +166,55 @@ end
 
 class WholeZiphilConverter
 
-  ROOT_PATHS = {
-    :ja => BASE_PATH + "/document/lbs_source",
-    :en => BASE_PATH + "/document/lbs-en_source"
-  }
   DOMAINS = {
     :ja => "http://ziphil.com/",
     :en => "http://en.ziphil.com/"
   }
+  ROOT_PATHS = {
+    :ja => BASE_PATH + "/document/lbs_source",
+    :en => BASE_PATH + "/document/lbs-en_source"
+  }
+  LOG_PATHS = {
+    :ja => BASE_PATH + "/log/ja.txt",
+    :en => BASE_PATH + "/log/en.txt"
+  }
+  LOG_SIZE = 10
 
   def initialize(args)
     @args = args
   end
 
   def save
+    if @args[0] == "-l"
+      @args.shift
+      save_log
+    else
+      save_html
+    end
+  end
+
+  def save_log
+    paths = self.paths
+    converter = create_converter
+    paths.each_with_index do |(path, language), index|
+      log_path = LOG_PATHS[language]
+      log_entries = File.read(log_path).lines.map(&:chomp)
+      document, result = nil
+      parsing_duration = WholeZiphilConverter.measure do
+        parser = create_parser(path)
+        document = parser.parse
+      end
+      conversion_duration = WholeZiphilConverter.measure do
+        output_path = update_converter(converter, document, path, language)
+        result = converter.convert("change-log")
+        log_entries.unshift(Time.now.strftime("%Y/%m/%d") + "; " + result)
+        log_entries = log_entries.take(LOG_SIZE)
+        File.write(log_path, log_entries.join("\n"))
+      end
+    end
+  end
+
+  def save_html
     paths = self.paths
     ftp, user = create_ftp
     converter = create_converter

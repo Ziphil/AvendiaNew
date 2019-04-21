@@ -1,5 +1,6 @@
 document/lbs
 document/lbs-en
+log
 *.code-workspace
 .vscode
 converter/config.txt

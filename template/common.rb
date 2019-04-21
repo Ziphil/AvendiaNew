@@ -84,6 +84,59 @@ converter.add(["page"], [""]) do |element|
   next result
 end
 
+converter.add(["page"], ["change-log"]) do |element|
+  this = ""
+  path, language = converter.path, converter.language
+  deepness = converter.deepness
+  virtual_deepness = (path =~ /index\.zml$/) ? deepness - 1 : deepness
+  this << Tag.build("ul", "breadcrumb") do |this|
+    if virtual_deepness >= -1
+      this << Tag.build("li") do |this|
+        this << ""
+      end
+    end
+    if virtual_deepness >= 0
+      first_category = path.split("/")[-deepness - 1]
+      this << Tag.build("li") do |this|
+        this << Tag.build("span") do |this|
+          if virtual_deepness == 0
+            this.name = "a"
+            this["href"] = first_category
+          end
+          this << NAMES[first_category.intern][language]
+        end
+      end
+    end
+    if virtual_deepness >= 1
+      second_category = path.split("/")[-deepness]
+      united_category = first_category + "_" + second_category
+      this << Tag.build("li") do |this|
+        this << Tag.build("span") do |this|
+          if virtual_deepness == 1
+            this.name = "a"
+            this["href"] = first_category + "/" + second_category
+          end
+          this << NAMES[united_category.intern][language]
+        end
+      end
+    end
+    if virtual_deepness >= 2
+      converted_path = path.match(/([0-9a-z\-]+)\.zml/).to_a[1].to_s + ".html"
+      name_element = element.elements.to_a("name").first
+      this << Tag.build("li") do |this|
+        this << Tag.build("span") do |this|
+          if virtual_deepness == 2
+            this.name = "a"
+            this["href"] = first_category + "/" + second_category + "/" + converted_path
+          end
+          this << apply(name_element, "page")
+        end
+      end
+    end
+  end
+  next this
+end
+
 converter.add(["ver"], ["navigation"]) do |element|
   this = ""
   this << Tag.build("div") do |this|
@@ -360,6 +413,25 @@ converter.add(["section-table"], ["page"]) do |element|
     end
     section_tag << subsection_tag unless subsection_tag.content.empty?
     this << section_tag
+  end
+  next this
+end
+
+converter.add(["change-log"], ["page"]) do |element|
+  this = ""
+  language = converter.language
+  log_path = WholeZiphilConverter::LOG_PATHS[language]
+  log_entries = File.read(log_path).lines
+  this << Tag.build("ul", "change-log") do |this|
+    log_entries.each do |log_entry|
+      date_string, content = log_entry.split(/\s*;\s*/)
+      this << Tag.build("li") do |this|
+        this << Tag.build("span", "date") do |this|
+          this << date_string
+        end
+        this << content
+      end
+    end
   end
   next this
 end
