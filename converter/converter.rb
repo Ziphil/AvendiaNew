@@ -9,10 +9,11 @@ require 'rexml/document'
 include REXML
 
 BASE_PATH = File.expand_path("..", File.dirname($0)).encode("utf-8")
+SERVER_PATH = "C:/Apache24/htdocs"
 
 Kernel.load(BASE_PATH + "/converter/parser.rb")
 Kernel.load(BASE_PATH + "/converter/utility.rb")
-Kernel.load(BASE_PATH + "/document/lbs/file/module/2.rb")
+Kernel.load(SERVER_PATH + "/lbs/file/module/2.rb")
 Encoding.default_external = "UTF-8"
 $stdout.sync = true
 
@@ -171,8 +172,12 @@ class WholeZiphilConverter
     :en => "http://en.ziphil.com/"
   }
   ROOT_PATHS = {
-    :ja => BASE_PATH + "/document/lbs_source",
-    :en => BASE_PATH + "/document/lbs-en_source"
+    :ja => BASE_PATH + "/document/ja",
+    :en => BASE_PATH + "/document/en"
+  }
+  OUTPUT_PATHS = {
+    :ja => SERVER_PATH + "/lbs",
+    :en => SERVER_PATH + "/lbs-en"
   }
   LOG_PATHS = {
     :ja => BASE_PATH + "/log/ja.txt",
@@ -322,12 +327,12 @@ class WholeZiphilConverter
 
   def update_converter(converter, document, path, language)
     converter.update(document, path, language)
-    output_path = path.gsub("_source", "").gsub(".zml", ".html")
+    output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language]).gsub(".zml", ".html")
     return output_path
   end
 
   def create_upload_paths(user, path, language)
-    local_path = path.gsub("_source", "").gsub(".zml", ".html")
+    local_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language]).gsub(".zml", ".html")
     remote_path = path.gsub(ROOT_PATHS[language], "").gsub(".zml", ".html")
     unless language == :ja
       remote_path = "/#{language}.#{user}" + remote_path
