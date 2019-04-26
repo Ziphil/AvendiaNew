@@ -20,7 +20,7 @@
   >
   \p<
     \m<Person> 型の値が渡されたとき、その各フィールドの値を取り出したり変更したりする関数が欲しいとします。
-    これくらいであれば lens がなくても簡単に定義できます。
+    これは以下のように実装できます。
   >
   \pre~<
     -- _name フィールドの取り出しと変更
@@ -48,10 +48,14 @@
     実際、これは以下のようにすれば可能です。
   >
   \pre~<
+    -- 順にゲッターを呼び出す
     getNameFirst :: Person -`> String
     getNameFirst = getFirst . getName
+    -- 一度 _name フィールドの値を getName で取得して _first フィールドを setFirst で変更する
+    -- これで得られた変更後の値を setName で置き換える
+    -- ちょっと長い･･･
     setNameFirst :: Person -`> String -`> Person
-    setNameFirst person = setName person . setFirst (getName person)  -- ちょっと長い･･･
+    setNameFirst person = setName person . setFirst (getName person)
   >
   \p<
     ゲッターの方は良いですが、セッターの方はちょっと長いですね。
@@ -71,7 +75,7 @@
   >
   \p<
     こうすれば、上の \m<getNameFirst> と \m<setNameFirst> は \c<(getName, setName) @. (getFirst, setFirst)> で得られます。
-    これによって、ゲッターとセッターを最初からまとめてタプルとして定義しておけば、あとは \c<@.> で組み合わせることで、いくらでも深い位置にあるフィールドを操作できるようになります。
+    これによって、ゲッターとセッターを最初からまとめてタプルとして定義しておけば、あとは \m<@.> で組み合わせることで、いくらでも深い位置にあるフィールドを操作できるようになります。
   >
   \p<
     ついでに、ゲッターとセッターを実際に適用するヘルパー関数も作ってみましょう。
@@ -79,12 +83,12 @@
   \pre~<
     -- ゲッターを利用する
     (^.) :: s -`> Getset s a -`> a
-    obj ^. getset = (fst getset) obj
+    obj ^. (get, set) = get obj
     -- セッターを利用する
-    -- ゲッターセッターのタプル getset と新しい値 newVal を受け取る
-    -- 更新前のオブジェクトから更新後のオブジェクトを返す関数を返す
+    -- ゲッターセッターのタプルと新しい値を受け取る
+    -- 更新前のオブジェクトから更新後のオブジェクトを作る関数を返す
     (.~) :: Getset s a -`> a -`> (s -`> s)
-    getset .~ newVal = \obj -`> (snd getset) obj newVal
+    (get, set) .~ newVal = \obj -`> set obj newVal
   >
   \p<
     こうすると、以下のように非常に簡潔にネストされたフィールドの値を取得したり変更したりできます。
@@ -98,10 +102,10 @@
     -- もととなるオブジェクトの定義
     person = Person {_name = Name {_first = "Taro", _family = "Sato"}, _age = 14}
     -- 値の取得
-    first = person ^. (getsetName .@ getsetFirst)
+    first = person ^. (getsetName @. getsetFirst)
     -- 値の変更
     -- & は $ を左右反転したもの
-    newPerson = person & (getsetName .@ getsetFirst) .~ "Jiro"
+    newPerson = person & (getsetName @. getsetFirst) .~ "Jiro"
   >
   \p<
     画期的!
