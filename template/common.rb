@@ -519,9 +519,14 @@ converter.add(["pre", "samp"], ["page"]) do |element|
       this.class = "sample"
     end
     this << "\n"
-    string.each_line do |line|
+    string.each_line.with_index do |line, number|
       this << " " * indent_size
       this << Tag.build("tr") do |this|
+        if element.name == "pre" && !element.attribute("simple")
+          this << Tag.build("td", "number") do |this|
+            this["data-number"] = (number + 1).to_s
+          end
+        end
         this << Tag.build("td") do |this|
           if line =~ /^\s*$/
             this << " "
