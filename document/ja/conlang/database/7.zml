@@ -10,10 +10,11 @@
   \p<
     標準的なサンセリフ体です。
     3 種類のウェイトと 3 種類の字幅があり、合計で 9 つのフォントファイルから成ります。
-    アルファベットと一部の記号が含まれます。
+    アルファベットと数字および一部の記号が含まれます。
+    シャレイア文字には大文字と小文字の区別がありませんが、便宜上大文字にも小文字と同じグリフが割り当てられています。
   >
   \form<
-    \a|class="form",href="https://www.dropbox.com/sh/j8foichvfvs455j/AACjhbc-EZEPWDYxLTfkoU3ia?dl=0",target="_blank"|<ダウンロード>
+    \a|class="form",href="https://www.dropbox.com/sh/j8foichvfvs455j/AACjhbc-EZEPWDYxLTfkoU3ia?dl=0",target="_blank"|<ダウンロード>　(ver 1.1.0)
   >
   \h1<Shaleian ファミリー>
   \img|src="../../file/other/50.png"|>
