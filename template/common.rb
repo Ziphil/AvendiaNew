@@ -420,8 +420,9 @@ end
 converter.add(["change-log"], ["page"]) do |element|
   this = ""
   language = converter.language
+  size = element.attribute("size")&.to_s&.to_i
   log_path = WholeZiphilConverter::LOG_PATHS[language]
-  log_entries = File.read(log_path).lines
+  log_entries = File.read(log_path).lines[0...size]
   this << Tag.build("ul", "change-log") do |this|
     log_entries.each do |log_entry|
       date_string, content = log_entry.split(/\s*;\s*/)

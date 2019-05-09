@@ -183,7 +183,7 @@ class WholeZiphilConverter
     :ja => BASE_PATH + "/log/ja.txt",
     :en => BASE_PATH + "/log/en.txt"
   }
-  LOG_SIZE = 10
+  LOG_SIZE = 1000
 
   def initialize(args)
     @args = args
