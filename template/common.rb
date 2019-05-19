@@ -11,6 +11,7 @@ NAMES = {
   :conlang_course => {:ja => "入門書", :en => "Introduction"},
   :conlang_database => {:ja => "データベース", :en => "Database"},
   :conlang_culture => {:ja => "文化", :en => "Culture"},
+  :conlang_work => {:ja => "創作", :en => "Works"},
   :conlang_translation => {:ja => "翻訳", :en => "Translations"},
   :conlang_theory => {:ja => "シャレイア語論", :en => "Studies"},
   :conlang_document => {:ja => "資料", :en => "Data"},
