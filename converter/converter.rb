@@ -187,12 +187,17 @@ class WholeZiphilConverter
 
   def initialize(args)
     @args = args
+    @force_upload = false
   end
 
   def save
     if @args[0] == "-l"
       @args.shift
       save_log
+    elsif @args[0] == "-f"
+      @force_upload = true
+      @args.shift
+      save_html
     else
       save_html
     end
@@ -295,7 +300,7 @@ class WholeZiphilConverter
 
   def create_ftp
     ftp, user = nil, nil
-    unless @args.empty?
+    if @force_upload || !@args.empty?
       config_data = File.read(BASE_PATH + "/converter/config.txt")
       host, user, password = config_data.split("\n")
       ftp = Net::FTP.new(host, user, password)
