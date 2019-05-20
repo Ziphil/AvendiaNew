@@ -215,9 +215,10 @@ class WholeZiphilConverter
         document = parser.parse
       end
       conversion_duration = WholeZiphilConverter.measure do
+        time = Time.now - 21600
         output_path = update_converter(converter, document, path, language)
         result = converter.convert("change-log")
-        log_entries.unshift(Time.now.strftime("%Y/%m/%d") + "; " + result)
+        log_entries.unshift(time.strftime("%Y/%m/%d") + "; " + result)
         log_entries = log_entries.take(LOG_SIZE)
         File.write(log_path, log_entries.join("\n"))
       end
