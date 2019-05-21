@@ -565,6 +565,30 @@ converter.add(["c", "m"], ["page", "page.section-table"]) do |element|
   next this
 end
 
+converter.add(["birthday"], ["page"]) do |element|
+  this = ""
+  this << Tag.build("div", "birthday") do |this|
+    this << apply(element, "page.birthday")
+  end
+  next this
+end
+
+converter.add(["date"], ["page.birthday"]) do |element|
+  this = ""
+  this << Tag.build("div", "date") do |this|
+    this << element.to_s
+  end
+  next this
+end
+
+converter.add(["message"], ["page.birthday"]) do |element|
+  this = ""
+  this << Tag.build("div", "message") do |this|
+    this << element.to_s
+  end
+  next this
+end
+
 converter.add(["special"], ["page"]) do |element|
   this = pass_element(element, "page")
   next this
