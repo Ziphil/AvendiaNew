@@ -1,0 +1,373 @@
+@charset "utf-8";
+
+
+@function custom-gradient($color, $hue-offset) {
+  $begin-color: adjust-hue($color, - $hue-offset / 2);
+  $end-color: adjust-hue($color, $hue-offset / 2);
+  @return linear-gradient(to right bottom, $begin-color, $end-color);
+}
+
+
+// 基本色相
+$primary-hue: 230;
+$secondary-hue: 200;
+$hovered-hue: 110;
+$caution-hue: 330;
+
+// 基本色
+$highlight-background-color: hsl($primary-hue, 40%, 50%);
+$hovered-highlight-background-color: hsl($hovered-hue, 35%, 45%);
+$light-background-color: hsl($secondary-hue, 90%, 95%);
+$hovered-light-background-color: hsl($hovered-hue, 90%, 95%);
+$dark-color: hsl($primary-hue, 80%, 30%);
+$white-color: hsl($primary-hue, 30%, 98%);
+$black-color: hsl($primary-hue, 30%, 20%);
+
+// 基本背景
+$highlight-background: custom-gradient($highlight-background-color, -20);
+$hovered-highlight-background: custom-gradient($hovered-highlight-background-color, -30);
+$light-background: $light-background-color;
+$hovered-light-background: $hovered-light-background-color;
+
+// 背景 > メインエリア
+$main-background: white;
+// 背景 > ページ全体
+$page-background: $light-background;
+// 背景 > スクロールバーのツマミ
+$scrollbar-thumb-background: $highlight-background;
+$hovered-scrollbar-thumb-background: $hovered-highlight-background;
+// 背景 > メニューバー
+$first-menu-background: $highlight-background;
+$hovered-first-menu-background: $hovered-highlight-background;
+// 背景 > メニューバー下のドロップダウンメニュー
+$hovered-second-menu-background: $hovered-light-background;
+// 背景 > ページ一覧
+$index-background: $highlight-background;
+$hovered-index-background: $hovered-highlight-background;
+// 背景 > 無効ページ一覧
+$disabled-index-background: hsl($primary-hue, 0%, 45%);
+// 背景 > 第 1 見出し
+$section-background: $highlight-background;
+// 背景 > リンク
+$link-background-color: $light-background-color;
+$hovered-link-background-color: $hovered-light-background-color;
+// 背景 > 例文などのボックス
+$box-background: $light-background;
+// 背景 > テキスト入力欄
+$input-background: $light-background;
+$hovered-input-background: $hovered-light-background;
+// 背景 > ボタン
+$button-background: $highlight-background;
+$hovered-button-background: $hovered-highlight-background;
+// 背景 > ラジオボタン
+$radio-mark-background: $highlight-background-color;
+$hovered-radio-mark-background: $hovered-highlight-background-color;
+// 背景 > 表のヘッダー
+$table-header-background: $light-background;
+
+// 影色 > メインエリア
+$main-shadow-color: hsla($secondary-hue, 20%, 20%, 0.2);
+// 影色 > スクロールバーのツマミ
+$scrollbar-thumb-shadow-color: rgba($highlight-background-color, 0.3);
+$hovered-scrollbar-thumb-shadow-color: rgba($hovered-highlight-background-color, 0.3);
+// 影色 > メニューバー
+$first-menu-shadow-color: rgba($highlight-background-color, 0.3);
+$hovered-first-menu-shadow-color: rgba($hovered-highlight-background-color, 0.3);
+// 影色 > ページ一覧
+$index-shadow-color: rgba($highlight-background-color, 0.3);
+$hovered-index-shadow-color: rgba($hovered-highlight-background-color, 0.3);
+// 影色 > 無効ページ一覧
+$disabled-index-shadow-color: rgba(hsl($primary-hue, 0%, 45%), 0.3);
+// 影色 > 第 1 見出し
+$section-shadow-color: rgba($highlight-background-color, 0.3);
+// 影色 > テキスト入力欄
+$input-shadow-color: rgba(hsl($secondary-hue, 20%, 20%), 0.2);
+$hovered-input-shadow-color: rgba(hsl($secondary-hue, 20%, 20%), 0.2);
+// 影色 > ボタン
+$button-shadow-color: rgba($highlight-background-color, 0.3);
+$hovered-button-shadow-color: rgba($hovered-highlight-background-color, 0.3);
+
+// テキスト色 > 全体
+$color: $black-color;
+// テキスト色 > ページタイトル
+$title-color: $highlight-background-color;
+// テキスト色 > 言語選択
+$language-color: $dark-color;
+// テキスト色 > メニューバー
+$first-menu-color: $white-color;
+// テキスト色 > メニューバー下のドロップダウンメニュー
+$second-menu-color: $black-color;
+// テキスト色 > パンくずリスト
+$breadcrumb-color: $black-color;
+// テキスト色 > 古いバージョンの警告用のパンくずリスト
+$caution-breadcrumb-color: hsl($caution-hue, 100%, 50%);
+// テキスト色 > ページ一覧
+$index-color: $white-color;
+// テキスト色 > ページ一覧の右側の古代表記
+$index-note-color: rgba($index-color, 0.3);
+// テキスト色 > ページ一覧のグループ名
+$index-header-color: $dark-color;
+// テキスト色 > 第 1 見出し
+$section-color: $white-color;
+// テキスト色 > 第 2 見出し
+$subsection-color: $dark-color;
+// テキスト色 > セクション番号などの薄い文字
+$gray-color: hsl($secondary-hue, 0%, 70%);
+// テキスト色 > リンク
+$link-color: hsl($secondary-hue, 50%, 40%);
+$hovered-link-color: hsl($hovered-hue, 50%, 40%);
+// テキスト色 > 無効リンク
+$invalid-color: hsl($secondary-hue, 0%, 70%);
+// テキスト色 > 箇条書きのマーカー
+$list-marker-color: hsl($secondary-hue, 50%, 50%);
+// テキスト色 > エラーコード
+$error-code-color: $highlight-background-color;
+// テキスト色 > エラーメッセージ
+$error-message-color: $dark-color;
+// テキスト色 > 単語検索の見出し語
+$head-word-color: $dark-color;
+// テキスト色 > ボタン
+$button-color: $white-color;
+// テキスト色 > フッターの連絡用アイコン
+$footer-icon-color: $highlight-background-color;
+$hovered-footer-icon-color: $hovered-highlight-background-color;
+
+// 罫線色 > 全体
+$border-color: hsl($secondary-hue, 50%, 50%);
+
+// フォントサイズ > 全体
+$font-size: 16px;
+$sans-font-size: 96%;
+// フォントサイズ > ページタイトル
+$title-font-size: 60px;
+// フォントサイズ > 言語選択
+$language-font-size: 16px;
+// フォントサイズ > メニューバー
+$first-menu-font-size: 18px;
+// フォントサイズ > メニューバー化のドロップダウンメニュー
+$second-menu-font-size: 16px;
+// フォントサイズ > ページ一覧
+$index-font-size: 22px;
+// フォントサイズ > ページ一覧のグループ名
+$index-header-font-size: 18px;
+// フォントサイズ > パンくずリスト
+$breadcrumb-font-size: 14px;
+// フォントサイズ > 第 1 見出し
+$section-font-size: 22px;
+// フォントサイズ > 第 2 見出し
+$subsection-font-size: 18px;
+// フォントサイズ > コード
+$code-font-size: 95%;
+// フォントサイズ > エラーコード
+$error-code-font-size: 96px;
+// フォントサイズ > エラーメッセージ
+$error-message-font-size: 20px;
+// フォントサイズ > 単語検索の見出し語
+$head-word-font-size: 18px;
+// フォントサイズ > フッター
+$footer-font-size: 12px;
+// フォントサイズ > フッターの連絡用アイコン
+$footer-icon-font-size: 20px;
+// フォントサイズ > トップリンク
+$top-link-font-size: 12px;
+// フォントサイズ > トップリンクのアイコン
+$top-link-icon-font-size: 18px;
+
+// 行の高さ > 全体
+$line-height: 1.6;
+// 行の高さ > パンくずリスト
+$breadcrumb-line-height: 1.4;
+// 行の高さ > コード
+$code-line-height: 1.4;
+
+// 余白 > メインエリア
+$main-vertical-padding: 35px;
+$main-horizontal-padding: 40px;
+// 余白 > パンくずリスト
+$breadcrumb-vertical-padding: 10px;
+$breadcrumb-horizontal-padding: 20px;
+// 余白 > ページ一覧
+$index-vertical-margin: 15px;
+$index-vertical-padding: 5px;
+$index-horizontal-padding: 20px;
+// 余白 > 第 1 見出し
+$section-vertical-margin: 15px;
+$section-vertical-padding: 3px;
+$section-horizontal-padding: 30px;
+// 余白 > 第 2 見出し
+$subsection-vertical-margin: 12px;
+$subsection-vertical-padding: 0px;
+$subsection-horizontal-padding: 30px;
+// 余白 > 例文などのボックス
+$box-vertical-padding: 7px;
+// 余白 > 表のセル
+$table-cell-horizontal-padding: 12px;
+// 余白 > テキスト入力欄
+$input-vertical-padding: 3px;
+$input-horizontal-padding: 10px;
+// 余白 > ボタン
+$button-vertical-padding: 3px;
+$button-horizontal-padding: 15px;
+// 余白 > 検索結果
+$result-horizontal-padding: 15px;
+// 余白 > トップリンク (下と右の余白)
+$top-link-margin: 20px;
+// 余白 > 全体
+$vertical-margin: 5px;
+// 余白 > ボーダー付き全体
+$wide-vertical-margin: 9px;
+// 余白 > 項目とテキストの間
+$blank-padding: 7px;
+
+// 罫線半径 > メインエリア
+$main-border-radius: 8px;
+// 罫線半径 > スクロールバーのツマミ
+$scrollbar-thumb-border-radius: 8px;
+// 罫線半径 > メニューバー
+$first-menu-border-radius: 5px;
+// 罫線半径 > メニューバー化のドロップダウンメニュー
+$second-menu-border-radius: 5px;
+// 罫線半径 > ページ一覧
+$index-border-radius: 5px;
+// 罫線半径 > 番号付き箇条書きのマーカー
+$list-marker-border-radius: 4px;
+// 罫線半径 > インライン中のコード
+$inline-code-border-radius: 3px;
+// 罫線半径 > テキスト入力欄
+$input-border-radius: 3px;
+// 罫線半径 > ボタン
+$button-border-radius: 3px;
+// 罫線半径 > 単語検索の品詞
+$word-box-border-radius: 3px;
+
+// 大きさ > 全体
+$main-width: 90vw;
+$main-max-width: 950px;
+// 大きさ > スクロールバー
+$scrollbar-size: 10px;
+// 大きさ > メニューバー
+$first-menu-height: 50px;
+// 大きさ > メニューバー下のドロップダウンメニュー
+$second-menu-height: 30px;
+// 大きさ > 段落番号
+$paragraph-marker-width: 20px;
+// 大きさ > 番号なし箇条書き
+$unordered-list-marker-width: 5px;
+// 大きさ > 番号付き箇条書き
+$ordered-list-marker-width: 20px;
+// 大きさ > 例文の箇条書き
+$equivalent-list-marker-width: 10px;
+$equivalent-list-marker-indent: 10px;
+// 大きさ > コードと出力の間
+$code-sample-vertical-gap: 3px;
+// 大きさ > 節目次
+$section-table-marker-width: 25px;
+// 大きさ > ラジオボタン
+$radio-mark-size: 15px;
+// 大きさ > トップリンク
+$top-link-size: 50px;
+
+// その他
+$second-menu-animation-duration: 0.2s;
+$shadow-setting: 0px 3px 6px 0px;
+$large-shadow-setting: 0px 4px 8px 0px;
+
+// フォントファミリー
+$european-serif-font-family: "Times New Roman", "Times";
+$japanese-propotional-serif-font-family: "IPA P明朝", "IPAex明朝", "ＭＳ Ｐ明朝", "ＭＳ 明朝";
+$japanese-serif-font-family: "IPA明朝", "ＭＳ 明朝";
+$european-sans-font-family: "Arial Nova", "Arial";
+$japanese-propotional-sans-font-family: "IPA Pゴシック", "IPAexゴシック", "ＭＳ Ｐゴシック", "ＭＳ ゴシック";
+$japanese-sans-font-family: "IPAゴシック", "ＭＳ ゴシック";
+$european-monospace-font-family: "Consolas";
+$japanese-monospace-font-family: "IPAゴシック", "ＭＳ ゴシック";
+$special-font-family: "Abril Fatface";
+$footer-icon-font-family: "Footer Icon";
+$list-icon-font-family: "List Icon";
+$serif-font-family: $european-serif-font-family, $japanese-propotional-serif-font-family, serif;
+$sans-font-family: $european-sans-font-family, $japanese-propotional-sans-font-family, sans-serif;
+$monospace-font-family: $european-monospace-font-family, $japanese-monospace-font-family, monospace;
+
+// フォントウェイト
+$serif-font-weight: 400;
+$sans-font-weight: 400;
+$monospace-font-weight: 400;
+
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  } 
+}
+
+@mixin scrollbar($background, $thumb-background) {
+  &::-webkit-scrollbar {
+    width: $scrollbar-size;
+    height: $scrollbar-size;
+    background: $background;
+  }
+  &::-webkit-scrollbar-thumb {
+    border: 1px $page-background solid;
+    border-radius: $scrollbar-thumb-border-radius;
+    background: $thumb-background;
+  }
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+  &::-webkit-scrollbar-corner {
+    background: $background;
+  }
+}
+
+@mixin before-after($before-content, $after-content) {
+  &::before {
+    content: $before-content;
+  }
+  &::after {
+    content: $after-content;
+  }
+}
+
+@mixin text-size-adjust {
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+@mixin small-screen {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin insufficient-screen {
+  @media screen and (max-width: $main-max-width + $top-link-size * 2 + $top-link-margin * 4 + $scrollbar-size * 4) {
+    @content;
+  }
+}
+
+
+@font-face {
+  font-family: $footer-icon-font-family;
+  src: url("../material/font/1.eot?26518935");
+  src: url("../material/font/1.eot?26518935#iefix") format("embedded-opentype"),
+       url("../material/font/1.woff2?26518935") format("woff2"),
+       url("../material/font/1.woff?26518935") format("woff"),
+       url("../material/font/1.ttf?26518935") format("truetype"),
+       url("../material/font/1.svg?26518935#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $list-icon-font-family;
+  src: url("../material/font/2.eot?16498700");
+  src: url("../material/font/2.eot?16498700#iefix") format("embedded-opentype"),
+       url("../material/font/2.woff2?16498700") format("woff2"),
+       url("../material/font/2.woff?16498700") format("woff"),
+       url("../material/font/2.ttf?16498700") format("truetype"),
+       url("../material/font/2.svg?16498700#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

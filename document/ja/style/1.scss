@@ -1,0 +1,1667 @@
+@charset "utf-8";
+
+@import "1v.scss";
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
+
+
+body {
+  @include scrollbar($page-background, $scrollbar-thumb-background);
+  @include text-size-adjust;
+  color: $color;
+  font-family: $serif-font-family;
+  font-weight: $serif-font-weight;
+  font-feature-settings: "palt" 1, "pkna" 1;
+  background: $page-background;
+  margin: 0px;
+  padding: 0px;
+  overflow-y: scroll;
+}
+
+
+header {
+  @include clearfix;
+  width: $main-width;
+  max-width: $main-max-width;
+  margin: 40px auto 0px auto;
+  padding: 0px $main-horizontal-padding;
+  box-sizing: border-box;
+
+  // サイト名
+
+  div.title {
+    margin: 0px;
+    padding: 0px;
+    float: left;
+  }
+
+  div.title a {
+    font-family: $special-font-family;
+    font-size: $title-font-size;
+    font-feature-settings: "palt" 1, "pkna" 1;
+    color: $title-color;
+    text-decoration: none;
+  }
+
+  // 言語切り替えリンク
+
+  div.language {
+    margin: 5px 0px 0px 0px;
+    padding: 0px;
+    float: right;
+    @include small-screen {
+      display: none;
+    }
+  }
+
+  div.language a {
+    font-size: $language-font-size;
+    color: $language-color;
+    text-decoration: none;
+  }
+
+}
+
+
+nav.menu {
+  @include clearfix;
+  width: $main-width;
+  max-width: $main-max-width;
+  margin: 30px auto 0px auto;
+  padding: 0px;
+
+  // メニューバー
+
+  ul.menu {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  ul.menu >li {
+    width: 100% * (1 / 4);
+    height: $first-menu-height;
+    margin: 0px 0px 0px 3px;
+    padding: 0px;
+    font-size: $first-menu-font-size;
+    color: $first-menu-color;
+    line-height: $first-menu-height;
+    text-align: center;
+    list-style: none;
+    border-radius: $first-menu-border-radius;
+    background: $first-menu-background;
+    box-shadow: $shadow-setting $first-menu-shadow-color;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+  }
+
+  ul.menu >li:first-child {
+    margin: 0px;
+  }
+
+  ul.menu >li:hover {
+    background: $hovered-first-menu-background;
+    box-shadow: $shadow-setting $hovered-first-menu-shadow-color;
+  }
+
+  ul.menu >li >a {
+    width: 100%;
+    height: $first-menu-height;
+    color: $first-menu-color;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  ul.menu >li >ul {
+    width: 100%;
+    margin: 0px;
+    padding: 7px 0px;
+    top: $first-menu-height;
+    color: $color;
+    background: $main-background;
+    opacity: 0;
+    border-radius: $second-menu-border-radius;
+    box-shadow: $shadow-setting $main-shadow-color;
+    z-index: 5;
+    position: absolute;
+    transition: all $second-menu-animation-duration ease;
+  }
+
+  ul.menu >li:hover >ul {
+    opacity: 1;
+  }
+
+  ul.menu >li >ul >li {
+    height: 0px;
+    font-size: $second-menu-font-size;
+    color: $second-menu-color;
+    line-height: $second-menu-height;
+    text-align: center;
+    list-style: none;
+    overflow: hidden;
+    transition: height $second-menu-animation-duration ease;
+  }
+
+  ul.menu >li:hover >ul >li {
+    height: $second-menu-height;
+    overflow: visible;
+  }
+
+  ul.menu >li:hover >ul >li:hover {
+    background: $hovered-second-menu-background;
+  }
+
+  ul.menu >li >ul >li a {
+    width: 100%;
+    color: $second-menu-color;
+    text-decoration: none;
+    display: block;
+  }
+
+}
+
+
+nav.breadcrumb {
+  @include clearfix;
+  width: $main-width;
+  max-width: $main-max-width;
+  margin: 30px auto 0px auto;
+  padding: $breadcrumb-vertical-padding $breadcrumb-horizontal-padding;
+  border-radius: $main-border-radius $main-border-radius 0px 0px;
+  background: $main-background;
+  box-shadow: $large-shadow-setting $main-shadow-color;
+  box-sizing: border-box;
+
+  // パンくずリスト
+
+  ul.breadcrumb {
+    width: 80%;
+    margin: 0px;
+    padding: 0px;
+    font-size: $breadcrumb-font-size;
+    line-height: $breadcrumb-line-height;
+    float: left;
+  }
+
+  ul.breadcrumb li {
+    display: inline;
+  }
+
+  ul.breadcrumb li::after {
+    margin: 0px 0.4em;
+    padding: 0px;
+    font-family: $list-icon-font-family;
+    font-size: 80%;
+    color: $gray-color !important;
+    content: "\F003";
+  }
+
+  ul.breadcrumb li:last-child::after {
+    display: none;
+  }
+
+  ul.breadcrumb li a {
+    color: $breadcrumb-color !important;
+    text-decoration: none;
+    background: none;
+    border: hidden;
+  }
+
+  ul.breadcrumb li:first-child a::before {
+    margin: 0px;
+    padding: 0px;
+    font-family: $list-icon-font-family;
+    content: "\F006";
+  }
+
+  ul.breadcrumb li:first-child a span {
+    display: none;
+  }
+
+  // 言語バージョン
+
+  div.version {
+    width: 20%;
+    margin: 0px;
+    padding: 0px;
+    font-size: $breadcrumb-font-size;
+    line-height: $breadcrumb-line-height;
+    color: $breadcrumb-color !important;
+    text-align: right;
+    float: right;
+  }
+
+  div.version-caution {
+    width: 20%;
+    margin: 0px;
+    padding: 0px;
+    font-size: $breadcrumb-font-size;
+    line-height: $breadcrumb-line-height;
+    color: $caution-breadcrumb-color !important;
+    text-align: right;
+    float: right;
+  }
+
+}
+
+
+article.content-table {
+  width: $main-width;
+  max-width: $main-max-width;
+  margin: 3px auto 0px auto;
+  padding-top: $main-vertical-padding - $index-vertical-margin;
+  padding-bottom: $main-vertical-padding - $index-vertical-margin;
+  padding-left: $main-horizontal-padding;
+  padding-right: $main-horizontal-padding;
+  border-radius: 0px 0px $main-border-radius $main-border-radius;
+  background: $main-background;
+  box-shadow: $large-shadow-setting $main-shadow-color;
+  box-sizing: border-box;
+
+  // ページ一覧のグループ名
+
+  h1 {
+    margin: $index-vertical-margin -10px;
+    padding: 0px 0px;
+    font-size: $index-header-font-size;
+    font-weight: $serif-font-weight;
+    font-style: normal;
+    color: $index-header-color;
+    line-height: 1;
+  }
+
+  // ページ一覧のコンテナ
+
+  div.index-container {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  div.index-container a.index,
+  div.index-container a.old-index,
+  div.index-container a.ancient-index,
+  div.index-container div.disabled-index {
+    margin: $index-vertical-margin 0px;
+    padding: $index-vertical-padding $index-horizontal-padding;
+    font-family: $serif-font-family;
+    font-size: $index-font-size;
+    font-weight: $serif-font-weight;
+    font-style: normal;
+    font-feature-settings: "palt" 1, "pkna" 1;
+    text-decoration: none;
+    line-height: $line-height;
+    color: $index-color;
+    background: $index-background;
+    border: 0px;
+    border-radius: $index-border-radius;
+    box-shadow: $shadow-setting $index-shadow-color;
+    display: block;
+  }
+
+  div.index-container a.index:hover,
+  div.index-container a.old-index:hover,
+  div.index-container a.ancient-index:hover {
+    background: $hovered-index-background;
+    box-shadow: $shadow-setting $hovered-index-shadow-color;
+  }
+
+  div.index-container a.old-index::after,
+  div.index-container a.ancient-index::after {
+    font-family: $special-font-family;
+    font-size: 80%;
+    color: $index-note-color;
+    line-height: $line-height / 0.8;
+    text-align: right;
+    float: right;
+  }
+
+  div.index-container a.old-index::after {
+    content: "old";
+  }
+
+  div.index-container a.ancient-index::after {
+    content: "ancient";
+  }
+
+  div.index-container div.disabled-index {
+    background: $disabled-index-background;
+    box-shadow: $shadow-setting $disabled-index-shadow-color;
+  }
+
+  div.index-container a.index span.date,
+  div.index-container a.old-index span.date,
+  div.index-container a.ancient-index span.date,
+  div.index-container div.disabled-index span.date {
+    margin: 0px $blank-padding 0px 0px;
+    padding: 0px;
+    font-size: 80%;
+    color: $index-note-color;
+    line-height: $line-height;
+  }
+
+  div.index-container a.index span.note,
+  div.index-container a.old-index span.note,
+  div.index-container a.ancient-index span.note {
+    font-family: $special-font-family;
+    font-size: 80%;
+    color: $index-note-color;
+    line-height: $line-height / 0.8;
+    text-align: right;
+    float: right;
+  }
+
+}
+
+
+article.main {
+  width: $main-width;
+  max-width: $main-max-width;
+  margin: 3px auto 0px auto;
+  padding-top: $main-vertical-padding - $section-vertical-margin;
+  padding-bottom: $main-vertical-padding - $vertical-margin;
+  padding-left: $main-horizontal-padding;
+  padding-right: $main-horizontal-padding;
+  border-radius: 0px 0px $main-border-radius $main-border-radius;
+  background: $main-background;
+  box-shadow: $large-shadow-setting $main-shadow-color;
+  box-sizing: border-box;
+
+  // 第 1 見出し
+
+  h1 {
+    margin: $section-vertical-margin 0px - $main-horizontal-padding;
+    padding: $section-vertical-padding $section-horizontal-padding;
+    font-family: $serif-font-family;
+    font-size: $section-font-size;
+    font-weight: $serif-font-weight;
+    font-style: normal;
+    font-feature-settings: "palt" 1, "pkna" 1;
+    line-height: $line-height;
+    color: $section-color;
+    background: $section-background;
+  }
+
+  h1 span.sans a {
+    color: $section-color !important;
+    text-decoration: none;
+    background: none;
+    border: hidden;
+  }
+
+  // 第 2 見出し
+
+  h2 {
+    margin: $subsection-vertical-margin 0px - $main-horizontal-padding;
+    padding: $subsection-vertical-padding $subsection-horizontal-padding;
+    font-family: $serif-font-family;
+    font-size: $subsection-font-size;
+    font-weight: $serif-font-weight;
+    font-style: normal;
+    font-feature-settings: "palt" 1, "pkna" 1;
+    line-height: $line-height;
+    color: $subsection-color;
+    border-bottom: 1px $subsection-color solid;
+  }
+
+  h2 span.number {
+    @include before-after("§", ".");
+    margin: 0px $blank-padding 0px 0px;
+    font-size: 80%;  
+  }
+
+  h2 span.sans a {
+    color: $subsection-color !important;
+    text-decoration: none;
+    background: none;
+    border-bottom: hidden;
+  }
+
+  // 段落
+
+  p {
+    margin: $vertical-margin 0px;
+    padding: 0px;
+    font-size: $font-size;
+    line-height: $line-height;
+    text-align: justify;
+  }
+
+  p span.paragraph {
+    width: $paragraph-marker-width;
+    margin-right: $blank-padding;
+    font-size: 80%;
+    color: $gray-color;
+    line-height: 0.8;
+    text-align: center;
+    border-left: 1px $gray-color solid;
+    border-right: 1px $gray-color solid;
+    border-radius: $list-marker-border-radius;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
+  p span.redact {
+    line-height: 100%;
+    border: 1px $border-color solid;
+    background: linear-gradient(-45deg, transparent 33%, $border-color 33%, $border-color 50%, transparent 50%, transparent 83%, $border-color 83%);
+    background-size: 3px 3px;
+    display: inline-block;
+  }
+
+  // リンク
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+    background: linear-gradient(transparent 80%, $link-background-color 80%);
+  }
+
+  a:hover {
+    color: $hovered-link-color;
+    text-decoration: none;
+    background: linear-gradient(transparent 80%, $hovered-link-background-color 80%);
+  }
+
+  a.normal,
+  span.sans a {
+    color: $color;
+    text-decoration: none;
+    border-bottom: 0px;
+    background: none;
+  }
+
+  // 画像
+
+  img {
+    margin: $wide-vertical-margin auto;
+    padding: 0px;
+    display: block;
+  }
+
+  // テーブル
+
+  table {
+    margin: $wide-vertical-margin auto;
+    padding: 0px;
+    border-top: 1px $border-color solid;
+    border-bottom: 1px $border-color solid;
+    border-collapse: collapse;
+  }
+
+  table tr th,
+  table tr td {
+    margin: 0px;
+    padding: 0px $table-cell-horizontal-padding;
+    font-family: $serif-font-family;
+    font-weight: $serif-font-weight;
+    font-size: $font-size;
+    font-feature-settings: "palt" 1, "pkna" 1;
+    line-height: $line-height;
+    text-align: left;
+  }
+
+  table tr:first-child th {
+    border-bottom: 1px $border-color solid;
+    background: $table-header-background;
+  }
+
+  table tr th.left {
+    border-right: 1px $border-color solid;
+    background: $table-header-background;
+  }
+
+  // 罫線なしテーブル
+
+  table.blank {
+    border: 0px;
+  }
+
+  table.blank tr th,
+  table.blank tr td {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background: none;
+  }
+
+  // 番号なし箇条書き
+
+  ul {
+    margin: $vertical-margin 0px;
+    padding: 0px;
+    list-style-type: none;
+  }
+
+  ul li {
+    margin-left: $unordered-list-marker-width + $blank-padding;
+    font-size: $font-size;
+    line-height: $line-height;
+    text-align: justify;
+  }
+
+  ul li::before {
+    width: $unordered-list-marker-width;
+    margin-right: $blank-padding;
+    margin-left: 0px - $unordered-list-marker-width - $blank-padding;
+    font-family: $list-icon-font-family;
+    font-size: 80%;
+    color: $list-marker-color;
+    content: "\F000";
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
+  ul li ul,
+  ul li ol {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  ul.double {
+    column-count: 2;
+    column-gap: $table-cell-horizontal-padding * 2;
+  }
+
+  ul.triple {
+    column-count: 3;
+    column-gap: $table-cell-horizontal-padding * 2;
+  }
+
+  // 番号付き箇条書き
+
+  ol {
+    margin: $vertical-margin 0px;
+    padding: 0px;
+    list-style-type: none;
+    counter-reset: list;
+  }
+
+  ol li {
+    margin-left: $ordered-list-marker-width + $blank-padding;
+    font-size: $font-size;
+    line-height: $line-height;
+    text-align: justify;
+  }
+
+  ol li::before {
+    width: $ordered-list-marker-width;
+    margin-right: $blank-padding;
+    margin-left: 0px - $ordered-list-marker-width - $blank-padding;
+    font-size: 80%;
+    color: $list-marker-color;
+    line-height: 0.8;
+    text-align: center;
+    border-left: 1px $list-marker-color solid;
+    border-right: 1px $list-marker-color solid;
+    border-radius: $list-marker-border-radius;
+    content: counter(list);
+    display: inline-block;
+    counter-increment: list;
+    box-sizing: border-box;
+  }
+
+  ol li ul,
+  ol li ol {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  ol.double {
+    column-count: 2;
+    column-gap: $table-cell-horizontal-padding * 2;
+  }
+
+  ol.triple {
+    column-count: 3;
+    column-gap: $table-cell-horizontal-padding * 2;
+  }
+
+  // 例文の箇条書き
+
+  ul.conlang {
+    margin: $wide-vertical-margin 0px - $main-horizontal-padding;
+    padding: $box-vertical-padding $main-horizontal-padding;
+    background: $box-background;
+    list-style-type: none;
+  }
+
+  ul.conlang li {
+    margin-left: $unordered-list-marker-width + $blank-padding;
+    font-size: 16px;
+  }
+
+  ul.conlang li::before {
+    width: $unordered-list-marker-width;
+    margin-right: $blank-padding;
+    margin-left: 0px - $unordered-list-marker-width - $blank-padding;
+    font-family: $list-icon-font-family;
+    font-size: 80%;
+    color: $list-marker-color;
+    content: "\F000";
+    display: inline-block;
+  }
+
+  ul.conlang li ul {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px $equivalent-list-marker-indent;
+    list-style-type: none;
+  }
+
+  ul.conlang li ul li {
+    margin-left: $equivalent-list-marker-width + $blank-padding;
+  }
+
+  ul.conlang li ul li::before {
+    width: $equivalent-list-marker-width;
+    margin-right: $blank-padding;
+    margin-left: 0px - $equivalent-list-marker-width - $blank-padding;
+    font-family: $list-icon-font-family;
+    font-size: 80%;
+    color: $list-marker-color;
+    content: "\F001";
+    display: inline-block;
+  }
+
+  // 節目次
+
+  ul.section-table {
+    column-count: 3;
+    column-gap: $table-cell-horizontal-padding * 2;
+  }
+
+  ul.section-table li span.number {
+    @include before-after("§", ".");
+    margin: 0px $blank-padding 0px 0px;
+    font-size: 80%;  
+  }
+
+  // 更新履歴
+
+  ul.change-log li span.date {
+    margin: 0px $blank-padding 0px 0px;
+    padding: 0px;
+    font-size: 80%;
+  }
+
+  ul.change-log li ul.breadcrumb {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+  }
+
+  ul.change-log li ul.breadcrumb li {
+    margin: 0px;
+    padding: 0px;
+    display: inline;
+  }
+
+  ul.change-log li ul.breadcrumb li::before {
+    display: none;
+  }
+
+  ul.change-log li ul.breadcrumb li::after {
+    margin: 0px 0.4em;
+    padding: 0px;
+    font-family: $list-icon-font-family;
+    font-size: 80%;
+    color: $gray-color !important;
+    content: "\F003";
+  }
+
+  ul.change-log li ul.breadcrumb li:last-child::after {
+    display: none;
+  }
+
+  ul.change-log li ul.breadcrumb li:first-child::before {
+    margin: 0px;
+    padding: 0px;
+    font-family: $list-icon-font-family;
+    font-size: 100%;
+    color: $color;
+    content: "\F006";
+    display: inline;
+  }
+
+  // 説明羅列のリスト
+
+  table.list {
+    margin: $vertical-margin 0px;
+    border-collapse: collapse;
+    border: 0px; 
+  }
+
+  table.list tr td {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  table.list tr td {
+    padding: 0px $table-cell-horizontal-padding 0px 0px;
+  }
+
+  table.list tr td:first-child::before {
+    width: $unordered-list-marker-width;
+    margin: 0px $blank-padding 0px 0px;
+    font-family: $list-icon-font-family;
+    font-size: 80%;
+    color: $list-marker-color;
+    content: "\F000";
+    display: inline-block;
+  }
+
+  table.list tr td:first-child::after {
+    content: ":";
+    color: $gray-color;
+  }
+
+  // 対訳
+
+  table.translation {
+    width: 100%;
+    margin: $vertical-margin 0px;
+    border: 0px;
+    table-layout: fixed;
+  }
+
+  table.translation tr td {
+    padding: 0px 0px 0px $table-cell-horizontal-padding;
+    border: 0px;
+    text-align: justify;
+  }
+
+  table.translation tr td:first-child {
+    padding: 0px $table-cell-horizontal-padding 0px 0px;
+  }
+
+  // グロス
+
+  div.gloss {
+    margin: $vertical-margin 0px;
+    padding: 0px;
+    font-size: $font-size;
+    line-height: $line-height;
+    text-align: justify;
+    word-spacing: 0.5em;
+  }
+
+  li.gloss {
+    margin-left: $equivalent-list-marker-width + $blank-padding;
+    padding: 0px;
+    font-size: $font-size;
+    line-height: $line-height;
+    text-align: justify;
+    word-spacing: 0.5em;
+  }
+
+  div.gloss div.word,
+  li.gloss div.word {
+    word-spacing: normal;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    display: inline-flex;
+  }
+
+  div.gloss div.word div.name,
+  li.gloss div.word div.name {
+    margin: 0px 0px -4px 0px;
+    padding: 0px;
+  }
+
+  div.gloss div.word div.explanation,
+  li.gloss div.word div.explanation {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  div.gloss div.word div.name span.morpheme,
+  div.gloss div.word div.explanation span.morpheme,
+  li.gloss div.word div.name span.morpheme,
+  li.gloss div.word div.explanation span.morpheme {
+    font-size: 80%;
+  }
+
+  // 会話文
+
+  table.conversation {
+    display: none;
+  }
+
+  // ソースコード
+
+  table.code,
+  table.sample {
+    margin: $wide-vertical-margin 0px - $main-horizontal-padding;
+    padding: 0px $main-horizontal-padding;
+    background: $box-background;
+    border: none;
+    border-collapse: separate;
+    display: block;
+  }
+
+  table.code +table.sample {
+    margin-top: $code-sample-vertical-gap - $wide-vertical-margin;
+  }
+
+  table.code tr td,
+  table.sample tr td {
+    margin: 0px;
+    padding: 0px;
+    font-family: $monospace-font-family;
+    font-weight: $monospace-font-weight;
+    font-size: $code-font-size;
+    line-height: $code-line-height;
+    letter-spacing: -1px;
+    white-space: pre;
+    overflow: hidden;
+  }
+
+  table.code tr:first-child td,
+  table.sample tr:first-child td {
+    padding-top: $box-vertical-padding;
+  }
+
+  table.code tr:last-child td,
+  table.sample tr:last-child td {
+    padding-bottom: $box-vertical-padding;
+  }
+
+  table.code tr td.number,
+  table.sample tr td.number {
+    width: $ordered-list-marker-width;
+    margin: 0px;
+    padding: 0px;
+    font-family: $serif-font-family;
+    font-size: 80%;
+    color: $list-marker-color;
+    line-height: 0.8;
+    letter-spacing: 0px;
+    text-align: center;
+    border-right: 1px white solid;
+  }
+
+  table.code tr td.number +td {
+    padding-left: $blank-padding;
+  }
+
+  table.code tr td.number::before,
+  table.sample tr td.number::before {
+    content: attr(data-number);
+  }
+
+  table.code tr td span.highlight-keyword {
+    color: hsl(180, 80%, 40%);
+  }
+
+  table.code tr td span.highlight-type {
+    color: hsl(120, 80%, 40%);
+  }
+
+  table.code tr td span.highlight-function {
+    color: hsl(220, 80%, 40%);
+  }
+
+  table.code tr td span.highlight-variable {
+    color: hsl(60, 80%, 40%);
+  }
+
+  table.code tr td span.highlight-constant {
+    color: hsl(40, 80%, 40%);
+  }
+
+  table.code tr td span.highlight-string {
+    color: hsl(280, 80%, 40%);
+  }
+
+  table.code tr td span.highlight-numeric {
+    color: hsl(320, 80%, 40%);
+  }
+
+  table.code tr td span.highlight-comment {
+    color: rgba($black-color, 0.4);
+  }
+
+  // インライン中のコード
+
+  span.code {
+    margin: 0px;
+    padding: 0px;
+    font-family: $monospace-font-family;
+    font-size: $code-font-size;
+    font-weight: $monospace-font-weight;
+    letter-spacing: -1px;
+    word-break: break-all;
+    border-radius: $inline-code-border-radius;
+    background: $box-background;
+  }
+
+  // フォーム
+
+  form,
+  div.center {
+    margin: $vertical-margin 0px;
+    padding: 0px;
+    font-family: $serif-font-family;
+    font-weight: $serif-font-weight;
+    font-size: $font-size;
+    font-feature-settings: "palt" 1, "pkna" 1;
+    line-height: $line-height;
+    text-align: center;
+  }
+
+  form.inline {
+    margin: 0px;
+    padding: 0px;
+    display: inline;
+  }
+
+  form input[type="text"],
+  div.center input[type="text"] {
+    margin: 0px 0px 3px 0px;
+    padding: $input-vertical-padding $input-horizontal-padding;
+    font-family: $serif-font-family;
+    font-weight: $serif-font-weight;
+    font-size: $font-size;
+    font-feature-settings: "palt" 1, "pkna" 1;
+    color: $color;
+    line-height: $line-height;
+    background: $input-background;
+    border: 0px;
+    border-radius: $input-border-radius;
+    outline: none;
+  }
+
+  form input[type="text"]:hover,
+  div.center input[type="text"]:hover {
+    background: $hovered-input-background;
+  }
+
+  form input[type="submit"],
+  form input[type="button"],
+  form a.form,
+  div.center input[type="submit"],
+  div.center input[type="button"],
+  div.center a.form {
+    margin: 0px 0px 3px 0px;
+    padding: $button-vertical-padding $button-horizontal-padding;
+    font-family: $serif-font-family;
+    font-weight: $serif-font-weight;
+    font-size: $font-size;
+    font-feature-settings: "palt" 1, "pkna" 1;
+    color: $button-color;
+    line-height: $line-height;
+    background: $button-background;
+    border: 0px;
+    border-radius: $button-border-radius;
+    display: inline-block;
+    outline: none;
+  }
+
+  form input[type="submit"]:hover,
+  form input[type="button"]:hover,
+  form a.form:hover,
+  div.center input[type="submit"]:hover,
+  div.center input[type="button"]:hover,
+  div.center a.form:hover {
+    background: $hovered-button-background;
+  }
+
+  form input[type="radio"],
+  form input[type="checkbox"],
+  div.center input[type="radio"],
+  div.center input[type="checkbox"] {
+    display: none;
+  }
+
+  form input[type="radio"] +label,
+  form input[type="checkbox"] +label,
+  div.center input[type="radio"] +label,
+  div.center input[type="checkbox"] +label {
+    margin: 0px;
+    padding: 0px 0px 0px $radio-mark-size + 3px;
+    position: relative;
+  }
+
+  form input[type="radio"] +label::before,
+  div.center input[type="radio"] +label::before {
+    width: $radio-mark-size;
+    height: $radio-mark-size;
+    background: $input-background;
+    border-radius: 50%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    display: block;
+    content: "";
+  }
+
+  form input[type="radio"]:hover +label::before,
+  div.center input[type="radio"]:hover +label::before {
+    background: $hovered-input-background;
+  } 
+
+  form input[type="radio"]:checked +label::after,
+  div.center input[type="radio"]:checked +label::after {
+    width: $radio-mark-size - 6px;
+    height: $radio-mark-size - 6px;
+    background: $radio-mark-background;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    position: absolute;
+    display: block;
+    content: "";
+  }
+
+  form input[type="radio"]:hover:checked +label::after,
+  div.center input[type="radio"]:hover:checked +label::after {
+    background: $hovered-radio-mark-background;
+  }
+
+  form input[type="checkbox"] +label::before,
+  div.center input[type="checkbox"] +label::before {
+    width: $radio-mark-size;
+    height: $radio-mark-size;
+    background: $input-background;
+    border-radius: $input-border-radius;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    display: block;
+    content: "";
+  }
+
+  form input[type="checkbox"]:hover +label::before,
+  div.center input[type="checkbox"]:hover +label::before {
+    background: $hovered-input-background;
+  } 
+
+  form input[type="checkbox"]:checked +label::after,
+  div.center input[type="checkbox"]:checked +label::after {
+    width: ($radio-mark-size - 6px) / 2;
+    height: $radio-mark-size - 6px;
+    border-bottom: 3px $radio-mark-background solid;
+    border-right: 3px $radio-mark-background solid;
+    transform: rotate(40deg);
+    top: 0px;
+    left: 4px;
+    position: absolute;
+    display: block;
+    content: "";
+  }
+
+  form input[type="checkbox"]:hover:checked +label::after,
+  div.center input[type="checkbox"]:hover:checked +label::after {
+    border-bottom: 3px $hovered-radio-mark-background solid;
+    border-right: 3px $hovered-radio-mark-background solid;
+  }
+
+  form textarea {
+    @include scrollbar($input-background, $scrollbar-thumb-background);
+    margin: 0px 0px -3px 0px;
+    padding: $input-vertical-padding + 1px $input-horizontal-padding;
+    font-family: $monospace-font-family;
+    font-weight: $monospace-font-weight;
+    font-size: $code-font-size;
+    color: $color;
+    line-height: $code-line-height;
+    background: $input-background;
+    border: 0px;
+    border-radius: $input-border-radius;
+    outline: none;
+    resize: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  form textarea:hover {
+    @include scrollbar($hovered-input-background, $hovered-scrollbar-thumb-background);
+    background: $hovered-input-background;
+  }
+
+  form textarea.normal {
+    font-family: $serif-font-family;
+    font-weight: $serif-font-weight;
+    font-size: $font-size;
+    font-feature-settings: "palt" 1, "pkna" 1;
+    line-height: $line-height;
+  }
+
+  // 外国語への訳語の注釈
+
+  span.foreign {
+    @include before-after("(", ")");
+    margin: 0px 0px 0px 0.3em;
+    font-size: 80%;
+  }
+
+  // 埋め込み SpeakerDeck スライド
+
+  div.slide {
+    width: $main-width * 0.8;
+    max-width: $main-max-width * 0.8;
+    margin: $wide-vertical-margin auto;
+    padding: 0px;
+    display: block;
+  }
+
+  div.slide iframe.speakerdeck-iframe {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  // 埋め込み PDF ファイル
+
+  object.pdf {
+    width: $main-width * 0.8;
+    max-width: $main-max-width * 0.8;
+    height: $main-width;
+    max-height: $main-max-width;
+    margin: $wide-vertical-margin auto;
+    padding: 0px;
+    display: block !important;
+  }
+
+  // Tsolitaire タイル
+
+  span.tile {
+    display: inline-flex;
+    align-items: flex-start;
+    vertical-align: text-bottom;
+  }
+  
+  span.tile span {
+    margin: 0px 1px 0px 0px;
+    padding: 0px;
+    font-size: 12px;
+    color: hsl(28, 54%, 33%);
+    line-height: 12px;
+  }
+  
+  span.tile img {
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+  }
+
+  // Tsolitaire 盤面
+
+  table.board {
+    margin: $vertical-margin auto;
+    padding: 0px;
+    border: none;
+    border-collapse: collapse;
+  }
+  
+  table.board tr td.tile {
+    width: 60px;
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
+    background-color: hsl(28, 80%, 98%);
+    position: relative;
+  }
+
+  table.board tr td.tile.alternative {
+    background-color: hsl(28, 80%, 97%);
+  }
+  
+  table.board tr td.tile img {
+    width: 60px;
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+  }
+  
+  table.board tr td.tile div.information {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    color: white;
+    line-height: 1;
+    text-shadow: 1px 1px 0px hsl(28, 54%, 33%), -1px 1px 0px hsl(28, 54%, 33%), 1px -1px 0px hsl(28, 54%, 33%), -1px -1px 0px hsl(28, 54%, 33%);
+    position: absolute;
+    top: 1px;
+    left: 3px;
+    z-index: 2;
+  }
+
+  table.board tr td.tile div.explanation {
+    width: 60px;
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 60px;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+  }
+  
+  table.board tr td.edge {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    line-height: 12px;
+    color: hsl(28, 54%, 33%);
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  table.board tr td.edge.row {
+    width: 14px;
+  }
+  
+  table.board tr td.edge.column {
+    height: 14px;
+  }
+  
+  table.board tr td.edge.border-top {
+    border-bottom: 1px hsl(28, 54%, 33%) solid !important;
+  }
+  
+  table.board tr td.edge.border-bottom {
+    border-top: 1px hsl(28, 54%, 33%) solid !important;
+  }
+  
+  table.board tr td.edge.border-right {
+    border-left: 1px hsl(28, 54%, 33%) solid !important;
+  }
+  
+  table.board tr td.edge.border-left {
+    border-right: 1px hsl(28, 54%, 33%) solid !important;
+  }
+
+  // エラーページのエラー表示領域
+
+  div.error {
+    margin: $section-vertical-margin 0px $vertical-margin 0px;
+    padding: 0px;
+  }
+
+  div.error div.error-code {
+    margin: 0px;
+    padding: 0px;
+    font-family: $special-font-family;
+    font-size: $error-code-font-size;
+    color: $error-code-color;
+    line-height: 1;
+    text-align: center;
+  }
+
+  div.error div.message {
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
+    font-size: $error-message-font-size;
+    color: $error-message-color;
+    line-height: 1;
+    text-align: center;
+  }
+
+  // 検索結果
+
+  div.head {
+    margin: $wide-vertical-margin 0px 0px 0px;
+    padding: $subsection-vertical-padding 0px 0px 0px;
+    font-family: $serif-font-family;
+    font-size: $subsection-font-size;
+    font-weight: $serif-font-weight;
+    font-style: normal;
+    font-feature-settings: "palt" 1, "pkna" 1;
+    line-height: $line-height;
+    color: $subsection-color;
+  }
+
+  div.head span.pronunciation {
+    margin: 0px 0px 0px $blank-padding;
+    font-size: 80%;
+  }
+
+  div.head span.date,
+  div.head span.box {
+    display: none;
+  }
+
+  div.head a {
+    color: $subsection-color !important;
+    text-decoration: none;
+    background: none;
+    border-bottom: hidden;
+  }
+
+  div.wrapper {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    z-index: 5;
+  }
+
+  div.wrapper div.dammy {
+    height: 100%;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    border-left: 3px $border-color double;
+    pointer-events: none;
+    position: absolute;
+    z-index: 2;
+  }
+
+  div.wrapper div.result {
+    margin: 0px;
+    padding: 0px 0px 0px $result-horizontal-padding;
+    position: relative;
+    z-index: 1;
+  }
+
+  div.wrapper div.result span.box {
+    margin: 0px $blank-padding 0px 0px;
+    padding: 0px 3px;
+    font-size: 80%;
+    line-height: 1;
+    border: 1px $border-color solid;
+    border-radius: $word-box-border-radius;
+  }
+
+  div.wrapper div.result span.addition::before {
+    color: $border-color;
+    content: ":";
+  }
+
+  div.wrapper div.result span.small {
+    @include before-after("(", ") ");
+    font-size: 80%;
+  }
+
+  div.wrapper div.result span.asterisk {
+    font-size: 70%;
+    color: $gray-color;
+    vertical-align: baseline;
+    position: relative;
+    top: -0.5em;
+  }
+
+  div.wrapper div.result table.explanation {
+    margin: $vertical-margin 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  div.wrapper div.result table.explanation tr td {
+    margin: 0px;
+    padding: 0px;
+    text-align: justify;
+  }
+
+  div.wrapper div.result table.explanation tr td:first-child {
+    margin: 0px;
+    padding: 0px $blank-padding 0px 0px;
+    font-size: 80%;
+    color: $border-color;
+    word-break: keep-all;
+  }
+
+  div.wrapper div.result ul.conlang {
+    margin-left: 0px - $main-horizontal-padding - $result-horizontal-padding;
+    padding-left: $main-horizontal-padding + $result-horizontal-padding;
+  }
+
+  div.wrapper div.result p.synonym::before {
+    margin: 0px $blank-padding 0px 0px;
+    padding: 0px;
+    font-family: $list-icon-font-family;
+    font-size: 80%;
+    color: $border-color;
+    content: "\F002";
+  }
+
+  div.wrapper div.result span.match {
+    background: $link-background-color;
+  }
+
+  // 検索結果のページ番号など
+
+  div.number {
+    margin: $vertical-margin 0px;
+    padding: 0px;
+    text-align: center;
+  }
+
+  div.number div.fraction {
+    width: 90px;
+    margin: 0px 7px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  div.number div.fraction div.page {
+    width: 90px;
+    line-height: 1.3;
+    border-bottom: 1px $color solid;
+    display: block;
+  }
+
+  div.number div.fraction div.total {
+    width: 90px;
+    line-height: 1.3;
+    display: block;
+  }
+
+  div.number a {
+    text-decoration: none;
+    background: none;
+    border: hidden;
+  }
+
+  div.number a.left-arrow::before,
+  div.number span.left-arrow::before {
+    font-family: $list-icon-font-family;
+    font-size: 80%;
+    content: "\F004";
+  }
+
+  div.number a.right-arrow::before,
+  div.number span.right-arrow::before {
+    font-family: $list-icon-font-family;
+    font-size: 80%;
+    content: "\F005";
+  }
+
+  div.number span.invalid {
+    color: $invalid-color;
+  }
+
+  // 誕生日祝い
+
+  div.birthday {
+    margin: $index-vertical-margin 0px $index-vertical-margin + 10px 0px;
+    padding: 0px 0px;
+    font-family: $special-font-family;
+    color: $title-color;
+    text-align: center;
+  }
+
+  div.birthday div.date {
+    font-size: 25px;
+  }
+
+  div.birthday div.message {
+    font-size: 40px;
+  }
+
+}
+
+
+footer {
+  width: $main-width;
+  max-width: $main-max-width;
+  margin: 10px auto 20px auto;
+  padding: 0px;
+
+  // 連絡用アイコン
+
+  div.icon {
+    margin: 0px 0px 5px 0px;
+    padding: 0px;
+    text-align: center;
+  }
+
+  div.icon a {
+    margin: 0px 5px;
+    padding: 0px;
+    font-family: $footer-icon-font-family;
+    font-size: $footer-icon-font-size;
+    color: $footer-icon-color;
+    text-decoration: none;
+    line-height: $line-height;
+  }
+
+  div.icon a:hover {
+    color: $hovered-footer-icon-color;
+  }
+
+  div.icon a.twitter::before {
+    content: "\F000";
+  }
+
+  div.icon a.youtube::before {
+    content: "\F001";
+  }
+
+  div.icon a.mail::before {
+    content: "\F002";
+  }
+
+  // 著作権表示
+
+  div.copyright {
+    margin: 0px;
+    padding: 0px;
+    font-size: $footer-font-size;
+    color: $color;
+    line-height: $line-height;
+    text-align: center;
+  }
+
+  // カウンター
+
+  div.counter {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+
+}
+
+
+div.top-link {
+  bottom: $top-link-margin;
+  right: $top-link-margin;
+  position: fixed;
+
+  // リンクボタン
+
+  a {
+    width: $top-link-size;
+    height: $top-link-size;
+    margin: 0px;
+    padding: 0px;
+    font-size: $top-link-font-size;
+    color: $first-menu-color;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50%;
+    background: $first-menu-background;
+    box-shadow: $shadow-setting $first-menu-shadow-color;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    @include insufficient-screen {
+      display: none;
+    }
+  }
+
+  a:hover {
+    background: $hovered-first-menu-background;
+    box-shadow: $shadow-setting $hovered-first-menu-shadow-color;
+  }
+
+  a::before {
+    margin: -7px 0px 2px 0px;
+    padding: 0px;
+    font-family: $list-icon-font-family;
+    font-size: $top-link-icon-font-size;
+    display: block;
+    content: "\F007";
+  }
+
+}
+
+
+* {
+
+  // ハイリア数
+
+  span.hairia::before {
+    font-size: 80%;
+    vertical-align: baseline;
+    content: "H";
+    position: relative;
+    top: -0.4em;
+  }
+
+  // シャレイア語
+
+  span.sans,
+  a.sans {
+    font-family: $sans-font-family !important;
+    font-weight: $sans-font-weight !important;
+    font-size: $sans-font-size !important;
+    font-feature-settings: "palt" 1, "pkna" 1;
+    line-height: $sans-font-size !important;
+  }
+  
+  // コードに関係する文字列
+
+  span.monospace,
+  a.monospace {
+    font-family: $monospace-font-family;
+    font-size: $code-font-size;
+    font-weight: $monospace-font-weight;
+    letter-spacing: -1px;
+  }
+
+  // 日本語フォント
+
+  span.japanese {
+    font-family: $japanese-serif-font-family !important;
+    font-weight: $serif-font-weight;
+    font-feature-settings: "palt" 0;
+  }
+
+  // 上付き & 下付き
+
+  sup {
+    font-size: 70%;
+    vertical-align: baseline;
+    position: relative;
+    top: -0.5em;
+  }
+
+  sub {
+    font-size: 70%;
+    vertical-align: baseline;
+    position: relative;
+    top: 0.2em;
+  }
+
+}

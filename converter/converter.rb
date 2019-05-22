@@ -280,6 +280,13 @@ class WholeZiphilConverter
       output = @converter.convert
       FileUtils.mkdir_p(File.dirname(output_path))
       File.write(output_path, output)
+    when "scss"
+      output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
+      output_path = modify_extension(output_path)
+      Kernel.system("sass --style expanded --no-cache #{path}:#{output_path}")
+    when "css"
+      output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
+      FileUtils.copy(path, output_path)
     end
     return result
   end
@@ -339,6 +346,10 @@ class WholeZiphilConverter
         paths << [path, language]
       end
     end
+    paths.map! do |path, language|
+      next_path = path.gsub(/v\.scss$/, ".scss")
+      next [next_path, language]
+    end
     paths.sort_by! do |path, language|
       path_array = path.gsub(ROOT_PATHS[language] + "/", "").gsub(/\.\w+$/, "").split("/")
       path_array.reject!{|s| s.include?("index")}
@@ -373,8 +384,8 @@ class WholeZiphilConverter
 
   def modify_extension(path)
     result = path.clone
-    result.gsub!(".zml", ".html")
-    result.gsub!(".scss", ".css")
+    result.gsub!(/\.zml$/, ".html")
+    result.gsub!(/\.scss$/, ".css")
     return result
   end
 

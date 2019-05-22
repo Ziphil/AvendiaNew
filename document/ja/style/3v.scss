@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+
+@function custom-gradient($color, $hue-offset) {
+  $begin-color: adjust-hue($color, - $hue-offset / 2);
+  $end-color: adjust-hue($color, $hue-offset / 2);
+  @return linear-gradient(to right bottom, $begin-color, $end-color);
+}
+
+
+// 基本色相
+$primary-hue: 280;
+$secondary-hue: 60;
+
+// 基本色
+$head-background-color: hsl($primary-hue, 50%, 40%);
+$highlight-color: hsl($primary-hue, 50%, 40%);
+$black-color: hsl($primary-hue, 30%, 20%);
+
+// 背景 > ページ全体
+$page-background: hsl($primary-hue, 20%, 98%);
+// 背景 > ナビゲーション
+$navigation-background-color: hsl($primary-hue, 50%, 20%);
+// 背景 > ナビゲーション内のリンク
+$hovered-box-background-color: hsl($primary-hue, 20%, 90%);
+// 背景 > ヘッド
+$head-background: custom-gradient($head-background-color, -40);
+// 背景 > ボタン
+$hovered-button-background-color: hsl($secondary-hue, 50%, 90%);
+// 背景 > フッター
+$footer-background-color: hsl($primary-hue, 50%, 20%);
+
+// テキスト色 > タイトル
+$title-color: hsl($primary-hue, 20%, 90%);
+// テキスト色 > 第 1 見出し
+$section-color: $highlight-color;
+// テキスト色 > 第 2 見出し
+$subsection-color: $highlight-color;
+// テキスト色 > 説明
+$explanation-color: $black-color;
+// テキスト色 > バージョン番号
+$version-color: $page-background;
+// テキスト色 > 日付
+$date-color: $highlight-color;
+// テキスト色 > リンク
+$link-color: $highlight-color;
+// テキスト色 > 注釈バージョン番号
+$note-version-color: hsl($primary-hue, 20%, 60%);
+// テキスト色 > コピーライト
+$copyright-color: hsl($primary-hue, 20%, 90%);
+
+// 罫線色 > ナビゲーション内の区切り線
+$navigation-line-border-color: rgba($hovered-box-background-color, 0.5);
+// 罫線色 > 第 1 見出し
+$section-border-color: hsl($primary-hue, 20%, 90%);
+// 罫線色 > 画像
+$image-border-color: $highlight-color;
+// 罫線色 > バージョン履歴
+$history-border-color: $highlight-color;
+
+// フォントサイズ > ナビゲーション内のタイトル
+$navigation-title-font-size: 50px;
+// フォントサイズ > ナビゲーション内のリンク
+$box-font-size: 18px;
+// フォントサイズ > タイトル
+$title-font-size: 180px;
+// フォントサイズ > トップのバージョン番号
+$top-version-font-size: 40px;
+// フォントサイズ > キャッチコピー
+$copy-font-size: 40px;
+// フォントサイズ > ボタン
+$button-font-size: 22px;
+// フォントサイズ > 第 1 見出し
+$section-font-size: 45px;
+// フォントサイズ > 第 2 見出し
+$subsection-font-size: 35px;
+// フォントサイズ > 説明
+$explanation-font-size: 18px;
+// フォントサイズ > ライセンス名
+$license-name-font-size: 16px;
+// フォントサイズ > 注釈バージョン番号
+$note-version-font-size: 16px;
+// フォントサイズ > バージョン番号
+$version-font-size: 26px;
+// フォントサイズ > 日付
+$date-font-size: 16px;
+// フォントサイズ > 連絡先リンク
+$contact-link-font-size: 22px;
+// フォントサイズ > 連絡先アイコン
+$contact-icon-font-size: 18px;
+// フォントサイズ > コピーライト
+$copyright-font-size: 18px;
+
+// 行の高さ > 全体
+$line-height: 1.6;
+// 行の高さ > キャッチコピー
+$copy-line-height: 1.2;
+
+// 余白 > 内容
+$content-vertical-margin: 80px;
+// 余白 > 第 1 見出し
+$section-vertical-margin: 50px;
+// 余白 > 機能
+$feature-vertical-margin: 35px;
+// 余白 > 第 2 見出し
+$subsection-vertical-margin: 20px;
+// 余白 > 説明
+$explanation-horizontal-margin: 40px;
+// 余白 > 共通
+$vertical-margin: 15px;
+// 余白 > テキスト領域
+$text-horizontal-margin: 7%;
+
+// 大きさ > 全体
+$content-width: 80vw;
+$content-max-width: 900px;
+$content-min-width: 560px;
+// 大きさ > ナビゲーション
+$navigation-height: 70px;
+// 大きさ > ナビゲーション内のリンク
+$box-width: 140px;
+// 大きさ > ボタン
+$button-width: 180px;
+$button-height: 45px;
+// 大きさ > バージョン番号
+$version-width: 110px;
+$version-height: 40px;
+// 大きさ > フッター
+$footer-height: 50px;
+
+// フォントファミリー
+$serif-font-family: "Times New Roman", "Times", "IPA P明朝", "IPAex明朝", "ＭＳ Ｐ明朝", serif;
+$japanese-serif-font-family: "IPA P明朝", "IPAex明朝", "ＭＳ Ｐ明朝", serif;
+$special-sans-font-family: "Fira Sans Extra Condensed", sans-serif;
+$special-serif-font-family: "Alegreya";
+$icon-font-family: "Contact Icon";
+
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  } 
+}
+
+@mixin scrollbar($background, $thumb-background) {
+  &::-webkit-scrollbar {
+    width: $scrollbar-size;
+    height: $scrollbar-size;
+    background: $background;
+  }
+  &::-webkit-scrollbar-thumb {
+    border: 1px $page-background solid;
+    border-radius: $scrollbar-thumb-border-radius;
+    background: $thumb-background;
+  }
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+  &::-webkit-scrollbar-corner {
+    background: $background;
+  }
+}
+
+@mixin before-after($before-content, $after-content) {
+  &::before {
+    content: $before-content;
+  }
+  &::after {
+    content: $after-content;
+  }
+}
+
+@mixin text-size-adjust {
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+@mixin small-screen {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+
+@font-face {
+  font-family: $icon-font-family;
+  src: url("../material/font/1.eot?26518935");
+  src: url("../material/font/1.eot?26518935#iefix") format("embedded-opentype"),
+       url("../material/font/1.woff2?26518935") format("woff2"),
+       url("../material/font/1.woff?26518935") format("woff"),
+       url("../material/font/1.ttf?26518935") format("truetype"),
+       url("../material/font/1.svg?26518935#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $special-serif-font-family;
+  src: url("../material/font/4.otf") format("opentype"),
+       url("https://fonts.gstatic.com/s/alegreya/v10/4UaErEBBsBhlBjvfkSLk_xHM8pxULg.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
