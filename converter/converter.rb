@@ -186,64 +186,57 @@ class WholeZiphilConverter
   LOG_SIZE = 1000
 
   def initialize(args)
-    @args = args
-    @force_upload = false
+    force_upload = false
+    if args[0] == "-l"
+      args.shift
+      @mode = :log
+    else
+      if args[0] == "-f"
+        force_upload = true
+        args.shift
+      end
+      @mode = :normal
+    end
+    @paths = create_paths(args)
+    @ftp, @user = create_ftp(force_upload || !args.empty?)
+    @converter = create_converter
   end
 
   def save
-    if @args[0] == "-l"
-      @args.shift
+    case @mode
+    when :log
       save_log
-    elsif @args[0] == "-f"
-      @force_upload = true
-      @args.shift
-      save_html
-    else
-      save_html
+    when :normal
+      save_normal
     end
+    @ftp&.close
   end
 
   def save_log
-    paths = self.paths
-    converter = create_converter
-    paths.each_with_index do |(path, language), index|
-      log_path = LOG_PATHS[language]
-      log_entries = File.read(log_path).lines.map(&:chomp)
-      document, result = nil
+    @paths.each_with_index do |(path, language), index|
+      document, result = nil, nil
+      extension = File.extname(path).gsub(/^\./, "")
       parsing_duration = WholeZiphilConverter.measure do
-        parser = create_parser(path)
-        document = parser.parse
+        document = parse_normal(path, language, extension)
       end
       conversion_duration = WholeZiphilConverter.measure do
-        time = Time.now - 21600
-        output_path = update_converter(converter, document, path, language)
-        result = converter.convert("change-log")
-        log_entries.unshift(time.strftime("%Y/%m/%d") + "; " + result)
-        log_entries = log_entries.take(LOG_SIZE)
-        File.write(log_path, log_entries.join("\n"))
+        result = convert_log(document, path, language, extension)
       end
     end
   end
 
-  def save_html
-    paths = self.paths
-    ftp, user = create_ftp
-    converter = create_converter
-    paths.each_with_index do |(path, language), index|
-      document = nil
+  def save_normal
+    @paths.each_with_index do |(path, language), index|
+      document, result = nil, nil
+      extension = File.extname(path).gsub(/^\./, "")
       parsing_duration = WholeZiphilConverter.measure do
-        parser = create_parser(path)
-        document = parser.parse
+        document = parse_normal(path, language, extension)
       end
       conversion_duration = WholeZiphilConverter.measure do
-        output_path = update_converter(converter, document, path, language)
-        result = converter.convert
-        FileUtils.mkdir_p(File.dirname(output_path))
-        File.write(output_path, result)
+        result = convert_normal(document, path, language, extension)
       end
       upload_duration = WholeZiphilConverter.measure do
-        local_path, remote_path = create_upload_paths(user, path, language)
-        ftp.put(local_path, remote_path) if ftp
+        result = upload_normal(path, language)
       end
       output = " "
       output << "%3d" % (index + 1)
@@ -262,13 +255,69 @@ class WholeZiphilConverter
       puts(output)
     end
     puts("-" * 45)
-    puts(" " * 35 + "#{"%3d" % paths.size} files")
-    ftp.close if ftp
+    puts(" " * 35 + "#{"%3d" % @paths.size} files")
   end
 
-  def paths
+  def parse_normal(path, language, extension)
+    docment = nil
+    case extension
+    when "zml"
+      source = File.read(path)
+      parser = ZenithalParser.new(source)
+      parser.brace_name, parser.bracket_name, parser.slash_name = "x", "xn", "i"
+      document = parser.parse
+    end
+    return document
+  end
+
+  def convert_normal(document, path, language, extension)
+    result = nil
+    case extension
+    when "zml"
+      @converter.update(document, path, language)
+      output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
+      output_path = modify_extension(output_path)
+      output = @converter.convert
+      FileUtils.mkdir_p(File.dirname(output_path))
+      File.write(output_path, output)
+    end
+    return result
+  end
+
+  def convert_log(document, path, language, extension)
+    result = nil
+    case extension
+    when "zml"
+      @converter.update(document, path, language)
+      output = @converter.convert("change-log")
+      time = Time.now - 21600
+      log_path = LOG_PATHS[language]
+      log_entries = File.read(log_path).lines.map(&:chomp)
+      log_entries.unshift(time.strftime("%Y/%m/%d") + "; " + output)
+      log_string = log_entries.take(LOG_SIZE).join("\n")
+      File.write(log_path, log_string)
+    end
+    return result
+  end
+
+  def upload_normal(path, language)
+    result = nil
+    if @ftp
+      local_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
+      local_path = modify_extension(local_path)
+      remote_path = path.gsub(ROOT_PATHS[language], "")
+      remote_path = modify_extension(remote_path)
+      unless language == :ja
+        remote_path = "/#{language}.#{@user}" + remote_path
+      end
+      @ftp.put(local_path, remote_path)
+    end
+    return result
+  end
+
+  def create_paths(args)
     paths = []
-    if @args.empty?
+    if args.empty?
       ROOT_PATHS.each do |language, default|
         directories = []
         directories << default
@@ -284,14 +333,14 @@ class WholeZiphilConverter
         end
       end
     else
-      path = @args.map{|s| s.gsub("\\", "/").gsub("c:/", "C:/")}[0].encode("utf-8")
+      path = args.map{|s| s.gsub("\\", "/").gsub("c:/", "C:/")}[0].encode("utf-8")
       language = ROOT_PATHS.find{|s, t| path.include?(t)}&.first
       if language
         paths << [path, language]
       end
     end
     paths.sort_by! do |path, language|
-      path_array = path.gsub(ROOT_PATHS[language] + "/", "").gsub(".zml", "").split("/")
+      path_array = path.gsub(ROOT_PATHS[language] + "/", "").gsub(/\.\w+$/, "").split("/")
       path_array.reject!{|s| s.include?("index")}
       path_array.map!{|s| (s.match(/^\d/)) ? s.to_i : s}
       next [path_array, language]
@@ -299,23 +348,14 @@ class WholeZiphilConverter
     return paths
   end
 
-  def create_ftp
+  def create_ftp(upload)
     ftp, user = nil, nil
-    if @force_upload || !@args.empty?
+    if upload
       config_data = File.read(BASE_PATH + "/converter/config.txt")
       host, user, password = config_data.split("\n")
       ftp = Net::FTP.new(host, user, password)
     end
     return ftp, user
-  end
-
-  def create_parser(path)
-    source = File.read(path)
-    parser = ZenithalParser.new(source)
-    parser.brace_name = "x"
-    parser.bracket_name = "xn"
-    parser.slash_name = "i"
-    return parser
   end
 
   def create_converter
@@ -331,19 +371,11 @@ class WholeZiphilConverter
     return converter
   end
 
-  def update_converter(converter, document, path, language)
-    converter.update(document, path, language)
-    output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language]).gsub(".zml", ".html")
-    return output_path
-  end
-
-  def create_upload_paths(user, path, language)
-    local_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language]).gsub(".zml", ".html")
-    remote_path = path.gsub(ROOT_PATHS[language], "").gsub(".zml", ".html")
-    unless language == :ja
-      remote_path = "/#{language}.#{user}" + remote_path
-    end
-    return local_path, remote_path
+  def modify_extension(path)
+    result = path.clone
+    result.gsub!(".zml", ".html")
+    result.gsub!(".scss", ".css")
+    return result
   end
 
   def self.measure(&block)
