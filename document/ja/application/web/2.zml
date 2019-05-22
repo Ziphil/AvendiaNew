@@ -1,0 +1,45 @@
+﻿\zml?|version="1.0"|>
+\xml?|version="1.0",encoding="UTF-8"|>
+
+\html|lang="ja"|<
+  \head<
+    \meta|charset="UTF-8"|>
+    \script|src="../../file/script/jquery.js"|>
+    \script|src="../../file/script/xdomain.js"|>
+    \script|src="../../file/script/8.js"|>
+    \link|rel="stylesheet",type="text/css",href="../../style/reset.css"|>
+    \link|rel="stylesheet",type="text/css",href="../../style/5.css"|>
+    \title<単語データからランダムで表示するやつ>
+  >
+  \body<
+
+    \div|class="content"|<
+      \div|class="left"|<
+        \div|class="number"|<
+          \div|id="numerator",class="numerator"|<0>
+          \div|id="denominator",class="denominator"|<0>
+        >
+      >
+      \div|class="main"|<
+        \div|class="question"|<
+          \div|class="english"|<
+            \div|id="english",class="word"|>
+            \div|id="pronunciation",class="pronunciation"|>
+          >
+          \div|id="arrow",class="arrow"|>
+          \div|id="japanese",class="japanese"|>
+        >
+        \div|class="radio"|<
+          \input|type="radio",name="mode",value="0",id="radio-mode-0",checked|>\label|for="radio-mode-0"|<英語→日本語>　\input|type="radio",name="mode",value="1",id="radio-mode-1"|>\label|for="radio-mode-1"|<日本語→英語>
+        >
+        \div|class="button"|<
+          \input|type="button",value="Previous",onclick="executor.previous()"|>　\input|class="pale",type="button",value="Reset",onclick="executor.reset()"|>　\input|type="button",value="Next",onclick="executor.next()"|>
+        >
+        \div|class="upload"|<
+          \label|for="file"|<Upload>\input|id="file",type="file",multiple="multiple",onchange="executor.upload()"|>
+        >
+      >
+    >
+
+  >
+>
