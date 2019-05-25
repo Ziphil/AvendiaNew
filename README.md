@@ -57,10 +57,10 @@ ruby converter/converter.rb -l (ファイル名の絶対パス)
 
 - .htaccess ファイル
 - 各種 CGI ファイル (オンライン辞典など)
-- `lbe/style/reset.css`
-- `lbe/file/cookie.js`
-- `lbe/file/jquery.js`
-- `lbe/file/xdomain.js`
+- `lbs/style/reset.css`
+- `lbs/file/cookie.js`
+- `lbs/file/jquery.js`
+- `lbs/file/xdomain.js`
 - `lbs/file/application/` 以下にある画像ファイル
 - `lbs/file/character/` 以下にある画像ファイル
 - `lbs/file/cource/` 以下にある PDF ファイル
