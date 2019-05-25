@@ -4,7 +4,7 @@
 
 
 ## 概要
-シャレイア語公式サイト『Avendia』を生成するためのスクリプトとその原稿ファイルです。
+シャレイア語公式サイト『[Avendia](http://ziphil.com/)』を生成するためのスクリプトとその原稿ファイルです。
 
 ## 下準備
 
@@ -58,9 +58,9 @@ ruby converter/converter.rb -l (ファイル名の絶対パス)
 - .htaccess ファイル
 - 各種 CGI ファイル (オンライン辞典など)
 - `lbs/style/reset.css`
-- `lbs/file/cookie.js`
-- `lbs/file/jquery.js`
-- `lbs/file/xdomain.js`
+- `lbs/file/script/cookie.js`
+- `lbs/file/script/jquery.js`
+- `lbs/file/script/xdomain.js`
 - `lbs/file/application/` 以下にある画像ファイル
 - `lbs/file/character/` 以下にある画像ファイル
 - `lbs/file/cource/` 以下にある PDF ファイル
