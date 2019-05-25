@@ -13,7 +13,7 @@ SERVER_PATH = "C:/Apache24/htdocs"
 
 Kernel.load(BASE_PATH + "/converter/parser.rb")
 Kernel.load(BASE_PATH + "/converter/utility.rb")
-Kernel.load(SERVER_PATH + "/lbs/file/module/2.rb")
+Kernel.load(BASE_PATH + "/converter/word_converter.rb")
 Encoding.default_external = "UTF-8"
 $stdout.sync = true
 
@@ -284,7 +284,7 @@ class WholeZiphilConverter
       output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
       output_path = modify_extension(output_path)
       Kernel.system("sass --style expanded --no-cache #{path}:#{output_path}")
-    when "css"
+    when "css", "rb", "cgi", "js"
       output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
       FileUtils.copy(path, output_path)
     end
@@ -330,7 +330,7 @@ class WholeZiphilConverter
         directories << default
         directories.each do |directory|
           Dir.each_child(directory) do |entry|
-            if entry =~ /\.zml/
+            if entry =~ /\.\w+$/
               paths << [directory + "/" + entry, language]
             end
             unless entry =~ /\./
