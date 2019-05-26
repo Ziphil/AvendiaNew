@@ -186,19 +186,18 @@ class WholeZiphilConverter
   LOG_SIZE = 1000
 
   def initialize(args)
-    force_upload = false
-    if args[0] == "-l"
-      args.shift
+    options, rest_args = args.partition{|s| s =~ /^\-\w$/}
+    upload = false
+    if options.include?("-l")
       @mode = :log
     else
-      if args[0] == "-f"
-        force_upload = true
-        args.shift
+      if options.include?("-u")
+        upload = true
       end
       @mode = :normal
     end
-    @paths = create_paths(args)
-    @ftp, @user = create_ftp(force_upload || !args.empty?)
+    @paths = create_paths(rest_args)
+    @ftp, @user = create_ftp(upload)
     @converter = create_converter
   end
 
