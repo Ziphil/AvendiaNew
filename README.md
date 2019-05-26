@@ -31,16 +31,23 @@ SERVER_PATH = "C:/Apache24/htdocs"
 - ログイン用のパスワード
 
 ## 生成
-以下のコマンドを実行すると、サイトの全てのページが出力ディレクトリに生成されます。
+サイトの全てのページを出力ディレクトリに生成するには、以下のコマンドを実行してください。
 ```
 ruby converter/converter.rb
 ```
-生成と同時にファイルをサーバーにアップロードしたい場合は、オプション `-f` を付けてください。
+生成と同時にファイルをサーバーにアップロードしたいときは、オプション `-u` を付けてください。
+```
+ruby converter/converter.rb -u
+```
 
 全てのページではなく特定のページのみを生成したい場合は、以下のコマンドを実行してください。
-このとき、生成されたページが自動的にサーバーにアップロードされます。
+ファイルのパスは空白区切りで複数指定することができます。
 ```
 ruby converter/converter.rb (ファイル名の絶対パス)
+```
+この場合も、生成と同時にファイルをサーバーにアップロードしたいときは、オプション `-u` を付けてください。
+```
+ruby converter/converter.rb -u (ファイル名の絶対パス)
 ```
 
 以下のコマンドによって、特定のファイルを更新したことをスクリプトに通知し、そのことを更新履歴として記録できます。
@@ -53,23 +60,23 @@ ruby converter/converter.rb -l (ファイル名の絶対パス)
 
 ## 注意点
 現在オンライン上にアップロードされているファイルのうち、以下に該当するものはこのリポジトリに含まれていません。
-『Avendia』を完全に再現するためには、これらのファイルは別途用意する必要があります。
+したがって、『Avendia』を完全に再現するためには、これらのファイルは別途用意する必要があります。
 
 - .htaccess ファイル
 - 各種 CGI ファイル (オンライン辞典など)
-- `lbs/style/reset.css`
-- `lbs/file/script/cookie.js`
-- `lbs/file/script/jquery.js`
-- `lbs/file/script/xdomain.js`
-- `lbs/file/application/` 以下にある画像ファイル
-- `lbs/file/character/` 以下にある画像ファイル
-- `lbs/file/cource/` 以下にある PDF ファイル
-- `lbs/file/dictionary/` 以下にある辞書データ関連ファイル
-- `lbs/file/game/` 以下にある画像ファイル
-- `lbs/file/grammer/` 以下にある PDF ファイル
-- `lbs/file/mathematics/` 以下にある PDF ファイル
-- `lbs/file/mathematics_diary/` 以下にある PDF ファイル
-- `lbs/file/other/` 以下にある画像ファイル
+- `document/ja/style/reset.css`
+- `document/ja/file/script/cookie.js`
+- `document/ja/file/script/jquery.js`
+- `document/ja/file/script/xdomain.js`
+- `document/ja/file/application/` 以下にある画像ファイル
+- `document/ja/file/character/` 以下にある画像ファイル
+- `document/ja/file/cource/` 以下にある PDF ファイル
+- `document/ja/file/dictionary/` 以下にある辞書データ関連ファイル
+- `document/ja/file/game/` 以下にある画像ファイル
+- `document/ja/file/grammer/` 以下にある PDF ファイル
+- `document/ja/file/mathematics/` 以下にある PDF ファイル
+- `document/ja/file/mathematics_diary/` 以下にある PDF ファイル
+- `document/ja/file/other/` 以下にある画像ファイル
 
 ## その他
 各種ページの原稿は [ZenML](https://github.com/Ziphil/Zenithal) で書かれていて、このスクリプトによって HTML に変換しています。
