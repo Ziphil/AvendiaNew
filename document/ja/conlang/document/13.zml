@@ -7,158 +7,226 @@
 
   \h1<目次>
   \section-table>
-  \h1<品詞>
-  \h2|id="s"|<品詞\fl<sort>>
-  \p<
-    各単語にちょうど 1 つ割り当てられている単語の分類。
-    \an|href="#vi"|<動詞型不定詞>, \an|href="#ni"|<名詞型不定詞>, \an|href="#bi"|<副詞型不定詞>, \an|href="#func"|<機能詞>, \an|href="#part"|<助接詞>, \an|href="#conn"|<連結詞>, 間投詞の 7 種類がある。
-  >
+  \h1<語彙的品詞>
   \h2|id="lc"|<語彙的品詞\fl<lexical category>>
   \p<
-    \an|href="#s"|<品詞>の別名。
+    各単語にちょうど 1 つ割り当てられている分類。
+    \an|href="#vi"|<動辞>, \an|href="#ni"|<名辞>, \an|href="#bi"|<副辞>, \an|href="#func"|<機能辞>, \an|href="#part"|<助接辞>, \an|href="#conn"|<連結辞>, 間投辞の 7 種類がある。
   >
-  \h2|id="i"|<不定詞\fl<infinitive>>
+  \h2|id="s"|<品詞\fl<sort>>
   \p<
-    いわゆる (機能語と比較した) 内容語に相当する\an|href="#s"|<品詞>。
-    \an|href="#vi"|<動詞型>, \an|href="#ni"|<名詞型>, \an|href="#bi"|<副詞型>の 3 種類がある。
+    \an|href="#lc"|<語彙的品詞>の別名。
   >
-  \h2|id="vi"|<動詞型不定詞\fl<verbal infinitive>>
+  \h2|id="i"|<不定辞\fl<infinitive>>
   \p<
-    動詞, 名詞, 形容詞, 副詞の 4 種類の品詞用法をとることができる\an|href="#i"|<不定詞>。
-    副詞としてして使われるときは、必ず\an|href="#vb"|<動詞修飾型副詞>になる。
+    いわゆる (機能語と比較した) 内容語に相当する\an|href="#s"|<語彙的品詞>。
+    \an|href="#vi"|<動辞>, \an|href="#ni"|<名辞>, \an|href="#bi"|<副辞>の 3 種類にさらに分かれる。
   >
-  \h2|id="ni"|<名詞型不定詞\fl<nominal infinitive>>
+  \h2|id="vi"|<動辞\fl<verbal>>
   \p<
-    名詞のみを品詞用法としてとることができる\an|href="#i"|<不定詞>。
+    動詞, 名詞, 形容詞, 副詞の 4 種類の文法的品詞をとることができる\an|href="#i"|<不定辞>。
+    副詞として使われるときは、必ず\an|href="#vb"|<動詞修飾副詞>になる。
   >
-  \h2|id="bi"|<副詞型不定詞\fl<adverbial infinitive>>
+  \h2|id="ni"|<名辞\fl<nominal>>
   \p<
-    副詞のみを品詞用法としてとることができる\an|href="#i"|<不定詞>。
-    副詞として使われるときは、\an|href="#mb"|<修飾詞修飾型副詞>もしくは\an|href="#sb"|<特殊副詞>になる。
+    名詞のみを文法的品詞としてとることができる\an|href="#i"|<不定辞>。
   >
-  \h2|id="func"|<機能詞\fl<functional>>
+  \h2|id="bi"|<副辞\fl<adverbial>>
+  \p<
+    副詞のみを文法的品詞としてとることができる\an|href="#i"|<不定辞>。
+    副詞として使われるときは、\an|href="#mb"|<修飾詞修飾副詞>もしくは\an|href="#sb"|<特殊副詞>になる。
+  >
+  \h2|id="func"|<機能辞\fl<functional>>
   \p<
     {pa} もしくは {kin} のこと。
   >
-  \h2|id="ifunc"|<疑問機能詞\fl<interrogative functional>>
+  \h2|id="ifunc"|<疑問機能辞\fl<interrogative functional>>
   \p<
     {pa} のこと。
     節の初めに置いて、その節が疑問文 (もしくは反語文) であることを明示する。
   >
-  \h2|id="cfunc"|<節化機能詞\fl<clausal functional>>
+  \h2|id="cfunc"|<節化機能辞\fl<clausal functional>>
   \p<
     {kin} のこと。
     節の前に置くことで、名詞節を作る。
   >
-  \h2|id="part"|<助接詞\fl<particle>>
+  \h2|id="part"|<助接辞\fl<particle>>
   \p<
-    助詞, 接続詞の 2 種類の品詞用法をとることができる\an|href="#s"|<品詞>。
-    その用法に応じて、\an|href="#npart"|<一般助接詞>と\an|href="#spart"|<特殊助接詞>に分けられる。
+    助詞, 接続詞の 2 種類の文法的品詞をとることができる\an|href="#s"|<語彙的品詞>。
+    その用法に応じて、\an|href="#npart"|<一般助接辞>と\an|href="#spart"|<特殊助接辞>に分けられる。
   >
-  \h2|id="npart"|<一般助接詞\fl<normal particle>>
+  \h2|id="npart"|<一般助接辞\fl<normal particle>>
   \p<
-    \an|href="#stem"|<語幹>だけで用いることができる\an|href="#part"|<助接詞>。
+    \an|href="#stem"|<語幹>だけで用いることができる\an|href="#part"|<助接辞>。
     多くの助接詞はここに分類される。
   >
-  \h2|id="bpart"|<基本助接詞\fl<basic particle>>
+  \h2|id="bpart"|<基本助接辞\fl<basic particle>>
   \p<
-    \an|href="#npart"|<一般助接詞>のうち {a}, {e}, {ca}, {zi}, {li} の総称。
+    \an|href="#npart"|<一般助接辞>のうち {a}, {e}, {ca}, {zi}, {li} の 5 つの総称。
     この 5 つは、助詞として用いられたときの意味が、助詞自身によって決められるのではなく、修飾している動詞によって決められるという特徴がある。
   >
-  \h2|id="spart"|<特殊助接詞\fl<special particle>>
+  \h2|id="spart"|<特殊助接辞\fl<special particle>>
   \p<
-    \an|href="#stem"|<語幹>だけでは用いることができない、すなわち常に\an|href="#nvmpart"|<非動詞修飾形>で用いられる\an|href="#part"|<助接詞>。
+    \an|href="#stem"|<語幹>だけでは用いることができない、すなわち常に\an|href="#nvmpart"|<非動詞修飾形>で用いられる\an|href="#part"|<助接辞>。
     ただし、\an|href="#vmpart"|<動詞修飾形>を用いる特殊構文もとれるので、あくまで上の分類方法は原則である。
   >
-  \h2|id="conn"|<連結詞\fl<connective>>
+  \h2|id="conn"|<連結辞\fl<connective>>
   \p<
-    常に接続詞として使われる\an|href="#s"|<品詞>。
+    常に接続詞として使われる\an|href="#s"|<語彙的品詞>。
     このとき、同じ種類の語句を繋げて 1 つの意味のまとまりを作る役割を果たす。
     {o}, {á}, {é}, {à} とその\an|href="#afconn"|<別形>である {lo}, {lá}, {lé}, {dà} の 8 つのみ。
   >
-  \h1<品詞用法>
-  \h2|id="c"|<品詞用法\fl<category>>
+  \h1<語彙的品詞 (旧名称)>
+  \h2|id="io"|<不定詞\fl<infinitive>>
+  \p<
+    \an|href="i"|<不定辞>の別名。
+  >
+  \h2|id="vio"|<動詞型不定詞\fl<verbal infinitive>>
+  \p<
+    \an|href="vi"|<動辞>の別名。
+  >
+  \h2|id="nio"|<名詞型不定詞\fl<nominal infinitive>>
+  \p<
+    \an|href="ni"|<名辞>の別名。
+  >
+  \h2|id="bio"|<副詞型不定詞\fl<adverbial infinitive>>
+  \p<
+    \an|href="bi"|<副辞>の別名。
+  >
+  \h2|id="funco"|<機能詞\fl<functional>>
+  \p<
+    \an|href="func"|<機能辞>の別名。
+  >
+  \h2|id="ifunco"|<疑問機能詞\fl<interrogative functional>>
+  \p<
+    \an|href="ifunc"|<疑問機能辞>の別名。
+  >
+  \h2|id="cfunco"|<節化機能詞\fl<clausal functional>>
+  \p<
+    \an|href="cfunc"|<節化機能辞>の別名。
+  >
+  \h2|id="parto"|<助接詞\fl<particle>>
+  \p<
+    \an|href="part"|<助接辞>の別名。
+  >
+  \h2|id="nparto"|<一般助接詞\fl<normal particle>>
+  \p<
+    \an|href="npart"|<一般助接辞>の別名。
+  >
+  \h2|id="bparto"|<基本助接詞\fl<basic particle>>
+  \p<
+    \an|href="bpart"|<基本助接辞>の別名。
+  >
+  \h2|id="sparto"|<特殊助接詞\fl<special particle>>
+  \p<
+    \an|href="i"|<特殊助接辞>の別名。
+  >
+  \h2|id="conno"|<連結詞\fl<connective>>
+  \p<
+    \an|href="i"|<連結辞>の別名。
+  >
+  \h1<文法的品詞>
+  \h2|id="gc"|<文法的品詞\fl<grammatical category>>
   \p<
     文中の単語がどのような役割を果たしているかを表す分類。
     動詞, 名詞, 形容詞, 副詞, 助詞, 接続詞, 間投詞の 7 種類がある。
-    他の言語の文脈で「品詞」と呼ばれるものは、シャレイア語ではこの品詞用法に当たるので注意すること。
+    他の言語の文脈で「品詞」と呼ばれるものは、シャレイア語ではこの文法的品詞に当たるので注意すること。
   >
   \p<
-    文中での単語の役割を表すので、文なしで単語だけを取り出して、その単語の品詞用法は何かを問うことはできない。
-    しかし、例えば「動詞 {sôd} は～」のように、単語だけで品詞用法が決まっているかのように述べることがあるが、これは「{sôd} が動詞として使われたときは～」を省略して言っているにすぎない。
+    文中での単語の役割を表すので、文なしで単語だけを取り出して、その単語の文法的品詞が何かを問うことはできない。
+    例えば「動詞 {sôd} は～」のように、単語だけで文法的品詞が決まっているかのように述べることがあるが、これは「{sôd} が動詞として使われたときは～」を省略して言っているにすぎない。
   >
   \p<
-    1 つの単語が文中でとることができる品詞用法は、その単語の品詞によって決まっている。
+    1 つの単語が文中でとることができる文法的品詞は、その単語の語彙的品詞によって決まっている。
   >
-  \h2|id="gc"|<文法的品詞\fl<grammatical category>>
+  \h2|id="c"|<品詞用法\fl<category>>
   \p<
-    \an|href="#s"|<品詞用法>の別名。
+    \an|href="#gc"|<文法的品詞>の別名。
   >
   \h2|id="mod"|<修飾詞\fl<modificative>>
   \p<
     形容詞と副詞の総称。
   >
-  \h2|id="na"|<主格型形容詞\fl<nominative adjective>>
-  \p<
-    被修飾語が動詞として使われたときの {a} 句に対応する形容詞。
-  >
-  \h2|id="aa"|<対格型形容詞\fl<accusative adjective>>
-  \p<
-    被修飾語が動詞として使われたときの {e} 句に対応する形容詞。
-  >
-  \h2|id="vb"|<動詞修飾型副詞\fl<verb-modifying adverb>>
+  \h2|id="vb"|<動詞修飾副詞\fl<verb-modifying adverb>>
   \p<
     動詞を修飾する副詞。
     さらに \an|href="#vba"|<I 型>と \an|href="#vbb"|<II 型>に分かれる。
-    必ず\an|href="#vi"|<動詞型不定詞>由来になる。
+    必ず\an|href="#vi"|<動辞>由来になる。
   >
-  \h2|id="vba"|<動詞修飾 I 型副詞\fl<verb-modifying adverb I>>
-  \p<
-    動詞が表す動作の様子を表す副詞。
-    「速く走る」の「速く ({vit})」や「そっと叩く」の「そっと ({fimer})」などが該当する。
-  >
-  \h2|id="vbb"|<動詞修飾 II 型副詞\fl<verb-modifying adverb II>>
-  \p<
-    文構造上は動詞を修飾するが、意味的には文全体を修飾する副詞。
-    「ときどき ({têl})」や「突然 ({bazis})」などが該当する。
-  >
-  \h2|id="mb"|<修飾詞修飾型副詞\fl<modificative-modifying adverb>>
+  \h2|id="mb"|<修飾詞修飾副詞\fl<modificative-modifying adverb>>
   \p<
     \an|href="#mod"|<修飾詞>を修飾する副詞。
     「とても ({bam})」や「最も ({hiv})」などが該当する。
-    必ず\an|href="#vi"|<副詞型不定詞>由来になる。
+    必ず\an|href="#vi"|<副辞>由来になる。
   >
   \h2|id="sb"|<特殊副詞\fl<special adverb>>
   \p<
-    様々な\an|href="#c"|<品詞用法>の単語を修飾し得る副詞。
-    動詞修飾型副詞にも形容詞修飾型副詞にも分類できない副詞がここに分類される。
+    様々な\an|href="#c"|<文法的品詞>の単語を修飾し得る副詞。
+    動詞修飾副詞にも修飾詞修飾副詞にも分類できない副詞がここに分類される。
     「だけ ({tut})」などが該当する。
-    必ず\an|href="#vi"|<副詞型不定詞>由来になる。
+    必ず\an|href="#vi"|<副辞>由来になる。
   >
-  \h2|id="ab"|<形容詞修飾型副詞\fl<adjective-modifying adverb>>
+  \h2|id="ab"|<形容詞修飾副詞\fl<adjective-modifying adverb>>
   \p<
-    \an|href="#mb"|<修飾詞修飾型副詞>の別名。
-    実際は副詞も修飾するにも関わらず、この名前では形容詞のみを修飾するかのような印象を与えるので、\h<2157> 以降あまりこの用語を使わないようになった。
+    \an|href="#mb"|<修飾詞修飾副詞>の別名。
+    実際は副詞も修飾できるにも関わらず、この名前では形容詞のみを修飾するかのような印象を与えるので、\h<2157> 以降あまりこの用語を使わないようになった。
   >
   \h2|id="ba"|<A 型副詞\fl<adverb of type A>>
   \p<
-    \an|href="#vb"|<動詞修飾型副詞>の別名。
-  >
-  \h2|id="baa"|<A\sub<1> 型副詞\fl<adverb of type A\sub<1>>>
-  \p<
-    \an|href="#vb"|<動詞修飾 I 型副詞>の別名。
-  >
-  \h2|id="bab"|<A\sub<2> 型副詞\fl<adverb of type A\sub<2>>>
-  \p<
-    \an|href="#vb"|<動詞修飾 II 型副詞>の別名。
+    \an|href="#vb"|<動詞修飾副詞>の別名。
   >
   \h2|id="bb"|<B 型副詞\fl<adverb of type B>>
   \p<
-    \an|href="#mb"|<修飾詞修飾型副詞>の別名。
+    \an|href="#mb"|<修飾詞修飾副詞>の別名。
   >
   \h2|id="bc"|<C 型副詞\fl<adverb of type C>>
   \p<
     \an|href="#sb"|<特殊副詞>の別名。
+  >
+  \h1<動詞と形容詞の意味関係>
+  \h2|id="cna"|<継続主格型\fl<continuous-nominative>>
+  \p<
+    形容詞として使った場合の被修飾語が、動詞として継続相で使った場合の {a} 句に対応するもの。
+  >
+  \h2|id="caa"|<継続対格型\fl<continuous-accusative>>
+  \p<
+    形容詞として使った場合の被修飾語が、動詞として継続相で使った場合の {e} 句に対応するもの。
+  >
+  \h2|id="pna"|<経過主格型\fl<progressive-nominative>>
+  \p<
+    形容詞として使った場合の被修飾語が、動詞として経過相で使った場合の {a} 句に対応するもの。
+  >
+  \h2|id="paa"|<経過対格型\fl<progressive-accusative>>
+  \p<
+    形容詞として使った場合の被修飾語が、動詞として経過相で使った場合の {e} 句に対応するもの。
+  >
+  \h1<形容詞と副詞の意味関係>
+  \h2|id="vba"|<I 型\fl<of type I>>
+  \p<
+    副詞として使われると、動詞が表す動作の様子を表すもの。
+  >
+  \p<
+    \h<2684> に形容詞と副詞の意味関係の分類の改定を行った際、従来 I 型に分類されていたものは III 型, III＋ 型, IV 型, IV' 型に再分類されたため、現在この用語が使われることはない。
+  >
+  \h2|id="vbb"|<II 型\fl<of type II>>
+  \p<
+    副詞として使われると、文構造上は動詞を修飾するが、意味的には形容詞として使われたときの意味で文全体を修飾するもの。
+    「ときどき ({têl})」や「突然 ({bazis})」などが該当する。
+  >
+  \h2|id="vbbp"|<II＋ 型\fl<of type II+>>
+  \h2|id="vbc"|<III 型\fl<of type III>>
+  \h2|id="vbcp"|<III＋ 型\fl<of type III+>>
+  \h2|id="vbd"|<IV 型\fl<of type IV>>
+  \h2|id="vbdp"|<IV' 型\fl<of type IV'>>
+  \h2|id="baa"|<A\sub<1> 型\fl<of type A\sub<1>>>
+  \p<
+    \an|href="#vb"|<I 型>の別名。
+    この名称は、形容詞と副詞の意味上の関係を表しているにも関わらず、「A\sub<1> 型副詞」のように副詞そのものの分類であるかのように使われていた。
+  >
+  \h2|id="bab"|<A\sub<2> 型\fl<of type A\sub<2>>>
+  \p<
+    \an|href="#vb"|<II 型>の別名。
+    この名称は、形容詞と副詞の意味上の関係を表しているにも関わらず、「A\sub<2> 型副詞」のように副詞そのものの分類であるかのように使われていた。
   >
   \h1<時制>
   \h2|id="prsts"|<現在時制\fl<present tense>>
@@ -381,19 +449,23 @@
   \p<
     単語の前や後ろについて合成語を作る形態素。
     単語として扱うことはない。
-    また、名前から紛らわしいが、\an|href="#s"|<品詞>でも\an|href="#c"|<品詞用法>でもない。
+    また、名前から紛らわしいが、\an|href="#lc"|<語彙的品詞>でも\an|href="#gc"|<文法的品詞>でもない。
   >
   \p<
     5 代 5 期からは、全ての合成語は既存の単語の\an|href="#celem"|<合成成分>を組み合わせて作ることになったため、これはなくなった。
   >
-  \h2|id="qdeco"|<準飾詞\fl<quasidecorative>>
+  \h2|id="qdeco"|<準飾辞\fl<quasidecorative>>
   \p<
     既存の単語の\an|href="#celem"|<合成成分>のうち、よく他の単語と合成されて新しい合成語を作るもの。
     「～語」を表す {qilox} 由来の [qil] や、「～の程度」を表す {takit} 由来の [tak] などがある。
-    単語として扱うことはなく、\an|href="#s"|<品詞>でも\an|href="#c"|<品詞用法>でもない。
+    単語として扱うことはなく、\an|href="#lc"|<語彙的品詞>でも\an|href="#gc"|<文法的品詞>でもない。
   >
   \p<
     5 代 5 期で\an|href="#deco"|<飾詞>が廃止されたが、よく使われる特定の単語の合成成分が似たような役割を果たしていることから、こう呼ぶようになった。
+  >
+  \h2|id="qdecoo"|<準飾詞\fl<quasidecorative>>
+  \p<
+    \an|href="qdeco"|<準飾辞>の別名。
   >
   \h2|id="nabl"|<名詞化アプラウト\fl<nominalising ablaut>>
   \p<
