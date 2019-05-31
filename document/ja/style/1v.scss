@@ -9,23 +9,23 @@
 
 
 // 基本色相
-$primary-hue: 260;
-$secondary-hue: 320;
-$hovered-hue: 60;
+$primary-hue: 230;
+$secondary-hue: 200;
+$hovered-hue: 110;
 $caution-hue: 330;
 
 // 基本色
-$highlight-background-color: hsl($primary-hue, 50%, 60%);
-$hovered-highlight-background-color: hsl($hovered-hue, 50%, 50%);
-$light-background-color: hsl($secondary-hue, 90%, 98%);
-$hovered-light-background-color: hsl($hovered-hue, 90%, 93%);
-$dark-color: hsl($primary-hue, 80%, 40%);
+$highlight-background-color: hsl($primary-hue, 40%, 50%);
+$hovered-highlight-background-color: hsl($hovered-hue, 35%, 45%);
+$light-background-color: hsl($secondary-hue, 90%, 95%);
+$hovered-light-background-color: hsl($hovered-hue, 90%, 95%);
+$dark-color: hsl($primary-hue, 80%, 30%);
 $white-color: hsl($primary-hue, 30%, 98%);
 $black-color: hsl($primary-hue, 30%, 20%);
 
 // 基本背景
-$highlight-background: custom-gradient($highlight-background-color, -10);
-$hovered-highlight-background: custom-gradient($hovered-highlight-background-color, 10);
+$highlight-background: custom-gradient($highlight-background-color, -20);
+$hovered-highlight-background: custom-gradient($hovered-highlight-background-color, -30);
 $light-background: $light-background-color;
 $hovered-light-background: $hovered-light-background-color;
 
@@ -114,12 +114,12 @@ $subsection-color: $dark-color;
 // テキスト色 > セクション番号などの薄い文字
 $gray-color: hsl($secondary-hue, 0%, 70%);
 // テキスト色 > リンク
-$link-color: hsl($secondary-hue, 50%, 50%);
-$hovered-link-color: hsl($hovered-hue, 50%, 50%);
+$link-color: hsl($secondary-hue, 50%, 40%);
+$hovered-link-color: hsl($hovered-hue, 50%, 40%);
 // テキスト色 > 無効リンク
 $invalid-color: hsl($secondary-hue, 0%, 70%);
 // テキスト色 > 箇条書きのマーカー
-$list-marker-color: hsl($secondary-hue, 50%, 60%);
+$list-marker-color: hsl($secondary-hue, 50%, 50%);
 // テキスト色 > エラーコード
 $error-code-color: $highlight-background-color;
 // テキスト色 > エラーメッセージ
@@ -133,7 +133,7 @@ $footer-icon-color: $highlight-background-color;
 $hovered-footer-icon-color: $hovered-highlight-background-color;
 
 // 罫線色 > 全体
-$border-color: hsl($secondary-hue, 50%, 60%);
+$border-color: hsl($secondary-hue, 50%, 50%);
 
 // フォントサイズ > 全体
 $font-size: 16px;
