@@ -63,7 +63,6 @@ ruby converter/converter.rb -l (ファイル名の絶対パス)
 したがって、『Avendia』を完全に再現するためには、これらのファイルは別途用意する必要があります。
 
 - .htaccess ファイル
-- 各種 CGI ファイル (オンライン辞典など)
 - `document/ja/style/reset.css`
 - `document/ja/file/script/cookie.js`
 - `document/ja/file/script/jquery.js`
