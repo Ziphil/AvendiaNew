@@ -33,7 +33,7 @@ class Tag
     @content << content
   end
 
-  def head
+  def at_head
     outer_self = self
     delegator = SimpleDelegator.new(outer_self)
     delegator.define_singleton_method(:<<) do |content|

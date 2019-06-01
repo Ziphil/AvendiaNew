@@ -250,12 +250,12 @@ converter.add(["p"], ["page"]) do |element|
   this << Tag.build("p") do |this|
     this << apply(element, "page")
     if element.attribute("par")
-      this.head << Tag.build("span", "paragraph") do |this|
+      this.at_head << Tag.build("span", "paragraph") do |this|
         this << element.attribute("par").to_s
       end
     end
     if element.attribute("name")
-      this.head << Tag.build("span", "name") do |this|
+      this.at_head << Tag.build("span", "name") do |this|
         this << element.attribute("name").to_s
       end
     end
