@@ -78,6 +78,14 @@ end
 
 class Element
 
+  def [](key)
+    return attribute(key).to_s
+  end
+
+  def []=(key, value)
+    add_attribute(key, value)
+  end
+
   def inner_text(compress = false)
     text = XPath.match(self, ".//text()").map{|s| s.value}.join("")
     if compress

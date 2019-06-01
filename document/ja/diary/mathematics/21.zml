@@ -4,14 +4,6 @@
 \page<
   \name<2-極限>
 
-  \h1<閲覧>
-  \pdf|src="../../file/mathematics_diary/21.pdf"|>
-  \h1<PDF ダウンロード>
-  \p<
-    ブラウザが PDF ファイルの表示に対応していない場合は、以下のリンクから PDF ファイルを直接ダウンロードしてください。
-  >
-  \form<
-    \a|class="form",href="../../file/mathematics_diary/21.pdf"|<ダウンロード>
-  >
+  &math-pdf|number="21"|>
 
 >
