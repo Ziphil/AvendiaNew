@@ -24,21 +24,21 @@
     \li<
       \sh<{pa medelat e qikov aquk? xílac olov a cadìq i cit se abig.}>\ja<あのパソコン壊れてるの? ずっと画面が青く光ってるけど。>
       \gloss<
-        \li|auto="pa"|>
-        \li|conj="-at"|<\sh<{medel}>\ex<壊す>>
-        \li|auto="e"|>
-        \li<\sh<{qikov}>\ex<パソコン>>
-        \li|conj="a-"|<\sh<{quk}>\ex<あの>>
-        \li|punc="?"|>
-        \li|conj="-ac"|<\sh<{xíl}>\ex<光る>>
-        \li|conj="o-"|<\sh<{lov}>\ex<ずっと>>
-        \li|auto="a"|>
-        \li<\sh<{cadìq}>\ex<画面>>
-        \li|conj="i-"|<\sh<∅>\ex<～の>>
-        \li<\sh<{cit}>\ex<それ>>
-        \li<\sh<{se}>\ex<～の状態で>>
-        \li|conj="a-"|<\sh<{big}>\ex<青い>>
-        \li|punc="."|>
+        &lig|auto="pa"|>
+        &lig|conj="-at"|<\sh<{medel}>\ex<壊す>>
+        &lig|auto="e"|>
+        &lig<\sh<{qikov}>\ex<パソコン>>
+        &lig|conj="a-"|<\sh<{quk}>\ex<あの>>
+        &lig|punc="?"|>
+        &lig|conj="-ac"|<\sh<{xíl}>\ex<光る>>
+        &lig|conj="o-"|<\sh<{lov}>\ex<ずっと>>
+        &lig|auto="a"|>
+        &lig<\sh<{cadìq}>\ex<画面>>
+        &lig|conj="i-"|<\sh<∅>\ex<～の>>
+        &lig<\sh<{cit}>\ex<それ>>
+        &lig<\sh<{se}>\ex<～の状態で>>
+        &lig|conj="a-"|<\sh<{big}>\ex<青い>>
+        &lig|punc="."|>
       >
     >
   >
@@ -52,20 +52,20 @@
     \li<
       \sh<{kofides a tel vo naflat e tílirsítpiv. pa kodis e zel anissarac?}>\ja<公園で四つ葉のクローバーを見つけたんだ。何か良いことあるかな?>
       \gloss<
-        \li|conj="-es"|<\sh<{kofid}>\ex<見つける>>
-        \li|auto="a"|>
-        \li<\sh<{tel}>\ex<私>>
-        \li<\sh<{vo}>\ex<～の場所で>>
-        \li<\sh<{naflat}>\ex<公園>>
-        \li|auto="e"|>
-        \li<\sh<{tílirsítpiv}>\ex<四つ葉のクローバー>>
-        \li|punc="."|>
-        \li|auto="pa"|>
-        \li|conj="-is"|<\sh<{kod}>\ex<起こす>>
-        \li|auto="e"|>
-        \li<\sh<{zel}>\ex<こと>>
-        \li|conj="a-"|<\sh<{nissarac}>\ex<幸運な>>
-        \li|punc="?"|>
+        &lig|conj="-es"|<\sh<{kofid}>\ex<見つける>>
+        &lig|auto="a"|>
+        &lig<\sh<{tel}>\ex<私>>
+        &lig<\sh<{vo}>\ex<～の場所で>>
+        &lig<\sh<{naflat}>\ex<公園>>
+        &lig|auto="e"|>
+        &lig<\sh<{tílirsítpiv}>\ex<四つ葉のクローバー>>
+        &lig|punc="."|>
+        &lig|auto="pa"|>
+        &lig|conj="-is"|<\sh<{kod}>\ex<起こす>>
+        &lig|auto="e"|>
+        &lig<\sh<{zel}>\ex<こと>>
+        &lig|conj="a-"|<\sh<{nissarac}>\ex<幸運な>>
+        &lig|punc="?"|>
       >
     >
   >
@@ -78,19 +78,19 @@
     \li<
       \sh<{kòdet ca kevcaq acik e “e agipik! befolat e kûv!”.}>\ja<その看板には「危険! 立入禁止!」と書かれていた。>
       \gloss<
-        \li|conj="-et"|<\sh<{kòd}>\ex<書く>>
-        \li|auto="ca"|>
-        \li<\sh<{kevcaq}>\ex<看板>>
-        \li|conj="a-"|<\sh<{cik}>\ex<その>>
-        \li|auto="e"|>
-        \li|punc="“"|>
-        \li|auto="e"|>
-        \li|conj="a-"|<\sh<{gipik}>\ex<危険な>>
-        \li|punc="!"|>
-        \li|conj="-at"|<\sh<{befol}>\ex<禁止する>>
-        \li|auto="e"|>
-        \li<\sh<{kûv}>\ex<入ること>>
-        \li|punc="!”."|>
+        &lig|conj="-et"|<\sh<{kòd}>\ex<書く>>
+        &lig|auto="ca"|>
+        &lig<\sh<{kevcaq}>\ex<看板>>
+        &lig|conj="a-"|<\sh<{cik}>\ex<その>>
+        &lig|auto="e"|>
+        &lig|punc="“"|>
+        &lig|auto="e"|>
+        &lig|conj="a-"|<\sh<{gipik}>\ex<危険な>>
+        &lig|punc="!"|>
+        &lig|conj="-at"|<\sh<{befol}>\ex<禁止する>>
+        &lig|auto="e"|>
+        &lig<\sh<{kûv}>\ex<入ること>>
+        &lig|punc="!”."|>
       >
     >
   >
@@ -108,23 +108,23 @@
     \li<
       \sh<{nitdeles a tel e tédser, voltigat e a tific ivo fecil, ca met ayesaf.}>\ja<近所の子供に割られてしまった窓を新しいものに交換した。>
       \gloss<
-        \li|conj="-es"|<\sh<{nitdel}>\ex<交換する>>
-        \li|auto="a"|>
-        \li<\sh<{tel}>\ex<私>>
-        \li|auto="e"|>
-        \li<\sh<{tédser}>\ex<窓>>
-        \li|punc=","|>
-        \li|conj="-at"|<\sh<{voltig}>\ex<割る>>
-        \li|auto="e"|>
-        \li|auto="a"|>
-        \li<\sh<{tific}>\ex<子供>>
-        \li|conj="i-"|<\sh<{vo}>\ex<～の場所で>>
-        \li<\sh<{fecil}>\ex<周り>>
-        \li|punc=","|>
-        \li|auto="ca"|>
-        \li<\sh<{met}>\ex<それ>>
-        \li|conj="a-"|<\sh<{yesaf}>\ex<新しい>>
-        \li|punc="."|>
+        &lig|conj="-es"|<\sh<{nitdel}>\ex<交換する>>
+        &lig|auto="a"|>
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="e"|>
+        &lig<\sh<{tédser}>\ex<窓>>
+        &lig|punc=","|>
+        &lig|conj="-at"|<\sh<{voltig}>\ex<割る>>
+        &lig|auto="e"|>
+        &lig|auto="a"|>
+        &lig<\sh<{tific}>\ex<子供>>
+        &lig|conj="i-"|<\sh<{vo}>\ex<～の場所で>>
+        &lig<\sh<{fecil}>\ex<周り>>
+        &lig|punc=","|>
+        &lig|auto="ca"|>
+        &lig<\sh<{met}>\ex<それ>>
+        &lig|conj="a-"|<\sh<{yesaf}>\ex<新しい>>
+        &lig|punc="."|>
       >
     >
   >
@@ -146,23 +146,23 @@
     \li<
       \sh<{okosiz evêk, kétes a ces ca hif izi dèt e qinat axodol ile yen atisoqek.}>\ja<丁寧すぎるほどに、彼は机の上に 1 億円する絵画を置いた。>
       \gloss<
-        \li|conj="o-"|<\sh<{kosiz}>\ex<丁寧に>>
-        \li|conj="e-"|<\sh<{vêk}>\ex<あまりに>>
-        \li|punc=","|>
-        \li|conj="-es"|<\sh<{két}>\ex<置く>>
-        \li|auto="a"|>
-        \li<\sh<{ces}>\ex<彼>>
-        \li|auto="ca"|>
-        \li<\sh<{hif}>\ex<上>>
-        \li|conj="i-",auto="zi"|>
-        \li<\sh<{dèt}>\ex<机>>
-        \li|auto="e"|>
-        \li<\sh<{qinat}>\ex<絵画>>
-        \li|conj="a-"|<\sh<{xodol}>\ex<高価な>>
-        \li|conj="i-"|<\sh<{le}>\ex<～の数量で>>
-        \li<\sh<{yen}>\ex<円>>
-        \li|conj="a-"|<\sh<{tisoqek}>\ex<1 億>>
-        \li|punc="."|>
+        &lig|conj="o-"|<\sh<{kosiz}>\ex<丁寧に>>
+        &lig|conj="e-"|<\sh<{vêk}>\ex<あまりに>>
+        &lig|punc=","|>
+        &lig|conj="-es"|<\sh<{két}>\ex<置く>>
+        &lig|auto="a"|>
+        &lig<\sh<{ces}>\ex<彼>>
+        &lig|auto="ca"|>
+        &lig<\sh<{hif}>\ex<上>>
+        &lig|conj="i-",auto="zi"|>
+        &lig<\sh<{dèt}>\ex<机>>
+        &lig|auto="e"|>
+        &lig<\sh<{qinat}>\ex<絵画>>
+        &lig|conj="a-"|<\sh<{xodol}>\ex<高価な>>
+        &lig|conj="i-"|<\sh<{le}>\ex<～の数量で>>
+        &lig<\sh<{yen}>\ex<円>>
+        &lig|conj="a-"|<\sh<{tisoqek}>\ex<1 億>>
+        &lig|punc="."|>
       >
     >
   >
@@ -177,23 +177,23 @@
     \li<
       \sh<{vade xakalet te nîpes a tel zi kossax, kezisez a'l li litéz ca cêd.}>\ja<学校を出たときは晴れていたので、傘を学校に忘れてきてしまった。>
       \gloss<
-        \li<\sh<{vade}>\ex<～なので>>
-        \li|conj="-et"|<\sh<{xakal}>\ex<晴れる>>
-        \li<\sh<{te}>\ex<～するとき>>
-        \li|conj="-es"|<\sh<{nîp}>\ex<去る>>
-        \li|auto="a"|>
-        \li<\sh<{tel}>\ex<私>>
-        \li|auto="zi"|>
-        \li<\sh<{kossax}>\ex<学校>>
-        \li|punc=","|>
-        \li|conj="-ez"|<\sh<{kezis}>\ex<残る>>
-        \li|auto="a"|>
-        \li<\sh<{'l}>\ex<私>>
-        \li|auto="li"|>
-        \li<\sh<{litéz}>\ex<傘>>
-        \li|auto="ca"|>
-        \li<\sh<{cêd}>\ex<そこ>>
-        \li|punc="."|>
+        &lig<\sh<{vade}>\ex<～なので>>
+        &lig|conj="-et"|<\sh<{xakal}>\ex<晴れる>>
+        &lig<\sh<{te}>\ex<～するとき>>
+        &lig|conj="-es"|<\sh<{nîp}>\ex<去る>>
+        &lig|auto="a"|>
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="zi"|>
+        &lig<\sh<{kossax}>\ex<学校>>
+        &lig|punc=","|>
+        &lig|conj="-ez"|<\sh<{kezis}>\ex<残る>>
+        &lig|auto="a"|>
+        &lig<\sh<{'l}>\ex<私>>
+        &lig|auto="li"|>
+        &lig<\sh<{litéz}>\ex<傘>>
+        &lig|auto="ca"|>
+        &lig<\sh<{cêd}>\ex<そこ>>
+        &lig|punc="."|>
       >
     >
   >
@@ -210,22 +210,22 @@
     \li<
       \sh<{dulesos e'n ficavas okôk a vas ca zis vade dibemas a ces ca ces.}>\ja<謝ったからといって必ず許してもらえるわけではない。>
       \gloss<
-        \li|conj="du-os"|<\sh<{les}>\ex<する>>
-        \li|auto="e"|>
-        \li|auto="'n"|>
-        \li|conj="-as"|<\sh<{ficav}>\ex<許す>>
-        \li|conj="o-"|<\sh<{kôk}>\ex<必ず>>
-        \li|auto="a"|>
-        \li<\sh<{vas}>\ex<人>>
-        \li|auto="ca"|>
-        \li<\sh<{zis}>\ex<{ある人}>>
-        \li<\sh<{vade}>\ex<～なので>>
-        \li|conj="-as"|<\sh<{dibem}>\ex<謝る>>
-        \li|auto="a"|>
-        \li<\sh<{ces}>\ex<彼>>
-        \li|auto="ca"|>
-        \li<\sh<{ces}>\ex<彼>>
-        \li|punc="."|>
+        &lig|conj="du-os"|<\sh<{les}>\ex<する>>
+        &lig|auto="e"|>
+        &lig|auto="'n"|>
+        &lig|conj="-as"|<\sh<{ficav}>\ex<許す>>
+        &lig|conj="o-"|<\sh<{kôk}>\ex<必ず>>
+        &lig|auto="a"|>
+        &lig<\sh<{vas}>\ex<人>>
+        &lig|auto="ca"|>
+        &lig<\sh<{zis}>\ex<{ある人}>>
+        &lig<\sh<{vade}>\ex<～なので>>
+        &lig|conj="-as"|<\sh<{dibem}>\ex<謝る>>
+        &lig|auto="a"|>
+        &lig<\sh<{ces}>\ex<彼>>
+        &lig|auto="ca"|>
+        &lig<\sh<{ces}>\ex<彼>>
+        &lig|punc="."|>
       >
     >
   >
@@ -243,35 +243,35 @@
     \li<
       \sh<{di'dukezisoz a'c li cikik ca fêd. di'dulesos e'n pelnetas a'c te lôk avôl ilevo meris aqecet. di'dumafetos a'c e levkit.}>\ja<ここに持ち物を置いていくな。20 分以上うろつくな。ガラスに触るな。>
       \gloss<
-        \li<\sh<{di'}>>
-        \li|conj="du-oz"|<\sh<{kezis}>\ex<残る>>
-        \li|auto="a"|>
-        \li<\sh<{'c}>\ex<あなた>>
-        \li|auto="li"|>
-        \li<\sh<{cikik}>\ex<持ち物>>
-        \li|auto="ca"|>
-        \li<\sh<{fêd}>\ex<ここ>>
-        \li|punc="."|>
-        \li<\sh<{di'}>>
-        \li|conj="du-os"|<\sh<{les}>\ex<する>>
-        \li|auto="e"|>
-        \li|auto="'n"|>
-        \li|conj="-as"|<\sh<{pelnet}>\ex<うろつく>>
-        \li|auto="a"|>
-        \li<\sh<{'c}>\ex<あなた>>
-        \li<\sh<{te}>\ex<～のときに>>
-        \li<\sh<{lôk}>\ex<時間>>
-        \li|conj="a-"|<\sh<{vôl}>\ex<多い>>
-        \li|conj="i-"|<\sh<{levo}>\ex<～の数量以上で>>
-        \li<\sh<{meris}>\ex<分>>
-        \li|conj="a-"|<\sh<{qecet}>\ex<20>>
-        \li|punc="."|>
-        \li|conj="du-os"|<\sh<{mafet}>\ex<触る>>
-        \li|auto="a"|>
-        \li<\sh<{'c}>\ex<あなた>>
-        \li|auto="e"|>
-        \li<\sh<{levkit}>\ex<ガラス>>
-        \li|punc="."|>
+        &lig<\sh<{di'}>>
+        &lig|conj="du-oz"|<\sh<{kezis}>\ex<残る>>
+        &lig|auto="a"|>
+        &lig<\sh<{'c}>\ex<あなた>>
+        &lig|auto="li"|>
+        &lig<\sh<{cikik}>\ex<持ち物>>
+        &lig|auto="ca"|>
+        &lig<\sh<{fêd}>\ex<ここ>>
+        &lig|punc="."|>
+        &lig<\sh<{di'}>>
+        &lig|conj="du-os"|<\sh<{les}>\ex<する>>
+        &lig|auto="e"|>
+        &lig|auto="'n"|>
+        &lig|conj="-as"|<\sh<{pelnet}>\ex<うろつく>>
+        &lig|auto="a"|>
+        &lig<\sh<{'c}>\ex<あなた>>
+        &lig<\sh<{te}>\ex<～のときに>>
+        &lig<\sh<{lôk}>\ex<時間>>
+        &lig|conj="a-"|<\sh<{vôl}>\ex<多い>>
+        &lig|conj="i-"|<\sh<{levo}>\ex<～の数量以上で>>
+        &lig<\sh<{meris}>\ex<分>>
+        &lig|conj="a-"|<\sh<{qecet}>\ex<20>>
+        &lig|punc="."|>
+        &lig|conj="du-os"|<\sh<{mafet}>\ex<触る>>
+        &lig|auto="a"|>
+        &lig<\sh<{'c}>\ex<あなた>>
+        &lig|auto="e"|>
+        &lig<\sh<{levkit}>\ex<ガラス>>
+        &lig|punc="."|>
       >
     >
   >
@@ -300,21 +300,21 @@
     \li<
       \sh<{salet a sávak i ces e aqonef ebam iti dudéxat a dus teku cal.}>\ja<彼の授業はとてもつまらなく、その間に寝ていない者はいなかった。>
       \gloss<
-        \li|conj="-et"|<\sh<{sal}>\ex<である>>
-        \li|auto="a"|>
-        \li<\sh<{sácak}>\ex<授業>>
-        \li|conj="i-"|<\sh<∅>\ex<～の>>
-        \li<\sh<{ces}>\ex<彼>>
-        \li|auto="e"|>
-        \li|conj="a-"|<\sh<{qonef}>\ex<つまらない>>
-        \li|conj="e-"|<\sh<{bam}>\ex<とても>>
-        \li|conj="i-"|<\sh<{ti}>\ex<～するほど>>
-        \li|conj="du-at"|<\sh<{déx}>\ex<寝る>>
-        \li|auto="a"|>
-        \li<\sh<{dus}>\ex<誰も～ない>>
-        \li<\sh<{teku}>\ex<～の間中>>
-        \li<\sh<{cal}>\ex<そのこと>>
-        \li|punc="."|>
+        &lig|conj="-et"|<\sh<{sal}>\ex<である>>
+        &lig|auto="a"|>
+        &lig<\sh<{sácak}>\ex<授業>>
+        &lig|conj="i-"|<\sh<∅>\ex<～の>>
+        &lig<\sh<{ces}>\ex<彼>>
+        &lig|auto="e"|>
+        &lig|conj="a-"|<\sh<{qonef}>\ex<つまらない>>
+        &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
+        &lig|conj="i-"|<\sh<{ti}>\ex<～するほど>>
+        &lig|conj="du-at"|<\sh<{déx}>\ex<寝る>>
+        &lig|auto="a"|>
+        &lig<\sh<{dus}>\ex<誰も～ない>>
+        &lig<\sh<{teku}>\ex<～の間中>>
+        &lig<\sh<{cal}>\ex<そのこと>>
+        &lig|punc="."|>
       >
     >
   >
@@ -340,19 +340,19 @@
     \li<
       \sh<{vomoc becamos olof a ces vo zîd edif qetat vo a dat.}>\ja<彼女は何もないところでさえもよく転ぶ。>
       \gloss<
-        \li|conj="-oc"|<\sh<{vom}>\ex<繰り返す>>
-        \li|conj="-os"|<\sh<{becam}>\ex<転ぶ>>
-        \li|conj="o-"|<\sh<{lof}>\ex<よく>>
-        \li|auto="a"|>
-        \li<\sh<{ces}>\ex<彼女>>
-        \li<\sh<{vo}>\ex<～の場所で>>
-        \li<\sh<{zîd}>\ex<場所>>
-        \li|conj="e-"|<\sh<{dif}>\ex<さえ>>
-        \li|conj="-at"|<\sh<{qet}>\ex<ある>>
-        \li<\sh<{vo}>\ex<～の場所で>>
-        \li|auto="a"|>
-        \li<\sh<{dat}>\ex<何も～ない>>
-        \li|punc="."|>
+        &lig|conj="-oc"|<\sh<{vom}>\ex<繰り返す>>
+        &lig|conj="-os"|<\sh<{becam}>\ex<転ぶ>>
+        &lig|conj="o-"|<\sh<{lof}>\ex<よく>>
+        &lig|auto="a"|>
+        &lig<\sh<{ces}>\ex<彼女>>
+        &lig<\sh<{vo}>\ex<～の場所で>>
+        &lig<\sh<{zîd}>\ex<場所>>
+        &lig|conj="e-"|<\sh<{dif}>\ex<さえ>>
+        &lig|conj="-at"|<\sh<{qet}>\ex<ある>>
+        &lig<\sh<{vo}>\ex<～の場所で>>
+        &lig|auto="a"|>
+        &lig<\sh<{dat}>\ex<何も～ない>>
+        &lig|punc="."|>
       >
     >
   >
@@ -365,19 +365,19 @@
     \li<
       \sh<{â, derexaf. savat liqonis a tel e litéz ca fay.}>\ja<あっ、雨が降ってきた。娘に傘を届けに行かないと。>
       \gloss<
-        \li<\sh<{â}>\ex<あっ>>
-        \li|punc=","|>
-        \li|conj="-af"|<\sh<{derex}>\ex<雨が降る>>
-        \li|punc="."|>
-        \li|conj="-at"|<\sh<{sav}>\ex<した方が良くする>>
-        \li|conj="-is"|<\sh<{liqon}>\ex<持って行く>>
-        \li|auto="a"|>
-        \li<\sh<{tel}>\ex<私>>
-        \li|auto="e"|>
-        \li<\sh<{litéz}>\ex<傘>>
-        \li|auto="ca"|>
-        \li<\sh<{fay}>\ex<娘>>
-        \li|punc="."|>
+        &lig<\sh<{â}>\ex<あっ>>
+        &lig|punc=","|>
+        &lig|conj="-af"|<\sh<{derex}>\ex<雨が降る>>
+        &lig|punc="."|>
+        &lig|conj="-at"|<\sh<{sav}>\ex<した方が良くする>>
+        &lig|conj="-is"|<\sh<{liqon}>\ex<持って行く>>
+        &lig|auto="a"|>
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|auto="e"|>
+        &lig<\sh<{litéz}>\ex<傘>>
+        &lig|auto="ca"|>
+        &lig<\sh<{fay}>\ex<娘>>
+        &lig|punc="."|>
       >
     >
   >

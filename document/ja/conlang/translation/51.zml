@@ -20,36 +20,36 @@
       \sh<{e ʻalis, pôzac ovel ebam zi'n déqat a's ca zehrisis vo fîc ica hinof, lo kavat a's e dat dozat lesas e a's.}>
       \ja<アリスは、お姉さんの近くで堤防の上に座ることにうんざりしていた上に、しなければならないことが何もありませんでした。>
       \gloss<
-        \li|auto="e"|>
-        \li<\sh<{ʻalis}>\ex<アリス>>
-        \li|punc=","|>
-        \li|conj="-ac"|<\sh<{pôz}>\ex<うんざりさせる>>
-        \li|conj="o-"|<\sh<{vel}>\ex<>>
-        \li|conj="e-"|<\sh<{bam}>\ex<とても>>
-        \li|auto="zi"|>
-        \li|auto="'n"|>
-        \li|conj="-at"|<\sh<{déq}>\ex<座る>>
-        \li|auto="a"|>
-        \li<\sh<{'s}>\ex<彼女>>
-        \li|auto="ca"|>
-        \li<\sh<{zehrisis}>\ex<堤防>>
-        \li<\sh<{vo}>\ex<～の場所で>>
-        \li<\sh<{fîc}>\ex<近く>>
-        \li|auto="ca",conj="i-"|>
-        \li<\sh<{hinof}>\ex<姉>>
-        \li|punc=","|>
-        \li<\sh<{lo}>\ex<そして>>
-        \li|conj="-at"|<\sh<{kav}>\ex<もつ>>
-        \li|auto="a"|>
-        \li<\sh<{'s}>\ex<彼女>>
-        \li|auto="e"|>
-        \li<\sh<{dat}>\ex<何もない>>
-        \li|conj="-at"|<\sh<{doz}>\ex<しなければならなくする>>
-        \li|conj="-as"|<\sh<{les}>\ex<する>>
-        \li|auto="e"|>
-        \li|auto="a"|>
-        \li<\sh<{'s}>\ex<彼女>>
-        \li|punc="."|>
+        &lig|auto="e"|>
+        &lig<\sh<{ʻalis}>\ex<アリス>>
+        &lig|punc=","|>
+        &lig|conj="-ac"|<\sh<{pôz}>\ex<うんざりさせる>>
+        &lig|conj="o-"|<\sh<{vel}>\ex<>>
+        &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
+        &lig|auto="zi"|>
+        &lig|auto="'n"|>
+        &lig|conj="-at"|<\sh<{déq}>\ex<座る>>
+        &lig|auto="a"|>
+        &lig<\sh<{'s}>\ex<彼女>>
+        &lig|auto="ca"|>
+        &lig<\sh<{zehrisis}>\ex<堤防>>
+        &lig<\sh<{vo}>\ex<～の場所で>>
+        &lig<\sh<{fîc}>\ex<近く>>
+        &lig|auto="ca",conj="i-"|>
+        &lig<\sh<{hinof}>\ex<姉>>
+        &lig|punc=","|>
+        &lig<\sh<{lo}>\ex<そして>>
+        &lig|conj="-at"|<\sh<{kav}>\ex<もつ>>
+        &lig|auto="a"|>
+        &lig<\sh<{'s}>\ex<彼女>>
+        &lig|auto="e"|>
+        &lig<\sh<{dat}>\ex<何もない>>
+        &lig|conj="-at"|<\sh<{doz}>\ex<しなければならなくする>>
+        &lig|conj="-as"|<\sh<{les}>\ex<する>>
+        &lig|auto="e"|>
+        &lig|auto="a"|>
+        &lig<\sh<{'s}>\ex<彼女>>
+        &lig|punc="."|>
       >
     >
   >
@@ -59,32 +59,32 @@
       \sh<{zesqikas a ces la tal al'atis é al'aqec e xoq lîdac e a hinof, dà dukavat a cit e qinat o lek.}>
       \ja<彼女は 1 度か 2 度お姉さんの読んでいる本を覗きましたが、それには絵も会話もありませんでした。>
       \gloss<
-        \li|conj="-as"|<\sh<{zesqik}>\ex<覗く>>
-        \li|auto="a"|>
-        \li<\sh<{ces}>\ex<彼女>>
-        \li<\sh<{la}>\ex<～の量で>>
-        \li<\sh<{tal}>\ex<回>>
-        \li<\sh<{al'}>\ex<個の>>
-        \li|conj="a-"|<\sh<{tis}>\ex<1>>
-        \li<\sh<{é}>\ex<または>>
-        \li<\sh<{al'}>\ex<個の>>
-        \li|conj="a-"|<\sh<{qec}>\ex<2>>
-        \li|auto="e"|>
-        \li<\sh<{xoq}>\ex<本>>
-        \li|conj="-ac"|<\sh<{lîd}>\ex<読む>>
-        \li|auto="e"|>
-        \li|auto="a"|>
-        \li<\sh<{hinof}>\ex<姉>>
-        \li|punc=","|>
-        \li<\sh<{dà}>\ex<しかし>>
-        \li|conj="du-at"|<\sh<{kav}>\ex<もつ>>
-        \li|auto="a"|>
-        \li<\sh<{cit}>\ex<それ>>
-        \li|auto="e"|>
-        \li<\sh<{qinat}>\ex<絵>>
-        \li<\sh<{o}>\ex<と>>
-        \li<\sh<{lek}>\ex<会話>>
-        \li|punc="."|>
+        &lig|conj="-as"|<\sh<{zesqik}>\ex<覗く>>
+        &lig|auto="a"|>
+        &lig<\sh<{ces}>\ex<彼女>>
+        &lig<\sh<{la}>\ex<～の量で>>
+        &lig<\sh<{tal}>\ex<回>>
+        &lig<\sh<{al'}>\ex<個の>>
+        &lig|conj="a-"|<\sh<{tis}>\ex<1>>
+        &lig<\sh<{é}>\ex<または>>
+        &lig<\sh<{al'}>\ex<個の>>
+        &lig|conj="a-"|<\sh<{qec}>\ex<2>>
+        &lig|auto="e"|>
+        &lig<\sh<{xoq}>\ex<本>>
+        &lig|conj="-ac"|<\sh<{lîd}>\ex<読む>>
+        &lig|auto="e"|>
+        &lig|auto="a"|>
+        &lig<\sh<{hinof}>\ex<姉>>
+        &lig|punc=","|>
+        &lig<\sh<{dà}>\ex<しかし>>
+        &lig|conj="du-at"|<\sh<{kav}>\ex<もつ>>
+        &lig|auto="a"|>
+        &lig<\sh<{cit}>\ex<それ>>
+        &lig|auto="e"|>
+        &lig<\sh<{qinat}>\ex<絵>>
+        &lig<\sh<{o}>\ex<と>>
+        &lig<\sh<{lek}>\ex<会話>>
+        &lig|punc="."|>
       >
     >
   >
@@ -94,12 +94,12 @@
       \sh<{lo, revas a ces.}>
       \ja<そして、彼女は思いました。>
       \gloss<
-        \li<\sh<{lo}>\ex<そして>>
-        \li|punc=","|>
-        \li|conj="-as"|<\sh<{rev}>\ex<思う>>
-        \li|auto="a"|>
-        \li<\sh<{ces}>\ex<彼女>>
-        \li|punc="."|>
+        &lig<\sh<{lo}>\ex<そして>>
+        &lig|punc=","|>
+        &lig|conj="-as"|<\sh<{rev}>\ex<思う>>
+        &lig|auto="a"|>
+        &lig<\sh<{ces}>\ex<彼女>>
+        &lig|punc="."|>
       >
     >
   >
@@ -109,19 +109,19 @@
       \sh<{pa salot e pil a sokus i xoq ide qinat o lek?}>
       \ja<会話も絵もない本の価値とは何なのだろうか?>
       \gloss<
-        \li|auto="pa"|>
-        \li|conj="-ot"|<\sh<{sal}>\ex<である>>
-        \li|auto="e"|>
-        \li<\sh<{pil}>\ex<何>> 
-        \li|auto="a"|>
-        \li<\sh<{sokus}>\ex<価値>>
-        \li|conj="i-"|<\sh<∅>\ex<～の>>
-        \li<\sh<{xoq}>\ex<本>>
-        \li|conj="i-"|<\sh<{de}>\ex<～なしで>>
-        \li<\sh<{qinat}>\ex<絵>>
-        \li<\sh<{o}>\ex<と>>
-        \li<\sh<{lek}>\ex<会話>>
-        \li|punc="?"|>
+        &lig|auto="pa"|>
+        &lig|conj="-ot"|<\sh<{sal}>\ex<である>>
+        &lig|auto="e"|>
+        &lig<\sh<{pil}>\ex<何>> 
+        &lig|auto="a"|>
+        &lig<\sh<{sokus}>\ex<価値>>
+        &lig|conj="i-"|<\sh<∅>\ex<～の>>
+        &lig<\sh<{xoq}>\ex<本>>
+        &lig|conj="i-"|<\sh<{de}>\ex<～なしで>>
+        &lig<\sh<{qinat}>\ex<絵>>
+        &lig<\sh<{o}>\ex<と>>
+        &lig<\sh<{lek}>\ex<会話>>
+        &lig|punc="?"|>
       >
     >
   >

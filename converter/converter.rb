@@ -31,10 +31,6 @@ class PageConverter
     @default_text_template = lambda{|s| ""}
   end
 
-  def update(document)
-    @document = document
-  end
-
   def convert(initial_scope = "")
     result = ""
     result << convert_element(@document.root, initial_scope)
@@ -138,7 +134,8 @@ class ZiphilConverter < PageConverter
   end
 
   def update(document, path, language)
-    super(document)
+    @document = document
+    @configs = {}
     @path = path
     @language = language
   end
@@ -160,6 +157,27 @@ class ZiphilConverter < PageConverter
     domain = WholeZiphilConverter::DOMAINS[@language]
     url = path.gsub(root_path + "/", domain).gsub(/\.zml$/, ".html")
     return url
+  end
+
+end
+
+
+class ZiphilParser < ZenithalParser
+
+  attr_reader :path
+  attr_reader :language
+
+  def initialize(source, path, language)
+    super(source)
+    @path = path
+    @language = language
+  end
+
+  def update(source, path, language)
+    @source = StringReader.new(source)
+    @version = nil
+    @path = path
+    @language = language
   end
 
 end
@@ -198,6 +216,7 @@ class WholeZiphilConverter
     end
     @paths = create_paths(rest_args)
     @ftp, @user = create_ftp(upload)
+    @parser = create_parser
     @converter = create_converter
   end
 
@@ -261,10 +280,8 @@ class WholeZiphilConverter
     docment = nil
     case extension
     when "zml"
-      source = File.read(path)
-      parser = ZenithalParser.new(source)
-      parser.brace_name, parser.bracket_name, parser.slash_name = "x", "xn", "i"
-      document = parser.parse
+      @parser.update(File.read(path), path, language)
+      document = @parser.parse
     end
     return document
   end
@@ -366,6 +383,22 @@ class WholeZiphilConverter
       ftp = Net::FTP.new(host, user, password)
     end
     return ftp, user
+  end
+
+  def create_parser
+    parser = ZiphilParser.new("", nil, nil)
+    parser.brace_name = "x"
+    parser.bracket_name = "xn"
+    parser.slash_name =  "i"
+    directory = BASE_PATH + "/macro"
+    Dir.each_child(directory) do |entry|
+      if entry.end_with?(".rb")
+        binding = TOPLEVEL_BINDING
+        binding.local_variable_set(:parser, parser)
+        Kernel.eval(File.read(directory + "/" + entry), binding, entry)
+      end
+    end
+    return parser
   end
 
   def create_converter

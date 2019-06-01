@@ -149,17 +149,17 @@
       \sh<{kiles a tel te tazît e kin ricamos a tel.}>
       \ja<私は昨日泳ぐことができるようになった。>
       \gloss<
-        \li|conj="-es"|<\sh<{kil}>\ex<可能になる>>
-        \li|auto="a"|>
-        \li<\sh<{tel}>\ex<私>>
-        \li<\sh<{te}>\ex<～の時刻に>>
-        \li<\sh<{tazît}>\ex<昨日>>
-        \li|auto="e"|>
-        \li|auto="kin"|>
-        \li|conj="-os"|<\sh<{ricam}>\ex<泳ぐ>>
-        \li|auto="a"|>
-        \li<\sh<{tel}>\ex<私>>
-        \li|punc="."|>
+        &lig|conj="-es"|<\sh<{kil}>\ex<可能になる>>
+        &lig|auto="a"|>
+        &lig<\sh<{tel}>\ex<私>>
+        &lig<\sh<{te}>\ex<～の時刻に>>
+        &lig<\sh<{tazît}>\ex<昨日>>
+        &lig|auto="e"|>
+        &lig|auto="kin"|>
+        &lig|conj="-os"|<\sh<{ricam}>\ex<泳ぐ>>
+        &lig|auto="a"|>
+        &lig<\sh<{tel}>\ex<私>>
+        &lig|punc="."|>
       >
     >
   >
@@ -168,50 +168,50 @@
     グロスを表示したい場合は以下のようにします。
   >
   \gloss<
-    \li|auto="e"|>
-    \li<\sh<{ʻalis}>\ex<アリス>>
-    \li|punc=","|>
-    \li|conj="-ac"|<\sh<{pôz}>\ex<うんざりさせる>>
-    \li|conj="o-"|<\sh<{vel}>\ex<>>
-    \li|conj="e-"|<\sh<{bam}>\ex<とても>>
-    \li|auto="zi"|>
-    \li|auto="'n"|>
-    \li|conj="-at"|<\sh<{déq}>\ex<座る>>
-    \li|auto="a"|>
-    \li<\sh<{'s}>\ex<彼女>>
-    \li|auto="ca"|>
-    \li<\sh<{zehrisis}>\ex<堤防>>
-    \li<\sh<{vo}>\ex<～の場所で>>
-    \li<\sh<{fîc}>\ex<近く>>
-    \li|auto="ca",conj="i-"|>
-    \li<\sh<{hinof}>\ex<姉>>
-    \li|punc=","|>
-    \li<\sh<{lo}>\ex<そして>>
-    \li|conj="-at"|<\sh<{kav}>\ex<もつ>>
-    \li|auto="a"|>
-    \li<\sh<{'s}>\ex<彼女>>
-    \li|auto="e"|>
-    \li<\sh<{dat}>\ex<何もない>>
-    \li|conj="-at"|<\sh<{doz}>\ex<しなければならなくする>>
-    \li|conj="-as"|<\sh<{les}>\ex<する>>
-    \li|auto="e"|>
-    \li|auto="a"|>
-    \li<\sh<{'s}>\ex<彼女>>
-    \li|punc="."|>
-    \li|punc="«"|>
-    \li|auto="pa"|>
-    \li|conj="-ot"|<\sh<{sal}>\ex<である>>
-    \li|auto="e"|>
-    \li<\sh<{pil}>\ex<何>> 
-    \li|auto="a"|>
-    \li<\sh<{sokus}>\ex<価値>>
-    \li|conj="i-"|<\sh<∅>\ex<～の>>
-    \li<\sh<{xoq}>\ex<本>>
-    \li|conj="i-"|<\sh<{de}>\ex<～なしで>>
-    \li<\sh<{qinat}>\ex<絵>>
-    \li<\sh<{o}>\ex<と>>
-    \li<\sh<{lek}>\ex<会話>>
-    \li|punc="?»"|>
+    &lig|auto="e"|>
+    &lig<\sh<{ʻalis}>\ex<アリス>>
+    &lig|punc=","|>
+    &lig|conj="-ac"|<\sh<{pôz}>\ex<うんざりさせる>>
+    &lig|conj="o-"|<\sh<{vel}>\ex<>>
+    &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
+    &lig|auto="zi"|>
+    &lig|auto="'n"|>
+    &lig|conj="-at"|<\sh<{déq}>\ex<座る>>
+    &lig|auto="a"|>
+    &lig<\sh<{'s}>\ex<彼女>>
+    &lig|auto="ca"|>
+    &lig<\sh<{zehrisis}>\ex<堤防>>
+    &lig<\sh<{vo}>\ex<～の場所で>>
+    &lig<\sh<{fîc}>\ex<近く>>
+    &lig|auto="ca",conj="i-"|>
+    &lig<\sh<{hinof}>\ex<姉>>
+    &lig|punc=","|>
+    &lig<\sh<{lo}>\ex<そして>>
+    &lig|conj="-at"|<\sh<{kav}>\ex<もつ>>
+    &lig|auto="a"|>
+    &lig<\sh<{'s}>\ex<彼女>>
+    &lig|auto="e"|>
+    &lig<\sh<{dat}>\ex<何もない>>
+    &lig|conj="-at"|<\sh<{doz}>\ex<しなければならなくする>>
+    &lig|conj="-as"|<\sh<{les}>\ex<する>>
+    &lig|auto="e"|>
+    &lig|auto="a"|>
+    &lig<\sh<{'s}>\ex<彼女>>
+    &lig|punc="."|>
+    &lig|punc="«"|>
+    &lig|auto="pa"|>
+    &lig|conj="-ot"|<\sh<{sal}>\ex<である>>
+    &lig|auto="e"|>
+    &lig<\sh<{pil}>\ex<何>> 
+    &lig|auto="a"|>
+    &lig<\sh<{sokus}>\ex<価値>>
+    &lig|conj="i-"|<\sh<∅>\ex<～の>>
+    &lig<\sh<{xoq}>\ex<本>>
+    &lig|conj="i-"|<\sh<{de}>\ex<～なしで>>
+    &lig<\sh<{qinat}>\ex<絵>>
+    &lig<\sh<{o}>\ex<と>>
+    &lig<\sh<{lek}>\ex<会話>>
+    &lig|punc="?»"|>
   >
   \h1<ソースコード>
   \p<

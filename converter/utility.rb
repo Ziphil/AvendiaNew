@@ -35,20 +35,11 @@ class Tag
 
   def head
     outer_self = self
-    object = SimpleDelegator.new(outer_self)
-    object.define_singleton_method(:<<) do |content|
+    delegator = SimpleDelegator.new(outer_self)
+    delegator.define_singleton_method(:<<) do |content|
       outer_self.content.sub!(/(\A\s*)/m){$1 + content.to_str}
     end
-    return object
-  end
-
-  def at(index)
-    outer_self = self
-    object = SimpleDelegator.new(outer_self)
-    object.define_singleton_method(:<<) do |content|
-      outer_self.content.insert(index, content)
-    end
-    return object
+    return delegator
   end
 
   def to_s
@@ -122,7 +113,75 @@ class Element
 end
 
 
+class Parent
+
+  def <<(object)
+    if object.is_a?(Nodes)
+      object.each do |child|
+        add(child)
+      end
+    else
+      add(object)
+    end
+  end
+
+  def at_first
+    outer_self = self
+    delegator = SimpleDelegator.new(outer_self)
+    delegator.define_singleton_method(:<<) do |object|
+      if object.is_a?(Nodes)
+        object.reverse_each do |child|
+          outer_self.unshift(child)
+        end
+      else
+        outer_self.unshift(object)
+      end
+    end
+    return delegator
+  end
+
+  def at_last
+    outer_self = self
+    delegator = SimpleDelegator.new(outer_self)
+    delegator.define_singleton_method(:<<) do |object|
+      if object.is_a?(Nodes)
+        object.each do |child|
+          outer_self.push(child)
+        end
+      else
+        outer_self.push(object)
+      end
+    end
+    return delegator
+  end
+
+end
+
+
+class Nodes < Array
+
+  def <<(object)
+    if object.is_a?(Nodes)
+      object.each do |child|
+        push(child)
+      end
+    else
+      push(object)
+    end
+  end
+
+  def +(other)
+    return Nodes.new(super(other))
+  end
+
+end
+
+
 class String
+
+  def ~
+    return Text.new(self, true, nil, true)
+  end
 
   def indent(size)
     inside_code = false
