@@ -59,6 +59,8 @@ ruby converter/main.rb -l (ファイル名の絶対パス)
 更新履歴は、`log/ja.txt` もしくは `log/en.txt` として最大 1000 件まで保存されます。
 
 ## 注意点
+
+### 欠損ファイルについて
 現在オンライン上にアップロードされているファイルのうち、以下に該当するものはこのリポジトリに含まれていません。
 したがって、『Avendia』を完全に再現するためには、これらのファイルは別途用意する必要があります。
 
@@ -76,6 +78,10 @@ ruby converter/main.rb -l (ファイル名の絶対パス)
 - `document/ja/file/mathematics/` 以下にある PDF ファイル
 - `document/ja/file/mathematics_diary/` 以下にある PDF ファイル
 - `document/ja/file/other/` 以下にある画像ファイル
+
+### サイトの公開について
+サイトの管理者である Ziphil の許可を得ずに、このリポジトリに含まれるファイルおよびそれを変換したファイルを、オンラインで公開することを禁じます。
+この README の内容は Ziphil の備忘録にすぎず、クローンサイトの公開を推奨するものではありません。
 
 ## その他
 各種ページの原稿は [ZenML](https://github.com/Ziphil/Zenithal) で書かれていて、このスクリプトによって HTML に変換しています。
