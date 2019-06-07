@@ -14,7 +14,6 @@ $stdout.sync = true
 class ShaleiaManager
 
   PASSWORD = File.read("../../file/dictionary/meta/other/password.txt")
-  GOOGLE_URL = "https://script.google.com/macros/s/AKfycbxLhjMTVq4ybjW2waZp5xgbo2emqBMBkOkz-XMx-GzjA2W4K8M/exec"
 
   def initialize(cgi)
     @cgi = cgi
@@ -44,8 +43,6 @@ class ShaleiaManager
     case @command
     when "update"
       update
-    when "upload"
-      upload
     when "delete_request"
       delete_request
     when "delete_logs"
@@ -111,22 +108,6 @@ class ShaleiaManager
     ShaleiaUtilities.update(@version)
     @cgi.out({"status" => "REDIRECT", "location" => "2.cgi?password=#{@password}"}) do 
       next ""
-    end
-  end
-
-  def upload
-    previous_size = ShaleiaUtilities.names(0).size
-    ShaleiaUtilities.upload(@file, 0)
-    ShaleiaUtilities.update(0)
-    new_size = ShaleiaUtilities.names(0).size
-    output = ""
-    Kernel.open(GOOGLE_URL + "?mode=update&password=#{@password}&previous=#{previous_size}&new=#{new_size}") do |file|
-      file.each_line do |line| 
-        output << line
-      end
-    end
-    @cgi.out("text/plain") do
-      next output
     end
   end
 
