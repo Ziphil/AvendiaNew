@@ -18,11 +18,11 @@ class WeblioSaver
   def prepare
     if @cgi.multipart?
       @command = (!@cgi.params["mode"].empty?) ? @cgi.params["mode"][0].read : ""
-      @name = (!@cgi.params["name"].empty?) ? @cgi.params["name"][0].read : ""
+      @number = (!@cgi.params["number"].empty?) ? @cgi.params["number"][0].read : ""
       @content = (!@cgi.params["content"].empty?) ? @cgi.params["content"][0].read : ""
     else
       @command = @cgi["mode"]
-      @name = @cgi["name"]
+      @number = @cgi["number"]
       @content = @cgi["content"]
     end
   end
@@ -32,6 +32,8 @@ class WeblioSaver
     case @command
     when "get"
       get
+    when "get_number"
+      get_number
     when "save"
       save
     end
@@ -40,28 +42,41 @@ class WeblioSaver
   end
 
   def get
-    path = "../../file/weblio/" + @name + ".txt"
-    if File.exist?(path)
-      result = File.read(path)
-    else 
-      result = "No data"
+    output = "No data"
+    if File.exist?("../../file/weblio/#{@number}.txt")
+      output = File.read("../../file/weblio/#{@number}.txt")
     end
     @cgi.out("text/plain") do
-      next result
+      next output
+    end
+  end
+
+  def get_number
+    number = 1
+    if File.exist?("../../file/weblio/meta.txt")
+      number = File.read("../../file/weblio/meta.txt").to_i + 1
+    end
+    @cgi.out("text/plain") do
+      next number.to_s
     end
   end
 
   def save
-    path = "../../file/weblio/" + @name + ".txt"
-    File.write(path, @content)
+    File.write("../../file/weblio/#{@number}.txt", @content)
+    File.write("../../file/weblio/meta.txt", @number)
     @cgi.out("text/plain") do
       next "Done"
     end
   end
 
   def error(message)
+    output = ""
+    message.gsub(/^(\s*)(.+)\.(rb|cgi):/){"#{$1}****.#{$3}:"}.each_line do |line|
+      output << line.rstrip
+      output << "\n"
+    end
     @cgi.out("text/plain") do
-      next message
+      next output
     end
   end
 

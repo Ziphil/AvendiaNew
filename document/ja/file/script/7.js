@@ -42,6 +42,8 @@ const TWITTER_HASHTAG = "WeblioRating";
 const INTERVAL = 50;
 const COOKIE_AGE = 10000;
 
+const INTERFACE_URL = "../../file/interface/2.cgi";
+
 
 class History {
 
@@ -218,17 +220,19 @@ class ChartRenderer {
       this.timerSet = true;
     }
     this.clearCanvas();
-    this.context.save();
-    this.makeClipPath();
-    this.context.clip();
-    this.renderBackground();
-    this.calculateNearestIndex();
-    this.renderLine();
-    this.renderParticles();
-    this.renderMarker();
-    this.context.restore();
-    this.renderAxis();
-    this.renderRating();
+    if (this.history.entries.length > 0) {
+      this.context.save();
+      this.makeClipPath();
+      this.context.clip();
+      this.renderBackground();
+      this.calculateNearestIndex();
+      this.renderLine();
+      this.renderParticles();
+      this.renderMarker();
+      this.context.restore();
+      this.renderAxis();
+      this.renderRating();
+    }
   }
 
   clearCanvas() {
@@ -435,15 +439,15 @@ class Executor {
 
   getParameters() {
     let input = Cookies.get("input");
-    let name = null;
+    let number = null;
     let mode = parseInt(Cookies.get("mode"));
     let pairs = location.search.substring(1).split("&");
     for (let pair of pairs) {
       let match;
       if ((match = pair.match(/input=(.+)/)) != null) {
         input = decodeURIComponent(match[1]);
-      } else if ((match = pair.match(/name=(.+)/)) != null) {
-        name = decodeURIComponent(match[1]);
+      } else if ((match = pair.match(/number=(.+)/)) != null) {
+        number = decodeURIComponent(match[1]);
       } else if ((match = pair.match(/mode=(.+)/)) != null) {
         mode = parseInt(decodeURIComponent(match[1]));
       }
@@ -451,7 +455,7 @@ class Executor {
     if (Number.isNaN(mode)) {
       mode = 0;
     }
-    return {input: input, name: name, mode: mode};
+    return {input: input, number: number, mode: mode};
   }
 
   prepareForms() {
@@ -469,9 +473,9 @@ class Executor {
         this.execute(true);
       }
     };
-    if (parameters.name) {
+    if (parameters.number != null) {
       $("#input").val("Loading");
-      $.get("1.cgi", {mode: "get", name: parameters.name}, (input) => {
+      $.get(INTERFACE_URL, {mode: "get", number: parameters.number}, (input) => {
         parameters.input = input;
         go();
       });
@@ -522,17 +526,18 @@ class Executor {
       let rating = entries[entries.length - 1].rating;
       let ratingString = rating.toFixed(DIGIT_SIZE);
       let colorName = COLOR_NAMES[History.colorIndex(rating)];
-      let fileName = new Date().getTime().toString();
-      let url = location.protocol + "//" + location.host + location.pathname;
-      let option = "width=" + TWITTER_WIDTH + ",height=" + TWITTER_HEIGHT + ",menubar=no,toolbar=no,scrollbars=no";
-      let href = "https://twitter.com/intent/tweet";
-      url += "?name=" + encodeURIComponent(fileName);
-      url += "&mode=" + this.history.mode;
-      href += "?text=" + TWITTER_MESSAGE.replace(/%r/g, ratingString).replace(/%c/g, colorName);
-      href += "&url=" + encodeURIComponent(url);
-      href += "&hashtags=" + TWITTER_HASHTAG;
-      $.post("1.cgi", {mode: "save", content: input, name: fileName});
-      window.open(href, "_blank", option);
+      $.get(INTERFACE_URL, {mode: "get_number"}, (number) => {
+        let url = location.protocol + "//" + location.host + location.pathname;
+        let option = "width=" + TWITTER_WIDTH + ",height=" + TWITTER_HEIGHT + ",menubar=no,toolbar=no,scrollbars=no";
+        let href = "https://twitter.com/intent/tweet";
+        url += "?number=" + encodeURIComponent(number);
+        url += "&mode=" + this.history.mode;
+        href += "?text=" + TWITTER_MESSAGE.replace(/%r/g, ratingString).replace(/%c/g, colorName);
+        href += "&url=" + encodeURIComponent(url);
+        href += "&hashtags=" + TWITTER_HASHTAG;
+        $.post(INTERFACE_URL, {mode: "save", content: input, number: number});
+        window.open(href, "_blank", option);
+      });
     }
   }
 
