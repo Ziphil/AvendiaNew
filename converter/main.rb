@@ -8,7 +8,6 @@ require 'rexml/document'
 include REXML
 
 BASE_PATH = File.expand_path("..", File.dirname($0)).encode("utf-8")
-SERVER_PATH = "C:/Apache24/htdocs"
 
 Kernel.load(BASE_PATH + "/converter/parser.rb")
 Kernel.load(BASE_PATH + "/converter/converter.rb")
@@ -81,6 +80,8 @@ end
 
 class WholeAvendiaConverter
 
+  LOCAL_SERVER_PATH = File.read(BASE_PATH + "/config/local.txt")
+  ONLINE_SERVER_CONFIG = File.read(BASE_PATH + "/config/online.txt")
   DOMAINS = {
     :ja => "http://ziphil.com/",
     :en => "http://en.ziphil.com/"
@@ -90,8 +91,8 @@ class WholeAvendiaConverter
     :en => BASE_PATH + "/document/en"
   }
   OUTPUT_PATHS = {
-    :ja => SERVER_PATH + "/lbs",
-    :en => SERVER_PATH + "/lbs-en"
+    :ja => LOCAL_SERVER_PATH + "/lbs",
+    :en => LOCAL_SERVER_PATH + "/lbs-en"
   }
   LOG_PATHS = {
     :ja => BASE_PATH + "/log/ja.txt",
@@ -274,8 +275,7 @@ class WholeAvendiaConverter
   def create_ftp(upload)
     ftp, user = nil, nil
     if upload
-      config_data = File.read(BASE_PATH + "/converter/config.txt")
-      host, user, password = config_data.split("\n")
+      host, user, password = ONLINE_SERVER_CONFIG.split("\n")
       ftp = Net::FTP.new(host, user, password)
     end
     return ftp, user
