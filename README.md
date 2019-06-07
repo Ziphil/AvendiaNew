@@ -17,14 +17,11 @@
 
 ### サーバーのドキュメントルートの設定
 適当な Web サーバーソフトウェア (Apache Server など) をインストールしてください。
-`converter/main.rb` の 12 行目に以下のような記述があるので、ここをサーバーのドキュメントルートの絶対パスに書き換えてください。
+その後、サーバーのドキュメントルートの絶対パスを、末尾に改行を含めずに `config/local.txt` として保存してください。
 ここで指定したディレクトリが生成されたファイルの出力先となります。
-```
-SERVER_PATH = "C:/Apache24/htdocs"
-```
 
 ### オンラインサーバーの設定
-以下の情報を、順に改行で区切って `converter/config.txt` として保存してください。
+以下の情報を、順に改行で区切って `config/online.txt` として保存してください。
 
 - サーバーのホスト名
 - ログイン用のユーザー名
@@ -78,6 +75,9 @@ ruby converter/main.rb -l (ファイル名の絶対パス)
 - `document/ja/file/mathematics/` 以下にある PDF ファイル
 - `document/ja/file/mathematics_diary/` 以下にある PDF ファイル
 - `document/ja/file/other/` 以下にある画像ファイル
+
+このうち、辞書データは[別リポジトリ](https://github.com/Ziphil/ShaleianDictionary)で管理しています。
+GitHub の Webhook 機能の通知を受け取るための CGI スクリプトを `(サーバーアドレス)/file/interface/1.cgi` として用意してあるので、ペイロード URL にこのアドレスを指定しておくと、プッシュ時などに自動でサーバー上のデータを更新できます。
 
 ### サイトの公開について
 サイトの管理者である Ziphil の許可を得ずに、このリポジトリに含まれるファイルおよびそれを変換したファイルを、オンラインで公開することを禁じます。
