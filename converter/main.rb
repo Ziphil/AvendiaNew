@@ -5,12 +5,12 @@ require 'pp'
 require 'fileutils'
 require 'net/ftp'
 require 'rexml/document'
+require 'zenml'
 include REXML
+include Zenithal
 
 BASE_PATH = File.expand_path("..", File.dirname($0)).encode("utf-8")
 
-Kernel.load(BASE_PATH + "/converter/parser.rb")
-Kernel.load(BASE_PATH + "/converter/converter.rb")
 Kernel.load(BASE_PATH + "/converter/utility.rb")
 Kernel.load(BASE_PATH + "/converter/word_converter.rb")
 Encoding.default_external = "UTF-8"
@@ -38,13 +38,13 @@ class AvendiaParser < ZenithalParser
 end
 
 
-class AvendiaConverter < PageConverter
+class AvendiaConverter < ZenithalConverter
 
   attr_reader :path
   attr_reader :language
 
   def initialize(document, path, language)
-    super(document)
+    super(document, :text)
     @path = path
     @language = language
   end
@@ -54,6 +54,20 @@ class AvendiaConverter < PageConverter
     @configs = {}
     @path = path
     @language = language
+  end
+
+  def pass_element(element, scope, close = true)
+    tag = Tag.new(element.name, nil, close)
+    element.attributes.each_attribute do |attribute|
+      tag[attribute.name] = attribute.to_s
+    end
+    tag << apply(element, scope)
+    return tag
+  end
+
+  def pass_text(text, scope)
+    string = text.to_s
+    return string
   end
 
   def deepness
