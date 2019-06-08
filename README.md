@@ -12,6 +12,12 @@
 生成スクリプトは Ruby で書かれています。
 バージョン 2.5 以上の Ruby が必要です。
 
+さらに、この生成スクリプトは、[ZenML](https://github.com/Ziphil/Zenithal) のパーサーライブラリを利用しています。
+RubyGems からインストールしてください。
+```
+gem install zenml
+```
+
 ### SASS/SCSS 処理系の準備
 適当な SASS/SCSS 処理系をインストールし、`sass` でその処理系を実行できるようにパスの設定などをしてください。
 
