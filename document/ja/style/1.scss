@@ -42,6 +42,22 @@ header {
     text-decoration: none;
   }
 
+  div.title a::after {
+    width: 36px;
+    height: 36px;
+    margin: 0px 0px 0px 3px;
+    padding: 0px;
+    background-image: url("../material/background/1.png");
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    content: " ";
+  }
+
+  div.title sup {
+    display: none;
+  }
+
   // 言語切り替えリンク
 
   div.language {
