@@ -9,23 +9,23 @@
 
 
 // 基本色相
-$primary-hue: 320;
-$secondary-hue: 150;
-$hovered-hue: 60;
+$primary-hue: 230;
+$secondary-hue: 200;
+$hovered-hue: 110;
 $caution-hue: 330;
 
 // 基本色
-$highlight-background-color: hsl($primary-hue, 60%, 70%);
-$hovered-highlight-background-color: hsl($hovered-hue, 50%, 60%);
-$light-background-color: hsl($secondary-hue, 80%, 95%);
-$hovered-light-background-color: hsl($hovered-hue, 90%, 93%);
-$dark-color: hsl($primary-hue, 80%, 50%);
+$highlight-background-color: hsl($primary-hue, 40%, 50%);
+$hovered-highlight-background-color: hsl($hovered-hue, 35%, 45%);
+$light-background-color: hsl($secondary-hue, 90%, 95%);
+$hovered-light-background-color: hsl($hovered-hue, 90%, 95%);
+$dark-color: hsl($primary-hue, 80%, 30%);
 $white-color: hsl($primary-hue, 30%, 98%);
 $black-color: hsl($primary-hue, 30%, 20%);
 
 // 基本背景
-$highlight-background: custom-gradient($highlight-background-color, -10);
-$hovered-highlight-background: custom-gradient($hovered-highlight-background-color, 10);
+$highlight-background: custom-gradient($highlight-background-color, -20);
+$hovered-highlight-background: custom-gradient($hovered-highlight-background-color, -30);
 $light-background: $light-background-color;
 $hovered-light-background: $hovered-light-background-color;
 
