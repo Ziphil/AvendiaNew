@@ -2,6 +2,18 @@
 
 
 @font-face {
+  font-family: "List Icon";
+  src: url("../material/font/2.eot?16498700");
+  src: url("../material/font/2.eot?16498700#iefix") format("embedded-opentype"),
+       url("../material/font/2.woff2?16498700") format("woff2"),
+       url("../material/font/2.woff?16498700") format("woff"),
+       url("../material/font/2.ttf?16498700") format("truetype"),
+       url("../material/font/2.svg?16498700#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Alegreya";
   src: url("../material/font/3.otf") format("opentype"),
        url("https://fonts.gstatic.com/s/alegreya/v10/4UaHrEBBsBhlBjvfkSLk96rp5w.woff2") format("woff2");
@@ -172,6 +184,7 @@ div.content div.main div.button {
 }
 
 div.content div.main div.button input[type="button"],
+div.content div.main div.upload input[type="button"],
 div.content div.main div.upload label {
   width: 100px;
   height: 32px;
@@ -189,9 +202,14 @@ div.content div.main div.upload label {
   display: inline-block;
 }
 
-div.content div.main div.button input[type="button"].pale {
+div.content div.main div.button input[type="button"].red {
   background-color: hsl(330, 60%, 60%);
   box-shadow: 0px 4px 8px 0px hsla(330, 80%, 40%, 0.2);
+}
+
+div.content div.main div.button input[type="button"].green {
+  background-color: hsl(120, 50%, 45%);
+  box-shadow: 0px 4px 8px 0px hsla(120, 33%, 30%, 0.2);
 }
 
 div.content div.main div.button input[type="button"].left {
@@ -211,6 +229,10 @@ div.content div.main div.button input[type="button"].middle {
 
 div.content div.main div.button input[type="button"].small {
   width: 50px;
+}
+
+div.content div.main div.button input[type="button"].icon {
+  font: 400 18px "List Icon";
 }
 
 div.content div.main div.upload {
@@ -262,4 +284,21 @@ div.content div.left div.number div.denominator {
   font: italic 400 24px "Alegreya";
   color: hsl(0, 0%, 40%);
   line-height: 25px;
+}
+
+div.content div.left div.mark {
+  margin: 10px 0px 0px 0px;
+  padding: 0px;
+  font: 400 32px "List Icon";
+  text-align: center;
+}
+
+div.content div.left div.mark span.wrong {
+  color: hsl(330, 60%, 60%);
+  display: none;
+}
+
+div.content div.left div.mark span.correct {
+  color: hsl(120, 50%, 45%);
+  display: none;
 }

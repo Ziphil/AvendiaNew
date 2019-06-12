@@ -17,7 +17,7 @@ class WordManager {
       let line = splitText[i];
       let match;
       if ((match = line.match(/^\s*(.+?)\s*,\s*(.+)\s*$/m)) != null) {
-        let entry = {english: match[1], japanese: match[2]};
+        let entry = {english: match[1], japanese: match[2], mark: null};
         this.entries.push(entry);
       }
     }
@@ -122,6 +122,25 @@ class Executor {
     $("#denominator").text(manager.length);
   }
 
+  updateMark() {
+    let manager = this.manager;
+    let index = Math.floor((this.count + 1) / 2) - 1;
+    let entry = manager.get(index);
+    if (entry) {
+      let mark = entry.mark;
+      if (mark == "correct") {
+        $("#correct-mark").show();
+        $("#wrong-mark").hide();
+      } else if (mark == "wrong") {
+        $("#correct-mark").hide();
+        $("#wrong-mark").show();
+      } else {
+        $("#correct-mark").hide();
+        $("#wrong-mark").hide();
+      }
+    }
+  }
+
   previous(amount = 1) {
     if (this.count > 0) {
       this.count -= amount;
@@ -129,6 +148,7 @@ class Executor {
         this.count = 0;
       }
       this.update(false);
+      this.updateMark();
     } else {
       alert("は?");
     }
@@ -141,6 +161,7 @@ class Executor {
         this.count = this.manager.length * 2;
       }
       this.update(true);
+      this.updateMark();
     } else {
       alert("全ての問題が終了しました。");
     }
@@ -150,6 +171,28 @@ class Executor {
     this.count = 0;
     this.manager.shuffle();
     this.update(false);
+  }
+
+  markCorrect() {
+    let manager = this.manager;
+    let index = Math.floor((this.count + 1) / 2) - 1;
+    let entry = manager.get(index);
+    if (entry) {
+      entry.mark = "correct";
+      this.updateMark();
+      $("#correct-sound")[0].play();
+    }
+  }
+
+  markWrong() {
+    let manager = this.manager;
+    let index = Math.floor((this.count + 1) / 2) - 1;
+    let entry = manager.get(index);
+    if (entry) {
+      entry.mark = "wrong";
+      this.updateMark();
+      $("#wrong-sound")[0].play();
+    }
   }
 
   fetchPronunciations(word, tag) {
