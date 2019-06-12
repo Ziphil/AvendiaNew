@@ -138,6 +138,9 @@ class Executor {
         $("#correct-mark").hide();
         $("#wrong-mark").hide();
       }
+    } else {
+      $("#correct-mark").hide();
+      $("#wrong-mark").hide();
     }
   }
 
@@ -171,6 +174,7 @@ class Executor {
     this.count = 0;
     this.manager.shuffle();
     this.update(false);
+    this.updateMark();
   }
 
   markCorrect() {
