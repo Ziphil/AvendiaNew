@@ -43,8 +43,11 @@
         \div|class="button"|<
           \input|class="small red icon",type="button",value="",onclick="executor.markWrong()"|>　\input|class="small green icon",type="button",value="",onclick="executor.markCorrect()"|>
         >
+        \div|class="button"|<
+          \input|type="button",value="Reset",onclick="executor.reset()"|>
+        >
         \div|class="upload"|<
-          \input|type="button",value="Reset",onclick="executor.reset()"|>　\label|for="file"|<Upload>\input|id="file",type="file",multiple="multiple",onchange="executor.upload()"|>
+          \label|for="file"|<Upload>\input|id="file",type="file",multiple="multiple",onchange="executor.upload()"|>
         >
       >
     >
