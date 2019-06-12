@@ -187,6 +187,8 @@ class Executor {
       if ($("#enable-sound").prop("checked")) {
         $("#correct-sound")[0].play();
       }
+    } else {
+      alert("それは無理。");
     }
   }
 
@@ -200,6 +202,8 @@ class Executor {
       if ($("#enable-sound").prop("checked")) {
         $("#wrong-sound")[0].play();
       }
+    } else {
+      alert("それは無理。");
     }
   }
 
