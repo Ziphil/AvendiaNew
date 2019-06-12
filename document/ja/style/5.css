@@ -190,8 +190,27 @@ div.content div.main div.upload label {
 }
 
 div.content div.main div.button input[type="button"].pale {
-  background-color: hsl(240, 0%, 60%);
-  box-shadow: 0px 4px 8px 0px hsla(240, 0%, 40%, 0.2);
+  background-color: hsl(330, 60%, 60%);
+  box-shadow: 0px 4px 8px 0px hsla(330, 80%, 40%, 0.2);
+}
+
+div.content div.main div.button input[type="button"].left {
+  margin: 0px 3px 0px 0px;
+  border-radius: 100px 0px 0px 100px;
+}
+
+div.content div.main div.button input[type="button"].right {
+  margin: 0px 0px 0px 0px;
+  border-radius: 0px 100px 100px 0px;
+}
+
+div.content div.main div.button input[type="button"].middle {
+  margin: 0px 3px 0px 0px;
+  border-radius: 0px;
+}
+
+div.content div.main div.button input[type="button"].small {
+  width: 50px;
 }
 
 div.content div.main div.upload {

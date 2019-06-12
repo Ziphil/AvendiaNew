@@ -122,18 +122,24 @@ class Executor {
     $("#denominator").text(manager.length);
   }
 
-  previous() {
+  previous(amount = 1) {
     if (this.count > 0) {
-      this.count --;
+      this.count -= amount;
+      if (this.count <= 0) {
+        this.count = 0;
+      }
       this.update(false);
     } else {
       alert("は?");
     }
   }
 
-  next() {
+  next(amount = 1) {
     if (this.count < this.manager.length * 2) {
-      this.count ++;
+      this.count += amount;
+      if (this.count >= this.manager.length * 2) {
+        this.count = this.manager.length * 2;
+      }
       this.update(true);
     } else {
       alert("全ての問題が終了しました。");
