@@ -34,7 +34,8 @@
           \div|id="japanese",class="japanese"|>
         >
         \div|class="radio"|<
-          \input|type="radio",name="mode",value="0",id="radio-mode-0",checked|>\label|for="radio-mode-0"|<英語→日本語>　\input|type="radio",name="mode",value="1",id="radio-mode-1"|>\label|for="radio-mode-1"|<日本語→英語>
+          \input|type="radio",name="mode",value="0",id="radio-mode-0",checked|>\label|for="radio-mode-0"|<英語→日本語>　\input|type="radio",name="mode",value="1",id="radio-mode-1"|>\label|for="radio-mode-1"|<日本語→英語>\br>
+          \input|type="checkbox",name="enable-sound",id="enable-sound",checked|>\label|for="enable-sound"|<サウンド>
         >
         \div|class="button"|<
           \input|class="small left",type="button",value="−20",onclick="executor.previous(40)"|>\input|class="small middle",type="button",value="−10",onclick="executor.previous(20)"|>\input|class="small right",type="button",value="−5",onclick="executor.previous(10)"|>　\input|type="button",value="Previous",onclick="executor.previous()"|>　\input|type="button",value="Next",onclick="executor.next()"|>　\input|class="small left",type="button",value="+5",onclick="executor.next(10)"|>\input|class="small middle",type="button",value="+10",onclick="executor.next(20)"|>\input|class="small right",type="button",value="+20",onclick="executor.next(40)"|>

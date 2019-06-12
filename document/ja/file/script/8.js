@@ -180,7 +180,9 @@ class Executor {
     if (entry) {
       entry.mark = "correct";
       this.updateMark();
-      $("#correct-sound")[0].play();
+      if ($("#enable-sound").prop("checked")) {
+        $("#correct-sound")[0].play();
+      }
     }
   }
 
@@ -191,7 +193,9 @@ class Executor {
     if (entry) {
       entry.mark = "wrong";
       this.updateMark();
-      $("#wrong-sound")[0].play();
+      if ($("#enable-sound").prop("checked")) {
+        $("#wrong-sound")[0].play();
+      }
     }
   }
 

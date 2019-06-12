@@ -148,7 +148,7 @@ div.content div.main div.radio input[type="radio"] +label {
   padding: 0px 0px 0px 18px;
   font: 14px "Times New Roman", "Times", "IPA P明朝", "IPA明朝", "ＭＳ Ｐ明朝", serif;
   color: black;
-  line-height: 1;
+  line-height: 1.5;
   position: relative;
 }
 
@@ -171,6 +171,45 @@ div.content div.main div.radio input[type="radio"]:checked +label::after {
   background: hsl(240, 60%, 60%);
   border-radius: 50%;
   top: 4px;
+  left: 4px;
+  position: absolute;
+  display: block;
+  content: "";
+}
+
+div.content div.main div.radio input[type="checkbox"] {
+  display: none;
+}
+
+div.content div.main div.radio input[type="checkbox"] +label {
+  margin: 0px;
+  padding: 0px 0px 0px 18px;
+  font: 14px "Times New Roman", "Times", "IPA P明朝", "IPA明朝", "ＭＳ Ｐ明朝", serif;
+  color: black;
+  line-height: 1.5;
+  position: relative;
+}
+
+div.content div.main div.radio input[type="checkbox"] +label::before {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 1px 2px 0px hsla(0, 0%, 20%, 0.2) inset;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  display: block;
+  content: "";
+}
+
+div.content div.main div.radio input[type="checkbox"]:checked +label::after {
+  width: 4px;
+  height: 8px;
+  border-bottom: 2px hsl(240, 60%, 60%) solid;
+  border-right: 2px hsl(240, 60%, 60%) solid;
+  transform: rotate(40deg);
+  top: 2px;
   left: 4px;
   position: absolute;
   display: block;
