@@ -171,10 +171,13 @@ class Executor {
   }
 
   reset() {
-    this.count = 0;
-    this.manager.shuffle();
-    this.update(false);
-    this.updateMark();
+    let result = confirm("リセットしますか?");
+    if (result) {
+      this.count = 0;
+      this.manager.shuffle();
+      this.update(false);
+      this.updateMark();
+    }
   }
 
   markCorrect() {
