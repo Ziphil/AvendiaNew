@@ -1,0 +1,202 @@
+@charset "utf-8";
+
+@import "4v.scss";
+
+
+body {
+  @include body;
+  @include text-size-adjust;
+}
+
+div.content {
+  margin: 40px 0px 40px 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+div.content div.main {
+  width: 700px;
+  margin: 0px 40px 0px 20px;
+  padding: 0px 0px;
+  flex: 0 0 700px;
+}
+
+div.content div.main div.question {
+  margin: 0px 0px 25px 0px;
+  padding: 0px;
+}
+
+div.content div.main div.question div.english {
+  @include box(30px);
+  width: 580px;
+  height: 200px;
+  margin: 0px 0px 25px 0px;
+  padding: 0px 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+div.content div.main div.question div.english div.word {
+  margin: 0px;
+  padding: 0px;
+  font: 700 64px "Alegreya";
+  color: hsl(240, 60%, 60%);
+  line-height: 1;
+}
+
+div.content div.main div.question div.english div.pronunciation {
+  margin: 10px 0px 0px 0px;
+  padding: 0px;
+  font: 18px "Times New Roman", "Times";
+  color: hsl(240, 60%, 60%);
+  line-height: 1;
+}
+
+div.content div.main div.question div.japanese {
+  @include box(30px);
+  width: 580px;
+  height: 100px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 60px;
+  font: 24px "Times New Roman", "Times", "IPA P明朝", "IPA明朝", "ＭＳ Ｐ明朝", serif;
+  color: hsl(240, 60%, 60%);
+  text-align: center;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.content div.main div.question div.arrow {
+  width: 0px;
+  height: 0px;
+  margin: 0px auto -5px auto;
+  border-top: 30px hsl(240, 60%, 60%) solid;
+  border-right: 50px transparent solid;
+  border-bottom: 30px transparent solid;
+  border-left: 50px transparent solid;
+}
+
+div.content div.main div.radio {
+  margin: 0px 0px 10px 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+div.content div.main div.radio input[type="radio"] {
+  @include radio;
+}
+
+div.content div.main div.radio input[type="checkbox"] {
+  @include checkbox;
+}
+
+div.content div.main div.button {
+  margin: 0px 0px 10px 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+div.content div.main div.button input[type="button"],
+div.content div.main div.upload input[type="button"],
+div.content div.main div.upload label {
+  @include button;
+}
+
+div.content div.main div.button input[type="button"].red {
+  @include button(hsl(330, 60%, 60%));
+}
+
+div.content div.main div.button input[type="button"].green {
+  @include button(hsl(120, 50%, 45%));
+}
+
+div.content div.main div.button input[type="button"].left {
+  @include left-pill;
+}
+
+div.content div.main div.button input[type="button"].right {
+  @include right-pill;
+}
+
+div.content div.main div.button input[type="button"].middle {
+  @include middle-pill;
+}
+
+div.content div.main div.button input[type="button"].small {
+  width: 50px;
+}
+
+div.content div.main div.button input[type="button"].icon {
+  font: 400 18px "List Icon";
+}
+
+div.content div.main div.upload {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+div.content div.main div.upload input[type="file"] {
+  display: none;
+}
+
+div.content div.left {
+  width: 100px;
+  margin: 0px 20px 0px 40px;
+  padding: 0px 0px;
+  flex: 0 0 100px;
+}
+
+div.content div.left div.number {
+  @include box;
+  @include tnum-variant;
+  width: 100px;
+  height: 100px;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  border-radius: 100px;
+}
+
+div.content div.left div.number div.numerator {
+  width: 70px;
+  height: 65px;
+  margin: 0px auto;
+  padding: 0px;
+  font: italic 700 48px "Alegreya";
+  color: hsl(240, 60%, 60%);
+  line-height: 75px;
+  border-bottom: 1px hsl(0, 0%, 90%) solid;
+}
+
+div.content div.left div.number div.denominator {
+  width: 70px;
+  height: 35px;
+  margin: 0px auto;
+  padding: 0px;
+  font: italic 400 24px "Alegreya";
+  color: hsl(0, 0%, 40%);
+  line-height: 25px;
+}
+
+div.content div.left div.mark {
+  margin: 10px 0px 0px 0px;
+  padding: 0px;
+  font: 400 32px "List Icon";
+  text-align: center;
+}
+
+div.content div.left div.mark span.wrong {
+  color: hsl(330, 60%, 60%);
+  display: none;
+}
+
+div.content div.left div.mark span.correct {
+  color: hsl(120, 50%, 45%);
+  display: none;
+}

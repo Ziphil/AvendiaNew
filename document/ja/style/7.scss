@@ -1,42 +1,11 @@
 @charset "utf-8";
 
-
-@font-face {
-  font-family: "Footer Icon";
-  src: url("../material/font/1.eot?26518935");
-  src: url("../material/font/1.eot?26518935#iefix") format("embedded-opentype"),
-       url("../material/font/1.woff2?26518935") format("woff2"),
-       url("../material/font/1.woff?26518935") format("woff"),
-       url("../material/font/1.ttf?26518935") format("truetype"),
-       url("../material/font/1.svg?26518935#fontello") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Alegreya";
-  src: url("../material/font/3.otf") format("opentype"),
-       url("https://fonts.gstatic.com/s/alegreya/v10/4UaHrEBBsBhlBjvfkSLk96rp5w.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Alegreya";
-  src: url("../material/font/4.otf") format("opentype"),
-       url("https://fonts.gstatic.com/s/alegreya/v10/4UaErEBBsBhlBjvfkSLk_xHM8pxULg.woff2") format("woff2");
-  font-weight: 700;
-  font-style: italic;
-}
+@import "4v.scss";
 
 
 body {
-  margin: 0px;
-  padding: 0px;
-  background-color: hsl(0, 0%, 98%);
-  overflow-y: scroll;
-  text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  @include body;
+  @include text-size-adjust;
 }
 
 div.title {
@@ -56,13 +25,11 @@ div.content {
 }
 
 div.content div#board {
+  @include box;
   width: 600px;
   height: 600px;
   margin: 0px 30px;
   padding: 50px 50px;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 0px 4px 8px 0px hsla(0, 0%, 20%, 0.2);
   display: flex;
   flex-wrap: wrap;
   flex-grow: 0;
@@ -128,7 +95,7 @@ div.content div#board div#mask {
   color: white;
   line-height: 1;
   border-radius: 15px;
-  background-color: hsl(0, 0%, 0%, 0.5);
+  background-color: hsla(0, 0%, 0%, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,11 +114,9 @@ div.content div.right {
 }
 
 div.content div.right div.next-container {
+  @include box;
   margin: 0px 0px 25px 0px;
   padding: 20px 20px;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 0px 4px 8px 0px hsla(0, 0%, 20%, 0.2);
   display: flex;
   align-items: flex-end;
   flex-grow: 0;
@@ -190,13 +155,12 @@ div.content div.right div.next-container div.number {
 }
 
 div.content div.right div.next-container div.number div#remaining-size {
+  @include tnum-variant;
   width: 75px;
   font: italic 700 64px "Alegreya";
   color: hsl(28, 54%, 33%);
   line-height: 1;
   text-align: right;
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum";
 }
 
 div.content div.right div.next-container div#remaining {
@@ -228,11 +192,9 @@ div.content div.right div.next-container div#remaining div.tile div.background {
 }
 
 div.content div.right div.time {
+  @include box;
   margin: 0px 0px 25px 0px;
   padding: 5px 20px;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 0px 4px 8px 0px hsla(0, 0%, 20%, 0.2);
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -251,12 +213,11 @@ div.content div.right div.time div.time-label {
 div.content div.right div.time div#minute,
 div.content div.right div.time div.colon,
 div.content div.right div.time div#second {
+  @include tnum-variant;
   margin: 0px;
   padding: 0px;
   font: italic 700 64px "Alegreya";
   color: hsl(28, 54%, 33%);
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum";
 }
 
 div.content div.right div.time div.colon {
@@ -272,49 +233,22 @@ div.content div.right div.button {
 }
 
 div.content div.right div.button input[type="button"] {
-  width: 100px;
-  height: 32px;
+  @include button(hsl(28, 54%, 33%));
   margin: 0px 0px 10px 0px;
-  padding: 0px;
-  font: italic 400 18px "Alegreya";
-  color: white;
-  line-height: 32px;
-  background-color: hsl(28, 54%, 33%);
-  border: none;
-  border-radius: 100px;
-  box-shadow: 0px 4px 8px 0px hsla(28, 74%, 22%, 0.2);
-  cursor: pointer;
-  outline: none;
-  display: inline-block;
 }
 
 div.content div.right div.button input[type="button"].large {
-  width: 180px;
-  height: 45px;
-  font: italic 400 24px "Alegreya";
+  @include large-button(hsl(28, 54%, 33%), 180px);
+  margin: 0px 0px 10px 0px;
 }
 
 div.content div.right div.button input[type="button"].disabled {
-  background-color: hsl(240, 0%, 60%);
-  box-shadow: 0px 4px 8px 0px hsla(240, 0%, 40%, 0.2);
+  @include button(hsl(240, 0%, 60%));
+  margin: 0px 0px 10px 0px;
 }
 
 div.content div.right div.button button {
-  margin: 0px;
-  padding: 0px;
-  font: italic 400 18px "Alegreya";
-  color: rgb(0, 172, 237);
-  line-height: 1;
-  border: none;
-  background: none;
-  cursor: pointer;
-  outline: none;
-}
-
-div.content div.right div.button button:before {
-  margin: 0px 5px 0px 0px;
-  font: 24px "Footer Icon";
-  content: "\F000";
+  @include twitter-button;
 }
 
 div.content div.right div.check {
@@ -337,42 +271,7 @@ div.content div.right div.check hr {
 }
 
 div.content div.right div.check input[type="checkbox"] {
-  display: none;
-}
-
-div.content div.right div.check input[type="checkbox"] +label {
-  margin: 0px;
-  padding: 0px 0px 0px 18px;
-  font: 14px "Times New Roman", "Times", "IPA P明朝", "IPA明朝", "ＭＳ Ｐ明朝", serif;
-  color: black;
-  line-height: 1.5;
-  position: relative;
-}
-
-div.content div.right div.check input[type="checkbox"] +label::before {
-  width: 15px;
-  height: 15px;
-  background-color: white;
-  border-radius: 50%;
-  box-shadow: 0px 1px 2px 0px hsla(0, 0%, 20%, 0.2) inset;
-  top: 0px;
-  left: 0px;
-  position: absolute;
-  display: block;
-  content: "";
-}
-
-div.content div.right div.check input[type="checkbox"]:checked +label::after {
-  width: 4px;
-  height: 8px;
-  border-bottom: 2px hsl(28, 54%, 33%) solid;
-  border-right: 2px hsl(28, 54%, 33%) solid;
-  transform: rotate(40deg);
-  top: 2px;
-  left: 4px;
-  position: absolute;
-  display: block;
-  content: "";
+  @include checkbox(hsl(28, 54%, 33%));
 }
 
 div.content div.right div.history {
@@ -385,16 +284,14 @@ div.content div.right div.history {
 }
 
 div.content div.right div.history textarea {
+  @include box;
   width: 100%;
   height: 100%;
   margin: 0px 0px;
   padding: 20px 20px;
   font: 16px "Inconsolata", monospace;
   line-height: 1.2;
-  background-color: white;
   border: none;
-  border-radius: 15px;
-  box-shadow: 0px 4px 8px 0px hsla(0, 0%, 20%, 0.2);
   outline: none;
   resize: none;
   box-sizing: border-box;
