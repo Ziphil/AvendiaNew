@@ -128,10 +128,10 @@ class Executor {
     let entry = manager.get(index);
     if (entry) {
       let mark = entry.mark;
-      if (mark == "correct") {
+      if (mark == 0) {
         $("#correct-mark").show();
         $("#wrong-mark").hide();
-      } else if (mark == "wrong") {
+      } else if (mark == 1) {
         $("#correct-mark").hide();
         $("#wrong-mark").show();
       } else {
@@ -180,30 +180,19 @@ class Executor {
     }
   }
 
-  markCorrect() {
+  mark(mark) {
     let manager = this.manager;
     let index = Math.floor((this.count + 1) / 2) - 1;
     let entry = manager.get(index);
     if (entry) {
-      entry.mark = "correct";
+      entry.mark = mark;
       this.updateMark();
       if ($("#enable-sound").prop("checked")) {
-        $("#correct-sound")[0].play();
-      }
-    } else {
-      alert("それは無理。");
-    }
-  }
-
-  markWrong() {
-    let manager = this.manager;
-    let index = Math.floor((this.count + 1) / 2) - 1;
-    let entry = manager.get(index);
-    if (entry) {
-      entry.mark = "wrong";
-      this.updateMark();
-      if ($("#enable-sound").prop("checked")) {
-        $("#wrong-sound")[0].play();
+        if (mark == 0) {
+          $("#correct-sound")[0].play();
+        } else if (mark == 1) {
+          $("#wrong-sound")[0].play();
+        }
       }
     } else {
       alert("それは無理。");

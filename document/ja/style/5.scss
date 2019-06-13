@@ -115,6 +115,10 @@ div.content div.main div.button input[type="button"].green {
   @include button(hsl(120, 50%, 45%));
 }
 
+div.content div.main div.button input[type="button"].gray {
+  @include button(hsl(240, 0%, 60%));
+}
+
 div.content div.main div.button input[type="button"].left {
   @include left-pill;
 }
