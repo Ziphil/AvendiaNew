@@ -426,7 +426,7 @@ converter.add(["change-log"], ["page"]) do |element|
   log_entries = File.read(log_path).lines[0...size]
   this << Tag.build("ul", "change-log") do |this|
     log_entries.each do |log_entry|
-      date_string, content = log_entry.split(/\s*;\s*/)
+      date_string, content = log_entry.split(/\s*;\s*/, 2)
       this << Tag.build("li") do |this|
         this << Tag.build("span", "date") do |this|
           this << date_string
