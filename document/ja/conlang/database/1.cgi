@@ -56,9 +56,9 @@ class ShaleiaDictionary
   def search
     whole_data = ShaleiaUtilities.whole_data(@version)
     hit_names, suggested_names = ShaleiaUtilities.search(@search, @mode, @type, @version)
-    if @random == 1
-      hit_names.shuffle!
-    end
+    hit_names.reject!{|s| EXCLUDED_NAMES.include?(s)}
+    suggested_names.reject!{|_, s| EXCLUDED_NAMES.include?(s)}
+    hit_names.shuffle! if @random == 1
     size = hit_names.size
     option_string = "&version=#{@version}" + @option.map{|s| "&option=#{s}"}.join + @conversion.map{|s| "&conversion=#{s}"}.join
     html = ""
