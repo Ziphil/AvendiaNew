@@ -79,16 +79,16 @@ class Executor {
       let reader = new FileReader();
       reader.onload = (event) => {
         manager.append(reader.result);
-        this.update();
+        this.updateMain();
       };
       reader.readAsText(file);
     }
     this.manager = manager;
   }
 
-  update(increment) {
+  updateMain(increment) {
     let manager = this.manager;
-    let index = Math.floor((this.count + 1) / 2) - 1;
+    let index = this.index;
     let status = (this.count + 1) % 2;
     let mode = parseInt($("input[name=\"mode\"]:checked").val());
     let entry = manager.get(index);
@@ -98,9 +98,6 @@ class Executor {
           $("#english").text(entry.english);
           $("#japanese").text("");
           $("#pronunciation").text("　");
-          if (increment) {
-            this.fetchPronunciations(entry.english, $("#pronunciation"));
-          }
         } else {
           $("#english").text("");
           $("#japanese").text(entry.japanese);
@@ -110,9 +107,6 @@ class Executor {
         $("#english").text(entry.english);
         $("#japanese").text(entry.japanese);
         $("#pronunciation").text("　");
-        if ((mode == 0 && !increment) || mode == 1) {
-          this.fetchPronunciations(entry.english, $("#pronunciation"));
-        }
       }
     } else {
       $("#english").text("");
@@ -124,7 +118,7 @@ class Executor {
 
   updateMark() {
     let manager = this.manager;
-    let index = Math.floor((this.count + 1) / 2) - 1;
+    let index = this.index;
     let entry = manager.get(index);
     if (entry) {
       let mark = entry.mark;
@@ -150,7 +144,7 @@ class Executor {
       if (this.count <= 0) {
         this.count = 0;
       }
-      this.update(false);
+      this.updateMain(false);
       this.updateMark();
     } else {
       alert("は?");
@@ -163,7 +157,7 @@ class Executor {
       if (this.count >= this.manager.length * 2) {
         this.count = this.manager.length * 2;
       }
-      this.update(true);
+      this.updateMain(true);
       this.updateMark();
     } else {
       alert("全ての問題が終了しました。");
@@ -175,14 +169,14 @@ class Executor {
     if (result) {
       this.count = 0;
       this.manager.shuffle();
-      this.update(false);
+      this.updateMain(false);
       this.updateMark();
     }
   }
 
   mark(mark) {
     let manager = this.manager;
-    let index = Math.floor((this.count + 1) / 2) - 1;
+    let index = this.index;
     let entry = manager.get(index);
     if (entry) {
       entry.mark = mark;
@@ -223,6 +217,10 @@ class Executor {
       }
     });
     this.request = request;
+  }
+
+  get index() {
+    return Math.floor((this.count + 1) / 2) - 1;
   }
 
 }
