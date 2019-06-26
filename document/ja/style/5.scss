@@ -218,7 +218,7 @@ div.list {
   right: -330px;
   overflow-x: hidden;
   overflow-y: auto;
-  transition: all 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out;
 }
 
 div.list.shown {
