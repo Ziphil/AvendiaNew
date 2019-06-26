@@ -70,6 +70,9 @@ class Executor {
         arrowDiv.css("border-left", "50px transparent solid");
       }
     });
+    $("#show-list").change((event) => {
+      this.toggleList();
+    });
   }
 
   upload() {
@@ -80,10 +83,32 @@ class Executor {
       reader.onload = (event) => {
         manager.append(reader.result);
         this.updateMain();
+        this.updateMark();
+        this.createList();
       };
       reader.readAsText(file);
     }
     this.manager = manager;
+  }
+
+  createList() {
+    let manager = this.manager;
+    let table = $("#list");
+    table.empty();
+    for (let i = 0 ; i < manager.length ; i ++) {
+      let entry = manager.get(i);
+      let tr = $("<tr>").attr("id", "entry-" + i);
+      let numberTd = $("<td>").attr("class", "number").text(i + 1);
+      let markTd = $("<td>").attr("class", "mark");
+      let textTd = $("<td>").attr("class", "text").text(entry.english);
+      tr.append(numberTd);
+      tr.append(markTd);
+      tr.append(textTd);
+      table.append(tr);
+    }
+    for (let i = 0 ; i < manager.length ; i ++) {
+      this.updateList(i);
+    }
   }
 
   updateMain(increment) {
@@ -138,6 +163,29 @@ class Executor {
     }
   }
 
+  updateList(index) {
+    let manager = this.manager;
+    let entry = manager.get(index);
+    if (entry) {
+      let mark = entry.mark;
+      let markTd = $("#entry-" + index + " .mark");
+      let textTd = $("#entry-" + index + " .text");
+      if (mark == 0) {
+        markTd.text("\uF009");
+        markTd.attr("class", "mark correct");
+        textTd.attr("class", "text correct");
+      } else if (mark == 1) {
+        markTd.text("\uF00A");
+        markTd.attr("class", "mark wrong");
+        textTd.attr("class", "text wrong");
+      } else {
+        markTd.text("");
+        markTd.attr("class", "mark");
+        textTd.attr("class", "text");
+      }
+    }
+  }
+
   previous(amount = 1) {
     if (this.count > 0) {
       this.count -= amount;
@@ -171,6 +219,7 @@ class Executor {
       this.manager.shuffle();
       this.updateMain(false);
       this.updateMark();
+      this.createList();
     }
   }
 
@@ -181,6 +230,7 @@ class Executor {
     if (entry) {
       entry.mark = mark;
       this.updateMark();
+      this.updateList(index);
       if ($("#enable-sound").prop("checked")) {
         if (mark == 0) {
           $("#correct-sound")[0].play();
@@ -190,6 +240,14 @@ class Executor {
       }
     } else {
       alert("それは無理。");
+    }
+  }
+
+  toggleList() {
+    if ($("#show-list").prop("checked")) {
+      $("#list-wrapper").attr("class", "list shown");
+    } else {
+      $("#list-wrapper").attr("class", "list");
     }
   }
 

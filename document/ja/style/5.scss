@@ -6,6 +6,7 @@
 body {
   @include body;
   @include text-size-adjust;
+  overflow: hidden;
 }
 
 div.content {
@@ -203,4 +204,63 @@ div.content div.left div.mark span.wrong {
 div.content div.left div.mark span.correct {
   color: hsl(120, 50%, 45%);
   display: none;
+}
+
+div.list {
+  @include box;
+  width: 250px;
+  height: calc(100vh - 120px);
+  margin: 0px;
+  padding: 20px 30px;
+  border-radius: 15px 0px 0px 15px;
+  position: absolute;
+  top: 40px;
+  right: -330px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+div.list.shown {
+  right: 0px;
+}
+
+div.list table {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  border-collapse: collapse;
+}
+
+div.list table tr td {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  border-top: 1px hsl(0, 0%, 90%) solid;
+  border-bottom: 1px hsl(0, 0%, 90%) solid;
+}
+
+div.list table tr td.number {
+  @include tnum-variant;
+  width: 45px;
+  font: italic 400 18px "Alegreya";
+  border-right: 1px hsl(0, 0%, 90%) solid;
+}
+
+div.list table tr td.mark {
+  width: 40px;
+  font: 400 18px "List Icon";
+}
+
+div.list table tr td.text {
+  font: 700 22px "Alegreya";
+  color: hsl(0, 0%, 40%);
+}
+
+div.list table tr td.wrong {
+  color: hsl(330, 60%, 60%);
+}
+
+div.list table tr td.correct {
+  color: hsl(120, 50%, 45%);
 }
