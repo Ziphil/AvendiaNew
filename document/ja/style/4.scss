@@ -61,7 +61,7 @@ div.content div.main div.history table {
   border-collapse: collapse;
 }
 
-div.content div.main div.history tr td {
+div.content div.main div.history table tr td {
   margin: 0px;
   padding: 0px;
   font: italic 400 18px "Alegreya";
@@ -69,45 +69,45 @@ div.content div.main div.history tr td {
   border-bottom: 1px hsl(0, 0%, 90%) solid;
 }
 
-div.content div.main div.history tr td.number {
+div.content div.main div.history table tr td.number {
   width: 45px;
   text-align: center;
 }
 
-div.content div.main div.history tr td.date {
+div.content div.main div.history table tr td.date {
   width: 90px;
   padding-right: 10px;
   text-align: center;
   border-right: 1px hsl(0, 0%, 90%) solid;
 }
 
-div.content div.main div.history tr td.score {
+div.content div.main div.history table tr td.score {
   width: 65px;
   padding-right: 20px;
   text-align: right;
 }
 
-div.content div.main div.history tr td.previous-rating {
+div.content div.main div.history table tr td.previous-rating {
   width: 75px;
   padding-right: 10px;
   font: italic 700 22px "Alegreya";
   text-align: right;
 }
 
-div.content div.main div.history tr td.arrow {
+div.content div.main div.history table tr td.arrow {
   width: 10px;
   font: 14px "List Icon";
   text-align: center;
 }
 
-div.content div.main div.history tr td.rating {
+div.content div.main div.history table tr td.rating {
   width: 75px;
   padding-right: 10px;
   font: italic 700 22px "Alegreya";
   text-align: right;
 }
 
-div.content div.main div.history tr td.difference {
+div.content div.main div.history table tr td.difference {
   width: 75px;
   padding-right: 10px;
   text-align: right;
