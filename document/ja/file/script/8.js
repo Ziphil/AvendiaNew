@@ -101,6 +101,9 @@ class Executor {
       let numberTd = $("<td>").attr("class", "number").text(i + 1);
       let markTd = $("<td>").attr("class", "mark");
       let textTd = $("<td>").attr("class", "text").text(entry.english);
+      tr.on("click", (event) => {
+        this.jump(i * 2 + 1);
+      });
       tr.append(numberTd);
       tr.append(markTd);
       tr.append(textTd);
@@ -209,6 +212,16 @@ class Executor {
       this.updateMark();
     } else {
       alert("全ての問題が終了しました。");
+    }
+  }
+
+  jump(count) {
+    if (count >= 0 && count <= this.manager.length * 2) {
+      this.count = count;
+      this.updateMain(false);
+      this.updateMark();
+    } else {
+      alert("は?");
     }
   }
 
