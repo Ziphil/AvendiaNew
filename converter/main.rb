@@ -210,7 +210,7 @@ class WholeAvendiaConverter
     when "scss"
       output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
       output_path = modify_extension(output_path)
-      Kernel.system("sass --style expanded --no-cache #{path}:#{output_path}")
+      Kernel.system("sass --style=compressed --cache-location=#{OUTPUT_PATHS[language]}/.sass-cache #{path}:#{output_path}")
     when "css", "rb", "cgi", "js"
       output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
       FileUtils.copy(path, output_path)
