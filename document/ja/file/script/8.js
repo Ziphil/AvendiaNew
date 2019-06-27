@@ -53,6 +53,22 @@ class Executor {
   }
 
   prepare() {
+    $(document).on("keydown", (event) => {
+      if (event.keyCode == 39) {
+        let amount = (event.shiftKey) ? 2 : 1;
+        this.next(amount);
+      } else if (event.keyCode == 37) {
+        let amount = (event.shiftKey) ? 2 : 1;
+        this.previous(amount);
+      }
+      if (event.keyCode == 68) {
+        this.mark(0);
+      } else if (event.keyCode == 65) {
+        this.mark(1);
+      } else if (event.keyCode == 83) {
+        this.mark(null);
+      }
+    });
     $("input[name=\"mode\"]:radio").change((event) => {
       let mode = parseInt($(event.target).val());
       let arrowDiv = $("#arrow");
