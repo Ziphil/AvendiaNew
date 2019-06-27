@@ -329,72 +329,76 @@
     限定節全体の前後にタデックを打つことで、それが修飾する名詞の範囲を限定せずに名詞の補足説明をすることができる構文。
     文法書の\a|href="../grammer/6.html#43"|<該当項目>を参照。
   >
-  \h1<代詞>
-  \h2|id="pro"|<代詞\fl<proform>>
+  \h1<代辞>
+  \h2|id="pro"|<代辞\fl<proform>>
   \p<
-    いわゆる代名詞や代形容詞に相当する単語の総称。
+    文章中ですでに出てきた (もしくはしばしばすぐ直後に出てくる) 別の単語を指し示す役割がある単語の総称。
     \an|href="#fpro"|<近接>, \an|href="#qpro"|<遠方>, \an|href="#cpro"|<指示>, \an|href="#ppro"|<疑問>, \an|href="#dpro"|<不在>, \an|href="#zpro"|<不定>, \an|href="#kpro"|<特定>, \an|href="#rpro"|<任意>, \an|href="#mpro"|<同種>, \an|href="#vpro"|<一般>の 10 種類に分類され、全部で 41 個ある。
     それぞれの種類に対して、人を表す単語, 物を表す単語, 事を表す単語, 場所を表す単語, 他の名詞を修飾するときに使う単語の 5 つが用意されている (一部欠けている部分もある)。
     一覧は、文法書の\a|href="../grammer/6.html#65"|<該当項目>を参照。
   >
-  \h2|id="fpro"|<近接の代詞\fl<proximal proform>>
+  \h2|id="proo"|<代詞\fl<proform>>
   \p<
-    筆者 (話者) から物理的にもしくは心理的に近いものを指すときに用いる\an|href="#pro"|<代詞>。
+    \an|href="#pro"|<代辞>の別名。
+  >
+  \h2|id="fpro"|<近接の代辞\fl<proximal proform>>
+  \p<
+    筆者 (話者) から物理的にもしくは心理的に近いものを指すときに用いる\an|href="#pro"|<代辞>。
     英語の this などに相当する。
     {fes}, {fit}, {fal}, {fêd}, {fik} の 5 個で、全て頭文字が [f] である。
   >
-  \h2|id="qpro"|<遠方の代詞\fl<distal proform>>
+  \h2|id="qpro"|<遠方の代辞\fl<distal proform>>
   \p<
-    筆者 (話者) から物理的にもしくは心理的に遠いものを指すときに用いる\an|href="#pro"|<代詞>。
+    筆者 (話者) から物理的にもしくは心理的に遠いものを指すときに用いる\an|href="#pro"|<代辞>。
     英語の that などに相当する。
     {qos}, {qut}, {qel}, {qôd}, {quk} の 5 個で、全て頭文字が [q] である。
   >
-  \h2|id="cpro"|<指示の代詞\fl<demonstrative proform>>
+  \h2|id="cpro"|<指示の代辞\fl<demonstrative proform>>
   \p<
-    それ以前までの文脈で出てきたものと全く同じものを指すときに用いる\an|href="#pro"|<代詞>。
+    それ以前までの文脈で出てきたものと全く同じものを指すときに用いる\an|href="#pro"|<代辞>。
     英語の he や it などに相当する。
     {ces}, {cit}, {cal}, {cêd}, {cik} の 5 個で、全て頭文字が [c] である。
   >
-  \h2|id="ppro"|<疑問の代詞\fl<interrogative proform>>
+  \h2|id="ppro"|<疑問の代辞\fl<interrogative proform>>
   \p<
-    疑問文を作る\an|href="#pro"|<代詞>。
+    疑問文を作る\an|href="#pro"|<代辞>。
     英語の what や who などに相当するが、英語とは違って語順の変化は起こらない。
     {pas}, {pet}, {pil}, {pâd}, {pek} の 5 個で、全て頭文字が [p] である。
-    これ以外にも疑問文を作る単語は存在するが、それは疑問の代詞に含めない。
+    これ以外にも疑問文を作る単語は存在するが、それは疑問の代辞に含めない。
   >
-  \h2|id="dpro"|<不在の代詞\fl<negative proform>>
+  \h2|id="dpro"|<不在の代辞\fl<negative proform>>
   \p<
-    存在しないこともしくは 0 個のものが存在することを意味する\an|href="#pro"|<代詞>。
+    存在しないこともしくは 0 個のものが存在することを意味する\an|href="#pro"|<代辞>。
     英語の nobody や nothing などに相当する。
     {dus}, {dat}, {dol}, {dûd}, {dak} の 5 個で、全て頭文字が [d] である。
   >
-  \h2|id="zpro"|<不定の代詞\fl<indefinite proform>>
+  \h2|id="zpro"|<不定の代辞\fl<indefinite proform>>
   \p<
-    何かに特定はしないが漠然と人や物全般を指す\an|href="#pro"|<代詞>。
+    何かに特定はしないが漠然と人や物全般を指す\an|href="#pro"|<代辞>。
     \an|href="#rc"|<限定節>の被修飾語として使われることが多い。
     {zis}, {zat}, {zel}, {zîd}, {zak} の 5 個で、全て頭文字が [z] である。
   >
-  \h2|id="kpro"|<特定の代詞\fl<assertive proform>>
+  \h2|id="kpro"|<特定の代辞\fl<assertive proform>>
   \p<
-    ある特定のものを表してはいるが具体的にそれが何であるかには言及しないときに用いる\an|href="#pro"|<代詞>。
+    ある特定のものを表してはいるが具体的にそれが何であるかには言及しないときに用いる\an|href="#pro"|<代辞>。
     「例のあれ」のような表現に近い。
     {kos}, {kut}, {kel}, {kôd}, {kuk} の 5 個で、全て頭文字が [k] である。
   >
-  \h2|id="rpro"|<任意の代詞\fl<elective proform>>
+  \h2|id="rpro"|<任意の代辞\fl<elective proform>>
   \p<
-    どんなものであっても良いことを表す\an|href="#pro"|<代詞>。
+    どんなものであっても良いことを表す\an|href="#pro"|<代辞>。
     英語の anyone や anything などに相当する。
     {ris}, {rat}, {rel}, {rîd}, {rak} の 5 個で、全て頭文字が [r] である。
   >
-  \h2|id="mpro"|<同種の代詞\fl<substitutive proform>>
+  \h2|id="mpro"|<同種の代辞\fl<substitutive proform>>
   \p<
-    文脈上で前に出てきた名詞を受け、それと同じ名詞で表される別の個体を表す\an|href="#pro"|<代詞>。
+    文脈上で前に出てきた名詞を受け、それと同じ名詞で表される別の個体を表す\an|href="#pro"|<代辞>。
     同じ名詞が繰り返し使われるのを避けるために用いられる。
     物を表す {met} のみがある。 
   >
-  \h2|id="vpro"|<一般の代詞\fl<generic proform>>
+  \h2|id="vpro"|<一般の代辞\fl<generic proform>>
   \p<
-    一般論を表現するときに用いる\an|href="#pro"|<代詞>。
+    一般論を表現するときに用いる\an|href="#pro"|<代辞>。
     人を表す {ves} のみがある。 
   >
   \h1<その他の文法用語>
@@ -422,27 +426,27 @@
     シャレイア語には受動態を表現する特別な構文はなく、語順を調整して何が話題で何が新情報かを変えることで、受け身のようなニュアンスを出す。
     この方法を、受動態の構文がある別の言語と比較して、このように呼ぶ。
   >
-  \h2|id="sfconn"|<連結詞の標準形\fl<standard form of connective>>
+  \h2|id="sfconn"|<連結辞の標準形\fl<standard form of connective>>
   \p<
     {o}, {á}, {é}, {à} のことで、\an|href="#afconn"|<別形>と比較してこう呼ばれる。
     主に語句と語句を繋げるときに使われる。
   >
-  \h2|id="afconn"|<連結詞の別形\fl<alternative form of connective>>
+  \h2|id="afconn"|<連結辞の別形\fl<alternative form of connective>>
   \p<
     {lo}, {lá}, {lé}, {dà} のこと。
     主に節と節を繋げるときに使われる。
   >
-  \h2|id="vmpart"|<助接詞の動詞修飾形\fl<verb-modifying form of particle>>
+  \h2|id="vmpart"|<助接辞の動詞修飾形\fl<verb-modifying form of particle>>
   \p<
-    助接詞の\an|href="#stem"|<語幹>そのままの形。
+    助接辞の\an|href="#stem"|<語幹>そのままの形。
   >
-  \h2|id="ppart"|<助接詞の原形\fl<plain form of particle>>
+  \h2|id="ppart"|<助接辞の原形\fl<plain form of particle>>
   \p<
-    \an|href="#vmpart"|<助接詞の動詞修飾形>の別名。
+    \an|href="#vmpart"|<助接辞の動詞修飾形>の別名。
   >
-  \h2|id="nvmpart"|<助接詞の非動詞修飾形\fl<nonverb-modifying form of particle>>
+  \h2|id="nvmpart"|<助接辞の非動詞修飾形\fl<nonverb-modifying form of particle>>
   \p<
-    助接詞の前に活用接頭辞の {i} がついた形。
+    助接辞の前に活用接頭辞の {i} がついた形。
   >
   \h2|id="deco"|<飾詞\fl<decorative>>
   \p<
@@ -466,14 +470,22 @@
   \p<
     \an|href="qdeco"|<準飾辞>の別名。
   >
-  \h2|id="nabl"|<名詞化アプラウト\fl<nominalising ablaut>>
+  \h2|id="nabl"|<名辞化アプラウト\fl<nominalising ablaut>>
   \p<
-    [a] → [e] → [i] → [a] および [o] → [u] → [o] という規則のもと、最後の音節の母音を交代させることで、\an|href="#vi"|<動詞型不定詞>から\an|href="#ni"|<名詞型不定詞>を作ること。
+    [a] → [e] → [i] → [a] および [o] → [u] → [o] という規則のもと、最後の音節の母音を交代させることで、\an|href="#vi"|<動辞>から\an|href="#ni"|<名辞>を作ること。
   >
-  \h2|id="vabl"|<動詞化アプラウト\fl<verbifying ablaut>>
+  \h2|id="nablo"|<名詞化アプラウト\fl<nominalising ablaut>>
   \p<
-    [a] → [i] → [e] → [a] および [o] → [u] → [o] という規則のもと、最後の音節の母音を交代させることで、\an|href="#vi"|<名詞型不定詞>から\an|href="#ni"|<動詞型不定詞>を作ること。
-    \an|href="#nabl"|<名詞化アプラウト>に比べて、これによって作られる単語は少ない。
+    \an|href="#nabl"|<名辞化アプラウト>の別名。
+  >
+  \h2|id="vabl"|<動辞化アプラウト\fl<verbifying ablaut>>
+  \p<
+    [a] → [i] → [e] → [a] および [o] → [u] → [o] という規則のもと、最後の音節の母音を交代させることで、\an|href="#vi"|<名辞>から\an|href="#ni"|<動辞>を作ること。
+    \an|href="#nabl"|<名辞化アプラウト>に比べて、これによって作られる単語は少ない。
+  >
+  \h2|id="nablo"|<動詞化アプラウト\fl<verbifying ablaut>>
+  \p<
+    \an|href="#nabl"|<動辞化アプラウト>の別名。
   >
   \h2|id="stem"|<語幹\fl<stem>>
   \p<
