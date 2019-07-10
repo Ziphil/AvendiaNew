@@ -437,10 +437,35 @@ class TagFactory {
 
 class Executor {
 
+  getItem(keys) {
+    let value = undefined;
+    for (let key of keys) {
+      let candidate = localStorage.getItem(key);
+      if (candidate != null && candidate != undefined) {
+        value = candidate;
+        break;
+      }
+    }
+    if (value == undefined) {
+      for (let key of keys) {
+        let candidate = Cookies.get(key);
+        if (candidate != null && candidate != undefined) {
+          value = candidate;
+          break;
+        }
+      }
+    }
+    return value;
+  }
+
+  setItem(key, value, option) {
+    localStorage.setItem(key, value);
+  }
+
   getParameters() {
-    let input = Cookies.get("input");
+    let input = this.getItem(["randomizer_input", "input"]);
     let number = null;
-    let mode = parseInt(Cookies.get("mode"));
+    let mode = parseInt(this.getItem(["randomizer_mode", "mode"]));
     let pairs = location.search.substring(1).split("&");
     for (let pair of pairs) {
       let match;
@@ -514,8 +539,8 @@ class Executor {
     this.reset();
     this.start();
     if (!first) {
-      Cookies.set("input", input, {path: "", expires: COOKIE_AGE});
-      Cookies.set("mode", mode, {path: "", expires: COOKIE_AGE});
+      this.setItem("randomizer_input", input, {path: "", expires: COOKIE_AGE});
+      this.setItem("randomizer_mode", mode, {path: "", expires: COOKIE_AGE});
     }
   }
 
