@@ -275,9 +275,8 @@ class WholeAvendiaConverter
         paths << [path, language]
       end
     end
-    paths.map! do |path, language|
-      next_path = path.gsub(/v\.scss$/, ".scss")
-      next [next_path, language]
+    paths.reject! do |path, language|
+      next path =~ /v\.scss$/
     end
     paths.sort_by! do |path, language|
       path_array = path.gsub(ROOT_PATHS[language] + "/", "").gsub(/\.\w+$/, "").split("/")
