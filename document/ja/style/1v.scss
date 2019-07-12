@@ -183,21 +183,26 @@ $code-line-height: 1.4;
 // 余白 > メインエリア
 $main-vertical-padding: 35px;
 $main-horizontal-padding: 40px;
+$main-smartphone-horizontal-padding: 20px;
 // 余白 > パンくずリスト
 $breadcrumb-vertical-padding: 10px;
 $breadcrumb-horizontal-padding: 20px;
 // 余白 > ページ一覧
 $index-vertical-margin: 15px;
 $index-vertical-padding: 5px;
+$index-horizontal-margin: -10px;
+$index-smartphone-horizontal-margin: -5px;
 $index-horizontal-padding: 20px;
 // 余白 > 第 1 見出し
 $section-vertical-margin: 15px;
 $section-vertical-padding: 3px;
 $section-horizontal-padding: 30px;
+$section-smartphone-horizontal-padding: 20px;
 // 余白 > 第 2 見出し
 $subsection-vertical-margin: 12px;
 $subsection-vertical-padding: 0px;
 $subsection-horizontal-padding: 30px;
+$subsection-smartphone-horizontal-padding: 20px;
 // 余白 > 例文などのボックス
 $box-vertical-padding: 7px;
 // 余白 > 表のセル
@@ -307,6 +312,9 @@ $monospace-font-weight: 400;
     width: $scrollbar-size;
     height: $scrollbar-size;
     background: $background;
+    @include smartphone {
+      display: none;
+    }
   }
   &::-webkit-scrollbar-thumb {
     border: 1px $page-background solid;
@@ -333,6 +341,12 @@ $monospace-font-weight: 400;
 @mixin text-size-adjust {
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+
+@mixin smartphone {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
 }
 
 @mixin small-screen {

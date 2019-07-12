@@ -19,19 +19,24 @@ body {
 
 
 header {
-  @include clearfix;
   width: $main-width;
   max-width: $main-max-width;
   margin: 40px auto 0px auto;
   padding: 0px $main-horizontal-padding;
   box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  @include smartphone {
+    width: 100vw;
+    padding: 0px $main-smartphone-horizontal-padding;
+    justify-content: center;
+  }
 
   // サイト名
 
   div.title {
     margin: 0px;
     padding: 0px;
-    float: left;
   }
 
   div.title a {
@@ -47,8 +52,7 @@ header {
   div.language {
     margin: 5px 0px 0px 0px;
     padding: 0px;
-    float: right;
-    @include small-screen {
+    @include smartphone {
       display: none;
     }
   }
@@ -63,11 +67,13 @@ header {
 
 
 nav.menu {
-  @include clearfix;
   width: $main-width;
   max-width: $main-max-width;
   margin: 30px auto 0px auto;
   padding: 0px;
+  @include smartphone {
+    width: 100vw;
+  }
 
   // メニューバー
 
@@ -78,7 +84,7 @@ nav.menu {
   }
 
   ul.menu >li {
-    width: 100% * (1 / 4);
+    width: 100%;
     height: $first-menu-height;
     margin: 0px 0px 0px 3px;
     padding: 0px;
@@ -97,6 +103,15 @@ nav.menu {
 
   ul.menu >li:first-child {
     margin: 0px;
+    @include smartphone {
+      border-radius: 0px $first-menu-border-radius $first-menu-border-radius 0px;
+    }
+  }
+
+  ul.menu >li:last-child {
+    @include smartphone {
+      border-radius: $first-menu-border-radius 0px 0px $first-menu-border-radius;
+    }
   }
 
   ul.menu >li:hover {
@@ -129,6 +144,9 @@ nav.menu {
 
   ul.menu >li:hover >ul {
     opacity: 1;
+    @include smartphone {
+      display: none;
+    }
   }
 
   ul.menu >li >ul >li {
@@ -162,7 +180,6 @@ nav.menu {
 
 
 nav.breadcrumb {
-  @include clearfix;
   width: $main-width;
   max-width: $main-max-width;
   margin: 30px auto 0px auto;
@@ -171,6 +188,12 @@ nav.breadcrumb {
   background: $main-background;
   box-shadow: $large-shadow-setting $main-shadow-color;
   box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  @include smartphone {
+    width: 100vw;
+    border-radius: 0px;
+  }
 
   // パンくずリスト
 
@@ -180,7 +203,6 @@ nav.breadcrumb {
     padding: 0px;
     font-size: $breadcrumb-font-size;
     line-height: $breadcrumb-line-height;
-    float: left;
   }
 
   ul.breadcrumb li {
@@ -228,7 +250,6 @@ nav.breadcrumb {
     line-height: $breadcrumb-line-height;
     color: $breadcrumb-color !important;
     text-align: right;
-    float: right;
   }
 
   div.version-caution {
@@ -257,17 +278,27 @@ article.content-table {
   background: $main-background;
   box-shadow: $large-shadow-setting $main-shadow-color;
   box-sizing: border-box;
+  overflow-x: hidden;
+  @include smartphone {
+    width: 100vw;
+    padding-left: $main-smartphone-horizontal-padding;
+    padding-right: $main-smartphone-horizontal-padding;
+    border-radius: 0px;
+  }
 
   // ページ一覧のグループ名
 
   h1 {
-    margin: $index-vertical-margin -10px;
+    margin: $index-vertical-margin $index-horizontal-margin;
     padding: 0px 0px;
     font-size: $index-header-font-size;
     font-weight: $serif-font-weight;
     font-style: normal;
     color: $index-header-color;
     line-height: 1;
+    @include smartphone {
+      margin: $index-vertical-margin $index-smartphone-horizontal-margin;
+    }
   }
 
   // ページ一覧のコンテナ
@@ -365,6 +396,13 @@ article.main {
   background: $main-background;
   box-shadow: $large-shadow-setting $main-shadow-color;
   box-sizing: border-box;
+  overflow-x: hidden;
+  @include smartphone {
+    width: 100vw;
+    padding-left: $main-smartphone-horizontal-padding;
+    padding-right: $main-smartphone-horizontal-padding;
+    border-radius: 0px;
+  }
 
   // 第 1 見出し
 
@@ -379,6 +417,10 @@ article.main {
     line-height: $line-height;
     color: $section-color;
     background: $section-background;
+    @include smartphone {
+      margin: $section-vertical-margin 0px - $main-smartphone-horizontal-padding;
+      padding: $section-vertical-padding $section-smartphone-horizontal-padding;
+    }
   }
 
   h1 span.sans a {
@@ -401,6 +443,10 @@ article.main {
     line-height: $line-height;
     color: $subsection-color;
     border-bottom: 1px $subsection-color solid;
+    @include smartphone {
+      margin: $subsection-vertical-margin 0px - $main-smartphone-horizontal-padding;
+      padding: $subsection-vertical-padding $subsection-smartphone-horizontal-padding;
+    }
   }
 
   h2 span.number {
@@ -473,9 +519,12 @@ article.main {
   // 画像
 
   img {
+    max-width: 90%;
+    height: auto;
     margin: $wide-vertical-margin auto;
     padding: 0px;
     display: block;
+    box-sizing: border-box;
   }
 
   // テーブル
@@ -623,6 +672,10 @@ article.main {
     padding: $box-vertical-padding $main-horizontal-padding;
     background: $box-background;
     list-style-type: none;
+    @include smartphone {
+      margin: $wide-vertical-margin 0px - $main-smartphone-horizontal-padding;
+      padding: $box-vertical-padding $main-smartphone-horizontal-padding;
+    }
   }
 
   ul.conlang li {
@@ -686,7 +739,7 @@ article.main {
   ul.change-log li ul.breadcrumb {
     margin: 0px;
     padding: 0px;
-    display: inline-block;
+    display: inline;
   }
 
   ul.change-log li ul.breadcrumb li {
@@ -838,6 +891,10 @@ article.main {
     border: none;
     border-collapse: separate;
     display: block;
+    @include smartphone {
+      margin: $wide-vertical-margin 0px - $main-smartphone-horizontal-padding;
+      padding: 0px $main-smartphone-horizontal-padding;
+    }
   }
 
   table.code +table.sample {
@@ -1412,6 +1469,10 @@ article.main {
   div.wrapper div.result ul.conlang {
     margin-left: 0px - $main-horizontal-padding - $result-horizontal-padding;
     padding-left: $main-horizontal-padding + $result-horizontal-padding;
+    @include smartphone {
+      margin-left: 0px - $main-smartphone-horizontal-padding - $result-horizontal-padding;
+      padding-left: $main-smartphone-horizontal-padding + $result-horizontal-padding;
+    }
   }
 
   div.wrapper div.result p.synonym::before {
