@@ -175,6 +175,8 @@ $top-link-icon-font-size: 18px;
 
 // 行の高さ > 全体
 $line-height: 1.6;
+// 行の高さ > ページ一覧
+$index-line-height: 1.4;
 // 行の高さ > パンくずリスト
 $breadcrumb-line-height: 1.4;
 // 行の高さ > コード
@@ -189,9 +191,9 @@ $breadcrumb-vertical-padding: 10px;
 $breadcrumb-horizontal-padding: 20px;
 // 余白 > ページ一覧
 $index-vertical-margin: 15px;
-$index-vertical-padding: 5px;
+$index-vertical-padding: 8px;
 $index-horizontal-margin: -10px;
-$index-smartphone-horizontal-margin: -5px;
+$index-smartphone-horizontal-margin: 0px;
 $index-horizontal-padding: 20px;
 // 余白 > 第 1 見出し
 $section-vertical-margin: 15px;
@@ -344,12 +346,6 @@ $monospace-font-weight: 400;
 }
 
 @mixin smartphone {
-  @media screen and (max-width: 640px) {
-    @content;
-  }
-}
-
-@mixin small-screen {
   @media screen and (max-width: 640px) {
     @content;
   }

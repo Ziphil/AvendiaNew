@@ -198,7 +198,6 @@ nav.breadcrumb {
   // パンくずリスト
 
   ul.breadcrumb {
-    width: 80%;
     margin: 0px;
     padding: 0px;
     font-size: $breadcrumb-font-size;
@@ -243,8 +242,8 @@ nav.breadcrumb {
   // 言語バージョン
 
   div.version {
-    width: 20%;
-    margin: 0px;
+    width: 60px;
+    margin: 0px 0px 0px 20px;
     padding: 0px;
     font-size: $breadcrumb-font-size;
     line-height: $breadcrumb-line-height;
@@ -253,14 +252,13 @@ nav.breadcrumb {
   }
 
   div.version-caution {
-    width: 20%;
-    margin: 0px;
+    width: 60px;
+    margin: 0px 0px 0px 20px;
     padding: 0px;
     font-size: $breadcrumb-font-size;
     line-height: $breadcrumb-line-height;
     color: $caution-breadcrumb-color !important;
     text-align: right;
-    float: right;
   }
 
 }
@@ -320,7 +318,7 @@ article.content-table {
     font-style: normal;
     font-feature-settings: "palt" 1, "pkna" 1;
     text-decoration: none;
-    line-height: $line-height;
+    line-height: $index-line-height;
     color: $index-color;
     background: $index-background;
     border: 0px;
@@ -911,7 +909,6 @@ article.main {
     line-height: $code-line-height;
     letter-spacing: -1px;
     white-space: pre;
-    overflow: hidden;
   }
 
   table.code tr:first-child td,
@@ -944,6 +941,8 @@ article.main {
 
   table.code tr td.number::before,
   table.sample tr td.number::before {
+    width: 20px;
+    display: inline-block;
     content: attr(data-number);
   }
 
