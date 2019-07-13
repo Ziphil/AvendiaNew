@@ -388,7 +388,14 @@ converter.add(["section-table"], ["page"]) do |element|
           this << section_tag
         end
         section_tag = Tag.build("li") do |this|
-          this << apply(inner_element, "page.section-table")
+          if inner_element.attribute("id")
+            this << Tag.build("a") do |this|
+              this["href"] = "#" + inner_element.attribute("id").to_s
+              this << apply(inner_element, "page.section-table")
+            end
+          else
+            this << apply(inner_element, "page.section-table")
+          end
         end
         subsection_tag = Tag.new("ul")
       when "h2"
