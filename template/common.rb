@@ -280,6 +280,19 @@ converter.add(["a"], ["page"]) do |element|
   next this
 end
 
+converter.add(["ae"], ["page"]) do |element|
+  this = ""
+  this << Tag.build("a") do |this|
+    element.attributes.each_attribute do |attribute|
+      this[attribute.name] = attribute.to_s
+    end
+    this["target"] = "_blank"
+    this["rel"] = "noopener noreferrer"
+    this << apply(element, "page")
+  end
+  next this
+end
+
 converter.add(["an"], ["page"]) do |element|
   this = ""
   this << Tag.build("a", "normal") do |this|
