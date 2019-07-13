@@ -1235,6 +1235,7 @@ article.main {
   
   span.tile img {
     width: 20px;
+    max-width: 20px;
     height: 20px;
     margin: 0px;
     padding: 0px;
@@ -1265,6 +1266,7 @@ article.main {
   
   table.board tr td.tile img {
     width: 60px;
+    max-width: 60px;
     height: 60px;
     margin: 0px;
     padding: 0px;
