@@ -265,12 +265,14 @@ end
 
 converter.add(["img"], ["page"]) do |element|
   this = ""
-  this << Tag.build("img", nil, false) do |this|
-    this["alt"] = ""
-    element.attributes.each_attribute do |attribute|
-      this[attribute.name] = attribute.to_s
+  this << Tag.build("div", "img-wrapper") do |this|
+    this << Tag.build("img", nil, false) do |this|
+      this["alt"] = ""
+      element.attributes.each_attribute do |attribute|
+        this[attribute.name] = attribute.to_s
+      end
+      this << apply(element, "page")
     end
-    this << apply(element, "page")
   end
   next this
 end
@@ -469,7 +471,10 @@ converter.add(["li"], ["page.ul"]) do |element|
 end
 
 converter.add(["table"], ["page"]) do |element|
-  this = pass_element(element, "page.table")
+  this = ""
+  this << Tag.build("div", "table-wrapper") do |this|
+    this << pass_element(element, "page.table")
+  end
   next this
 end
 
@@ -533,33 +538,35 @@ converter.add(["pre", "samp"], ["page"]) do |element|
   raw_string = element.texts.map{|s| s.to_s}.join.gsub(/\A\s*?\n/, "")
   indent_size = raw_string.match(/\A(\s*?)\S/)[1].length
   string = raw_string.rstrip.deindent
-  this << Tag.build("table") do |this|
-    case element.name
-    when "pre"
-      this.class = "code"
-    when "samp"
-      this.class = "sample"
-    end
-    this << "\n"
-    string.each_line.with_index do |line, number|
-      this << " " * indent_size
-      this << Tag.build("tr") do |this|
-        if element.name == "pre" && !element.attribute("simple")
-          this << Tag.build("td", "number") do |this|
-            this["data-number"] = (number + 1).to_s
-          end
-        end
-        this << Tag.build("td") do |this|
-          if line =~ /^\s*$/
-            this << " "
-          else
-            this << line.chomp
-          end
-        end
+  this << Tag.build("div", "code-wrapper") do |this|
+    this << Tag.build("table") do |this|
+      case element.name
+      when "pre"
+        this.class = "code"
+      when "samp"
+        this.class = "sample"
       end
       this << "\n"
+      string.each_line.with_index do |line, number|
+        this << " " * indent_size
+        this << Tag.build("tr") do |this|
+          if element.name == "pre" && !element.attribute("simple")
+            this << Tag.build("td", "number") do |this|
+              this["data-number"] = (number + 1).to_s
+            end
+          end
+          this << Tag.build("td") do |this|
+            if line =~ /^\s*$/
+              this << " "
+            else
+              this << line.chomp
+            end
+          end
+        end
+        this << "\n"
+      end
+      this << " " * (indent_size - 2)
     end
-    this << " " * (indent_size - 2)
   end
   next this
 end

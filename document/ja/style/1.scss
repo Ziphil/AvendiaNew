@@ -514,10 +514,15 @@ article.main {
 
   // 画像
 
+  div.img-wrapper {
+    @include scrollbar($main-background, $scrollbar-thumb-background);
+    margin: $wide-vertical-margin 0px;
+    padding: 0px;
+    overflow: auto;
+  }
+
   img {
-    max-width: 90%;
-    height: auto;
-    margin: $wide-vertical-margin auto;
+    margin: 0px auto;
     padding: 0px;
     display: block;
     box-sizing: border-box;
@@ -525,12 +530,20 @@ article.main {
 
   // テーブル
 
+  div.table-wrapper {
+    @include scrollbar($main-background, $scrollbar-thumb-background);
+    margin: $wide-vertical-margin 0px;
+    padding: 0px;
+    overflow: auto;
+  }
+
   table {
-    margin: $wide-vertical-margin auto;
+    margin: 0px auto;
     padding: 0px;
     border-top: 1px $border-color solid;
     border-bottom: 1px $border-color solid;
     border-collapse: collapse;
+    white-space: nowrap;
   }
 
   table tr th,
@@ -558,6 +571,8 @@ article.main {
   // 罫線なしテーブル
 
   table.blank {
+    margin: $wide-vertical-margin 0px;
+    padding: 0px;
     border: 0px;
   }
 
@@ -610,6 +625,9 @@ article.main {
   ul.triple {
     column-count: 3;
     column-gap: $table-cell-horizontal-padding * 2;
+    @include smartphone {
+      column-count: 2;
+    }
   }
 
   // 番号付き箇条書き
@@ -659,6 +677,9 @@ article.main {
   ol.triple {
     column-count: 3;
     column-gap: $table-cell-horizontal-padding * 2;
+    @include smartphone {
+      column-count: 2;
+    }
   }
 
   // 例文の箇条書き
@@ -716,6 +737,9 @@ article.main {
   ul.section-table {
     column-count: 3;
     column-gap: $table-cell-horizontal-padding * 2;
+    @include smartphone {
+      column-count: 2;
+    }
   }
 
   ul.section-table li span.number {
@@ -775,6 +799,7 @@ article.main {
 
   table.list {
     margin: $vertical-margin 0px;
+    padding: 0px;
     border-collapse: collapse;
     border: 0px; 
   }
@@ -811,6 +836,7 @@ article.main {
     margin: $vertical-margin 0px;
     border: 0px;
     table-layout: fixed;
+    white-space: normal;
   }
 
   table.translation tr td {
@@ -879,22 +905,31 @@ article.main {
 
   // ソースコード
 
+  div.code-wrapper {
+    @include scrollbar($box-background, $scrollbar-thumb-background);
+    margin: $wide-vertical-margin 0px - $main-horizontal-padding;
+    padding: 0px;
+    background: $box-background;
+    overflow: auto;
+    @include smartphone {
+      margin: $wide-vertical-margin 0px - $main-smartphone-horizontal-padding;
+    }
+  }
+
+  div.code-wrapper +div.code-wrapper {
+    margin-top: $code-sample-vertical-gap - $wide-vertical-margin;
+  }
+
   table.code,
   table.sample {
-    margin: $wide-vertical-margin 0px - $main-horizontal-padding;
+    margin: 0px;
     padding: 0px $main-horizontal-padding;
     background: $box-background;
     border: none;
     border-collapse: separate;
-    display: block;
     @include smartphone {
-      margin: $wide-vertical-margin 0px - $main-smartphone-horizontal-padding;
       padding: 0px $main-smartphone-horizontal-padding;
     }
-  }
-
-  table.code +table.sample {
-    margin-top: $code-sample-vertical-gap - $wide-vertical-margin;
   }
 
   table.code tr td,
@@ -1235,7 +1270,6 @@ article.main {
   
   span.tile img {
     width: 20px;
-    max-width: 20px;
     height: 20px;
     margin: 0px;
     padding: 0px;
@@ -1266,7 +1300,6 @@ article.main {
   
   table.board tr td.tile img {
     width: 60px;
-    max-width: 60px;
     height: 60px;
     margin: 0px;
     padding: 0px;
