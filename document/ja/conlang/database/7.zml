@@ -50,11 +50,11 @@
     また、名前に「Sprawled」が付くものはディセンダーとアセンダーが長めになっています。
   >
   \p<
-    現段階ではアクセント記号なしのアルファベットのみが含まれます。
+    現段階ではアクセント記号なしのアルファベットと一部の記号のみが含まれます。
     上に尖った三角形状の文字は小文字に、下に尖った三角形状の文字は大文字に割り当てられているので、字形を正しく表示するには小文字と大文字を交互 ([x], [j], [n], [m] の直後は除く) に入力する必要があります。
   >
   \form<
-    \a|class="form",href="https://www.dropbox.com/sh/zule0g0dr8pa6nf/AACUIEyNu5rb0md93u34yy-Ya?dl=0",target="_blank"|<ダウンロード>　(ver 1.0.0)
+    \a|class="form",href="https://www.dropbox.com/sh/zule0g0dr8pa6nf/AACUIEyNu5rb0md93u34yy-Ya?dl=0",target="_blank"|<ダウンロード>　(ver 1.1.0)
   >
   \h1<Shaleian ファミリー>
   \img|src="../../file/other/50.png"|>
