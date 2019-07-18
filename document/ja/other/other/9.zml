@@ -114,8 +114,8 @@
   \table<
     \tr<\th<列 1>\th<列 2>\th<列 3>>
     \tr<\td<普通のセル>\td<普通のセル>\td<普通のセル>>
-    \tr<\td<普通のセル>\td<普通のセルの長めの列>\td<普通のセル>>
-    \tr<\td<普通のセル>\td<普通のセル>\td<普通のセルの長めの列>>
+    \tr<\td<普通のセル>\td<普通のセルのものすごく長めの列>\td<普通のセル>>
+    \tr<\td<普通のセル>\td<普通のセル>\td<普通のセルのものすごく長めの列>>
   >
   \p<
     ZenML の \m<k> 要素を使うと行間が広くなるらしいので、検証してください。
@@ -258,6 +258,7 @@
     def indent
       indented_block.each do |i|
         i += 1
+        this_is_a_very_long_line(this_is_a_very_long_identifier_in_a_very_long_line) + this_is_a_very_long_line
       end
     end
   >
@@ -295,6 +296,7 @@
     \li<\ja<歌詞 1>\sh<{salat a fit e lêdik il'atis,}>>
     \li<\ja<歌詞 2>\sh<{lo salat a fit e lêdik il'aqec.}>>
     \li<\ja<歌詞 3>\sh<{lo salat a fit e lêdik il'ayos.}>>
+    \li<\ja<これは信じられないほどとてつもなく長い歌詞です>\sh<{salot a fit e zat salot a e zat salot a e zat salot a e fit.}>>
   >
   \h1|id="form"|<フォーム>
   \p<
