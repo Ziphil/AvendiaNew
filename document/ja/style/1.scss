@@ -1637,6 +1637,10 @@ footer {
     content: "\F002";
   }
 
+  div.icon a.github::before {
+    content: "\F003";
+  }
+
   // 著作権表示
 
   div.copyright {
