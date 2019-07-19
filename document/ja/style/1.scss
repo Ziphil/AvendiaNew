@@ -906,11 +906,9 @@ article.main {
   // ソースコード
 
   div.code-wrapper {
-    @include scrollbar($box-background, $scrollbar-thumb-background);
     margin: $wide-vertical-margin 0px - $main-horizontal-padding;
     padding: 0px;
     background: $box-background;
-    overflow: auto;
     @include smartphone {
       margin: $wide-vertical-margin 0px - $main-smartphone-horizontal-padding;
     }
@@ -920,16 +918,22 @@ article.main {
     margin-top: $code-sample-vertical-gap - $wide-vertical-margin;
   }
 
+  div.code-wrapper div.code-inner-wrapper {
+    @include scrollbar($box-background, $scrollbar-thumb-background);
+    margin: 0px $main-horizontal-padding;
+    overflow: auto;
+    @include smartphone {
+      margin: 0px $main-smartphone-horizontal-padding;
+    }
+  }
+
   table.code,
   table.sample {
     margin: 0px;
-    padding: 0px $main-horizontal-padding;
+    padding: 0px;
     background: $box-background;
     border: none;
     border-collapse: separate;
-    @include smartphone {
-      padding: 0px $main-smartphone-horizontal-padding;
-    }
   }
 
   table.code tr td,

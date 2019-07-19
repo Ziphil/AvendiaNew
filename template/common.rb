@@ -539,33 +539,35 @@ converter.add(["pre", "samp"], ["page"]) do |element|
   indent_size = raw_string.match(/\A(\s*?)\S/)[1].length
   string = raw_string.rstrip.deindent
   this << Tag.build("div", "code-wrapper") do |this|
-    this << Tag.build("table") do |this|
-      case element.name
-      when "pre"
-        this.class = "code"
-      when "samp"
-        this.class = "sample"
-      end
-      this << "\n"
-      string.each_line.with_index do |line, number|
-        this << " " * indent_size
-        this << Tag.build("tr") do |this|
-          if element.name == "pre" && !element.attribute("simple")
-            this << Tag.build("td", "number") do |this|
-              this["data-number"] = (number + 1).to_s
-            end
-          end
-          this << Tag.build("td") do |this|
-            if line =~ /^\s*$/
-              this << " "
-            else
-              this << line.chomp
-            end
-          end
+    this << Tag.build("div", "code-inner-wrapper") do |this|
+      this << Tag.build("table") do |this|
+        case element.name
+        when "pre"
+          this.class = "code"
+        when "samp"
+          this.class = "sample"
         end
         this << "\n"
+        string.each_line.with_index do |line, number|
+          this << " " * indent_size
+          this << Tag.build("tr") do |this|
+            if element.name == "pre" && !element.attribute("simple")
+              this << Tag.build("td", "number") do |this|
+                this["data-number"] = (number + 1).to_s
+              end
+            end
+            this << Tag.build("td") do |this|
+              if line =~ /^\s*$/
+                this << " "
+              else
+                this << line.chomp
+              end
+            end
+          end
+          this << "\n"
+        end
+        this << " " * (indent_size - 2)
       end
-      this << " " * (indent_size - 2)
     end
   end
   next this
