@@ -482,6 +482,11 @@ article.main {
     box-sizing: border-box;
   }
 
+  p span.paragraph::before {
+    display: inline-block;
+    content: attr(data-number);
+  }
+
   p span.redact {
     line-height: 100%;
     border: 1px $border-color solid;

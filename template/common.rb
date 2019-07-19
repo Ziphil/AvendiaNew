@@ -251,7 +251,7 @@ converter.add(["p"], ["page"]) do |element|
     this << apply(element, "page")
     if element.attribute("par")
       this.at_head << Tag.build("span", "paragraph") do |this|
-        this << element.attribute("par").to_s
+        this["data-number"] = element.attribute("par").to_s
       end
     end
     if element.attribute("name")
