@@ -215,14 +215,15 @@ div.list {
   border-radius: 15px 0px 0px 15px;
   position: absolute;
   top: 40px;
-  right: -330px;
+  right: 0px;
   overflow-x: hidden;
   overflow-y: auto;
-  transition: right 0.3s ease-in-out;
+  transform: translate(320px, 0px);
+  transition: transform 0.3s ease-in-out;
 }
 
 div.list.shown {
-  right: 0px;
+  transform: translate(0px, 0px);
 }
 
 div.list table {
