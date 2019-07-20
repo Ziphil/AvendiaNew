@@ -409,7 +409,7 @@ class TagFactory {
       tr.append(TagFactory.createTd("\uF003", "arrow"));
       tr.append(TagFactory.createTd(ratingString, "rating", rating));
       tr.append(TagFactory.createTd(differenceString, "difference"));
-      table.append(tr);
+      table.prepend(tr);
     }
     return table;
   }
