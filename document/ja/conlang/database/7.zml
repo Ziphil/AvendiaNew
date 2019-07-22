@@ -9,7 +9,7 @@
   \img|src="../../file/other/57.png"|>
   \p<
     標準的なサンセリフ体です。
-    3 種類のウェイトと 3 種類の字幅があり、合計で以下の 9 つのフォントファイルから成ります。
+    3 種類のウェイトと 3 種類の字幅があり、合計で以下の 11 個のフォントファイルから成ります。
   >
   \ul|class="triple"|<
     \li<Vekos Regular>
@@ -21,19 +21,21 @@
     \li<Vekos Extended Regular>
     \li<Vekos Extended Bold>
     \li<Vekos Extended Thin>
+    \li<Vekos High Regular>
+    \li<Vekos High Bold>
   >
   \p<
     アルファベットと数字および一部の記号が含まれます。
     シャレイア文字には大文字と小文字の区別がありませんが、便宜上大文字にも小文字と同じグリフが割り当てられています。
   >
   \form<
-    \a|class="form",href="https://www.dropbox.com/sh/j8foichvfvs455j/AACjhbc-EZEPWDYxLTfkoU3ia?dl=0",target="_blank"|<ダウンロード>　(ver 1.1.0)
+    \a|class="form",href="https://www.dropbox.com/sh/j8foichvfvs455j/AACjhbc-EZEPWDYxLTfkoU3ia?dl=0",target="_blank"|<ダウンロード>　(ver 1.2.0)
   >
   \h1<Gilit ファミリー>
   \img|src="../../file/other/58.png"|>
   \p<
     三角形が特徴的なシフ体です。
-    合計で以下の 8 つのフォントファイルから成ります。
+    合計で以下の 8 個のフォントファイルから成ります。
   >
   \ul|class="triple"|<
     \li<Gilit Regular>
@@ -50,11 +52,11 @@
     また、名前に「Sprawled」が付くものはディセンダーとアセンダーが長めになっています。
   >
   \p<
-    現段階ではアクセント記号なしのアルファベットと一部の記号のみが含まれます。
+    現段階ではアルファベットと一部の記号のみが含まれます。
     上に尖った三角形状の文字は小文字に、下に尖った三角形状の文字は大文字に割り当てられているので、字形を正しく表示するには小文字と大文字を交互 ([x], [j], [n], [m] の直後は除く) に入力する必要があります。
   >
   \form<
-    \a|class="form",href="https://www.dropbox.com/sh/zule0g0dr8pa6nf/AACUIEyNu5rb0md93u34yy-Ya?dl=0",target="_blank"|<ダウンロード>　(ver 1.1.0)
+    \a|class="form",href="https://www.dropbox.com/sh/zule0g0dr8pa6nf/AACUIEyNu5rb0md93u34yy-Ya?dl=0",target="_blank"|<ダウンロード>　(ver 1.2.0)
   >
   \h1<Shaleian ファミリー>
   \img|src="../../file/other/50.png"|>
