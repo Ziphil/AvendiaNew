@@ -26,6 +26,9 @@ function prepare() {
     let target = $((href == "#" || href == "#top") ? "html" : href);
     let position = (href == "#") ? 0 : target.offset().top - MARGIN;
     let maxPosition = $(document).height() - $(window).height();
+    if (position < 0) {
+      position = 0;
+    }
     if (position > maxPosition) {
       position = maxPosition;
     }
