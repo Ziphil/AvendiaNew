@@ -250,13 +250,8 @@ nav.breadcrumb {
     text-align: right;
   }
 
-  div.version-caution {
-    margin: 0px 0px 0px 20px;
-    padding: 0px;
-    font-size: $breadcrumb-font-size;
-    line-height: $breadcrumb-line-height;
+  div.version.caution {
     color: $caution-breadcrumb-color !important;
-    text-align: right;
   }
 
 }
@@ -305,9 +300,7 @@ article.content-table {
   }
 
   div.index-container a.index,
-  div.index-container a.old-index,
-  div.index-container a.ancient-index,
-  div.index-container div.disabled-index {
+  div.index-container div.index {
     margin: $index-vertical-margin 0px;
     padding: $index-vertical-padding $index-horizontal-padding;
     font-family: $serif-font-family;
@@ -325,40 +318,17 @@ article.content-table {
     display: block;
   }
 
-  div.index-container a.index:hover,
-  div.index-container a.old-index:hover,
-  div.index-container a.ancient-index:hover {
-    background: $hovered-index-background;
-    box-shadow: $shadow-setting $hovered-index-shadow-color;
-  }
-
-  div.index-container a.old-index::after,
-  div.index-container a.ancient-index::after {
-    font-family: $special-font-family;
-    font-size: 80%;
-    color: $index-note-color;
-    line-height: $line-height / 0.8;
-    text-align: right;
-    float: right;
-  }
-
-  div.index-container a.old-index::after {
-    content: "old";
-  }
-
-  div.index-container a.ancient-index::after {
-    content: "ancient";
-  }
-
-  div.index-container div.disabled-index {
+  div.index-container div.index {
     background: $disabled-index-background;
     box-shadow: $shadow-setting $disabled-index-shadow-color;
   }
 
-  div.index-container a.index span.date,
-  div.index-container a.old-index span.date,
-  div.index-container a.ancient-index span.date,
-  div.index-container div.disabled-index span.date {
+  div.index-container a.index:hover {
+    background: $hovered-index-background;
+    box-shadow: $shadow-setting $hovered-index-shadow-color;
+  }
+
+  div.index-container a.index span.date {
     margin: 0px $blank-padding 0px 0px;
     padding: 0px;
     font-size: 80%;
@@ -366,9 +336,7 @@ article.content-table {
     line-height: $line-height;
   }
 
-  div.index-container a.index span.note,
-  div.index-container a.old-index span.note,
-  div.index-container a.ancient-index span.note {
+  div.index-container a.index span.annotation {
     font-family: $special-font-family;
     font-size: 80%;
     color: $index-note-color;

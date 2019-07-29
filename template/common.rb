@@ -145,7 +145,7 @@ converter.add(["ver"], ["navigation"]) do |element|
       this.class = "version"
       converter.configs[:latest] = true
     else
-      this.class = "version-caution"
+      this.class = "version caution"
     end
     this << apply(element, "page")
   end
@@ -198,12 +198,16 @@ converter.add(["ab", "abo", "aba", "abd"], ["page"]) do |element|
     case element.name
     when "ab"
       this.name, this.class = "a", "index"
+      annotation = nil
     when "abo"
-      this.name, this.class = "a", "old-index"
+      this.name, this.class = "a", "index old"
+      annotation = "old"
     when "aba"
-      this.name, this.class = "a", "ancient-index"
+      this.name, this.class = "a", "index ancient"
+      annotation = "ancient"
     when "abd"
-      this.name, this.class = "div", "disabled-index"
+      this.name, this.class = "div", "index"
+      annotation = nil
     end
     element.attributes.each_attribute do |attribute|
       if attribute.name == "date"
@@ -223,6 +227,11 @@ converter.add(["ab", "abo", "aba", "abd"], ["page"]) do |element|
     this << Tag.build("span", "content") do |this|
       this << apply(element, "page")
     end
+    if annotation
+      this << Tag.build("span", "annotation") do |this|
+        this << annotation
+      end
+    end 
   end
   next this
 end
