@@ -23,8 +23,8 @@ $.easing.easeInOutQuad = (x, t, b, c, d) => {
 function prepare() {
   $("a[href^=\"#\"]").on("click", (event) => {
     let href = $(event.target).attr("href");
-    let target = $((href == "#") ? "html" : href);
-    let position = (href == "#") ? 0 : target.offset().top - $("div.navigation").height() - MARGIN;
+    let target = $((href == "#" || href == "#top") ? "html" : href);
+    let position = (href == "#") ? 0 : target.offset().top - MARGIN;
     let maxPosition = $(document).height() - $(window).height();
     if (position > maxPosition) {
       position = maxPosition;
