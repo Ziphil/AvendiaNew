@@ -319,7 +319,7 @@ $monospace-font-weight: 400;
     }
   }
   &::-webkit-scrollbar-thumb {
-    border: 1px $page-background solid;
+    border: 1px $background solid;
     border-radius: $scrollbar-thumb-border-radius;
     background: $thumb-background;
   }
