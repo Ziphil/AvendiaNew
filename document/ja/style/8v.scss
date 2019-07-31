@@ -148,8 +148,8 @@ $list-icon-font-family: "List Icon";
   -webkit-text-size-adjust: 100%;
 }
 
-@mixin small-screen {
-  @media screen and (max-width: $main-width / 0.9) {
+@mixin small-width {
+  @media screen and (max-width: $main-width / $small-main-width * 100vw) {
     @content;
   }
 }

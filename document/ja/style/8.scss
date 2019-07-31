@@ -33,7 +33,7 @@ div.top {
     width: $main-width;
     margin: 100px auto 0px auto;
     padding: 0px;
-    @include small-screen {
+    @include small-width {
       width: $small-main-width;
     }
   }
@@ -75,7 +75,7 @@ div.top {
     display: grid;
     grid-gap: 50px;
     grid-template-columns: repeat(3, 1fr);
-    @include small-screen {
+    @include small-width {
       width: $small-main-width;
     }
   }
@@ -216,7 +216,7 @@ div.introduction {
     margin: 100px auto 0px auto;
     padding: 0px;
     position: relative;
-    @include small-screen {
+    @include small-width {
       width: $small-main-width;
     }
   }
@@ -253,7 +253,7 @@ div.introduction {
     margin-right: 50px;
     padding: 0px;
     flex: 5;
-    @include small-screen {
+    @include small-width {
       margin-left: calc((100% - #{$small-main-width}) / 2);
     }
   }
@@ -278,7 +278,7 @@ div.introduction {
     background: $main-background;
     background-attachment: fixed;
     flex: 4;
-    @include small-screen {
+    @include small-width {
       padding-right: calc((100% - #{$small-main-width}) / 2);
     }
   }
@@ -316,7 +316,7 @@ div.other {
     width: $main-width;
     margin: 100px auto 0px auto;
     display: flex;
-    @include small-screen {
+    @include small-width {
       width: $small-main-width;
     }
   }
