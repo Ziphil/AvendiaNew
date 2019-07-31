@@ -15,17 +15,17 @@ $hovered-hue: 110;
 $caution-hue: 330;
 
 // 基本色
-$highlight-background-color: hsl($primary-hue, 40%, 50%);
-$hovered-highlight-background-color: hsl($hovered-hue, 35%, 45%);
-$light-background-color: hsl($secondary-hue, 90%, 95%);
-$hovered-light-background-color: hsl($hovered-hue, 90%, 95%);
-$dark-color: hsl($primary-hue, 80%, 30%);
+$highlight-background-color: hsl($primary-hue, 30%, 50%);
+$hovered-highlight-background-color: hsl($hovered-hue, 25%, 50%);
+$light-background-color: hsl($secondary-hue, 70%, 95%);
+$hovered-light-background-color: hsl($hovered-hue, 65%, 95%);
+$dark-color: hsl($primary-hue, 30%, 35%);
 $white-color: hsl($primary-hue, 30%, 98%);
 $black-color: hsl($primary-hue, 30%, 20%);
 
 // 基本背景
 $highlight-background: custom-gradient($highlight-background-color, -20);
-$hovered-highlight-background: custom-gradient($hovered-highlight-background-color, -30);
+$hovered-highlight-background: custom-gradient($hovered-highlight-background-color, -25);
 $light-background: $light-background-color;
 $hovered-light-background: $hovered-light-background-color;
 
@@ -114,12 +114,12 @@ $subsection-color: $dark-color;
 // テキスト色 > セクション番号などの薄い文字
 $gray-color: hsl($secondary-hue, 0%, 70%);
 // テキスト色 > リンク
-$link-color: hsl($secondary-hue, 50%, 40%);
-$hovered-link-color: hsl($hovered-hue, 50%, 40%);
+$link-color: hsl($secondary-hue, 40%, 40%);
+$hovered-link-color: hsl($hovered-hue, 40%, 40%);
 // テキスト色 > 無効リンク
 $invalid-color: hsl($secondary-hue, 0%, 70%);
 // テキスト色 > 箇条書きのマーカー
-$list-marker-color: hsl($secondary-hue, 50%, 50%);
+$list-marker-color: hsl($secondary-hue, 40%, 50%);
 // テキスト色 > エラーコード
 $error-code-color: $highlight-background-color;
 // テキスト色 > エラーメッセージ
@@ -133,7 +133,7 @@ $footer-icon-color: $highlight-background-color;
 $hovered-footer-icon-color: $hovered-highlight-background-color;
 
 // 罫線色 > 全体
-$border-color: hsl($secondary-hue, 50%, 50%);
+$border-color: hsl($secondary-hue, 30%, 50%);
 
 // フォントサイズ > 全体
 $font-size: 16px;
