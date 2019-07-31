@@ -1,65 +1,172 @@
 ﻿\zml?|version="1.0"|>
 \xml?|version="1.0",encoding="UTF-8"|>
 
-\page<
-  \name<>
+\html|lang="ja"|<
+  \head<
+    \meta|charset="UTF-8"|>
+    \script|src="file/script/jquery.js"|>
+    \script|src="file/script/12.js"|>
+    \link|rel="stylesheet",type="text/css",href="style/reset.css"|>
+    \link|rel="stylesheet",type="text/css",href="style/8.css"|>
+    \title<Avendia>
+  >
+  \body<
 
-  \h1<更新履歴>
-  \change-log|size="10"|>
-  \h1<このサイトについて>
-  \p<
-    ここは、管理人である Ziphil Shaleiras が作成した人工言語シャレイア語に関する情報がまとめてあるサイトです。
-    シャレイア語がメインコンテンツですが、ゲーム制作や自然言語学習もしているので、それらに関するコンテンツもあります。
-  >
-  \p<
-    Now preparing an English version.
-    Please wait for a while.
-  >
-  \h1<初めての方へ>
-  \ul<
-    \li<シャレイア語を学んでみたい → \a|href="conlang/course/"|<入門書>へ>
-    \li<シャレイア語の文法が詳しく知りたい → \a|href="conlang/grammer/"|<文法書>へ>
-    \li<シャレイア語の辞典などのデータが見たい → \a|href="conlang/database/"|<データベース>へ>
-    \li<シャレイア語で書かれた文章が見たい → \a|href="conlang/translation/"|<翻訳>へ>
-    \li<シャレイア語に関する詳しい考察を知りたい → \a|href="conlang/theory/"|<シャレイア語論>, \a|href="diary/conlang/"|<人工言語日記>へ>
-    \li<最近のシャレイア語の様子が知りたい → \a|href="diary/conlang/"|<人工言語日記>, 創作配信 (下記参照) へ>
-  >
-  \h1<創作配信>
-  \p<
-    シャレイア語の創作過程 (造語や翻訳など) を、外部のサービスを用いてときどき配信しています。
-    現在は、主に YouTube ライブで放送をしています。
-  >
-  \ul<
-    \li<YouTube ライブ ･･･ \a|href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/live",target="_blank"|<Ziphil Shaleiras> (毎週土曜日 21 時 30 分 ＋ 不定期)>
-    \li<ツイキャス ･･･ \a|href="https://twitcasting.tv/ziphil",target="_blank"|<Ziphil>>
-  >
-  \h1<人工言語とは>
-  \p<
-    人工言語というのは、自然とでき上がった言語である日本語や英語などに対し、人間が意図的に作り上げた言語のことを指します。
-    人工言語には様々な種類があり、その 1 つは、共通の母語をもたない人との間で意思疎通を行うために作られた「国際補助語」と呼ばれるものです。
-    また、小説やゲーム内で用いてその雰囲気をよりリアルなものにするために作られる「芸術言語」というものもあります。
-    このサイトで紹介するシャレイア語は、 この芸術言語に当たります。
-  >
-  \p<
-    シャレイア語の特徴として、実世界のいかなる言語からも語彙を借用していないという点があります。
-    シャレイア語の単語は `/s`/ や `/t`/ などといった音自身がもつ特殊な意味やイメージをもとに作られているため、シャレイア語には特有な雰囲気があります。
-  >
-  \h1<サイトを見るときの注意点>
-  \p<
-    シャレイア語には表記のための独自の文字がありますが、コンピュータでそれを入力したり表示したりするのは難しいし面倒です。
-    そのため、それぞれの文字をラテンアルファベットに割り当てた転写を用いて、シャレイア語を表記します。
-  >
-  \p<
-    シャレイア語や他の自然言語を扱うページにおいては、議論している言語とそれ以外の言語との混同を防ぐため、注目する言語はサンセリフ体 (ゴシック体) で表示し、それ以外の言語をセリフ体 (明朝体) で表示してあります。
-  >
-  \p<
-    シャレイア語に関するページでは、日付の表記を独自の暦に則って行っています。
-    特に「\h<1234>」のような表記は、シャレイア語を作成し始めた日を 1 としたときの通し日数を表します。
-    \a|href="conlang/database/3.html"|<こちら>から暦の変換が行えます。
-  >
-  \h1<管理人への連絡>
-  \p<
-    シャレイア語を含むサイトのコンテンツに関する質問や意見などは、管理人の Twitter アカウントである \a|href="https://twitter.com/Ziphil",target="_blank"|<@Ziphil> へお願いします。
-  >
+    \div|class="top"|<
+      \div|class="header"|<
+        \div|class="title"|<Avendia>
+        \div|class="caption"|<
+          \span<lOkE xeR,>
+          \span<rEvEt A tEl> 
+          \span<E'n rEkOtAt LoKe A'l>
+          \span<OvEl IfElI qEl,>\br>
+          \span<Pa KiLaT a'L vAdE pIl Te SoT>
+          \span<e'N EtUt PaFiKoS a'L?>
+        >
+      >
+      \div|class="card-wrapper"|<
+        \div|class="card"|<
+          \a|class="item",id="course",href="conlang/course/"|<
+            \div|class="title"|<
+              \div|class="japanese"|<入門書>
+              \div|class="shaleian"|<sOxaLfÔc>
+            >
+            \div|class="explanation"|<
+              初学者向けのシャレイア語文法の解説を読むことができます。
+              書籍として出版もされています。
+            >
+          >
+          \a|class="item",id="database",href="conlang/database/"|<
+            \div|class="title"|<
+              \div|class="japanese"|<データベース>
+              \div|class="shaleian"|<>
+            >
+            \div|class="explanation"|<
+              シャレイア語の辞典を閲覧したり、シャレイア文字のフォントをダウンロードしたりできます。
+            >
+          >
+          \a|class="item",id="translation",href="conlang/translation/"|<
+            \div|class="title"|<
+              \div|class="japanese"|<翻訳>
+              \div|class="shaleian"|<niSqAl>
+            >
+            \div|class="explanation"|<
+              様々な小説や楽曲のシャレイア語訳を読むことができます。
+              アイドルマスター関連の楽曲の翻訳が多めです。
+            >
+          >
+          \a|class="item",id="work",href="conlang/work/"|<
+            \div|class="title"|<
+              \div|class="japanese"|<創作>
+              \div|class="shaleian"|<xAkUc>
+            >
+            \div|class="explanation"|<
+              シャレイア語で書かれた完全オリジナルの物語などを読むことができます。
+            >
+          >
+          \a|class="item",id="theory",href="conlang/theory/"|<
+            \div|class="title"|<
+              \div|class="japanese"|<シャレイア語論>
+              \div|class="shaleian"|<>
+            >
+            \div|class="explanation"|<
+              シャレイア語における文法や語法に関する詳細な解説を集めたものです。
+            >
+          >
+          \a|class="item",id="diary",href="diary/conlang/"|<
+            \div|class="title"|<
+              \div|class="japanese"|<制作日記>
+              \div|class="shaleian"|<rÁtTaQ iLoKe XAkOc>
+            >
+            \div|class="explanation"|<
+              シャレイア語を作る上での疑問点や考察を綴ったものです。
+              制作過程を垣間見ることができます。
+            >
+          >
+        >
+      >
+      \div|class="arrow"|<
+        \div|class="tip"|>
+      >
+    >
 
+    \div|class="introduction"|<
+      \div|class="header"|<
+        \div|class="japanese"|<人工言語とは>
+        \div|class="shaleian"|<pA a QiLoXXAkOc>
+      >
+      \div|class="content"|<
+        \div|class="explanation"|<
+          \p<
+            人工言語というのは、自然とでき上がった言語である日本語や英語などに対し、人間が意図的に作り上げた言語のことを指します。
+            人工言語には様々な種類があり、その 1 つは、共通の母語をもたない人との間で意思疎通を行うために作られた「国際補助語」と呼ばれるものです。
+            また、小説やゲーム内で用いてその雰囲気をよりリアルなものにするために作られる「芸術言語」というものもあります。
+            このサイトで紹介するシャレイア語は、芸術言語に分類されます。
+          >
+          \p<
+            言語というのは文化に大きく影響を受けるものです。
+            逆に言えば、言語を見ることで、それを話したり書いたりする人々の文化や物事の捉え方を感じ取ることができます。
+            シャレイア語は、製作者である私自身の世界の捉え方を積極的に反映させることで、自己表現の一種として制作されています。
+            すでに述べたようにシャレイア語は芸術言語ですが、まさにこの意味で芸術の一種なのです。
+          >
+          \p<
+            右の文章は、シャレイア語に翻訳された『不思議の国のアリス』の一節です。  
+          >
+        >
+        \div|class="sample"|<
+          \p<
+            e ʻalis, pôzac ovel ebam zi'n déqat a's ca zehrisis vo fîc ica hinof, lo kavat a's e dat dozat lesas e a's.
+            zesqikas a ces la tal al'atis é al'aqec e xoq lîdac e a hinof, dà dukavat a cit e qinat o lek.
+            lo, revas a ces.
+            «pa salot e pil a sokus i xoq ide qinat o lek?»
+          >
+          \p<
+            ce, soxas a ces qi soxot — lîgifas a's e cal ovel evêl ini kilat las a's, vade meberat o folnasat ovel ebam e's a zalnat — e'n kavat á dulat e sokos a kin hitis a's ce dehisis a's e lissod so qikis a's e lîs zi met.
+            te cal, vilisas obâl vo fîc ica ces a hapet axac kavat a e lisaz ahafas.
+          >
+        >
+      >
+    >
+
+    \div|class="other"|<
+      \div|class="content"|<
+        \div|class="contact column"|<
+          \div|class="header"|<
+            \div|class="japanese"|<連絡先>
+            \div|class="shaleian"|<qÎk IcA fEtEk>
+          >
+          \div|class="table"|<
+            \div|class="row"|<
+              \a|class="icon twitter",href="https://twitter.com/Ziphil",target="_blank"|>
+              \div|class="explanation"|<
+                主に Twitter 上で活動しています。\br>
+                私への連絡は Twitter を介するのが一番早いです。
+              >
+            >
+            \div|class="row"|<
+              \a|class="icon youtube",href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/",target="_blank"|>
+              \div|class="explanation"|<
+                制作過程を YouTube ライブで配信することがあります。\br>
+                配信日時は Twitter で告知します。
+              >
+            >
+            \div|class="row"|<
+              \a|class="icon github",href="https://github.com/Ziphil",target="_blank"|>
+              \div|class="explanation"|<
+                人工言語の様々なデータはほとんど GitHub で管理しています。
+              >
+            >
+          >
+        >
+        \div|class="log column"|<
+          \div|class="header"|<
+            \div|class="japanese"|<更新履歴>
+            \div|class="shaleian"|<zAt AfEc>
+          >
+          \change-log|size="5"|>
+        >
+      >
+    >
+
+  >
 >

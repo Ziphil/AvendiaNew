@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+
+@function stripe-gradient($first-color, $second-color, $angle, $space) {
+  @return repeating-linear-gradient($angle, $first-color $space, $second-color $space, $second-color $space * 2, $first-color $space * 2, $first-color $space * 3, $second-color $space * 3);
+}
+
+@function multiply-alpha($color, $ratio) {
+  $new-alpha: alpha($color) * $ratio;
+  @return rgba($color, $new-alpha);
+}
+
+@function adjust($size) {
+  $new-size: 100vw * $size / 1920px;
+  @return $new-size;
+}
+
+
+// 基本色相
+$primary-hue: 230;
+$secondary-hue: 200;
+$hovered-hue: 110;
+
+// 背景 > メインエリア
+$main-background: stripe-gradient(hsl($primary-hue, 30%, 25%), hsl($primary-hue, 30%, 26%), -45deg, 10px);
+
+// 背景色 > カード
+$card-background-color: rgba(white, 0.4);
+// 背景色 > カードのタイトル
+$card-title-background-color: hsla($secondary-hue, 100%, 90%, 0.6);
+$hovered-card-header-background-color: hsla($hovered-hue, 90%, 90%, 0.6);
+// 背景色 > 概要
+$introduction-background-color: hsla($secondary-hue, 100%, 90%, 0.6);
+
+// テキスト色 > ページタイトル
+$title-color: rgba(white, 0.4);
+// テキスト色 > ページタイトル下のキャプション
+$caption-color: rgba(white, 0.2);
+// テキスト色 > カード
+$card-color: black;
+// テキスト色 > カードのタイトル
+$card-title-color: black;
+// テキスト色 > カードのタイトルのシャレイア語表記
+$card-title-shaleian-color: rgba(white, 0.3);
+// テキスト色 > 概要のヘッダ
+$introduction-header-color: hsl($primary-hue, 30%, 35%);
+// テキスト色 > 概要の説明
+$explanation-color: black;
+// テキスト色 > 概要のサンプルテキスト
+$sample-color: rgba(white, 0.6);
+// テキスト色 > その他のヘッダ
+$other-header-color: rgba(white, 0.6);
+// テキスト色 > その他
+$other-color: rgba(white, 0.6);
+// テキスト色 > リンク
+$link-color: hsla($secondary-hue, 100%, 90%, 0.6);
+$hovered-link-color: hsla($hovered-hue, 90%, 90%, 0.6);
+
+// フォントサイズ > 全体
+$font-size: 18px;
+// フォントサイズ > ページタイトル
+$title-font-size: 120px;
+// フォントサイズ > ページタイトル下のキャプション
+$caption-font-size: 30px;
+// フォントサイズ > カードのタイトル
+$card-title-font-size: 24px;
+// フォントサイズ > 概要のヘッダ
+$introduction-header-font-size: 52px;
+// フォントサイズ > その他のヘッダ
+$other-header-font-size: 32px;
+// フォントサイズ > アイコン
+$icon-font-size: 64px;
+
+// 行の高さ > 全体
+$line-height: 1.6;
+// 行の高さ > 概要の説明
+$explanation-line-height: 1.8;
+// 行の高さ > 概要のサンプルテキスト
+$sample-line-height: 1.5;
+
+// 罫線半径 > カード
+$card-border-radius: 10px;
+// 罫線半径 > 概要のサンプルテキスト
+$sample-border-radius: 10px;
+
+// 大きさ > 全体
+$main-width: 1200px;
+$small-main-width: 90vw;
+// 大きさ > カード
+$card-title-height: 50px;
+// 大きさ > 矢印エリア
+$arrow-height: 50px;
+// 大きさ > 矢印本体
+$tip-size: 20px;
+
+// フィルタ > タイトル
+$title-filter: drop-shadow(0px 2px 3px rgba($title-color, 0.4));
+// フィルタ > ボックス
+$box-filter: drop-shadow(0px 4px 6px rgba($card-background-color, 0.4));
+// フィルタ > 小さめのボックス
+$small-box-filter: drop-shadow(0px 2px 3px rgba($card-background-color, 0.4));
+
+// フォントファミリー
+$serif-font-family: "Times New Roman", "Times", "IPA P明朝", "IPAex明朝", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+$vekos-font-family: "Vekos Web";
+$gilit-font-family: "Gilit Web";
+$special-font-family: "Abril Fatface";
+$footer-icon-font-family: "Footer Icon";
+$list-icon-font-family: "List Icon";
+
+
+@mixin no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+}
+
+@mixin shrink($height) {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: $height;
+}
+
+@mixin no-shrink($height) {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: $height;
+}
+
+@mixin transparent-border {
+  border-top: 1px transparent solid;
+  border-bottom: 1px transparent solid;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+@mixin text-size-adjust {
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+@mixin small-screen {
+  @media screen and (max-width: $main-width / 0.9) {
+    @content;
+  }
+}
+
+
+@font-face {
+  font-family: $footer-icon-font-family;
+  src: url("../material/font/1.eot?26518935");
+  src: url("../material/font/1.eot?26518935#iefix") format("embedded-opentype"),
+       url("../material/font/1.woff2?26518935") format("woff2"),
+       url("../material/font/1.woff?26518935") format("woff"),
+       url("../material/font/1.ttf?26518935") format("truetype"),
+       url("../material/font/1.svg?26518935#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $list-icon-font-family;
+  src: url("../material/font/2.eot?16498700");
+  src: url("../material/font/2.eot?16498700#iefix") format("embedded-opentype"),
+       url("../material/font/2.woff2?16498700") format("woff2"),
+       url("../material/font/2.woff?16498700") format("woff"),
+       url("../material/font/2.ttf?16498700") format("truetype"),
+       url("../material/font/2.svg?16498700#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $vekos-font-family;
+  src: url("../material/font/7.woff") format("woff"), url("../material/font/7.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $gilit-font-family;
+  src: url("../material/font/8.woff") format("woff"), url("../material/font/8.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

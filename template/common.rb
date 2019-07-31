@@ -449,7 +449,7 @@ converter.add(["section-table"], ["page"]) do |element|
   next this
 end
 
-converter.add(["change-log"], ["page"]) do |element|
+converter.add(["change-log"], [//]) do |element|
   this = ""
   language = converter.language
   size = element.attribute("size")&.to_s&.to_i
