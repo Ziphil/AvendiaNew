@@ -358,6 +358,20 @@ div.introduction {
     margin: 15px 0px 0px 0px;
   }
 
+  div.content div.explanation span.right {
+    display: inline;
+    @include smartphone {
+      display: none;
+    }
+  }
+
+  div.content div.explanation span.bottom {
+    display: none;
+    @include smartphone {
+      display: inline;
+    }
+  }
+
   div.content div.sample {
     margin: 0px;
     padding: 0px;
