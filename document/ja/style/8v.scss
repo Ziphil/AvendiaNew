@@ -78,6 +78,9 @@ $explanation-line-height: 1.8;
 // 行の高さ > 概要のサンプルテキスト
 $sample-line-height: 1.5;
 
+// 余白 > メインエリア
+$main-horizontal-padding: 60px;
+
 // 罫線半径 > カード
 $card-border-radius: 10px;
 // 罫線半径 > 概要のサンプルテキスト
@@ -89,7 +92,7 @@ $small-main-width: 90vw;
 // 大きさ > カード
 $card-title-height: 50px;
 // 大きさ > 矢印エリア
-$arrow-height: 50px;
+$arrow-height: 35px;
 // 大きさ > 矢印本体
 $tip-size: 20px;
 
@@ -148,8 +151,20 @@ $list-icon-font-family: "List Icon";
   -webkit-text-size-adjust: 100%;
 }
 
-@mixin small-width {
-  @media screen and (max-width: $main-width / $small-main-width * 100vw) {
+@mixin small-screen {
+  @media screen and (max-width: $main-width + $main-horizontal-padding * 2) {
+    @content;
+  }
+}
+
+@mixin smartphone {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin small-smartphone {
+  @media screen and (max-width: 640px) {
     @content;
   }
 }

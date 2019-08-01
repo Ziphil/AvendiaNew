@@ -4,8 +4,8 @@
 \html|lang="ja"|<
   \head<
     \meta|charset="UTF-8"|>
+    \meta|name="viewport",content="width=500px"|>
     \script|src="file/script/jquery.js"|>
-    \script|src="file/script/12.js"|>
     \link|rel="stylesheet",type="text/css",href="style/reset.css"|>
     \link|rel="stylesheet",type="text/css",href="style/8.css"|>
     \title<Avendia>
@@ -139,14 +139,14 @@
             \div|class="row"|<
               \a|class="icon twitter",href="https://twitter.com/Ziphil",target="_blank"|>
               \div|class="explanation"|<
-                主に Twitter 上で活動しています。\br>
-                私への連絡は Twitter を介するのが一番早いです。
+                主に Twitter 上で活動しています。
+                私への連絡は Twitter を介するのが最も早く確実です。
               >
             >
             \div|class="row"|<
               \a|class="icon youtube",href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/",target="_blank"|>
               \div|class="explanation"|<
-                制作過程を YouTube ライブで配信することがあります。\br>
+                制作過程を YouTube ライブで配信することがあります。
                 配信日時は Twitter で告知します。
               >
             >
