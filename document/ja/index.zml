@@ -4,7 +4,7 @@
 \html|lang="ja"|<
   \head<
     \meta|charset="UTF-8"|>
-    \meta|name="viewport",content="width=500px"|>
+    \meta|name="viewport",content="width=device-width,initial-scale=0.7"|>
     \script|src="file/script/jquery.js"|>
     \link|rel="stylesheet",type="text/css",href="style/reset.css"|>
     \link|rel="stylesheet",type="text/css",href="style/8.css"|>
