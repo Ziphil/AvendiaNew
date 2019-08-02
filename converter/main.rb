@@ -237,16 +237,21 @@ class WholeAvendiaConverter
   end
 
   def upload_normal(path, language)
-    result = nil
+    result = true
     if @ftp
-      local_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
-      local_path = modify_extension(local_path)
-      remote_path = path.gsub(ROOT_PATHS[language], "")
-      remote_path = modify_extension(remote_path)
-      unless language == :ja
-        remote_path = "/#{language}.#{@user}" + remote_path
+      begin
+        local_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
+        local_path = modify_extension(local_path)
+        remote_path = path.gsub(ROOT_PATHS[language], "")
+        remote_path = modify_extension(remote_path)
+        unless language == :ja
+          remote_path = "/#{language}.#{@user}" + remote_path
+        end
+        @ftp.put(local_path, remote_path)
+      rescue => error
+        STDERR.puts(error.full_message)
+        result = false
       end
-      @ftp.put(local_path, remote_path)
     end
     return result
   end
@@ -292,6 +297,7 @@ class WholeAvendiaConverter
     if upload
       host, user, password = ONLINE_SERVER_CONFIG.split("\n")
       ftp = Net::FTP.new(host, user, password)
+      ftp.read_timeout = 5
     end
     return ftp, user
   end
