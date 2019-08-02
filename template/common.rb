@@ -4,7 +4,8 @@
 TEMPLATE = File.read(BASE_PATH + "/template/template.html")
 
 NAMES = {
-  :title => {:ja => "人工言語シャレイア語", :en => "Sheleian Constructed Language"},
+  :title => {:ja => "Avendia", :en => "Avendia"},
+  :caption => {:ja => "人工言語シャレイア語", :en => "Sheleian Constructed Language"},
   :top => {:ja => "トップ", :en => "Top"},
   :conlang => {:ja => "シャレイア語", :en => "Shaleian"},
   :conlang_grammer => {:ja => "文法書", :en => "Grammar"},
@@ -81,6 +82,7 @@ converter.add(["page"], [""]) do |element|
   navigation_string << apply(element, "navigation")
   header_string << apply(element, "header")
   main_string << apply(element, "page")
+  page_title = [title, NAMES[:title][language]].reject(&:empty?).join(" — ")
   result = TEMPLATE.gsub(/#\{(.*?)\}/){instance_eval($1)}.gsub(/\r/, "")
   next result
 end
