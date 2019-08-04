@@ -113,6 +113,7 @@ class WholeAvendiaConverter
     :en => BASE_PATH + "/log/en.txt"
   }
   LOG_SIZE = 1000
+  REPETITION_SIZE = 3
 
   def initialize(args)
     options, rest_args = args.partition{|s| s =~ /^\-\w$/}
@@ -155,6 +156,7 @@ class WholeAvendiaConverter
   end
 
   def save_normal
+    failed_paths = []
     @paths.each_with_index do |(path, language), index|
       document, result = nil, nil
       durations = {}
@@ -167,8 +169,22 @@ class WholeAvendiaConverter
       end
       durations[:upload] = WholeAvendiaConverter.measure do
         result = upload_normal(path, language)
+        if !result
+          failed_paths << [path, language, 0]
+        end
       end
       print_result(path, language, index, durations)
+    end
+    puts("-" * 45)
+    failed_paths.each_with_index do |(path, language, count), index|
+      durations = {}
+      durations[:upload] = WholeAvendiaConverter.measure do
+        result = upload_normal(path, language)
+        if !result && count < REPETITION_SIZE
+          failed_paths << [path, language, count + 1]
+        end
+      end
+      print_result(path, language, nil, durations)
     end
     puts("-" * 45)
     puts(" " * 35 + "#{"%3d" % @paths.size} files")
