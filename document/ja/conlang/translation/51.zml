@@ -53,6 +53,21 @@
       >
     >
   >
+  \p<
+    {e ʻalis} の部分は、本来なら {ovel ebam} の直後に置かれるはずだが、{ʻalis} はこの物語の主人公なので、一番最初に主題として強調するために文頭に倒置されている。
+    三人称視点の物語では、主人公を明示するためにこのように 1 文目の文頭に置かれることが多い。
+  >
+  \p<
+    この文の主節の動詞である {pôzac} は現在時制になっているが、これは物語に特有の表現である。
+    シャレイア語で物語を描写するときは、過去に起こった話として記述するというより、物語の進行と並行して記述していくというイメージをもとに、現在時制を使う。
+  >
+  \p<
+    {bam} は副詞として使うと形容詞か副詞しか修飾できないので、今回のように動詞を修飾させたい場合は、{vel} を介して {ovel ebam} という形で修飾する。
+    この {vel} に特に意味はなく、形容詞と副詞のみを修飾する副詞を動詞に修飾させたいときに間に入れる、いわば機能語のようなものである。
+  >
+  \p<
+    {dozat lesas} の部分は {doz} が助動詞的用法になっていて、もともとは {dozat e kin lesas} という形で、{e kin} の部分が省略されている。
+  >
   \h2<2>
   \xl<
     \li<
@@ -88,6 +103,10 @@
       >
     >
   >
+  \p<
+    {tal} は「～回」を表す単語だが、単位名詞ではないので後ろに直接数詞を置くことはできない。
+    したがって、{tal atis} などとするのは間違いで、{tal al'atis} とする必要がある。
+  >
   \h2<3>
   \xl<
     \li<
@@ -107,7 +126,7 @@
   \xl<
     \li<
       \sh<{pa salot e pil a sokus i xoq ide qinat o lek?}>
-      \ja<会話も絵もない本の価値とは何なのだろうか?>
+      \ja<絵も会話もない本の価値とは何なのだろうか?>
       \gloss<
         &lig|auto="pa"|>
         &lig|conj="-ot"|<\sh<{sal}>\ex<である>>
@@ -124,6 +143,121 @@
         &lig|punc="?"|>
       >
     >
+  >
+  \p<
+    「絵も会話もない」において「絵」と「会話」を繋ぐ接続詞には {o} を使う。
+    英語では or が使われているので、それに引きづられて {é} を使わないように注意。
+  >
+  \h1<第 2 段落>
+  \h2<1>
+  \xl<
+    \li<
+      \sh<{ce, soxas a ces qi soxot — lîgifas a's e cal ovel evêl ini kilat las, vade meberat o folnasat ovel ebam e's a zalnat — e'n kavat á dulat e sokos a kin hitis a's ce dehisis a's e lissod so qikis a's e lîs zi met.}>
+      \ja<そして、彼女は頭の中で考えました――暑さが彼女をとても眠くさせぼーっとさせていたので、できる限りそれに集中しました――立ち上がってヒナギクの輪を作るためにヒナギクを拾うことに価値があるのかどうかを。>
+      \gloss<
+        &lig<\sh<{ce}>\ex<そして>>
+        &lig|punc=","|>
+        &lig|conj="-as"|<\sh<{sox}>\ex<考える>>
+        &lig|auto="a"|>
+        &lig<\sh<{ces}>\ex<彼女>>
+        &lig<\sh<{qi}>\ex<～で>>
+        &lig<\sh<{soxot}>\ex<理性>>
+        &lig<\sh<{—}>>
+        &lig|conj="-as"|<\sh<{lîgif}>\ex<集中する>>
+        &lig|auto="a"|>
+        &lig<\sh<{'s}>\ex<彼女>>
+        &lig|auto="e"|>
+        &lig<\sh<{cal}>\ex<そのこと>>
+        &lig|conj="o-"|<\sh<{vel}>\ex<>>
+        &lig|conj="e-"|<\sh<{vêl}>\ex<同じくらい>>
+        &lig|conj="i-"|<\sh<{ni}>\ex<～より>>
+        &lig|conj="-at"|<\sh<{kil}>\ex<できるようになる>>
+        &lig|conj="-as"|<\sh<{l}>\ex<する>>
+        &lig|punc=","|>
+        &lig<\sh<{vade}>\ex<～なので>>
+        &lig|conj="-at"|<\sh<{meber}>\ex<眠くする>>
+        &lig<\sh<{o}>\ex<そして>>
+        &lig|conj="-at"|<\sh<{folnas}>\ex<ぼーっとさせる>>
+        &lig|conj="o-"|<\sh<{vel}>\ex<>>
+        &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
+        &lig|auto="e"|>
+        &lig<\sh<{'s}>\ex<彼女>>
+        &lig|auto="a"|>
+        &lig<\sh<{zalnat}>\ex<熱気>>
+        &lig<\sh<{—}>>
+        &lig|auto="e"|>
+        &lig|auto="'n"|>
+        &lig|conj="-at"|<\sh<{kav}>\ex<もつ>>
+        &lig|auto="á"|>
+        &lig|conj="du-at"|<\sh<{l}>\ex<する>>
+        &lig|auto="e"|>
+        &lig<\sh<{sokos}>\ex<価値>>
+        &lig|auto="a"|>
+        &lig|auto="kin"|>
+        &lig|conj="-is"|<\sh<{hit}>\ex<立つ>>
+        &lig|auto="a"|>
+        &lig<\sh<{'s}>\ex<彼女>>
+        &lig<\sh<{ce}>\ex<そして>>
+        &lig|conj="-is"|<\sh<{dehis}>\ex<拾う>>
+        &lig|auto="a"|>
+        &lig<\sh<{'s}>\ex<彼女>>
+        &lig|auto="e"|>
+        &lig<\sh<{lissod}>\ex<ヒナギク>>
+        &lig<\sh<{so}>\ex<～するために>>
+        &lig|conj="-is"|<\sh<{qik}>\ex<作る>>
+        &lig|auto="a"|>
+        &lig<\sh<{'s}>\ex<彼女>>
+        &lig|auto="e"|>
+        &lig<\sh<{lîs}>\ex<輪>>
+        &lig|auto="zi"|>
+        &lig<\sh<{met}>\ex<それ>>
+        &lig|punc="."|>
+      >
+    >
+  >
+  \p<
+    全体の文構造としては、主節の動詞が {soxas} であり、そこに {a ces}, {qi soxot}, {e'n} 以下という 3 つの助詞句が係っていて、2 つ目の {qi soxot} と 3 つ目の {e'n} 以下の間にダッシュで囲まれた長い節が挿入されている。
+  >
+  \p<
+    {qi soxot} は直訳すれば「理性を使って」だが、これは、口に出したり紙に文字を書いたりなどをせずに頭の中で行うことを表す慣用表現である。
+  >
+  \p<
+    挿入部の直後にある {kin} 節内は間接疑問表現であり、{kavat á dulat} の部分が疑問表現を作っている。
+    この {dulat} は {dukavat} の代わりで、{kavat á dulat} で「(価値が) あるのかないのか」という肯定か否定かの選択疑問表現になっている。
+    {á dul/os/} は間接諾否疑問の定型表現である。
+  >
+  \p<
+    文末にある {met} は {lissod} の代わりをしている。
+  >
+  \h2<2>
+  \xl<
+    \li<
+      \sh<{te cal, vilisas obâl vo fîc ica ces a hapet axac kavat a e lisaz ahafas.}>
+      \ja<そのとき、彼女の近くでピンクの目をもつ白いウサギが突然走った。>
+      \gloss<
+        &lig<\sh<{te}>\ex<～するとき>>
+        &lig<\sh<{cal}>\ex<そのこと>>
+        &lig|punc=","|>
+        &lig|conj="-as"|<\sh<{vilis}>\ex<走る>>
+        &lig|conj="o-"|<\sh<{bâl}>\ex<突然>>
+        &lig<\sh<{vo}>\ex<～で>>
+        &lig<\sh<{fîc}>\ex<近く>>
+        &lig|conj="i-",auto="ca"|>
+        &lig<\sh<{ces}>\ex<彼女>>
+        &lig|auto="a"|>
+        &lig<\sh<{hapet}>\ex<ウサギ>>
+        &lig|conj="a-"|<\sh<{xac}>\ex<白い>>
+        &lig|conj="-at"|<\sh<{kav}>\ex<もつ>>
+        &lig|auto="a"|>
+        &lig|auto="e"|>
+        &lig<\sh<{lisaz}>\ex<目>>
+        &lig|conj="a-"|<\sh<{hafas}>\ex<ピンクの>>
+        &lig|punc="."|>
+      >
+    >
+  >
+  \p<
+    {te cal} における {te} は助詞として使われているが、後続する名詞である {cal} がコトを表すものなので、意味的には接続詞になっている。
   >
 
 >
