@@ -157,34 +157,55 @@ class WholeAvendiaConverter
   def save_normal
     @paths.each_with_index do |(path, language), index|
       document, result = nil, nil
+      durations = {}
       extension = File.extname(path).gsub(/^\./, "")
-      parsing_duration = WholeAvendiaConverter.measure do
+      durations[:parse] = WholeAvendiaConverter.measure do
         document = parse_normal(path, language, extension)
       end
-      conversion_duration = WholeAvendiaConverter.measure do
+      durations[:convert] = WholeAvendiaConverter.measure do
         result = convert_normal(document, path, language, extension)
       end
-      upload_duration = WholeAvendiaConverter.measure do
+      durations[:upload] = WholeAvendiaConverter.measure do
         result = upload_normal(path, language)
       end
-      output = " "
-      output << "%3d" % (index + 1)
-      output << "\e[37m : \e[36m"
-      output << "%4d" % parsing_duration
-      output << "\e[37m + \e[36m"
-      output << "%4d" % conversion_duration
-      output << "\e[37m + \e[35m"
-      output << "%4d" % upload_duration
-      output << "\e[37m  |  \e[33m"
-      output << "#{language} "
-      path_array = path.gsub(ROOT_PATHS[language] + "/", "").split("/")
-      path_array.map!{|s| (s =~ /\d/) ? "%3d" % s.to_i : s.gsub("index.zml", "  *")[0..2]}
-      output << path_array.join(" ")
-      output << "\e[37m"
-      puts(output)
+      print_result(path, language, index, durations)
     end
     puts("-" * 45)
     puts(" " * 35 + "#{"%3d" % @paths.size} files")
+  end
+
+  def print_result(path, language, index, durations)
+    output = " "
+    if index
+      output << "%3d" % (index + 1)
+    else
+      output << " " * 3
+    end
+    output << "\e[37m : \e[36m"
+    if durations[:parse]
+      output << "%4d" % durations[:parse]
+    else
+      output << " " * 4
+    end
+    output << "\e[37m + \e[36m"
+    if durations[:convert]
+      output << "%4d" % durations[:convert]
+    else
+      output << " " * 4
+    end
+    output << "\e[37m + \e[35m"
+    if durations[:upload]
+      output << "%4d" % durations[:upload]
+    else
+      output << " " * 4
+    end
+    output << "\e[37m  |  \e[33m"
+    path_array = path.gsub(ROOT_PATHS[language] + "/", "").split("/")
+    path_array.map!{|s| (s =~ /\d/) ? "%3d" % s.to_i : s.gsub("index.zml", "  @")[0..2]}
+    path_array.unshift(language)
+    output << path_array.join(" ")
+    output << "\e[37m"
+    puts(output)
   end
 
   def parse_normal(path, language, extension)
