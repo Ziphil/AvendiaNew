@@ -175,7 +175,9 @@ class WholeAvendiaConverter
       end
       print_result(path, language, index, durations)
     end
-    puts("-" * 45)
+    unless failed_paths.empty?
+      puts("-" * 45) 
+    end
     failed_paths.each_with_index do |(path, language, count), index|
       durations = {}
       durations[:upload] = WholeAvendiaConverter.measure do
@@ -186,8 +188,10 @@ class WholeAvendiaConverter
       end
       print_result(path, language, nil, durations)
     end
-    puts("-" * 45)
-    puts(" " * 35 + "#{"%3d" % @paths.size} files")
+    unless @paths.empty?
+      puts("-" * 45)
+      puts(" " * 35 + "#{"%3d" % @paths.size} files")
+    end
   end
 
   def print_result(path, language, index, durations)
@@ -217,7 +221,7 @@ class WholeAvendiaConverter
     end
     output << "\e[37m  |  \e[33m"
     path_array = path.gsub(ROOT_PATHS[language] + "/", "").split("/")
-    path_array.map!{|s| (s =~ /\d/) ? "%3d" % s.to_i : s.gsub("index.zml", "  @")[0..2]}
+    path_array.map!{|s| (s =~ /\d/) ? "%3d" % s.to_i : s.gsub("index.zml", "  @").slice(0, 3)}
     path_array.unshift(language)
     output << path_array.join(" ")
     output << "\e[37m"
