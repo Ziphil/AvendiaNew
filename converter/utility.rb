@@ -157,4 +157,11 @@ class String
     self.gsub!(/^ {#{margin}}/, "")
   end
 
+  def alphabet_hash(digit = 7)
+    number = self.hash % (26 ** digit)
+    string = number.to_s(26).rjust(digit, "0")
+    string = string.chars.map{|s| (s < "a") ? (s.ord + 49).chr : (s.ord + 10).chr}.join
+    return string
+  end
+
 end
