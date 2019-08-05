@@ -410,9 +410,38 @@
   \h2|id="cf"|<3-6>
   \xl<
     \li<
-      \sh<{vade kebatas e ʻalis ca kin vomes licos a's cate sot e hapet adak kômot a e sevlat o vîticos a e sokiq, cataf a ces.}>
-      \ja<>
+      \sh<{vade kebatas e ʻalis ca kin vomes licos a's cate sot e hapet adak kômat a e sevlat o vîticas a e sokiq, cataf a ces.}>
+      \ja<アリスは、チョッキを着て時計を一瞥するウサギをそれまで見たことがなかったことに気づいたので、歩き始めた。>
       \gloss<
+        &lig<\sh<{vade}>\ex<～なので>>
+        &lig|conj="-as"|<\sh<{kebat}>\ex<気づかせる>>
+        &lig|auto="e"|>
+        &lig<\sh<{ʻalis}>\ex<アリス>>
+        &lig|auto="ca"|>
+        &lig|auto="kin"|>
+        &lig|conj="-es"|<\sh<{vom}>\ex<繰り返す>>
+        &lig|conj="-os"|<\sh<{lic}>\ex<見る>>
+        &lig|auto="a"|>
+        &lig<\sh<{'s}>\ex<彼女>>
+        &lig<\sh<{cate}>\ex<～まで>>
+        &lig<\sh<{sot}>\ex<今>>
+        &lig|auto="e"|>
+        &lig<\sh<{hapet}>\ex<ウサギ>>
+        &lig|conj="a-"|<\sh<{dak}>\ex<どんな～もない>>
+        &lig|conj="-at"|<\sh<{kôm}>\ex<着る>>
+        &lig|auto="a"|>
+        &lig|auto="e"|>
+        &lig<\sh<{sevlat}>\ex<チョッキ>>
+        &lig<\sh<{o}>\ex<そして>>
+        &lig|conj="-as"|<\sh<{vîtic}>\ex<一瞥する>>
+        &lig|auto="a"|>
+        &lig|auto="e"|>
+        &lig<\sh<{sokiq}>\ex<懐中時計>>
+        &lig|punc=","|>
+        &lig|conj="-af"|<\sh<{cat}>\ex<歩く>>
+        &lig|auto="a"|>
+        &lig<\sh<{ces}>\ex<彼女>>
+        &lig|punc="."|>
       >
     >
   >
@@ -420,17 +449,57 @@
   \xl<
     \li<
       \sh<{fa delizac a ces zi caxel, dilsizas a ces e nalvaf so zizetis a's ca cit.}>
-      \ja<>
+      \ja<彼女は好奇心に従って、それを追うために野原を横切った。>
       \gloss<
+        &lig<\sh<{fa}>\ex<～しながら>>
+        &lig|conj="-ac"|<\sh<{deliz}>\ex<従う>>
+        &lig|auto="a"|>
+        &lig<\sh<{ces}>\ex<彼女>>
+        &lig|auto="zi"|>
+        &lig<\sh<{caxel}>\ex<好奇心>>
+        &lig|punc=","|>
+        &lig|conj="-as"|<\sh<{dilsiz}>\ex<横切る>>
+        &lig|auto="a"|>
+        &lig<\sh<{ces}>\ex<彼女>>
+        &lig|auto="e"|>
+        &lig<\sh<{nalvaf}>\ex<野原>>
+        &lig<\sh<{so}>\ex<～するために>>
+        &lig|conj="-is"|<\sh<{zizet}>\ex<追う>>
+        &lig|auto="a"|>
+        &lig<\sh<{'s}>\ex<彼女>>
+        &lig|auto="ca"|>
+        &lig<\sh<{cit}>\ex<それ>>
+        &lig|punc="."|>
       >
     >
   >
   \h2|id="ch"|<3-8>
   \xl<
     \li<
-      \sh<{onistecaf, qifat licas a ces e'n kûvas a cit ca filotsodvaf i hapet avâc ivo fîcdem ica nátalkìd.}>
-      \ja<>
+      \sh<{onistecaf, qifat licas a ces e'n kûvas a cit ca filotsodvaf avâc i hapet ivo fîcdem izi nátalkìd.}>
+      \ja<幸運にも、彼女は生け垣の下の大きなウサギの巣穴にそれが入るのを見ることができた。>
       \gloss<
+        &lig|conj="o-"|<\sh<{nistecaf}>\ex<幸運にも>>
+        &lig|punc=","|>
+        &lig|conj="-at"|<\sh<{qif}>\ex<できるようにする>>
+        &lig|conj="-as"|<\sh<{lic}>\ex<見る>>
+        &lig|auto="a"|>
+        &lig<\sh<{ces}>\ex<彼女>>
+        &lig|auto="e"|>
+        &lig|auto="'n"|>
+        &lig|conj="-as"|<\sh<{kûv}>\ex<入る>>
+        &lig|auto="a"|>
+        &lig<\sh<{cit}>\ex<それ>>
+        &lig|auto="ca"|>
+        &lig<\sh<{filotsodvaf}>\ex<巣穴>>
+        &lig|conj="a-"|<\sh<{vâc}>\ex<広い>>
+        &lig|conj="i-"|<\sh<∅>\ex<～の>>
+        &lig<\sh<{hapet}>\ex<ウサギ>>
+        &lig|conj="i-"|<\sh<{vo}>\ex<～の場所の>>
+        &lig<\sh<{fîcdem}>\ex<下>>
+        &lig|conj="i-",auto="zi"|>
+        &lig<\sh<{nátalkìd}>\ex<生け垣>>
+        &lig|punc="."|>
       >
     >
   >
