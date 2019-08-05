@@ -214,8 +214,8 @@
     >
   >
   \p<
-    全体の文構造としては、主節の動詞が {soxas} であり、そこに {a ces}, {qi soxot}, {e'n} 以下という 3 つの助詞句が係っていて、2 つ目の {qi soxot} と 3 つ目の {e'n} 以下の間にダッシュで囲まれた長い節が挿入されている。
-    ダッシュは、このような長めの挿入句の前後に用いられる記号である。
+    全体の文構造としては、主節の動詞が {soxas} であり、そこに {a ces}, {qi soxot}, {e'n} 以下という 3 つの助詞句が係っていて、2 つ目の {qi soxot} と 3 つ目の {e'n} 以下の間に、タデックロットで囲まれた長い節が挿入されている。
+    タデックロットは、日本語や英語のダッシュに相当する記号で、このような長めの挿入句の前後に用いられる記号である。
   >
   \p<
     {qi soxot} は直訳すれば「理性を使って」だが、これは、口に出したり紙に文字を書いたりなどをせずに頭の中で行うことを表す慣用表現である。
@@ -320,7 +320,7 @@
         &lig|punc=","|>
         &lig<\sh<{dà}>\ex<しかし>>
         &lig|conj="-at"|<\sh<{sal}>\ex<である>>
-        &lig<\sh<{te}>\ex<～のときに>>
+        &lig<\sh<{te}>\ex<～するとき>>
         &lig<\sh<{cal}>\ex<そのこと>>
         &lig|auto="a"|>
         &lig<\sh<{zel}>\ex<こと>>
@@ -340,6 +340,15 @@
         &lig|punc="."|>
       >
     >
+  >
+  \p<
+    2 段落 1 文目と同様に、タデックロットで囲まれた節が途中に挿入されている。
+    {kin} 節内の動詞である {dusalat} には、直後にある {e adùk ebam} と挿入部の後の {a kin} 以下という 2 つの助詞句が係っている。
+  >
+  \p<
+    文の最後にある {kin} 節の動詞である {tufosas} は、「呟く」という意味であり、{e} 句によって呟いた内容が明示されるのが普通である。
+    しかし、この文では {a hapet acik} という 1 つの助詞句しか係っておらず、{e} 句は存在しない。
+    このような場合、後続する文全体が {e} 句として置かれているものとして解釈されることがあり、今回はこのパターンである。
   >
   \h2|id="cc"|<3-3>
   \xl<
@@ -445,6 +454,13 @@
       >
     >
   >
+  \p<
+    {kebatas} に係る {kin} 節句では、{vomes licos} という反復表現が用いられている。
+    ここを反復表現にしなくとも「見たことがない」という意味にはなるが、あえて反復表現にすることで、「見ないということを何度も繰り返した」という意味を出し、一度も見たことがないというニュアンスを強めている。
+  >
+  \p<
+    {hapet adak} には、{kômat a e sevlat} と {vîticas a e sokiq} という 2 つの限定節が修飾していることに注意。
+  >
   \h2|id="cg"|<3-7>
   \xl<
     \li<
@@ -507,9 +523,36 @@
   \h2|id="da"|<4-1>
   \xl<
     \li<
-      \sh<{te tesil acál, fodlisas a ʻalis ca filot acik, fa vomac soxos odum a's e kin fovalis qi pil a's zi cêd.}>
+      \sh<{te tesil acál, fodlisas a ʻalis ca filot acik, fa vomac soxos odum a ces e kin fovalis qi pil a's zi cêd.}>
       \ja<>
       \gloss<
+        &lig<\sh<{te}>\ex<～のときに>>
+        &lig<\sh<{tesil}>\ex<瞬間>>
+        &lig|conj="a-"|<\sh<{cál}>\ex<次の>>
+        &lig|punc=","|>
+        &lig|conj="-as"|<\sh<{fodlis}>\ex<飛び込む>>
+        &lig|auto="a"|>
+        &lig<\sh<{ʻalis}>\ex<アリス>>
+        &lig|auto="ca"|>
+        &lig<\sh<{filot}>\ex<穴>>
+        &lig|conj="a-"|<\sh<{cik}>\ex<その>>
+        &lig|punc=","|>
+        &lig<\sh<{fa}>\ex<～しながら>>
+        &lig|conj="-es"|<\sh<{vom}>\ex<繰り返す>>
+        &lig|conj="-os"|<\sh<{sox}>\ex<考える>>
+        &lig|conj="o-"|<\sh<{dum}>\ex<全く～しない>>
+        &lig|auto="a"|>
+        &lig<\sh<{ces}>\ex<彼女>>
+        &lig|auto="e"|>
+        &lig|auto="kin"|>
+        &lig|conj="-is"|<\sh<{foval}>\ex<出る>>
+        &lig<\sh<{qi}>\ex<～することで>>
+        &lig<\sh<{pil}>\ex<どんなこと>>
+        &lig|auto="a"|>
+        &lig<\sh<{'s}>\ex<彼女>>
+        &lig|auto="zi"|>
+        &lig<\sh<{cêd}>\ex<そこ>>
+        &lig|punc="."|>
       >
     >
   >
