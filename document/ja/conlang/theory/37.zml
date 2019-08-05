@@ -18,8 +18,10 @@
   \p<
     各例文の見出しには、その例文を Twitter で呟いた日付と、隣に括弧書きでその例文が辞書のどの項目に載っているかを記載した。
   >
+  \h1<目次>
+  \section-table>
   \h1<例文>
-  \h2|id="2567"|<\h<2567> ({qikov})>
+  \h2|id="qikov"|<\h<2567> ({qikov})>
   \xl<
     \li<
       \sh<{pa medelat e qikov aquk? xílac olov a cadìq i cit se abig.}>\ja<あのパソコン壊れてるの? ずっと画面が青く光ってるけど。>
@@ -47,7 +49,7 @@
     {se} の後ろには形容詞が置かれることが多い。
     日本語のように「青い」を副詞として使うと、青さを感じさせるような (ある種で共感覚的な) 様子で光ることを表してしまい、青い光を発することは意味しなくなってしまう。
   >
-  \h2|id="2568"|<\h<2568> ({tílirsítpiv})>
+  \h2|id="tilirsitpiv"|<\h<2568> ({tílirsítpiv})>
   \xl<
     \li<
       \sh<{kofides a tel vo naflat e tílirsítpiv. pa kodis e zel anissarac?}>\ja<公園で四つ葉のクローバーを見つけたんだ。何か良いことあるかな?>
@@ -73,7 +75,7 @@
     {nissarac} は、「幸運で嬉しくさせる」という意味の感情動詞である {sarac} に、「～という感情を誘う」という意味の準飾詞 (接辞) の {nis+} が付けられてできた単語である。
     {nis+} はあらゆる感情動詞に付けられるため、辞書に {nis+} の付いた形がわざわざ載せられていない場合があるので、注意すること。
   >
-  \h2|id="2570"|<\h<2570> ({kevcaq})>
+  \h2|id="kevcaq"|<\h<2570> ({kevcaq})>
   \xl<
     \li<
       \sh<{kòdet ca kevcaq acik e “e agipik! befolat e kûv!”.}>\ja<その看板には「危険! 立入禁止!」と書かれていた。>
@@ -103,7 +105,7 @@
     「ここは危険である」という意味の {salat a fêd e agipik} という文が裏に想定されており、この文の {e agipik} のみが抽出された形である。
     形容詞や名詞を単独で言いたいときに、しばしばこのような動詞のない助詞句のみの文が現れることがある。
   >
-  \h2|id="2571"|<\h<2571> ({nitdel})>
+  \h2|id="nitdel"|<\h<2571> ({nitdel})>
   \xl<
     \li<
       \sh<{nitdeles a tel e tédser, voltigat e a tific ivo fecil, ca met ayesaf.}>\ja<近所の子供に割られてしまった窓を新しいものに交換した。>
@@ -141,7 +143,7 @@
     英語の代名詞の one とほぼ同じである。
     この文では、{tédser} の代わりをしている。
   >
-  \h2|id="2572"|<\h<2572> ({kosiz})>
+  \h2|id="kosiz"|<\h<2572> ({kosiz})>
   \xl<
     \li<
       \sh<{okosiz evêk, kétes a ces ca hif izi dèt e qinat axodol ile yen atisoqek.}>\ja<丁寧すぎるほどに、彼は机の上に 1 億円する絵画を置いた。>
@@ -172,7 +174,7 @@
   \p<
     「1 億円する絵画」は「1 億円分だけ高価な絵画」と考え、形容詞や副詞の程度を具体的な数で説明する役割をもつ {le} を用いて表現する。
   >
-  \h2|id="2575a"|<\h<2575> ({kezis})>
+  \h2|id="kezis"|<\h<2575> ({kezis})>
   \xl<
     \li<
       \sh<{vade xakalet te nîpes a tel zi kossax, kezisez a'l li litéz ca cêd.}>\ja<学校を出たときは晴れていたので、傘を学校に忘れてきてしまった。>
@@ -205,7 +207,7 @@
     「置き忘れる」の意味の「忘れる」を表現するには、{kezis} を用いることが多い。
     日本語の「忘れる」に最も近い単語は {pâm} だが、これは「覚えていたことを思い出せなくなる」の意味なので、ここでは不適切である。
   >
-  \h2|id="2575b"|<\h<2575> ({ficav})>
+  \h2|id="ficav"|<\h<2575> ({ficav})>
   \xl<
     \li<
       \sh<{dulesos e'n ficavas okôk a vas ca zis vade dibemas a ces ca ces.}>\ja<謝ったからといって必ず許してもらえるわけではない。>
@@ -238,7 +240,7 @@
     {vas} は一般論を表現したいときに使う代詞である。
     英語で「総称の you」と呼ばれている you と同じような働きをもつ。
   >
-  \h2|id="2576"|<\h<2576> ({levkit})>
+  \h2|id="levkit"|<\h<2576> ({levkit})>
   \xl<
     \li<
       \sh<{di'dukezisoz a'c li cikik ca fêd. di'dulesos e'n pelnetas a'c te lôk avôl ilevo meris aqecet. di'dumafetos a'c e levkit.}>\ja<ここに持ち物を置いていくな。20 分以上うろつくな。ガラスに触るな。>
@@ -295,7 +297,7 @@
   \p<
     なお、元ネタは『Portal2』というゲームの案内板。
   >
-  \h2|id="2578"|<\h<2578> ({sávak})>
+  \h2|id="savak"|<\h<2578> ({sávak})>
   \xl<
     \li<
       \sh<{salet a sávak i ces e aqonef ebam iti dudéxat a dus teku cal.}>\ja<彼の授業はとてもつまらなく、その間に寝ていない者はいなかった。>
@@ -329,13 +331,13 @@
     文末の {cal} は {sávak} を受けている。
     {sávak} は「授業」というモノを表す名詞なので、通常ならモノを表す {cit} で受けるが、今回は授業そのものではなく授業の内容を指すために、コトを表す {cal} で受けている。
   >
-  \h2|id="2579"|<\h<2579> ({xer})>
+  \h2|id="xer"|<\h<2579> ({xer})>
   \xl<
     \li<
       \sh<{loke xer, revet a tel e'n rekotat loke a'l ovel ifeli qel, pa kilat a'l vade pil te sot e'n etut pafikos a'l?}>\ja<あれだけ理解していると思っていた愛を、今は思い出すことしかできないのはどうしてだろう?>
     >
   >
-  \h2|id="2581"|<\h<2581> ({becam})>
+  \h2|id="becam"|<\h<2581> ({becam})>
   \xl<
     \li<
       \sh<{vomoc becamos olof a ces vo zîd edif qetat vo a dat.}>\ja<彼女は何もないところでさえもよく転ぶ。>
@@ -360,7 +362,7 @@
     「よく転ぶ」というのは習慣を表すので、繰り返しを表す {vom} を用いている。
     さらに、現在続いている瞬間というよりは、過去も未来も「よく転ぶ」ということを繰り返しそうというニュアンスを込めて、{vom} は通時時制になっている。
   >
-  \h2|id="2586"|<\h<2586> ({liqon})>
+  \h2|id="liqon"|<\h<2586> ({liqon})>
   \xl<
     \li<
       \sh<{â, derexaf. savat liqonis a tel e litéz ca fay.}>\ja<あっ、雨が降ってきた。娘に傘を届けに行かないと。>
