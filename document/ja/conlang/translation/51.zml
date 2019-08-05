@@ -60,8 +60,8 @@
     三人称視点の物語では、主人公を明示するためにこのように 1 文目の文頭に置かれることが多い。
   >
   \p<
-    この文の主節の動詞である {pôzac} は現在時制になっているが、これは物語に特有の表現である。
-    シャレイア語で物語を描写するときは、過去に起こった話として記述するというより、物語の進行と並行して記述していくというイメージをもとに、現在時制を使う。
+    この文の主節の動詞である {pôzac} は現在時制になっているが、これは「叙述の現在時制」と呼ばれ、物語に特有の時制の使い方である。
+    シャレイア語で物語を描写するときは、過去に起こった話として記述するというより、物語の進行と並行して記述していくというイメージがあるので、現在時制を使うのである。
   >
   \p<
     {bam} は副詞として使うと形容詞か副詞しか修飾できないので、今回のように動詞を修飾させたい場合は、{vel} を介して {ovel ebam} という形で修飾する。
@@ -154,8 +154,8 @@
   \h2|id="5"|<2-1>
   \xl<
     \li<
-      \sh<{ce, soxas a ces qi soxot — lîgifas a's e cal ovel evêl ini kilat las, vade meberat o folnasat ovel ebam e's a zalnat — e'n kavat á dulat e sokos a kin hitis a's ce dehisis a's e lissod so qikis a's e lîs zi met.}>
-      \ja<そして、彼女は頭の中で考えました――暑さが彼女をとても眠くさせぼーっとさせていたので、できる限りそれに集中しました――立ち上がってヒナギクの輪を作るためにヒナギクを拾うことに価値があるのかどうかを。>
+      \sh<{ce, soxas a ces qi soxot — duqifat lîgifas a's e cal, vade meberat o folnasat ovel ebam e's a zalnat — e'n kavat á dulat e sokos a kin hitis a's ce dehisis a's e lissod so qikis a's e lîs zi met.}>
+      \ja<そして、彼女は頭の中で考えました――暑さが彼女をとても眠くさせぼーっとさせていたので、それに集中することはできませんでした――立ち上がってヒナギクの輪を作るためにヒナギクを拾うことに価値があるのかどうかを。>
       \gloss<
         &lig<\sh<{ce}>\ex<そして>>
         &lig|punc=","|>
@@ -165,16 +165,12 @@
         &lig<\sh<{qi}>\ex<～で>>
         &lig<\sh<{soxot}>\ex<理性>>
         &lig<\sh<{—}>>
+        &lig|conj="du-at"|<\sh<{qif}>\ex<できるようにする>>
         &lig|conj="-as"|<\sh<{lîgif}>\ex<集中する>>
         &lig|auto="a"|>
         &lig<\sh<{'s}>\ex<彼女>>
         &lig|auto="e"|>
         &lig<\sh<{cal}>\ex<そのこと>>
-        &lig|conj="o-"|<\sh<{vel}>\ex<>>
-        &lig|conj="e-"|<\sh<{vêl}>\ex<同じくらい>>
-        &lig|conj="i-"|<\sh<{ni}>\ex<～より>>
-        &lig|conj="-at"|<\sh<{kil}>\ex<できるようになる>>
-        &lig|conj="-as"|<\sh<{l}>\ex<する>>
         &lig|punc=","|>
         &lig<\sh<{vade}>\ex<～なので>>
         &lig|conj="-at"|<\sh<{meber}>\ex<眠くする>>
@@ -219,6 +215,7 @@
   >
   \p<
     全体の文構造としては、主節の動詞が {soxas} であり、そこに {a ces}, {qi soxot}, {e'n} 以下という 3 つの助詞句が係っていて、2 つ目の {qi soxot} と 3 つ目の {e'n} 以下の間にダッシュで囲まれた長い節が挿入されている。
+    ダッシュは、このような長めの挿入句の前後に用いられる記号である。
   >
   \p<
     {qi soxot} は直訳すれば「理性を使って」だが、これは、口に出したり紙に文字を書いたりなどをせずに頭の中で行うことを表す慣用表現である。
@@ -229,20 +226,22 @@
     {á dul/os/} は間接諾否疑問の定型表現である。
   >
   \p<
-    文末にある {met} は {lissod} の代わりをしている。
+    文末にある {met} は {lissod} の代わりをしていて、同じ単語が繰り返されるのを防いでいる。
   >
   \h2|id="6"|<2-2>
   \xl<
     \li<
-      \sh<{te cal, vilisas obâl vo fîc ica ces a hapet axac kavat a e lisaz ahafas.}>
-      \ja<そのとき、彼女の近くでピンクの目をもつ白いウサギが突然走った。>
+      \sh<{te cal, cákas obâl cife vilis ca fîc ica ces a hapet axac kavat a e lisaz ahafas.}>
+      \ja<そのとき、ピンクの目をもつ白いウサギが突然走りながら彼女の近くにやって来た。>
       \gloss<
         &lig<\sh<{te}>\ex<～するとき>>
         &lig<\sh<{cal}>\ex<そのこと>>
         &lig|punc=","|>
-        &lig|conj="-as"|<\sh<{vilis}>\ex<走る>>
+        &lig|conj="-as"|<\sh<{cák}>\ex<来る>>
         &lig|conj="o-"|<\sh<{bâl}>\ex<突然>>
-        &lig<\sh<{vo}>\ex<～で>>
+        &lig<\sh<{cife}>\ex<～しながら>>
+        &lig<\sh<{vilis}>\ex<走ること>>
+        &lig|auto="ca"|>
         &lig<\sh<{fîc}>\ex<近く>>
         &lig|conj="i-",auto="ca"|>
         &lig<\sh<{ces}>\ex<彼女>>
@@ -260,6 +259,11 @@
   >
   \p<
     {te cal} における {te} は助詞として使われているが、後続する名詞である {cal} がコトを表すものなので、意味的には接続詞になっている。
+    したがって、「{cal} が起こったのと同じ時間に」という意味になる。
+  >
+  \p<
+    {cife vilis} における {cife} も同様で、本来は接続詞としての用法しかないが、後続する名詞が {vilis} というコト名詞なので、接続詞の意味で助詞として用いられている。
+    この {cife vilis} という表現は、{cife vilisac a cit} という接続詞節における {vilisac a cit} の部分が、動辞の名詞用法によって {vilis} だけに置き換えられた形であると解釈できる。
   >
 
 >
