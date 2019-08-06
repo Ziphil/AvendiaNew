@@ -607,3 +607,15 @@ div.other {
   }
 
 }
+
+
+* {
+
+  span.sans {
+    font-family: $sans-font-family !important;
+    font-size: $sans-font-size !important;
+    font-feature-settings: "palt" 1, "pkna" 1;
+    line-height: $sans-font-size !important;
+  }
+  
+}
