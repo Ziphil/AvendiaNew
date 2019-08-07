@@ -531,6 +531,10 @@ article.main {
     text-align: left;
   }
 
+  table tr th {
+    background: $table-header-background;
+  }
+
   table tr:first-child th {
     border-bottom: 1px $border-color solid;
     background: $table-header-background;
