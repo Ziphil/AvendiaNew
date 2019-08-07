@@ -22,6 +22,7 @@ NAMES = {
   :application_web => {:ja => "Web アプリ", :en => "Web Application"},
   :diary => {:ja => "日記", :en => "Diary"},
   :diary_conlang => {:ja => "シャレイア語", :en => "Shaleian"},
+  :diary_language => {:ja => "自然言語", :en => "Languages"},
   :diary_mathematics => {:ja => "数学", :en => "Mathematics"},
   :diary_application => {:ja => "プログラミング", :en => "Programming"},
   :diary_game => {:ja => "ゲーム制作", :en => "Game"},
