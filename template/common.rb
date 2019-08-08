@@ -490,13 +490,27 @@ converter.add(["table"], ["page"]) do |element|
   next this
 end
 
+converter.add(["caption"], ["page.table"]) do |element|
+  this = pass_element(element, "page")
+  next this
+end
+
 converter.add(["tr"], ["page.table"]) do |element|
   this = pass_element(element, "page.table.tr")
   next this
 end
 
 converter.add(["th", "td"], ["page.table.tr"]) do |element|
-  this = pass_element(element, "page")
+  this = ""
+  this << Tag.build(element.name) do |this|
+    this << apply(element, "page")
+    if element.attribute("row")
+      this["rowspan"] = element.attribute("row").to_s
+    end
+    if element.attribute("col")
+      this["colspan"] = element.attribute("col").to_s
+    end
+  end
   next this
 end
 
@@ -504,6 +518,12 @@ converter.add(["thl"], ["page.table.tr"]) do |element|
   this = ""
   this << Tag.build("th", "left") do |this|
     this << apply(element, "page")
+    if element.attribute("row")
+      this["rowspan"] = element.attribute("row").to_s
+    end
+    if element.attribute("col")
+      this["colspan"] = element.attribute("col").to_s
+    end
   end
   next this
 end

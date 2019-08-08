@@ -519,6 +519,17 @@ article.main {
     white-space: nowrap;
   }
 
+  table caption {
+    margin: $vertical-margin - $wide-vertical-margin 0px 0px 0px;
+    padding: 0px;
+    font-family: $serif-font-family;
+    font-weight: $serif-font-weight;
+    font-size: $font-size;
+    font-feature-settings: "palt" 1, "pkna" 1;
+    line-height: $line-height;
+    text-align: center;
+  }
+
   table tr th,
   table tr td {
     margin: 0px;
