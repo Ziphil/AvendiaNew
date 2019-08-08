@@ -407,7 +407,7 @@ div.translation#opening div.main table tr td:first-child {
 
 span.sans,
 a.sans {
-  font-family: "Arial Nova", "Arial", "IPA Pゴシック", "ＭＳ Ｐゴシック", sans-serif !important;
+  font-family: "Arial", "IPA Pゴシック", "ＭＳ Ｐゴシック", sans-serif !important;
   font-size: 96% !important;
   line-height: 96% !important;
 }
