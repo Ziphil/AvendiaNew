@@ -867,7 +867,9 @@ article.main {
   }
 
   div.gloss div.word div.name,
-  li.gloss div.word div.name {
+  li.gloss div.word div.name,
+  div.gloss div.word div.base,
+  li.gloss div.word div.base {
     margin: 0px 0px -4px 0px;
     padding: 0px;
   }

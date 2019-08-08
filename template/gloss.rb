@@ -44,12 +44,14 @@ converter.add(nil, ["page.gloss"]) do |text|
   next string
 end
 
-converter.add(["sh", "ex"], ["page.gloss.li"]) do |element|
+converter.add(["sh", "bs", "ex"], ["page.gloss.li"]) do |element|
   this = ""
   this << Tag.build("div") do |this|
     case element.name
     when "sh"
       this.class = "name"
+    when "bs"
+      this.class = "base"
     when "ex"
       this.class = "explanation"
     end
