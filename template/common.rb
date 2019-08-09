@@ -484,6 +484,33 @@ end
 
 converter.add(["table"], ["page"]) do |element|
   this = ""
+  column_size = element.each_xpath("tr").map{|s| s.elements.size}.max
+  head_column_sizes = element.each_xpath("tr").map do |row_element|
+    array = row_element.elements.map do |cell_element|
+      if cell_element.name == "th" || cell_element.name == "thl"
+        next [1, cell_element.attribute("col").to_s.to_i].max
+      else
+        next 0
+      end
+    end
+    next array.sum
+  end
+  head_row_size = head_column_sizes.take_while{|s| s >= column_size}.size
+  head_column_size = head_column_sizes.min
+  element.each_xpath("tr").with_index do |row_element, row_index|
+    if row_index == head_row_size - 1
+      row_element.elements.each do |cell_element|
+        cell_element["line"] ||= ""
+        cell_element["line"] += " bottom"
+      end
+    end
+    row_element.elements.each_with_index do |cell_element, column_index|
+      if column_index == head_column_size - 1
+        cell_element["line"] ||= ""
+        cell_element["line"] += " right"
+      end
+    end
+  end
   this << Tag.build("div", "table-wrapper") do |this|
     this << pass_element(element, "page.table")
   end
@@ -500,30 +527,26 @@ converter.add(["tr"], ["page.table"]) do |element|
   next this
 end
 
-converter.add(["th", "td"], ["page.table.tr"]) do |element|
+converter.add(["th", "thl", "td"], ["page.table.tr"]) do |element|
   this = ""
-  this << Tag.build(element.name) do |this|
-    this << apply(element, "page")
+  this << Tag.build do |this|
+    case element.name
+    when "th", "thl"
+      this.name = "th"
+    when "td"
+      this.name = "td"
+    end
     if element.attribute("row")
       this["rowspan"] = element.attribute("row").to_s
     end
     if element.attribute("col")
       this["colspan"] = element.attribute("col").to_s
     end
-  end
-  next this
-end
-
-converter.add(["thl"], ["page.table.tr"]) do |element|
-  this = ""
-  this << Tag.build("th", "left") do |this|
+    if element.attribute("line")
+      this.class ||= ""
+      this.class << element.attribute("line").to_s.split(" ").map{|s| s + "-line"}.join(" ")
+    end
     this << apply(element, "page")
-    if element.attribute("row")
-      this["rowspan"] = element.attribute("row").to_s
-    end
-    if element.attribute("col")
-      this["colspan"] = element.attribute("col").to_s
-    end
   end
   next this
 end

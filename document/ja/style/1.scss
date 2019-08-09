@@ -546,14 +546,12 @@ article.main {
     background: $table-header-background;
   }
 
-  table tr:first-child th {
+  table tr th.bottom-line {
     border-bottom: 1px $border-color solid;
-    background: $table-header-background;
   }
 
-  table tr th.left {
+  table tr th.right-line {
     border-right: 1px $border-color solid;
-    background: $table-header-background;
   }
 
   // 罫線なしテーブル
