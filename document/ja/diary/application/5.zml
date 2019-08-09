@@ -8,7 +8,7 @@
   \p<
     ZpDIC では ver 1.7.0 から akrantiain が実行できますが、実装はオリジナルのものとは異なります。
     ということで、特に変換規則の適用について、どういう実装になっているかを簡単に解説しておこうと思います。
-    オリジナルの実装の解説は、\a|href="https://sozysozbot.github.io/akrantiain2/manuals/conversions_ja.htm",target="_blank"|<こちら>を参照してください。
+    オリジナルの実装の解説は、\ae|href="https://sozysozbot.github.io/akrantiain2/manuals/conversions_ja.html"|<こちら>を参照してください。
     以下は、ver 1.7.1 より少し後 (コミット c058cc8) の実装の解説です。
     ver 1.7.1 は左右条件のチェックを手抜きしているので、以下の説明とは少し違います。
   >

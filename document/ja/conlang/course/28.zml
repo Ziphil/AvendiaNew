@@ -25,7 +25,7 @@
   \h1<組版について>
   \p<
     この本の本文は、全て XSL-FO を用いて組版しました。
-    本の原稿は \a|href="https://github.com/Ziphil/ShaleianNonsentence",target="_blank"|<GitHub> で公開しています。
+    本の原稿は \ae|href="https://github.com/Ziphil/ShaleianNonsentence"|<GitHub> で公開しています。
   >
 
 >

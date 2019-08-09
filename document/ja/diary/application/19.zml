@@ -7,7 +7,7 @@
   \h1<日記 (2019 年 3 月 11 日)>
   \p<
     \m<Functor> は関手だし \m<Monad> は文脈付きの値を扱う構造ということで、この 2 つは何となく気持ちが掴めてきたんですが、その間にある \m<Applicative> の気持ちがよく分かりませんでした。
-    すると、\a|href="https://twitter.com/hsjoihs/status/1104339295584759808",target="_blank"|<Twitter> で hsjoihs さんから「前の結果に依存して計算を変えるという \m<Monad> の機能を取り除いたのが \m<Applicative>」という捉え方があると教えてもらいました。
+    すると、\ae|href="https://twitter.com/hsjoihs/status/1104339295584759808"|<Twitter> で hsjoihs さんから「前の結果に依存して計算を変えるという \m<Monad> の機能を取り除いたのが \m<Applicative>」という捉え方があると教えてもらいました。
     これを聞いたときは分かったような分からないようなという感じでしたが、だんだん分かってきたのでまとめてみます。
   >
   \p<

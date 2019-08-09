@@ -14,7 +14,7 @@
   \p<
     さて、ARC091 の F 問題について簡単にまとめておきます。
     本番では時間がなくて考えることもできず、終わった後に考えても解き方が分からず、解説を見たら知らないテクニックが使われていました。
-    問題は\a|href="https://beta.atcoder.jp/contests/arc091/tasks/arc091_d",target="_blank"|<こちら>です。
+    問題は\ae|href="https://beta.atcoder.jp/contests/arc091/tasks/arc091_d"|<こちら>です。
   >
   \p<
     場の状態を交互に変化させていくゲームがあって、状態をこれ以上遷移できなくなったら負けとします。

@@ -11,7 +11,7 @@
   >
   \p<
     このサイトは、ZenML で書かれた原稿を HTML に変換することで作成しています。
-    詳細は\a|href="https://github.com/Ziphil/AvendiaNew",target="_blank"|<こちら>をご覧ください。
+    詳細は\ae|href="https://github.com/Ziphil/AvendiaNew"|<こちら>をご覧ください。
   >
   \p<
     以下は ZenML ドキュメントの例です。
@@ -48,7 +48,7 @@
     ZenML の仕様や処理系は GitHub で公開しています。
   >
   \form<
-    \a|class="form",href="https://github.com/Ziphil/Zenithal",target="_blank"|<GitHub ページ>
+    \ae|class="form",href="https://github.com/Ziphil/Zenithal"|<GitHub ページ>
   >
 
 >

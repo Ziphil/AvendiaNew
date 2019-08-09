@@ -17,7 +17,7 @@
   >
   \p<
     ということで、ベンチマークを取ってみましょう。
-    今回は試しに \a|href="https://github.com/benchmark-driver/benchmark-driver",target="_blank"|<BenchmarkDriver> を使ってみます。
+    今回は試しに \ae|href="https://github.com/benchmark-driver/benchmark-driver"|<BenchmarkDriver> を使ってみます。
     ベンチマーク対象をブロックではなく文字列で渡すことで、ブロック呼び出しによるオーバーヘッドをなくして、より厳密な計測ができるらしいです。
   >
   \p<

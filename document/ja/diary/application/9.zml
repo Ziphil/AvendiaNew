@@ -7,7 +7,7 @@
   \h1<日記 (2018 年 3 月 13 日)>
   \p<
     今日は AGC023 があったんですが、そこの C 問題で階乗の逆元の求め方が分からず戸惑ってしまったので、簡単にまとめておきます。
-    問題は\a|href="https://beta.atcoder.jp/contests/agc023/tasks/agc023_c",target="_blank"|<こちら>です。
+    問題は\ae|href="https://beta.atcoder.jp/contests/agc023/tasks/agc023_c"|<こちら>です。
   >
   \p<
     面倒なので詳細は省きますが、どんな順列に対しても、そのスコア \i<s> は必ず (\i<N> ＋ 1)`/2 ≦ \i<s> ≦ \i<N> － 1 の範囲になります。

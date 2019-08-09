@@ -8,7 +8,7 @@
   \p<
     少し前に ARC097 があって参加しました。
     そこの D 問題は Union-Find 木を使うと簡単に解けるんですが、コンテスト当時の私はそのことに気づかずに他の方法でやったので、Union-Find 木の実装をここに記しておこうと思います。
-    問題は\a|href="https://beta.atcoder.jp/contests/arc097/tasks/arc097_b",target="_blank"|<こちら>です。
+    問題は\ae|href="https://beta.atcoder.jp/contests/arc097/tasks/arc097_b"|<こちら>です。
   >
   \p<
     Union-Find 木とは、簡単に言うと複数の要素をグループ化して保持するデータ構造です。

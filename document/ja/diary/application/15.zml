@@ -8,7 +8,7 @@
   \p<
     昨日から、かねてからやりたいと言っておいて手を付けてなかった Haskell の勉強を始めました。
     ただ目的がないと飽きるので、手始めに Tsuro の実装をすることにしました。
-    書いたコードは \a|href="https://gist.github.com/Ziphil/cd367da4dcae3310a111483e2d597536",target="_blank"|<Gist> に置いてあります。
+    書いたコードは \ae|href="https://gist.github.com/Ziphil/cd367da4dcae3310a111483e2d597536"|<Gist> に置いてあります。
   >
   \p<
     さて、特定の条件を満たしていたら何らかの値を返し、満たしていなかったら \m<Nothing> を返すような式を書きたかったので、私は愚直に以下のようにしました。
@@ -19,7 +19,7 @@
       else Nothing
   >
   \p<
-    すると、\a|href="https://twitter.com/sosoBOTpi/status/1103616878138793984",target="_blank"|<Twitter> で hsjoihs さんから、これは \c~<guard (y `> 0) `>`> Just (x, y - 1)> とも書けることを教えてもらいました。
+    すると、\ae|href="https://twitter.com/sosoBOTpi/status/1103616878138793984"|<Twitter> で hsjoihs さんから、これは \c~<guard (y `> 0) `>`> Just (x, y - 1)> とも書けることを教えてもらいました。
     知らない関数と知らない演算子が出てきた (というか勉強 2 日目なのでほぼ知らないんですが) ので、どんな働きをするのかを調べました。
     とりあえず、なぜそのような定義がなされているのかなどは考えずに、この式が上の式と同じ挙動になることを理解するのを目標にします。
   >

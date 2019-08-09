@@ -29,7 +29,7 @@
     シャレイア文字には大文字と小文字の区別がありませんが、便宜上大文字にも小文字と同じグリフが割り当てられています。
   >
   \form<
-    \a|class="form",href="https://www.dropbox.com/sh/j8foichvfvs455j/AACjhbc-EZEPWDYxLTfkoU3ia?dl=0",target="_blank"|<ダウンロード>　(ver 1.2.0)
+    \ae|class="form",href="https://www.dropbox.com/sh/j8foichvfvs455j/AACjhbc-EZEPWDYxLTfkoU3ia?dl=0"|<ダウンロード>　(ver 1.2.0)
   >
   \h1<Gilit ファミリー>
   \img|src="../../file/other/58.png"|>
@@ -56,7 +56,7 @@
     上に尖った三角形状の文字は小文字に、下に尖った三角形状の文字は大文字に割り当てられているので、字形を正しく表示するには小文字と大文字を交互 ([x], [j], [n], [m] の直後は除く) に入力する必要があります。
   >
   \form<
-    \a|class="form",href="https://www.dropbox.com/sh/zule0g0dr8pa6nf/AACUIEyNu5rb0md93u34yy-Ya?dl=0",target="_blank"|<ダウンロード>　(ver 1.2.1)
+    \ae|class="form",href="https://www.dropbox.com/sh/zule0g0dr8pa6nf/AACUIEyNu5rb0md93u34yy-Ya?dl=0"|<ダウンロード>　(ver 1.2.1)
   >
   \h1<Shaleian ファミリー>
   \img|src="../../file/other/50.png"|>
@@ -65,11 +65,11 @@
     アルファベットと数字および一部の記号が含まれます。
   >
   \p<
-    このフォントは、アド様 (\a|href="https://dirdam.github.io/",target="_blank"|<GitHub Pages>) に作っていただきました。
+    このフォントは、アド様 (\ae|href="https://dirdam.github.io/"|<GitHub Pages>) に作っていただきました。
     フォントファイルの著作権はアド様に帰属します。
   >
   \form<
-    \a|class="form",href="https://www.dropbox.com/sh/663d6tfnf3azvta/AAB-udTR94j-3VmOvaXi03NNa?dl=0",target="_blank"|<ダウンロード>
+    \ae|class="form",href="https://www.dropbox.com/sh/663d6tfnf3azvta/AAB-udTR94j-3VmOvaXi03NNa?dl=0"|<ダウンロード>
   >
 
 >

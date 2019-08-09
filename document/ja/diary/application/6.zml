@@ -13,7 +13,7 @@
   >
   \p<
     さて、今回は AGC021 の B 問題についてまとめておきます。
-    問題は\a|href="https://beta.atcoder.jp/contests/agc021/tasks/agc021_b",target="_blank"|<こちら>です。
+    問題は\ae|href="https://beta.atcoder.jp/contests/agc021/tasks/agc021_b"|<こちら>です。
   >
   \p<
     平面上の \i<N> 個の点が与えられるので、それぞれの点に対して、ランダムにある位置を決めたときにそこからその点が最短となるような確率を求めます。
