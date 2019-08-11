@@ -124,7 +124,7 @@ class ShaleiaDictionary
         output << "0"
       end
     rescue => exception
-      output = "◆ 内部エラーが発生しました。@Ziphil に知らせてください。"
+      output = ""
     end
     @cgi.out("text/plain") do
       next output
