@@ -128,7 +128,11 @@ class ShaleiaDictionary
         hairia = ShaleiaTime.now_hairia - @type
         history = histories.fetch(hairia, nil)
         if history
-          output << (whole_data.size - history).to_s
+          if whole_data.size > history
+            output << (whole_data.size - history).to_s
+          else
+            output << "0"
+          end
         else
           output << "?"
         end
