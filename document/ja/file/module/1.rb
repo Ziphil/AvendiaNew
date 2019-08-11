@@ -176,6 +176,20 @@ module ShaleiaUtilities;extend self
     return logs
   end
 
+  def histories(version = 0)
+    histories = Hash.new{|h, s| h[s] = 0}
+    if File.exist?("../../file/dictionary/meta/history/#{version + 1}.txt")
+      File.open("../../file/dictionary/meta/history/#{version + 1}.txt") do |file|
+        file.each_line do |line|
+          if match = line.chomp.match(/^(\d+);\s*(\d+)/)
+            histories[match[1].to_i] = match[2].to_i
+          end
+        end
+      end
+    end
+    return histories
+  end
+
   def whole_data(version = 0)
     whole_data = Hash.new{|h, s| h[s] = ""}
     current_name = nil
@@ -190,6 +204,12 @@ module ShaleiaUtilities;extend self
         end
       end
     end
+    return whole_data
+  end
+
+  def whole_data_without_meta(version = 0)
+    whole_data = ShaleiaUtilities.whole_data(version)
+    whole_data.reject!{|s, t| s.start_with?("META") || s.start_with?("$")}
     return whole_data
   end
 
@@ -212,6 +232,15 @@ module ShaleiaUtilities;extend self
     if File.exist?("../../file/dictionary/log/1.txt")
       File.delete("../../file/dictionary/log/1.txt")
     end
+  end
+
+  def save_history(version = 0)
+    size = ShaleiaUtilities.whole_data_without_meta(version).size
+    hairia = ShaleiaTime.now_hairia
+    File.open("../../file/dictionary/meta/history/#{version + 1}.txt", "a") do |file|
+      file.puts(hairia.to_s + "; " + size.to_s)
+    end
+    return size
   end
 
   def update(version = 0)
@@ -364,6 +393,12 @@ module ShaleiaTime;extend self
   def hairia(year, month, day)
     difference = DateTime.new(year, month, day, 0, 0, 0) - DateTime.new(2012, 1, 23, 0, 0, 0)
     return (difference + 1).to_i
+  end
+
+  def now_hairia
+    time = Time.now - 6 * 60 * 60
+    hairia = ShaleiaTime.hairia(time.year, time.month, time.day)
+    return hairia
   end
 
 end

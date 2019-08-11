@@ -47,6 +47,8 @@ class ShaleiaManager
       delete_request
     when "delete_logs"
       delete_logs
+    when "save_history"
+      save_history
     else
       default
     end
@@ -120,6 +122,13 @@ class ShaleiaManager
 
   def delete_logs
     ShaleiaUtilities.delete_logs
+    @cgi.out({"status" => "REDIRECT", "location" => "2.cgi?password=#{@password}"}) do 
+      next ""
+    end
+  end
+
+  def save_history
+    ShaleiaUtilities.save_history(0)
     @cgi.out({"status" => "REDIRECT", "location" => "2.cgi?password=#{@password}"}) do 
       next ""
     end

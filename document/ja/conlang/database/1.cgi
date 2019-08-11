@@ -97,15 +97,16 @@ class ShaleiaDictionary
   def fetch
     output = ""
     begin
-      whole_data = ShaleiaUtilities.whole_data(0)
       case @mode
       when 0
+        whole_data = ShaleiaUtilities.whole_data(0)
         candidates = whole_data.reject do |name, data|
           next EXCLUDED_NAMES.include?(name) || name.start_with?("META") || name.start_with?("$")
         end
         name, data = candidates.to_a.sample
         output << Source.word_text(name, data)
       when 2
+        whole_data = ShaleiaUtilities.whole_data(0)
         candidates = whole_data.map do |name, data|
           result = []
           unless EXCLUDED_NAMES.include?(name)
@@ -119,9 +120,18 @@ class ShaleiaDictionary
         name, sentence, translation = candidates.sample
         output << Source.example_text(name, sentence, translation)
       when 1
-        output << whole_data.reject{|s, t| s.start_with?("META") || s.start_with?("$")}.size.to_s
+        whole_data = ShaleiaUtilities.whole_data_without_meta(0)
+        output << whole_data.size.to_s
       when 3
-        output << "0"
+        whole_data = ShaleiaUtilities.whole_data_without_meta(0)
+        histories = ShaleiaUtilities.histories(0)
+        hairia = ShaleiaTime.now_hairia - @type
+        history = histories.fetch(hairia, nil)
+        if history
+          output << (whole_data.size - history).to_s
+        else
+          output << "?"
+        end
       end
     rescue => exception
       output = ""
