@@ -513,7 +513,7 @@ div.other {
     margin: 0px;
     padding: 0px;
     display: grid;
-    grid-gap: 0px 50px;
+    grid-gap: 5px 50px;
     grid-template-columns: repeat(2, auto);
     align-items: baseline;
   }
@@ -623,6 +623,7 @@ div.other {
     font-size: $font-size;
     color: $other-color;
     line-height: $line-height;
+    text-align: justify;
   }
 
   div.content div.log {
