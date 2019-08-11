@@ -136,7 +136,7 @@
       \div|class="content center"|<
         \div|class="count"|<
           \div|class="table"|<
-            \div|class="text"|<現在の単語数>
+            \div|class="text"|<\span|class="redundant"|<現在の>単語数>
             \div|class="number",id="whole-count"|<2000>
           >
           \div|class="table small"|<

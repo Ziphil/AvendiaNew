@@ -446,6 +446,7 @@ div.other {
   }
 
   div.content.center {
+    flex-direction: row;
     justify-content: center;
   }
 
@@ -548,6 +549,13 @@ div.other {
   div.content div.count div.table.small div.number::before {
     margin: 0px 0.1em 0px 0px;
     content: "+";
+  }
+
+  div.content div.count span.redundant {
+    display: inline;
+    @include smartphone {
+      display: none;
+    }
   }
 
   div.content div.contact {
