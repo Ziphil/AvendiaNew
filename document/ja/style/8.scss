@@ -517,6 +517,10 @@ div.other {
     align-items: baseline;
   }
 
+  div.content div.count div.table.small {
+    margin: 10px 0px 0px 0px;
+  }
+
   div.content div.count div.table div.text {
     font-size: $other-header-font-size;
     color: $other-color;
@@ -531,18 +535,19 @@ div.other {
 
   div.content div.count div.table div.number {
     font-family: $special-font-family;
-    font-size: $other-header-font-size * 3;
+    font-size: $count-font-size;
     color: $introduction-background-color;
     text-align: right;
     filter: $small-box-filter;
   }
 
   div.content div.count div.table.small div.number {
-    font-size: $other-header-font-size * 3 * 0.7;
+    font-size: $count-font-size * 0.7;
   }
 
   div.content div.count div.table.small div.number::before {
-    content: "+ ";
+    margin: 0px 0.1em 0px 0px;
+    content: "+";
   }
 
   div.content div.contact {
