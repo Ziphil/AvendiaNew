@@ -382,7 +382,7 @@ div.introduction {
     border-radius: $sample-border-radius 0px 0px $sample-border-radius;
     background: $main-background;
     background-attachment: fixed;
-    flex: 4;
+    flex: 5;
     @include small-screen {
       padding-right: $main-horizontal-padding;
     }
@@ -421,15 +421,19 @@ div.introduction {
 div.other {
   @include transparent-border;
   width: 100%;
-  margin: 0px;
+  margin: 100px 0px;
   padding: 0px;
   background: transparent;
   background-attachment: fixed;
   box-sizing: border-box;
 
+  &.narrow {
+    margin: -20px 0px;
+  }
+
   div.content {
     width: $main-width;
-    margin: 100px auto 100px auto;
+    margin: 0px auto;
     padding: 0px $main-horizontal-padding;
     display: flex;
     flex-direction: row;
@@ -439,6 +443,10 @@ div.other {
     @include smartphone {
       flex-direction: column;
     }
+  }
+
+  div.content.center {
+    justify-content: center;
   }
 
   div.content div.column div.header {
@@ -465,6 +473,71 @@ div.other {
     position: absolute;
     bottom: 0px;
     z-index: 1;
+  }
+
+  div.content div.separator {
+    width: 100%;
+    font-size: 12px;
+    color: $separator-border-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: $small-box-filter;
+  }
+
+  div.content div.separator::before,
+  div.content div.separator::after {
+    width: 100%;
+    border-top: 1px $separator-border-color solid;
+    content: "";
+  }
+
+  div.content div.separator::before {
+    margin: 0px 20px 0px 0px;
+  }
+
+  div.content div.separator::after {
+    margin: 0px 0px 0px 20px;
+  }
+
+  div.content div.count {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  div.content div.count div.table {
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-gap: 0px 50px;
+    grid-template-columns: repeat(2, auto);
+    align-items: baseline;
+  }
+
+  div.content div.count div.table div.text {
+    font-size: $other-header-font-size;
+    color: $other-color;
+    letter-spacing: 0.15em;
+  }
+
+  div.content div.count div.table.small div.text {
+    font-size: $other-header-font-size * 0.7;
+    letter-spacing: 0em;
+  }
+
+  div.content div.count div.table div.number {
+    font-family: $special-font-family;
+    font-size: $other-header-font-size * 3;
+    color: $introduction-background-color;
+    text-align: right;
+    filter: $small-box-filter;
+  }
+
+  div.content div.count div.table.small div.number {
+    font-size: $other-header-font-size * 3 * 0.7;
   }
 
   div.content div.contact {
@@ -537,7 +610,7 @@ div.other {
   div.content div.log {
     margin: 0px 0px 0px 50px;
     padding: 0px;
-    flex: 4;
+    flex: 5;
     @include smartphone {
       margin: 80px 0px 0px 0px;
       flex: auto;
