@@ -520,6 +520,7 @@ div.other {
   div.content div.count div.table div.text {
     font-size: $other-header-font-size;
     color: $other-color;
+    text-align: right;
     letter-spacing: 0.15em;
   }
 
@@ -538,6 +539,10 @@ div.other {
 
   div.content div.count div.table.small div.number {
     font-size: $other-header-font-size * 3 * 0.7;
+  }
+
+  div.content div.count div.table.small div.number::before {
+    content: "+ ";
   }
 
   div.content div.contact {

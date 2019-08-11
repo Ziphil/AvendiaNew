@@ -6,6 +6,7 @@
     \meta|charset="UTF-8"|>
     \meta|name="viewport",content="width=device-width,initial-scale=0.7"|>
     \script|src="file/script/jquery.js"|>
+    \script|src="file/script/12.js"|>
     \link|rel="stylesheet",type="text/css",href="style/reset.css"|>
     \link|rel="stylesheet",type="text/css",href="style/8.css"|>
     \title<Avendia>
@@ -136,13 +137,13 @@
         \div|class="count"|<
           \div|class="table"|<
             \div|class="text"|<現在の単語数>
-            \div|class="number"|<2000>
+            \div|class="number",id="whole-count"|<2000>
           >
           \div|class="table small"|<
             \div|class="text"|<1 週間前から>
-            \div|class="number"|<+ 0>
+            \div|class="number",id="week-count"|<?>
             \div|class="text"|<1 ヶ月前から>
-            \div|class="number"|<+ 0>
+            \div|class="number",id="month-count"|<?>
           >
         >
       >

@@ -1,13 +1,12 @@
 //
 
 
-const ALTERNATIVE_URL = "other/other/13.html";
+DICTIONARY_URL = "conlang/database/1.cgi"
 
-function redirect() {
-  let agent = navigator.userAgent;
-  if (agent.indexOf("iPhone") >= 0 || agent.indexOf("iPod") >= 0 || agent.indexOf("Android") >= 0) {
-    location.href = ALTERNATIVE_URL;
-  }
+function prepare() {
+  $.get(DICTIONARY_URL, {mode: "fetch", type: "1"}, (data) => {
+    $("#whole-count").text(data);
+  });
 }
 
-redirect();
+$(prepare);

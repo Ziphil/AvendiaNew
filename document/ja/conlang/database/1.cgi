@@ -105,8 +105,6 @@ class ShaleiaDictionary
         end
         name, data = candidates.to_a.sample
         output << Source.word_text(name, data)
-      when 1
-        output << whole_data.reject{|s, t| s.start_with?("META") || s.start_with?("$")}.size.to_s
       when 2
         candidates = whole_data.map do |name, data|
           result = []
@@ -120,6 +118,10 @@ class ShaleiaDictionary
         candidates = candidates.inject([]){|s, t| s + t}
         name, sentence, translation = candidates.sample
         output << Source.example_text(name, sentence, translation)
+      when 1
+        output << whole_data.reject{|s, t| s.start_with?("META") || s.start_with?("$")}.size.to_s
+      when 3
+        output << "0"
       end
     rescue => exception
       output = "◆ 内部エラーが発生しました。@Ziphil に知らせてください。"
