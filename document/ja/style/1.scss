@@ -1520,6 +1520,7 @@ article.main {
     padding: 0px $blank-padding 0px 0px;
     font-size: 80%;
     color: $border-color;
+    white-space: nowrap;
   }
 
   div.result-wrapper div.result div.explanation div.content {
