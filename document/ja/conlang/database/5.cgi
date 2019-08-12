@@ -81,8 +81,8 @@ class WholeSearcher
       new_path.gsub!(/\-(\*)$/){" *"}
       new_path.gsub!(/\-(\d+)$/){" ##{$1}"}
       html << "<div class=\"head\"><a href=\"#{path}\">#{new_path}</a></div>\n"
-      html << "<div class=\"wrapper\">\n"
-      html << "<div class=\"dammy\"></div>\n"
+      html << "<div class=\"result-wrapper\">\n"
+      html << "<div class=\"border\"></div>\n"
       html << "<div class=\"result\">\n"
       html << "<ul>\n"
       matches.each do |match|

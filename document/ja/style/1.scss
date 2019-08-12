@@ -1427,7 +1427,7 @@ article.main {
   // 検索結果
 
   div.head {
-    margin: $wide-vertical-margin 0px 0px 0px;
+    margin: $vertical-margin 0px 0px 0px;
     padding: $subsection-vertical-padding 0px 0px 0px;
     font-family: $serif-font-family;
     font-size: $subsection-font-size;
@@ -1455,31 +1455,31 @@ article.main {
     border-bottom: hidden;
   }
 
-  div.wrapper {
+  div.result-wrapper {
     margin: 0px;
     padding: 0px;
     position: relative;
     z-index: 5;
   }
 
-  div.wrapper div.dammy {
+  div.result-wrapper div.border {
     height: 100%;
     margin: 0px 0px 0px 0px;
     padding: 0px;
-    border-left: 3px $border-color double;
+    border-left: 1px $border-color solid;
     pointer-events: none;
     position: absolute;
     z-index: 2;
   }
 
-  div.wrapper div.result {
+  div.result-wrapper div.result {
     margin: 0px;
     padding: 0px 0px 0px $result-horizontal-padding;
     position: relative;
     z-index: 1;
   }
 
-  div.wrapper div.result span.box {
+  div.result-wrapper div.result span.box {
     margin: 0px $blank-padding 0px 0px;
     padding: 0px 3px;
     font-size: 80%;
@@ -1488,17 +1488,17 @@ article.main {
     border-radius: $word-box-border-radius;
   }
 
-  div.wrapper div.result span.addition::before {
+  div.result-wrapper div.result span.addition::before {
     color: $border-color;
     content: ":";
   }
 
-  div.wrapper div.result span.small {
+  div.result-wrapper div.result span.small {
     @include before-after("(", ") ");
     font-size: 80%;
   }
 
-  div.wrapper div.result span.asterisk {
+  div.result-wrapper div.result span.asterisk {
     font-size: 70%;
     color: $gray-color;
     vertical-align: baseline;
@@ -1506,19 +1506,20 @@ article.main {
     top: -0.5em;
   }
 
-  div.wrapper div.result table.explanation {
+  div.result-wrapper div.result table.explanation {
     margin: $vertical-margin 0px;
     padding: 0px;
     border: 0px;
+    white-space: normal;
   }
 
-  div.wrapper div.result table.explanation tr td {
+  div.result-wrapper div.result table.explanation tr td {
     margin: 0px;
     padding: 0px;
     text-align: justify;
   }
 
-  div.wrapper div.result table.explanation tr td:first-child {
+  div.result-wrapper div.result table.explanation tr td:first-child {
     margin: 0px;
     padding: 0px $blank-padding 0px 0px;
     font-size: 80%;
@@ -1526,7 +1527,7 @@ article.main {
     word-break: keep-all;
   }
 
-  div.wrapper div.result ul.conlang {
+  div.result-wrapper div.result ul.conlang {
     margin-left: 0px - $main-horizontal-padding - $result-horizontal-padding;
     padding-left: $main-horizontal-padding + $result-horizontal-padding;
     @include smartphone {
@@ -1535,7 +1536,7 @@ article.main {
     }
   }
 
-  div.wrapper div.result p.synonym::before {
+  div.result-wrapper div.result p.synonym::before {
     margin: 0px $blank-padding 0px 0px;
     padding: 0px;
     font-family: $list-icon-font-family;
@@ -1544,7 +1545,7 @@ article.main {
     content: "\F002";
   }
 
-  div.wrapper div.result span.match {
+  div.result-wrapper div.result span.match {
     background: $link-background-color;
   }
 

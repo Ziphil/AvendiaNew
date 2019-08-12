@@ -220,8 +220,8 @@ module Source;extend self
         has_content = true
         html << "<span class=\"date\">#{match[1]}</span><span class=\"box\">#{match[2]}</span>\n"
         html << "</div>\n"
-        html << "<div class=\"wrapper\">\n"
-        html << "<div class=\"dammy\"></div>\n"
+        html << "<div class=\"result-wrapper\">\n"
+        html << "<div class=\"border\"></div>\n"
         html << "<div class=\"result\">\n"
       end
       if match = line.match(/^\=\s*〈(.+?)〉\s*(.+)/)
