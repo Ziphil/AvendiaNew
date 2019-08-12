@@ -482,7 +482,21 @@ converter.add(["li"], ["page.ul"]) do |element|
   next this
 end
 
-converter.add(["table"], ["page"]) do |element|
+converter.add(["side"], ["page"]) do |element|
+  this = ""
+  if !element.get_elements("table").empty?
+    this << Tag.build("div", "table-wrapper") do |this|
+      this << apply(element, "page-wrapped")
+    end
+  elsif !element.get_elements("img").empty?
+    this << Tag.build("div", "img-wrapper") do |this|
+      this << apply(element, "page-wrapped")
+    end
+  end
+  next this
+end
+
+converter.add(["table"], ["page", "page-wrapped"]) do |element, scope|
   this = ""
   column_size = element.each_xpath("tr").map{|s| s.elements.size}.max
   head_column_sizes = element.each_xpath("tr").map do |row_element|
@@ -511,8 +525,13 @@ converter.add(["table"], ["page"]) do |element|
       end
     end
   end
-  this << Tag.build("div", "table-wrapper") do |this|
-    this << pass_element(element, "page.table")
+  this << pass_element(element, "page.table")
+  unless scope.include?("wrapped")
+    new_this = ""
+    new_this << Tag.build("div", "table-wrapper") do |new_this|
+      new_this << this
+    end
+    this = new_this
   end
   next this
 end

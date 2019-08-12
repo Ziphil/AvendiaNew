@@ -492,6 +492,24 @@ article.main {
     margin: $wide-vertical-margin 0px;
     padding: 0px;
     overflow: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  div.img-wrapper img {
+    margin: 0px 0px 0px $side-gap;
+  }
+
+  div.img-wrapper img:first-child {
+    margin: 0px 0px 0px auto;
+  }
+
+  div.img-wrapper img:last-child {
+    margin: 0px auto 0px $side-gap;
+  }
+
+  div.img-wrapper img:first-child:last-child {
+    margin: 0px auto;
   }
 
   img {
@@ -508,6 +526,24 @@ article.main {
     margin: $wide-vertical-margin 0px;
     padding: 0px;
     overflow: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  div.table-wrapper table {
+    margin: 0px 0px 0px $side-gap;
+  }
+
+  div.table-wrapper table:first-child {
+    margin: 0px 0px 0px auto;
+  }
+
+  div.table-wrapper table:last-child {
+    margin: 0px auto 0px $side-gap;
+  }
+
+  div.table-wrapper table:first-child:last-child {
+    margin: 0px auto;
   }
 
   table {
