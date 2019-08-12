@@ -248,6 +248,7 @@ nav.breadcrumb {
     line-height: $breadcrumb-line-height;
     color: $breadcrumb-color !important;
     text-align: right;
+    white-space: nowrap;
   }
 
   div.version.caution {
@@ -1519,7 +1520,6 @@ article.main {
     padding: 0px $blank-padding 0px 0px;
     font-size: 80%;
     color: $border-color;
-    word-break: keep-all;
   }
 
   div.result-wrapper div.result div.explanation div.content {
