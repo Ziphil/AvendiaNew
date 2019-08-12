@@ -1506,25 +1506,27 @@ article.main {
     top: -0.5em;
   }
 
-  div.result-wrapper div.result table.explanation {
+  div.result-wrapper div.result div.explanation {
     margin: $vertical-margin 0px;
     padding: 0px;
     border: 0px;
-    white-space: normal;
+    display: flex;
+    align-items: baseline;
   }
 
-  div.result-wrapper div.result table.explanation tr td {
-    margin: 0px;
-    padding: 0px;
-    text-align: justify;
-  }
-
-  div.result-wrapper div.result table.explanation tr td:first-child {
+  div.result-wrapper div.result div.explanation div.kind {
     margin: 0px;
     padding: 0px $blank-padding 0px 0px;
     font-size: 80%;
     color: $border-color;
     word-break: keep-all;
+  }
+
+  div.result-wrapper div.result div.explanation div.content {
+    margin: 0px;
+    padding: 0px;
+    line-height: $line-height;
+    text-align: justify;
   }
 
   div.result-wrapper div.result ul.conlang {

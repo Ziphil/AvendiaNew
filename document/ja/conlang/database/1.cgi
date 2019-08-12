@@ -240,12 +240,12 @@ module Source;extend self
           html << "</p>\n" 
           begin_equivalent = false
         end
-        html << "<table class=\"explanation\"><tr><td>"
+        html << "<div class=\"explanation\"><div class=\"kind\">"
         html << "語義:"
-        html << "</td>"
-        html << "<td>"
+        html << "</div>"
+        html << "<div class=\"content\">"
         html << match[1].convert_punctuation.chomp
-        html << "</td></tr></table>\n"
+        html << "</div></div>\n"
       end
       if option.include?(1) && match = line.match(/^([^MSE])>\s*(.+)/)
         if CAPTION_ALPHABETS.key?(match[1])
@@ -253,12 +253,12 @@ module Source;extend self
             html << "</p>\n" 
             begin_equivalent = false
           end
-          html << "<table class=\"explanation\"><tr><td>"
+          html << "<div class=\"explanation\"><div class=\"kind\">"
           html << CAPTION_ALPHABETS[match[1]] + ":"
-          html << "</td>"
-          html << "<td>"
+          html << "</div>"
+          html << "<div class=\"content\">"
           html << match[2].convert_punctuation.chomp
-          html << "</td></tr></table>\n"
+          html << "</div></div>\n"
         end
       end
       if option.include?(4) && match = line.match(/^E>\s*(.+)/)
@@ -266,12 +266,12 @@ module Source;extend self
           html << "</p>\n" 
           begin_equivalent = false
         end
-        html << "<table class=\"explanation\"><tr><td>"
+        html << "<div class=\"explanation\"><div class=\"kind\">"
         html << CAPTION_ALPHABETS["E"] + ":"
-        html << "</td>"
-        html << "<td>"
+        html << "</div>"
+        html << "<div class=\"content\">"
         html << match[1].convert_punctuation.chomp
-        html << "</td></tr></table>\n"
+        html << "</div></div>\n"
       end
       if option.include?(2) && match = line.match(/^S>\s*(.+)\s*→\s*(.+)/)
         if begin_equivalent
