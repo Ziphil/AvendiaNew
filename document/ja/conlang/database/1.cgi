@@ -88,7 +88,7 @@ class ShaleiaDictionary
       html << "<span class=\"right-arrow invalid\"></span>"
     end
     html << "</div>\n\n"
-    header = Source.header(@search, @mode, @type, @version, @option, @conversion)
+    header = Source.header(@search, @mode, @type, @version, @option, @conversion, @random)
     @cgi.out do
       next Source.whole(header, html)
     end
@@ -356,7 +356,7 @@ module Source;extend self
     return text
   end
 
-  def header(search = "", mode = 3, type = 0, version = 0, option = 0..4, conversion = [0])
+  def header(search = "", mode = 3, type = 0, version = 0, option = 0..4, conversion = [0], random = 0)
     html = ""
     html << "<h1>検索フォーム</h1>\n"
     html << "<form action=\"1.cgi\">\n"
@@ -398,7 +398,9 @@ module Source;extend self
     html << "<input type=\"radio\" name=\"version\" value=\"1\" id=\"radio-version-1\"#{(version == 1) ? " checked" : ""}></input>"
     html << "<label for=\"radio-version-1\">1 代 2 期</label><br>\n"
     html << "<input type=\"checkbox\" name=\"conversion\" value=\"0\" id=\"checkbox-conversion-0\"#{(conversion.include?(0)) ? " checked" : ""}></input>"
-    html << "<label for=\"checkbox-conversion-0\">正書法変換</label><br>\n"
+    html << "<label for=\"checkbox-conversion-0\">正書法変換</label>　"
+    html << "<input type=\"checkbox\" name=\"random\" value=\"1\" id=\"checkbox-random-1\"#{(random == 1) ? " checked" : ""}></input>"
+    html << "<label for=\"checkbox-random-1\">結果シャッフル</label><br>\n"
     html << "</form>\n"
     return html
   end
