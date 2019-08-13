@@ -50,7 +50,7 @@ div.top {
     color: $title-color;
     filter: $title-filter;
     @include small-smartphone {
-      font-size: $title-font-size * 0.8;
+      font-size: $title-font-size * $small-smartphone-ratio;
     }
   }
 
@@ -61,7 +61,7 @@ div.top {
     font-size: $caption-font-size;
     color: $caption-color;
     @include small-smartphone {
-      font-size: $caption-font-size * 0.8;
+      font-size: $caption-font-size * $small-smartphone-ratio;
     }
   }
 
@@ -541,14 +541,14 @@ div.other {
     text-align: right;
     filter: $small-box-filter;
     @include small-smartphone {
-      font-size: $count-font-size * 0.8;
+      font-size: $count-font-size * $small-smartphone-ratio;
     }
   }
 
   div.content div.count div.table.small div.number {
     font-size: $count-font-size * 0.7;
     @include small-smartphone {
-      font-size: $count-font-size * 0.7 * 0.8;
+      font-size: $count-font-size * $small-smartphone-ratio * 0.7;
     }
   }
 
