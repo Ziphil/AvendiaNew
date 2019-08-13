@@ -388,8 +388,8 @@ div.introduction {
     }
     @include smartphone {
       margin-top: 50px;
-      margin-left: $main-horizontal-padding;
-      margin-right: $main-horizontal-padding;
+      margin-left: $main-horizontal-padding / 2;
+      margin-right: $main-horizontal-padding / 2;
       padding-left: 50px;
       padding-right: 50px;
       border-radius: $sample-border-radius;
@@ -540,10 +540,16 @@ div.other {
     color: $introduction-background-color;
     text-align: right;
     filter: $small-box-filter;
+    @include small-smartphone {
+      font-size: $count-font-size * 0.8;
+    }
   }
 
   div.content div.count div.table.small div.number {
     font-size: $count-font-size * 0.7;
+    @include small-smartphone {
+      font-size: $count-font-size * 0.7 * 0.8;
+    }
   }
 
   div.content div.count div.table.small div.number::before {
