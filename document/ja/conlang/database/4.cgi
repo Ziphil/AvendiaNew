@@ -112,13 +112,13 @@ class DictionaryDownloader
     html << "<p>\n"
     html << "エラーが発生しました。\n"
     html << "</p>\n"
-    html << "<table class=\"code\">\n"
+    html << "<div class=\"code-wrapper\"><div class=\"code-inner-wrapper\"><table class=\"code\">\n"
     message.gsub(/^(\s*)(.+)\.(rb|cgi):/){"#{$1}****.#{$3}:"}.each_line do |line|
       html << "<tr><td>"
       html << line.rstrip.html_escape
       html << "</td></tr>\b"
     end
-    html << "</table>\n"
+    html << "</table></div></div>\n"
     html.gsub!("\b", "")
     header = Source.header
     @cgi.out do
