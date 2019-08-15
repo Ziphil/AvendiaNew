@@ -1,0 +1,24 @@
+﻿\zml?|version="1.0"|>
+\xml?|version="1.0",encoding="UTF-8"|>
+
+\page<
+  \name<進行中のプロジェクト一覧>
+  \ver<>
+
+  \h1<進行中のプロジェクト一覧>
+  \p<
+    シャレイア語関連で、進行中もしくは構想中のプロジェクトの一覧です。
+    進行度は \h<2762> 時点のものです。
+  >
+  \table<
+    \tr<\th<名称>\th<進行度>\th<完了予定日>\th<ページ>>
+    \tr<\td<造語>\td<常時>\td<常時>\td<>>
+    \tr<\td<オリジナル小説『{e xádis i zál}』の執筆>\td<60 %>\td<2020 年 1 月>\td<>>
+    \tr<\td<書籍『破門シャレイア語』の執筆>\td<7 項目>\td<未定>\td<\a|href="../course/28.html"|<ページ>>>
+    \tr<\td<『Alice's Adventures in Wonderland』の翻訳>\td<第 1 章まで>\td<未定>\td<\a|href="../translation/44.html"|<ページ>>>
+    \tr<\td<カデグ体ベースのフォントの作成>\td<未着手>\td<未定>\td<\a|href="../database/7.html"|<ページ>>>
+    \tr<\td<シャレイア語検定の作成>\td<構想段階>\td<未定>\td<>>
+    \tr<\td<音声資料の作成>\td<構想段階>\td<未定>\td<>>
+  >
+
+>
