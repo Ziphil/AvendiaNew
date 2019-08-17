@@ -33,7 +33,7 @@ converter.add(nil, ["page.gloss"]) do |text|
     next_sibling = text.next_sibling
     if previous_sibling.is_a?(Element) && previous_sibling.attribute("punc")&.value =~ /(\(|\[|«|“)$/
       string = ""
-    elsif next_sibling.is_a?(Element) && next_sibling.attribute("punc")&.value =~ /^(\)|\.|,|!|\?)/
+    elsif next_sibling.is_a?(Element) && next_sibling.attribute("punc")&.value =~ /^(\)|\.|,|:|;|!|\?)/
       string = ""
     else
       string = text.to_s
