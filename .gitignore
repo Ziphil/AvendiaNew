@@ -4,5 +4,6 @@ config
 log
 *.code-workspace
 .vscode
+tsconfig.json
 desktop.ini
 Thumbs.db
