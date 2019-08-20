@@ -129,7 +129,7 @@ class Executor {
     let files = document.querySelector<HTMLInputElement>("#file")!.files || new FileList();
     for (let file of files) {
       let reader = new FileReader();
-      reader.onload = (event) => {
+      reader.addEventListener("load", (event) => {
         let result = reader.result;
         if (typeof result == "string") {
           manager.append(result);
@@ -139,7 +139,7 @@ class Executor {
         } else {
           alert("テキストデータではありません。");
         }
-      };
+      });
       reader.readAsText(file);
     }
     this.manager = manager;
