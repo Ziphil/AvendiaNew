@@ -253,6 +253,11 @@ class WholeAvendiaConverter
       output_path = modify_extension(output_path)
       FileUtils.mkdir_p(File.dirname(output_path))
       Kernel.system("sass --style=compressed --cache-location='#{OUTPUT_PATHS[language]}/.sass-cache' '#{path}':'#{output_path}'")
+    when "ts"
+      output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
+      output_path = modify_extension(output_path)
+      FileUtils.mkdir_p(File.dirname(output_path))
+      Kernel.system("tsc --strictNullChecks --noImplicitAny -t ES6 #{path} --outFile #{output_path}")
     when "css", "rb", "cgi", "js"
       output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
       FileUtils.mkdir_p(File.dirname(output_path))
@@ -376,6 +381,7 @@ class WholeAvendiaConverter
     result = path.clone
     result.gsub!(/\.zml$/, ".html")
     result.gsub!(/\.scss$/, ".css")
+    result.gsub!(/\.ts$/, ".js")
     return result
   end
 
