@@ -325,7 +325,7 @@ class Executor {
     if (document.querySelector<HTMLInputElement>("#show-list")!.checked) {
       document.querySelector("#list-wrapper")!.setAttribute("class", "list shown");
     } else {
-      document.querySelector("##list-wrapper")!.setAttribute("class", "list");
+      document.querySelector("#list-wrapper")!.setAttribute("class", "list");
     }
   }
 
