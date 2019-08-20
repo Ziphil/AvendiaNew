@@ -1,30 +1,49 @@
-//
+/// <reference path="C:/Users/Ziphil/AppData/Roaming/npm/node_modules/@types/jquery/index.d.ts"/>
 
 
 const DICTIONARY_URL = "https://en.oxforddictionaries.com/definition/";
-const PRONUNCIATION_REGEXP = /&lt;span class="phoneticspelling"&gt;(.+)&lt;\/span&gt;/;
+const PRONUNCIATION_REGEXP = "&lt;span class=\"phoneticspelling\"&gt;(.+)&lt;\/span&gt;";
+
+type WordMark = 0 | 1 | null;
+
+
+class WordEntry {
+
+  english: string;
+  japanese: string;
+  mark: WordMark;
+
+  constructor(english: string, japanese: string) {
+    this.english = english;
+    this.japanese = japanese;
+    this.mark = null;
+  }
+
+}
 
 
 class WordManager {
+
+  entries: WordEntry[];
 
   constructor() {
     this.entries = [];
   }
 
-  append(text) {
+  append(text: string): void {
     let splitText = text.split(/\r\n|\r|\n/);
     for (let i = 0 ; i < splitText.length ; i ++) {
       let line = splitText[i];
-      let match;
-      if ((match = line.match(/^\s*(.+?)\s*,\s*(.+)\s*$/m)) != null) {
-        let entry = {english: match[1], japanese: match[2], mark: null};
+      let match = line.match(/^\s*(.+?)\s*,\s*(.+)\s*$/m);
+      if (match != null) {
+        let entry = new WordEntry(match[1], match[2]);
         this.entries.push(entry);
       }
     }
     this.shuffle();
   }
   
-  shuffle() {
+  shuffle(): void {
     let entries = this.entries;
     for (let i = entries.length - 1 ; i > 0 ; i --) {
       let j = Math.floor(Math.random() * (i + 1));
@@ -34,11 +53,11 @@ class WordManager {
     }
   }
 
-  get(index) {
+  get(index: number): WordEntry {
     return this.entries[index];
   }
 
-  get length() {
+  get length(): number {
     return this.entries.length;
   }
 
@@ -47,12 +66,16 @@ class WordManager {
 
 class Executor {
 
+  manager: WordManager;
+  request: any;
+  count: number;
+
   constructor() {
-    this.manager = new WordManager("");
+    this.manager = new WordManager();
     this.count = 0;
   }
 
-  prepare() {
+  prepare(): void {
     $(document).on("keydown", (event) => {
       if (event.keyCode == 39) {
         let amount = (event.shiftKey) ? 2 : 1;
@@ -70,7 +93,8 @@ class Executor {
       }
     });
     $("input[name=\"mode\"]:radio").change((event) => {
-      let mode = parseInt($(event.target).val());
+      let modeString = $(event.target).val();
+      let mode = (typeof modeString == "string") ? parseInt(modeString) : 0;
       let arrowDiv = $("#arrow");
       if (mode == 0) {
         arrowDiv.css("margin", "0px auto -5px auto");
@@ -91,23 +115,29 @@ class Executor {
     });
   }
 
-  upload() {
+  upload(): void {
     let manager = new WordManager();
-    let files = $("#file")[0].files;
+    let fileElement = <HTMLInputElement>$("#file")[0];
+    let files = fileElement.files || new FileList();
     for (let file of files) {
       let reader = new FileReader();
       reader.onload = (event) => {
-        manager.append(reader.result);
-        this.updateMain();
-        this.updateMark();
-        this.createList();
+        let result = reader.result;
+        if (typeof result == "string") {
+          manager.append(result);
+          this.updateMain(true);
+          this.updateMark();
+          this.createList();
+        } else {
+          alert("テキストデータではありません。");
+        }
       };
       reader.readAsText(file);
     }
     this.manager = manager;
   }
 
-  createList() {
+  createList(): void {
     let manager = this.manager;
     let table = $("#list");
     table.empty();
@@ -130,11 +160,12 @@ class Executor {
     }
   }
 
-  updateMain(increment) {
+  updateMain(increment: boolean): void {
     let manager = this.manager;
     let index = this.index;
     let status = (this.count + 1) % 2;
-    let mode = parseInt($("input[name=\"mode\"]:checked").val());
+    let modeString = $("input[name=\"mode\"]:checked").val();
+    let mode = (typeof modeString == "string") ? parseInt(modeString) : 0;
     let entry = manager.get(index);
     if (entry) {
       if (status == 0) {
@@ -160,7 +191,7 @@ class Executor {
     $("#denominator").text(manager.length);
   }
 
-  updateMark() {
+  updateMark(): void {
     let manager = this.manager;
     let index = this.index;
     let entry = manager.get(index);
@@ -182,7 +213,7 @@ class Executor {
     }
   }
 
-  updateList(index) {
+  updateList(index: number): void {
     let manager = this.manager;
     let entry = manager.get(index);
     if (entry) {
@@ -205,7 +236,7 @@ class Executor {
     }
   }
 
-  previous(amount = 1) {
+  previous(amount: number = 1): void {
     if (this.count > 0) {
       this.count -= amount;
       if (this.count <= 0) {
@@ -218,7 +249,7 @@ class Executor {
     }
   }
 
-  next(amount = 1) {
+  next(amount: number = 1): void {
     if (this.count < this.manager.length * 2) {
       this.count += amount;
       if (this.count >= this.manager.length * 2) {
@@ -231,7 +262,7 @@ class Executor {
     }
   }
 
-  jump(count) {
+  jump(count: number): void {
     if (count >= 0 && count <= this.manager.length * 2) {
       this.count = count;
       this.updateMain(false);
@@ -241,7 +272,7 @@ class Executor {
     }
   }
 
-  reset() {
+  reset(): void {
     let result = confirm("リセットしますか?");
     if (result) {
       this.count = 0;
@@ -252,7 +283,7 @@ class Executor {
     }
   }
 
-  mark(mark) {
+  mark(mark: WordMark): void {
     let manager = this.manager;
     let index = this.index;
     let entry = manager.get(index);
@@ -262,9 +293,11 @@ class Executor {
       this.updateList(index);
       if ($("#enable-sound").prop("checked")) {
         if (mark == 0) {
-          $("#correct-sound")[0].play();
+          let element = <HTMLMediaElement>$("#correct-sound")[0];
+          element.play();
         } else if (mark == 1) {
-          $("#wrong-sound")[0].play();
+          let element = <HTMLMediaElement>$("#wrong-sound")[0];
+          element.play();
         }
       }
     } else {
@@ -272,7 +305,7 @@ class Executor {
     }
   }
 
-  toggleList() {
+  toggleList(): void {
     if ($("#show-list").prop("checked")) {
       $("#list-wrapper").attr("class", "list shown");
     } else {
@@ -280,7 +313,7 @@ class Executor {
     }
   }
 
-  fetchPronunciations(word, tag) {
+  fetchPronunciations(word: string, tag: JQuery<HTMLElement>): void {
     let previousRequest = this.request;
     if (previousRequest) {
       previousRequest.abort();
@@ -289,8 +322,8 @@ class Executor {
     let request = $.get(url, (data) => {
       let html = data.responseText;
       let regexp = new RegExp(PRONUNCIATION_REGEXP, "g");
-      let pronunciations = [];
-      let match;
+      let pronunciations = <string[]>[];
+      let match = <RegExpExecArray | null>null;
       while ((match = regexp.exec(html)) != null) {
         pronunciations.push(match[1]);
       }
@@ -306,7 +339,7 @@ class Executor {
     this.request = request;
   }
 
-  get index() {
+  get index(): number {
     return Math.floor((this.count + 1) / 2) - 1;
   }
 
