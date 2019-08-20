@@ -1,4 +1,4 @@
-/// <reference path="C:/Users/Ziphil/AppData/Roaming/npm/node_modules/@types/jquery/index.d.ts"/>
+//
 
 
 const DICTIONARY_URL = "https://en.oxforddictionaries.com/definition/";
@@ -67,16 +67,22 @@ class WordManager {
 class Executor {
 
   manager: WordManager;
-  request: any;
+  request: XMLHttpRequest | null;
   count: number;
 
   constructor() {
     this.manager = new WordManager();
+    this.request = null;
     this.count = 0;
   }
 
-  prepare(): void {
-    $(document).on("keydown", (event) => {
+  prepare() {
+    this.prepareDocument();
+    this.prepareElements();
+  }
+
+  prepareDocument(): void {
+    document.addEventListener("keydown", (event) => {
       if (event.keyCode == 39) {
         let amount = (event.shiftKey) ? 2 : 1;
         this.next(amount);
@@ -92,33 +98,35 @@ class Executor {
         this.mark(null);
       }
     });
-    $("input[name=\"mode\"]:radio").change((event) => {
-      let modeString = $(event.target).val();
-      let mode = (typeof modeString == "string") ? parseInt(modeString) : 0;
-      let arrowDiv = $("#arrow");
+  }
+
+  prepareElements(): void {
+    document.querySelector("input[name=\"mode\"]")!.addEventListener("change", (event) => {
+      let target = <HTMLInputElement>event.target;
+      let mode = parseInt(target.value);
+      let arrowDiv = document.querySelector<HTMLElement>("#arrow")!;
       if (mode == 0) {
-        arrowDiv.css("margin", "0px auto -5px auto");
-        arrowDiv.css("border-top", "30px hsl(240, 60%, 60%) solid");
-        arrowDiv.css("border-right", "50px transparent solid");
-        arrowDiv.css("border-bottom", "30px transparent solid");
-        arrowDiv.css("border-left", "50px transparent solid");
+        arrowDiv.style.margin = "0px auto -5px auto";
+        arrowDiv.style.borderTop = "30px hsl(240, 60%, 60%) solid";
+        arrowDiv.style.borderRight = "50px transparent solid";
+        arrowDiv.style.borderBottom = "30px transparent solid";
+        arrowDiv.style.borderLeft = "50px transparent solid";
       } else {
-        arrowDiv.css("margin", "-30px auto 25px auto");
-        arrowDiv.css("border-top", "30px transparent solid");
-        arrowDiv.css("border-right", "50px transparent solid");
-        arrowDiv.css("border-bottom", "30px hsl(240, 60%, 60%) solid");
-        arrowDiv.css("border-left", "50px transparent solid");
+        arrowDiv.style.margin = "-30px auto 25px auto";
+        arrowDiv.style.borderTop = "30px transparent solid";
+        arrowDiv.style.borderRight = "50px transparent solid";
+        arrowDiv.style.borderBottom = "30px hsl(240, 60%, 60%) solid";
+        arrowDiv.style.borderLeft = "50px transparent solid";
       }
     });
-    $("#show-list").change((event) => {
+    document.querySelector("#show-list")!.addEventListener("change", (event) => {
       this.toggleList();
     });
   }
 
   upload(): void {
     let manager = new WordManager();
-    let fileElement = <HTMLInputElement>$("#file")[0];
-    let files = fileElement.files || new FileList();
+    let files = document.querySelector<HTMLInputElement>("#file")!.files || new FileList();
     for (let file of files) {
       let reader = new FileReader();
       reader.onload = (event) => {
@@ -139,21 +147,25 @@ class Executor {
 
   createList(): void {
     let manager = this.manager;
-    let table = $("#list");
-    table.empty();
+    let table = document.querySelector("#list")!;
+    table.textContent = null;
     for (let i = 0 ; i < manager.length ; i ++) {
       let entry = manager.get(i);
-      let tr = $("<tr>").attr("id", "entry-" + i);
-      let numberTd = $("<td>").attr("class", "number").text(i + 1);
-      let markTd = $("<td>").attr("class", "mark");
-      let textTd = $("<td>").attr("class", "text").text(entry.english);
-      tr.on("click", (event) => {
+      let tr = document.createElement("tr");
+      let numberTd = document.createElement("td");
+      let markTd = document.createElement("td");
+      let textTd = document.createElement("td");
+      tr.setAttribute("id", "entry-" + i);
+      numberTd.setAttribute("class", "number");
+      numberTd.textContent = (i + 1).toString();
+      markTd.setAttribute("class", "mark");
+      textTd.setAttribute("class", "text");
+      textTd.textContent = entry.english;
+      tr.addEventListener("click", (event) => {
         this.jump(i * 2 + 1);
       });
-      tr.append(numberTd);
-      tr.append(markTd);
-      tr.append(textTd);
-      table.append(tr);
+      tr.append(numberTd, markTd, textTd);
+      table.appendChild(tr);
     }
     for (let i = 0 ; i < manager.length ; i ++) {
       this.updateList(i);
@@ -164,52 +176,58 @@ class Executor {
     let manager = this.manager;
     let index = this.index;
     let status = (this.count + 1) % 2;
-    let modeString = $("input[name=\"mode\"]:checked").val();
-    let mode = (typeof modeString == "string") ? parseInt(modeString) : 0;
+    let mode = parseInt(document.querySelector<HTMLInputElement>("input[name=\"mode\"]")!.value);
     let entry = manager.get(index);
+    let englishDiv = document.querySelector("#english")!;
+    let japaneseDiv = document.querySelector("#japanese")!;
+    let pronunciationDiv = document.querySelector("#pronunciation")!;
     if (entry) {
       if (status == 0) {
         if (mode == 0) {
-          $("#english").text(entry.english);
-          $("#japanese").text("");
-          $("#pronunciation").text("　");
+          englishDiv.textContent = entry.english;
+          japaneseDiv.textContent = "";
+          pronunciationDiv.textContent = "　";
         } else {
-          $("#english").text("");
-          $("#japanese").text(entry.japanese);
-          $("#pronunciation").text("");
+          englishDiv.textContent = "";
+          japaneseDiv.textContent = entry.japanese;
+          pronunciationDiv.textContent = "";
         }
       } else {
-        $("#english").text(entry.english);
-        $("#japanese").text(entry.japanese);
-        $("#pronunciation").text("　");
+        englishDiv.textContent = entry.english;
+        japaneseDiv.textContent = entry.japanese;
+        pronunciationDiv.textContent = "　";
       }
     } else {
-      $("#english").text("");
-      $("#japanese").text("");
+      englishDiv.textContent = "";
+      japaneseDiv.textContent = "";
     }
-    $("#numerator").text(index + 1);
-    $("#denominator").text(manager.length);
+    let numeratorDiv = document.querySelector("#numerator")!;
+    let denominatorDiv = document.querySelector("#denominator")!;
+    numeratorDiv.textContent = (index + 1).toString();
+    denominatorDiv.textContent = manager.length.toString();
   }
 
   updateMark(): void {
     let manager = this.manager;
     let index = this.index;
     let entry = manager.get(index);
+    let correctDiv = document.querySelector<HTMLElement>("#correct-mark")!;
+    let wrongDiv = document.querySelector<HTMLElement>("#wrong-mark")!;
     if (entry) {
       let mark = entry.mark;
       if (mark == 0) {
-        $("#correct-mark").show();
-        $("#wrong-mark").hide();
+        correctDiv.style.display = "inline";
+        wrongDiv.style.display = "none";
       } else if (mark == 1) {
-        $("#correct-mark").hide();
-        $("#wrong-mark").show();
+        correctDiv.style.display = "none";
+        wrongDiv.style.display = "inline";
       } else {
-        $("#correct-mark").hide();
-        $("#wrong-mark").hide();
+        correctDiv.style.display = "none";
+        wrongDiv.style.display = "none";
       }
     } else {
-      $("#correct-mark").hide();
-      $("#wrong-mark").hide();
+      correctDiv.style.display = "none";
+      wrongDiv.style.display = "none";
     }
   }
 
@@ -218,20 +236,20 @@ class Executor {
     let entry = manager.get(index);
     if (entry) {
       let mark = entry.mark;
-      let markTd = $("#entry-" + index + " .mark");
-      let textTd = $("#entry-" + index + " .text");
+      let markTd = document.querySelector("#entry-" + index + " .mark")!;
+      let textTd = document.querySelector("#entry-" + index + " .text")!;
       if (mark == 0) {
-        markTd.text("\uF009");
-        markTd.attr("class", "mark correct");
-        textTd.attr("class", "text correct");
+        markTd.textContent = "\uF009";
+        markTd.setAttribute("class", "mark correct");
+        textTd.setAttribute("class", "text correct");
       } else if (mark == 1) {
-        markTd.text("\uF00A");
-        markTd.attr("class", "mark wrong");
-        textTd.attr("class", "text wrong");
+        markTd.textContent = "\uF00A";
+        markTd.setAttribute("class", "mark wrong");
+        textTd.setAttribute("class", "text wrong");
       } else {
-        markTd.text("");
-        markTd.attr("class", "mark");
-        textTd.attr("class", "text");
+        markTd.textContent = "";
+        markTd.setAttribute("class", "mark");
+        textTd.setAttribute("class", "text");
       }
     }
   }
@@ -291,13 +309,11 @@ class Executor {
       entry.mark = mark;
       this.updateMark();
       this.updateList(index);
-      if ($("#enable-sound").prop("checked")) {
+      if (document.querySelector<HTMLInputElement>("#enable-sound")!.checked) {
         if (mark == 0) {
-          let element = <HTMLMediaElement>$("#correct-sound")[0];
-          element.play();
+          document.querySelector<HTMLMediaElement>("#correct-sound")!.play();
         } else if (mark == 1) {
-          let element = <HTMLMediaElement>$("#wrong-sound")[0];
-          element.play();
+          document.querySelector<HTMLMediaElement>("#wrong-sound")!.play();
         }
       }
     } else {
@@ -306,34 +322,39 @@ class Executor {
   }
 
   toggleList(): void {
-    if ($("#show-list").prop("checked")) {
-      $("#list-wrapper").attr("class", "list shown");
+    if (document.querySelector<HTMLInputElement>("#show-list")!.checked) {
+      document.querySelector("#list-wrapper")!.setAttribute("class", "list shown");
     } else {
-      $("#list-wrapper").attr("class", "list");
+      document.querySelector("##list-wrapper")!.setAttribute("class", "list");
     }
   }
 
-  fetchPronunciations(word: string, tag: JQuery<HTMLElement>): void {
+  fetchPronunciations(word: string, tag: HTMLElement): void {
     let previousRequest = this.request;
     if (previousRequest) {
       previousRequest.abort();
     }
     let url = DICTIONARY_URL + word;
-    let request = $.get(url, (data) => {
-      let html = data.responseText;
-      let regexp = new RegExp(PRONUNCIATION_REGEXP, "g");
-      let pronunciations = <string[]>[];
-      let match = <RegExpExecArray | null>null;
-      while ((match = regexp.exec(html)) != null) {
-        pronunciations.push(match[1]);
-      }
-      if (pronunciations.length > 0) {
-        pronunciations = pronunciations.filter((pronunciation, index, self) => {
-          return self.indexOf(pronunciation) == index;
-        });
-        tag.text(pronunciations.join(", "));
-      } else {
-        tag.text("?");
+    let request = new XMLHttpRequest();
+    request.open("GET", url, true);
+    request.send(null);
+    request.addEventListener("readystatechange", (event) => {
+      if (request.readyState == 4 && request.status == 200) {
+        let html = request.responseText;
+        let regexp = new RegExp(PRONUNCIATION_REGEXP, "g");
+        let pronunciations = <string[]>[];
+        let match = <RegExpExecArray | null>null;
+        while ((match = regexp.exec(html)) != null) {
+          pronunciations.push(match[1]);
+        }
+        if (pronunciations.length > 0) {
+          pronunciations = pronunciations.filter((pronunciation, index, self) => {
+            return self.indexOf(pronunciation) == index;
+          });
+          tag.textContent = pronunciations.join(", ");
+        } else {
+          tag.textContent = "?";
+        }
       }
     });
     this.request = request;
@@ -347,6 +368,6 @@ class Executor {
 
 
 let executor = new Executor();
-$(() => {
+window.addEventListener("load", () => {
   executor.prepare();
 });
