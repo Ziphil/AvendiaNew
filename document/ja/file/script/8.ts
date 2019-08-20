@@ -53,7 +53,7 @@ class WordManager {
     }
   }
 
-  get(index: number): WordEntry {
+  get(index: number): WordEntry | undefined {
     return this.entries[index];
   }
 
@@ -150,7 +150,7 @@ class Executor {
     let table = document.querySelector("#list")!;
     table.textContent = null;
     for (let i = 0 ; i < manager.length ; i ++) {
-      let entry = manager.get(i);
+      let entry = manager.get(i)!;
       let tr = document.createElement("tr");
       let numberTd = document.createElement("td");
       let markTd = document.createElement("td");
