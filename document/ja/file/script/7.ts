@@ -436,7 +436,7 @@ export class ChartRenderer {
     context.font = ChartRenderer.getStyleValue(".chart-date", "font")!;
     context.textAlign = "left";
     context.textBaseline = "alphabetic";
-    context.fillText(TagFactory.createDateString(entries[index].date), CHART_OFFSET_LEFT + 10, CHART_OFFSET_TOP - 10);
+    context.fillText(ElementFactory.createDateString(entries[index].date), CHART_OFFSET_LEFT + 10, CHART_OFFSET_TOP - 10);
     if (index == entries.length - 1) {
       context.font = ChartRenderer.getStyleValue(".chart-message", "font")!;
       context.textAlign = "left";
@@ -458,7 +458,7 @@ export class ChartRenderer {
 }
 
 
-export class TagFactory {
+export class ElementFactory {
 
   history: History;
 
@@ -475,7 +475,7 @@ export class TagFactory {
     let table = document.createElement("table");
     for (let i = 0 ; i < entries.length ; i ++) {
       let tr = document.createElement("tr");
-      let dateString = TagFactory.createDateString(entries[i].date);
+      let dateString = ElementFactory.createDateString(entries[i].date);
       let scoreString = entries[i].score.toFixed(1);
       let previousRating = (i > 0) ? entries[i - 1].rating : 0;
       let rating = entries[i].rating;
@@ -484,13 +484,13 @@ export class TagFactory {
       let previousRatingString = (i > 0) ? previousRating.toFixed(DIGIT_SIZE) : "";
       let ratingString = rating.toFixed(DIGIT_SIZE);
       let differenceString = differenceSign + difference.toFixed(DIGIT_SIZE);
-      tr.appendChild(TagFactory.createTd((i + 1).toString(), "number"));
-      tr.appendChild(TagFactory.createTd(dateString, "date"));
-      tr.appendChild(TagFactory.createTd(scoreString, "score"));
-      tr.appendChild(TagFactory.createTd(previousRatingString, "previous-rating", previousRating));
-      tr.appendChild(TagFactory.createTd("\uF003", "arrow"));
-      tr.appendChild(TagFactory.createTd(ratingString, "rating", rating));
-      tr.appendChild(TagFactory.createTd(differenceString, "difference"));
+      tr.appendChild(ElementFactory.createTd((i + 1).toString(), "number"));
+      tr.appendChild(ElementFactory.createTd(dateString, "date"));
+      tr.appendChild(ElementFactory.createTd(scoreString, "score"));
+      tr.appendChild(ElementFactory.createTd(previousRatingString, "previous-rating", previousRating));
+      tr.appendChild(ElementFactory.createTd("\uF003", "arrow"));
+      tr.appendChild(ElementFactory.createTd(ratingString, "rating", rating));
+      tr.appendChild(ElementFactory.createTd(differenceString, "difference"));
       table.insertBefore(tr, table.firstChild);
     }
     return table;
@@ -522,13 +522,13 @@ export class Executor {
   context: CanvasRenderingContext2D | null;
   history: History;
   renderer: ChartRenderer | null;
-  factory: TagFactory;
+  factory: ElementFactory;
 
   constructor() {
     this.context = null;
     this.history = new History();
     this.renderer = null;
-    this.factory = new TagFactory();
+    this.factory = new ElementFactory();
   }
 
   getItem(keys: string[]): string | undefined {
@@ -616,7 +616,7 @@ export class Executor {
     this.context = document.querySelector<HTMLCanvasElement>("#canvas")!.getContext("2d")!;
     this.history = new History();
     this.renderer = new ChartRenderer(this.context);
-    this.factory = new TagFactory();
+    this.factory = new ElementFactory();
     this.prepareForms();
   }
 

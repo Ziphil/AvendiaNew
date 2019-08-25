@@ -329,7 +329,7 @@ export class Executor {
     }
   }
 
-  fetchPronunciations(word: string, tag: HTMLElement): void {
+  fetchPronunciations(word: string, element: HTMLElement): void {
     let previousRequest = this.request;
     if (previousRequest) {
       previousRequest.abort();
@@ -351,9 +351,9 @@ export class Executor {
           pronunciations = pronunciations.filter((pronunciation, index, self) => {
             return self.indexOf(pronunciation) == index;
           });
-          tag.textContent = pronunciations.join(", ");
+          element.textContent = pronunciations.join(", ");
         } else {
-          tag.textContent = "?";
+          element.textContent = "?";
         }
       }
     });
