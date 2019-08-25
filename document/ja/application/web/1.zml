@@ -4,8 +4,7 @@
 \html|lang="ja"|<
   \head<
     \meta|charset="UTF-8"|>
-    \script|src="../../file/script/jquery.js"|>
-    \script|src="../../file/script/cookie.js"|>
+    \script<let exports = `{`};>
     \script|src="../../file/script/7.js"|>
     \link|rel="stylesheet",type="text/css",href="../../style/reset.css"|>
     \link|rel="stylesheet",type="text/css",href="../../style/4.css"|>
