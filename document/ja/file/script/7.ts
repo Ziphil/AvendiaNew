@@ -323,7 +323,7 @@ export class ChartRenderer {
       let y = (i < COLOR_SIZE - 1) ? history.y(COLOR_SPAN * (i + 1)) : CHART_OFFSET_TOP;
       let height = (i < COLOR_SIZE - 1) ? history.y(COLOR_SPAN * i) - history.y(COLOR_SPAN * (i + 1)) + 20 : CHART_HEIGHT;
       let gapWidth = CHART_GAP_WIDTH;
-      context.fillStyle = document.querySelector<HTMLElement>(".background-" + i)!.style.color!;
+      context.fillStyle = ChartRenderer.getStyleValue(".background-" + i, "color")!;
       context.beginPath();
       context.rect(CHART_OFFSET_LEFT, Math.floor(y), CHART_WIDTH, height);
       context.fill();
@@ -356,7 +356,7 @@ export class ChartRenderer {
     let context = this.context;
     let entries = this.history.entries;
     for (let i = 1 ; i < entries.length ; i ++) {
-      context.strokeStyle = document.querySelector<HTMLElement>(".chart-line")!.style.color!;
+      context.strokeStyle = ChartRenderer.getStyleValue(".chart-line", "color")!;
       context.lineWidth = CHART_LINE_WIDTH;
       context.beginPath();
       context.moveTo(entries[i - 1].x, entries[i - 1].y);
@@ -375,7 +375,7 @@ export class ChartRenderer {
       if (elapsedTime < PARTICLE_LIFE) {
         let radius = elapsedTime / PARTICLE_LIFE * (PARTICLE_MAX_RADIUS - LARGE_MARKER_SIZE) + LARGE_MARKER_SIZE;
         let alpha = 1 - elapsedTime / PARTICLE_LIFE;
-        context.strokeStyle = document.querySelector<HTMLElement>(".marker-" + History.colorIndex(entry.rating))!.style.color!;
+        context.strokeStyle = ChartRenderer.getStyleValue(".marker-" + History.colorIndex(entry.rating), "color")!;
         context.lineWidth = PARTICLE_LINE_WIDTH;
         context.globalAlpha = alpha;
         context.beginPath();
@@ -397,11 +397,11 @@ export class ChartRenderer {
       let rating = entries[i].rating;
       let radius = (i == this.nearestIndex) ? LARGE_MARKER_SIZE : MARKER_SIZE;
       let borderWidth = MARKER_BORDER_WIDTH;
-      context.fillStyle = document.querySelector<HTMLElement>(".chart-line")!.style.color!;
+      context.fillStyle = ChartRenderer.getStyleValue(".chart-line", "color")!;
       context.beginPath();
       context.arc(entries[i].x, entries[i].y, radius + 1, 0, Math.PI * 2, false);
       context.fill();
-      context.fillStyle = document.querySelector<HTMLElement>(".marker-" + History.colorIndex(rating))!.style.color!;
+      context.fillStyle = ChartRenderer.getStyleValue(".marker-" + History.colorIndex(rating), "color")!;
       context.beginPath();
       context.arc(entries[i].x, entries[i].y, radius, 0, Math.PI * 2, false);
       context.fill();
@@ -414,7 +414,7 @@ export class ChartRenderer {
     for (let i = 0 ; i < COLOR_SIZE - 1 ; i ++) {
       let y = history.y(COLOR_SPAN * (i + 1));
       if (y < CHART_OFFSET_TOP + CHART_HEIGHT && y > CHART_OFFSET_TOP) {
-        context.font = document.querySelector<HTMLElement>(".chart-axis")!.style.font!;
+        context.font = ChartRenderer.getStyleValue(".chart-axis", "font")!;
         context.textAlign = "right";
         context.textBaseline = "middle";
         context.fillStyle = "black";
@@ -428,20 +428,30 @@ export class ChartRenderer {
     let entries = this.history.entries;
     let index = this.nearestIndex;
     let rating = entries[index].rating;
-    context.font = document.querySelector<HTMLElement>(".chart-rating")!.style.font!;
+    context.font = ChartRenderer.getStyleValue(".chart-rating", "font")!;
     context.textAlign = "right";
     context.textBaseline = "alphabetic";
-    context.fillStyle = document.querySelector<HTMLElement>(".marker-" + History.colorIndex(rating))!.style.color!;
+    context.fillStyle = ChartRenderer.getStyleValue(".marker-" + History.colorIndex(rating), "color")!;
     context.fillText(rating.toFixed(DIGIT_SIZE), CHART_OFFSET_LEFT + CHART_WIDTH - 10, CHART_OFFSET_TOP - 10);
-    context.font = document.querySelector<HTMLElement>(".chart-date")!.style.font!;
+    context.font = ChartRenderer.getStyleValue(".chart-date", "font")!;
     context.textAlign = "left";
     context.textBaseline = "alphabetic";
     context.fillText(TagFactory.createDateString(entries[index].date), CHART_OFFSET_LEFT + 10, CHART_OFFSET_TOP - 10);
     if (index == entries.length - 1) {
-      context.font = document.querySelector<HTMLElement>(".chart-message")!.style.font!;
+      context.font = ChartRenderer.getStyleValue(".chart-message", "font")!;
       context.textAlign = "left";
       context.textBaseline = "alphabetic";
       context.fillText("Latest", CHART_OFFSET_LEFT + 10, CHART_OFFSET_TOP - 30);
+    }
+  }
+
+  static getStyleValue(query: string, property: string): string | null {
+    let element = document.querySelector<HTMLElement>(query);
+    if (element != null) {
+      let value = window.getComputedStyle(element).getPropertyValue(property);
+      return value;
+    } else {
+      return null;
     }
   }
 
