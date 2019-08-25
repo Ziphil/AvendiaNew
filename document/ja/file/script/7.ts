@@ -665,10 +665,10 @@ export class Executor {
           href += "&hashtags=" + TWITTER_HASHTAG;
           let twitterRequest = new XMLHttpRequest();
           let twitterUrl = INTERFACE_URL
-          let data = {mode: "save", content: input, number: number}
+          let data = "mode=save&number=" + number + "&content=" + encodeURIComponent(input);
           twitterRequest.open("POST", twitterUrl);
-          twitterRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-          twitterRequest.send(JSON.stringify(data));
+          twitterRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+          twitterRequest.send(data);
           window.open(href, "_blank", option);
         }
       });
