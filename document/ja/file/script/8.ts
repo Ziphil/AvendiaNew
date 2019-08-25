@@ -7,7 +7,7 @@ const PRONUNCIATION_REGEXP = "&lt;span class=\"phoneticspelling\"&gt;(.+)&lt;\/s
 type WordMark = 0 | 1 | null;
 
 
-class WordEntry {
+export class WordEntry {
 
   english: string;
   japanese: string;
@@ -22,7 +22,7 @@ class WordEntry {
 }
 
 
-class WordManager {
+export class WordManager {
 
   entries: WordEntry[];
 
@@ -64,7 +64,7 @@ class WordManager {
 }
 
 
-class Executor {
+export class Executor {
 
   manager: WordManager;
   request: XMLHttpRequest | null;

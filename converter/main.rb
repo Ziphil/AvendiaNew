@@ -256,8 +256,9 @@ class WholeAvendiaConverter
     when "ts"
       output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
       output_path = modify_extension(output_path)
+      output_dir = File.dirname(output_path)
       FileUtils.mkdir_p(File.dirname(output_path))
-      Kernel.system("tsc --strictNullChecks --noImplicitAny -t ES6 #{path} --outFile #{output_path}")
+      Kernel.system("tsc --strictNullChecks --noImplicitAny -t ES6 #{path} --outDir #{output_dir} --module commonjs")
     when "css", "rb", "cgi", "js"
       output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
       FileUtils.mkdir_p(File.dirname(output_path))
