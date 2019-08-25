@@ -290,11 +290,24 @@ export class Executor {
     }
   }
 
-  reset(): void {
-    let result = confirm("リセットしますか?");
+  shuffle(): void {
+    let result = confirm("リストの順番をシャッフルしますか?");
     if (result) {
       this.count = 0;
       this.manager.shuffle();
+      this.updateMain(false);
+      this.updateMark();
+      this.createList();
+    }
+  }
+
+  reflesh(): void {
+    let result = confirm("マーカーを全て削除しますか?");
+    if (result) {
+      this.count = 0;
+      for (let entry of this.manager.entries) {
+        entry.mark = null;
+      }
       this.updateMain(false);
       this.updateMark();
       this.createList();

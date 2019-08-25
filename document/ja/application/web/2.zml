@@ -44,7 +44,7 @@
           \input|class="small red icon",type="button",value="",onclick="executor.mark(1)"|>　\input|class="small gray icon",type="button",value="",onclick="executor.mark(null)"|>　\input|class="small green icon",type="button",value="",onclick="executor.mark(0)"|>
         >
         \div|class="button"|<
-          \input|type="button",value="Reset",onclick="executor.reset()"|>
+          \input|type="button",value="Reflesh",onclick="executor.reflesh()"|>　\input|type="button",value="Shuffle",onclick="executor.shuffle()"|>
         >
         \div|class="upload"|<
           \label|for="file"|<Upload>\input|id="file",type="file",multiple="multiple",onchange="executor.upload()"|>
