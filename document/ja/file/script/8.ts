@@ -101,23 +101,25 @@ export class Executor {
   }
 
   prepareElements(): void {
-    document.querySelector("input[name=\"mode\"]")!.addEventListener("change", (event) => {
-      let target = <HTMLInputElement>event.target;
-      let mode = parseInt(target.value);
-      let arrowDiv = document.querySelector<HTMLElement>("#arrow")!;
-      if (mode == 0) {
-        arrowDiv.style.margin = "0px auto -5px auto";
-        arrowDiv.style.borderTop = "30px hsl(240, 60%, 60%) solid";
-        arrowDiv.style.borderRight = "50px transparent solid";
-        arrowDiv.style.borderBottom = "30px transparent solid";
-        arrowDiv.style.borderLeft = "50px transparent solid";
-      } else {
-        arrowDiv.style.margin = "-30px auto 25px auto";
-        arrowDiv.style.borderTop = "30px transparent solid";
-        arrowDiv.style.borderRight = "50px transparent solid";
-        arrowDiv.style.borderBottom = "30px hsl(240, 60%, 60%) solid";
-        arrowDiv.style.borderLeft = "50px transparent solid";
-      }
+    document.querySelectorAll("input[name=\"mode\"]").forEach((element) => {
+      element.addEventListener("change", (event) => {
+        let target = <HTMLInputElement>event.target;
+        let mode = parseInt(target.value);
+        let arrowDiv = document.querySelector<HTMLElement>("#arrow")!;
+        if (mode == 0) {
+          arrowDiv.style.margin = "0px auto -5px auto";
+          arrowDiv.style.borderTop = "30px hsl(240, 60%, 60%) solid";
+          arrowDiv.style.borderRight = "50px transparent solid";
+          arrowDiv.style.borderBottom = "30px transparent solid";
+          arrowDiv.style.borderLeft = "50px transparent solid";
+        } else {
+          arrowDiv.style.margin = "-30px auto 25px auto";
+          arrowDiv.style.borderTop = "30px transparent solid";
+          arrowDiv.style.borderRight = "50px transparent solid";
+          arrowDiv.style.borderBottom = "30px hsl(240, 60%, 60%) solid";
+          arrowDiv.style.borderLeft = "50px transparent solid";
+        }
+      });
     });
     document.querySelector("#show-list")!.addEventListener("change", (event) => {
       this.toggleList();
