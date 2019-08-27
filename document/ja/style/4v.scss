@@ -1,6 +1,10 @@
 @charset "utf-8";
 
 
+$serif-font-family: "Times New Roman", "Times", "IPA P明朝", "IPAex明朝", "YuMincho", "Yu Mincho", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+$sans-font-family: "Arial", "IPA Pゴシック", "IPAexゴシック", "YuGothic", "Yu Gothic", "ＭＳ Ｐゴシック", "ＭＳ ゴシック", sans-serif;
+
+
 @mixin box($radius: 15px) {
   background-color: white;
   border-radius: $radius;
@@ -80,7 +84,7 @@
   & +label {
     margin: 0px;
     padding: 0px 0px 0px 18px;
-    font: 14px "Times New Roman", "Times", "IPA P明朝", "IPA明朝", "ＭＳ Ｐ明朝", serif;
+    font: 14px $serif-font-family;
     color: black;
     line-height: 1.4;
     position: relative;
@@ -115,7 +119,7 @@
   & +label {
     margin: 0px;
     padding: 0px 0px 0px 18px;
-    font: 14px "Times New Roman", "Times", "IPA P明朝", "IPA明朝", "ＭＳ Ｐ明朝", serif;
+    font: 14px $serif-font-family;
     color: black;
     line-height: 1.4;
     position: relative;

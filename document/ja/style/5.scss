@@ -52,7 +52,7 @@ div.content div.main div.question div.english div.word {
 div.content div.main div.question div.english div.pronunciation {
   margin: 10px 0px 0px 0px;
   padding: 0px;
-  font: 18px "Times New Roman", "Times";
+  font: 18px $serif-font-family;
   color: hsl(240, 60%, 60%);
   line-height: 1;
 }
@@ -63,7 +63,7 @@ div.content div.main div.question div.japanese {
   height: 100px;
   margin: 0px 0px 0px 0px;
   padding: 0px 60px;
-  font: 24px "Times New Roman", "Times", "IPA P明朝", "IPA明朝", "ＭＳ Ｐ明朝", serif;
+  font: 24px $serif-font-family;
   color: hsl(240, 60%, 60%);
   text-align: center;
   line-height: 1.2;
