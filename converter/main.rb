@@ -3,7 +3,9 @@
 
 require 'pp'
 require 'fileutils'
+require 'listen'
 require 'net/ftp'
+require 'io/console'
 require 'rexml/document'
 require 'zenml'
 include REXML
@@ -124,7 +126,11 @@ class WholeAvendiaConverter
       if options.include?("-u")
         upload = true
       end
-      @mode = :normal
+      if options.include?("-s")
+        @mode = :serve
+      else
+        @mode = :normal
+      end
     end
     @paths = create_paths(rest_args)
     @ftp, @user = create_ftp(upload)
@@ -132,17 +138,19 @@ class WholeAvendiaConverter
     @converter = create_converter
   end
 
-  def save
+  def execute
     case @mode
     when :log
-      save_log
+      execute_log
+    when :serve
+      execute_serve
     when :normal
-      save_normal
+      execute_normal
     end
     @ftp&.close
   end
 
-  def save_log
+  def execute_log
     @paths.each_with_index do |(path, language), index|
       document, result = nil, nil
       extension = File.extname(path).gsub(/^\./, "")
@@ -155,25 +163,13 @@ class WholeAvendiaConverter
     end
   end
 
-  def save_normal
+  def execute_normal
     failed_paths = []
     @paths.each_with_index do |(path, language), index|
-      document, result = nil, nil
-      durations = {}
-      extension = File.extname(path).gsub(/^\./, "")
-      durations[:parse] = WholeAvendiaConverter.measure do
-        document = parse_normal(path, language, extension)
+      result = save_normal(path, language, index)
+      if !result
+        failed_paths << [path, language, 0]
       end
-      durations[:convert] = WholeAvendiaConverter.measure do
-        result = convert_normal(document, path, language, extension)
-      end
-      durations[:upload] = WholeAvendiaConverter.measure do
-        result = upload_normal(path, language)
-        if !result
-          failed_paths << [path, language, 0]
-        end
-      end
-      print_result(path, language, index, durations)
     end
     unless failed_paths.empty?
       puts("-" * 45) 
@@ -188,10 +184,40 @@ class WholeAvendiaConverter
       end
       print_result(path, language, nil, durations)
     end
-    unless @paths.empty?
-      puts("-" * 45)
-      puts(" " * 35 + "#{"%3d" % @paths.size} files")
+    print_whole_result(@paths.size)
+  end
+
+  def execute_serve
+    size = 0
+    ROOT_PATHS.each do |language, dir|
+      listener = Listen.to(dir) do |modified, added, removed|
+        paths = (modified + added).uniq
+        paths.each_with_index do |path, index|
+          result = save_normal(path, language, nil)
+        end
+        size += paths.size
+      end
+      listener.start
     end
+    STDIN.noecho(&:gets)
+    print_whole_result(size)
+  end
+
+  def save_normal(path, language, index)
+    document, result = nil, nil
+    durations = {}
+    extension = File.extname(path).gsub(/^\./, "")
+    durations[:parse] = WholeAvendiaConverter.measure do
+      document = parse_normal(path, language, extension)
+    end
+    durations[:convert] = WholeAvendiaConverter.measure do
+      result = convert_normal(document, path, language, extension)
+    end
+    durations[:upload] = WholeAvendiaConverter.measure do
+      result = upload_normal(path, language)
+    end
+    print_result(path, language, index, durations)
+    return result
   end
 
   def print_result(path, language, index, durations)
@@ -225,6 +251,16 @@ class WholeAvendiaConverter
     path_array.unshift(language)
     output << path_array.join(" ")
     output << "\e[37m"
+    puts(output)
+  end
+
+  def print_whole_result(size)
+    output = ""
+    if size > 0
+      output << "-" * 45
+      output << "\n"
+      output << " " * 33 + "#{"%5d" % size} files"
+    end
     puts(output)
   end
 
@@ -328,7 +364,7 @@ class WholeAvendiaConverter
       end
     end
     paths.reject! do |path, language|
-      next path =~ /v\.scss$/
+      next path =~ /v\.scss$/ || path =~ /tsconfig\.json$/
     end
     paths.sort_by! do |path, language|
       path_array = path.gsub(ROOT_PATHS[language] + "/", "").gsub(/\.\w+$/, "").split("/")
@@ -397,4 +433,4 @@ end
 
 
 whole_converter = WholeAvendiaConverter.new(ARGV)
-whole_converter.save
+whole_converter.execute
