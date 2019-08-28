@@ -178,8 +178,10 @@ class WholeAvendiaConverter
       listener = Listen.to(dir) do |modified, added, removed|
         paths = (modified + added).uniq
         paths.each_with_index do |path, index|
-          result = save_normal(path, language, count)
-          count += 1
+          if @paths.any?{|s| s.first == path}
+            result = save_normal(path, language, count)
+            count += 1
+          end
         end
       end
       listener.start
