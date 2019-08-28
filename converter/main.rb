@@ -112,7 +112,8 @@ class WholeAvendiaConverter
   }
   LOG_PATHS = {
     :ja => BASE_PATH + "/log/ja.txt",
-    :en => BASE_PATH + "/log/en.txt"
+    :en => BASE_PATH + "/log/en.txt",
+    :error => BASE_PATH + "/log/error.txt"
   }
   LOG_SIZE = 1000
   REPETITION_SIZE = 3
@@ -155,20 +156,20 @@ class WholeAvendiaConverter
     failed_paths = []
     @paths.each_with_index do |(path, language), index|
       result = save_normal(path, language, index)
-      if !result
+      if result.is_a?(Net::FTPError)
         failed_paths << [path, language, 0]
       end
     end
     unless failed_paths.empty?
-      print_whole_result(size, {:only_line => true})
+      print_whole(size, {:only_line => true})
     end
     failed_paths.each_with_index do |(path, language, count), index|
       result = save_normal(path, language, nil, {:only_upload => true})
-      if !result && count < REPETITION_SIZE
+      if result.is_a?(Net::FTPError) && count < REPETITION_SIZE
         failed_paths << [path, language, count + 1]
       end
     end
-    print_whole_result(size)
+    print_whole(size)
   end
 
   def execute_serve
@@ -184,107 +185,54 @@ class WholeAvendiaConverter
       listener.start
     end
     STDIN.noecho(&:gets)
-    print_whole_result(count)
+    print_whole(count)
   end
 
   def execute_log
     @paths.each_with_index do |(path, language), index|
-      save_log(path, language, index)
+      result = save_log(path, language, index)
     end
   end
 
   def save_normal(path, language, index, options = {})
-    document, result = nil, nil
-    durations = {}
-    extension = File.extname(path).gsub(/^\./, "")
-    unless options[:only_upload]
-      durations[:parse] = WholeAvendiaConverter.measure do
-        document = parse_normal(path, language, extension)
+    result, durations = nil, {}
+    begin
+      unless options[:only_upload]
+        durations[:convert] = WholeAvendiaConverter.measure do
+          convert_normal(path, language)
+        end
       end
-      durations[:convert] = WholeAvendiaConverter.measure do
-        result = convert_normal(document, path, language, extension)
+      durations[:upload] = WholeAvendiaConverter.measure do
+        upload_normal(path, language)
       end
+    rescue => error
+      print_error(path, language, index, error)
+      result = error
     end
-    durations[:upload] = WholeAvendiaConverter.measure do
-      result = upload_normal(path, language)
-    end
-    print_result(path, language, index, durations)
+    print_normal(path, language, index, durations, result)
     return result
   end
 
   def save_log(path, language, index)
-    document, result = nil, nil
-    durations = {}
-    extension = File.extname(path).gsub(/^\./, "")
-    durations[:parse] = WholeAvendiaConverter.measure do
-      document = parse_normal(path, language, extension)
+    result, durations = nil, {}
+    begin
+      durations[:convert] = WholeAvendiaConverter.measure do
+        result = convert_log(path, language)
+      end
+    rescue => error
+      print_error(path, language, index, error)
+      result = error
     end
-    durations[:convert] = WholeAvendiaConverter.measure do
-      result = convert_log(document, path, language, extension)
-    end
+    print_log(path, language, index, durations, result)
     return result
   end
 
-  def print_result(path, language, index, durations)
-    output = " "
-    if index
-      output << "%3d" % (index + 1)
-    else
-      output << " " * 3
-    end
-    output << "\e[37m : \e[36m"
-    if durations[:parse]
-      output << "%4d" % durations[:parse]
-    else
-      output << " " * 4
-    end
-    output << "\e[37m + \e[36m"
-    if durations[:convert]
-      output << "%4d" % durations[:convert]
-    else
-      output << " " * 4
-    end
-    output << "\e[37m + \e[35m"
-    if durations[:upload]
-      output << "%4d" % durations[:upload]
-    else
-      output << " " * 4
-    end
-    output << "\e[37m  |  \e[33m"
-    path_array = path.gsub(ROOT_PATHS[language] + "/", "").split("/")
-    path_array.map!{|s| (s =~ /\d/) ? "%3d" % s.to_i : s.gsub("index.zml", "  @").slice(0, 3)}
-    path_array.unshift(language)
-    output << path_array.join(" ")
-    output << "\e[37m"
-    puts(output)
-  end
-
-  def print_whole_result(size, options = {})
-    output = ""
-    if size > 0
-      output << "-" * 45
-      unless options[:only_line]
-        output << "\n"
-        output << " " * 33 + "#{"%5d" % size} files"
-      end
-    end
-    puts(output)
-  end
-
-  def parse_normal(path, language, extension)
-    docment = nil
+  def convert_normal(path, language)
+    extension = File.extname(path).gsub(/^\./, "")
     case extension
     when "zml"
       @parser.update(File.read(path), path, language)
       document = @parser.parse
-    end
-    return document
-  end
-
-  def convert_normal(document, path, language, extension)
-    result = true
-    case extension
-    when "zml"
       @converter.update(document, path, language)
       output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
       output_path = modify_extension(output_path)
@@ -307,13 +255,14 @@ class WholeAvendiaConverter
       FileUtils.mkdir_p(File.dirname(output_path))
       FileUtils.copy(path, output_path)
     end
-    return result
   end
 
-  def convert_log(document, path, language, extension)
-    result = true
+  def convert_log(path, language)
+    extension = File.extname(path).gsub(/^\./, "")
     case extension
     when "zml"
+      @parser.update(File.read(path), path, language)
+      document = @parser.parse
       @converter.update(document, path, language)
       output = @converter.convert("change-log")
       time = Time.now - 21600
@@ -323,27 +272,77 @@ class WholeAvendiaConverter
       log_string = log_entries.take(LOG_SIZE).join("\n")
       File.write(log_path, log_string)
     end
-    return result
   end
 
   def upload_normal(path, language)
-    result = true
-    if @ftp
-      begin
-        local_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
-        local_path = modify_extension(local_path)
-        remote_path = path.gsub(ROOT_PATHS[language], "")
-        remote_path = modify_extension(remote_path)
-        unless language == :ja
-          remote_path = "/#{language}.#{@user}" + remote_path
-        end
-        @ftp.put(local_path, remote_path)
-      rescue => error
-        STDERR.puts(error.full_message)
-        result = false
+    local_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
+    local_path = modify_extension(local_path)
+    remote_path = path.gsub(ROOT_PATHS[language], "")
+    remote_path = modify_extension(remote_path)
+    unless language == :ja
+      remote_path = "/#{language}.#{@user}" + remote_path
+    end
+    @ftp&.put(local_path, remote_path)
+  end
+
+  def print_normal(path, language, index, durations, result = nil)
+    output = ""
+    output << " "
+    if index
+      output << "%3d" % (index + 1)
+    else
+      output << " " * 3
+    end
+    output << "\e[0m : \e[36m"
+    if durations[:convert]
+      output << "%4d" % durations[:convert]
+    else
+      output << " " * 4
+    end
+    output << "\e[0m + \e[35m"
+    if durations[:upload]
+      output << "%4d" % durations[:upload]
+    else
+      output << " " * 4
+    end
+    output << "\e[0m  |  \e[33m"
+    if result
+      output << "\e[7m"
+    end
+    path_array = path.gsub(ROOT_PATHS[language] + "/", "").split("/")
+    path_array.map!{|s| (s =~ /\d/) ? "%3d" % s.to_i : s.gsub("index.zml", "  @").slice(0, 3)}
+    path_array.unshift(language)
+    output << path_array.join(" ")
+    output << "\e[0m"
+    output << " "
+    puts(output)
+  end
+
+  def print_log(path, language, index, durations, result = nil)
+    output = ""
+    print(output)
+  end
+
+  def print_whole(size, options = {})
+    output = ""
+    if size > 0
+      output << "-" * 38
+      unless options[:only_line]
+        output << "\n"
+        output << " " * 26 + "#{"%5d" % size} files"
       end
     end
-    return result
+    puts(output)
+  end
+
+  def print_error(path, language, index, error)
+    output = ""
+    output << "[#{language}: #{path}]\n"
+    output << error.full_message.gsub(/\e\[.*?[A-Za-z]/, "")
+    output << "\n"
+    File.open(LOG_PATHS[:error], "a") do |file|
+      file.puts(output)
+    end
   end
 
   def create_paths(args)
