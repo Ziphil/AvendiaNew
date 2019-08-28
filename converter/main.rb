@@ -291,19 +291,19 @@ class WholeAvendiaConverter
     if index
       output << "%3d" % (index + 1)
     else
-      output << " " * 3
+      output << "   "
     end
     output << "\e[0m : \e[36m"
     if durations[:convert]
       output << "%4d" % durations[:convert]
     else
-      output << " " * 4
+      output << "   ?"
     end
     output << "\e[0m + \e[35m"
     if durations[:upload]
       output << "%4d" % durations[:upload]
     else
-      output << " " * 4
+      output << "   ?"
     end
     output << "\e[0m  |  \e[33m"
     if result
