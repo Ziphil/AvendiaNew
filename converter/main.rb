@@ -126,7 +126,7 @@ class WholeAvendiaConverter
       @mode = :log
     else
       if options.include?("-u")
-        @upload = true
+        upload = true
       end
       if options.include?("-s")
         @mode = :serve
