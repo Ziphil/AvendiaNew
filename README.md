@@ -12,10 +12,11 @@
 生成スクリプトは Ruby で書かれています。
 バージョン 2.5 以上の Ruby が必要です。
 
-さらに、この生成スクリプトは、[ZenML](https://github.com/Ziphil/Zenithal) のパーサーライブラリを利用しています。
+さらに、この生成スクリプトは、[zenml](https://github.com/Ziphil/Zenithal) と [listen](https://github.com/guard/listen) という gem を利用しています。
 RubyGems からインストールしてください。
 ```
 gem install zenml
+gem install listen
 ```
 
 ### SASS/SCSS 処理系の準備
@@ -29,7 +30,7 @@ sass --style=compressed --cache-location='(サーバールート)/.sass-cache' '
 TypeScript 処理系をインストールし、それを実行できるようにパスの設定などをしてください。
 この生成スクリプトは、以下のようなコマンドを実行しようとします。
 ```
-tsc --strictNullChecks --noImplicitAny -t ES6 (変換前の絶対パス) --outFile (変換後の絶対パス)
+tsc --strictNullChecks --noImplicitAny -t ES6 (変換前の絶対パス) --outDir (変換後の絶対パス) --module commonjs
 ```
 
 TypeScript 処理系の準備は、例えば [Node.js](https://nodejs.org/ja/) を経由して以下のように可能です。
@@ -37,7 +38,6 @@ TypeScript 処理系の準備は、例えば [Node.js](https://nodejs.org/ja/) �
 この状態で、以下のコマンドを実行します。
 ```
 npm install -g typescript
-npm install -g @types/jquery
 ```
 
 ### サーバーのドキュメントルートの設定
@@ -62,7 +62,10 @@ ruby converter/main.rb
 ruby converter/main.rb -u
 ```
 
-全てのページではなく特定のページのみを生成したい場合は、以下のコマンドを実行してください。
+内容を変更したページのみを自動で生成したいときは、オプション `-s` を付けてください。
+生成スクリプトがバックグラウンドで走り、コマンドを毎回実行しなくても、自動で変更を検知して生成を行います。
+
+全てのページもしくは変更したページではなく、ある特定のページのみを生成したい場合は、以下のコマンドを実行してください。
 ファイルのパスは空白区切りで複数指定することができます。
 ```
 ruby converter/main.rb (ファイル名の絶対パス)
