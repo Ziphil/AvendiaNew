@@ -372,8 +372,8 @@ class WholeAvendiaConverter
         paths << [path, language]
       end
     end
-    paths.reject! do |path, language|
-      next path =~ /v\.scss$/ || path =~ /tsconfig\.json$/
+    paths.select! do |path, language|
+      next File.basename(path, ".*") =~ /^(\d+|index)$/
     end
     paths.sort_by! do |path, language|
       path_array = path.gsub(ROOT_PATHS[language] + "/", "").gsub(/\.\w+$/, "").split("/")
