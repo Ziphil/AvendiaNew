@@ -150,20 +150,8 @@ class WholeAvendiaConverter
     @ftp&.close
   end
 
-  def execute_log
-    @paths.each_with_index do |(path, language), index|
-      document, result = nil, nil
-      extension = File.extname(path).gsub(/^\./, "")
-      parsing_duration = WholeAvendiaConverter.measure do
-        document = parse_normal(path, language, extension)
-      end
-      conversion_duration = WholeAvendiaConverter.measure do
-        result = convert_log(document, path, language, extension)
-      end
-    end
-  end
-
   def execute_normal
+    size = @paths.size
     failed_paths = []
     @paths.each_with_index do |(path, language), index|
       result = save_normal(path, language, index)
@@ -172,38 +160,59 @@ class WholeAvendiaConverter
       end
     end
     unless failed_paths.empty?
-      puts("-" * 45) 
+      print_whole_result(size, {:only_line => true})
     end
     failed_paths.each_with_index do |(path, language, count), index|
-      durations = {}
-      durations[:upload] = WholeAvendiaConverter.measure do
-        result = upload_normal(path, language)
-        if !result && count < REPETITION_SIZE
-          failed_paths << [path, language, count + 1]
-        end
+      result = save_normal(path, language, nil, {:only_upload => true})
+      if !result && count < REPETITION_SIZE
+        failed_paths << [path, language, count + 1]
       end
-      print_result(path, language, nil, durations)
     end
-    print_whole_result(@paths.size)
+    print_whole_result(size)
   end
 
   def execute_serve
-    size = 0
+    count = 0
     ROOT_PATHS.each do |language, dir|
       listener = Listen.to(dir) do |modified, added, removed|
         paths = (modified + added).uniq
         paths.each_with_index do |path, index|
-          result = save_normal(path, language, nil)
+          result = save_normal(path, language, count)
+          count += 1
         end
-        size += paths.size
       end
       listener.start
     end
     STDIN.noecho(&:gets)
-    print_whole_result(size)
+    print_whole_result(count)
   end
 
-  def save_normal(path, language, index)
+  def execute_log
+    @paths.each_with_index do |(path, language), index|
+      save_log(path, language, index)
+    end
+  end
+
+  def save_normal(path, language, index, options = {})
+    document, result = nil, nil
+    durations = {}
+    extension = File.extname(path).gsub(/^\./, "")
+    unless options[:only_upload]
+      durations[:parse] = WholeAvendiaConverter.measure do
+        document = parse_normal(path, language, extension)
+      end
+      durations[:convert] = WholeAvendiaConverter.measure do
+        result = convert_normal(document, path, language, extension)
+      end
+    end
+    durations[:upload] = WholeAvendiaConverter.measure do
+      result = upload_normal(path, language)
+    end
+    print_result(path, language, index, durations)
+    return result
+  end
+
+  def save_log(path, language, index)
     document, result = nil, nil
     durations = {}
     extension = File.extname(path).gsub(/^\./, "")
@@ -211,12 +220,8 @@ class WholeAvendiaConverter
       document = parse_normal(path, language, extension)
     end
     durations[:convert] = WholeAvendiaConverter.measure do
-      result = convert_normal(document, path, language, extension)
+      result = convert_log(document, path, language, extension)
     end
-    durations[:upload] = WholeAvendiaConverter.measure do
-      result = upload_normal(path, language)
-    end
-    print_result(path, language, index, durations)
     return result
   end
 
@@ -254,12 +259,14 @@ class WholeAvendiaConverter
     puts(output)
   end
 
-  def print_whole_result(size)
+  def print_whole_result(size, options = {})
     output = ""
     if size > 0
       output << "-" * 45
-      output << "\n"
-      output << " " * 33 + "#{"%5d" % size} files"
+      unless options[:only_line]
+        output << "\n"
+        output << " " * 33 + "#{"%5d" % size} files"
+      end
     end
     puts(output)
   end
@@ -275,7 +282,7 @@ class WholeAvendiaConverter
   end
 
   def convert_normal(document, path, language, extension)
-    result = nil
+    result = true
     case extension
     when "zml"
       @converter.update(document, path, language)
@@ -304,7 +311,7 @@ class WholeAvendiaConverter
   end
 
   def convert_log(document, path, language, extension)
-    result = nil
+    result = true
     case extension
     when "zml"
       @converter.update(document, path, language)
