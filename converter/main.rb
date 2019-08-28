@@ -126,7 +126,7 @@ class WholeAvendiaConverter
       @mode = :log
     else
       if options.include?("-u")
-        upload = true
+        @upload = true
       end
       if options.include?("-s")
         @mode = :serve
@@ -135,9 +135,15 @@ class WholeAvendiaConverter
       end
     end
     @paths = create_paths(rest_args)
+    @upload = upload
     @ftp, @user = create_ftp(upload)
     @parser = create_parser
     @converter = create_converter
+  end
+
+  def update_ftp
+    @ftp&.close
+    @ftp, @user = create_ftp(@upload)
   end
 
   def execute
@@ -177,6 +183,7 @@ class WholeAvendiaConverter
     count = 0
     ROOT_PATHS.each do |language, dir|
       listener = Listen.to(dir) do |modified, added, removed|
+        update_ftp
         paths = (modified + added).uniq
         paths.each_with_index do |path, index|
           if @paths.any?{|s| s.first == path}
