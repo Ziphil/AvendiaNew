@@ -116,6 +116,7 @@ class WholeAvendiaConverter
     :error => BASE_PATH + "/log/error.txt"
   }
   LOG_SIZE = 1000
+  READ_TIMEOUT = 5
   REPETITION_SIZE = 3
 
   def initialize(args)
@@ -388,7 +389,7 @@ class WholeAvendiaConverter
     if upload
       host, user, password = ONLINE_SERVER_CONFIG.split("\n")
       ftp = Net::FTP.new(host, user, password)
-      ftp.read_timeout = 5
+      ftp.read_timeout = READ_TIMEOUT
     end
     return ftp, user
   end
@@ -397,7 +398,7 @@ class WholeAvendiaConverter
     parser = AvendiaParser.new("", nil, nil)
     parser.brace_name = "x"
     parser.bracket_name = "xn"
-    parser.slash_name =  "i"
+    parser.slash_name = "i"
     directory = BASE_PATH + "/macro"
     Dir.each_child(directory) do |entry|
       if entry.end_with?(".rb")
