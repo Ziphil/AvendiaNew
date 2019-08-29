@@ -7,6 +7,7 @@ require 'listen'
 require 'net/ftp'
 require 'io/console'
 require 'rexml/document'
+require 'selenium-webdriver'
 require 'zenml'
 include REXML
 include Zenithal
@@ -87,7 +88,7 @@ class AvendiaConverter < ZenithalConverter
   def online_url
     root_path = WholeAvendiaConverter::ROOT_PATHS[@language]
     domain = WholeAvendiaConverter::DOMAINS[@language]
-    url = path.gsub(root_path + "/", domain).gsub(/\.zml$/, ".html")
+    url = path.gsub(root_path, domain).gsub(/\.zml$/, ".html")
     return url
   end
 
@@ -98,9 +99,13 @@ class WholeAvendiaConverter
 
   LOCAL_SERVER_PATH = File.read(BASE_PATH + "/config/local.txt")
   ONLINE_SERVER_CONFIG = File.read(BASE_PATH + "/config/online.txt")
+  LOCAL_DOMAINS = {
+    :ja => "http://lbs.localhost",
+    :en => "http://en.lbs.localhost"
+  }
   DOMAINS = {
-    :ja => "http://ziphil.com/",
-    :en => "http://en.ziphil.com/"
+    :ja => "http://ziphil.com",
+    :en => "http://en.ziphil.com"
   }
   ROOT_PATHS = {
     :ja => BASE_PATH + "/document/ja",
