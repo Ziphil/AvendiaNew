@@ -178,7 +178,7 @@ export class Executor {
     let manager = this.manager;
     let index = this.index;
     let status = (this.count + 1) % 2;
-    let mode = parseInt(document.querySelector<HTMLInputElement>("input[name=\"mode\"]")!.value);
+    let mode = parseInt(document.querySelector<HTMLInputElement>("input[name=\"mode\"]:checked")!.value);
     let entry = manager.get(index);
     let englishDiv = document.querySelector("#english")!;
     let japaneseDiv = document.querySelector("#japanese")!;
