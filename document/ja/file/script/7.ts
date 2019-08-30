@@ -164,8 +164,8 @@ export class History {
   }
 
   calculateMinMaxDate(): void {
-    let minDate = OVERALL_MIN_DATE;
-    let maxDate = OVERALL_MAX_DATE;
+    let minDate = OVERALL_MAX_DATE;
+    let maxDate = OVERALL_MIN_DATE;
     for (let entry of this.entries) {
       if (entry.date > maxDate) {
         maxDate = entry.date;
