@@ -3,6 +3,18 @@
 
 PDF_MESSAGE = "ブラウザが PDF ファイルの表示に対応していない場合は、以下のリンクから PDF ファイルを直接ダウンロードしてください。"
 
+parser.register_macro("ref") do |attributes, children_list|
+  this = Nodes[]
+  if attributes["c"]
+    codepoint = attributes["c"]
+    this << Text.new("&##{codepoint};", true, nil, true)
+  elsif attributes["n"]
+    name = attributes["n"]
+    this << Text.new("&#{name};", true, nil, true)
+  end
+  next this
+end
+
 parser.register_macro("math-pdf") do |attributes, children_list|
   this = Nodes[]
   number = attributes["number"]

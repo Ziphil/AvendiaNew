@@ -777,12 +777,6 @@ converter.add(["br"], ["page"]) do |element|
   next this
 end
 
-converter.add(["ref"], [//]) do |element|
-  this = ""
-  this << "&#" + element.attribute("p").to_s + ";"
-  next this
-end
-
 converter.add_default(nil) do |text|
   string = text.to_s.clone
   string.gsub!("、", "、 ")

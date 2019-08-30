@@ -32,7 +32,7 @@
       >
       \div|class="information"|<
         \div|class="copy"|<
-          The\ref|p="xA0"|>definitive\ref|p="xA0"|>tool for\ref|p="xA0"|>all\ref|p="xA0"|>conlangers
+          The&ref|n="nbsp"|>definitive&ref|n="nbsp"|>tool for&ref|n="nbsp"|>all&ref|n="nbsp"|>conlangers
         >
         \div|class="download"|<
           \a|class="button",href="https://www.dropbox.com/sh/g75rqn97sdlpp0b/AAArHPjlZp5aAmij73dVGRvza?dl=0",target="_blank"|<Download>
