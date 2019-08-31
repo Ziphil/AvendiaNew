@@ -17,6 +17,7 @@ class ShaleiaUploader
   PASSWORD = File.read("../../file/dictionary/meta/other/password.txt")
   GOOGLE_URL = "https://script.google.com/macros/s/AKfycbxLhjMTVq4ybjW2waZp5xgbo2emqBMBkOkz-XMx-GzjA2W4K8M/exec"
   GITHUB_URL = "https://raw.githubusercontent.com/"
+  VERSIONS = {"5.5" => 0, "1.2" => 1, "3.6" => 2, "2.7" => 3, "3.4" => 4}
 
   def initialize(body, cgi)
     @body = body
@@ -34,12 +35,14 @@ class ShaleiaUploader
     parsed_body = JSON.parse(@body)
     repository_name = parsed_body["repository"]["full_name"]
     after_hash = parsed_body["after"]
-    previous_size = ShaleiaUtilities.names(0).size
+    file_name = parsed_body["head_commit"]["modified"][0]
+    version = VERSIONS[File.basename(file_name, ".*")]
+    previous_size = ShaleiaUtilities.names(version).size
     new_size = nil
-    Kernel.open(GITHUB_URL + repository_name + "/" + after_hash + "/1.xdc") do |file|
-      ShaleiaUtilities.upload(file, 0)
-      ShaleiaUtilities.update(0)
-      new_size = ShaleiaUtilities.names(0).size
+    Kernel.open(GITHUB_URL + repository_name + "/" + after_hash + "/" + file_name) do |file|
+      ShaleiaUtilities.upload(file, version)
+      ShaleiaUtilities.update(version)
+      new_size = ShaleiaUtilities.names(version).size
     end
     Kernel.open(GOOGLE_URL + "?mode=update&password=#{PASSWORD}&previous=#{previous_size}&new=#{new_size}") do |file|
       file.each_line do |line| 
