@@ -192,6 +192,7 @@ nav.breadcrumb {
   justify-content: space-between;
   @include smartphone {
     width: 100vw;
+    padding: $breadcrumb-vertical-padding $breadcrumb-smartphone-horizontal-padding;
     border-radius: 0px;
   }
 

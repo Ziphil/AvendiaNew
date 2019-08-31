@@ -188,22 +188,23 @@ $main-horizontal-padding: 40px;
 $main-smartphone-horizontal-padding: 20px;
 // 余白 > パンくずリスト
 $breadcrumb-vertical-padding: 10px;
-$breadcrumb-horizontal-padding: 20px;
+$breadcrumb-horizontal-padding: 40px;
+$breadcrumb-smartphone-horizontal-padding: 20px;
 // 余白 > ページ一覧
 $index-vertical-margin: 15px;
 $index-vertical-padding: 8px;
-$index-horizontal-margin: -10px;
+$index-horizontal-margin: 0px;
 $index-smartphone-horizontal-margin: 0px;
 $index-horizontal-padding: 20px;
 // 余白 > 第 1 見出し
 $section-vertical-margin: 15px;
 $section-vertical-padding: 3px;
-$section-horizontal-padding: 30px;
+$section-horizontal-padding: 40px;
 $section-smartphone-horizontal-padding: 20px;
 // 余白 > 第 2 見出し
 $subsection-vertical-margin: 12px;
 $subsection-vertical-padding: 0px;
-$subsection-horizontal-padding: 30px;
+$subsection-horizontal-padding: 40px;
 $subsection-smartphone-horizontal-padding: 20px;
 // 余白 > 例文などのボックス
 $box-vertical-padding: 7px;
