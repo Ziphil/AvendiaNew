@@ -162,7 +162,12 @@ end
 converter.add(["import-script"], ["header"]) do |element|
   this = ""
   this << Tag.build("script") do |this|
-    this["src"] = converter.url_prefix + "file/script/" + element.attribute("src").to_s
+    inner_text = element.inner_text
+    if inner_text.empty?
+      this["src"] = converter.url_prefix + "file/script/" + element.attribute("src").to_s
+    else
+      this << inner_text
+    end
   end
   next this + "\n"
 end
