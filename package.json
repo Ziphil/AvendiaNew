@@ -1,7 +1,9 @@
 {
   "name": "avendia",
   "devDependencies": {
+    "@types/jquery": "^3.3.31",
     "browserify": "^16.5.0",
+    "jquery": "^3.4.1",
     "tsify": "^4.0.1",
     "typescript": "^3.6.2"
   }
