@@ -2,8 +2,8 @@ document/lbs
 document/lbs-en
 config
 log
+node_modules
 *.code-workspace
 .vscode
-tsconfig.json
 desktop.ini
 Thumbs.db

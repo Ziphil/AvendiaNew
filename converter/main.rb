@@ -256,9 +256,10 @@ class WholeAvendiaConverter
       output = @converter.convert
       File.write(output_path, output)
     when "scss"
-      Kernel.system("sass --style=compressed --cache-location='#{OUTPUT_PATHS[language]}/.sass-cache' '#{path}':'#{output_path}'")
+      output = `sass --style=compressed --cache-location='#{OUTPUT_PATHS[language]}/.sass-cache' '#{path}':'#{output_path}'`
     when "ts"
-      Kernel.system("tsc --strictNullChecks --noImplicitAny -t ES6 #{path} --outDir #{output_dir} --module commonjs")
+      output = `browserify #{path} -p [tsify -t ES6 --noImplicitAny --strictNullChecks]`
+      File.write(output_path, output)
     when "css", "rb", "cgi", "js"
       FileUtils.copy(path, output_path)
     end
