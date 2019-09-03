@@ -263,7 +263,7 @@ class WholeAvendiaConverter
     when "css", "rb", "cgi", "js"
       FileUtils.copy(path, output_path)
     else
-      throw StandardError.new("unknown file type")
+      raise StandardError.new("unknown file type")
     end
   end
 
