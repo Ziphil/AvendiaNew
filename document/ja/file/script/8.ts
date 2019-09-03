@@ -79,6 +79,7 @@ export class Executor {
   prepare() {
     this.prepareDocument();
     this.prepareElements();
+    this.prepareButtons();
   }
 
   prepareDocument(): void {
@@ -123,6 +124,40 @@ export class Executor {
     });
     document.querySelector("#show-list")!.addEventListener("change", (event) => {
       this.toggleList();
+    });
+  }
+
+  prepareButtons(): void {
+    document.querySelectorAll("[id^=\"previous-\"]").forEach((element) => {
+      element.addEventListener("click", () => {
+        let amount = parseInt(element.id.replace(/^previous-/, ""));
+        this.previous(amount);
+      });
+    });
+    document.querySelectorAll("[id^=\"next-\"]").forEach((element) => {
+      element.addEventListener("click", () => {
+        let amount = parseInt(element.id.replace(/^next-/, ""));
+        this.next(amount);
+      });
+    });
+    document.querySelectorAll("[id^=\"mark-\"]").forEach((element) => {
+      element.addEventListener("click", () => {
+        if (element.id == "mark-null") {
+          this.mark(null);
+        } else {
+          let mark = <WordMark>parseInt(element.id.replace(/^mark-/, ""));
+          this.mark(mark);
+        }
+      });
+    });
+    document.querySelector("#reflesh")!.addEventListener("click", () => {
+      this.reflesh();
+    });
+    document.querySelector("#shuffle")!.addEventListener("click", () => {
+      this.shuffle();
+    });
+    document.querySelector("#file")!.addEventListener("change", () => {
+      this.upload();
     });
   }
 

@@ -4,7 +4,6 @@
 \page|link="h"|<
   \name<ハイリア暦変換>
   \ver<>
-  \import-script<let exports = `{`};>
   \import-script|src="1.js"|>
 
   \h1<日付変換フォーム>

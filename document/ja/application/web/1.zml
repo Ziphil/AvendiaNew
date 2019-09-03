@@ -4,7 +4,6 @@
 \html|lang="ja"|<
   \head<
     \meta|charset="UTF-8"|>
-    \script<let exports = `{`};>
     \script|src="../../file/script/7.js"|>
     \link|rel="stylesheet",type="text/css",href="../../style/reset.css"|>
     \link|rel="stylesheet",type="text/css",href="../../style/4.css"|>
@@ -66,10 +65,10 @@
           \input|type="radio",name="mode",value="0",id="radio-mode-0",checked|>\label|for="radio-mode-0"|<回数軸>　\input|type="radio",name="mode",value="1",id="radio-mode-1"|>\label|for="radio-mode-1"|<日付軸>
         >
         \div|class="button"|<
-          \input|type="button",value="Show / Save",onclick="executor.execute()"|>
+          \input|type="button",value="Show / Save",id="execute"|>
         >
         \div|class="twitter"|<
-          \button|type="button",onclick="executor.tweet()"|<Tweet>
+          \button|type="button",id="tweet"|<Tweet>
         >
       >
     >

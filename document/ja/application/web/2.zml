@@ -4,7 +4,6 @@
 \html|lang="ja"|<
   \head<
     \meta|charset="UTF-8"|>
-    \script<let exports = `{`};>
     \script|src="../../file/script/8.js"|>
     \link|rel="stylesheet",type="text/css",href="../../style/reset.css"|>
     \link|rel="stylesheet",type="text/css",href="../../style/5.css"|>
@@ -38,16 +37,16 @@
           \input|type="checkbox",name="show-list",id="show-list"|>\label|for="show-list"|<単語一覧>
         >
         \div|class="button"|<
-          \input|class="small left",type="button",value="− 20",onclick="executor.previous(40)"|>\input|class="small middle",type="button",value="− 10",onclick="executor.previous(20)"|>\input|class="small middle",type="button",value="− 5",onclick="executor.previous(10)"|>\input|class="small right",type="button",value="− 1",onclick="executor.previous(2)"|>　\input|type="button",value="Previous",onclick="executor.previous()"|>　\input|type="button",value="Next",onclick="executor.next()"|>　\input|class="small left",type="button",value="+ 1",onclick="executor.next(2)"|>\input|class="small middle",type="button",value="+ 5",onclick="executor.next(10)"|>\input|class="small middle",type="button",value="+ 10",onclick="executor.next(20)"|>\input|class="small right",type="button",value="+ 20",onclick="executor.next(40)"|>
+          \input|class="small left",type="button",value="− 20",id="previous-40"|>\input|class="small middle",type="button",value="− 10",id="previous-20"|>\input|class="small middle",type="button",value="− 5",id="previous-10"|>\input|class="small right",type="button",value="− 1",id="previous-2"|>　\input|type="button",value="Previous",id="previous-1"|>　\input|type="button",value="Next",id="next-1"|>　\input|class="small left",type="button",value="+ 1",id="next-2"|>\input|class="small middle",type="button",value="+ 5",id="next-10"|>\input|class="small middle",type="button",value="+ 10",id="next-20"|>\input|class="small right",type="button",value="+ 20",id="next-40"|>
         >
         \div|class="button"|<
-          \input|class="small red icon",type="button",value="",onclick="executor.mark(1)"|>　\input|class="small gray icon",type="button",value="",onclick="executor.mark(null)"|>　\input|class="small green icon",type="button",value="",onclick="executor.mark(0)"|>
+          \input|class="small red icon",type="button",value="",id="mark-1"|>　\input|class="small gray icon",type="button",value="",id="mark-null"|>　\input|class="small green icon",type="button",value="",id="mark-0"|>
         >
         \div|class="button"|<
-          \input|type="button",value="Reflesh",onclick="executor.reflesh()"|>　\input|type="button",value="Shuffle",onclick="executor.shuffle()"|>
+          \input|type="button",value="Reflesh",id="reflesh"|>　\input|type="button",value="Shuffle",id="shuffle"|>
         >
         \div|class="upload"|<
-          \label|for="file"|<Upload>\input|id="file",type="file",multiple="multiple",onchange="executor.upload()"|>
+          \label|for="file"|<Upload>\input|id="file",type="file",multiple="multiple"|>
         >
       >
     >

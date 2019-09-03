@@ -569,6 +569,19 @@ export class Executor {
     return {input: input, number: number, mode: mode};
   }
 
+  prepare(): void {
+    this.prepareVariables();
+    this.prepareForms();
+    this.prepareButtons();
+  }
+
+  prepareVariables(): void {
+    this.context = document.querySelector<HTMLCanvasElement>("#canvas")!.getContext("2d")!;
+    this.history = new History();
+    this.renderer = new ChartRenderer(this.context);
+    this.factory = new ElementFactory();
+  }
+
   prepareForms(): void {
     let parameters = this.getParameters();
     let go = () => {
@@ -612,12 +625,13 @@ export class Executor {
     }
   }
 
-  prepare(): void {
-    this.context = document.querySelector<HTMLCanvasElement>("#canvas")!.getContext("2d")!;
-    this.history = new History();
-    this.renderer = new ChartRenderer(this.context);
-    this.factory = new ElementFactory();
-    this.prepareForms();
+  prepareButtons(): void {
+    document.querySelector("#execute")!.addEventListener("click", () => {
+      this.execute(false);
+    });
+    document.querySelector("#tweet")!.addEventListener("click", () => {
+      this.tweet();
+    });
   }
 
   reset(): void {
