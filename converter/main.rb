@@ -262,6 +262,8 @@ class WholeAvendiaConverter
       File.write(output_path, output)
     when "css", "rb", "cgi", "js"
       FileUtils.copy(path, output_path)
+    else
+      throw StandardError.new("unknown file type")
     end
   end
 
