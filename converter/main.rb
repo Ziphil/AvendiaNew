@@ -244,30 +244,22 @@ class WholeAvendiaConverter
 
   def convert_normal(path, language)
     extension = File.extname(path).gsub(/^\./, "")
+    output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
+    output_path = modify_extension(output_path)
+    output_dir = File.dirname(output_path)
+    FileUtils.mkdir_p(output_dir)
     case extension
     when "zml"
       @parser.update(File.read(path), path, language)
       document = @parser.parse
       @converter.update(document, path, language)
-      output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
-      output_path = modify_extension(output_path)
       output = @converter.convert
-      FileUtils.mkdir_p(File.dirname(output_path))
       File.write(output_path, output)
     when "scss"
-      output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
-      output_path = modify_extension(output_path)
-      FileUtils.mkdir_p(File.dirname(output_path))
       Kernel.system("sass --style=compressed --cache-location='#{OUTPUT_PATHS[language]}/.sass-cache' '#{path}':'#{output_path}'")
     when "ts"
-      output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
-      output_path = modify_extension(output_path)
-      output_dir = File.dirname(output_path)
-      FileUtils.mkdir_p(File.dirname(output_path))
       Kernel.system("tsc --strictNullChecks --noImplicitAny -t ES6 #{path} --outDir #{output_dir} --module commonjs")
     when "css", "rb", "cgi", "js"
-      output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
-      FileUtils.mkdir_p(File.dirname(output_path))
       FileUtils.copy(path, output_path)
     end
   end
