@@ -37,7 +37,7 @@ npm install
 
 なお、この生成スクリプトは、TypeScript ファイルに対して以下のようなコマンドを実行し、標準出力を変換後のパスに保存しようとします。
 ```
-browserify (変換前の絶対パス) -p [tsify -t ES6 --noImplicitAny --strictNullChecks]
+browserify (変換前の絶対パス) -p [tsify -t ES6 --strict]
 ```
 
 ### サーバーのドキュメントルートの設定

@@ -258,7 +258,7 @@ class WholeAvendiaConverter
     when "scss"
       output = `sass --style=compressed --cache-location='#{OUTPUT_PATHS[language]}/.sass-cache' '#{path}':'#{output_path}'`
     when "ts"
-      output = `browserify #{path} -p [tsify -t ES6 --noImplicitAny --strictNullChecks]`
+      output = `browserify #{path} -p [tsify -t ES6 --strict]`
       File.write(output_path, output)
     when "css", "rb", "cgi", "js"
       FileUtils.copy(path, output_path)
