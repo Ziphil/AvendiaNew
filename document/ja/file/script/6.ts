@@ -6,7 +6,7 @@ import * as query from "jquery";
 const SPEED = 700;
 const MARGIN = 50;
 
-function easeInOutQuart(x: number, t: number, b: number, c: number, d: number): number {
+export function easeInOutQuart(x: number, t: number, b: number, c: number, d: number): number {
   if ((t /= d / 2) < 1) {
     return c / 2 * t * t * t * t + b;
   } else {
@@ -14,7 +14,7 @@ function easeInOutQuart(x: number, t: number, b: number, c: number, d: number): 
   }
 }
 
-function prepare(): void {
+export function prepare(): void {
   document.querySelectorAll("a[href^=\"#\"]").forEach((element) => {
     element.addEventListener("click", (event) => {
       let target = <HTMLElement>event.target;
