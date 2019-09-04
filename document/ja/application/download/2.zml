@@ -4,7 +4,6 @@
 \html|lang="ja"|<
   \head<
     \meta|charset="UTF-8"|>
-    \script|src="../../file/script/jquery.js"|>
     \script|src="../../file/script/6.js"|>
     \link|rel="stylesheet",type="text/css",href="../../style/reset.css"|>
     \link|rel="stylesheet",type="text/css",href="../../style/3.css"|>
