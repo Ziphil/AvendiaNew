@@ -4,7 +4,6 @@
 \page|link="c"|<
   \name<シャレイア語辞典>
   \ver<>
-  \import-script|src="jquery.js"|>
   \import-script|src="2.js"|>
 
   \special>
