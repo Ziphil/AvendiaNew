@@ -5,7 +5,6 @@
   \head<
     \meta|charset="UTF-8"|>
     \meta|name="viewport",content="width=1170px"|>
-    \script|src="../../file/script/jquery.js"|>
     \script|src="../../file/script/10.js"|>
     \link|rel="stylesheet",type="text/css",href="../../style/reset.css"|>
     \link|rel="stylesheet",type="text/css",href="../../style/7.css"|>
@@ -54,9 +53,9 @@
           \div|id="second"|<00>
         >
         \div|class="button"|<
-          \input|id="undo",type="button",value="Undo",onclick="executor.undo()"|>　\input|id="redo",type="button",value="Redo",onclick="executor.redo()"|>\br>
-          \input|class="large",type="button",value="Start Game",onclick="executor.start()"|>　\input|class="large",type="button",value="Load Record",onclick="executor.load()"|>\br>
-          \button|type="button",onclick="executor.tweet()"|<Tweet>
+          \input|id="undo",type="button",value="Undo"|>　\input|id="redo",type="button",value="Redo"|>\br>
+          \input|id="start",class="large",type="button",value="Start Game"|>　\input|id="load",class="large",type="button",value="Load Record"|>\br>
+          \button|id="tweet",type="button"|<Tweet>
         >
         \div|class="check"|<
           \div<
