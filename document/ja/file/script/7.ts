@@ -519,15 +519,13 @@ export class ElementFactory {
 
 export class Executor {
 
-  context: CanvasRenderingContext2D | null;
+  context!: CanvasRenderingContext2D;
   history: History;
-  renderer: ChartRenderer | null;
+  renderer!: ChartRenderer;
   factory: ElementFactory;
 
   constructor() {
-    this.context = null;
     this.history = new History();
-    this.renderer = null;
     this.factory = new ElementFactory();
   }
 
@@ -647,7 +645,7 @@ export class Executor {
     historyDiv.setAttribute("class", "history");
     historyDiv.appendChild(table);
     chartDiv.after(historyDiv);
-    this.renderer!.render();
+    this.renderer.render();
   }
 
   execute(first: boolean): void {
@@ -655,7 +653,7 @@ export class Executor {
     let modeString = document.querySelector<HTMLInputElement>("input[name=\"mode\"]:checked")!.value;
     let mode = <HistoryMode>parseInt(modeString);
     this.history.update(input, mode);
-    this.renderer!.update(this.history);
+    this.renderer.update(this.history);
     this.factory.update(this.history);
     this.reset();
     this.start();
