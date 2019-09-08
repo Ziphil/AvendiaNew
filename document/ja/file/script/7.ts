@@ -582,7 +582,8 @@ export class Executor {
 
   prepareForms(): void {
     let parameters = this.getParameters();
-    let go = () => {
+    let outerThis = this;
+    let go = function (): void {
       if (parameters.input != undefined) {
         document.querySelector<HTMLInputElement>("#input")!.value = parameters.input;
       }
@@ -603,7 +604,7 @@ export class Executor {
         canvas.append(markerDiv, backgroundDiv);
       }
       if (parameters.input != undefined) {
-        this.execute(true);
+        outerThis.execute(true);
       }
     };
     if (parameters.number != null) {
