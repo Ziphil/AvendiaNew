@@ -261,7 +261,8 @@ class WholeAvendiaConverter
       output = `browserify #{path} -p [tsify -t ES6 --strict]`
       File.write(output_path, output)
     when "css", "rb", "cgi", "js"
-      FileUtils.copy(path, output_path)
+      output = File.read(path)
+      File.write(output_path, output)
     else
       raise StandardError.new("unknown file type")
     end
@@ -292,7 +293,7 @@ class WholeAvendiaConverter
     unless language == :ja
       remote_path = "/#{language}.#{@user}" + remote_path
     end
-    @ftp&.put(local_path, remote_path)
+    @ftp&.puttextfile(local_path, remote_path)
   end
 
   def print_normal(path, language, index, durations, result = nil)
