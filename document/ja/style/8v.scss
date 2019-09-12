@@ -28,9 +28,12 @@ $main-background: stripe-gradient(hsl($primary-hue, 30%, 25%), hsl($primary-hue,
 $card-background-color: rgba(white, 0.5);
 // 背景色 > カードのタイトル
 $card-title-background-color: hsla($secondary-hue, 100%, 92%, 0.7);
-$hovered-card-header-background-color: hsla($hovered-hue, 85%, 92%, 0.7);
+$hovered-card-title-background-color: hsla($hovered-hue, 85%, 92%, 0.7);
 // 背景色 > 概要
 $introduction-background-color: hsla($secondary-hue, 100%, 92%, 0.7);
+// 背景色 > アイコン
+$icon-background-color: hsla($secondary-hue, 100%, 92%, 0.6);
+$hovered-icon-background-color: hsla($hovered-hue, 85%, 92%, 0.6);
 
 // テキスト色 > ページタイトル
 $title-color: rgba(white, 0.4);

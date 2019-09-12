@@ -209,7 +209,7 @@ div.top {
   }
 
   div.card a.item:hover div.title {
-    background-color: multiply-alpha($hovered-card-header-background-color, 1.25);
+    background-color: multiply-alpha($hovered-card-title-background-color, 1.25);
   }
 
   div.card a.item div.title div.japanese {
@@ -598,13 +598,13 @@ div.other {
     font-size: $icon-font-size;
     text-decoration: none;
     text-align: center;
-    color: $card-title-background-color;
+    color: $icon-background-color;
     flex: 0 0 $icon-font-size;
     transition: color 0.2s ease-in-out;
   }
 
   div.content div.contact div.table div.row a.icon:hover {
-    color: multiply-alpha($hovered-card-header-background-color, 1.25);
+    color: multiply-alpha($hovered-icon-background-color, 1.25);
   }
 
   div.content div.contact div.table div.row a.icon.twitter::before {
