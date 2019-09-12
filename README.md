@@ -41,7 +41,7 @@ browserify (変換前の絶対パス) -p [tsify -t ES6 --strict]
 ### 各種設定
 変換したファイルの出力先やリモートサーバーのログイン情報などを設定しておく必要があります。
 以下の様式の JSON ファイルを `config/config.json` として保存してください。
-```json
+```jsonc
 {
   "server": {
     "host": "********",  // サーバーのホスト名
