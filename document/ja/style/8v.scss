@@ -25,12 +25,12 @@ $hovered-hue: 110;
 $main-background: stripe-gradient(hsl($primary-hue, 30%, 25%), hsl($primary-hue, 30%, 26%), -45deg, 10px);
 
 // 背景色 > カード
-$card-background-color: rgba(white, 0.4);
+$card-background-color: rgba(white, 0.5);
 // 背景色 > カードのタイトル
-$card-title-background-color: hsla($secondary-hue, 100%, 90%, 0.6);
-$hovered-card-header-background-color: hsla($hovered-hue, 90%, 90%, 0.6);
+$card-title-background-color: hsla($secondary-hue, 100%, 92%, 0.7);
+$hovered-card-header-background-color: hsla($hovered-hue, 85%, 92%, 0.7);
 // 背景色 > 概要
-$introduction-background-color: hsla($secondary-hue, 100%, 90%, 0.6);
+$introduction-background-color: hsla($secondary-hue, 100%, 92%, 0.7);
 
 // テキスト色 > ページタイトル
 $title-color: rgba(white, 0.4);
@@ -41,20 +41,22 @@ $card-color: black;
 // テキスト色 > カードのタイトル
 $card-title-color: black;
 // テキスト色 > カードのタイトルのシャレイア語表記
-$card-title-shaleian-color: rgba(white, 0.3);
+$card-title-shaleian-color: rgba(white, 0.2);
 // テキスト色 > 概要のヘッダ
 $introduction-header-color: hsl($primary-hue, 30%, 35%);
 // テキスト色 > 概要の説明
 $explanation-color: black;
 // テキスト色 > 概要のサンプルテキスト
 $sample-color: rgba(white, 0.6);
+// テキスト色 > 単語数
+$count-color: hsla($secondary-hue, 100%, 92%, 0.6);
 // テキスト色 > その他のヘッダ
 $other-header-color: rgba(white, 0.6);
 // テキスト色 > その他
 $other-color: rgba(white, 0.6);
 // テキスト色 > リンク
-$link-color: hsla($secondary-hue, 100%, 90%, 0.6);
-$hovered-link-color: hsla($hovered-hue, 90%, 90%, 0.6);
+$link-color: hsla($secondary-hue, 100%, 92%, 0.6);
+$hovered-link-color: hsla($hovered-hue, 85%, 92%, 0.6);
 
 // 罫線色 > 区切り線
 $separator-border-color: hsla($secondary-hue, 100%, 90%, 0.3);
@@ -105,12 +107,8 @@ $tip-size: 20px;
 // その他
 $small-smartphone-ratio: 0.8;
 
-// フィルタ > タイトル
-$title-filter: drop-shadow(0px 2px 3px rgba($title-color, 0.4));
-// フィルタ > ボックス
-$box-filter: drop-shadow(0px 4px 6px rgba($card-background-color, 0.4));
-// フィルタ > 小さめのボックス
-$small-box-filter: drop-shadow(0px 2px 3px rgba($card-background-color, 0.4));
+// 影 > ボックス
+$box-shadow: 0px 4px 8px rgba($card-background-color, 0.2);
 
 // フォントファミリー
 $serif-font-family: "Times New Roman", "Times", "IPA P明朝", "IPAex明朝", "YuMincho", "Yu Mincho", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;

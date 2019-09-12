@@ -48,7 +48,6 @@ div.top {
     font-family: $special-font-family;
     font-size: $title-font-size;
     color: $title-color;
-    filter: $title-filter;
     @include small-smartphone {
       font-size: $title-font-size * $small-smartphone-ratio;
     }
@@ -108,7 +107,7 @@ div.top {
     color: $card-color;
     text-decoration: none;
     border-radius: $card-border-radius;
-    filter: $box-filter;
+    box-shadow: $box-shadow;
     display: block;
   }
 
@@ -269,7 +268,6 @@ div.top {
     height: 0px;
     border: $tip-size solid;
     border-color: $introduction-background-color transparent transparent transparent;
-    filter: $small-box-filter;
   }
 
 }
@@ -281,7 +279,7 @@ div.introduction {
   margin: 0px;
   padding: 0px;
   background: $introduction-background-color;
-  filter: $box-filter;
+  box-shadow: $box-shadow;
   box-sizing: border-box;
 
   div.header {
@@ -380,6 +378,7 @@ div.introduction {
     padding-left: 50px;
     padding-right: calc((100% - #{$main-width}) / 2);
     border-radius: $sample-border-radius 0px 0px $sample-border-radius;
+    box-shadow: $box-shadow inset;
     background: $main-background;
     background-attachment: fixed;
     flex: 5;
@@ -483,7 +482,6 @@ div.other {
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: $small-box-filter;
   }
 
   div.content div.separator::before,
@@ -537,9 +535,8 @@ div.other {
   div.content div.count div.table div.number {
     font-family: $special-font-family;
     font-size: $count-font-size;
-    color: $introduction-background-color;
+    color: $count-color;
     text-align: right;
-    filter: $small-box-filter;
     @include small-smartphone {
       font-size: $count-font-size * $small-smartphone-ratio;
     }
@@ -603,7 +600,6 @@ div.other {
     text-align: center;
     color: $card-title-background-color;
     flex: 0 0 $icon-font-size;
-    filter: $small-box-filter;
     transition: color 0.2s ease-in-out;
   }
 
