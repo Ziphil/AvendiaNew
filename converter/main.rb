@@ -83,15 +83,15 @@ class AvendiaConverter < ZenithalConverter
     return (self.deepness.between?(1, 2) && @path =~ /index\.zml/) ? "content-table" : "main"
   end
   
-  def online_url
+  def remote_url
     document_path = CONFIG.document_dir(@language)
-    domain = CONFIG.online_domain(@language)
+    domain = CONFIG.remote_domain(@language)
     url = @path.gsub(document_path, domain).gsub(/\.zml$/, ".html")
     return url
   end
 
-  def online_domain
-    domain = CONFIG.online_domain(@language)
+  def remote_domain
+    domain = CONFIG.remote_domain(@language)
     return domain
   end
 

@@ -24,8 +24,8 @@ class AvendiaConfig
     return File.join(@json["local_domain"][language.to_s], "")
   end
 
-  def online_domain(language)
-    return File.join(@json["online_domain"][language.to_s], "")
+  def remote_domain(language)
+    return File.join(@json["remote_domain"][language.to_s], "")
   end
 
   def document_dir(language)
