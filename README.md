@@ -9,22 +9,20 @@
 ## 下準備
 
 ### Ruby の準備
-生成スクリプトは Ruby で書かれています。
-バージョン 2.5 以上の Ruby が必要です。
+生成スクリプトは [Ruby](https://www.ruby-lang.org/ja/) で書かれているため、まず最新の Ruby をインストールしてください。
+バージョン 2.5 以上であれば動くはずです。
+また、`ruby` や `gem` が呼び出せるように適切にパスを設定しておいてください。
 
-さらに、この生成スクリプトは、[zenml](https://github.com/Ziphil/Zenithal) と [listen](https://github.com/guard/listen) という gem を利用しています。
-RubyGems からインストールしてください。
+### 依存 gem のインストール
+依存している gem を管理するために [Bundler](https://bundler.io/) を用いています。
+以下のコマンドを実行し、Bundler をインストールしてください。
 ```
-gem install zenml
-gem install listen
+gem install bundler
 ```
 
-### SASS/SCSS 処理系の準備
-適当な [SASS/SCSS](https://sass-lang.com/) の処理系をインストールし、それを実行できるようにパスの設定などをしてください。
-
-なお、この生成スクリプトは、SCSS ファイルに対して以下のコマンドを実行しようとします。
+さらに、依存している gem をインストールするため、ディレクトリトップで以下のコマンドを実行してください。
 ```
-sass --style=compressed --cache-location='(サーバールート)/.sass-cache' '(変換前の絶対パス)':'(変換後の絶対パス)'
+bundle install
 ```
 
 ### npm モジュールとしての準備
@@ -55,11 +53,11 @@ browserify (変換前の絶対パス) -p [tsify -t ES6 --strict]
 ## 生成
 サイトの全てのページを出力ディレクトリに生成するには、以下のコマンドを実行してください。
 ```
-ruby converter/main.rb
+bundle exec ruby converter/main.rb
 ```
 生成と同時にファイルをサーバーにアップロードしたいときは、オプション `-u` を付けてください。
 ```
-ruby converter/main.rb -u
+bundle exec ruby converter/main.rb -u
 ```
 
 内容を変更したページのみを自動で生成したいときは、オプション `-s` を付けてください。
@@ -68,20 +66,23 @@ ruby converter/main.rb -u
 全てのページもしくは変更したページではなく、ある特定のページのみを生成したい場合は、以下のコマンドを実行してください。
 ファイルのパスは空白区切りで複数指定することができます。
 ```
-ruby converter/main.rb (ファイル名の絶対パス)
+bundle exec ruby converter/main.rb (ファイル名の絶対パス)
 ```
 この場合も、生成と同時にファイルをサーバーにアップロードしたいときは、オプション `-u` を付けてください。
 ```
-ruby converter/main.rb -u (ファイル名の絶対パス)
+bundle exec ruby converter/main.rb -u (ファイル名の絶対パス)
 ```
 
 以下のコマンドによって、特定のファイルを更新したことをスクリプトに通知し、そのことを更新履歴として記録できます。
 記録された更新履歴は、ページ原稿中に特定のタグを入れることで表示させることができます。
 ただし、このコマンドは更新履歴データを更新するだけなので、実際のページに表示される履歴を更新したい場合は、そのページを別途再生成する必要があります。
 ```
-ruby converter/main.rb -l (ファイル名の絶対パス)
+bundle exec ruby converter/main.rb -l (ファイル名の絶対パス)
 ```
 更新履歴は、`log/ja.txt` もしくは `log/en.txt` として最大 1000 件まで保存されます。
+
+変換中のエラーログは `log/error.txt` に保存されます。
+変換中にエラーが発生したファイルは、コンソールに出力されるログにおいて黄背景で表示されます。
 
 ## 注意点
 
