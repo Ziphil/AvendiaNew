@@ -6,7 +6,7 @@ export function prepare(): void {
   element.addEventListener("keyup", (event) => {
     let text = element.value;
     let nextText = convert(text);
-    if (text != nextText) {
+    if (text !== nextText) {
       element.value = nextText;
     }
   });

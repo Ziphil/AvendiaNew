@@ -1,7 +1,7 @@
 //
 
 
-const DICTIONARY_URL = "conlang/database/1.cgi"
+const DICTIONARY_URL = "conlang/database/1.cgi";
 
 type DayType = {current: 0, difference: number};
 
@@ -14,7 +14,7 @@ export function prepare(): void {
 export function fetch<M extends keyof DayType>(query: string, mode: M, day: DayType[M]): void {
   let request = new XMLHttpRequest();
   let url = DICTIONARY_URL + "?mode=fetch";
-  if (mode == "current") {
+  if (mode === "current") {
     url += "&type=1";
   } else {
     url += "&type=3";
@@ -23,10 +23,10 @@ export function fetch<M extends keyof DayType>(query: string, mode: M, day: DayT
   request.open("GET", url, true);
   request.send(null);
   request.addEventListener("readystatechange", (event) => {
-    if (request.readyState == 4 && request.status == 200) {
+    if (request.readyState === 4 && request.status === 200) {
       let result = request.responseText;
       let element = document.querySelector(query);
-      if (element != null) {
+      if (element !== null) {
         element.textContent = result;
       }
     }

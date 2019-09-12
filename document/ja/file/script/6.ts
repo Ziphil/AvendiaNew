@@ -21,9 +21,9 @@ export function prepare(): void {
       let href = target.getAttribute("href");
       let position = 0;
       let maxPosition = query(document).height()! - query(window).height()!;
-      if (href != null && href != "#" && href != "#top") {
+      if (href !== null && href !== "#" && href !== "#top") {
         let after = document.getElementById(href.slice(1));
-        if (after != null) {
+        if (after !== null) {
           position = query(after).offset()!.top - query("div.navigation").height()! - MARGIN;
         }
       }

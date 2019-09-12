@@ -9,11 +9,11 @@ type WordMark = 0 | 1 | null;
 
 export class WordEntry {
 
-  english: string;
-  japanese: string;
-  mark: WordMark;
+  public english: string;
+  public japanese: string;
+  public mark: WordMark;
 
-  constructor(english: string, japanese: string) {
+  public constructor(english: string, japanese: string) {
     this.english = english;
     this.japanese = japanese;
     this.mark = null;
@@ -24,40 +24,39 @@ export class WordEntry {
 
 export class WordManager {
 
-  entries: WordEntry[];
+  public entries: Array<WordEntry>;
 
-  constructor() {
+  public constructor() {
     this.entries = [];
   }
 
-  append(text: string): void {
+  public append(text: string): void {
     let splitText = text.split(/\r\n|\r|\n/);
-    for (let i = 0 ; i < splitText.length ; i ++) {
-      let line = splitText[i];
+    for (let line of splitText) {
       let match = line.match(/^\s*(.+?)\s*,\s*(.+)\s*$/m);
-      if (match != null) {
+      if (match !== null) {
         let entry = new WordEntry(match[1], match[2]);
         this.entries.push(entry);
       }
     }
     this.shuffle();
   }
-  
-  shuffle(): void {
+
+  public shuffle(): void {
     let entries = this.entries;
     for (let i = entries.length - 1 ; i > 0 ; i --) {
       let j = Math.floor(Math.random() * (i + 1));
-      var temporary = entries[i];
+      let temporary = entries[i];
       entries[i] = entries[j];
       entries[j] = temporary;
     }
   }
 
-  get(index: number): WordEntry | undefined {
+  public get(index: number): WordEntry | undefined {
     return this.entries[index];
   }
 
-  get length(): number {
+  public get length(): number {
     return this.entries.length;
   }
 
@@ -66,48 +65,48 @@ export class WordManager {
 
 export class Executor {
 
-  manager: WordManager;
-  request: XMLHttpRequest | null;
-  count: number;
+  private manager: WordManager;
+  private request: XMLHttpRequest | null;
+  private count: number;
 
-  constructor() {
+  public constructor() {
     this.manager = new WordManager();
     this.request = null;
     this.count = 0;
   }
 
-  prepare() {
+  public prepare(): void {
     this.prepareDocument();
     this.prepareElements();
     this.prepareButtons();
   }
 
-  prepareDocument(): void {
+  private prepareDocument(): void {
     document.addEventListener("keydown", (event) => {
-      if (event.keyCode == 39) {
+      if (event.keyCode === 39) {
         let amount = (event.shiftKey) ? 2 : 1;
         this.next(amount);
-      } else if (event.keyCode == 37) {
+      } else if (event.keyCode === 37) {
         let amount = (event.shiftKey) ? 2 : 1;
         this.previous(amount);
       }
-      if (event.keyCode == 68) {
+      if (event.keyCode === 68) {
         this.mark(0);
-      } else if (event.keyCode == 65) {
+      } else if (event.keyCode === 65) {
         this.mark(1);
-      } else if (event.keyCode == 83) {
+      } else if (event.keyCode === 83) {
         this.mark(null);
       }
     });
   }
 
-  prepareElements(): void {
+  private prepareElements(): void {
     document.querySelectorAll("input[name=\"mode\"]").forEach((element) => {
       element.addEventListener("change", (event) => {
         let target = <HTMLInputElement>event.target;
         let mode = parseInt(target.value);
         let arrowDiv = document.querySelector<HTMLElement>("#arrow")!;
-        if (mode == 0) {
+        if (mode === 0) {
           arrowDiv.style.margin = "0px auto -5px auto";
           arrowDiv.style.borderTop = "30px hsl(240, 60%, 60%) solid";
           arrowDiv.style.borderRight = "50px transparent solid";
@@ -127,7 +126,7 @@ export class Executor {
     });
   }
 
-  prepareButtons(): void {
+  private prepareButtons(): void {
     document.querySelectorAll("[id^=\"previous-\"]").forEach((element) => {
       element.addEventListener("click", () => {
         let amount = parseInt(element.id.replace(/^previous-/, ""));
@@ -142,7 +141,7 @@ export class Executor {
     });
     document.querySelectorAll("[id^=\"mark-\"]").forEach((element) => {
       element.addEventListener("click", () => {
-        if (element.id == "mark-null") {
+        if (element.id === "mark-null") {
           this.mark(null);
         } else {
           let mark = <WordMark>parseInt(element.id.replace(/^mark-/, ""));
@@ -161,14 +160,14 @@ export class Executor {
     });
   }
 
-  upload(): void {
+  private upload(): void {
     let manager = new WordManager();
     let files = document.querySelector<HTMLInputElement>("#file")!.files || new FileList();
     for (let file of files) {
       let reader = new FileReader();
       reader.addEventListener("load", (event) => {
         let result = reader.result;
-        if (typeof result == "string") {
+        if (typeof result === "string") {
           manager.append(result);
           this.updateMain(true);
           this.updateMark();
@@ -182,7 +181,7 @@ export class Executor {
     this.manager = manager;
   }
 
-  createList(): void {
+  private createList(): void {
     let manager = this.manager;
     let table = document.querySelector("#list")!;
     table.textContent = null;
@@ -209,7 +208,7 @@ export class Executor {
     }
   }
 
-  updateMain(increment: boolean): void {
+  private updateMain(increment: boolean): void {
     let manager = this.manager;
     let index = this.index;
     let status = (this.count + 1) % 2;
@@ -219,8 +218,8 @@ export class Executor {
     let japaneseDiv = document.querySelector("#japanese")!;
     let pronunciationDiv = document.querySelector("#pronunciation")!;
     if (entry) {
-      if (status == 0) {
-        if (mode == 0) {
+      if (status === 0) {
+        if (mode === 0) {
           englishDiv.textContent = entry.english;
           japaneseDiv.textContent = "";
           pronunciationDiv.textContent = "　";
@@ -244,7 +243,7 @@ export class Executor {
     denominatorDiv.textContent = manager.length.toString();
   }
 
-  updateMark(): void {
+  private updateMark(): void {
     let manager = this.manager;
     let index = this.index;
     let entry = manager.get(index);
@@ -252,10 +251,10 @@ export class Executor {
     let wrongDiv = document.querySelector<HTMLElement>("#wrong-mark")!;
     if (entry) {
       let mark = entry.mark;
-      if (mark == 0) {
+      if (mark === 0) {
         correctDiv.style.display = "inline";
         wrongDiv.style.display = "none";
-      } else if (mark == 1) {
+      } else if (mark === 1) {
         correctDiv.style.display = "none";
         wrongDiv.style.display = "inline";
       } else {
@@ -268,18 +267,18 @@ export class Executor {
     }
   }
 
-  updateList(index: number): void {
+  private updateList(index: number): void {
     let manager = this.manager;
     let entry = manager.get(index);
     if (entry) {
       let mark = entry.mark;
       let markTd = document.querySelector("#entry-" + index + " .mark")!;
       let textTd = document.querySelector("#entry-" + index + " .text")!;
-      if (mark == 0) {
+      if (mark === 0) {
         markTd.textContent = "\uF009";
         markTd.setAttribute("class", "mark correct");
         textTd.setAttribute("class", "text correct");
-      } else if (mark == 1) {
+      } else if (mark === 1) {
         markTd.textContent = "\uF00A";
         markTd.setAttribute("class", "mark wrong");
         textTd.setAttribute("class", "text wrong");
@@ -291,7 +290,7 @@ export class Executor {
     }
   }
 
-  previous(amount: number = 1): void {
+  private previous(amount: number = 1): void {
     if (this.count > 0) {
       this.count -= amount;
       if (this.count <= 0) {
@@ -304,7 +303,7 @@ export class Executor {
     }
   }
 
-  next(amount: number = 1): void {
+  private next(amount: number = 1): void {
     if (this.count < this.manager.length * 2) {
       this.count += amount;
       if (this.count >= this.manager.length * 2) {
@@ -317,7 +316,7 @@ export class Executor {
     }
   }
 
-  jump(count: number): void {
+  private jump(count: number): void {
     if (count >= 0 && count <= this.manager.length * 2) {
       this.count = count;
       this.updateMain(false);
@@ -327,7 +326,7 @@ export class Executor {
     }
   }
 
-  shuffle(): void {
+  private shuffle(): void {
     let result = confirm("リストの順番をシャッフルしますか?");
     if (result) {
       this.count = 0;
@@ -338,7 +337,7 @@ export class Executor {
     }
   }
 
-  reflesh(): void {
+  private reflesh(): void {
     let result = confirm("マーカーを全て削除しますか?");
     if (result) {
       this.count = 0;
@@ -351,7 +350,7 @@ export class Executor {
     }
   }
 
-  mark(mark: WordMark): void {
+  private mark(mark: WordMark): void {
     let manager = this.manager;
     let index = this.index;
     let entry = manager.get(index);
@@ -360,9 +359,9 @@ export class Executor {
       this.updateMark();
       this.updateList(index);
       if (document.querySelector<HTMLInputElement>("#enable-sound")!.checked) {
-        if (mark == 0) {
+        if (mark === 0) {
           document.querySelector<HTMLMediaElement>("#correct-sound")!.play();
-        } else if (mark == 1) {
+        } else if (mark === 1) {
           document.querySelector<HTMLMediaElement>("#wrong-sound")!.play();
         }
       }
@@ -371,7 +370,7 @@ export class Executor {
     }
   }
 
-  toggleList(): void {
+  private toggleList(): void {
     if (document.querySelector<HTMLInputElement>("#show-list")!.checked) {
       document.querySelector("#list-wrapper")!.setAttribute("class", "list shown");
     } else {
@@ -379,7 +378,7 @@ export class Executor {
     }
   }
 
-  fetchPronunciations(word: string, element: HTMLElement): void {
+  private fetchPronunciations(word: string, element: HTMLElement): void {
     let previousRequest = this.request;
     if (previousRequest) {
       previousRequest.abort();
@@ -389,17 +388,17 @@ export class Executor {
     request.open("GET", url, true);
     request.send(null);
     request.addEventListener("readystatechange", (event) => {
-      if (request.readyState == 4 && request.status == 200) {
+      if (request.readyState === 4 && request.status === 200) {
         let html = request.responseText;
         let regexp = new RegExp(PRONUNCIATION_REGEXP, "g");
-        let pronunciations = <string[]>[];
+        let pronunciations = <Array<string>>[];
         let match = <RegExpExecArray | null>null;
-        while ((match = regexp.exec(html)) != null) {
+        while ((match = regexp.exec(html)) !== null) {
           pronunciations.push(match[1]);
         }
         if (pronunciations.length > 0) {
           pronunciations = pronunciations.filter((pronunciation, index, self) => {
-            return self.indexOf(pronunciation) == index;
+            return self.indexOf(pronunciation) === index;
           });
           element.textContent = pronunciations.join(", ");
         } else {
@@ -410,7 +409,7 @@ export class Executor {
     this.request = request;
   }
 
-  get index(): number {
+  private get index(): number {
     return Math.floor((this.count + 1) / 2) - 1;
   }
 

@@ -39,7 +39,7 @@ const COLOR_NAMES = ["grey", "brown", "green", "cyan", "blue", "yellow", "orange
 
 const TWITTER_WIDTH = 560;
 const TWITTER_HEIGHT = 320;
-const TWITTER_MESSAGE = "My weblio vocabulary rating is now %r (%c)!"
+const TWITTER_MESSAGE = "My weblio vocabulary rating is now %r (%c)!";
 const TWITTER_HASHTAG = "WeblioRating";
 
 const INTERVAL = 50;
@@ -52,7 +52,7 @@ type Coordinates = {x: number, y: number};
 
 
 export interface Parameter {
-  
+
   input: string | undefined;
   number: string | null;
   mode: number;
@@ -62,14 +62,14 @@ export interface Parameter {
 
 export class HistoryEntry {
 
-  date: Date;
-  score: number;
-  rating: number;
-  x: number;
-  y: number;
-  firstIndex: number;
+  public date: Date;
+  public score: number;
+  public rating: number;
+  public x: number;
+  public y: number;
+  public firstIndex: number;
 
-  constructor(date: Date, score: number, firstIndex: number) {
+  public constructor(date: Date, score: number, firstIndex: number) {
     this.date = date;
     this.score = score;
     this.rating = 0;
@@ -83,14 +83,14 @@ export class HistoryEntry {
 
 export class History {
 
-  entries: HistoryEntry[];
-  minRating: number;
-  maxRating: number;
-  minDate: Date;
-  maxDate: Date;
-  mode: HistoryMode;
+  public entries: Array<HistoryEntry>;
+  private minRating: number;
+  private maxRating: number;
+  private minDate: Date;
+  private maxDate: Date;
+  public mode: HistoryMode;
 
-  constructor() {
+  public constructor() {
     this.entries = [];
     this.minRating = OVERALL_MAX_RATING;
     this.maxRating = OVERALL_MAX_RATING;
@@ -99,14 +99,14 @@ export class History {
     this.mode = 0;
   }
 
-  update(text: string, mode: HistoryMode): void {
+  public update(text: string, mode: HistoryMode): void {
     let splitText = text.split(/\r\n|\r|\n/);
     this.entries = [];
     this.mode = mode;
     for (let i = 0 ; i < splitText.length ; i ++) {
       let line = splitText[i];
       let match = line.match(/^\s*(\d+)\/(\d+)\/(\d+)\s*,\s*(\d+(?:\.\d+)?)\s*$/m);
-      if (match != null) {
+      if (match !== null) {
         let year = parseInt(match[1]);
         let month = parseInt(match[2]);
         let day = parseInt(match[3]);
@@ -132,7 +132,7 @@ export class History {
     this.calculateCoordinates();
   }
 
-  calculateRating(): void {
+  private calculateRating(): void {
     let entries = this.entries;
     for (let i = 0 ; i < entries.length ; i ++) {
       let num = 0;
@@ -148,7 +148,7 @@ export class History {
     }
   }
 
-  calculateMinMaxRating(): void {
+  private calculateMinMaxRating(): void {
     let minRating = OVERALL_MAX_RATING;
     let maxRating = OVERALL_MIN_RATING;
     for (let entry of this.entries) {
@@ -163,7 +163,7 @@ export class History {
     this.maxRating = Math.min(maxRating + 10, OVERALL_MAX_RATING);
   }
 
-  calculateMinMaxDate(): void {
+  private calculateMinMaxDate(): void {
     let minDate = OVERALL_MAX_DATE;
     let maxDate = OVERALL_MIN_DATE;
     for (let entry of this.entries) {
@@ -178,7 +178,7 @@ export class History {
     this.maxDate = maxDate;
   }
 
-  calculateCoordinates(): void {
+  private calculateCoordinates(): void {
     let entries = this.entries;
     for (let i = 0 ; i < entries.length ; i ++) {
       let rating = entries[i].rating;
@@ -187,9 +187,9 @@ export class History {
     }
   }
 
-  x(index: number): number {
+  public x(index: number): number {
     let entries = this.entries;
-    if (this.mode == 0) {
+    if (this.mode === 0) {
       let length = entries.length;
       if (length > 1) {
         return (CHART_WIDTH - CHART_MARGIN * 2) / (length - 1) * index + CHART_MARGIN + CHART_OFFSET_LEFT;
@@ -207,11 +207,11 @@ export class History {
     }
   }
 
-  y(value: number): number {
+  public y(value: number): number {
     return CHART_HEIGHT - (value - this.minRating) / (this.maxRating - this.minRating) * CHART_HEIGHT + CHART_OFFSET_TOP;
   }
 
-  static scaling(value: number): number {
+  private static scaling(value: number): number {
     if (SCALING_CONSTANT > 0) {
       return 2 ** (value / SCALING_CONSTANT);
     } else {
@@ -219,7 +219,7 @@ export class History {
     }
   }
 
-  static inverseScaling(value: number): number {
+  private static inverseScaling(value: number): number {
     if (SCALING_CONSTANT > 0) {
       return Math.log(value) / Math.log(2) * SCALING_CONSTANT;
     } else {
@@ -227,7 +227,7 @@ export class History {
     }
   }
 
-  static correction(round: number, value: number): number {
+  private static correction(round: number, value: number): number {
     let num = 0;
     let denom = 0;
     for (let i = 0 ; i < round + 1 ; i ++) {
@@ -240,7 +240,7 @@ export class History {
     return correction;
   }
 
-  static colorIndex(rating: number): number {
+  public static colorIndex(rating: number): number {
     return Math.min(Math.floor(rating / COLOR_SPAN), COLOR_SIZE - 1);
   }
 
@@ -249,15 +249,15 @@ export class History {
 
 export class ChartRenderer {
 
-  context: CanvasRenderingContext2D;
-  history: History;
-  mouse: Coordinates;
-  nearestIndex: number;
-  previousIndex: number | null;
-  particles: {index: number, createdTime: number}[];
-  timerSet: boolean;
+  public context: CanvasRenderingContext2D;
+  public history: History;
+  public mouse: Coordinates;
+  public nearestIndex: number;
+  public previousIndex: number | null;
+  public particles: Array<{index: number, createdTime: number}>;
+  private timerSet: boolean;
 
-  constructor(context: CanvasRenderingContext2D) {
+  public constructor(context: CanvasRenderingContext2D) {
     this.context = context;
     this.history = new History();
     this.mouse = {x: 0, y: 0};
@@ -266,21 +266,21 @@ export class ChartRenderer {
     this.particles = [];
     this.timerSet = false;
     this.context.canvas.addEventListener("mousemove", (event) => {
-      let target = <HTMLElement>event.target
+      let target = <HTMLElement>event.target;
       let rect = target.getBoundingClientRect();
       this.mouse.x = event.clientX - rect.left;
       this.mouse.y = event.clientY - rect.top;
     });
   }
 
-  update(history: History): void {
+  public update(history: History): void {
     this.history = history;
     this.nearestIndex = history.entries.length - 1;
     this.previousIndex = null;
     this.particles = [];
   }
 
-  render(): void {
+  public render(): void {
     if (!this.timerSet) {
       setInterval(this.render.bind(this), INTERVAL);
       this.timerSet = true;
@@ -301,12 +301,12 @@ export class ChartRenderer {
     }
   }
 
-  clearCanvas(): void {
+  private clearCanvas(): void {
     let context = this.context;
     context.clearRect(0, 0, context.canvas.width, context.canvas.height);
   }
 
-  makeClipPath(): void {
+  private makeClipPath(): void {
     let context = this.context;
     context.beginPath();
     context.arc(CHART_OFFSET_LEFT + CHART_BORDER_RADIUS, CHART_OFFSET_TOP + CHART_BORDER_RADIUS, CHART_BORDER_RADIUS, -Math.PI, -Math.PI / 2, false);
@@ -316,7 +316,7 @@ export class ChartRenderer {
     context.closePath();
   }
 
-  renderBackground(): void {
+  private renderBackground(): void {
     let context = this.context;
     let history = this.history;
     for (let i = COLOR_SIZE - 1 ; i >= 0 ; i --) {
@@ -331,20 +331,20 @@ export class ChartRenderer {
     }
   }
 
-  calculateNearestIndex(): void {
+  private calculateNearestIndex(): void {
     let entries = this.history.entries;
     let currentDate = new Date();
     let minDistance = null;
     let nearestIndex = null;
     for (let i = 0 ; i < entries.length ; i ++) {
       let distance = (entries[i].x - this.mouse.x) ** 2 + (entries[i].y - this.mouse.y) ** 2;
-      if (distance < POPUP_DISTANCE && (minDistance == null || distance < minDistance)) {
+      if (distance < POPUP_DISTANCE && (minDistance === null || distance < minDistance)) {
         minDistance = distance;
         nearestIndex = i;
       }
     }
-    if (nearestIndex != null) {
-      if (nearestIndex != this.nearestIndex && nearestIndex != this.previousIndex) {
+    if (nearestIndex !== null) {
+      if (nearestIndex !== this.nearestIndex && nearestIndex !== this.previousIndex) {
         this.particles.push({index: nearestIndex, createdTime: currentDate.getTime()});
       }
       this.nearestIndex = nearestIndex;
@@ -352,7 +352,7 @@ export class ChartRenderer {
     this.previousIndex = nearestIndex;
   }
 
-  renderLine(): void {
+  private renderLine(): void {
     let context = this.context;
     let entries = this.history.entries;
     for (let i = 1 ; i < entries.length ; i ++) {
@@ -365,7 +365,7 @@ export class ChartRenderer {
     }
   }
 
-  renderParticles(): void {
+  private renderParticles(): void {
     let context = this.context;
     let entries = this.history.entries;
     let currentDate = new Date();
@@ -389,13 +389,13 @@ export class ChartRenderer {
     context.globalAlpha = 1;
   }
 
-  renderMarker(): void {
+  private renderMarker(): void {
     let context = this.context;
     let entries = this.history.entries;
     for (let j = 0 ; j < entries.length ; j ++) {
-      let i = (j < this.nearestIndex) ? j : (j < entries.length - 1) ? j + 1 : this.nearestIndex; 
+      let i = (j < this.nearestIndex) ? j : (j < entries.length - 1) ? j + 1 : this.nearestIndex;
       let rating = entries[i].rating;
-      let radius = (i == this.nearestIndex) ? LARGE_MARKER_SIZE : MARKER_SIZE;
+      let radius = (i === this.nearestIndex) ? LARGE_MARKER_SIZE : MARKER_SIZE;
       let borderWidth = MARKER_BORDER_WIDTH;
       context.fillStyle = ChartRenderer.getStyleValue(".chart-line", "color")!;
       context.beginPath();
@@ -408,7 +408,7 @@ export class ChartRenderer {
     }
   }
 
-  renderAxis(): void {
+  private renderAxis(): void {
     let context = this.context;
     let history = this.history;
     for (let i = 0 ; i < COLOR_SIZE - 1 ; i ++) {
@@ -423,7 +423,7 @@ export class ChartRenderer {
     }
   }
 
-  renderRating(): void {
+  private renderRating(): void {
     let context = this.context;
     let entries = this.history.entries;
     let index = this.nearestIndex;
@@ -437,7 +437,7 @@ export class ChartRenderer {
     context.textAlign = "left";
     context.textBaseline = "alphabetic";
     context.fillText(ElementFactory.createDateString(entries[index].date), CHART_OFFSET_LEFT + 10, CHART_OFFSET_TOP - 10);
-    if (index == entries.length - 1) {
+    if (index === entries.length - 1) {
       context.font = ChartRenderer.getStyleValue(".chart-message", "font")!;
       context.textAlign = "left";
       context.textBaseline = "alphabetic";
@@ -445,9 +445,9 @@ export class ChartRenderer {
     }
   }
 
-  static getStyleValue(query: string, property: string): string | null {
+  public static getStyleValue(query: string, property: string): string | null {
     let element = document.querySelector<HTMLElement>(query);
-    if (element != null) {
+    if (element !== null) {
       let value = window.getComputedStyle(element).getPropertyValue(property);
       return value;
     } else {
@@ -460,17 +460,17 @@ export class ChartRenderer {
 
 export class ElementFactory {
 
-  history: History;
+  private history: History;
 
-  constructor() {
+  public constructor() {
     this.history = new History();
   }
 
-  update(history: History): void {
+  public update(history: History): void {
     this.history = history;
   }
 
-  create(): HTMLElement {
+  public create(): HTMLElement {
     let entries = this.history.entries;
     let table = document.createElement("table");
     for (let i = 0 ; i < entries.length ; i ++) {
@@ -496,15 +496,15 @@ export class ElementFactory {
     return table;
   }
 
-  static createTd(text: string, clazz: string, rating?: number): HTMLElement {
+  private static createTd(text: string, clazz: string, rating?: number): HTMLElement {
     let td = document.createElement("td");
-    let properClass = (rating == undefined) ? clazz : clazz + " marker-" + History.colorIndex(rating);
+    let properClass = (rating === undefined) ? clazz : clazz + " marker-" + History.colorIndex(rating);
     td.setAttribute("class", properClass);
     td.textContent = text;
     return td;
   }
 
-  static createDateString(date: Date): string {
+  public static createDateString(date: Date): string {
     let string = "";
     string += ("000" + date.getFullYear()).slice(-4);
     string += "/";
@@ -519,21 +519,21 @@ export class ElementFactory {
 
 export class Executor {
 
-  context!: CanvasRenderingContext2D;
-  history: History;
-  renderer!: ChartRenderer;
-  factory: ElementFactory;
+  private context!: CanvasRenderingContext2D;
+  private history: History;
+  private renderer!: ChartRenderer;
+  private factory: ElementFactory;
 
-  constructor() {
+  public constructor() {
     this.history = new History();
     this.factory = new ElementFactory();
   }
 
-  getItem(keys: string[]): string | undefined {
-    let value = undefined;
+  private getItem(keys: Array<string>): string | undefined {
+    let value;
     for (let key of keys) {
       let candidate = localStorage.getItem(key);
-      if (candidate != null && candidate != undefined) {
+      if (candidate !== null && candidate !== undefined) {
         value = candidate;
         break;
       }
@@ -541,56 +541,56 @@ export class Executor {
     return value;
   }
 
-  setItem(key: string, value: string, option?: any): void {
+  private setItem(key: string, value: string, option?: any): void {
     localStorage.setItem(key, value);
   }
 
-  getParameters(): Parameter {
+  private getParameters(): Parameter {
     let input = this.getItem(["randomizer_input", "input"]);
     let number = null;
     let modeString = this.getItem(["randomizer_mode", "mode"]);
-    let mode = (modeString != null) ? parseInt(modeString) : null;
+    let mode = (modeString !== undefined) ? parseInt(modeString) : null;
     let pairs = location.search.substring(1).split("&");
     for (let pair of pairs) {
       let match = <RegExpMatchArray | null>null;
-      if ((match = pair.match(/input=(.+)/)) != null) {
+      if ((match = pair.match(/input=(.+)/)) !== null) {
         input = decodeURIComponent(match[1]);
-      } else if ((match = pair.match(/number=(.+)/)) != null) {
+      } else if ((match = pair.match(/number=(.+)/)) !== null) {
         number = decodeURIComponent(match[1]);
-      } else if ((match = pair.match(/mode=(.+)/)) != null) {
+      } else if ((match = pair.match(/mode=(.+)/)) !== null) {
         mode = parseInt(decodeURIComponent(match[1]));
       }
     }
-    if (mode == null || Number.isNaN(mode)) {
+    if (mode === null || Number.isNaN(mode)) {
       mode = 0;
     }
-    return {input: input, number: number, mode: mode};
+    return {input, number, mode};
   }
 
-  prepare(): void {
+  public prepare(): void {
     this.prepareVariables();
     this.prepareForms();
     this.prepareButtons();
   }
 
-  prepareVariables(): void {
+  private prepareVariables(): void {
     this.context = document.querySelector<HTMLCanvasElement>("#canvas")!.getContext("2d")!;
     this.history = new History();
     this.renderer = new ChartRenderer(this.context);
     this.factory = new ElementFactory();
   }
 
-  prepareForms(): void {
+  private prepareForms(): void {
     let parameters = this.getParameters();
     let outerThis = this;
     let go = function (): void {
-      if (parameters.input != undefined) {
+      if (parameters.input !== undefined) {
         document.querySelector<HTMLInputElement>("#input")!.value = parameters.input;
       }
-      if (parameters.mode != null) {
+      if (parameters.mode !== null) {
         let modeElements = document.querySelectorAll<HTMLInputElement>("input[name=\"mode\"]");
         for (let element of modeElements) {
-          if (element.value == parameters.mode.toString()) {
+          if (element.value === parameters.mode.toString()) {
             element.checked = true;
           }
         }
@@ -603,18 +603,18 @@ export class Executor {
         backgroundDiv.setAttribute("class", "background-" + i);
         canvas.append(markerDiv, backgroundDiv);
       }
-      if (parameters.input != undefined) {
+      if (parameters.input !== undefined) {
         outerThis.execute(true);
       }
     };
-    if (parameters.number != null) {
+    if (parameters.number !== null) {
       document.querySelector<HTMLInputElement>("#input")!.value = "Loading";
       let request = new XMLHttpRequest();
       let url = INTERFACE_URL + "?mode=get&number=" + parameters.number;
       request.open("GET", url, true);
       request.send(null);
       request.addEventListener("readystatechange", (event) => {
-        if (request.readyState == 4 && request.status == 200) {
+        if (request.readyState === 4 && request.status === 200) {
           parameters.input = request.responseText;
           go();
         }
@@ -624,7 +624,7 @@ export class Executor {
     }
   }
 
-  prepareButtons(): void {
+  private prepareButtons(): void {
     document.querySelector("#execute")!.addEventListener("click", () => {
       this.execute(false);
     });
@@ -633,13 +633,13 @@ export class Executor {
     });
   }
 
-  reset(): void {
+  private reset(): void {
     for (let element of document.querySelectorAll(".content .main .history")) {
       element.remove();
     }
   }
 
-  start(): void {
+  private start(): void {
     let chartDiv = document.querySelector(".content .main .chart")!;
     let historyDiv = document.createElement("div")!;
     let table = this.factory.create();
@@ -649,7 +649,7 @@ export class Executor {
     this.renderer.render();
   }
 
-  execute(first: boolean): void {
+  private execute(first: boolean): void {
     let input = document.querySelector<HTMLInputElement>("#input")!.value;
     let modeString = document.querySelector<HTMLInputElement>("input[name=\"mode\"]:checked")!.value;
     let mode = <HistoryMode>parseInt(modeString);
@@ -664,9 +664,9 @@ export class Executor {
     }
   }
 
-  tweet() {
+  private tweet(): void {
     let entries = this.history.entries;
-    if (entries != undefined && entries.length > 0) {
+    if (entries !== undefined && entries.length > 0) {
       let input = document.querySelector<HTMLInputElement>("#input")!.value;
       let rating = entries[entries.length - 1].rating;
       let ratingString = rating.toFixed(DIGIT_SIZE);
@@ -676,7 +676,7 @@ export class Executor {
       numberRequest.open("GET", numberUrl, true);
       numberRequest.send(null);
       numberRequest.addEventListener("readystatechange", (event) => {
-        if (numberRequest.readyState == 4 && numberRequest.status == 200) {
+        if (numberRequest.readyState === 4 && numberRequest.status === 200) {
           let number = numberRequest.responseText;
           let url = location.protocol + "//" + location.host + location.pathname;
           let option = "width=" + TWITTER_WIDTH + ",height=" + TWITTER_HEIGHT + ",menubar=no,toolbar=no,scrollbars=no";
@@ -687,7 +687,7 @@ export class Executor {
           href += "&url=" + encodeURIComponent(url);
           href += "&hashtags=" + TWITTER_HASHTAG;
           let twitterRequest = new XMLHttpRequest();
-          let twitterUrl = INTERFACE_URL
+          let twitterUrl = INTERFACE_URL;
           let data = "mode=save&number=" + number + "&content=" + encodeURIComponent(input);
           twitterRequest.open("POST", twitterUrl);
           twitterRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
