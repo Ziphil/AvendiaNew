@@ -43,6 +43,10 @@ class AvendiaConfig
     return File.join(@json["output_dir"][language.to_s], "")
   end
 
+  def remote_dir(language)
+    return File.join(@json["remote_dir"][language.to_s], "")
+  end
+
   def log_path(language)
     return File.join(BASE_PATH, @json["log_path"][language.to_s])
   end

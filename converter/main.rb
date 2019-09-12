@@ -277,11 +277,8 @@ class WholeAvendiaConverter
   def upload_normal(path, language)
     local_path = path.gsub(CONFIG.document_dir(language), CONFIG.output_dir(language))
     local_path = modify_extension(local_path)
-    remote_path = path.gsub(CONFIG.document_dir(language), "")
+    remote_path = path.gsub(CONFIG.document_dir(language), CONFIG.remote_dir(language))
     remote_path = modify_extension(remote_path)
-    unless language == :ja
-      remote_path = "/#{language}.#{@user}" + remote_path
-    end
     @ftp&.puttextfile(local_path, remote_path)
   end
 
