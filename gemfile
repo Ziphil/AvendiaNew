@@ -1,11 +1,15 @@
 source 'https://rubygems.org'
 
-gem 'fileutils'
-gem 'io-console', require: 'io/console'
+gem 'bundler', require: [
+  'fileutils',
+  'io/console',
+  'net/ftp',
+  'open3',
+  'rexml/document'
+]
+
 gem 'listen'
-gem 'net-sftp', require: 'net/ftp'
 gem 'sassc'
-gem 'rexml', require: 'rexml/document'
 gem 'zenml'
 
 if Gem.win_platform?

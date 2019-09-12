@@ -258,7 +258,11 @@ class WholeAvendiaConverter
       output = SassC::Engine.new(File.read(path), option).render
       File.write(output_path, output)
     when "ts"
-      output = `browserify #{path} -p [tsify -t ES6 --strict]`
+      command = "browserify #{path} -p [tsify -t ES6 --strict]"
+      output, error_output, status = Open3.capture3(command)
+      unless status.success?
+        raise StandardError.new(error_output)
+      end
       File.write(output_path, output)
     when "css", "rb", "cgi", "js"
       output = File.read(path)
