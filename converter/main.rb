@@ -1,14 +1,9 @@
 ﻿# coding: utf-8
 
 
-require 'pp'
-require 'fileutils'
-require 'listen'
-require 'net/ftp'
-require 'io/console'
-require 'rexml/document'
-require 'sassc'
-require 'zenml'
+require 'bundler/setup'
+Bundler.require
+
 include REXML
 include Zenithal
 

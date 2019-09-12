@@ -1,6 +1,13 @@
 source 'https://rubygems.org'
 
+gem 'fileutils'
+gem 'io-console', require: 'io/console'
 gem 'listen'
+gem 'net-sftp', require: 'net/ftp'
 gem 'sassc'
-gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem 'rexml', require: 'rexml/document'
 gem 'zenml'
+
+if Gem.win_platform?
+  gem 'wdm', '>= 0.1.0'
+end
