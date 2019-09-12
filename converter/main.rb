@@ -244,10 +244,7 @@ class WholeAvendiaConverter
       File.write(output_path, output)
     when "ts"
       command = "browserify #{path} -p [tsify -t ES6 --strict]"
-      output, error_output, status = Open3.capture3(command)
-      unless status.success?
-        raise StandardError.new(error_output)
-      end
+      output = Command.exec(command)
       File.write(output_path, output)
     when "css", "rb", "cgi", "js"
       output = File.read(path)

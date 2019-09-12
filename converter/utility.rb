@@ -165,3 +165,16 @@ class String
   end
 
 end
+
+
+module Command;extend self
+
+  def exec(command)
+    output, error_output, status = Open3.capture3(command)
+    unless status.success?
+      raise StandardError.new(error_output)
+    end
+    return output
+  end
+
+end
