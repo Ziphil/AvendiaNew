@@ -167,16 +167,16 @@ end
 module SearchUtilities;extend self
 
   def paths
-    directories = ["../.."]
+    dirs = ["../.."]
     paths = []
-    directories.each do |directory|
-      entries = Dir.entries(directory)
+    dirs.each do |dir|
+      entries = Dir.entries(dir)
       entries.each do |entry|
         if /\.html/ =~ entry
-          paths << directory + "/" + entry
+          paths << dir + "/" + entry
         end
         unless /\./ =~ entry
-          directories << directory + "/" + entry
+          dirs << dir + "/" + entry
         end
       end
     end

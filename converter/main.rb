@@ -346,15 +346,15 @@ class WholeAvendiaConverter
     paths = []
     if args.empty?
       CONFIG.document_dirs.each do |language, default|
-        directories = []
-        directories << default
-        directories.each do |directory|
-          Dir.each_child(directory) do |entry|
+        dirs = []
+        dirs << default
+        dirs.each do |dir|
+          Dir.each_child(dir) do |entry|
             if entry =~ /\.\w+$/
-              paths << [File.join(directory, entry), language]
+              paths << [File.join(dir, entry), language]
             end
             unless entry =~ /\./
-              directories << File.join(directory, entry)
+              dirs << File.join(dir, entry)
             end
           end
         end
