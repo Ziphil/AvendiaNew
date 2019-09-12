@@ -1,7 +1,7 @@
 ﻿# coding: utf-8
 
 
-TEMPLATE = File.read(BASE_PATH + "/template/template.html")
+TEMPLATE = File.read(File.join(BASE_PATH, "template/template.html"))
 
 NAMES = {
   :title => {:ja => "Avendia", :en => "Avendia"},
@@ -41,6 +41,7 @@ DICTIONARY_URL = "conlang/database/1.cgi"
 
 converter.add(["page"], [""]) do |element|
   path, language = converter.path, converter.language
+  foreign_language = FOREIGN_LANGUAGES[language]
   deepness = converter.deepness
   virtual_deepness = (path =~ /index\.zml$/) ? deepness - 1 : deepness
   title = ""
@@ -164,7 +165,7 @@ converter.add(["import-script"], ["header"]) do |element|
   this << Tag.build("script") do |this|
     inner_text = element.inner_text
     if inner_text.empty?
-      this["src"] = converter.url_prefix + "file/script/" + element.attribute("src").to_s
+      this["src"] = converter.url_prefix + File.join("file/script", element.attribute("src").to_s)
     else
       this << inner_text
     end

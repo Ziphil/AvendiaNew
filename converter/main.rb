@@ -9,13 +9,13 @@ include Zenithal
 
 BASE_PATH = File.expand_path("..", File.dirname($0)).encode("utf-8")
 
-Kernel.load(BASE_PATH + "/converter/utility.rb")
-Kernel.load(BASE_PATH + "/converter/word_converter.rb")
-Kernel.load(BASE_PATH + "/converter/config.rb")
+Kernel.load(File.join(BASE_PATH, "converter/utility.rb"))
+Kernel.load(File.join(BASE_PATH, "converter/word_converter.rb"))
+Kernel.load(File.join(BASE_PATH, "converter/config.rb"))
 Encoding.default_external = "UTF-8"
 $stdout.sync = true
 
-CONFIG = AvendiaConfig.new(BASE_PATH + "/config/config.json")
+CONFIG = AvendiaConfig.new(File.join(BASE_PATH, "config/config.json"))
 
 
 class AvendiaParser < ZenithalParser
@@ -72,7 +72,7 @@ class AvendiaConverter < ZenithalConverter
   end
 
   def deepness
-    return @path.split("/").size - CONFIG.document_dir(@language).count("/") - 2
+    return @path.split("/").size - CONFIG.document_dir(@language).count("/") - 1
   end
   
   def url_prefix
@@ -86,7 +86,7 @@ class AvendiaConverter < ZenithalConverter
   def online_url
     document_path = CONFIG.document_dir(@language)
     domain = CONFIG.online_domain(@language)
-    url = path.gsub(document_path, domain).gsub(/\.zml$/, ".html")
+    url = @path.gsub(document_path, domain).gsub(/\.zml$/, ".html")
     return url
   end
 
@@ -239,7 +239,7 @@ class WholeAvendiaConverter
       option = {}
       option[:style] = :compressed
       option[:filename] = path
-      option[:cache_location] = CONFIG.output_dir(language) + "/.sass-cache"
+      option[:cache_location] = File.join(CONFIG.output_dir(language), ".sass-cache")
       output = SassC::Engine.new(File.read(path), option).render
       File.write(output_path, output)
     when "ts"
@@ -309,7 +309,7 @@ class WholeAvendiaConverter
     if result
       output << "\e[7m"
     end
-    path_array = path.gsub(CONFIG.document_dir(language) + "/", "").split("/")
+    path_array = path.gsub(CONFIG.document_dir(language), "").split("/")
     path_array.map!{|s| (s =~ /\d/) ? "%3d" % s.to_i : s.gsub("index.zml", "  @").slice(0, 3)}
     path_array.unshift(language)
     output << path_array.join(" ")
@@ -354,10 +354,10 @@ class WholeAvendiaConverter
         directories.each do |directory|
           Dir.each_child(directory) do |entry|
             if entry =~ /\.\w+$/
-              paths << [directory + "/" + entry, language]
+              paths << [File.join(directory, entry), language]
             end
             unless entry =~ /\./
-              directories << directory + "/" + entry
+              directories << File.join(directory, entry)
             end
           end
         end
@@ -373,7 +373,7 @@ class WholeAvendiaConverter
       next File.basename(path, ".*") =~ /^(\d+|index)$/
     end
     paths.sort_by! do |path, language|
-      path_array = path.gsub(CONFIG.document_dir(language) + "/", "").gsub(/\.\w+$/, "").split("/")
+      path_array = path.gsub(CONFIG.document_dir(language), "").gsub(/\.\w+$/, "").split("/")
       path_array.reject!{|s| s.include?("index")}
       path_array.map!{|s| (s.match(/^\d/)) ? s.to_i : s}
       next [path_array, language]
@@ -395,12 +395,12 @@ class WholeAvendiaConverter
     parser.brace_name = "x"
     parser.bracket_name = "xn"
     parser.slash_name = "i"
-    directory = BASE_PATH + "/macro"
+    directory = File.join(BASE_PATH, "macro")
     Dir.each_child(directory) do |entry|
       if entry.end_with?(".rb")
         binding = TOPLEVEL_BINDING
         binding.local_variable_set(:parser, parser)
-        Kernel.eval(File.read(directory + "/" + entry), binding, entry)
+        Kernel.eval(File.read(File.join(directory, entry)), binding, entry)
       end
     end
     return parser
@@ -408,12 +408,12 @@ class WholeAvendiaConverter
 
   def create_converter
     converter = AvendiaConverter.new(nil, nil, nil)
-    directory = BASE_PATH + "/template"
+    directory = File.join(BASE_PATH, "template")
     Dir.each_child(directory) do |entry|
       if entry.end_with?(".rb")
         binding = TOPLEVEL_BINDING
         binding.local_variable_set(:converter, converter)
-        Kernel.eval(File.read(directory + "/" + entry), binding, entry)
+        Kernel.eval(File.read(File.join(directory, entry)), binding, entry)
       end
     end
     return converter

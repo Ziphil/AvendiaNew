@@ -21,34 +21,34 @@ class AvendiaConfig
   end
 
   def local_domain(language)
-    return @json["local_domain"][language.to_s]
+    return File.join(@json["local_domain"][language.to_s], "")
   end
 
   def online_domain(language)
-    return @json["online_domain"][language.to_s]
+    return File.join(@json["online_domain"][language.to_s], "")
   end
 
   def document_dir(language)
-    return BASE_PATH + @json["document_dir"][language.to_s]
+    return File.join(BASE_PATH, @json["document_dir"][language.to_s], "")
   end
 
   def document_dirs
     result = @json["document_dir"].map do |language, dir|
-      next [language.intern, BASE_PATH + dir]
+      next [language.intern, File.join(BASE_PATH, dir, "")]
     end
     return result
   end
 
   def output_dir(language)
-    return @json["output_dir"][language.to_s]
+    return File.join(@json["output_dir"][language.to_s], "")
   end
 
   def log_path(language)
-    return BASE_PATH + @json["log_path"][language.to_s]
+    return File.join(BASE_PATH, @json["log_path"][language.to_s])
   end
 
   def error_log_path
-    return BASE_PATH + @json["log_path"]["error"]
+    return File.join(BASE_PATH, @json["log_path"]["error"])
   end
 
 end
