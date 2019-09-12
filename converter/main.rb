@@ -11,8 +11,11 @@ BASE_PATH = File.expand_path("..", File.dirname($0)).encode("utf-8")
 
 Kernel.load(BASE_PATH + "/converter/utility.rb")
 Kernel.load(BASE_PATH + "/converter/word_converter.rb")
+Kernel.load(BASE_PATH + "/converter/config.rb")
 Encoding.default_external = "UTF-8"
 $stdout.sync = true
+
+CONFIG = AvendiaConfig.new(BASE_PATH + "/config/config.json")
 
 
 class AvendiaParser < ZenithalParser
@@ -69,7 +72,7 @@ class AvendiaConverter < ZenithalConverter
   end
 
   def deepness
-    return @path.split("/").size - WholeAvendiaConverter::ROOT_PATHS[@language].count("/") - 2
+    return @path.split("/").size - CONFIG.document_dir(@language).count("/") - 2
   end
   
   def url_prefix
@@ -81,10 +84,15 @@ class AvendiaConverter < ZenithalConverter
   end
   
   def online_url
-    root_path = WholeAvendiaConverter::ROOT_PATHS[@language]
-    domain = WholeAvendiaConverter::DOMAINS[@language]
-    url = path.gsub(root_path, domain).gsub(/\.zml$/, ".html")
+    document_path = CONFIG.document_dir(@language)
+    domain = CONFIG.online_domain(@language)
+    url = path.gsub(document_path, domain).gsub(/\.zml$/, ".html")
     return url
+  end
+
+  def online_domain
+    domain = CONFIG.online_domain(@language)
+    return domain
   end
 
 end
@@ -92,29 +100,6 @@ end
 
 class WholeAvendiaConverter
 
-  LOCAL_SERVER_PATH = File.read(BASE_PATH + "/config/local.txt")
-  ONLINE_SERVER_CONFIG = File.read(BASE_PATH + "/config/online.txt")
-  LOCAL_DOMAINS = {
-    :ja => "http://lbs.localhost",
-    :en => "http://en.lbs.localhost"
-  }
-  DOMAINS = {
-    :ja => "http://ziphil.com",
-    :en => "http://en.ziphil.com"
-  }
-  ROOT_PATHS = {
-    :ja => BASE_PATH + "/document/ja",
-    :en => BASE_PATH + "/document/en"
-  }
-  OUTPUT_PATHS = {
-    :ja => LOCAL_SERVER_PATH + "/lbs",
-    :en => LOCAL_SERVER_PATH + "/lbs-en"
-  }
-  LOG_PATHS = {
-    :ja => BASE_PATH + "/log/ja.txt",
-    :en => BASE_PATH + "/log/en.txt",
-    :error => BASE_PATH + "/log/error.txt"
-  }
   LOG_SIZE = 1000
   READ_TIMEOUT = 5
   REPETITION_SIZE = 3
@@ -181,7 +166,7 @@ class WholeAvendiaConverter
 
   def execute_serve
     count = 0
-    ROOT_PATHS.each do |language, dir|
+    CONFIG.document_dirs.each do |language, dir|
       listener = Listen.to(dir) do |modified, added, removed|
         update_ftp
         paths = (modified + added).uniq
@@ -239,7 +224,7 @@ class WholeAvendiaConverter
 
   def convert_normal(path, language)
     extension = File.extname(path).gsub(/^\./, "")
-    output_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
+    output_path = path.gsub(CONFIG.document_dir(language), CONFIG.output_dir(language))
     output_path = modify_extension(output_path)
     output_dir = File.dirname(output_path)
     FileUtils.mkdir_p(output_dir)
@@ -254,7 +239,7 @@ class WholeAvendiaConverter
       option = {}
       option[:style] = :compressed
       option[:filename] = path
-      option[:cache_location] = OUTPUT_PATHS[language] + "/.sass-cache"
+      option[:cache_location] = CONFIG.output_dir(language) + "/.sass-cache"
       output = SassC::Engine.new(File.read(path), option).render
       File.write(output_path, output)
     when "ts"
@@ -281,7 +266,7 @@ class WholeAvendiaConverter
       @converter.update(document, path, language)
       output = @converter.convert("change-log")
       time = Time.now - 21600
-      log_path = LOG_PATHS[language]
+      log_path = CONFIG.log_path(language)
       log_entries = File.read(log_path).lines.map(&:chomp)
       log_entries.unshift(time.strftime("%Y/%m/%d") + "; " + output)
       log_string = log_entries.take(LOG_SIZE).join("\n")
@@ -290,9 +275,9 @@ class WholeAvendiaConverter
   end
 
   def upload_normal(path, language)
-    local_path = path.gsub(ROOT_PATHS[language], OUTPUT_PATHS[language])
+    local_path = path.gsub(CONFIG.document_dir(language), CONFIG.output_dir(language))
     local_path = modify_extension(local_path)
-    remote_path = path.gsub(ROOT_PATHS[language], "")
+    remote_path = path.gsub(CONFIG.document_dir(language), "")
     remote_path = modify_extension(remote_path)
     unless language == :ja
       remote_path = "/#{language}.#{@user}" + remote_path
@@ -324,7 +309,7 @@ class WholeAvendiaConverter
     if result
       output << "\e[7m"
     end
-    path_array = path.gsub(ROOT_PATHS[language] + "/", "").split("/")
+    path_array = path.gsub(CONFIG.document_dir(language) + "/", "").split("/")
     path_array.map!{|s| (s =~ /\d/) ? "%3d" % s.to_i : s.gsub("index.zml", "  @").slice(0, 3)}
     path_array.unshift(language)
     output << path_array.join(" ")
@@ -355,7 +340,7 @@ class WholeAvendiaConverter
     output << "[#{language}: #{path}]\n"
     output << error.full_message.gsub(/\e\[.*?[A-Za-z]/, "")
     output << "\n"
-    File.open(LOG_PATHS[:error], "a") do |file|
+    File.open(CONFIG.error_log_path, "a") do |file|
       file.puts(output)
     end
   end
@@ -363,7 +348,7 @@ class WholeAvendiaConverter
   def create_paths(args)
     paths = []
     if args.empty?
-      ROOT_PATHS.each do |language, default|
+      CONFIG.document_dirs.each do |language, default|
         directories = []
         directories << default
         directories.each do |directory|
@@ -379,7 +364,7 @@ class WholeAvendiaConverter
       end
     else
       path = args.map{|s| s.gsub("\\", "/").gsub("c:/", "C:/")}[0].encode("utf-8")
-      language = ROOT_PATHS.find{|s, t| path.include?(t)}&.first
+      language = CONFIG.document_dirs.find{|s, t| path.include?(t)}&.first
       if language
         paths << [path, language]
       end
@@ -388,7 +373,7 @@ class WholeAvendiaConverter
       next File.basename(path, ".*") =~ /^(\d+|index)$/
     end
     paths.sort_by! do |path, language|
-      path_array = path.gsub(ROOT_PATHS[language] + "/", "").gsub(/\.\w+$/, "").split("/")
+      path_array = path.gsub(CONFIG.document_dir(language) + "/", "").gsub(/\.\w+$/, "").split("/")
       path_array.reject!{|s| s.include?("index")}
       path_array.map!{|s| (s.match(/^\d/)) ? s.to_i : s}
       next [path_array, language]
@@ -399,8 +384,7 @@ class WholeAvendiaConverter
   def create_ftp(upload)
     ftp, user = nil, nil
     if upload
-      host, user, password = ONLINE_SERVER_CONFIG.split("\n")
-      ftp = Net::FTP.new(host, user, password)
+      ftp = Net::FTP.new(CONFIG.server_host, CONFIG.server_user, CONFIG.server_password)
       ftp.read_timeout = READ_TIMEOUT
     end
     return ftp, user

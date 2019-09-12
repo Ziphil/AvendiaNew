@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'bundler', require: [
   'fileutils',
   'io/console',
+  'json',
   'net/ftp',
   'open3',
   'rexml/document'
