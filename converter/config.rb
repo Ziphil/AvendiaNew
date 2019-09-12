@@ -55,4 +55,12 @@ class AvendiaConfig
     return File.join(BASE_PATH, @json["log_path"]["error"])
   end
 
+  def macro_dir
+    return File.join(BASE_PATH, @json["macro_dir"])
+  end
+
+  def template_dir
+    return File.join(BASE_PATH, @json["template_dir"])
+  end
+
 end

@@ -392,12 +392,12 @@ class WholeAvendiaConverter
     parser.brace_name = "x"
     parser.bracket_name = "xn"
     parser.slash_name = "i"
-    directory = File.join(BASE_PATH, "macro")
-    Dir.each_child(directory) do |entry|
+    dir = CONFIG.macro_dir
+    Dir.each_child(dir) do |entry|
       if entry.end_with?(".rb")
         binding = TOPLEVEL_BINDING
         binding.local_variable_set(:parser, parser)
-        Kernel.eval(File.read(File.join(directory, entry)), binding, entry)
+        Kernel.eval(File.read(File.join(dir, entry)), binding, entry)
       end
     end
     return parser
@@ -405,12 +405,12 @@ class WholeAvendiaConverter
 
   def create_converter
     converter = AvendiaConverter.new(nil, nil, nil)
-    directory = File.join(BASE_PATH, "template")
-    Dir.each_child(directory) do |entry|
+    dir = CONFIG.template_dir
+    Dir.each_child(dir) do |entry|
       if entry.end_with?(".rb")
         binding = TOPLEVEL_BINDING
         binding.local_variable_set(:converter, converter)
-        Kernel.eval(File.read(File.join(directory, entry)), binding, entry)
+        Kernel.eval(File.read(File.join(dir, entry)), binding, entry)
       end
     end
     return converter
