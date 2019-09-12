@@ -7,6 +7,7 @@ require 'listen'
 require 'net/ftp'
 require 'io/console'
 require 'rexml/document'
+require 'sassc'
 require 'zenml'
 include REXML
 include Zenithal
@@ -255,7 +256,12 @@ class WholeAvendiaConverter
       output = @converter.convert
       File.write(output_path, output)
     when "scss"
-      output = `sass --style=compressed --cache-location='#{OUTPUT_PATHS[language]}/.sass-cache' '#{path}':'#{output_path}'`
+      option = {}
+      option[:style] = :compressed
+      option[:filename] = path
+      option[:cache_location] = OUTPUT_PATHS[language] + "/.sass-cache"
+      output = SassC::Engine.new(File.read(path), option).render
+      File.write(output_path, output)
     when "ts"
       output = `browserify #{path} -p [tsify -t ES6 --strict]`
       File.write(output_path, output)
