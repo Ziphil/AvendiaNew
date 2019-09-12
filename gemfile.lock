@@ -1,0 +1,25 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ffi (1.11.1-x64-mingw32)
+    listen (3.1.5)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+      ruby_dep (~> 1.2)
+    rb-fsevent (0.10.3)
+    rb-inotify (0.10.0)
+      ffi (~> 1.0)
+    ruby_dep (1.5.0)
+    wdm (0.1.1)
+    zenml (1.0.1)
+
+PLATFORMS
+  x64-mingw32
+
+DEPENDENCIES
+  listen
+  wdm (>= 0.1.0)
+  zenml
+
+BUNDLED WITH
+   2.0.2

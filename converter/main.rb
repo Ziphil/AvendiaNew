@@ -7,7 +7,6 @@ require 'listen'
 require 'net/ftp'
 require 'io/console'
 require 'rexml/document'
-require 'selenium-webdriver'
 require 'zenml'
 include REXML
 include Zenithal
