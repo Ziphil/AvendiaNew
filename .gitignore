@@ -1,6 +1,6 @@
 document/lbs
 document/lbs-en
-config
+config/config.json
 log
 node_modules
 *.code-workspace

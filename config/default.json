@@ -1,0 +1,34 @@
+{
+  "server": {
+    "host": "********",
+    "user": "********",
+    "password": "********"
+  },
+  "local_domain": {
+    "ja": "http://lbs.localhost",
+    "en": "http://en.lbs.localhost"
+  },
+  "remote_domain": {
+    "ja": "http://ziphil.com",
+    "en": "http://en.ziphil.com"
+  },
+  "document_dir": {
+    "ja": "document/ja",
+    "en": "document/en"
+  },
+  "output_dir": {
+    "ja": "C:/Apache24/htdocs/lbs",
+    "en": "C:/Apache24/htdocs/lbs-en"
+  },
+  "remote_dir": {
+    "ja": "",
+    "en": "en.ziphil.com"
+  },
+  "log_path": {
+    "ja": "log/ja.txt",
+    "en": "log/en.txt",
+    "error": "log/error.txt"
+  },
+  "macro_dir": "macro",
+  "template_dir": "template"
+}
