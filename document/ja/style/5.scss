@@ -206,34 +206,38 @@ div.content div.left div.mark span.correct {
   display: none;
 }
 
-div.list {
+div.side {
   @include box;
-  width: 250px;
-  height: calc(100vh - 120px);
+  width: 300px;
   margin: 0px;
   padding: 20px 30px;
   border-radius: 15px 0px 0px 15px;
+  box-sizing: border-box;
   position: absolute;
-  top: 40px;
-  right: 0px;
   overflow-x: hidden;
   overflow-y: auto;
   transform: translate(320px, 0px);
   transition: transform 0.3s ease-in-out;
 }
 
-div.list.shown {
+div.side.shown {
   transform: translate(0px, 0px);
 }
 
-div.list table {
+div.list-wrapper {
+  height: calc(100vh - 185px);
+  top: 40px;
+  right: 0px;
+}
+
+div.list-wrapper table {
   width: 100%;
   margin: 0px;
   padding: 0px;
   border-collapse: collapse;
 }
 
-div.list table tr td {
+div.list-wrapper table tr td {
   margin: 0px;
   padding: 0px;
   text-align: center;
@@ -241,27 +245,82 @@ div.list table tr td {
   border-bottom: 1px hsl(0, 0%, 90%) solid;
 }
 
-div.list table tr td.number {
+div.list-wrapper table tr td.number {
   @include tnum-variant;
   width: 45px;
   font: italic 400 18px "Alegreya";
   border-right: 1px hsl(0, 0%, 90%) solid;
 }
 
-div.list table tr td.mark {
+div.list-wrapper table tr td.mark {
   width: 40px;
   font: 400 18px "List Icon";
 }
 
-div.list table tr td.text {
+div.list-wrapper table tr td.text {
   font: 700 22px "Alegreya";
   color: hsl(0, 0%, 40%);
 }
 
-div.list table tr td.wrong {
+div.list-wrapper table tr td.wrong {
   color: hsl(330, 60%, 60%);
 }
 
-div.list table tr td.correct {
+div.list-wrapper table tr td.correct {
   color: hsl(120, 50%, 45%);
+}
+
+div.statistics-wrapper {
+  height: 80px;
+  padding: 0px 30px;
+  bottom: 40px;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.statistics-wrapper div.statistics {
+  margin: 0px 15px;
+  display: flex;
+  align-items: center;
+}
+
+div.statistics-wrapper div.statistics.red {
+  color: hsl(330, 60%, 60%);
+}
+
+div.statistics-wrapper div.statistics.green {
+  color: hsl(120, 50%, 45%);
+}
+
+div.statistics-wrapper div.statistics div.mark {
+  margin: 15px 8px 0px 0px;
+  font: 400 18px "List Icon";
+}
+
+div.statistics-wrapper div.statistics div.number {
+  @include tnum-variant;
+  width: 50px;
+  text-align: center;
+}
+
+div.statistics-wrapper div.statistics div.number div.numerator {
+  padding: 0px 0px 3px 0px;
+  font: italic 700 32px "Alegreya";
+  line-height: 32px;
+}
+
+div.statistics-wrapper div.statistics.red div.number div.numerator {
+  border-bottom: 1px hsl(330, 60%, 60%) solid;
+}
+
+div.statistics-wrapper div.statistics.green div.number div.numerator {
+  border-bottom: 1px hsl(120, 50%, 45%) solid;
+}
+
+div.statistics-wrapper div.statistics div.number div.denominator {
+  @include tnum-variant;
+  font: italic 400 18px "Alegreya";
+  line-height: 18px;
 }

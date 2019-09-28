@@ -52,6 +52,26 @@ export class WordManager {
     }
   }
 
+  public count(mark: WordMark): number {
+    let count = 0;
+    for (let entry of this.entries) {
+      if (entry.mark === mark) {
+        count ++;
+      }
+    }
+    return count;
+  }
+
+  public countMarked(): number {
+    let count = 0;
+    for (let entry of this.entries) {
+      if (entry.mark !== null) {
+        count ++;
+      }
+    }
+    return count;
+  }
+
   public get(index: number): WordEntry | undefined {
     return this.entries[index];
   }
@@ -206,6 +226,7 @@ export class Executor {
     for (let i = 0 ; i < manager.length ; i ++) {
       this.updateList(i);
     }
+    this.updateStatistics();
   }
 
   private updateMain(increment: boolean): void {
@@ -290,6 +311,16 @@ export class Executor {
     }
   }
 
+  private updateStatistics(): void {
+    let manager = this.manager;
+    for (let mark of [0, 1]) {
+      let numeratorDiv = document.querySelector("#statistics-" + mark + " .numerator")!;
+      let denominatorDiv = document.querySelector("#statistics-" + mark + " .denominator")!;
+      numeratorDiv.textContent = manager.count(<WordMark>mark).toString();
+      denominatorDiv.textContent = manager.countMarked().toString();
+    }
+  }
+
   private previous(amount: number = 1): void {
     if (this.count > 0) {
       this.count -= amount;
@@ -358,6 +389,7 @@ export class Executor {
       entry.mark = mark;
       this.updateMark();
       this.updateList(index);
+      this.updateStatistics();
       if (document.querySelector<HTMLInputElement>("#enable-sound")!.checked) {
         if (mark === 0) {
           document.querySelector<HTMLMediaElement>("#correct-sound")!.play();
@@ -372,9 +404,13 @@ export class Executor {
 
   private toggleList(): void {
     if (document.querySelector<HTMLInputElement>("#show-list")!.checked) {
-      document.querySelector("#list-wrapper")!.setAttribute("class", "list shown");
+      document.querySelectorAll(".side").forEach((element) => {
+        element.classList.add("shown");
+      });
     } else {
-      document.querySelector("#list-wrapper")!.setAttribute("class", "list");
+      document.querySelectorAll(".side").forEach((element) => {
+        element.classList.remove("shown");
+      });
     }
   }
 
