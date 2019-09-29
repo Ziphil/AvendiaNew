@@ -20,7 +20,6 @@ body {
 div.top {
   @include transparent-border;
   width: 100%;
-  height: 100vh;
   margin: 0px;
   padding: 0px;
   background: transparent;
@@ -28,9 +27,6 @@ div.top {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  @include smartphone {
-    height: auto;
-  }
 
   div.header {
     width: $main-width;
@@ -69,20 +65,16 @@ div.top {
   }
 
   div.card-wrapper {
-    @include shrink(100vh);
+    @include no-shrink(auto);
     width: $main-width;
     margin: 0px auto 0px auto;
-    padding: 50px $main-horizontal-padding;
+    padding: 80px $main-horizontal-padding 100px $main-horizontal-padding;
     display: flex;
     flex-direction: column;
     justify-content: center;
     @include small-screen {
       width: auto;
       margin: 0px;
-    }
-    @include smartphone {
-      @include no-shrink(auto);
-      padding: 80px $main-horizontal-padding 100px $main-horizontal-padding;
     }
   }
 
