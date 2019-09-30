@@ -24,64 +24,62 @@
           \span<e'N EtUt PaFiKoS a'L?>
         >
       >
-      \div|class="card-wrapper"|<
-        \div|class="card"|<
-          \a|class="item",id="course",href="conlang/course/"|<
-            \div|class="title"|<
-              \div|class="japanese"|<入門書>
-              \div|class="shaleian"|<sOxaLfÔc>
-            >
-            \div|class="explanation"|<
-              初学者向けのシャレイア語文法の解説を読むことができます。
-              書籍として出版もされています。
-            >
+      \div|class="card"|<
+        \a|class="item",id="course",href="conlang/course/"|<
+          \div|class="title"|<
+            \div|class="japanese"|<入門書>
+            \div|class="shaleian"|<sOxaLfÔc>
           >
-          \a|class="item",id="database",href="conlang/database/"|<
-            \div|class="title"|<
-              \div|class="japanese"|<データベース>
-              \div|class="shaleian"|<>
-            >
-            \div|class="explanation"|<
-              シャレイア語の辞典を閲覧したり、シャレイア文字のフォントをダウンロードしたりできます。
-            >
+          \div|class="explanation"|<
+            初学者向けのシャレイア語文法の解説を読むことができます。
+            書籍として出版もされています。
           >
-          \a|class="item",id="translation",href="conlang/translation/"|<
-            \div|class="title"|<
-              \div|class="japanese"|<翻訳>
-              \div|class="shaleian"|<niSqAl>
-            >
-            \div|class="explanation"|<
-              様々な小説や楽曲のシャレイア語訳を読むことができます。
-              アイドルマスター関連の楽曲の翻訳が多めです。
-            >
+        >
+        \a|class="item",id="database",href="conlang/database/"|<
+          \div|class="title"|<
+            \div|class="japanese"|<データベース>
+            \div|class="shaleian"|<>
           >
-          \a|class="item",id="work",href="conlang/work/"|<
-            \div|class="title"|<
-              \div|class="japanese"|<創作>
-              \div|class="shaleian"|<xAkUc>
-            >
-            \div|class="explanation"|<
-              シャレイア語で書かれた完全オリジナルの物語などを読むことができます。
-            >
+          \div|class="explanation"|<
+            シャレイア語の辞典を閲覧したり、シャレイア文字のフォントをダウンロードしたりできます。
           >
-          \a|class="item",id="theory",href="conlang/theory/"|<
-            \div|class="title"|<
-              \div|class="japanese"|<シャレイア語論>
-              \div|class="shaleian"|<>
-            >
-            \div|class="explanation"|<
-              シャレイア語における文法や語法に関する詳細な解説を集めたものです。
-            >
+        >
+        \a|class="item",id="translation",href="conlang/translation/"|<
+          \div|class="title"|<
+            \div|class="japanese"|<翻訳>
+            \div|class="shaleian"|<niSqAl>
           >
-          \a|class="item",id="diary",href="diary/conlang/"|<
-            \div|class="title"|<
-              \div|class="japanese"|<制作日記>
-              \div|class="shaleian"|<rÁtTaQ iLoKe XAkOc>
-            >
-            \div|class="explanation"|<
-              シャレイア語を作る上での疑問点や考察を綴ったものです。
-              制作過程を垣間見ることができます。
-            >
+          \div|class="explanation"|<
+            様々な小説や楽曲のシャレイア語訳を読むことができます。
+            アイドルマスター関連の楽曲の翻訳が多めです。
+          >
+        >
+        \a|class="item",id="work",href="conlang/work/"|<
+          \div|class="title"|<
+            \div|class="japanese"|<創作>
+            \div|class="shaleian"|<xAkUc>
+          >
+          \div|class="explanation"|<
+            シャレイア語で書かれた完全オリジナルの物語などを読むことができます。
+          >
+        >
+        \a|class="item",id="theory",href="conlang/theory/"|<
+          \div|class="title"|<
+            \div|class="japanese"|<シャレイア語論>
+            \div|class="shaleian"|<>
+          >
+          \div|class="explanation"|<
+            シャレイア語における文法や語法に関する詳細な解説を集めたものです。
+          >
+        >
+        \a|class="item",id="diary",href="diary/conlang/"|<
+          \div|class="title"|<
+            \div|class="japanese"|<制作日記>
+            \div|class="shaleian"|<rÁtTaQ iLoKe XAkOc>
+          >
+          \div|class="explanation"|<
+            シャレイア語を作る上での疑問点や考察を綴ったものです。
+            制作過程を垣間見ることができます。
           >
         >
       >

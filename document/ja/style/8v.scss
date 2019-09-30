@@ -162,6 +162,19 @@ $list-icon-font-family: "List Icon";
   -webkit-text-size-adjust: 100%;
 }
 
+@mixin grid-position($default, $smartphone, $small-smartphone) {
+  grid-row: nth($default, 1);
+  grid-column: nth($default, 2);
+  @include smartphone {
+    grid-row: nth($smartphone, 1);
+    grid-column: nth($smartphone, 2);
+  }
+  @include small-smartphone {
+    grid-row: nth($small-smartphone, 1);
+    grid-column: nth($small-smartphone, 2);
+  }
+}
+
 @mixin small-screen {
   @media screen and (max-width: $main-width + $main-horizontal-padding * 2) {
     @content;
