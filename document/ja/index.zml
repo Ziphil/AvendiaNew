@@ -83,6 +83,20 @@
           >
         >
       >
+      \div|class="card simple"|<
+        \a|class="item",id="biography",href="other/other/2.html"|<
+          \div|class="title"|<
+            \div|class="japanese"|<管理人紹介>
+            \div|class="shaleian"|<>
+          >
+        >
+        \a|class="item",id="project",href="conlang/document/15.html"|<
+          \div|class="title"|<
+            \div|class="japanese"|<プロジェクト一覧>
+            \div|class="shaleian"|<>
+          >
+        >
+      >
       \div|class="arrow"|<
         \div|class="tip"|>
       >

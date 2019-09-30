@@ -65,8 +65,8 @@ div.top {
 
   div.card {
     width: $main-width;
-    margin: 80px auto 100px auto;
-    padding: 0px $main-horizontal-padding 0px $main-horizontal-padding;
+    margin: 80px auto 0px auto;
+    padding: 0px $main-horizontal-padding;
     display: grid;
     grid-gap: 50px;
     grid-template-columns: repeat(3, 1fr);
@@ -77,6 +77,26 @@ div.top {
       grid-template-columns: repeat(2, 1fr);
     }
     @include small-smartphone {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  div.card.simple {
+    width: ($main-width - 100px) / 3 * 2 + 50px;
+    margin: 50px auto 100px auto;
+    padding: 0px $main-horizontal-padding;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    @include small-screen {
+      width: calc((100% - #{$main-horizontal-padding * 2 + 100px}) / 3 * 2 + 50px);
+    }
+    @include smartphone {
+      width: calc((100% - #{$main-horizontal-padding * 2 + 50px}) / 2 * 2 + 50px);
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include small-smartphone {
+      width: calc(100% - #{$main-horizontal-padding * 2});
       grid-template-columns: repeat(1, 1fr);
     }
   }
@@ -132,6 +152,10 @@ div.top {
     align-items: flex-start;
     position: relative;
     transition: background-color 0.2s ease-in-out;
+  }
+
+  div.card.simple a.item div.title {
+    border-radius: $card-border-radius;
   }
 
   div.card a.item:hover div.title {
