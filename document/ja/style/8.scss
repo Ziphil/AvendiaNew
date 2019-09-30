@@ -67,8 +67,8 @@ div.top {
   div.card-wrapper {
     @include no-shrink(auto);
     width: $main-width;
-    margin: 0px auto 0px auto;
-    padding: 80px $main-horizontal-padding 100px $main-horizontal-padding;
+    margin: 80px auto 100px auto;
+    padding: 0px $main-horizontal-padding 0px $main-horizontal-padding;
     display: flex;
     flex-direction: column;
     justify-content: center;
