@@ -281,7 +281,7 @@
     end
   >
   \samp~<
-    ****.rb:11:in `+': String can't be coerced into Integer (TypeError)
+    ****.rb:11:in ``+': String can't be coerced into Integer (TypeError)
       from ****:11:in ``<main`>'
   >
   \h1|id="tablec"|<会話文>

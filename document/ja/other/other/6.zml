@@ -36,7 +36,7 @@
   \samp~<
     7
     [nil, nil, nil]
-    ****.rb:7:in ``<class:Foo`>': undefined local variable or method `c' for Foo:Class (NameError)
+    ****.rb:7:in ``<class:Foo`>': undefined local variable or method ``c' for Foo:Class (NameError)
       from ****.rb:6:in ``<main`>'
   >
   \p<
@@ -107,7 +107,7 @@
   \samp~<
     0
     1
-    ****.rb:12:in `foo': undefined local variable or method `shared' for `#`<Test:0x00000002a0dc58`> (NameError)
+    ****.rb:12:in ``foo': undefined local variable or method ``shared' for `#`<Test:0x00000002a0dc58`> (NameError)
       from ****.rb:20:in ``<main`>'
   >
   \h2|id="blk"|<ブロック>
@@ -179,8 +179,8 @@
     lambda.call
   >
   \samp~<
-    ****.rb:1:in `block in `<main`>': undefined local variable or method `x' for main:Object (NameError)
-      ****.rb:3:in `call'
+    ****.rb:1:in ``block in `<main`>': undefined local variable or method ``x' for main:Object (NameError)
+      ****.rb:3:in ``call'
       ****.rb:3:in ``<main`>'
   >
   \h2|id="mtd"|<\m<Method>, \m<UnboundMethod>>
@@ -288,8 +288,8 @@
   >
   \samp~<
     3
-    ****.rb:1:in `block in `<main`>': undefined local variable or method `x' for main:Object (NameError)
-      from ****.rb:5:in `call'
+    ****.rb:1:in ``block in `<main`>': undefined local variable or method ``x' for main:Object (NameError)
+      from ****.rb:5:in ``call'
       from ****.rb:5:in ``<main`>'
   >
   \p<
@@ -674,7 +674,7 @@
   >
   \samp~<
     foo called
-    ****.rb:10:in ``<main`>': private method `foo' called for `#`<Foo:0x00000002aae838`> (NoMethodError)
+    ****.rb:10:in ``<main`>': private method ``foo' called for `#`<Foo:0x00000002aae838`> (NoMethodError)
   >
   \p<
     private メソッドのルールはあくまで「レシーバをつけて呼び出せない」であるので、例えば明示的に \m<self> に対して呼び出そうとするとエラーになる。
@@ -691,7 +691,7 @@
     Foo.new.bar
   >
   \samp~<
-    ****.rb:6:in `bar': private method `foo' called for `#`<Foo:0x00000002a2e8e0`> (NoMethodError)
+    ****.rb:6:in ``bar': private method ``foo' called for `#`<Foo:0x00000002a2e8e0`> (NoMethodError)
       from ****.rb:9:in ``<main`>'
   >
   \p<
@@ -743,7 +743,7 @@
     protected called
     private called
     protected called
-    ****.rb:12:in `bar': private method `private' called for `#`<Foo:0x00000002a2e2a0`> (NoMethodError)
+    ****.rb:12:in ``bar': private method ``private' called for `#`<Foo:0x00000002a2e2a0`> (NoMethodError)
       ****.rb:16:in ``<main`>'
   >
   \p<
@@ -960,7 +960,7 @@
     String Line 1
     String Line 2
     EOS
-    p `<`HELLO`
+    p `<``HELLO``
     echo hello
     HELLO
   >
