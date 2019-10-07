@@ -1,0 +1,35 @@
+﻿\zml?|version="1.0"|>
+\xml?|version="1.0",encoding="UTF-8"|>
+
+\page<
+  \name<Zotica ＋ ZenMath>
+
+  \h1<概要>
+  \p<
+    Zotica とは、ブラウザ上で数式を綺麗に表示するための HTML カスタム要素仕様 ＋ CSS ＋ JavaScript のセットです。
+    TeX と同程度の品質の数式を組めることと、自動生成にありがちな難読な HTML にはならないようにすることを目指しています。
+    名前は古典ギリシャ語の ζωτικός から付けました。
+  >
+  \p<
+    ZenMath とは、\a|href="7.html"|<ZenML> とほぼ同等の構文で数式を記述できるマークアップ言語です。
+    上述の Zotica は数式の見た目に則った構造になっているため、人間が直接書くのには適していないので、Zotica に変換可能な簡潔なマークアップ言語として作られました。
+    要素の名称は LaTeX とほぼ同じですが、構文が ZenML ライクになっています。
+  >
+  \pre~<
+    ## 2 次方程式の解の公式
+    x = \frac`<-b \pm`> \sqrt`<\sp`<b`>`<2`> - 4 ac`>`>`<2 a`>
+    ## コーシーの積分公式
+    F (z) = \frac`<1`>`<2 ``p i`> \oint`<C`>`<`> \frac`<F (``z)`>`<``z - z`> d ``z
+  >
+  \p<
+  >
+  \h1<詳細>
+  \p<
+    現在開発中です。
+    詳細は GitHub ページをご覧ください。
+  >
+  \form<
+    \ae|class="form",href="https://github.com/Ziphil/ZenithalMathWeb"|<GitHub ページ>
+  >
+
+>
