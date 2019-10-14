@@ -1426,6 +1426,14 @@ article.main {
     border-right: 1px hsl(28, 54%, 33%) solid !important;
   }
 
+  // 数式
+
+  span.math-block {
+    margin: $box-vertical-padding 0px;
+    text-align: center;
+    display: block;
+  }
+
   // エラーページのエラー表示領域
 
   div.error {
