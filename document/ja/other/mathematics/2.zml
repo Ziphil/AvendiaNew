@@ -12,21 +12,21 @@
     &m<\sp<C><2>> 級、すなわち 2 階連続的微分可能である 2 変数関数 &m<f (x, y)> について考える。
     この最大点および最小点を求めるには、まずその候補となる極大点と極小点を求める必要がある。
     そして、点 &m<(\sb<x><0>, \sb<y><0>)> が極大点もしくは極小点であるための必要条件は、
-    &mb<
+    &mb|id="stat"|<
       \frac<\partial> f><\partial> x> (\sb<x><0>, \sb<y><0>) = \frac<\partial> f><\partial> y> (\sb<x><0>, \sb<y><0>) = 0
     >
     で与えられる。
-    この式 1.1 を満たす点 &m<(\sb<x><0>, \sb<y><0>)> は、関数 &m<f (x, y)> の\em<停留点\fl<stationary point>> もしくは\em<臨界点\fl<critical point>> と呼ばれる。
+    この式 \ref|eq="stat"|> を満たす点 &m<(\sb<x><0>, \sb<y><0>)> は、関数 &m<f (x, y)> の\em<停留点\fl<stationary point>> もしくは\em<臨界点\fl<critical point>> と呼ばれる。
   >
   \p<
-    さて、ここで問題となるのは、式 1.1 が極大点や極小点を与える必要条件にすぎないということである。
+    さて、ここで問題となるのは、式 \ref|eq="stat"|> が極大点や極小点を与える必要条件にすぎないということである。
     すなわち、停留点が必ずしも極大点や極小点になるわけではないのである。
     ここで、関数 &m<f (x, y)> についてより深い考察が必要になる。
   >
   \p<
     関数の近似的な振る舞いを調べるのには、Taylor 展開が有効である。
     そこで、関数 &m<f (x, y)> を点 &m<(\sb<x><0>, \sb<y><0>)> のまわりで Taylor 展開してみると、
-    &mb<
+    &mb|id="taylor"|<
       \array|align="rcl"|<
         \c<f (\sb<x><0> + h, \sb<y><0> + k)> \c<=> \c<f (\sb<x><0>, \sb<y><0>)> \br>
         \c> \c> \c<\quad> + h \frac<\partial> f><\partial> x> (\sb<x><0>, \sb<y><0>) + k \frac<\partial> f><\partial> y> (\sb<x><0>, \sb<y><0>)> \br>
@@ -38,8 +38,8 @@
     ここで &m<`r \coloneqq> \sqrt<\sp<h><2> + \sp<k><2>>> とした。
   >
   \p<
-    以下では式 1.1 は成り立っているものとする。
-    このとき、式 1.2 は、
+    以下では式 \ref|eq="stat"|> は成り立っているものとする。
+    このとき、式 \ref|eq="taylor"|> は、
     &mb<
       f (\sb<x><0> + h, \sb<y><0> + k) - f (\sb<x><0>, \sb<y><0>) = \frac<1><2> \paren<\sp<h><2> \frac<\sp<\partial>><2> f><\partial> \sp<x><2>> (\sb<x><0>, \sb<y><0>) + 2 hk \frac<\sp<\partial>><2> f><\partial> x \partial> y> (\sb<x><0>, \sb<y><0>) + \sp<k><2> \frac<\sp<\partial>><2> f><\partial> \sp<y><2>> (\sb<x><0>, \sb<y><0>)> + o (\sp<`r><2>)
     >
@@ -50,7 +50,7 @@
   >
   \p<
     &m<h> と &m<k> が十分に小さいとき、&m<o (\sp<`r><2>)> は右辺の符号には影響しないほど小さくなれるので、右辺の符号の鍵を握るのは、
-    &mb<
+    &mb|id="qf"|<
       X \coloneqq> \sp<h><2> \frac<\sp<\partial>><2> f><\partial> \sp<x><2>> (\sb<x><0>, \sb<y><0>) + 2 hk \frac<\sp<\partial>><2> f><\partial> x \partial> y> (\sb<x><0>, \sb<y><0>) + \sp<k><2> \frac<\sp<\partial>><2> f><\partial> \sp<y><2>> (\sb<x><0>, \sb<y><0>)
     >
     の部分である。
@@ -60,7 +60,7 @@
       B \coloneqq> \frac<\sp<\partial>><2> f><\partial> x \partial> y> (\sb<x><0>, \sb<y><0>) \qquad>
       C \coloneqq> \frac<\sp<\partial>><2> f><\partial> \sp<y><2>> (\sb<x><0>, \sb<y><0>)
     >
-    とおけば、式 1.3 は、
+    とおけば、式 \ref|eq="qf"|> は、
     &mb<
       X = A \sp<h><2> + B hk + C \sp<k><2>
     >
@@ -175,7 +175,7 @@
   \p<
     さて、普通の 2 変数関数の微分可能性 (全微分可能性) について、少し復習する。
     2 変数関数 &m<f (x, y)> が点 &m<(\sb<x><0>, \sb<y><0>)> で微分可能であるというのは、十分小さな数 &m<h, k> に対し、&m<\sb<x><0>, \sb<y><0>> によってのみ決まる数 &m<\sb<f><x> (\sb<x><0>, \sb<y><0>), \sb<f><y> (\sb<x><0>, \sb<y><0>)> が存在して、
-    &mb<
+    &mb|id="diff"|<
       f (\sb<x><0> + h, \sb<y><0> + k) = h \frac<\partial> f><\partial> x> (\sb<x><0>, \sb<y><0>) + k \frac<\partial> f><\partial> y>(\sb<x><0>, \sb<y><0>) + o (`r)
     >
     と表せることをいうのであった。
@@ -186,21 +186,21 @@
     ここでも同じようにして表記を変えてみる。
   >
   \p<
-    まず、上式 2.1 は、
+    まず、上式 \ref|eq="diff"|> は、
     &mb<
       f \paren<\matrix<\cc<\sb<x><0> + h> \cc<\sb<y><0> + k>>> = \paren<\matrix<\c<\frac<\partial> f><\partial> x> \paren<\matrix<\cc<\sb<x><0>> \cc<\sb<y><0>>>>> \c<\frac<\partial> f><\partial> y> \paren<\matrix<\cc<\sb<x><0>> \cc<\sb<y><0>>>>>>> \paren<\matrix<\cc<h> \cc<k>>> + o \vert<\matrix<\cc<h> \cc<k>>>
     >
     と書ける。
     なお、右辺第 1 項は &m<1 \times> 2> 行列と &m<2 \times> 1> 行列の積で、右辺第 2 項の絶対値記号はベクトルの大きさを表すものとする。
     ここでさらに、前項のように &m<(\sb<x><0>, \sb<y><0>)> を &m<\sb<\bf<x>><0>> とし、&m<(h, k)> を &m<\bf<h>> と書くことにすれば、
-    &mb<
+    &mb|id="vec"|<
       f (\sb<\bf<x>><0> + \bf<h>) = \paren<\matrix<\c<\frac<\partial> f><\partial> x> (\sb<\bf<x>><0>)> \c<\frac<\partial> f><\partial> y> (\sb<\bf<x>><0>)>>> \bf<h> + o \lvert> \bf<h> \rvert>
     >
     と書き表すことができる。
   >
   \p<
     さて、こう書いてしまえば、多変数から多変数への写像の微分可能性も容易に定義できる。
-    例えば、前項に示した、2 変数から 2 変数への写像 &m<\bf<f> (\bf<x>)> を考えれば、式 2.2 を参考にして、
+    例えば、前項に示した、2 変数から 2 変数への写像 &m<\bf<f> (\bf<x>)> を考えれば、式 \ref|eq="vec"|> を参考にして、
     &mb<
       \bf<f> (\sb<\bf<x>><0> + \bf<h>) =
       \paren<\matrix<
@@ -238,7 +238,7 @@
     &mb<
       \bf<f> (\sb<\bf<x>><0> + \bf<h>) = \scr<J> \bf<f> (\sb<\bf<x>><0>) \bf<h> + o \lvert> \bf<h> \rvert>
     >
-    が成り立つとき、写像 &m<\bf<f> (\bf<x>)> は点 &m<\sb<\bf<x>><0>> で\em<微分可能\fl<differentiable>>というのである。
+    が成り立つとき、写像 &m<\bf<f> (\bf<x>)> は点 &m<\sb<\bf<x>><0>> で\em<微分可能\fl<differentiable>> というのである。
   >
   \p<
     多変数のベクトル表記と Jacobi 行列を用いることで、多変数から多変数への写像の微分や積分も、通常の関数と同じように表記し扱うことができるようになる。
