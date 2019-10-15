@@ -1440,11 +1440,18 @@ article.main {
   }
 
   span.math-block span.number {
-    @include before-after("[", "]");
-    width: 30px;
-    margin-left: -30px;
+    width: $ordered-list-marker-width;
+    margin-right: $blank-padding;
+    margin-left: 0px - $ordered-list-marker-width - $blank-padding;
     font-size: 80%;
-    text-align: right;
+    color: $list-marker-color;
+    line-height: 0.8;
+    text-align: center;
+    border-left: 1px $list-marker-color solid;
+    border-right: 1px $list-marker-color solid;
+    border-radius: $list-marker-border-radius;
+    display: inline-block;
+    box-sizing: border-box;
   }
 
   span.em {
