@@ -1430,8 +1430,21 @@ article.main {
 
   span.math-block {
     margin: $box-vertical-padding 0px;
+    display: flex;
+    align-items: baseline;
+  }
+
+  span.math-block span.math-wrapper {
+    width: 100%;
     text-align: center;
-    display: block;
+  }
+
+  span.math-block span.number {
+    @include before-after("[", "]");
+    width: 30px;
+    margin-left: -30px;
+    font-size: 80%;
+    text-align: right;
   }
 
   span.em {
