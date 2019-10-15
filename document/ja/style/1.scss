@@ -1434,6 +1434,10 @@ article.main {
     display: block;
   }
 
+  span.em {
+    background: linear-gradient(transparent 80%, $emphasis-background-color 80%);
+  }
+
   // エラーページのエラー表示領域
 
   div.error {

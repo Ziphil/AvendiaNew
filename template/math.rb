@@ -13,6 +13,13 @@ converter.add(["use-math"], ["header"]) do |element|
   next this + "\n"
 end
 
+converter.add(["em"], ["page"]) do |element|
+  this = ""
+  this << Tag.build("span", "em") do |this|
+    this << apply(element, "page")
+  end
+end
+
 converter.add(["math-inline"], ["page"]) do |element|
   this = ""
   this << apply(element, "html")
