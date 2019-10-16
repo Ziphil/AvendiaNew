@@ -52,7 +52,7 @@ $section-background: $highlight-background;
 $link-background-color: $light-background-color;
 $hovered-link-background-color: $hovered-light-background-color;
 // 背景 > 強調
-$emphasis-background-color: $light-background-color;
+$emphasis-background-color: hsl($secondary-hue, 30%, 50%);
 // 背景 > 例文などのボックス
 $box-background: $light-background;
 // 背景 > テキスト入力欄
