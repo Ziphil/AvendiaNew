@@ -43,11 +43,13 @@ class AvendiaConverter < ZenithalConverter
 
   attr_reader :path
   attr_reader :language
+  attr_reader :variables
 
   def initialize(document, path, language)
     super(document, :text)
     @path = path
     @language = language
+    @variables = {}
   end
 
   def update(document, path, language)
