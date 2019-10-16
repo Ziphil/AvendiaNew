@@ -1429,7 +1429,7 @@ article.main {
   // 数式
 
   span.math-block {
-    margin: $box-vertical-padding * 1.3 0px;
+    margin: $wide-vertical-margin * 1.2 0px;
     display: flex;
     align-items: baseline;
     line-height: 1;
@@ -1455,8 +1455,52 @@ article.main {
     box-sizing: border-box;
   }
 
-  span.em {
+  span.emphasis {
     background: linear-gradient(transparent 80%, $emphasis-background-color 80%);
+  }
+
+  div.theorem {
+    margin: $wide-vertical-margin 0px - $main-horizontal-padding;
+    padding: $box-vertical-padding - $vertical-margin $main-horizontal-padding;
+    background: $box-background;
+  }
+
+  div.theorem span.number {
+    @include before-after("定理 ", ".");
+    float: left;
+    margin: $vertical-margin $blank-padding $vertical-margin 0px;
+    color: $border-color;
+    line-height: $line-height;
+  }
+
+  div.theorem.definition span.number {
+    @include before-after("定義 ", ".");
+  }
+
+  div.theorem.proposition span.number {
+    @include before-after("命題 ", ".");
+  }
+
+  div.theorem.lemma span.number {
+    @include before-after("補題 ", ".");
+  }
+
+  div.theorem.corollary span.number {
+    @include before-after("系 ", ".");
+  }
+
+  div.proof {
+    margin: $vertical-margin 0px;
+    padding: 0px 0px 0px $proof-horizontal-padding;
+    border-left: 3px $border-color double;
+  }
+
+  div.proof span.number {
+    @include before-after("証明", ".");
+    float: left;
+    margin: 0px $blank-padding $vertical-margin 0px;
+    color: $border-color;
+    line-height: $line-height;
   }
 
   // エラーページのエラー表示領域
