@@ -1468,7 +1468,7 @@ article.main {
   div.theorem span.number {
     @include before-after("定理 ", ".");
     float: left;
-    margin: $vertical-margin $blank-padding $vertical-margin 0px;
+    margin: $vertical-margin $blank-padding 0px 0px;
     color: $border-color;
     line-height: $line-height;
   }
@@ -1497,8 +1497,8 @@ article.main {
 
   div.proof span.number {
     @include before-after("証明", ".");
+    margin: 0px $blank-padding 0px 0px;
     float: left;
-    margin: 0px $blank-padding $vertical-margin 0px;
     color: $border-color;
     line-height: $line-height;
   }
