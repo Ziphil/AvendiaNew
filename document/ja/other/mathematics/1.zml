@@ -83,7 +83,7 @@
       \array|align="rcl"|<
         \c<I> \c<=> \c<\frac<1><2> \log> \vert<\frac<1 - \sqrt|s="2"|<\frac<1><1 + \sp<x><2>>>><1 + \sqrt|s="2"|<\frac<1><1 + \sp<x><2>>>>> + \sqrt<1 + \sp<x><2>> + C> \br>
         \c> \c<=> \c<\frac<1><2> \log> \frac<\sqrt<1 + \sp<x><2>> - 1><\sqrt<1 + \sp<x><2>> + 1> + \sqrt<1 + \sp<x><2>> + C> \br>
-        \c> \c<=> \c<\frac<1><2> \log> \frac<(\sqrt<1 + \sp<x><2>> - 1) \sp<\g>><2>><\sp<x><2>> + \sqrt<1 + \sp<x><2>> + C> \br>
+        \c> \c<=> \c<\frac<1><2> \log> \frac<(\sqrt<1 + \sp<x><2>> - 1) \sp<\vph<1>><2>><\sp<x><2>> + \sqrt<1 + \sp<x><2>> + C> \br>
         \c> \c<=> \c<\log> \frac<\sqrt<1 + \sp<x><2>> - 1><x> + \sqrt<1 + \sp<x><2>> + C>
       >
     >
