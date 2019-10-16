@@ -1429,9 +1429,10 @@ article.main {
   // 数式
 
   span.math-block {
-    margin: $box-vertical-padding 0px;
+    margin: $box-vertical-padding * 1.3 0px;
     display: flex;
     align-items: baseline;
+    line-height: 1;
   }
 
   span.math-block span.math-wrapper {
