@@ -14,12 +14,12 @@
     を加えたものを &m<\rm<`l> `b`h> とする。
     このとき、いわゆる外延性
     &mb<
-      (\sp<\vph<1>><\forall>> Z \in> \rm<`L> \ssbin> MZ = NZ) \implies> [\sb|rel|<\vdash>><\rm<`l> `b `h> M = N]
+      (\sp<\vph<1>><\forall>> Z \in> \rm<`L> \ssbin> [\sb|rel|<\vdash>><\rm<`l> `b `h> MZ = NZ]) \implies> [\sb|rel|<\vdash>><\rm<`l> `b `h> M = N]
     >
     が成り立つことが知られている。
     一方で、この &m<Z> を閉じたラムダ項のみに制限した命題
     &mb<
-      (\sp<\vph<1>><\forall>> Z \in> \sp<\rm<`L>><\empty>> \ssbin> MZ = NZ) \implies> [\sb|rel|<\vdash>><\rm<`l> `b `h> M = N]
+      (\sp<\vph<1>><\forall>> Z \in> \sp<\rm<`L>><\empty>> \ssbin> [\sb|rel|<\vdash>><\rm<`l> `b `h> MZ = NZ]) \implies> [\sb|rel|<\vdash>><\rm<`l> `b `h> M = N]
     >
     は一般には成り立たない。
     この反例を構成する。
