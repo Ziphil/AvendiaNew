@@ -1276,8 +1276,8 @@ article.main {
   // 外国語への訳語の注釈
 
   span.foreign {
-    @include before-after("(", ")");
-    margin: 0px 0px 0px 0.3em;
+    @include before-after(" (", ")");
+    margin: 0px 0px 0px 0em;
     font-size: 80%;
   }
 
@@ -1492,7 +1492,7 @@ article.main {
   div.proof {
     margin: $vertical-margin 0px;
     padding: 0px 0px 0px $proof-horizontal-padding;
-    border-left: 3px $border-color double;
+    border-left: 1px $border-color dashed;
   }
 
   div.proof span.number {
