@@ -41,6 +41,7 @@ end
 
 class AvendiaConverter < ZenithalConverter
 
+  attr_reader :document
   attr_reader :path
   attr_reader :language
   attr_reader :variables

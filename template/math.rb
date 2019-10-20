@@ -123,6 +123,9 @@ converter.add(["ref"], ["page"]) do |element|
   elsif element.attribute("thm")
     type = :theorem
     id = element.attribute("thm").to_s
+  elsif element.attribute("bib")
+    type = :bibliography
+    id = element.attribute("bib").to_s
   end
   this << Tag.build("span") do |this|
     this << get_number(type, id).to_s
