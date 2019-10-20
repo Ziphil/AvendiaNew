@@ -20,13 +20,15 @@ converter.define_singleton_method(:get_number) do |type, id|
   if numbers.key?(id)
     next numbers[id]
   else
-    element = converter.document.root.each_xpath("//*[@id='#{id}']")
+    element = converter.document.root.each_xpath("//*[@id='#{id}']").to_a.first
     if element
       case type
       when :equation
         number = element.each_xpath("preceding::math-block[@id]").to_a.size + 1
       when :theorem
         number = element.each_xpath("preceding::thm").to_a.size + 1
+      when :bibliography
+        number = element.each_xpath("preceding-sibling::li").to_a.size + 1
       end
       numbers[id] = number
       next number
@@ -58,6 +60,7 @@ end
 converter.add(["math-block"], ["page"]) do |element|
   this = ""
   id = element.attribute("id")&.to_s
+  mark = element.attribute("mark")&.to_s
   if id
     set_number(:equation, id)
   end
@@ -69,6 +72,11 @@ converter.add(["math-block"], ["page"]) do |element|
       this["id"] = id
       this << Tag.build("span", "number") do |this|
         this << get_number(:equation, id).to_s
+      end
+    end
+    if mark
+      this << Tag.build("span", "mark") do |this|
+        this << mark
       end
     end
   end
@@ -128,6 +136,7 @@ converter.add(["ref"], ["page"]) do |element|
     id = element.attribute("bib").to_s
   end
   this << Tag.build("span") do |this|
+    this["class"] = type.to_s
     this << get_number(type, id).to_s
   end
 end

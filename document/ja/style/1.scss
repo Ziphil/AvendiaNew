@@ -1429,7 +1429,7 @@ article.main {
   // 数式
 
   span.math-block {
-    margin: $wide-vertical-margin * 1.2 0px;
+    margin: $wide-vertical-margin 0px;
     display: flex;
     align-items: baseline;
     line-height: 1;
@@ -1440,10 +1440,9 @@ article.main {
     text-align: center;
   }
 
-  span.math-block span.number {
+  span.math-block >span.number,
+  span.math-block >span.mark {
     width: $ordered-list-marker-width;
-    margin-right: $blank-padding;
-    margin-left: 0px - $ordered-list-marker-width - $blank-padding;
     font-size: 80%;
     color: $list-marker-color;
     line-height: 0.8;
@@ -1453,6 +1452,10 @@ article.main {
     border-radius: $list-marker-border-radius;
     display: inline-block;
     box-sizing: border-box;
+  }
+
+  span.math-block >span.mark {
+    font-family: "Math";
   }
 
   span.emphasis {
@@ -1465,7 +1468,7 @@ article.main {
     background: $box-background;
   }
 
-  div.theorem span.number {
+  div.theorem >span.number {
     @include before-after("定理 ", ".");
     float: left;
     margin: $vertical-margin $blank-padding 0px 0px;
@@ -1473,19 +1476,19 @@ article.main {
     line-height: $line-height;
   }
 
-  div.theorem.definition span.number {
+  div.theorem.definition >span.number {
     @include before-after("定義 ", ".");
   }
 
-  div.theorem.proposition span.number {
+  div.theorem.proposition >span.number {
     @include before-after("命題 ", ".");
   }
 
-  div.theorem.lemma span.number {
+  div.theorem.lemma >span.number {
     @include before-after("補題 ", ".");
   }
 
-  div.theorem.corollary span.number {
+  div.theorem.corollary >span.number {
     @include before-after("系 ", ".");
   }
 
@@ -1495,12 +1498,20 @@ article.main {
     border-left: 1px $border-color dashed;
   }
 
-  div.proof span.number {
+  div.proof >span.number {
     @include before-after("証明", ".");
     margin: 0px $blank-padding 0px 0px;
     float: left;
     color: $border-color;
     line-height: $line-height;
+  }
+
+  span.bibliography {
+    font-size: 80%;
+    color: $border-color;
+    vertical-align: baseline;
+    position: relative;
+    top: -0.5em;
   }
 
   // エラーページのエラー表示領域
@@ -1849,7 +1860,7 @@ div.top-link {
     vertical-align: baseline;
     content: "H";
     position: relative;
-    top: -0.4em;
+    top: -0.5em;
   }
 
   // シャレイア語
@@ -1885,14 +1896,14 @@ div.top-link {
   // 上付き & 下付き
 
   sup {
-    font-size: 70%;
+    font-size: 80%;
     vertical-align: baseline;
     position: relative;
     top: -0.5em;
   }
 
   sub {
-    font-size: 70%;
+    font-size: 80%;
     vertical-align: baseline;
     position: relative;
     top: 0.2em;

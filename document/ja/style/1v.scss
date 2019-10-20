@@ -176,13 +176,13 @@ $top-link-font-size: 12px;
 $top-link-icon-font-size: 18px;
 
 // 行の高さ > 全体
-$line-height: 1.6;
+$line-height: 1.8;
 // 行の高さ > ページ一覧
-$index-line-height: 1.4;
+$index-line-height: 1.5;
 // 行の高さ > パンくずリスト
-$breadcrumb-line-height: 1.4;
+$breadcrumb-line-height: 1.5;
 // 行の高さ > コード
-$code-line-height: 1.4;
+$code-line-height: 1.5;
 
 // 余白 > メインエリア
 $main-vertical-padding: 35px;
@@ -194,7 +194,7 @@ $breadcrumb-horizontal-padding: 40px;
 $breadcrumb-smartphone-horizontal-padding: 20px;
 // 余白 > ページ一覧
 $index-vertical-margin: 15px;
-$index-vertical-padding: 8px;
+$index-vertical-padding: 9px;
 $index-horizontal-margin: 0px;
 $index-smartphone-horizontal-margin: 0px;
 $index-horizontal-padding: 20px;
@@ -209,7 +209,7 @@ $subsection-vertical-padding: 0px;
 $subsection-horizontal-padding: 40px;
 $subsection-smartphone-horizontal-padding: 20px;
 // 余白 > 例文などのボックス
-$box-vertical-padding: 7px;
+$box-vertical-padding: 9px;
 // 余白 > 表のセル
 $table-cell-horizontal-padding: 12px;
 // 余白 > テキスト入力欄
@@ -225,9 +225,9 @@ $result-horizontal-padding: 12px;
 // 余白 > トップリンク (下と右の余白)
 $top-link-margin: 20px;
 // 余白 > 全体
-$vertical-margin: 5px;
+$vertical-margin: 7px;
 // 余白 > ボーダー付き全体
-$wide-vertical-margin: 9px;
+$wide-vertical-margin: 12px;
 // 余白 > 項目とテキストの間
 $blank-padding: 7px;
 
@@ -262,7 +262,7 @@ $scrollbar-size: 10px;
 // 大きさ > メニューバー
 $first-menu-height: 50px;
 // 大きさ > メニューバー下のドロップダウンメニュー
-$second-menu-height: 30px;
+$second-menu-height: 35px;
 // 大きさ > 段落番号
 $paragraph-marker-width: 20px;
 // 大きさ > 番号なし箇条書き
