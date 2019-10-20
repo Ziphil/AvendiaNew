@@ -9,7 +9,7 @@
   \p<
     ここでは、不定積分
     &mb<
-      I \coloneqq> \int><> \sqrt|s="2"|<1 + \frac<1><\sp<x><2>>> dx
+      I \coloneqq> \int><> \sqrt<1 + \frac<1><\sp<x><2>>> dx
     >
     を求めてみる。
     高校数学で登場する積分の中ではかなり面倒な方の部類に入るだろう。
@@ -21,7 +21,7 @@
     このとき、&m<x \eqqcolon> \tan> t \srel> (0 `< t `< `p `/ 2)> とおいて置換積分を行うと、
     &mb<
       \array|align="rcl"|<
-        \c<I> \c<=> \c<\int><> \sqrt|s="2"|<1 + \frac<1><\sp|fun|<\tan>><2> t>> \sfun> \frac<1><\sp|fun|<\cos>><2> t> dt> \br>
+        \c<I> \c<=> \c<\int><> \sqrt<1 + \frac<1><\sp|fun|<\tan>><2> t>> \sfun> \frac<1><\sp|fun|<\cos>><2> t> dt> \br>
         \c> \c<=> \c<\int><> \frac<1><\sin> t> \sfun> \frac<1><\sp|fun|<\cos>><2> t> dt> \br>
         \c> \c<=> \c<\int><> \frac<\sin> t><\sp|fun|<\sin>><2> t \sfun> \sp|fun|<\cos>><2> t> dt> \br>
         \c> \c<=> \c<\int><> \frac<\sin> t><(1 - \sp|fun|<\cos>><2> t) \sp|fun|<\cos>><2> t> dt>
@@ -76,12 +76,12 @@
   \p<
     ここで &m<y `> 0> に注意すれば、
     &mb<
-      y = \cos> t = \sqrt|s="2"|<\frac<1><1 + \sp|fun|<\tan>><2> t>> = \sqrt|s="2"|<\frac<1><1 + \sp<x><2>>>
+      y = \cos> t = \sqrt<\frac<1><1 + \sp|fun|<\tan>><2> t>> = \sqrt<\frac<1><1 + \sp<x><2>>>
     >
     であるので、変数をもとに戻して、
     &mb<
       \array|align="rcl"|<
-        \c<I> \c<=> \c<\frac<1><2> \log> \vert<\frac<1 - \sqrt|s="2"|<\frac<1><1 + \sp<x><2>>>><1 + \sqrt|s="2"|<\frac<1><1 + \sp<x><2>>>>> + \sqrt<1 + \sp<x><2>> + C> \br>
+        \c<I> \c<=> \c<\frac<1><2> \log> \vert<\frac<1 - \sqrt<\frac<1><1 + \sp<x><2>>>><1 + \sqrt<\frac<1><1 + \sp<x><2>>>>> + \sqrt<1 + \sp<x><2>> + C> \br>
         \c> \c<=> \c<\frac<1><2> \log> \frac<\sqrt<1 + \sp<x><2>> - 1><\sqrt<1 + \sp<x><2>> + 1> + \sqrt<1 + \sp<x><2>> + C> \br>
         \c> \c<=> \c<\frac<1><2> \log> \frac<(\sqrt<1 + \sp<x><2>> - 1) \sp<\vph<1>><2>><\sp<x><2>> + \sqrt<1 + \sp<x><2>> + C> \br>
         \c> \c<=> \c<\log> \frac<\sqrt<1 + \sp<x><2>> - 1><x> + \sqrt<1 + \sp<x><2>> + C>
@@ -105,7 +105,7 @@
   \p<
     以上をまとめて、
     &mb<
-      \int><> \sqrt|s="2"|<1 + \frac<1><\sp<x><2>>> dx = \log> \frac<\sqrt<1 + \sp<x><2>> - 1><\lvert> x \rvert>> + \sqrt<1 + \sp<x><2>> + C
+      \int><> \sqrt<1 + \frac<1><\sp<x><2>>> dx = \log> \frac<\sqrt<1 + \sp<x><2>> - 1><\lvert> x \rvert>> + \sqrt<1 + \sp<x><2>> + C
     >
     となる。
   >
@@ -117,7 +117,7 @@
     &m<x `> 0> として &m<x \eqqcolon> \sinh> t \srel> (t `> 0)> とおけば、
     &mb<
       \array|align="rcl"|<
-        \c<I> \c<=> \c<\int><> \sqrt|s="2"|<1 + \frac<1><\sp|fun|<\sinh>><2> t>> \cosh> t \sfun> dt> \br>
+        \c<I> \c<=> \c<\int><> \sqrt<1 + \frac<1><\sp|fun|<\sinh>><2> t>> \cosh> t \sfun> dt> \br>
         \c> \c<=> \c<\int><> \frac<\sqrt<1 + \sp|fun|<\sinh>><2> t>><\sinh> t> \cosh> t \sfun> dt> \br>
         \c> \c<=> \c<\int><> \frac<\sp|fun|<\cosh>><2> t><\sinh> t> dt> \br>
         \c> \c<=> \c<\int><> \frac<1 + \sp|fun|<\sinh>><2> t><\sinh> t> dt> \br>

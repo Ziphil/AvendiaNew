@@ -128,7 +128,7 @@
         \c<\vdots>> \c<\vdots>> \c<\ddots>> \c<\vdots>> \br>
         \c<\frac<\sp<\partial>><2> f><\partial> \sb<x><k> \partial> \sb<x><1>>> \c<\frac<\sp<\partial>><2> f><\partial> \sb<x><k> \partial> \sb<x><2>>> \c<\cdots>> \c<\frac<\sp<\partial>><2> f><\partial> \sp<\sb<x><k>><2>>>
       >>
-      \scase> (1 \leq> k \leq> n)
+      \scas> (1 \leq> k \leq> n)
     >
     について考察する必要がある。
     &m<k = 1, 2, \cdots>, n - 1> の全てに対し &m<\det> \sb<\scr<H>><k> f> の符号が正ならば、その点は極小だといえる。

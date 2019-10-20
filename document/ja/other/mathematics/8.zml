@@ -9,7 +9,7 @@
   \p<
     ラムダ計算の &m<`b>-簡約から得られる形式理論 &m<\rm<`l> `b> に対し、&m<`h>-簡約に関する公理
     &mb<
-      \rm<`l> x. \sfun> Mx = M \scase> (x \nin> \op<FV> (M))
+      \rm<`l> x. \sfun> Mx = M \scas> (x \nin> \op<FV> (M))
     >
     を加えたものを &m<\rm<`l> `b`h> とする。
     このとき、いわゆる外延性
@@ -29,7 +29,7 @@
     また、&m<\sb<\to>><h>> と &m<\sb<\headrarr>><h>> はそれぞれ 1 回および複数回の冠頭簡約を表す。
     なお、ここでは冠頭簡約とは、
     &mb<
-      (\rm<`l> x. \sfun> \sb<M><1>) \sb<M><2> \sb<M><3> \cdots> \sb<M><n> \sb|rel|<\headrarr>><h> \sb<M><2> `[x \coloneqq> \sb<M><1>`] \sb<M><3> \cdots> \sb<M><n> \scase> (n \geq> 2)
+      (\rm<`l> x. \sfun> \sb<M><1>) \sb<M><2> \sb<M><3> \cdots> \sb<M><n> \sb|rel|<\headrarr>><h> \sb<M><2> `[x \coloneqq> \sb<M><1>`] \sb<M><3> \cdots> \sb<M><n> \scas> (n \geq> 2)
     >
     という形の &m<`b>-簡約を指す。
     これは一般に言われる冠頭簡約とは少し異なるが、ここでは Plotkin の論文での用法に合わせた。
