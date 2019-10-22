@@ -305,16 +305,16 @@
       を考えると、これは &m<\sb<T><fg>, \sb<T><\sp<f><'> \sp<g><'>>> の定義から可換である。
       したがって、図式
       &mb<
-        \diag|ver="thn"|<
+        \diag|ver="thn,sthn,sthn,thn"|<
           \v> \v> \v<\bf<y> E> \v> \br>
           \v> \v<\sp<g><*> \sb<S><f>> \v<\sb<S><f>> \v> \br>
           \v<\sb<T><fg> \cap> \sb<T><\sp<f><'> \sp<g><'>>> \v> \v> \v<P> \br>
           \v> \v<\sp<g><'*> \sb<S><\sp<f><'>>> \v<\sb<S><\sp<f><'>>> \v> \br>
           \v> \v> \v<\bf<y> E> \v>
           \ar|s="3",e="12",bend="20"|<\sb<\check<a>><fg>>
-          \ar|s="6",e="7",inv|<g \circ> \text<->> \ar|s="7",e="12",inv|<\sb<a><f>>
+          \ar|s="6",e="7"|<g \circ> \text<->> \ar|s="7",e="12"|<\sb<a><f>>
           \ar|s="9",e="6",tip="hook"|> \ar|s="9",e="14",tip="hook"|> \ar|s="9",e="3",tip="hook",bend="20"|> \ar|s="9",e="19",tip="hook",bend="-20"|>
-          \ar|s="14",e="15"|<\sp<g><'> \circ> \text<->> \ar|s="15",e="12"|<\sb<a><\sp<f><'>>>
+          \ar|s="14",e="15",inv|<\sp<g><'> \circ> \text<->> \ar|s="15",e="12",inv|<\sb<a><\sp<f><'>>>
           \ar|s="19",e="12",bend="-20",inv|<\sb<\check<a>><\sp<f><'> \sp<g><'>>>
         >
       >
