@@ -11,12 +11,12 @@
   >
   \thm|type="def"|<
     \p<
-      有限完備な圏 &m<\scr<E>> をとる。
-      終対象からの射 &m<\top>: 1 \to> `V> が\em<部分対象分類子\fl<subobject classifier>> であるとは、任意の単射 &m<m: M \tailrarr> E> に対し、射 &m<`x: E \to> `V> が一意に存在して、図式
+      有限完備な圏 &m<\scr<F>> をとる。
+      終対象からの射 &m<\top>: 1 \to> `V> が\em<部分対象分類子\fl<subobject classifier>> であるとは、任意の単射 &m<m: M \tailrarr> F> に対し、射 &m<`x: F \to> `V> が一意に存在して、図式
       &mb<
         \diag<
           \v<M> \v<1> \br>
-          \v<E> \v<`V>
+          \v<F> \v<`V>
           \ar|s="1",e="2"|> \ar|s="1",e="3",tip="tail",inv|<m>
           \ar|s="2",e="4"|<\top>> \ar|s="3",e="4",inv|<`x>
         >
@@ -28,17 +28,17 @@
     定義に厳密に従えば、部分対象分類子とは上記の性質を満たす射 &m<\top>: 1 \to> `V> のことだが、しばしば &m<`V> だけを指して部分対象分類子と言うことがある。
   >
   \p<
-    定義によって、部分対象分類子 &m<\top>: 1 \to> `V> があると、任意の対象 &m<E> に対して、&m<E> の部分対象と &m<E> から &m<`V> への射が 1 対 1 に対応する。
+    定義によって、部分対象分類子 &m<\top>: 1 \to> `V> があると、任意の対象 &m<F> に対して、&m<F> の部分対象と &m<F> から &m<`V> への射が 1 対 1 に対応する。
     以降、これによって対応するものを、
     &mb<
       \array|align="rcl"|<
-        \c<\op<Sub> (E)> \c<\longrarr>> \c<\op<Hom> (E, `V)> \br>
-        \c<M> \c<\longmapsto>> \c<\sb|fun|<\op<char>><E> M> \br>
-        \c<\sb|fun|<\op<sub>><E> f> \c<\longmappedfrom>> \c<f>
+        \c<\op<Sub> (F)> \c<\longrarr>> \c<\op<Hom> (F, `V)> \br>
+        \c<M> \c<\longmapsto>> \c<\sb|fun|<\op<char>><F> M> \br>
+        \c<\sb|fun|<\op<sub>><F> `x> \c<\longmappedfrom>> \c<`x>
       >
     >
     と書くことにする。
-    添字の &m<E> はしばしば省略する。
+    添字の &m<F> はしばしば省略する。
   >
   \p<
     層の圏の部分対象分類子は、閉篩の全体として定義される。
