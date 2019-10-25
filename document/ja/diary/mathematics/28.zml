@@ -45,9 +45,9 @@
     >
     \p<
       &m<P> が分離前層であると仮定する。
-      任意の対象 &m<C> をとり、射 &m<a, \sp<a><'>: \sb<\top>><C> \to> P> が &m<\sb<i><\sb<\top>><C>> a = \sb<i><\sb<\top>><C>> \sp<a><'>> を満たすとする。
-      これは、&m<\sp<P><+> C> を定める同値関係において &m<a, \sp<a><'>> が同値であるということなので、ある被覆篩 &m<S \in> JC> が存在して &m<a \circ> S = \sp<a><'> \circ> S> が成り立つ。
-      仮定から &m<P> は分離前層なので &m<\text<-> \circ> S> は単射であるから、これより &m<a = \sp<a><'>> を得る。
+      任意の対象 &m<C> をとり、射 &m<a, a': \sb<\top>><C> \to> P> が &m<\sb<i><\sb<\top>><C>> a = \sb<i><\sb<\top>><C>> a'> を満たすとする。
+      これは、&m<\sp<P><+> C> を定める同値関係において &m<a, a'> が同値であるということなので、ある被覆篩 &m<S \in> JC> が存在して &m<a \circ> S = a' \circ> S> が成り立つ。
+      仮定から &m<P> は分離前層なので &m<\text<-> \circ> S> は単射であるから、これより &m<a = a'> を得る。
       以上で、&m<\sb<i><\sb<\top>><C>>> は単射である。
     >
     \p<
@@ -78,22 +78,22 @@
       &m<P> が層であると仮定する。
       任意の対象 &m<C> をとる。
       元 &m<`a \in> \sp<P><+> C> をとり、これがある被覆篩 &m<S \in> JC> に対して &m<a: S \to> P> で代表されるとすると、&m<`a = \sb<i><S> a> である。
-      仮定から &m<P> は層なので &m<\text<-> \circ> S> は全単射であるから、ある &m<\sp<a><'>: \sb<\top>><C> \to> P> が存在して &m<a = \sp<a><'> \circ> S> が成り立つ。
-      したがって &m<`a = \sb<i><S> (\sp<a><'> \circ> S) = \sb<i><\sb<\top>><C>> \sp<a><'>> であるから、&m<\sb<i><\sb<\top>><C>>> が全射であることが示された。  
+      仮定から &m<P> は層なので &m<\text<-> \circ> S> は全単射であるから、ある &m<a': \sb<\top>><C> \to> P> が存在して &m<a = a' \circ> S> が成り立つ。
+      したがって &m<`a = \sb<i><S> (a' \circ> S) = \sb<i><\sb<\top>><C>> a'> であるから、&m<\sb<i><\sb<\top>><C>>> が全射であることが示された。  
       命題 \ref|thm="sepmono"|> によって &m<\sb<i><\sb<\top>><C>>> はすでに単射なので、&m<\sb<i><\sb<\top>><C>>> は全単射である。
     >
     \p<
       逆に、任意の対象 &m<C> に対して &m<\sb<i><\sb<\top>><C>>> が全単射であると仮定する。
       任意に被覆篩 &m<S \in> JC> をとり、さらに射 &m<a: S \to> P> をとる。
-      仮定から &m<\sb<i><\sb<\top>><C>>> が全単射なので、ある &m<\sp<a><'>: \sb<\top>><C> \to> P> が存在して &m<\sb<i><S> a = \sb<i><\sb<\top>><C>> \sp<a><'>> が成り立つ。
-      これは、&m<\sp<P><+> C> において &m<a, \sp<a><'>> が同値であるということなので、ある被覆篩 &m<T \in> JC> が存在し、&m<T \subseteq> S> であって、
+      仮定から &m<\sb<i><\sb<\top>><C>>> が全単射なので、ある &m<a': \sb<\top>><C> \to> P> が存在して &m<\sb<i><S> a = \sb<i><\sb<\top>><C>> a'> が成り立つ。
+      これは、&m<\sp<P><+> C> において &m<a, a'> が同値であるということなので、ある被覆篩 &m<T \in> JC> が存在し、&m<T \subseteq> S> であって、
       &mb<
         \diag|ver="vthn"|<
           \v> \v<S> \v> \br>
           \v<T> \v> \v<P> \br>
           \v> \v<\sb<\top>><C>> \v>
           \ar|s="4",e="2",tip="hook"|> \ar|s="4",e="8",tip="hook"|>
-          \ar|s="2",e="6"|<a> \ar|s="8",e="6",inv|<\sp<a><'>>
+          \ar|s="2",e="6"|<a> \ar|s="8",e="6",inv|<a'>
         >
       >
       が可換である。
@@ -108,7 +108,7 @@
           \ar|s="3",e="4"|<f \circ> \text<->> \ar|s="4",e="5"|<a> \ar|s="5",e="15",line="2",tip="none"|>
           \ar|s="7",e="4",tip="hook"|>
           \ar|s="11",e="13",line="2",tip="none"|> \ar|s="11",e="17",inv|<f \circ> \text<->>
-          \ar|s="13",e="14"|<f \circ> \text<->> \ar|s="14",e="15"|<\sp<a><'>>
+          \ar|s="13",e="14"|<f \circ> \text<->> \ar|s="14",e="15"|<a'>
           \ar|s="17",e="14",line="2",tip="none"|>
           \ar|s="7",e="17",tip="hook"|>
         >
@@ -127,12 +127,12 @@
           \v<\bf<y> D> \v> \v<P> \br>
           \v> \v<\sb<\top>><C>> \v>
           \ar|s="4",e="2"|<f \circ> \text<->> \ar|s="4",e="8",inv|<f \circ> \text<->>
-          \ar|s="2",e="6"|<a> \ar|s="8",e="6",inv|<\sp<a><'>>
+          \ar|s="2",e="6"|<a> \ar|s="8",e="6",inv|<a'>
         >
       >
       が可換であることが分かる。
-      この図式において &m<\sb<\rm<id>><D>> の行き先を見ることで、&m<\sb<a><D> f = \sbsp<a><D><'> f> が得られる。
-      &m<f> は &m<S> に属する任意の射であったから、これによって &m<a = \sp<a><'> \circ> S> が得られ、&m<\text<-> \circ> S> が全射であることが示された。
+      この図式において &m<\sb<\rm<id>><D>> の行き先を見ることで、&m<\sb<a><D> f = \sbsp<a><D><\pr>> f> が得られる。
+      &m<f> は &m<S> に属する任意の射であったから、これによって &m<a = a' \circ> S> が得られ、&m<\text<-> \circ> S> が全射であることが示された。
       命題 \ref|thm="sepmono"|> によって &m<\text<-> \circ> S> はすでに単射なので、&m<\text<-> \circ> S> は全単射となり、&m<P> は層である。
     >
   >

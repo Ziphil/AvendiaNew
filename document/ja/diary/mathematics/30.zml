@@ -145,32 +145,32 @@
     >
     \p<
       写像 &m<♤> が単射であることを示す。
-      そのために、自然変換 &m<a, \sp<a><'>: \bf<y> C \to> `V> をとり、&m<a \circ> W = \sp<a><'> \circ> W> を満たすとする。
-      すなわち、任意の &m<f \in> W: D \to> C> に対して &m<\sb<a><D> f = \sbsp<a><D><'> f> が成り立つとする。
-      ここで、Yoneda 同型によって &m<a, \sp<a><'>> と対応する元をそれぞれ &m<S, \sp<S><'> \in> `V C> とすると、この条件は &m<\sp<f><*> S = \sp<f><*> \sp<S><'>> と同値になる。
+      そのために、自然変換 &m<a, a': \bf<y> C \to> `V> をとり、&m<a \circ> W = a' \circ> W> を満たすとする。
+      すなわち、任意の &m<f \in> W: D \to> C> に対して &m<\sb<a><D> f = \sbsp<a><D><\pr>> f> が成り立つとする。
+      ここで、Yoneda 同型によって &m<a, a'> と対応する元をそれぞれ &m<S, S' \in> `V C> とすると、この条件は &m<\sp<f><*> S = \sp<f><*> S'> と同値になる。
     >
     \p<
       さて、任意に &m<f \in> W \cap> S: D \to> C> をとると、今述べたことから、
       &mb<
-        \sp<f><*> \sp<S><'> = \sp<f><*> S = \sb<\top>><D> \in> JD
+        \sp<f><*> S' = \sp<f><*> S = \sb<\top>><D> \in> JD
       >
       が成り立つ。
-      &m<\sp<S><'>> は閉なので、これより &m<f \in> \sp<S><'>> が得られる。
-      したがって、&m<W \cap> S \subseteq> W \cap> \sp<S><'>> が成り立つ。
-      同じ議論を &m<S> と &m<\sp<S><'>> を逆にして行えば &m<W \cap> S \supseteq> W \cap> \sp<S><'>> も得られるので、結局 &m<W \cap> S = W \cap> \sp<S><'>> が成り立つ。
+      &m<S'> は閉なので、これより &m<f \in> S'> が得られる。
+      したがって、&m<W \cap> S \subseteq> W \cap> S'> が成り立つ。
+      同じ議論を &m<S> と &m<S'> を逆にして行えば &m<W \cap> S \supseteq> W \cap> S'> も得られるので、結局 &m<W \cap> S = W \cap> S'> が成り立つ。
     >
     \p<
       任意に &m<f \in> S: D \to> C> をとる。
       &m<J> の安定性によって &m<\sp<f><*> W \in> JD> であり、&m<\sp<f><*> S = \sb<\top>><D> \in> JD> でもあるから、上の議論の結果と合わせて、
       &mb<
-        \sp<f><*> (W \cap> \sp<S><'>) = \sp<f><*> (W \cap> S) = \sp<f><*> W \cap> \sp<f><*> S \in> JD
+        \sp<f><*> (W \cap> S') = \sp<f><*> (W \cap> S) = \sp<f><*> W \cap> \sp<f><*> S \in> JD
       >
       が得られる。
-      さらに &m<\sp<f><*> (W \cap> \sp<S><'>) \subseteq> \sp<f><*> \sp<S><'>> なので、&m<\sp<f><*> \sp<S><'> \in> JD> も分かる。
-      &m<\sp<S><'>> は閉なので、これより &m<f \in> \sp<S><'>> が得られる。
-      したがって、&m<S \subseteq> \sp<S><'>> が成り立つ。
-      同様にして &m<S \supseteq> \sp<S><'>> も得られるので、結局 &m<S = \sp<S><'>> が成り立つ。
-      すなわち &m<a = \sp<a><'>> であり、写像 &m<♤> の単射性が示された。
+      さらに &m<\sp<f><*> (W \cap> S') \subseteq> \sp<f><*> S'> なので、&m<\sp<f><*> S' \in> JD> も分かる。
+      &m<S'> は閉なので、これより &m<f \in> S'> が得られる。
+      したがって、&m<S \subseteq> S'> が成り立つ。
+      同様にして &m<S \supseteq> S'> も得られるので、結局 &m<S = S'> が成り立つ。
+      すなわち &m<a = a'> であり、写像 &m<♤> の単射性が示された。
     >
     \p<
       次に、写像 &m<♤> が全射であることを示す。
@@ -185,10 +185,10 @@
       >
       と定める。
       任意に &m<f \in> W> および &m<g \in> \sp<f><*> U> をとる。
-      すると、&m<f \circ> g \in> U> であるから、定義によってある &m<\sp<f><'> \in> W: \sp<D><'> \to> C> と &m<g \in> \sb<S><\sp<f><'>>: E \to> \sp<D><'>> が存在し、&m<f \circ> g = \sp<f><'> \circ> \sp<g><'>> が成り立つ。
+      すると、&m<f \circ> g \in> U> であるから、定義によってある &m<f' \in> W: D' \to> C> と &m<g' \in> \sb<S><f'>: E \to> D'> が存在し、&m<f \circ> g = f' \circ> g'> が成り立つ。
       このとき、&m<a> の自然性を用いると、
       &mb<
-        \sp<g><*> \sb<S><f> = \sb<S><f \circ> g> = \sb<S><\sp<f><'> \circ> \sp<g><'>> = \sp<g><'*> \sb<S><\sp<f><'>> = \sb<\top>><E>
+        \sp<g><*> \sb<S><f> = \sb<S><f \circ> g> = \sb<S><f' \circ> g'> = \sp<g><\pr> *> \sb<S><f'> = \sb<\top>><E>
       >
       が成り立つから、&m<g \in> \sb<S><f>> である。
       以上により、&m<\sp<f><*> U \subseteq> \sb<S><f>> が示された。

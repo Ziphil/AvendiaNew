@@ -55,14 +55,14 @@
         \sp<P><+> C \cong> \frac<\coprod<S \in> JC><> \sb<\op<Hom>><\bfrm<PSh> (\scr<C>)> (S, P)><\approx>>
       >
       と書ける。
-      ここで、2 つの自然変換 &m<a: S \to> P, \sp<a><'>: \sp<S><'> \to> P> が &m<a \approx> \sp<a><'>> を満たすとは、ある &m<T \in> JC> が存在して、&m<T \subseteq> S> かつ &m<T \subseteq> \sp<S><'>> が成り立ち、さらに 
+      ここで、2 つの自然変換 &m<a: S \to> P, a': S' \to> P> が &m<a \approx> a'> を満たすとは、ある &m<T \in> JC> が存在して、&m<T \subseteq> S> かつ &m<T \subseteq> S'> が成り立ち、さらに 
       &mb<
         \diag|ver="vthn"|<
           \v> \v<S> \v> \br>
           \v<T> \v> \v<P> \br>
-          \v> \v<\sp<S><'>> \v>
+          \v> \v<S'> \v>
           \ar|s="4",e="2",tip="hook"|> \ar|s="4",e="8",tip="hook"|>
-          \ar|s="2",e="6"|<a> \ar|s="8",e="6",inv|<\sp<a><'>>
+          \ar|s="2",e="6"|<a> \ar|s="8",e="6",inv|<a'>
         >
       >
       が可換であることと定める。
@@ -150,15 +150,15 @@
         \text<-> \circ> W: \op<Hom> (\bf<y> C, \sp<P><+>) \to> \op<Hom> (W, \sp<P><+>)
       >
       が単射であることを示せば良い。
-      そこで、自然変換 &m<`a, \sp<`a><'>: \bf<y> C \to> \sp<P><+>> をとり、これらが &m<`a \circ> W = \sp<`a><'> \circ> W> を満たすとする。
+      そこで、自然変換 &m<`a, `a': \bf<y> C \to> \sp<P><+>> をとり、これらが &m<`a \circ> W = `a' \circ> W> を満たすとする。
       すなわち、任意の &m<f \in> W: D \to> C> に対し、
       &mb|mark="♡"|<
-        \sb<(`a \circ> W)><D> f = \sb<(\sp<`a><'> \circ> W)><D> f \in> \sp<P><+> D
+        \sb<(`a \circ> W)><D> f = \sb<(`a' \circ> W)><D> f \in> \sp<P><+> D
       >
       が成り立つとする。
     >
     \p<
-      さて、Yoneda 同型によって &m<`a, \sp<`a><'>> と対応する元をそれぞれ &m<\hat<`a>, \sp<\hat<`a>><'> \in> \sp<P><+> C> とし、これらがそれぞれある被覆篩 &m<S, \sp<S><'> \in> JC> に対して &m<a: S \to> P, \sp<a><'>: \sp<S><'> \to> P> で代表されるとする。
+      さて、Yoneda 同型によって &m<`a, `a'> と対応する元をそれぞれ &m<\hat<`a>, \sp<\hat<`a>><\pr>> \in> \sp<P><+> C> とし、これらがそれぞれある被覆篩 &m<S, S' \in> JC> に対して &m<a: S \to> P, a': S' \to> P> で代表されるとする。
       すると、仮定 &m<♡> は、2 つの自然変換
       &mb<
         \diag<
@@ -167,20 +167,20 @@
         >
         \qquad>
         \diag<
-          \v<\sp<f><*> \sp<S><'>> \v<\sp<S><'>> \v<P>
-          \ar|s="1",e="2"|<f \circ> \text<->> \ar|s="2",e="3"|<\sp<a><'>>
+          \v<\sp<f><*> S'> \v<S'> \v<P>
+          \ar|s="1",e="2"|<f \circ> \text<->> \ar|s="2",e="3"|<a'>
         >
       >
       が &m<\sp<P><+> D> を定める同値関係において同値であるということである。
-      それはすなわち、ある被覆篩 &m<\sb<T><f> \in> JD> が存在し、&m<\sb<T><f> \subseteq> \sp<f><*> S> かつ &m<\sb<T><f> \subseteq> \sp<f><*> \sp<S><'>> であって、
+      それはすなわち、ある被覆篩 &m<\sb<T><f> \in> JD> が存在し、&m<\sb<T><f> \subseteq> \sp<f><*> S> かつ &m<\sb<T><f> \subseteq> \sp<f><*> S'> であって、
       &mb<
         \diag|ver="vthn"|<
           \v> \v<\sp<f><*> S> \v<S> \v> \br>
           \v<\sb<T><f>> \v> \v> \v<P> \br>
-          \v> \v<\sp<f><*> \sp<S><'>> \v<\sp<S><'>> \v>
+          \v> \v<\sp<f><*> S'> \v<S'> \v>
           \ar|s="2",e="3"|<f \circ> \text<->> \ar|s="3",e="8"|<a>
           \ar|s="5",e="2",tip="hook"|> \ar|s="5",e="10",tip="hook"|>
-          \ar|s="10",e="11",inv|<f \circ> \text<->> \ar|s="11",e="8",inv|<\sp<a><'>>
+          \ar|s="10",e="11",inv|<f \circ> \text<->> \ar|s="11",e="8",inv|<a'>
         >
       >
       が可換になるということである。
@@ -188,19 +188,19 @@
       &mb<
         U \coloneqq> `{ f \circ> g \mid> f \in> W, g \in> \sb<T><f> `} \subseteq> \bf<y> C
       >
-      と定めると、これは位相の推移性によって被覆篩になっており、&m<U \subseteq> S> かつ &m<U \subseteq> \sp<S><'>> であり、さらに
+      と定めると、これは位相の推移性によって被覆篩になっており、&m<U \subseteq> S> かつ &m<U \subseteq> S'> であり、さらに
       &mb<
         \diag|ver="vthn"|<
           \v> \v<S> \v> \br>
           \v<U> \v> \v<P> \br>
-          \v> \v<\sp<S><'>> \v>
+          \v> \v<S'> \v>
           \ar|s="4",e="2",tip="hook"|> \ar|s="4",e="8",tip="hook"|>
-          \ar|s="2",e="6"|<a> \ar|s="8",e="6",inv|<\sp<a><'>>
+          \ar|s="2",e="6"|<a> \ar|s="8",e="6",inv|<a'>
         >
       >
       が可換である。
-      これはすなわち、&m<a, \sp<a><'>> が &m<\sp<P><+> C> を定める同値関係において同値であることを意味する。
-      したがって、&m<`a = \sp<`a><'>> が成り立つ。
+      これはすなわち、&m<a, a'> が &m<\sp<P><+> C> を定める同値関係において同値であることを意味する。
+      したがって、&m<`a = `a'> が成り立つ。
     >
   >
   \thm|type="prp"|<
@@ -276,51 +276,51 @@
     >
     \p<
       この &m<\sb<\bar<a>><E>> が矛盾なく定義できていることを確かめる。
-      そこで、&m<f, \sp<f><'> \in> W> および &m<g \in> \sb<S><f>, \sp<g><'> \in> \sb<S><\sp<f><'>>> をとり、&m<f \circ> g = \sp<f><'> \circ> \sp<g><'>> を満たすとする。
-      このとき、Yoneda 同型によって &m<\sb<a><f> g, \sb<a><\sp<f><'>> \sp<g><'>> と対応する元をそれぞれ &m<\sb<\check<a>><fg>, \sb<\check<a>><\sp<f><'>\sp<g><'>>: \bf<y> E \to> P> とし、&m<\sb<\check<a>><fg> = \sb<\check<a>><\sp<f><'>\sp<g><'>>> を示せば良い。
+      そこで、&m<f, f' \in> W> および &m<g \in> \sb<S><f>, g' \in> \sb<S><f'>> をとり、&m<f \circ> g = f' \circ> g'> を満たすとする。
+      このとき、Yoneda 同型によって &m<\sb<a><f> g, \sb<a><f'> g'> と対応する元をそれぞれ &m<\sb<\check<a>><fg>, \sb<\check<a>><f' g'>: \bf<y> E \to> P> とし、&m<\sb<\check<a>><fg> = \sb<\check<a>><f' g'>> を示せば良い。
       今 &m<P> は分離前層だから、包含射が誘導する写像
       &mb|mark="♡"|<
-        \op<Hom> (\bf<y> E, P) \to> \op<Hom> (\sb<V><fg> \cap> \sb<V><\sp<f><'> \sp<g><'>>, P)
+        \op<Hom> (\bf<y> E, P) \to> \op<Hom> (\sb<V><fg> \cap> \sb<V><f' g'>, P)
       >
-      は単射なので、&m<\sb<\check<a>><fg>, \sb<\check<a>><\sp<f><'>\sp<g><'>>> をそれぞれこの写像で移した先が等しいことを示せば十分である。
+      は単射なので、&m<\sb<\check<a>><fg>, \sb<\check<a>><f' g'>> をそれぞれこの写像で移した先が等しいことを示せば十分である。
       そのために、図式
       &mb<
         \diag|ver="sthn"|<
           \v> \v> \v<\sp<g><*> \sb<S><f>> \v<\sb<S><f>> \v> \br>
           \v> \v<\sb<T><fg>> \v> \v> \v<P> \br>
           \v> \v> \v> \v<\sb<S><f \circ> g>> \v> \br>
-          \v<\sb<T><fg> \cap> \sb<T><\sp<f><'>\sp<g><'>>> \v> \v> \v> \v> \br>
-          \v> \v> \v> \v<\sb<S><\sp<f><'> \circ> \sp<g><'>>> \v> \br>
-          \v> \v<\sb<T><\sp<f><'>\sp<g><'>>> \v> \v> \v<P> \br>
-          \v> \v> \v<\sp<g><'*> \sb<S><\sp<f><'>>> \v<\sb<S><\sp<f><'>>> \v>
+          \v<\sb<T><fg> \cap> \sb<T><f' g'>> \v> \v> \v> \v> \br>
+          \v> \v> \v> \v<\sb<S><f' \circ> g'>> \v> \br>
+          \v> \v<\sb<T><f' g'>> \v> \v> \v<P> \br>
+          \v> \v> \v<\sp<g><\pr>*> \sb<S><f'>> \v<\sb<S><f'>> \v>
           \ar|s="3",e="4"|<g \circ> \text<->> \ar|s="4",e="10"|<\sb<a><f>>
           \ar|s="7",e="3",tip="hook"|> \ar|s="7",e="14",tip="hook"|> \ar|s="10",e="30",tip="none",line="2"|>
           \ar|s="14",e="24",tip="none",line="2"|> \ar|s="14",e="10",inv|<\sb<a><f \circ> g>>
           \ar|s="16",e="7",tip="hook"|> \ar|s="16",e="27",tip="hook"|>
-          \ar|s="24",e="30"|<\sb<a><\sp<f><'> \circ> \sp<g><'>>>
+          \ar|s="24",e="30"|<\sb<a><f' \circ> g'>>
           \ar|s="27",e="33",tip="hook"|> \ar|s="27",e="24",tip="hook"|>
-          \ar|s="33",e="34",inv|<\sp<g><'> \circ> \text<->> \ar|s="34",e="30",inv|<\sb<a><\sp<f><'>>>
+          \ar|s="33",e="34",inv|<g' \circ> \text<->> \ar|s="34",e="30",inv|<\sb<a><f'>>
         >
       >
-      を考えると、これは &m<\sb<T><fg>, \sb<T><\sp<f><'> \sp<g><'>>> の定義から可換である。
+      を考えると、これは &m<\sb<T><fg>, \sb<T><f' g'>> の定義から可換である。
       したがって、図式
       &mb<
         \diag|ver="thn,sthn,sthn,thn"|<
           \v> \v> \v<\bf<y> E> \v> \br>
           \v> \v<\sp<g><*> \sb<S><f>> \v<\sb<S><f>> \v> \br>
-          \v<\sb<T><fg> \cap> \sb<T><\sp<f><'> \sp<g><'>>> \v> \v> \v<P> \br>
-          \v> \v<\sp<g><'*> \sb<S><\sp<f><'>>> \v<\sb<S><\sp<f><'>>> \v> \br>
+          \v<\sb<T><fg> \cap> \sb<T><f' g'>> \v> \v> \v<P> \br>
+          \v> \v<\sp<g><\pr>*> \sb<S><f'>> \v<\sb<S><f'>> \v> \br>
           \v> \v> \v<\bf<y> E> \v>
           \ar|s="3",e="12",bend="20"|<\sb<\check<a>><fg>>
           \ar|s="6",e="7"|<g \circ> \text<->> \ar|s="7",e="12"|<\sb<a><f>>
           \ar|s="9",e="6",tip="hook"|> \ar|s="9",e="14",tip="hook"|> \ar|s="9",e="3",tip="hook",bend="20"|> \ar|s="9",e="19",tip="hook",bend="-20"|>
-          \ar|s="14",e="15",inv|<\sp<g><'> \circ> \text<->> \ar|s="15",e="12",inv|<\sb<a><\sp<f><'>>>
-          \ar|s="19",e="12",bend="-20",inv|<\sb<\check<a>><\sp<f><'> \sp<g><'>>>
+          \ar|s="14",e="15",inv|<g' \circ> \text<->> \ar|s="15",e="12",inv|<\sb<a><f'>>
+          \ar|s="19",e="12",bend="-20",inv|<\sb<\check<a>><f' g'>>
         >
       >
       も可換である。
-      実際、中央の六角形は上の図式の外側と同じものなので可換であり、上下にある部分は &m<\sb<\check<a>><fg>, \sb<\check<a>><\sp<f><'>\sp<g><'>>> の定義から可換である。
-      そして、この可換性は &m<\sb<\check<a>><fg>, \sb<\check<a>><\sp<f><'>\sp<g><'>>> を写像 &m<♡> で移した先が等しいということを意味しているので、示したかったことが示された。
+      実際、中央の六角形は上の図式の外側と同じものなので可換であり、上下にある部分は &m<\sb<\check<a>><fg>, \sb<\check<a>><f' g'>> の定義から可換である。
+      そして、この可換性は &m<\sb<\check<a>><fg>, \sb<\check<a>><f' g'>> を写像 &m<♡> で移した先が等しいということを意味しているので、示したかったことが示された。
     >
     \p<
       以上によって、自然変換 &m<\bar<a>: U \to> P> が得られた。
