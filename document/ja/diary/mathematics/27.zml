@@ -27,7 +27,7 @@
       &mb<
         \array|align="rrcl"|<
           \c<\sp<P><+>:> \c<\sp<\scr<C>><\circ>>> \c<\longrarr>> \c<\bfrm<Set>> \br>
-          \c> \c<C> \c<\longmapsto>> \c<\un|fun|<\op<colim>><S \in> JC> \sb<\op<Hom>><\bfrm<PSh> (\scr<C>)> (S, P)>
+          \c> \c<C> \c<\longmapsto>> \c<\un|fun|<\op<colim>><S \in> \sp<JC><\circ>>> \sb<\op<Hom>><\bfrm<PSh> (\scr<C>)> (S, P)>
         >
       >
       と定める。
