@@ -91,7 +91,7 @@
     また、別の関手 &m<M': \op<exp> A \times> B \to> \bfrm<Set>> と自然変換 &m<`j: M \to> M'> を考え、各 &m<b \in> X> と &m<X \in> \sp<\bfrm<Set>><A>> に対し、
     &mb<
       \array|align="rrcl"|<
-        \c<\sbsp<\widetildebelow<`j>><X><b>:> \c<\sp<\widetildebelow<M>><b> X> \c<\longrarr>> \c<\widetildebelow<M'> \sp<\strut>><b> X> \br>
+        \c<\widetildebelow<`j>\sbsp<><X><b>:> \c<\sp<\widetildebelow<M>><b> X> \c<\longrarr>> \c<\widetildebelow<M'> \sp<\strut>><b> X> \br>
         \c> \c<(f, x) @ `g> \c<\longmapsto>> \c<(f, \sb<`j><(`g, b)> x) @ `g>
       >
     >
