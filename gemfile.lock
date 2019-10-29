@@ -10,11 +10,13 @@ GEM
       ffi (~> 1.0)
     sassc (2.2.1-x64-mingw32)
       ffi (~> 1.9)
+    ttfunk (1.5.1)
     wdm (0.1.1)
     zenmath (0.0.0)
       sassc
+      ttfunk
       zenml (>= 1.2.0)
-    zenml (1.2.0)
+    zenml (1.2.1)
 
 PLATFORMS
   x64-mingw32
