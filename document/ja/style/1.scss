@@ -1443,6 +1443,7 @@ article.main {
   span.math-block >span.number,
   span.math-block >span.mark {
     width: $ordered-list-marker-width;
+    height: 10px;
     font-size: 80%;
     color: $list-marker-color;
     line-height: 0.8;
@@ -1452,10 +1453,6 @@ article.main {
     border-radius: $list-marker-border-radius;
     display: inline-block;
     box-sizing: border-box;
-  }
-
-  span.math-block >span.mark {
-    font-family: "Math";
   }
 
   span.emphasis {

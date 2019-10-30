@@ -53,20 +53,20 @@ end
 
 converter.add(["math-inline"], ["page"]) do |element|
   this = ""
-  this << apply(element, "html")
+  this << apply(element, "math-html")
   next this
 end
 
 converter.add(["math-block"], ["page"]) do |element|
   this = ""
   id = element.attribute("id")&.to_s
-  mark = element.attribute("mark")&.to_s
+  mark_element = element.elements.to_a("math-root/mark").first
   if id
     set_number(:equation, id)
   end
   this << Tag.build("span", "math-block") do |this|
     this << Tag.build("span", "math-wrapper") do |this|
-      this << apply(element, "html")
+      this << apply(element, "math-html")
     end
     if id
       this["id"] = id
@@ -74,9 +74,9 @@ converter.add(["math-block"], ["page"]) do |element|
         this << get_number(:equation, id).to_s
       end
     end
-    if mark
+    if mark_element
       this << Tag.build("span", "mark") do |this|
-        this << mark
+        this << apply(mark_element, "math-html")
       end
     end
   end
@@ -139,4 +139,13 @@ converter.add(["ref"], ["page"]) do |element|
     this["class"] = type.to_s
     this << get_number(type, id).to_s
   end
+end
+
+converter.add(["mark"], ["math-html"]) do |element|
+  next ""
+end
+
+converter.add([//], ["math-html"]) do |element|
+  this = pass_element(element, "math-html")
+  next this
 end
