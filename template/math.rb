@@ -60,7 +60,7 @@ end
 converter.add(["math-block"], ["page"]) do |element|
   this = ""
   id = element.attribute("id")&.to_s
-  mark_element = element.elements.to_a("math-root/mark").first
+  mark_element = element.elements.to_a("math-root/math-mark").first
   if id
     set_number(:equation, id)
   end
@@ -141,7 +141,7 @@ converter.add(["ref"], ["page"]) do |element|
   end
 end
 
-converter.add(["mark"], ["math-html"]) do |element|
+converter.add(["math-mark"], ["math-html"]) do |element|
   next ""
 end
 
