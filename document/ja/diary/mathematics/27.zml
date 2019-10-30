@@ -152,7 +152,8 @@
       が単射であることを示せば良い。
       そこで、自然変換 &m<`a, `a': \bf<y> C \to> \sp<P><+>> をとり、これらが &m<`a \circ> W = `a' \circ> W> を満たすとする。
       すなわち、任意の &m<f \in> W: D \to> C> に対し、
-      &mb|mark="♡"|<
+      &mb<
+        &mark<♡>
         \sb<(`a \circ> W)><D> f = \sb<(`a' \circ> W)><D> f \in> \sp<P><+> D
       >
       が成り立つとする。
@@ -213,7 +214,8 @@
     \p<
       任意に被覆篩 &m<W \in> JC> をとる。
       \a|href="26.html"|<7 月 27 日>の命題 13 によって、
-      &mb|mark="♤"|<
+      &mb<
+        &mark<♤>
         \text<-> \circ> W: \op<Hom> (\bf<y> C, \sp<P><+>) \to> \op<Hom> (W, \sp<P><+>)
       >
       が全射であることを示せば良い。
@@ -279,7 +281,8 @@
       そこで、&m<f, f' \in> W> および &m<g \in> \sb<S><f>, g' \in> \sb<S><f'>> をとり、&m<f \circ> g = f' \circ> g'> を満たすとする。
       このとき、Yoneda 同型によって &m<\sb<a><f> g, \sb<a><f'> g'> と対応する元をそれぞれ &m<\sb<\check<a>><fg>, \sb<\check<a>><f' g'>: \bf<y> E \to> P> とし、&m<\sb<\check<a>><fg> = \sb<\check<a>><f' g'>> を示せば良い。
       今 &m<P> は分離前層だから、包含射が誘導する写像
-      &mb|mark="♡"|<
+      &mb<
+        &mark<♡>
         \op<Hom> (\bf<y> E, P) \to> \op<Hom> (\sb<V><fg> \cap> \sb<V><f' g'>, P)
       >
       は単射なので、&m<\sb<\check<a>><fg>, \sb<\check<a>><f' g'>> をそれぞれこの写像で移した先が等しいことを示せば十分である。

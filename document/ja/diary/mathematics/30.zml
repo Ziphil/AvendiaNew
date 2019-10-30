@@ -138,7 +138,8 @@
   \prf<
     \p<
       任意に被覆篩 &m<W \in> JC> をとる。
-      &mb|mark="♤"|<
+      &mb<
+        &mark<♤>
         \text<-> \circ> W: \op<Hom> (\bf<y> C, `V) \to> \op<Hom> (W, `V)
       >
       が全単射であることを示せば良い。
