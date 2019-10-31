@@ -163,13 +163,13 @@
   \thm|type="def"|<
     \p<
       景 &m<(\scr<C>, J)> をとり、前層 &m<P: \sp<\scr<C>><\circ>> \to> \bfrm<Set>> および被覆篩 &m<S \in> JC> を考える。
-      各射 &m<f \in> S: D \to> C> に対して元 &m<\sb<a><f> \in> PD> を定めている族 &m<(\sb<a><f>) \sb<\vph<1>><f \in> S>> が &m<S> に関する &m<P> の\em<適合族\fl<matching family>> であるとは、篩に属する任意の射 &m<f \in> S: D \to> C> と任意の射 &m<g: E \to> D> に対し、&m<\sb<a><f> \cdot> g = \sb<a><f \circ> g>> が成り立つことである。
+      各射 &m<f \in> S: D \to> C> に対して元 &m<\sb<a><f> \in> PD> を定めている族 &m<(\sb<a><f>) \sb<><f \in> S>> が &m<S> に関する &m<P> の\em<適合族\fl<matching family>> であるとは、篩に属する任意の射 &m<f \in> S: D \to> C> と任意の射 &m<g: E \to> D> に対し、&m<\sb<a><f> \cdot> g = \sb<a><f \circ> g>> が成り立つことである。
     >
   >
   \thm|type="def"|<
     \p<
-      景 &m<(\scr<C>, J)> をとり、前層 &m<P: \sp<\scr<C>><\circ>> \to> \bfrm<Set>> および被覆篩 &m<S \in> JC> を考え、その適合族 &m<(\sb<a><f>) \sb<\vph<1>><f \in> S>> をとる。
-      元 &m<\bar<a> \in> PC> が &m<(\sb<a><f>) \sb<\vph<1>><f \in> S>> の\em<融合\fl<amalgamation>> であるとは、任意の射 &m<f \in> S: D \to> C> に対し、&m<\bar<a> \cdot> f = \sb<a><f>> が成り立つことである。
+      景 &m<(\scr<C>, J)> をとり、前層 &m<P: \sp<\scr<C>><\circ>> \to> \bfrm<Set>> および被覆篩 &m<S \in> JC> を考え、その適合族 &m<(\sb<a><f>) \sb<><f \in> S>> をとる。
+      元 &m<\bar<a> \in> PC> が &m<(\sb<a><f>) \sb<><f \in> S>> の\em<融合\fl<amalgamation>> であるとは、任意の射 &m<f \in> S: D \to> C> に対し、&m<\bar<a> \cdot> f = \sb<a><f>> が成り立つことである。
     >
   >
   \thm|type="prp"|<
@@ -189,7 +189,7 @@
         は全単射である。
       >
       \li*<
-        任意の被覆篩 &m<S \in> JC> とその適合族 &m<(\sb<a><f>) \sb<\vph<1>><f \in> S>> に対し、その融合が一意に存在する。
+        任意の被覆篩 &m<S \in> JC> とその適合族 &m<(\sb<a><f>) \sb<><f \in> S>> に対し、その融合が一意に存在する。
       >
       \li*<
         任意の被覆篩 &m<S \in> JC> に対し、図式
@@ -204,9 +204,9 @@
         ここで &m<e, p, q> は、
         &mb<
           \array|align="rcrcl"|<
-            \c<e> \c<:> \c<\bar<a>> \c<\longmapsto>> \c<(\bar<a> \cdot> f) \sb<\vph<1>><f>> \br>
-            \c<p> \c<:> \c<(\sb<a><f>) \sb<\vph<1>><f>> \c<\longmapsto>> \c<(\sb<a><f \circ> g>) \sb<\vph<1>><f, g>> \br>
-            \c<q> \c<:> \c<(\sb<a><f>) \sb<\vph<1>><f>> \c<\longmapsto>> \c<(\sb<a><f> \cdot> g) \sb<\vph<1>><f, g>>
+            \c<e> \c<:> \c<\bar<a>> \c<\longmapsto>> \c<(\bar<a> \cdot> f) \sb<><f>> \br>
+            \c<p> \c<:> \c<(\sb<a><f>) \sb<><f>> \c<\longmapsto>> \c<(\sb<a><f \circ> g>) \sb<><f, g>> \br>
+            \c<q> \c<:> \c<(\sb<a><f>) \sb<><f>> \c<\longmapsto>> \c<(\sb<a><f> \cdot> g) \sb<><f, g>>
           >
         >
         で定まる写像である。
@@ -219,7 +219,7 @@
   \prf<
     \p<
       1 番目と 2 番目の主張は単なる言い換えで、3 番目と 4 番目の主張も言い換えである。
-      1 番目と 3 番目の主張の同値性は、&m<S> に関する &m<P> の適合族 &m<(\sb<a><f>) \sb<\vph<1>><f \in> S>> が自然変換 &m<a: S \to> P> と同じものであることに注意すれば、容易に証明できる。
+      1 番目と 3 番目の主張の同値性は、&m<S> に関する &m<P> の適合族 &m<(\sb<a><f>) \sb<><f \in> S>> が自然変換 &m<a: S \to> P> と同じものであることに注意すれば、容易に証明できる。
     >
   >
   \thm|type="def"|<

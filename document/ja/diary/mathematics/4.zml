@@ -91,11 +91,11 @@
     また、別の関手 &m<M': \op<exp> A \times> B \to> \bfrm<Set>> と自然変換 &m<`j: M \to> M'> を考え、各 &m<b \in> X> と &m<X \in> \sp<\bfrm<Set>><A>> に対し、
     &mb<
       \array|align="rrcl"|<
-        \c<\widetildebelow<`j>\sbsp<><X><b>:> \c<\sp<\widetildebelow<M>><b> X> \c<\longrarr>> \c<\widetildebelow<M'> \sp<\strut>><b> X> \br>
+        \c<\widetildebelow<`j>\sbsp<><X><b>:> \c<\sp<\widetildebelow<M>><b> X> \c<\longrarr>> \c<\widetildebelow<M'> \sp<><b> X> \br>
         \c> \c<(f, x) @ `g> \c<\longmapsto>> \c<(f, \sb<`j><(`g, b)> x) @ `g>
       >
     >
-    とおくと、自然変換 &m<\sp<\widetildebelow<`j>><b>: \sp<\widetildebelow<M>><b> \to> \widetildebelow<M'> \sp<\strut>><b>> が定まるが、これはカルテシアンであることが容易に確認できる。
+    とおくと、自然変換 &m<\sp<\widetildebelow<`j>><b>: \sp<\widetildebelow<M>><b> \to> \widetildebelow<M'> \sp<><b>> が定まるが、これはカルテシアンであることが容易に確認できる。
     したがって、これが定める自然変換 &m<\widetildebelow<`j>: \widetildebelow<M> \to> \widetildebelow<M'>> もカルテシアンである。
   >
   \p<
@@ -166,7 +166,7 @@
     \p<
       任意にカルテシアン自然変換 &m<`n: \widetildebelow<M> \to> \widetildebelow<M'>> をとる。
       任意の &m<(`g, b) \in> \op<exp> A \times> B> と &m<x \in> M (`g, b)> に対し、補題 \ref|thm="iso"|> によって &m<(`g, (\sb<\rm<id>><`g>, x))> は &m<\bfrm<El> (\sp<\widetildebelow<M>><b>)> で正規対象である。
-      したがって、補題 \ref|thm="pres"|> によって &m<(`g, \sbsp<`n><`g><b> (\sb<\rm<id>><`g>, x))> は &m<\bfrm<El> (\widetildebelow<M'> \sp<\strut>><b>)> で正規対象でもある。
+      したがって、補題 \ref|thm="pres"|> によって &m<(`g, \sbsp<`n><`g><b> (\sb<\rm<id>><`g>, x))> は &m<\bfrm<El> (\widetildebelow<M'> \sp<><b>)> で正規対象でもある。
       再び補題 \ref|thm="iso"|> を用いれば、ある元 &m<y \in> M' (`g, b)> が存在して、
       &mb<
         (`g, \sbsp<`n><X><b> (\sb<\rm<id>><`g>, x)) \cong> (`g, (\sb<\rm<id>><`g>, y))
@@ -184,7 +184,7 @@
     \p<
       ここで、任意の &m<(`g, b) \in> \op<exp> A \times> B> および &m<x \in> M (`g, b)> に対し、
       &mb<
-        (`g, \sbsp<`n><`g><b> (\sb<\rm<id>><`g>, x)) \cong> (`g, (\sb<\rm<id>><`g>, \sb<`j><(`g, b)> x)) \cong> (`g, \sbsp<\widetildebelow<`j>><X><b> (\sb<\rm<id>><`g>, x))
+        (`g, \sbsp<`n><`g><b> (\sb<\rm<id>><`g>, x)) \cong> (`g, (\sb<\rm<id>><`g>, \sb<`j><(`g, b)> x)) \cong> (`g, \widetildebelow<`j> \sbsp<><X><b> (\sb<\rm<id>><`g>, x))
       >
       が成り立つ。
       補題 \ref|thm="iso"|> によって、&m<\bfrm<El> (\sp<\widetildebelow<M>><b>)> の正規対象は同型の違いを除いて全て &m<(`g, (\sb<\rm<id>><`g>, x))> の形だから、上の同型は &m<\sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>>> の射として &m<\widetildebelow<`j> = `n> が成り立つことを意味している。

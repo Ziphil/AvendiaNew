@@ -229,7 +229,7 @@
     >
   >
   \p<
-    ということで、解析的関手 &m<F: \sp<\bfrm<Set>><A> \to> \bfrm<Set>> は、有限対象の族 &m<(\sb<S><i>) \sb<\strut>><i \in> I>> と群の族 &m<(\sb<K><i>) \sb<\strut>><i \in> I>> による
+    ということで、解析的関手 &m<F: \sp<\bfrm<Set>><A> \to> \bfrm<Set>> は、有限対象の族 &m<(\sb<S><i>) \sb<><i \in> I>> と群の族 &m<(\sb<K><i>) \sb<><i \in> I>> による
     &mb<
       FX \cong> \coprod<i \in> I><> \sb<K><i> \backslash> \sb<\op<Hom>><\scr<C>> (\sb<S><i>, X)
     >
