@@ -38,6 +38,17 @@ converter.define_singleton_method(:get_number) do |type, id|
   end
 end
 
+converter.define_singleton_method(:create_script_string) do
+  command = "uglifyjs --compress --mangle"
+  Open3.popen3(command) do |stdin, stdout, stderr, thread|
+    stdin.puts(ZenmathParserMethod.create_script_string)
+    stdin.close
+    converter.variables[:script_string] = stdout.read
+  end
+end
+
+converter.create_script_string
+
 converter.add(["use-math"], ["header"]) do |element|
   this = ""
   converter.reset_variables
@@ -46,7 +57,7 @@ converter.add(["use-math"], ["header"]) do |element|
     this << ZenmathParserMethod.create_style_string(font_url)
   end
   this << Tag.build("script") do |this|
-    this << ZenmathParserMethod.create_script_string
+    this << converter.variables[:script_string]
   end
   next this + "\n"
 end
