@@ -163,13 +163,13 @@
         集まり &m<\op<Ob> (\scr<C>)> が定まっている。
       >
       \li*<
-        &m<\op<Ob> (\scr<C>)> の元 &m<A, B> に対し、&m<\scr<V>> の対象 &m<`[A, B`]> が定まっている。
+        &m<\op<Ob> (\scr<C>)> の元 &m<A, B> に対し、&m<\scr<V>> の対象 &m<`[A, B`] \sb<><\scr<C>>> が定まっている。
       >
       \li*<
-        &m<\op<Ob> (\scr<C>)> の元 &m<A, B, C> に対し、&m<\scr<V>> の射 &m<\sb<c><ABC>: `[A, B`] \otimes> `[B, C`] \to> `[A, C`]> が定まっている。
+        &m<\op<Ob> (\scr<C>)> の元 &m<A, B, C> に対し、&m<\scr<V>> の射 &m<\sb<c><ABC>: `[A, B`] \sb<><\scr<C>> \otimes> `[B, C`] \sb<><\scr<C>> \to> `[A, C`] \sb<><\scr<C>>> が定まっている。
       >
       \li*<
-        &m<\op<Ob> (\scr<C>)> の元 &m<A> に対し、&m<\scr<V>> の射 &m<\sb<j><A>: 1 \to> `[A, A`]> が定まっている。
+        &m<\op<Ob> (\scr<C>)> の元 &m<A> に対し、&m<\scr<V>> の射 &m<\sb<j><A>: 1 \to> `[A, A`] \sb<><\scr<C>>> が定まっている。
       >
     >
     \p<
@@ -178,23 +178,23 @@
         \array|align="c"|<
           \c<
             \diag|hor="thk",ver="vthn"|<
-              \v<(`[A, B`] \otimes> `[B, C`]) \otimes> `[C, D`]> \v<`[A, C`] \otimes> `[C, D`]> \v> \br>
-              \v> \v> \v<`[A, D`]> \br>
-              \v<`[A, B`] \otimes> (`[B, C`] \otimes> `[C, D`])> \v<`[A, B`] \otimes> `[B, D`]> \v>
+              \v<(`[A, B`] \sb<><\scr<C>> \otimes> `[B, C`] \sb<><\scr<C>>) \otimes> `[C, D`] \sb<><\scr<C>>> \v<`[A, C`] \sb<><\scr<C>> \otimes> `[C, D`] \sb<><\scr<C>>> \v> \br>
+              \v> \v> \v<`[A, D`] \sb<><\scr<C>>> \br>
+              \v<`[A, B`] \sb<><\scr<C>> \otimes> (`[B, C`] \sb<><\scr<C>> \otimes> `[C, D`] \sb<><\scr<C>>)> \v<`[A, B`] \sb<><\scr<C>> \otimes> `[B, D`] \sb<><\scr<C>>> \v>
               \ar|s="1",e="7",inv|<\sb<`a><`[A, B`], `[B, C`], `[C, D`]>> \ar|s="1",e="2"|<\sb<c><ABC> \otimes> \rm<id>> \ar|s="2",e="6"|<\sb<c><ACD>>
               \ar|s="7",e="8",inv|<\rm<id> \otimes> \sb<c><BCD>> \ar|s="8",e="6",inv|<\sb<c><ABD>>
             >
           > \br>
           \c<
             \diag<
-              \v<1 \otimes> `[A, B`]> \v> \br>
-              \v<`[A, A`] \otimes> `[A, B`]> \v<`[A, B`]>
+              \v<1 \otimes> `[A, B`] \sb<><\scr<C>>> \v> \br>
+              \v<`[A, A`] \sb<><\scr<C>> \otimes> `[A, B`] \sb<><\scr<C>>> \v<`[A, B`] \sb<><\scr<C>>>
               \ar|s="1",e="3",inv|<\sb<j><A> \otimes> \rm<id>> \ar|s="1",e="4"|<\sb<`l><`[A, B`]>>
               \ar|s="3",e="4",inv|<\sb<c><AAB>>
             > \qquad>
             \diag<
-              \v<`[A, B`] \otimes> 1> \v> \br>
-              \v<`[A, B`] \otimes> `[B, B`]> \v<`[A, B`]>
+              \v<`[A, B`] \sb<><\scr<C>> \otimes> 1> \v> \br>
+              \v<`[A, B`] \sb<><\scr<C>> \otimes> `[B, B`] \sb<><\scr<C>>> \v<`[A, B`] \sb<><\scr<C>>>
               \ar|s="1",e="3",inv|<\rm<id> \otimes> \sb<j><B>> \ar|s="1",e="4"|<\sb<`r><`[A, B`]>>
               \ar|s="3",e="4",inv|<\sb<c><ABB>>
             >
@@ -219,7 +219,7 @@
       対称モノイダル閉圏 &m<\scr<V>> をとる。
       &m<\scr<V>> の対象 &m<X, Y> に対し、
       &mb<
-        `[X, Y`] \coloneqq> X \rmulti|bin|> Y
+        `[X, Y`] \sb<><\scr<V>> \coloneqq> X \rmulti|bin|> Y
       >
       とおく。
       さらに、&m<\scr<V>> の対象 &m<X, Y, Z> に対して &m<\sb<c><XYZ>: (X \rmulti|bin|> Y) \otimes> (Y \rmulti|bin|> Z) \to> (X \rmulti|bin|> Z)> を、
