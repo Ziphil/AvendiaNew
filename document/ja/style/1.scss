@@ -1446,6 +1446,7 @@ article.main {
   span.math-block >span.mark {
     width: $ordered-list-marker-width;
     height: 10px;
+    margin-left: 0px - $ordered-list-marker-width;
     font-size: 80%;
     color: $list-marker-color;
     line-height: 0.8;
@@ -1457,9 +1458,7 @@ article.main {
     box-sizing: border-box;
   }
 
-  span.emphasis {
-    background: linear-gradient(transparent 90%, $emphasis-background-color 90%);
-  }
+  // 定理環境
 
   div.theorem {
     margin: $wide-vertical-margin 0px - $main-horizontal-padding;
@@ -1503,6 +1502,12 @@ article.main {
     float: left;
     color: $border-color;
     line-height: $line-height;
+  }
+
+  // 数式記事中の各種要素
+
+  span.emphasis {
+    background: linear-gradient(transparent 90%, $emphasis-background-color 90%);
   }
 
   span.bibliography {
