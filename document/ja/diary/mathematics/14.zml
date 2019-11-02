@@ -20,7 +20,7 @@
         &m<\scr<C>> の対象 &m<A> に対し、&m<\scr<D>> の対象 &m<FA> が定まっている。
       >
       \li*<
-        &m<\scr<C>> の対象 &m<A, B> に対し、&m<\scr<V>> の射 &m<\sb<F><AB>: `[A, B`] \to> `[FA, FB`]> が定まっている。
+        &m<\scr<C>> の対象 &m<A, B> に対し、&m<\scr<V>> の射 &m<\sb<F><AB>: `[A, B`] \sb<><\scr<C>> \to> `[FA, FB`] \sb<><\scr<D>>> が定まっている。
       >
     >
     \p<
@@ -56,7 +56,7 @@
     >
     \ul<
       \li*<
-        &m<\scr<C>> の対象 &m<A> に対し、&m<\scr<V>> の射 &m<\sb<`g><A>: 1 \to> `[FA, GA`]> が定まっている。
+        &m<\scr<C>> の対象 &m<A> に対し、&m<\scr<V>> の射 &m<\sb<`g><A>: 1 \to> `[FA, GA`] \sb<><\scr<D>>> が定まっている。
       >
     >
     \p<
