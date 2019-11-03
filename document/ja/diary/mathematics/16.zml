@@ -18,7 +18,7 @@
       完備対称モノイダル閉圏 &m<\scr<V>> をとり、&m<\scr<V>>-豊穣小圏 &m<\scr<C>> および &m<\scr<V>>-豊穣関手 &m<F, G: \scr<C> \to> \scr<V>> を考える。
       このとき、任意の &m<\scr<V>> の対象 &m<X> に対し、全単射
       &mb<
-        \sb<\op<Hom>><\scr<V>> (X, \lbbracket> F, G \rbbracket>) \cong> `{ \scr<V> \text<-豊穣自然変換 > `g: X \otimes> F \hyphen> \raarr> G `}
+        \sb<\op<Hom>><\scr<V>> (X, \lbbracket> F, G \rbbracket> \sb<><\scr<C> \to> \scr<D>>) \cong> `{ \scr<V> \text<-豊穣自然変換 > `g: X \otimes> F \hyphen> \raarr> G `}
       >
       が成り立ち、&m<X> に関して自然である。
     >
@@ -138,7 +138,7 @@
       そして、これをテンソル積の随伴で移した図式が、まさに &m<`g> が &m<\scr<V>>-豊穣自然変換であることを表す図式である。
       以上により、全単射
       &mb<
-        \sb<\op<Hom>><\scr<V>> (X, \lbbracket> F, G \rbbracket>) \cong> SX
+        \op<Hom> (X, \lbbracket> F, G \rbbracket>) \cong> SX
       >
       が示された。
     >
@@ -171,7 +171,7 @@
         \sb<\op<Hom>><\scr<V>> (X, N) \cong> `{\scr<V> \text<-豊穣自然変換 > `g: X \otimes> F \hyphen> \raarr> G `}
       >
       が &m<X> に関して自然に成り立つとする。
-      このとき、&m<N> を &m<F> から &m<G> への\em<自然変換対象\fl<natural transformation object>> といい、&m<\lbbracket> F, G \rbbracket>> で表す。
+      このとき、&m<N> を &m<F> から &m<G> への\em<自然変換対象\fl<natural transformation object>> といい、&m<\lbbracket> F, G \rbbracket> \sb<><\scr<C> \to> \scr<D>>> で表す。
     >
   >
   \p<

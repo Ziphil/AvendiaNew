@@ -32,9 +32,9 @@
   \thm|type="prp",id="nat"|<
     \p<
       完備対称モノイダル閉圏 &m<\scr<V>> をとり、&m<\scr<V>>-豊穣小圏 &m<\scr<C>> と &m<\scr<V>>-豊穣圏 &m<\scr<D>> およびその間の &m<\scr<V>>-豊穣関手 &m<F, G: \scr<C> \to> \scr<D>> を考える。
-      ある &m<\scr<V>> の対象 &m<\lbbracket> F, G \rbbracket>> が存在して、集合の同型
+      ある &m<\scr<V>> の対象 &m<\lbbracket> F, G \rbbracket> \sb<><\scr<C> \to> \scr<D>>> が存在して、集合の同型
       &mb<
-        \sb<\op<Hom>><\scr<V>> (1, \lbbracket> F, G \rbbracket>) \cong> `{ \scr<V> \text<-豊穣自然変換 > `g: F \raarr> G `}
+        \sb<\op<Hom>><\scr<V>> (1, \lbbracket> F, G \rbbracket> \sb<><\scr<C> \to> \scr<D>>) \cong> `{ \scr<V> \text<-豊穣自然変換 > `g: F \raarr> G `}
       >
       が成り立つ。
     >
@@ -131,7 +131,7 @@
       となり、これは &m<`g> の自然性を表す図式そのものである。
       以上により、
       &mb<
-        \sb<\op<Hom>><\scr<V>> (1, N) \cong> `{ \scr<V> \text<-豊穣自然変換 > `g: F \raarr> G `}
+        \op<Hom> (1, N) \cong> `{ \scr<V> \text<-豊穣自然変換 > `g: F \raarr> G `}
       >
       が成り立つ。
     >

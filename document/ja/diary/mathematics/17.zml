@@ -114,7 +114,7 @@
       関手 &m<F: \scr<J> \to> \scr<C>, W: \scr<J> \to> \bfrm<Set>> をとる。
       任意の &m<\scr<C>> の対象 &m<A> に対し、全単射
       &mb<
-        \sb<\op<Nat>><\bfrm<El> (W) \to> \scr<C>> (\sb<`D><A>, F \circ> U) \cong> \sb<\op<Nat>><\bfrm<El> (W) \to> \scr<J>> (W, \op<Hom> (A, F \hyphen>))
+        \sb<\op<Nat>><\bfrm<El> (W) \to> \scr<C>> (\sb<`D><A>, F \circ> U) \cong> \sb<\op<Nat>><\scr<J> \to> \bfrm<Set>> (W, \op<Hom> (A, F \hyphen>))
       >
       が成り立ち、これは &m<A> に関して自然である。
       ここで、&m<\sb<`D><A>: \bfrm<El> (W) \to> \scr<C>> は &m<A> に値をもつ定値関手であり、&m<U: \bfrm<El> (W) \to> \scr<J>> は忘却関手である。
@@ -123,7 +123,7 @@
   \p<
     すなわち、関手 &m<F: \scr<J> \to> \scr<C>, W: \scr<J> \to> \bfrm<Set>> に対し、&m<F \circ> U: \bfrm<El> (W) \to> \scr<C>> の極限は、&m<\scr<C>> の対象 &m<L> であって、任意の &m<\scr<C>> の対象 &m<A> に対し、 
     &mb<
-      \sb<\op<Hom>><\scr<C>> (A, L) \cong> \sb<\op<Nat>><\bfrm<El> (W) \to> \scr<J>> (W, \op<Hom> (A, F \hyphen>))
+      \sb<\op<Hom>><\scr<C>> (A, L) \cong> \sb<\op<Nat>><\scr<J> \to> \bfrm<Set>> (W, \op<Hom> (A, F \hyphen>))
     >
     が &m<A> に関して自然に成り立つものとして特徴づけることができるわけである。
     この式であれば、そのまま &m<\scr<V>>-豊穣圏に拡張できる。
@@ -140,10 +140,10 @@
     \p<
       対称モノイダル閉圏 &m<\scr<V>> をとる。
       &m<\scr<V>>-豊穣小圏 &m<\scr<J>> および &m<\scr<V>>-豊穣圏 &m<\scr<C>> に対し、&m<\scr<V>>-豊穣関手 &m<F: \scr<J> \to> \scr<C>, W: \scr<J> \to> \scr<V>> があるとする。
-      さらに、任意の &m<\scr<C>> の対象 &m<A> に対して &m<\lbbracket> W, `[A, F \hyphen>`] \rbbracket>> が存在するとする。
-      ある &m<\scr<V>> の対象 &m<L> が存在し、任意の &m<\scr<C>> の対象 &m<A> に対して、同型
+      さらに、任意の &m<\scr<C>> の対象 &m<A> に対して &m<\lbbracket> W, `[A, F \hyphen>`] \sb<><\scr<C>> \rbbracket> \sb<><\scr<J> \to> \scr<V>>> が存在するとする。
+      ある &m<\scr<C>> の対象 &m<L> が存在し、任意の &m<\scr<C>> の対象 &m<A> に対して、同型
       &mb<
-        `[A, L`] \cong> \lbbracket> W, `[A, F \hyphen>`] \rbbracket>
+        `[A, L`] \sb<><\scr<C>> \cong> \lbbracket> W, `[A, F \hyphen>`] \sb<><\scr<C>> \rbbracket> \sb<><\scr<J> \to> \scr<V>>
       >
       が &m<A> に関して自然に成り立つとき、&m<L> を &m<W> を重みとする &m<F> の\em<重み付き極限\fl<weighted limit>> といい、&m<\sb|fun|<\lim>><W> F> で表す。
     >
@@ -177,7 +177,7 @@
     &m<\scr<J>> の対象 &m<I> に対して &m<\sb<`d><I> \coloneqq> \sb<`g><FI>> とおくと、これらは &m<\scr<V>>-豊穣自然変換 &m<`d: X \otimes> `[A, F \hyphen>`] \raarr> `[B, F \hyphen>`]> を定める。
     &m<`g> を &m<`d> に移す操作は、写像
     &mb<
-      \sb<\tilde<g>><AB>: \sb<\op<Hom>><\scr<V>> (X, \lbbracket> `[A, \hyphen>`], `[B, \hyphen>`] \rbbracket> ) \to> \sb<\op<Hom>><\scr<V>> (X, \lbbracket> `[A, F \hyphen> `], `[B, F \hyphen>`] \rbbracket>)
+      \sb<\tilde<g>><AB>: \op<Hom> (X, \lbbracket> `[A, \hyphen>`], `[B, \hyphen>`] \rbbracket> ) \to> \op<Hom> (X, \lbbracket> `[A, F \hyphen> `], `[B, F \hyphen>`] \rbbracket>)
     >
     を 1 つ定める。
     この写像は、定義から明らかに &m<X> に関して自然である。
@@ -200,7 +200,7 @@
     を &m<\sb<`z><I>> とおくと、これらは &m<\scr<V>>-豊穣自然変換 &m<`z: X \otimes> \lbbracket> W, `[A, F \hyphen>`] \rbbracket> \otimes> W \hyphen> \raarr> `[B, F \hyphen>`]> を定める。
     &m<`d> を &m<`z> に移す操作は、写像
     &mb<
-      \sb<\tilde<h>><AB>: \sb<\op<Hom>><\scr<V>> (X, \lbbracket> `[A, F \hyphen>`], `[B, F \hyphen>`] \rbbracket> ) \to> \sb<\op<Hom>><\scr<V>> (X \otimes> \lbbracket> W, `[A, F \hyphen>`] \rbbracket>, \lbbracket> W, `[B, F \hyphen>`] \rbbracket>)
+      \sb<\tilde<h>><AB>: \op<Hom> (X, \lbbracket> `[A, F \hyphen>`], `[B, F \hyphen>`] \rbbracket> ) \to> \op<Hom> (X \otimes> \lbbracket> W, `[A, F \hyphen>`] \rbbracket>, \lbbracket> W, `[B, F \hyphen>`] \rbbracket>)
     >
     を 1 つ定める。
     この写像も明らかに &m<X> に関して自然なので、再び Yoneda の補題により、構成したかった &m<\sb<h><AB>> が得られる。
@@ -229,10 +229,10 @@
     \p<
       対称モノイダル閉圏 &m<\scr<V>> をとる。
       &m<\scr<V>>-豊穣小圏 &m<\scr<J>> および &m<\scr<V>>-豊穣圏 &m<\scr<C>> に対し、&m<\scr<V>>-豊穣関手 &m<F: \scr<J> \to> \scr<C>, W: \sp<\scr<J>><\circ>> \to> \scr<V>> があるとする。
-      さらに、任意の &m<\scr<C>> の対象 &m<A> に対して &m<\lbbracket> W, `[F \hyphen>, A`] \rbbracket>> が存在するとする。
-      ある &m<\scr<V>> の対象 &m<L> が存在し、任意の &m<\scr<C>> の対象 &m<A> に対して、同型
+      さらに、任意の &m<\scr<C>> の対象 &m<A> に対して &m<\lbbracket> W, `[F \hyphen>, A`] \sb<><\scr<C>> \rbbracket> \sb<><\sp<\scr<J>><\circ>> \to> \scr<V>>> が存在するとする。
+      ある &m<\scr<C>> の対象 &m<L> が存在し、任意の &m<\scr<C>> の対象 &m<A> に対して、同型
       &mb<
-        `[L, A`] \cong> \lbbracket> W, `[F \hyphen>, A`] \rbbracket>
+        `[L, A`] \sb<><\scr<C>> \cong> \lbbracket> W, `[F \hyphen>, A`] \sb<><\scr<C>> \rbbracket> \sb<><\sp<\scr<J>><\circ>> \to> \scr<V>>
       >
       が &m<A> に関して自然に成り立つとき、&m<L> を &m<W> を重みとする &m<F> の\em<重み付き余極限\fl<weighted colimit>> といい、&m<\sb|fun|<\op<colim>><W> F> で表す。
     >
