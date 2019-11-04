@@ -52,15 +52,15 @@
       \diag|hor="med"|<
         \v<FA> \v<FB> \v<GB>
         \ar|s="1",e="2"|<Ff>
-        \ar|s="2",e="3",bend="30"|<\sb<`s><B>> \ar|s="2",e="3",bend="-30",inv|<\sb<`t><B>>
-        \ar|s="2",e="3",bend="30",line="0",name="h",inv|> \ar|s="2",e="3",bend="-30",line="0",name="k"|>
+        \ar|s="2:r10",e="3:l10",bend="40"|<\sb<`s><B>> \ar|s="2:r90",e="3:l90",bend="-40",inv|<\sb<`t><B>>
+        \ar|s="2:r10",e="3:l10",bend="40",line="0",name="h",inv|> \ar|s="2:r90",e="3:l90",bend="-40",line="0",name="k"|>
         \ar|s="h:c",e="k:c",line="2"|<\sb<`J><B>>
       > \qquad>
       \diag|hor="med"|<
         \v<FA> \v<GA> \v<GB>
         \ar|s="2",e="3"|<Gf>
-        \ar|s="1",e="2",bend="30"|<\sb<`s><A>> \ar|s="1",e="2",bend="-30",inv|<\sb<`t><A>>
-        \ar|s="1",e="2",bend="30",line="0",name="h",inv|> \ar|s="1",e="2",bend="-30",line="0",name="k"|>
+        \ar|s="1:r10",e="2:l10",bend="40"|<\sb<`s><A>> \ar|s="1:r90",e="2:l90",bend="-40",inv|<\sb<`t><A>>
+        \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|> \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|>
         \ar|s="h:c",e="k:c",line="2"|<\sb<`J><A>>
       >
     >
