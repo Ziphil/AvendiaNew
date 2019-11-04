@@ -30,7 +30,7 @@
           \ar|s="1:t80",e="2:t20",bend="50"|<\sb<`s><A>>
           \ar|s="3",e="4",pos="60"|<\sb<`s><B>> \ar|s="3",e="4",line="0",name="a",inv|>
           \ar|s="3:b80",e="4:b20",bend="-50",inv|<\sb<`t><B>> \ar|s="3:b80",e="4:b20",bend="-50",line="0",name="b"|>
-          \ar|s="2",e="3",line="2",inv|<\sb<`n><AB>> \ar|s="a:c",e="b:c",line="2"|<\sb<`J><B>>
+          \ar|s="2:w",e="3",line="2",inv|<\sb<`n><AB>> \ar|s="a:c",e="b:c",line="2"|<\sb<`J><B>>
         > \qquad>
         \diag|hor="thk"|<
           \v<FA> \v<GA> \br>
@@ -39,7 +39,7 @@
           \ar|s="1:t80",e="2:t20",bend="50"|<\sb<`s><A>> \ar|s="1:t80",e="2:t20",bend="50",line="0",name="b",inv|>
           \ar|s="1",e="2",pos="40",inv|<\sb<`t><A>> \ar|s="1",e="2",line="0",name="a"|>
           \ar|s="3:b80",e="4:b20",bend="-50",inv|<\sb<`t><B>>
-          \ar|s="2",e="3",line="2"|<\sb<`n><AB>> \ar|s="b:c",e="a:c",line="2"|<\sb<`J><B>>
+          \ar|s="2",e="3:e",line="2"|<\sb<`n><AB>> \ar|s="b:c",e="a:c",line="2"|<\sb<`J><B>>
         >
       >
       が等しいとする。
