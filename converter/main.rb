@@ -18,7 +18,7 @@ $stdout.sync = true
 CONFIG = AvendiaConfig.new(File.join(BASE_PATH, "config/config.json"))
 
 
-class AvendiaParser < ZenmathParser
+class AvendiaParser < ZoticaParser
 
   attr_reader :path
   attr_reader :language

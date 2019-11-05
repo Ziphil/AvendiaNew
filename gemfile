@@ -12,7 +12,7 @@ gem 'bundler', require: [
 gem 'listen'
 gem 'sassc'
 gem 'zenml'
-gem 'zenmath'
+gem 'zotica'
 
 if Gem.win_platform?
   gem 'wdm', '>= 0.1.0'

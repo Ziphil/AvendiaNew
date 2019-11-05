@@ -41,7 +41,7 @@ end
 converter.define_singleton_method(:create_script_string) do
   command = "npm run -s uglifyjs"
   Open3.popen3(command) do |stdin, stdout, stderr, thread|
-    stdin.puts(ZenmathParserMethod.create_script_string)
+    stdin.puts(ZoticaParserMethod.create_script_string)
     stdin.close
     converter.variables[:script_string] = stdout.read
   end
@@ -54,7 +54,7 @@ converter.add(["use-math"], ["header"]) do |element|
   converter.reset_variables
   this << Tag.build("style") do |this|
     font_url = converter.url_prefix + "material/font/math.otf"
-    this << ZenmathParserMethod.create_style_string(font_url)
+    this << ZoticaParserMethod.create_style_string(font_url)
   end
   this << Tag.build("script") do |this|
     this << converter.variables[:script_string]
