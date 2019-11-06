@@ -1861,10 +1861,8 @@ div.top-link {
 
   span.hairia::before {
     font-size: 80%;
-    vertical-align: baseline;
+    vertical-align: 0.3906em;
     content: "H";
-    position: relative;
-    top: -0.5em;
   }
 
   // シャレイア語
@@ -1901,16 +1899,12 @@ div.top-link {
 
   sup {
     font-size: 80%;
-    vertical-align: baseline;
-    position: relative;
-    top: -0.5em;
+    vertical-align: 0.3906em;
   }
 
   sub {
     font-size: 80%;
-    vertical-align: baseline;
-    position: relative;
-    top: 0.2em;
+    vertical-align: -0.2969em;
   }
 
 }
