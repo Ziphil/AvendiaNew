@@ -4,6 +4,7 @@
 \page<
   \name<数詞詳説>
   \ver<5 代 5 期>
+  \use-math>
 
   \h1<数詞の種類と作り方>
   \p<
@@ -120,10 +121,10 @@
   >
   \table<
     \tr<\th<単語>\th<意味>>
-    \tr<\td<{levo}>\td</A/ 以上, \k<≧> /A/>>
-    \tr<\td<{lehi}>\td</A/ 超過, \k<＞> /A/>>
-    \tr<\td<{lede}>\td</A/ 以下, \k<≧> /A/>>
-    \tr<\td<{letu}>\td</A/ 未満, \k<＜> /A/>>
+    \tr<\td<{levo}>\td</A/ 以上, &m<\vph<A> \geq> A>>>
+    \tr<\td<{lehi}>\td</A/ 超過, &m<\vph<A> \gt> A>>>
+    \tr<\td<{lede}>\td</A/ 以下, &m<\vph<A> \leq> A>>>
+    \tr<\td<{letu}>\td</A/ 未満, &m<\vph<A> \ls> A>>>
   >
   \p<
     例えば、{ile dok atis} は「1 kg の」だが、{iletu dok atis} とすれば「1 kg 未満の」となる。

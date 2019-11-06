@@ -4,6 +4,7 @@
 \page<
   \name<記数法と命数法>
   \ver<5 代 5 期>
+  \use-math>
 
   \h1<日記 (\h<1982>)>
   \p<
@@ -55,14 +56,14 @@
   >
   \table<
     \tr<\th<位>\th<接辞>>
-    \tr<\td<10\sup<\k<±>0>>\td<∅>>
-    \tr<\td<10\sup<\k<±>1>>\td<[et]>>
-    \tr<\td<10\sup<\k<±>2>>\td<[il]>>
-    \tr<\td<10\sup<\k<±>3>>\td<[as]>>
+    \tr<\td<&m<\sp<10><\pm> 0>>>\td<∅>>
+    \tr<\td<&m<\sp<10><\pm> 1>>>\td<[et]>>
+    \tr<\td<&m<\sp<10><\pm> 2>>>\td<[il]>>
+    \tr<\td<&m<\sp<10><\pm> 3>>>\td<[as]>>
   >
   \p<
-    例えば、[498] は 4\k<×>10\sup<2> ＋ 9\k<×>10\sup<1> ＋ 8\k<×>10\sup<0> なので、[pivil] と [vonet] と [kaq] を繋げて {pivilvonetkaq} と読みます。
-    また、[·0201] は 0.0\k<×>10\sup<0> ＋ 0.2\k<×>10\sup<－1> ＋ 0.0\k<×>10\sup<－2> ＋ 0.1\k<×>10\sup<－3> なので、0 の位を除いた [cidet] と [dafas] を繋げて {cidetdafas} となります。
+    例えば、[498] は &m<4 \times> \sp<10><2> + 9 \times> \sp<10><1> + 8 \times> \sp<10><0>> と分解できるので、[pivil] と [vonet] と [kaq] を繋げて {pivilvonetkaq} と読みます。
+    また、[·0201] は &m<0.0 \times> \sp<10><0> + 0.2 \times> \sp<10><-1> + 0.0 \times> \sp<10><-2> + 0.1 \times> \sp<10><-3>> なので、0 の位を除いた [cidet] と [dafas] を繋げて {cidetdafas} となります。
   >
   \p<
     次に、区切られたそれぞれの 4 桁に対し、さらに以下の位取りの接尾辞をつけ、それらを並べます。
@@ -71,16 +72,16 @@
   >
   \table<
     \tr<\th<位>\th<接辞>>
-    \tr<\td<10\sup<\k<±>0>>\td<∅>>
-    \tr<\td<10\sup<\k<±>4>>\td<[otik]>>
-    \tr<\td<10\sup<\k<±>8>>\td<[oqek]>>
-    \tr<\td<10\sup<\k<±>12>>\td<[oyok]>>
-    \tr<\td<10\sup<\k<±>16>>\td<[opik]>>
-    \tr<\td<10\sup<\k<±>20>>\td<[oxak]>>
+    \tr<\td<&m<\sp<10><\pm> 0>>>\td<∅>>
+    \tr<\td<&m<\sp<10><\pm> 4>>>\td<[otik]>>
+    \tr<\td<&m<\sp<10><\pm> 8>>>\td<[oqek]>>
+    \tr<\td<&m<\sp<10><\pm> 12>>>\td<[oyok]>>
+    \tr<\td<&m<\sp<10><\pm> 16>>>\td<[opik]>>
+    \tr<\td<&m<\sp<10><\pm> 20>>>\td<[oxak]>>
   >
   \p<
-    例えば、[4985710] は 498\k<×>10\sup<4> ＋ 5710\k<×>10\sup<0> であり、[498] は {pivilvonetkaq} と読み [5710] は {xalasseziltiset} と読むので、[498] の方に接尾 [otik] をつけて繋げて {pivilvonetkaqotik-xalasseziltiset} と読みます。
-    [3·1415926] は 3\k<×>10\sup<0> ＋ 0.1415\k<×>10\sup<－0> ＋ 0.926\k<×>10\sup<－4> なので、{yos-dafbacetdafiljesas-fuscidetlamilotik} となります。
+    例えば、[4985710] は &m<498 \times> \sp<10><4> + 5710 \times> \sp<10><0>> であり、[498] は {pivilvonetkaq} と読み [5710] は {xalasseziltiset} と読むので、[498] の方に接尾 [otik] をつけてこれらを繋げることで {pivilvonetkaqotik-xalasseziltiset} と読みます。
+    また、[3·1415926] は &m<3 \times> \sp<10><0> + 0.1415 \times> \sp<10><0> + 0.926 \times> \sp<10><-4>> なので、{yos-dafbacetdafiljesas-fuscidetlamilotik} となります。
   >
   \p<
     大きい数や小さい数を記述する場合は、4 桁ずつ区切った後に位取りの接尾辞をそのまま書くこともできます。
