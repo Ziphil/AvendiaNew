@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
+
 
 @function stripe-gradient($first-color, $second-color, $angle, $space) {
   @return repeating-linear-gradient($angle, $first-color $space, $second-color $space, $second-color $space * 2, $first-color $space * 2, $first-color $space * 3, $second-color $space * 3);
