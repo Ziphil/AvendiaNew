@@ -135,7 +135,7 @@
       線型空間 &m<X> とその部分空間 &m<Y> を考える。
       &m<(C', `p)> を &m<X> 上の余自由余代数とするとき、
       &mb<
-        C \coloneqq> \sum<\stack<\cc<E \subseteq> C' \text< 部分余代数>> \cc<`p (E) \subseteq> Y>>> E
+        C \coloneqq> \bigcup<\stack<\cc<E \subseteq> C' \text< 部分余代数>> \cc<`p (E) \subseteq> Y>>> E
       >
       とおくと、&m<(C, `p \sb<\rvert>><C>)> は &m<Y> 上の余自由余代数である。
     >
@@ -145,7 +145,7 @@
       線型空間 &m<V> をとる。
       定理 \ref|thm="cof"|> の通りに &m<`p> をとり、標準的に &m<V \subseteq> \sp<V><**>> と見なすとき、
       &mb<
-        C \coloneqq> \sum<\stack<\cc<E \subseteq> T (\sp<V><*>) \sp<><\diamond>> \text< 部分余代数>> \cc<`p (E) \subseteq> V>>> E
+        C \coloneqq> \bigcup<\stack<\cc<E \subseteq> T (\sp<V><*>) \sp<><\diamond>> \text< 部分余代数>> \cc<`p (E) \subseteq> V>>> E
       >
       とおくと、&m<(C, `p \sb<\rvert>><C>)> は &m<V> 上の余自由余代数である。
     >
