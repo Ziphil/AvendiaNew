@@ -119,7 +119,7 @@
     &mb<
       \array|align="rrcl"|<
         \c<`j:> \c<\sp<X><*> \otimes> \sp<Y><*>> \c<\longto>> \c<\sp<(X \otimes> Y)><*>> \br>
-        \c> \c<f \otimes> g> \c<\longmapsto>> \c<\bracket<
+        \c> \c<f \otimes> g> \c<\longmapsto>> \c<\tort<
           \array|align="rcl"|<
             \c<X \otimes> Y> \c<\longto>> \c<\bb<K>> \br>
             \c<x \otimes> y> \c<\longmapsto>> \c<f (x) g (y)>
@@ -352,7 +352,7 @@
       &mb<
         \array|align="rrcl"|<
           \c<\cdot>:> \c<\sp<C><*> \times> \sp<C><**>> \c<\longto>> \c<\sp<C><**>> \br>
-          \c> \c<(f, v)> \c<\longmapsto>> \c<\bracket<
+          \c> \c<(f, v)> \c<\longmapsto>> \c<\tort<
             \array|align="rcl"|<
               \c<\sp<C><*>> \c<\longto>> \c<\bb<K>> \br>
               \c<f'> \c<\longmapsto>> \c<v (f' f)>
@@ -391,7 +391,7 @@
       &mb<
         \array|align="rrcl"|<
           \c<s:> \c<\sp<C><*>> \c<\longto>> \c<\op<End> (V)> \br>
-          \c> \c<f> \c<\longmapsto>> \c<\bracket<
+          \c> \c<f> \c<\longmapsto>> \c<\tort<
             \array|align="rcl"|<
               \c<V> \c<\longto>> \c<V> \br>
               \c<v> \c<\longmapsto>> \c<f \cdot> v>
