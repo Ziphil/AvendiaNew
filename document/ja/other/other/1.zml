@@ -6,13 +6,10 @@
 
   \h1<人工言語, 人工世界>
   \p<
-    2019 年 3 月時点での人工言語作者のリストです。
+    2019 年 11 月時点で私が把握している (主に日本の) 人工言語作者のリストです。
     専用のホームページがあるなど、ネット上でまとまった情報が得られるもののみを記載してあります。
     すでに活動を休止している人も含めています。
     敬称略。
-  >
-  \p<
-    より包括的な人工言語関係者のリストとして\ae|href="https://docs.google.com/spreadsheets/d/1t_WxHJ_b39PWXIMauHwnSww_Ac2m_Mw7zC-vQkp59PQ/"|<こちら>もあります。
   >
   \table<
     \tr<\th<言語名>\th<製作者名>\th<Twitter>\th<ホームページ>>
@@ -207,6 +204,12 @@
       \td<dali-einerZy>
       \td<\ae|href="https://twitter.com/einerzy"|<@einerzy>>
       \td<\ae|href="https://sites.google.com/site/einerzypa/"|<人工言語 derle とその関連>>
+    >
+    \tr<
+      \td<翊天語>
+      \td<Xotarios>
+      \td<\ae|href="https://twitter.com/Xotarios"|<@Xotarios>>
+      \td<\ae|href="https://xotarios.world/"|<XOTARIOS>>
     >
     \tr<
       \td<シャハヤ>
