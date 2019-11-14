@@ -39,18 +39,20 @@ converter.define_singleton_method(:get_number) do |type, id|
 end
 
 converter.define_singleton_method(:create_script_string) do
-  command = "npm run -s uglifyjs"
-  Open3.popen3(command) do |stdin, stdout, stderr, thread|
-    stdin.puts(ZoticaParserMethod.create_script_string)
-    stdin.close
-    converter.variables[:script_string] = stdout.read
+  unless converter.variables[:script_created]
+    command = "npm run -s uglifyjs"
+    Open3.popen3(command) do |stdin, stdout, stderr, thread|
+      stdin.puts(ZoticaParserMethod.create_script_string)
+      stdin.close
+      converter.variables[:script_string] = stdout.read
+      converter.variables[:script_created] = true
+    end
   end
 end
 
-converter.create_script_string
-
 converter.add(["use-math"], ["header"]) do |element|
   this = ""
+  converter.create_script_string
   converter.reset_variables
   this << Tag.build("style") do |this|
     font_url = converter.url_prefix + "material/font/math.otf"
