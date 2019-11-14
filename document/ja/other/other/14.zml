@@ -1,0 +1,173 @@
+﻿\zml?|version="1.0"|>
+\xml?|version="1.0",encoding="UTF-8"|>
+
+\page<
+  \name<ミザソーグ語文法>
+
+  \h1<参考文献>
+  \p<
+    このページの内容は、\ae|href="https://twitter.com/nanakusa_003"|<@nanakusa_003> 氏の以下のツイートをもとにまとめたものです。
+    例文などはこれらのツイートからお借りしています。
+  >
+  \ul<
+    \li<\ae|href="https://twitter.com/nanakusa_003/status/1156566922831499267"|<ミザソーグ語文法 1>> 
+    \li<\ae|href="https://twitter.com/nanakusa_003/status/1156567518871375873"|<ミザソーグ語文法 2>> 
+  >
+  \h1<基本語順>
+  \p<
+    動詞を先頭に置き、その動詞を説明する名詞句がその後に並べられる。
+    形容詞などの限定詞は前置する。
+  >
+  \h1<繋辞>
+  \p<
+    繋辞は、人に対しては {datturu} を用い、物に対しては {dau} を用いる。
+    変化は以下の通りである。
+  >
+  \table<
+    \caption<{datturu}, {dau}>
+    \tr<\th>\th<肯定>\th<否定>>
+    \tr<\th<人>\td<{datturu}>\td<{datturome}>>
+    \tr<\th<物>\td<{dau}>\td<{daeme}>>
+  >
+  \p<
+    繋辞で繋がれる 2 つの項のうち、主題を表す方に {-va}`/{-vä} を付ける。
+  >
+  \xl<
+    \li<\sh<{Datturu aava Suzuna.}>\ja<私は菘だ。>>
+    \li<\sh<{Dau þëküvä dookaþau.}>\ja<セクは果物だ。>>
+    \li<\sh<{Datturome oava gaiða.}>\ja<彼は戦士ではありません。>>
+    \li<\sh<{Daeme sëzüdävä haevaþau.}>\ja<セウザは野菜ではありません。>>
+  >
+  \p<
+    人が主題に置かれるとき、{datturu} ではなく {dau} を用いることで、日本語におけるいわゆるウナギ文に相当する表現が可能である。
+  >
+  \xl<
+    \li<\sh<{Dau aava ekulu.}>\ja<私は魚にする。>>
+  >
+  \p<
+    この表現は、私が魚そのものであるという意味ではなく (その場合は {datturu} を用いるため)、例えばレストランにいるという状況であれば、魚料理を頼むという意味になる。
+  >
+  \h1<一般動詞>
+  \p<
+    ミザソーグ語における動詞は、現在形が基本形であり、全て -[u]`/-[ü] という語尾をもつ。
+    基本形からこの語尾を除いた部分が語幹となり、語幹に様々な活用語尾を付けることで時制や肯否を表す。
+  >
+  \table<
+    \tr<\th>\th<肯定>\th<否定>\th<疑問>>
+    \tr<\th<現在>\td<-{u}`/-{ü}>\td<-{ome}`/-{ömë}>\td<-{a}`/-{ä}>>
+    \tr<\th<現在進行>\td<-{ee}`/-{ëë}>\td<-{eome}`/-{eömë}>\td<-{ea}`/-{ëä}>>
+    \tr<\th<現在継続>\td<-{eie}`/-{ëië}>\td<-{einome}`/-{ëinömë}>\td<-{eina}`/-{ëinä}>>
+  >
+  \p<
+    現在進行時制は、現在において今まさにその動作を行っていることを表す。
+    一方、現在継続時制は、昔から今までその動作を継続して行っていることを表す。
+  >
+  \xl<
+    \li<\sh<{Amufu aava neiguga.}>\ja<私は肉を食べる。>>
+    \li<\sh<{Hiluðee oava hiiluga.}>\ja<彼は文章を書いている。>>
+    \li<\sh<{Gërëië iava miðäþöögüsägä.}>\ja<あなたはミザソーグ語を勉強している。>>
+    \li<\sh<{Þoggome aiva þoðadega.}>\ja<私たち 2 人は工芸品を作らない。>>
+    \li<\sh<{Meikufeome iiva metufo.}>\ja<あなたたち 2 人は椅子に座っていない。>>
+    \li<\sh<{Malufeinome ooava vemaligurunega.}>\ja<彼ら 2 人はセーターを編んでいない。>>
+    \li<\sh<{Hesufa iakoluva hesuvaga?}>\ja<あなたたちは歌を歌うか?>>
+    \li<\sh<{Mokkaðea oakuluva ekuluga?}>\ja<彼らは魚を燻製にしている途中か?>>
+    \li<\sh<{Iföüfëinä iava oaga?}>\ja<あなたは彼を知っているか?>>
+  >
+  \h1<重要機能語>
+  \h2<後置詞>
+  \p<
+    後置詞は、名詞の後に付けられてその名詞の格などを表す。
+    ミザソーグ語には母音調和があるため、それに伴って後置詞は 2 種類あり、付けられる名詞の母音の種類に合う方を付ける。
+  >
+  \table<
+    \tr<\th<単語>\th|col="2"|<意味>>
+    \tr<\td<{-va}`/{-vä}>\td<～は>\td<主語, 主題>>
+    \tr<\td<{-ga}`/{-gä}>\td<～を>\td<目的語>>
+    \tr<\td<{-fo}`/{-fö}>\td<～に, ～へ>\td<>>
+    \tr<\td<{-hu}`/{-hü}>\td<～の>\td<>>
+    \tr<\td<{-tillu}`/{-tillü}>\td<～から>\td<>>
+  >
+  \h2<人称代名詞>
+  \p<
+    人称代名詞では、単数と双数と複数を区別する。
+    双数は対象が同姓の 2 人である場合に利用できる。
+    三人称では性別を区別しない。
+  >
+  \table<
+    \tr<\th>\th<単数>\th<双数>\th<複数>>
+    \tr<\th<一人称>\td<{aa}>\td<{ai}>\td<{aakolu}>>
+    \tr<\th<二人称>\td<{ia}>\td<{ii}>\td<{iakolu}>>
+    \tr<\th<三人称>\td<{oa}>\td<{ooa}>\td<{oakolu}>>
+  >
+  \h2<指示詞>
+  \p<
+    指示詞は、主に指すものの場所によって区別され 8 種類ある。
+    各種類に対し、代名詞として単独で使える形と、他の名詞句を修飾する限定詞としての形と、疑問詞としての意味がある形がある。
+  >
+  \table<
+    \tr<\th<名詞形>\th<限定形>\th<疑問形>\th<範囲>>
+    \tr<\td<{rööðä}>\td<{rööhü}>\td<{rötä}>\td<手が届くもの>>
+    \tr<\td<{tooða}>\td<{toohu}>\td<{tota}>\td<同じ空間にあるが手は届かないもの>>
+    \tr<\td<{jooða}>\td<{joohu}>\td<{jota}>\td<袋や箱や壁などで隔たれているもの>>
+    \tr<\td<{þooða}>\td<{þoohu}>\td<{þota}>\td<視認はできるがとても遠いもの>>
+    \tr<\td<{kooða}>\td<{koohu}>\td<{kota}>\td<場所>>
+    \tr<\td<{looða}>\td<{loohu}>\td<{lota}>\td<目的地となる場所>>
+    \tr<\td<{vaaða}>\td<{vaahu}>\td<{vata}>\td<この場にはないもの>>
+    \tr<\td<{mööðä}>\td<{mööhü}>\td<{mötä}>\td<抽象的で形のないもの>>
+  >
+  \xl<
+    \li<\sh<{Dau rööðävä aahu säübä.}>\ja<これは私の本だ。>>
+    \li<\sh<{Dau rööhü neiuva affumi.}>\ja<この肉はおいしい。>>
+    \li<\sh<{Dau iahu hüünvä rötä.}>\ja<あなたの弓はどれか?>>
+    \li<\sh<{Kujoþutu aava huusuga toohu üünëitillü.}>\ja<私は乳をあのウーネイから絞る。>>
+    \li<\sh<{Dau jooðava läikähü tokka.}>\ja<私は山のキノコだ。>>
+    \li<\sh<{Dau kooðava kota.}>\ja<ここはどこだ?>>
+    \li<\sh<{Þëmüðëië aava vaahu säübäga.}>\ja<私はあの本を欲しい。>>
+  >
+  \h2<疑問詞>
+  \p<
+    疑問を表す単語には、上記の疑問指示詞の他に以下のようなものがある。
+    これらの疑問詞は、疑問指示詞とは区別して扱われる。
+    疑問詞は、原則として文末に置かれ、動詞は肯定の形にする。
+  >
+  \table<
+    \tr<\th<単語>\th<意味>>
+    \tr<\td<{meða}>\td<何>>
+    \tr<\td<{mää}>\td<誰>>
+    \tr<\td<{maþa}>\td<いつ>>
+    \tr<\td<{möhübää}>\td<どれくらい>>
+    \tr<\td<{mätö}>\td<なぜ>>
+  >
+  \xl<
+    \li<\sh<{Dau rööðävä meða?}>\ja<これは何か?>>
+    \li<\sh<{Huuðun iava maþa?}>\ja<あなたはいつ帰るか?>>
+    \li<\sh<{Bäüjöhü iava dookoþauga möhübää?}>\ja<あなたはどのくらい木の実を集めるか?>>
+    \li<\sh<{Gërëü iavä miðäþöögüsägä mätö?}>\ja<なぜあなたはミザソーグ語を学ぶのか?>>
+  >
+  \h1<慣用表現>
+  \h2<挨拶>
+  \p<
+    ミザソーグ語における挨拶には、時刻に限らず使える {jaajenun} の他、特定の範囲の時刻で使うことができるものがある。
+  >
+  \table<
+    \tr<\th<単語>\th<意味>\th<時刻>>
+    \tr<\td<{jaajenun}>\td<やあ, どうも>\td<時刻に関わらず利用可能>>
+    \tr<\td<{iiþou}>\td<おはよう>\td<日が昇る少し前から日が昇った少し後まで>>
+    \tr<\td<{iiþiga}>\td<こんにちは>\td<日が昇る少し前から日が昇った少し後まで>>
+    \tr<\td<{þiijä}>\td<こんばんは>\td<日が昇る少し前から日が昇った少し後まで>>
+  >
+  \p<
+    上の表の {jaajenun} を除く 3 つの単語は、通常 {jaajenun} を前に伴って使われる。
+    親しい間柄では、{jaajenun} のみでも良い。
+  >
+  \xl<
+    \li<\sh<{Jaajenun iiþou.}>\ja<おはようございます。>>
+    \li<\sh<{Jaajenun þiijä.}>\ja<こんばんは。>>
+  >
+  \h2<その他の表現>
+  \table<
+    \tr<\th<単語>\th<意味>>
+    \tr<\td<{bänä}>\td<またね, さようなら>>
+  >
+
+>
