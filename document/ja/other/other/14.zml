@@ -6,17 +6,19 @@
 
   \h1<参考文献>
   \p<
-    このページの内容は、\ae|href="https://twitter.com/nanakusa_003"|<@nanakusa_003> 氏の以下のツイートをもとにまとめたものです。
+    このページの内容は、\ae|href="https://twitter.com/nanakusa_003"|<@nanakusa_003> 氏のツイートをもとにまとめたものです。
+    主な出典は以下の通りです。
     例文などはこれらのツイートからお借りしています。
   >
   \ul<
     \li<\ae|href="https://twitter.com/nanakusa_003/status/1156566922831499267"|<ミザソーグ語文法 1>> 
     \li<\ae|href="https://twitter.com/nanakusa_003/status/1156567518871375873"|<ミザソーグ語文法 2>> 
+    \li<\ae|href="https://twitter.com/nanakusa_003/status/1070883725246836741"|<所有文の作り方> (未着手)>
   >
   \h1<繋辞>
   \p<
     繋辞は、人に対しては {datturu} を用い、物に対しては {dau} を用いる。
-    これらの変化は一般動詞のものに従うが、{dau} の現在時制否定形は ([daome] とはならず) 例外的に {daeme} である。 
+    時制などの変化はおそらく部分的に不規則である ({dau} の現在継続時制肯定形は {deie} らしい) (?)。
   >
   \p<
     繋辞は文頭に置かれ、それによって繋がれる 2 つの名詞句がその後に並べられる。
@@ -41,6 +43,7 @@
   \p<
     ミザソーグ語における動詞は、現在形が基本形であり、全て -[u]`/-[ü] という語尾をもつ。
     基本形からこの語尾を除いた部分が語幹となり、語幹に様々な活用語尾を付けることで時制や肯否を表す。
+    語幹が変わることはないんだろうか ({amufu} の現在継続時制肯定形が {amifeie} っぽいけど, \ae|href="https://twitter.com/nanakusa_003/status/1126122948274688001"|<参考>) (?)。
   >
   \table<
     \tr<\th>\th<肯定>\th<否定>\th<疑問>>
@@ -51,6 +54,9 @@
     \tr<\th<過去進行>\td<-{eei}`/-{ëëi}>\td<-{eiome}`/-{eiömë}>\td<-{eeita}`/-{ëëitä}>>
     \tr<\th<過去継続>\td<-{iiemu}`/-{iiëmü}>\td<-{iieme}`/-{iiëmë}>\td<-{iiema}`/-{iiëmä}>>
     \tr<\th<過去完了>\td<-{eiumu}`/-{ëiümü}>\td<-{eiumome}`/-{ëiümömë}>\td<-{eiuma}`/-{ëiümä}>>
+  >
+  \p<
+    受動態は語幹に母音が入るらしい (\ae|href="https://twitter.com/nanakusa_003/status/1079206702627471360"|<参考>) (?)。
   >
   \p<
     動詞は文頭に置かれ、それを説明する名詞句がその後に並べられる。
@@ -134,6 +140,11 @@
     \li<\sh<{Amufu aava affumina neiuga.}>\ja<私はおいしい肉を食べる。>>
     \li<\sh<{Dau Þiinauruþenava mittuvonnina þen Þiihumiiruvaruþande.}>\ja<スィーナウル島はスィーフミール群島で最も大きい島だ。>>
   >
+  \h1<関係節>
+  \p<
+    {ðaa} と {ka} で囲んだ節を後置することで、関係節を作ることができる (\ae|href="https://twitter.com/nanakusa_003/status/1090832874259922944"|<参考 1>, \ae|href="https://twitter.com/nanakusa_003/status/1091718654775816192"|<参考 2>, \ae|href="https://twitter.com/nanakusa_003/status/1096434145155117056"|<参考 3>) (?)。
+    この {ðaa} と {ka} で囲まれた部分は、関係節として名詞句を説明する他にも、英語の that 節のように節を名詞化する役割もある。
+  >
   \h1<重要機能語>
   \h2<後置詞>
   \p<
@@ -148,6 +159,7 @@
     \tr<\td<{-fo}`/{-fö}>\td<～に, ～へ>\td<>>
     \tr<\td<{-tillu}`/{-tillü}>\td<～から>\td<>>
     \tr<\td<{-de}`/{-dë}>\td<～で>\td<場所>>
+    \tr<\td<{-þu}`/{-þü}>\td<～に>\td<時刻>>
     \tr<\td<{-ge}`/{-gë}>\td<～で, ～によって>\td<道具, 手段>>
     \tr<\td<{-hu}`/{-hü}>\td<～の>\td<>>
   >
