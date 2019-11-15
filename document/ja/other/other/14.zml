@@ -18,7 +18,14 @@
   \h1<繋辞>
   \p<
     繋辞は、人に対しては {datturu} を用い、物に対しては {dau} を用いる。
-    時制などの変化はおそらく部分的に不規則である ({dau} の現在継続時制肯定形は {deie} らしい) (?)。
+    {dau} の変化形は以下の通りで、これ以外の形が必要な場合は {da}- を語幹として規則通り活用させる。
+  >
+  \table<
+    \caption<{dau}>
+    \tr<\th>\th<肯定>\th<否定>\th<疑問>>
+    \tr<\th<現在>\td<{dau}>\td<{daeme}>\td<{daa}>>
+    \tr<\th<過去>\td<{dai}>\td<{die}>\td<{dia}>>
+    \tr<\th<未来>\td<{dan}>\td<{danne}>\td<{dana}>>
   >
   \p<
     繋辞は文頭に置かれ、それによって繋がれる 2 つの名詞句がその後に並べられる。
@@ -49,7 +56,7 @@
     \tr<\th>\th<肯定>\th<否定>\th<疑問>>
     \tr<\th<現在>\td<-{u}`/-{ü}>\td<-{ome}`/-{ömë}>\td<-{a}`/-{ä}>>
     \tr<\th<現在進行>\td<-{ee}`/-{ëë}>\td<-{eome}`/-{eömë}>\td<-{ea}`/-{ëä}>>
-    \tr<\th<現在継続>\td<-{eie}`/-{ëië}>\td<-{einome}`/-{ëinömë}>\td<-{eina}`/-{ëinä}>>
+    \tr<\th<現在継続>\td<-{eie}`/-{ëië}>\td<-{einome}`/-{ëinömë}>\td<-{eita}`/-{ëitä}>>
     \tr<\th<過去>\td<-{i}>\td<-{iome}`/-{iömë}>\td<-{ia}`/-{iä}>>
     \tr<\th<過去進行>\td<-{eei}`/-{ëëi}>\td<-{eiome}`/-{eiömë}>\td<-{eeita}`/-{ëëitä}>>
     \tr<\th<過去継続>\td<-{iiemu}`/-{iiëmü}>\td<-{iieme}`/-{iiëmë}>\td<-{iiema}`/-{iiëmä}>>
@@ -76,7 +83,7 @@
     \li<\sh<{Malufeinome ooava vemaligurunega.}>\ja<彼ら 2 人はセーターを編んでいない。>>
     \li<\sh<{Hesufa iakoluva hesuvaga?}>\ja<あなたたちは歌を歌うか?>>
     \li<\sh<{Mokkaðea oakuluva ekuluga?}>\ja<彼らは魚を燻製にしている途中か?>>
-    \li<\sh<{Iföüfëinä iava oaga?}>\ja<あなたは彼を知っているか?>>
+    \li<\sh<{Iföüfëitä iava oaga?}>\ja<あなたは彼を知っているか?>>
   >
   \h2<過去>
   \p<
