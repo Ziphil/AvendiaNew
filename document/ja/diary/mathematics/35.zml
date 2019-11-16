@@ -23,17 +23,17 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
-      &m<\scr<C>> の対象 &m<X> と射 &m<`a: FX \to> X> の組 &m<(X, `a)> を &m<F>-\em<代数\fl<algebra>> という。
+      &m<\scr<C>> の対象 &m<A> と射 &m<`a: FA \to> A> の組 &m<(A, `a)> を &m<F>-\em<代数\fl<algebra>> という。
     >
   >
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
-      &m<F>-代数 &m<(X, `a), (Y, `b)> に対し、&m<\scr<C>> の射 &m<f: X \to> Y> が、図式
+      &m<F>-代数 &m<(A, `a), (B, `b)> に対し、&m<\scr<C>> の射 &m<f: A \to> B> が、図式
       &mb<
         \diag<
-          \v<FX> \v<FY> \br>
-          \v<X> \v<Y>
+          \v<FA> \v<FB> \br>
+          \v<A> \v<B>
           \ar|s="1",e="2"|<Ff> \ar|s="1",e="3",inv|<`a>
           \ar|s="3",e="4",inv|<f> \ar|s="2",e="4"|<`b>
         >
@@ -52,8 +52,8 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
-      ある &m<F>-代数 &m<(\bar<X>, \bar<`a>)> について、任意の &m<F>-代数 &m<(X, `a)> に対し、&m<F>-代数の射 &m<f: (\bar<X>, \bar<`a>) \to> (X, `a)> が一意に存在するとする。
-      このとき、&m<(\bar<X>, \bar<`a>)> を &m<F>-\em<始代数\fl<initial algebra>> という。
+      ある &m<F>-代数 &m<(\bar<A>, \bar<`a>)> について、任意の &m<F>-代数 &m<(A, `a)> に対し、&m<F>-代数の射 &m<f: (\bar<A>, \bar<`a>) \to> (A, `a)> が一意に存在するとする。
+      このとき、&m<(\bar<A>, \bar<`a>)> を &m<F>-\em<始代数\fl<initial algebra>> という。
     >
   >
   \p<
@@ -66,7 +66,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
-      &m<F>-代数 &m<(X, `a)> に対し、&m<F>-始代数 &m<(\bar<X>, \bar<`a>)> からの唯一の射 &m<f: (\bar<X>, \bar<`a>) \to> (X, `a)> を、&m<(X, `a)> による\em<下方射\fl<catamorphism>> と呼んで &m<\rm<cata> (X, `a)> で表す。
+      &m<F>-代数 &m<(A, `a)> に対し、&m<F>-始代数 &m<(\bar<A>, \bar<`a>)> からの唯一の射 &m<f: (\bar<A>, \bar<`a>) \to> (A, `a)> を、&m<(A, `a)> による\em<下方射\fl<catamorphism>> と呼んで &m<\rm<cata> (A, `a)> で表す。
     >
   >
   \p<
@@ -75,56 +75,56 @@
     &mb<
       \array|align="rrcl"|<
         \c<\sb<F><V>:> \c<\bfrm<Set>> \c<\longto>> \c<\bfrm<Set>> \br>
-        \c> \c<X> \c<\longmapsto>> \c<1 + V \times> X>
+        \c> \c<A> \c<\longmapsto>> \c<1 + V \times> A>
       >
     >
     とおく。
-    すると、&m<\sb<F><V>>-代数とは、集合 &m<X> と写像 &m<`a: 1 + V \times> X \to> X> の組 &m<(X, `a)> である。
-    ここで、余積の普遍性によって、写像 &m<`a> は 2 つの写像 &m<\sb<`a><0>: 1 \to> X>, &m<c: V \times> X \to> X> の組と同一視できる。
-    さらに、写像 &m<\sb<`a><0>> は &m<X> の元 &m<\sb<x><0> \in> X> と同一視できる。
-    以上のことから、&m<\sb<F><V>>-代数とは、集合 &m<X> とその元 &m<\sb<x><0> \in> X> と写像 &m<c: V \times> X \to> X> の組 &m<(X, \sb<x><0>, c)> とも思うことができる。
+    すると、&m<\sb<F><V>>-代数とは、集合 &m<A> と写像 &m<`a: 1 + V \times> A \to> A> の組 &m<(A, `a)> である。
+    ここで、余積の普遍性によって、写像 &m<`a> は 2 つの写像 &m<\sb<`a><0>: 1 \to> A>, &m<c: V \times> A \to> A> の組と同一視できる。
+    さらに、写像 &m<\sb<`a><0>> は &m<A> の元 &m<\sb<a><0> \in> A> と同一視できる。
+    以上のことから、&m<\sb<F><V>>-代数とは、集合 &m<A> とその元 &m<\sb<a><0> \in> A> と写像 &m<c: V \times> A \to> A> の組 &m<(A, \sb<a><0>, c)> とも思うことができる。
   >
   \p<
     さて、それでは &m<\sb<F><V>>-始代数とはどのようなものだろうか。
     これは実は &m<V> の元から成る有限リスト全体の集合になる。
     すなわち、
     &mb<
-      \bar<X> \coloneqq> `{ \langle> \sb<v><1>, \cdots>, \sb<v><n> \rangle> \mid> \sb<v><i> \in> V, n \geq> 0 `}
+      \bar<A> \coloneqq> `{ \langle> \sb<v><1>, \cdots>, \sb<v><n> \rangle> \mid> \sb<v><i> \in> V, n \geq> 0 `}
     >
-    とおき、&m<\sb<\bar<x>><0>> を 0 個の元から成るリスト &m<\langle> \rangle>> とし、&m<\bar<c>> はリストへの値の追加
+    とおき、&m<\sb<\bar<a>><0>> を 0 個の元から成るリスト &m<\langle> \rangle>> とし、&m<\bar<c>> はリストへの値の追加
     &mb<
       \array|align="rrcl"|<
-        \c<\bar<c>:> \c<V \times> \bar<X>> \c<\longto>> \c<\bar<X>> \br>
+        \c<\bar<c>:> \c<V \times> \bar<A>> \c<\longto>> \c<\bar<A>> \br>
         \c> \c<(v, \langle> \sb<v><1>, \cdots>, \sb<v><n> \rangle>)> \c<\longmapsto>> \c<\langle> v, \sb<v><1>, \cdots>, \sb<v><n> \rangle>>
       >
     >
-    であるとすると、&m<(\bar<X>, \sb<\bar<x>><0>, \bar<c>)> は &m<\sb<F><V>>-始代数になる。
-    実際、別の &m<\sb<F><V>>-始代数 &m<(X, \sb<x><0>, c)> があったとすると、写像 &m<f: \bar<X> \to> X> を帰納的に
+    であるとすると、&m<(\bar<A>, \sb<\bar<a>><0>, \bar<c>)> は &m<\sb<F><V>>-始代数になる。
+    実際、別の &m<\sb<F><V>>-始代数 &m<(A, \sb<a><0>, c)> があったとすると、写像 &m<f: \bar<A> \to> X> を帰納的に
     &mb<
       \array|align="rcl"|<
-        \c<f (\langle> \rangle>)> \c<\coloneqq>> \c<\sb<x><0>> \br>
+        \c<f (\langle> \rangle>)> \c<\coloneqq>> \c<\sb<a><0>> \br>
         \c<f (\langle> \sb<v><1>, \cdots>, \sb<v><n> \rangle>)> \c<\coloneqq>> \c<c (v, f (\langle> \sb<v><1>, \cdots>, \sb<v><n - 1> \rangle>))>
       >
     >
     と定めれば、&m<f> は &m<\sb<F><V>>-代数の唯一の射となることが分かる。
-    すなわち、&m<f = \rm<cata> (X, \sb<x><0>, c)> である。
+    すなわち、&m<f = \rm<cata> (A, \sb<a><0>, c)> である。
   >
   \p<
     &m<\sb<F><V>>-始代数についてもう少し詳しく見てみよう。
     これは、いわば &m<\sb<F><V>> が定める構造に関して、次のような意味で「自由に」生成されたデータ構造であると見なすことができる。
-    &m<\sb<F><V>>-代数とは、集合 &m<X> の他に元 &m<\sb<x><0> \in> X> と写像 &m<c: V \times> X \to> X> が定まっているものであった。
-    ここで、&m<X> がどのような集合であるか全く知らない状態から、&m<X> の元を得るにはどうしたら良いかを考えてみる。
-    まず、&m<\sb<x><0>> という元はすでに定まっているので、&m<X> の元として &m<\sb<x><0>> が得られた。
-    次に、写像 &m<c: V \times> X \to> X> があるので、&m<V> の元 &m<\sb<v><1>> があれば、先程得られた &m<\sb<x><0>> と組み合わせて、&m<c (\sb<v><1>, \sb<x><0>)> という新しい &m<X> の元が得られる。
-    すると、さらに &m<V> の元 &m<\sb<v><2>> があれば、ここから &m<c (\sb<v><2>, c (\sb<v><1>, \sb<x><0>))> というまた新しい &m<X> の元が得られ、以降これを続けることで次々と &m<X> の元が得られる。
-    このようにして再帰的に得られるものだけをそれぞれ区別しつつ集めた集合が、まさに &m<\sb<F><V>>-代数 &m<\bar<X>> である。
+    &m<\sb<F><V>>-代数とは、集合 &m<A> の他に元 &m<\sb<a><0> \in> X> と写像 &m<c: V \times> A \to> A> が定まっているものであった。
+    ここで、&m<A> がどのような集合であるか全く知らない状態から、&m<A> の元を得るにはどうしたら良いかを考えてみる。
+    まず、&m<\sb<a><0>> という元はすでに定まっているので、&m<A> の元として &m<\sb<a><0>> が得られた。
+    次に、写像 &m<c: V \times> A \to> A> があるので、&m<V> の元 &m<\sb<v><1>> があれば、先程得られた &m<\sb<a><0>> と組み合わせて、&m<c (\sb<v><1>, \sb<a><0>)> という新しい &m<A> の元が得られる。
+    すると、さらに &m<V> の元 &m<\sb<v><2>> があれば、ここから &m<c (\sb<v><2>, c (\sb<v><1>, \sb<a><0>))> というまた新しい &m<A> の元が得られ、以降これを続けることで次々と &m<A> の元が得られる。
+    このようにして再帰的に得られるものだけをそれぞれ区別しつつ集めた集合が、まさに &m<\sb<F><V>>-代数 &m<\bar<A>> である。
     すなわち、始代数というのは、自己関手が定める構造だけを使って再帰的に (同じ意味だが帰納的に) 得られる元を区別しつつ集めたものと捉えられる。
   >
   \p<
     次に、&m<\sb<F><V>>-代数の下方射について詳しく見てみる。
-    繰り返すが、&m<\sb<F><V>>-代数の構成要素は、集合 &m<X> とその元 &m<\sb<x><0> \in> X> と写像 &m<c: V \times> X \to> X> であった。
+    繰り返すが、&m<\sb<F><V>>-代数の構成要素は、集合 &m<A> とその元 &m<\sb<a><0> \in> A> と写像 &m<c: V \times> A \to> A> であった。
     これはまさに、リストの畳み込みを行う関数 (Haskell では \m<foldr>, Ruby では \m<inject>) に渡す引数である。
-    そして、上の定義を見ると分かるように、&m<\rm<cata> (X, \sb<x><0>, c)> がまさにその畳み込み関数になっている。
+    そして、上の定義を見ると分かるように、&m<\rm<cata> (A, \sb<a><0>, c)> がまさにその畳み込み関数になっている。
     すなわち、代数の下方射とは、代数によって再帰的に定められたデータ構造に対して畳み込みを行うような関数を表現していると捉えられる。
   >
   \p<
@@ -134,77 +134,80 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
-      &m<\scr<C>> の対象 &m<X> と射 &m<`a: X \to> FX> の組 &m<(X, `a)> を &m<F>-\em<余代数\fl<coalgebra>> という。
+      &m<\scr<C>> の対象 &m<C> と射 &m<`g: C \to> FC> の組 &m<(C, `g)> を &m<F>-\em<余代数\fl<coalgebra>> という。
     >
   >
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
-      &m<F>-余代数 &m<(X, `a), (Y, `b)> に対し、&m<\scr<C>> の射 &m<f: X \to> Y> が、図式
+      &m<F>-余代数 &m<(C, `g), (D, `d)> に対し、&m<\scr<C>> の射 &m<h: C \to> D> が、図式
       &mb<
         \diag<
-          \v<X> \v<Y> \br>
-          \v<FX> \v<FY>
-          \ar|s="1",e="2"|<f> \ar|s="1",e="3",inv|<`a>
-          \ar|s="3",e="4",inv|<Ff> \ar|s="2",e="4"|<`b>
+          \v<C> \v<D> \br>
+          \v<FC> \v<FD>
+          \ar|s="1",e="2"|<h> \ar|s="1",e="3",inv|<`g>
+          \ar|s="3",e="4",inv|<Fh> \ar|s="2",e="4"|<`d>
         >
       >
-      を可換にするとき、&m<f> を &m<F>-\em<余代数の射\fl<coalgebra morphism>> という。
+      を可換にするとき、&m<h> を &m<F>-\em<余代数の射\fl<coalgebra morphism>> という。
     >
   >
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
-      ある &m<F>-余代数 &m<(\bar<X>, \bar<`a>)> について、任意の &m<F>-余代数 &m<(X, `a)> に対し、&m<F>-余代数の射 &m<f: (X, `a) \to> (\bar<X>, \bar<`a>)> が一意に存在するとする。
-      このとき、&m<(\bar<X>, \bar<`a>)> を &m<F>-\em<終余代数\fl<terminal coalgebra>> という。
+      ある &m<F>-余代数 &m<(\bar<C>, \bar<`g>)> について、任意の &m<F>-余代数 &m<(C, `g)> に対し、&m<F>-余代数の射 &m<h: (C, `g) \to> (\bar<C>, \bar<`g>)> が一意に存在するとする。
+      このとき、&m<(\bar<C>, \bar<`g>)> を &m<F>-\em<終余代数\fl<terminal coalgebra>> という。
     >
   >
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
-      &m<F>-余代数 &m<(X, `a)> に対し、&m<F>-終代数 &m<(\bar<X>, \bar<`a>)> への唯一の射 &m<f: (X, `a) \to> (\bar<X>, \bar<`a>)> を、&m<(X, `a)> による\em<上方射\fl<anamorphism>> と呼んで &m<\rm<ana> (X, `a)> で表す。
+      &m<F>-余代数 &m<(C, `g)> に対し、&m<F>-終余代数 &m<(\bar<C>, \bar<`g>)> への唯一の射 &m<h: (C, `g) \to> (\bar<C>, \bar<`g>)> を、&m<(C, `g)> による\em<上方射\fl<anamorphism>> と呼んで &m<\rm<ana> (C, `g)> で表す。
     >
   >
   \p<
-    例として、先程挙げた &m<\sb<F><V>> を考える。
-    &m<\sb<F><V>>-余代数とは、集合 &m<X> と写像 &m<`a: X \to> 1 + V \times> X> の組 &m<(X, `a)> である。
-    この写像 &m<`a> は、各元 &m<x \in> X> に対して、特殊なケースとして 1 の唯一の元を対応させるか、そうでなければ &m<V> と &m<X> の元の組 &m<(v, x')> を対応させるものである。
+    &m<F>-余代数とその間の射が成す圏は、以降 &m<\sb<\bfrm<Coalg>><F> (\scr<C>)> で表すことにする。
+  >
+  \p<
+    例として、先程挙げた &m<\sb<F><V>> を再び考える。
+    &m<\sb<F><V>>-余代数とは、集合 &m<C> と写像 &m<`g: C \to> 1 + V \times> C> の組 &m<(C, `g)> である。
+    この写像 &m<`g> は、各元 &m<c \in> C> に対して、特殊なケースとして 1 の唯一の元を対応させるか、そうでなければ &m<V> と &m<C> の元の組 &m<(v, c')> を対応させるものである。
   >
   \p<
     &m<\sb<F><V>>-終余代数は、&m<V> の元から成る有限もしくは無限リスト (リストよりストリームと言った方が正確かもしれない) 全体の集合になる。
     つまり、
     &mb<
-      \bar<X> \coloneqq> `{ \langle> \sb<v><1>, \sb<v><2>, \cdots> \rangle> \mid> \sb<v><i> \in> V, \sb<v><i> \text< たちは有限個でも無限個でも良い> `}
+      \bar<C> \coloneqq> `{ \langle> \sb<v><1>, \sb<v><2>, \cdots> \rangle> \mid> \sb<v><i> \in> V, \sb<v><i> \text< たちは有限個でも無限個でも良い> `}
     >
     とおき、1 の唯一の元を &m<\star>> で表すことにして、&m<\bar<`a>> はリストの先頭と残りを取り出す操作
     &mb<
       \array|align="rrcl"|<
-        \c<\bar<`a>:> \c<\bar<X>> \c<\longto>> \c<1 + V \times> \bar<X>> \br>
+        \c<\bar<`a>:> \c<\bar<C>> \c<\longto>> \c<1 + V \times> \bar<C>> \br>
         \c> \c<\langle> \sb<v><1>, \sb<v><2>, \cdots> \rangle>> \c<\longmapsto>> \c<\case<
           \c<\star>> \c<(\text<リストが空のとき>)> \br>
           \c<(\sb<v><1>, \langle> \sb<v><2>, \cdots> \rangle>)> \c<(\text<リストが空でないとき>)>
         >>
       >
     >
-    であるとすると、&m<(\bar<X>, \bar<`a>)> は &m<\sb<F><V>>-終余代数になる。
-    実際、別の &m<\sb<F><V>>-余代数 &m<(X, `a)> があったとすると、写像 &m<f: X \to> \bar<X>> であって、
+    であるとすると、&m<(\bar<C>, \bar<`g>)> は &m<\sb<F><V>>-終余代数になる。
+    実際、別の &m<\sb<F><V>>-余代数 &m<(C, `g)> があったとすると、写像 &m<h: C \to> \bar<C>> であって、
     &mb<
       &mark<\wheart>>
-      f (x) = \case<
-        \c<\langle> \rangle>> \c<(`a (x) = \star|ord|>)> \br>
-        \c<\langle> v, f (x') \rangle>> \c<(`a (x) \eqqcolon> (v, x'))>
+      h (c) = \case<
+        \c<\langle> \rangle>> \c<(`g (c) = \star|ord|>)> \br>
+        \c<\langle> v, h (c') \rangle>> \c<(`g (c) \eqqcolon> (v, c'))>
       >  
     >
     を満たすものが作れ、これが &m<\sb<F><V>>-余代数の唯一の射となることが分かる。
-    すなわち、&m<f = \rm<ana> (X, `a)> である。
+    すなわち、&m<h = \rm<ana> (C, `g)> である。
   >
   \p<
     &m<\sb<F><V>>-終余代数について詳しく見よう。
-    &m<\sb<F><V>>-余代数とは、集合 &m<X> の他に写像 &m<`a: X \to> 1 + V \times> X> が定まっているものであった。
-    この写像によって、ある &m<X> の元 &m<x> があると、&m<`a> によって &m<\star>> が返ってこない限りは、&m<V> の元 &m<\sb<v><1>> と新たな &m<X> の元 &m<x'> が得られる。 
-    この &m<x'> を使えば、再び &m<\star>> が返ってこない限りは、さらに &m<V> の元 &m<\sb<v><2>> と新たな &m<X> の元 &m<x''> が得られ、この操作は (もしかしたら無限に) 続けることができる。
-    この操作を行うごとに毎回 &m<V> の元が得られるので、これらのデータから他の操作をすることができるようになる。
-    つまり、代数を考えるときは &m<\sb<F><V>> は &m<X> の元の構成方法を定めていたのに対し、余代数を考えるときは &m<\sb<F><V>> は &m<X> の元の「使い方」を定めていると捉えることができる。
+    &m<\sb<F><V>>-余代数とは、集合 &m<C> の他に写像 &m<`g: C \to> 1 + V \times> C> が定まっているものであった。
+    この写像によって、ある &m<C> の元 &m<c> があると、&m<`g> によって &m<\star>> が返ってこない限りは、&m<V> の元 &m<\sb<v><1>> と新たな &m<C> の元 &m<\sb<c><1>> が得られる。 
+    この &m<c'> を使えば、再び &m<\star>> が返ってこない限りは、さらに &m<V> の元 &m<\sb<v><2>> と新たな &m<C> の元 &m<\sb<c><2>> が得られ、この操作は (もしかしたら無限に) 続けることができる。
+    この操作を行うごとに毎回 &m<V> の元が得られるので、これらのデータを使ってまた別の計算をすることができる。
+    つまり、代数を考えるときは &m<\sb<F><V>> は代数の元の「作り方」を定めていたのに対し、余代数を考えるときは &m<\sb<F><V>> は余代数の元の「使い方」を定めていると捉えることができる。
     この捉え方をすれば、終余代数というのは、自己関手によって定まる元の使い方が保証されるようにできるだけ元を集めたものと見なすことができる。
   >
   \p<
