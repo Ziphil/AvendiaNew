@@ -3,6 +3,10 @@
 
 \page<
 
+  \hb<何とか morphism>
+  \pb<
+    \ab|href="22.html",date="19/11/16"|<代数と余代数と何とか morphism>
+  >
   \hb<Haskell>
   \pb<
     \ab|href="21.html",date="19/04/29"|<lens の仕組みを理解したい (その 2)>
