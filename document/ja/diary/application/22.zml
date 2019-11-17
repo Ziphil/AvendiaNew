@@ -179,11 +179,11 @@
     &mb<
       \bar<C> \coloneqq> `{ \langle> \sb<v><1>, \sb<v><2>, \cdots> \rangle> \mid> \sb<v><i> \in> V, \sb<v><i> \text< たちは有限個でも無限個でも良い> `}
     >
-    とおき、1 の唯一の元を &m<\star>> で表すことにして、&m<\bar<`a>> はリストの先頭と残りを取り出す操作
+    とおき、1 の唯一の元を &m<\star>> で表すことにして、&m<\bar<`g>> はリストの先頭と残りを取り出す操作
     &mb<
       &mark<\wheart>>
       \array|align="rrcl"|<
-        \c<\bar<`a>:> \c<\bar<C>> \c<\longto>> \c<1 + V \times> \bar<C>> \br>
+        \c<\bar<`g>:> \c<\bar<C>> \c<\longto>> \c<1 + V \times> \bar<C>> \br>
         \c> \c<\langle> \sb<v><1>, \sb<v><2>, \cdots> \rangle>> \c<\longmapsto>> \c<\case<
           \c<\star>> \c<(\text<リストが空のとき>)> \br>
           \c<(\sb<v><1>, \langle> \sb<v><2>, \cdots> \rangle>)> \c<(\text<リストが空でないとき>)>
