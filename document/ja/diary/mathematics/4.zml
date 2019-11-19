@@ -110,7 +110,7 @@
     これが圏同値であることを示したい。
     そのために、いくつか補題を用意する。
   >
-  \tym|type="lem",id="pres"|<
+  \thm|type="lem",id="pres"|<
     \p<
       正規関手 &m<F, G: \sp<\bfrm<Set>><A> \to> \bfrm<Set>> の間のカルテシアン自然変換 &m<`n: F \to> G> を考える。
       &m<\bfrm<El> (F)> において &m<(X, x)> が正規対象であることと &m<\bfrm<El> (G)> において &m<(X, \sb<`n><X> x)> が正規対象であることは同値である。
