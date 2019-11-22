@@ -81,7 +81,7 @@
           \cc<
             \tree<
               \axm<`G \vdash> M: A + B> \axm<`D, x: A \vdash> N: C> \axm<`D, y: B \vdash> P: C>
-              \infr|n="3"|<`G, `D \vdash> \tt|fun|<case> M \sfun> \tt|fun|<of> \tt|fun|<inl> x \rmap|bin|> N \mid> \tt|fun|<inr> y \rmap|bin|> P: C><\sb<+><\rm<E>>>
+              \infr|n="3"|<`G, `D \vdash> \tt|fun|<case> M \sfun> \tt|fun|<of> \tt|fun|<inl> x \rmap|bin|> N \mid|bin|> \tt|fun|<inr> y \rmap|bin|> P: C><\sb<+><\rm<E>>>
             >
           >
           \cc<
@@ -163,8 +163,8 @@
           \c<\tt|fun|<let> x \otimes> y \rmap|bin|> M \otimes> N \sfun> \tt|fun|<in> P> \c<\sb<\squigrarr>><`b>> \c<P `[x \coloneqq> M, y \coloneqq> N`]> \br>
           \c<\tt|fun|<fst> \langle> M, N \rangle>> \c<\sb<\squigrarr>><`b>> \c<M> \br>
           \c<\tt|fun|<snd> \langle> M, N \rangle>> \c<\sb<\squigrarr>><`b>> \c<N> \br>
-          \c<\tt|fun|<case> \ph> (\tt|fun|<inl> M) \sfun> \tt|fun|<of> \tt|fun|<inl> x \rmap|bin|> N \mid> \tt|fun|<inr> y \rmap|bin|> P> \c<\sb<\squigrarr>><`b>> \c<N `[x \coloneqq> M`]> \br>
-          \c<\tt|fun|<case> \ph> (\tt|fun|<inr> M) \sfun> \tt|fun|<of> \tt|fun|<inl> x \rmap|bin|> N \mid> \tt|fun|<inr> y \rmap|bin|> P> \c<\sb<\squigrarr>><`b>> \c<P `[y \coloneqq> M`]> \br>
+          \c<\tt|fun|<case> \ph> (\tt|fun|<inl> M) \sfun> \tt|fun|<of> \tt|fun|<inl> x \rmap|bin|> N \mid|bin|> \tt|fun|<inr> y \rmap|bin|> P> \c<\sb<\squigrarr>><`b>> \c<N `[x \coloneqq> M`]> \br>
+          \c<\tt|fun|<case> \ph> (\tt|fun|<inr> M) \sfun> \tt|fun|<of> \tt|fun|<inl> x \rmap|bin|> N \mid|bin|> \tt|fun|<inr> y \rmap|bin|> P> \c<\sb<\squigrarr>><`b>> \c<P `[y \coloneqq> M`]> \br>
           \c<\tt|fun|<derelict> \ph> (\tt|fun|<promote> \vec<x> \rmap|bin|> \vec<M> \sfun> \tt|fun|<in> N)> \c<\sb<\squigrarr>><`b>> \c<N `[\vec<x> \coloneqq> \vec<M>`]> \br>
           \c<\tt|fun|<discard> \ph> (\tt|fun|<promote> \vec<x> \rmap|bin|> \vec<M> \sfun> \tt|fun|<in> N) \sfun> \tt|fun|<in> P> \c<\sb<\squigrarr>><`b>> \c<\tt|fun|<discard> \vec<M> \sfun> \tt|fun|<in> P> \br>
           \c<\tt|fun|<copy> y, z \rmap|bin|> (\tt|fun|<promote> \vec<x> \rmap|bin|> \vec<M> \sfun> \tt|fun|<in> N) \sfun> \tt|fun|<in> P> \c<\sb<\squigrarr>><`b>> \c<\tt|fun|<copy> \vec<u>, \vec<v> \rmap|bin|> \vec<M> \sfun> \tt|fun|<in> P `[y \coloneqq> Y, z \coloneqq> Z`]>
