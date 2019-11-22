@@ -38,11 +38,10 @@
         &m<\scr<C>> はモノイダル閉である。
       >
       \li*<
-        対称モノイダル関手 &m<!: \scr<C> \to> \scr<C>> およびモノイダル自然変換 &m<`e: ! \raarr> \rm<id>, `d: ! \raarr> ! \circ> !> が存在し、&m<(!, `e, `d)> はコモナドを成す。
+        対称モノイダル関手 &m<!: \scr<C> \to> \scr<C>> およびモノイダル自然変換 &m<`d: ! \raarr> ! \circ> !>, &m<`e: ! \raarr> \rm<id>> が存在し、&m<(!, `d, `e)> はコモナドを成す。
       >
       \li*<
-        モノイダル自然変換 &m<e: ! \raarr> \top>>, &m<d: ! \rarr> ! \otimes> !> が存在し、任意の対象 &m<A> に対し、&m<(!A, \sb<e><A>, \sb<d><A>)> は可換コモノイドである。
-        さらに、&m<\sb<e><A>: !A \to> !\top>>, &m<\sb<d><A>: !A \to> !A \otimes> !A> は !-余代数の射である。
+        モノイダル自然変換 &m<d: ! \rarr> ! \otimes> !>, &m<e: ! \raarr> \top>> が存在し、任意の対象 &m<A> に対し、&m<(!A, \sb<d><A>, \sb<e><A>)> は可換コモノイドであり、&m<\sb<d><A>: !A \to> !A \otimes> !A>, &m<\sb<e><A>: !A \to> !\top>> は !-余代数の射である。
       >
       \li*<
         任意の対象 &m<A, B> および射 &m<f: !A \to> !B> に対し、&m<f > が !-余代数の射であれば、&m<f> はコモノイドの射でもある。
@@ -57,7 +56,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> 上のコモナド &m<(!, `e, `d)> に対し、圏 &m<\sb<\scr<C>><!>> を以下のように定義する。
+      圏 &m<\scr<C>> 上のコモナド &m<(!, `d, `e)> に対し、圏 &m<\sb<\scr<C>><!>> を以下のように定義する。
     >
     \ul<
       \li*<
@@ -85,9 +84,9 @@
   \p<
     余 Kleisli 圏ともとの圏との間には、以下のような標準的な随伴が存在する。
   >
-  \thm|type="prp"|<
+  \thm|type="prp",id="kleiadj"|<
     \p<
-      圏 &m<\scr<C>> 上のコモナド &m<(!, `e, `d)> をとる。
+      圏 &m<\scr<C>> 上のコモナド &m<(!, `d, `e)> をとる。
       関手
       &mb<
         \array|align="rrcl"|<
@@ -124,7 +123,7 @@
     >
   >
   \p<
-    この命題により、圏 &m<\scr<C>> 上のコモナド &m<(!, `e, `d)> があるとき、上の定義の &m<G: \scr<C> \to> \sb<\scr<C>><!>> は左随伴をもつので、極限を保存する。
+    この命題により、圏 &m<\scr<C>> 上のコモナド &m<(!, `d, `e)> があるとき、上の定義の &m<G: \scr<C> \to> \sb<\scr<C>><!>> は左随伴をもつので、極限を保存する。
     したがって、&m<\sb<\scr<C>><!>> の極限は (対象だけを考えれば) &m<\scr<C>> の極限と一致する。
     特に、&m<\scr<C>> が有限直積をもてば &m<\sb<\scr<C>><!>> も有限直積をもち、それらは (対象だけを考えれば) 一致する。
     以降、&m<\scr<C>> が有限直積をもつ文脈では、&m<\sb<\scr<C>><!>> を直積によってモノイダル圏と見なす。
@@ -144,13 +143,13 @@
         &m<\scr<C>> はモノイダル閉であり、有限直積をもつ。
       >
       \li*<
-        関手 &m<!: \scr<C> \to> \scr<C>> および自然変換 &m<`e: ! \raarr> \rm<id>, `d: ! \raarr> ! \circ> !> が存在し、&m<(!, `e, `d)> はコモナドを成す。
+        関手 &m<!: \scr<C> \to> \scr<C>> および自然変換 &m<`d: ! \raarr> ! \circ> !, `e: ! \raarr> \rm<id>> が存在し、&m<(!, `d, `e)> はコモナドを成す。
       >
       \li*<
         任意の対象 &m<A, B> に対し、&m<A, B> に関して自然な同型射 &m<\sb<\tilde<`c>><AB>: !A \otimes> !B \to> ! (A \times> B), `c: \top> \to> !1> が存在する。
       >
       \li*<
-        上記のコモナド &m<(!, `e, `d)> が誘導する余 Kleisli 圏との随伴 &m<(F, G, `h, `e)> はモノイダルである。
+        上記のコモナド &m<(!, `d, `e)> が誘導する余 Kleisli 圏との随伴 &m<(F, G, `h, `e)> はモノイダルである。
         すなわち、&m<F, G> はモノイダル関手であって、&m<`h, `e> はモノイダル自然変換である。
       >
     >
@@ -159,7 +158,41 @@
     >
   >
   \p<
-    モチベーションとして述べた通り、新 Seely 圏の余 Kleisli 圏はカルテシアン閉である。
+    いくつか記号を定義しておく。
+    新 Seely 圏 &m<\scr<C>> において、&m<F> はモノイダル関手であるから、任意の &m<\sb<\scr<C>><!>> の対象 &m<A, B> に対し、
+    &mb<
+      \sb<\tilde<`x>><AB>: FA \otimes> FB \to> F (A \times> B)
+      \qquad> `x: \top> \to> F 1
+    >
+    が定まっている。
+    同様に、&m<G> に対しても、任意の &m<\scr<C>> の対象 &m<A, B> に対し、
+    &mb<
+      \sb<\tilde<`j>><AB>: GA \times> GB \to> G (A \otimes> B)
+      \qquad> `j: 1 \to> G \top>
+    >
+    が定まっている。
+    すると、&m<`h> がモノイダル自然変換であるとは、任意の &m<\sb<\scr<C>><!>> の対象 &m<A, B> に対し、
+    &mb<
+      \diag<
+        \v<A \times> B> \v<GFA \times> GFB> \br>
+        \v> \v<G (FA \otimes> FB)> \br>
+        \v<A \times> B> \v<GF (A \times> B)>
+        \ar|s="1",e="2"|<\sb<`h><A> \times> \sb<`h><B>> \ar|s="5",e="6",inv|<\sb<`h><A \times> B>>
+        \ar|s="1",e="5",line="2",tip="none"|> \ar|s="2",e="4"|<\sb<\tilde<`j>><FA, FB>> \ar|s="4",e="6"|<G \sb<\tilde<`x>><AB>>
+      > \qquad>
+      \diag<
+        \v> \v<1> \br>
+        \v> \v<G \top>> \br>
+        \v<1> \v<GF1>
+        \ar|s="5",e="6",inv|<\sb<`h><1>>
+        \ar|s="2",e="5",line="2",tip="none"|> \ar|s="2",e="4"|<`j> \ar|s="4",e="6"|<G `x>
+      >
+    >
+    が可換であるということである。
+    &m<`e> のモノイダル性も同様である。
+  >
+  \p<
+    さて、モチベーションとして述べた通り、新 Seely 圏の余 Kleisli 圏はカルテシアン閉である。
   >
   \thm|type="prp"|<
     \p<
@@ -173,14 +206,70 @@
       さらに、任意の対象 &m<A, B, C> に対し、モノイダル閉性と自然同型 &m<\sb<`c><AB>> の存在によって、
       &mb<
         \array|align="rcl"|<
-          \c<\sb<\op<Hom>><\sb<\scr<C>><!>> (A \times> B, C)> \c<=> \c<\sb<\op<Hom>><\scr<C>> (! (A \times> B), C)> \br>
-          \c> \c<\cong>> \c<\sb<\op<Hom>><\scr<C>> (! A \otimes> ! B, C)> \br>
-          \c> \c<\cong>> \c<\sb<\op<Hom>><\scr<C>> (! A, ! B \rmulti|bin|> C)> \br>
-          \c> \c<\cong>> \c<\sb<\op<Hom>><\sb<\scr<C>><!>> (A, ! B \rmulti|bin|> C)>
+          \c<\sb<\op<Hom>><\sb<\scr<C>><!>> (C \times> A, B)> \c<=> \c<\sb<\op<Hom>><\scr<C>> (! (C \times> A), B)> \br>
+          \c> \c<\cong>> \c<\sb<\op<Hom>><\scr<C>> (! C \otimes> ! A, B)> \br>
+          \c> \c<\cong>> \c<\sb<\op<Hom>><\scr<C>> (! C, ! A \rmulti|bin|> B)> \br>
+          \c> \c<=> \c<\sb<\op<Hom>><\sb<\scr<C>><!>> (C, ! A \rmulti|bin|> B)>
         >
       >
       が成り立つ。
-      したがって、&m<\sb<\scr<C>><!>> はカルテシアン閉であり、&m<B> と &m<C> の冪は &m<! B \rmulti|bin|> C> で与えられる。
+      したがって、&m<\sb<\scr<C>><!>> はカルテシアン閉であり、&m<A> と &m<B> の冪は &m<! A \rmulti|bin|> B> で与えられる。
+    >
+  >
+  \p<
+    通常の論理における含意 &m<A \to|bin|> B> は線型論理において &m<! A \rmulti|bin|> B> に翻訳されることを思い出すと、余 Kleisli 圏は線型論理に埋め込まれた通常の論理を表現していると捉えられる。
+  >
+  \thm|type="lem",id="xinv"|<
+    \p<
+      新 Seely 圏 &m<\scr<C>> を考える。
+      &m<F> に定まる構造射 &m<\tilde<`x>> と &m<`x> はともに同型射である。
+    >
+  >
+  \prf<
+    \p<
+      ≡╹ω╹≡。
+    >
+  >
+  \p<
+    余 Kleisli 圏をカルテシアン閉にするというアイデアから定義された新 Seely 圏だが、これは実は線型圏になっている。
+  >
+  \thm|type="thm"|<
+    \p<
+      新 Seely 圏は線型圏である。
+    >
+  >
+  \prf<
+    \p<
+      命題 \ref|thm="kleiadj"|> より &m<! = F \circ> G> であるから、! のモノイダル構造は、各対象 &m<A, B> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<\tilde<`f>><AB>> \c<\coloneqq>> \c<\tort<\diag<
+            \v<FGA \otimes> FGB> \v<F (GA \times> GB)> \v<FG (A \otimes> B)>
+            \ar|s="1",e="2"|<\sb<\tilde<`x>><GA, GB>> \ar|s="2",e="3"|<F \sb<\tilde<`j>><AB>> 
+          >>> \br>
+          \c<`f> \c<\coloneqq>> \c<\tort<\diag<
+            \v<\top>> \v<F 1> \v<FG \top>>
+            \ar|s="1",e="2"|<`x> \ar|s="2",e="3"|<F `j \vph<\tilde<`j>>>
+          >>>
+        >
+      >
+      で定まる。
+      さらに、補題 \ref|thm="xinv"|> を用いて、各対象 &m<A> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\sb<d><A>> \c<\coloneqq>> \c<\tort<\diag<
+            \v<FGA> \v<F (GA \times> GA)> \v<FGA \otimes> FGA>
+            \ar|s="1",e="2"|<F \sbsp<d><GA><\pr>>> \ar|s="2",e="3"|<\sb<\tilde<`x>><GA, GA> \sp<><-1>>
+          >>> \br>
+          \c<\sb<e><A>> \c<\coloneqq>> \c<\tort<\diag<
+            \v<FGA> \v<F1> \v<\top>>
+            \ar|s="1",e="2"|<F \sbsp<e><GA><\pr>>> \ar|s="2",e="3"|<\sp<`x><-1>>
+          >>>
+        >
+      >
+      とおく。
+      なお、&m<\sbsp<d><GA><\pr>>> は対角射であり、&m<\sbsp<e><GA><\pr>>> は終対象への唯一の射である。
+      あとは、これらの射が線型圏の公理を満たすことを確かめれば良いが、それは容易である。
     >
   >
   \h1<参考文献>
