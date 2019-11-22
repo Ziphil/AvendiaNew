@@ -1457,6 +1457,14 @@ article.main {
     box-sizing: border-box;
   }
 
+  math-i.tt {
+    font-family: $monospace-font-family;
+    font-weight: $monospace-font-weight;
+    font-size: $code-font-size;
+    line-height: $code-line-height;
+    letter-spacing: -1px;
+  }
+
   // 定理環境
 
   div.theorem {
