@@ -2,7 +2,7 @@
 \xml?|version="1.0",encoding="UTF-8"|>
 
 \page<
-  \name<下方射の Haskell 実装>
+  \name<下方射と上方射の Haskell 実装>
   \use-math>
 
   \h1<日記 (2019 年 11 月 28 日)>
@@ -55,8 +55,7 @@
   >
   \p<
     では、これをもとに Haskell で実装していこう。
-    下方射と上方射は双対の関係にあるので、ここでは下方射だけを実装することにする。
-    また、以下では GHC 拡張の MultiParamTypeClasses と FlexibleInstances あたりの機能を利用するので、実行したい場合はこれらを有効にしておくこと。
+    以下では GHC 拡張の MultiParamTypeClasses と FlexibleInstances あたりの機能を利用するので、実行したい場合はこれらを有効にしておくこと。
   >
   \p<
     まず、型情報を読みやすくするため、代数の型 \m<f a -`> a> に \m<Algebra f a> という別名を付けておく。
@@ -187,6 +186,20 @@
   >
   \p<
     このように \m<cata (algRep func)> は引数に渡された回数分だけ 1 に \m<func> を適用する関数になる。
+  >
+  \p<
+    さて、終余代数と上方射もほとんど同様に実装できる。
+    Haskell では、上で定義した \m<Fix f t> のインスタンスが始代数としても終余代数としても振る舞うという性質があるため、以下のようにすれば良い。
+  >
+  \pre~<
+    type Coalgebra f a = a -`> f a
+
+    ana :: Fix f t =`> Coalgebra f a -`> a -`> t
+    ana coalg = inF . fmap (ana coalg) . coalg
+  >
+  \p<
+    \m<Fix f t> が始代数にも終余代数にもなるという事実は、更なる「何とか morpshism」であるところの hylomorphism や metamorphism を定義するのに重要になってくる。
+    これについては次の機会で触れたいと思う。
   >
 
 >
