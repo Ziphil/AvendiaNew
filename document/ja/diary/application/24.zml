@@ -192,9 +192,9 @@
     Haskell では、上で定義した \m<Fix f t> のインスタンスが始代数としても終余代数としても振る舞うという性質があるため、以下のようにすれば良い。
   >
   \pre~<
-    type Coalgebra f a = a -`> f a
+    type Coalgebra f c = c -`> f c
 
-    ana :: Fix f t =`> Coalgebra f a -`> a -`> t
+    ana :: Fix f t =`> Coalgebra f c -`> c -`> t
     ana coalg = inF . fmap (ana coalg) . coalg
   >
   \p<
