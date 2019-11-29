@@ -16,40 +16,40 @@
   \thm|type="prp"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
-      &m<F>-代数 &m<(\bar<A>, \bar<`a>)> が始代数ならば、&m<\bar<`a>> は同型射である。
+      &m<F>-代数 &m<(S, `s)> が始代数ならば、&m<`s> は同型射である。
     >
   >
   \prf<
     \p<
-      &m<(\bar<A>, \bar<`a>)> が &m<F>-始代数であるとする。
-      &m<(F \bar<A>, F \bar<`a>)> は &m<F>-代数であるから、図式
+      &m<(S, `s)> が &m<F>-始代数であるとする。
+      &m<(F S, F `s)> は &m<F>-代数であるから、図式
       &mb<
         \diag<
-          \v<F \bar<A>> \v<FF \bar<A>> \br>
-          \v<\bar<A>> \v<F \bar<A>>
+          \v<F S> \v<FF S> \br>
+          \v<S> \v<F S>
           \ar|s="1",e="2"|<Ff> \ar|s="3",e="4",inv|<f>
-          \ar|s="1",e="3",inv|<\bar<`a>> \ar|s="2",e="4"|<F \bar<`a>>
+          \ar|s="1",e="3",inv|<`s> \ar|s="2",e="4"|<F `s>
         >
       >
       を可換にする射 &m<f> が一意に存在する。
       すると、
       &mb<
         \diag<
-          \v<F \bar<A>>  \v<F \bar<A>> \br>
-          \v<\bar<A>> \v<\bar<A>>
-          \ar|s="1",e="2"|<F (\bar<`a> \circ> f)> \ar|s="3",e="4",inv|<\bar<`a> \circ> f>
-          \ar|s="1",e="3",inv|<\bar<`a>> \ar|s="2",e="4"|<\bar<`a>>
+          \v<F S>  \v<F S> \br>
+          \v<S> \v<S>
+          \ar|s="1",e="2"|<F (`s \circ> f)> \ar|s="3",e="4",inv|<`s \circ> f>
+          \ar|s="1",e="3",inv|<`s> \ar|s="2",e="4"|<`s>
         >
       >
-      が可換になるから、&m<\bar<`a> \circ> f: \bar<A> \to> \bar<A>> は代数の射である。
-      一方、&m<\rm<id>: \bar<A> \to> \bar<A>> も明らかに代数の射である。
-      このような射は一意でなければならないので、&m<\bar<`a> \circ> f = \rm<id>> が成り立つ。
-      また、最初の図式の可換性により、&m<f \circ> \bar<`a> = F (\bar<`a> \circ> f) = \rm<id>> も成り立つ。
-      以上により、&m<f> は &m<\bar<`a>> の逆射になるから、&m<\bar<`a>> は同型射である。
+      が可換になるから、&m<`s \circ> f: S \to> S> は代数の射である。
+      一方、&m<\rm<id>: S \to> S> も明らかに代数の射である。
+      このような射は一意でなければならないので、&m<`s \circ> f = \rm<id>> が成り立つ。
+      また、最初の図式の可換性により、&m<f \circ> `s = F (`s \circ> f) = \rm<id>> も成り立つ。
+      以上により、&m<f> は &m<`s> の逆射になるから、&m<`s> は同型射である。
     >
   >
   \p<
-    つまり、&m<F>-始代数 &m<(\bar<A>, \bar<`a>)> は &m<\bar<A> \cong> F \bar<A>> を満たすということなので、&m<F> の不動点であると見なすことができる。
+    つまり、&m<F>-始代数 &m<(S, `s)> は &m<S \cong> F S> を満たすということなので、&m<F> の不動点であると見なすことができる。
     さらに、別の &m<F>-代数があるとそれに向かって射が伸びることから、&m<F>-始代数は &m<F> の不動点の中でも最小不動点であると言うことができる。
     双対的に、&m<F>-終余代数は &m<F> の最大不動点である。
   >
@@ -67,29 +67,29 @@
     関手 \m<f> に対する始代数は、以下のように定義できる。
   >
   \pre~<
-    class Functor f =`> Fix f t where
-      inF :: f t -`> t
-      outF :: t -`> f t
+    class Functor f =`> Fix f s where
+      inF :: f s -`> s
+      outF :: s -`> f s
   >
   \p<
     既存の型を始代数と見なせるように、ここでは型クラスとして定義することにした。
     この実装は、先程述べた始代数 (や終余代数) が関手の不動点になっているという観察から来ている。
-    \m<t> と \m<inF> のペアが始代数であり、\m<outF> が \m<inF> の逆射を与えているわけである。
+    \m<s> と \m<inF> のペアが始代数であり、\m<outF> が \m<inF> の逆射を与えているわけである。
     ただし、実際に逆射になっているかどうかを Haskell の型で確認させることはできないので、この点は実装者に委ねられていることには注意すること。
   >
   \p<
     下方射の実装は以下のようになる。
   >
   \pre~<
-    cata :: Fix f t =`> Algebra f a -`> t -`> a
+    cata :: Fix f s =`> Algebra f a -`> s -`> a
     cata alg = alg . fmap (cata alg) . outF
   >
   \p<
     この式はまさに、下方射が満たすべき可換図式
     &mb<
       \diag|hor="vthk"|<
-        \v<\tt<f t>>  \v<\tt<f a>> \br>
-        \v<\tt<t>> \v<\tt<a>>
+        \v<\tt<f s>>  \v<\tt<f a>> \br>
+        \v<\tt<s>> \v<\tt<a>>
         \ar|s="1",e="2"|<\tt<fmap (cata alg)>> \ar|s="3",e="4",inv|<\tt<cata alg>>
         \ar|s="1",e="3",shift="-3",inv|<\tt<inF>> \ar|s="3",e="1",shift="-3",inv|<\tt<outF>> \ar|s="2",e="4"|<\tt<alg>>
       >

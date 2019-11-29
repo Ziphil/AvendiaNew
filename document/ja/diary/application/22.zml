@@ -52,8 +52,8 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
-      ある &m<F>-代数 &m<(\bar<A>, \bar<`a>)> について、任意の &m<F>-代数 &m<(A, `a)> に対し、&m<F>-代数の射 &m<f: (\bar<A>, \bar<`a>) \to> (A, `a)> が一意に存在するとする。
-      このとき、&m<(\bar<A>, \bar<`a>)> を &m<F>-\em<始代数\fl<initial algebra>> という。
+      ある &m<F>-代数 &m<(S, `s)> について、任意の &m<F>-代数 &m<(A, `a)> に対し、&m<F>-代数の射 &m<f: (S, `s) \to> (A, `a)> が一意に存在するとする。
+      このとき、&m<(S, `s)> を &m<F>-\em<始代数\fl<initial algebra>> という。
     >
   >
   \p<
@@ -66,7 +66,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
-      &m<F>-代数 &m<(A, `a)> に対し、&m<F>-始代数 &m<(\bar<A>, \bar<`a>)> からの唯一の射 &m<f: (\bar<A>, \bar<`a>) \to> (A, `a)> を、&m<(A, `a)> による\em<下方射\fl<catamorphism>> と呼んで &m<\rm<cata> (A, `a)> で表す。
+      &m<F>-代数 &m<(A, `a)> に対し、&m<F>-始代数 &m<(S, `s)> からの唯一の射 &m<f: (S, `s) \to> (A, `a)> を、&m<(A, `a)> による\em<下方射\fl<catamorphism>> と呼んで &m<\rm<cata> (A, `a)> で表す。
     >
   >
   \p<
@@ -89,17 +89,17 @@
     これは実は &m<V> の元から成る有限リスト全体の集合になる。
     すなわち、
     &mb<
-      \bar<A> \coloneqq> `{ \langle> \sb<v><1>, \cdots>, \sb<v><n> \rangle> \mid> \sb<v><i> \in> V, n \geq> 0 `}
+      S \coloneqq> `{ \langle> \sb<v><1>, \cdots>, \sb<v><n> \rangle> \mid> \sb<v><i> \in> V, n \geq> 0 `}
     >
     とおき、&m<\sb<\bar<a>><0>> を 0 個の元から成るリスト &m<\langle> \rangle>> とし、&m<\bar<c>> はリストへの値の追加
     &mb<
       \array|align="rrcl"|<
-        \c<\bar<c>:> \c<V \times> \bar<A>> \c<\longto>> \c<\bar<A>> \br>
+        \c<\bar<c>:> \c<V \times> S> \c<\longto>> \c<S> \br>
         \c> \c<(v, \langle> \sb<v><1>, \cdots>, \sb<v><n> \rangle>)> \c<\longmapsto>> \c<\langle> v, \sb<v><1>, \cdots>, \sb<v><n> \rangle>>
       >
     >
-    であるとすると、&m<(\bar<A>, \sb<\bar<a>><0>, \bar<c>)> は &m<\sb<F><V>>-始代数になる。
-    実際、別の &m<\sb<F><V>>-始代数 &m<(A, \sb<a><0>, c)> があったとすると、写像 &m<f: \bar<A> \to> A> を帰納的に
+    であるとすると、&m<(S, \sb<\bar<a>><0>, \bar<c>)> は &m<\sb<F><V>>-始代数になる。
+    実際、別の &m<\sb<F><V>>-始代数 &m<(A, \sb<a><0>, c)> があったとすると、写像 &m<f: S \to> A> を帰納的に
     &mb<
       \array|align="rcl"|<
         \c<f (\langle> \rangle>)> \c<\coloneqq>> \c<\sb<a><0>> \br>
@@ -117,7 +117,7 @@
     まず、&m<\sb<a><0>> という元はすでに定まっているので、&m<A> の元として &m<\sb<a><0>> が得られた。
     次に、写像 &m<c: V \times> A \to> A> があるので、&m<V> の元 &m<\sb<v><1>> があれば、先程得られた &m<\sb<a><0>> と組み合わせて、&m<c (\sb<v><1>, \sb<a><0>)> という新しい &m<A> の元が得られる。
     すると、さらに &m<V> の元 &m<\sb<v><2>> があれば、ここから &m<c (\sb<v><2>, c (\sb<v><1>, \sb<a><0>))> というまた新しい &m<A> の元が得られ、以降これを続けることで次々と &m<A> の元が得られる。
-    このようにして再帰的に得られるものだけをそれぞれ区別しつつ集めた集合が、まさに &m<\sb<F><V>>-代数 &m<\bar<A>> である。
+    このようにして再帰的に得られるものだけをそれぞれ区別しつつ集めた集合が、まさに &m<\sb<F><V>>-代数 &m<S> である。
     すなわち、始代数というのは、自己関手が定める構造だけを使って再帰的に (同じ意味だが帰納的に) 得られる元を区別しつつ集めたものと捉えられる。
   >
   \p<
@@ -155,14 +155,14 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
-      ある &m<F>-余代数 &m<(\bar<C>, \bar<`g>)> について、任意の &m<F>-余代数 &m<(C, `g)> に対し、&m<F>-余代数の射 &m<h: (C, `g) \to> (\bar<C>, \bar<`g>)> が一意に存在するとする。
-      このとき、&m<(\bar<C>, \bar<`g>)> を &m<F>-\em<終余代数\fl<terminal coalgebra>> という。
+      ある &m<F>-余代数 &m<(T, `t)> について、任意の &m<F>-余代数 &m<(C, `g)> に対し、&m<F>-余代数の射 &m<h: (C, `g) \to> (T, `t)> が一意に存在するとする。
+      このとき、&m<(T, `t)> を &m<F>-\em<終余代数\fl<terminal coalgebra>> という。
     >
   >
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
-      &m<F>-余代数 &m<(C, `g)> に対し、&m<F>-終余代数 &m<(\bar<C>, \bar<`g>)> への唯一の射 &m<h: (C, `g) \to> (\bar<C>, \bar<`g>)> を、&m<(C, `g)> による\em<上方射\fl<anamorphism>> と呼んで &m<\rm<ana> (C, `g)> で表す。
+      &m<F>-余代数 &m<(C, `g)> に対し、&m<F>-終余代数 &m<(T, `t)> への唯一の射 &m<h: (C, `g) \to> (T, `t)> を、&m<(C, `g)> による\em<上方射\fl<anamorphism>> と呼んで &m<\rm<ana> (C, `g)> で表す。
     >
   >
   \p<
@@ -177,21 +177,21 @@
     &m<\sb<F><V>>-終余代数は、&m<V> の元から成る有限もしくは無限リスト (リストよりストリームと言った方が正確かもしれない) 全体の集合になる。
     つまり、
     &mb<
-      \bar<C> \coloneqq> `{ \langle> \sb<v><1>, \sb<v><2>, \cdots> \rangle> \mid> \sb<v><i> \in> V, \sb<v><i> \text< たちは有限個でも無限個でも良い> `}
+      T \coloneqq> `{ \langle> \sb<v><1>, \sb<v><2>, \cdots> \rangle> \mid> \sb<v><i> \in> V, \sb<v><i> \text< たちは有限個でも無限個でも良い> `}
     >
-    とおき、1 の唯一の元を &m<\star>> で表すことにして、&m<\bar<`g>> はリストの先頭と残りを取り出す操作
+    とおき、1 の唯一の元を &m<\star>> で表すことにして、&m<`t> はリストの先頭と残りを取り出す操作
     &mb<
       &mark<\wheart>>
       \array|align="rrcl"|<
-        \c<\bar<`g>:> \c<\bar<C>> \c<\longto>> \c<1 + V \times> \bar<C>> \br>
+        \c<`t:> \c<T> \c<\longto>> \c<1 + V \times> T> \br>
         \c> \c<\langle> \sb<v><1>, \sb<v><2>, \cdots> \rangle>> \c<\longmapsto>> \c<\case<
           \c<\star>> \c<(\text<リストが空のとき>)> \br>
           \c<(\sb<v><1>, \langle> \sb<v><2>, \cdots> \rangle>)> \c<(\text<リストが空でないとき>)>
         >>
       >
     >
-    であるとすると、&m<(\bar<C>, \bar<`g>)> は &m<\sb<F><V>>-終余代数になる。
-    実際、別の &m<\sb<F><V>>-余代数 &m<(C, `g)> があったとすると、写像 &m<h: C \to> \bar<C>> であって、
+    であるとすると、&m<(T, `t)> は &m<\sb<F><V>>-終余代数になる。
+    実際、別の &m<\sb<F><V>>-余代数 &m<(C, `g)> があったとすると、写像 &m<h: C \to> T> であって、
     &mb<
       h (c) = \case<
         \c<\langle> \rangle>> \c<(`g (c) = \star|ord|>)> \br>
