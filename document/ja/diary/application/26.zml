@@ -5,7 +5,7 @@
   \name<代数的コンパクト性の条件>
   \use-math>
 
-  \h1<日記 (2019 年 12 月 6 日)>
+  \h1<日記 (2019 年 12 月 7 日)>
   \p<
     \a|href="25.html"|<11 月 29 日>で触れたように、質料射や形相射を定義するには、考えている関手 &m<F> が代数的コンパクトであること、すなわち &m<F>-始代数と &m<F>-終余代数が一致していることが必要であった。
     しかし、残念なことに &m<\bfrm<Set>> では実用上現れる関手が代数的コンパクトになることは稀である。
@@ -101,7 +101,7 @@
   \thm|type="thm",id="coadamek"|<
     \p<
       圏 &m<\scr<C>> が終対象をもつとする。
-      自己関手 &m<F: \scr<C> \to> \scr<C>> について、鎖
+      自己関手 &m<F: \scr<C> \to> \scr<C>> について、余鎖
       &mb<
         \diag<
           \v<1> \v<F 1> \v<\sp<F><2> 1> \v<\cdots>>
@@ -208,7 +208,7 @@
       さらに、各自然数 &m<n, m> に対し、
       &mb<
         \multi<p><m><n> \coloneqq> \case<
-          \c<\multi<p><n><n> \circ> \multi<f><m><n>> \c<(n `< m)> \br>
+          \c<\multi<p><m><m> \circ> \multi<f><m><n>> \c<(n `< m)> \br>
           \c<\multi<g><m><n> \circ> \multi<p><n><n>> \c<(n `> m)> \br>
           \c<\multi<p><n><n>> \c<(n = m)>
         >
