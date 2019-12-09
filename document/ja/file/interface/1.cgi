@@ -17,6 +17,7 @@ class ShaleiaUploader
   PASSWORD = File.read("../../file/dictionary/meta/other/password.txt")
   GOOGLE_URL = "https://script.google.com/macros/s/AKfycbxLhjMTVq4ybjW2waZp5xgbo2emqBMBkOkz-XMx-GzjA2W4K8M/exec"
   GITHUB_URL = "https://raw.githubusercontent.com/"
+  DEFAULT_FILE_NAME = "5.5.xdc"
   VERSIONS = {"5.5" => 0, "1.2" => 1, "3.6" => 2, "2.7" => 3, "3.4" => 4}
 
   def initialize(body, cgi)
@@ -35,7 +36,7 @@ class ShaleiaUploader
     parsed_body = JSON.parse(@body)
     repository_name = parsed_body["repository"]["full_name"]
     after_hash = parsed_body["after"]
-    file_name = parsed_body["head_commit"]["modified"][0]
+    file_name = parsed_body["head_commit"]["modified"][0] || DEFAULT_FILE_NAME
     version = VERSIONS[File.basename(file_name, ".*")]
     previous_size = ShaleiaUtilities.names(version).size
     new_size = nil
