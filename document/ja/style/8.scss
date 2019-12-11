@@ -34,6 +34,9 @@ div.top {
     @include small-screen {
       width: calc(100% - #{$main-horizontal-padding * 2});
     }
+    @include small-smartphone {
+      text-align: center;
+    }
   }
 
   div.header div.title {
@@ -303,6 +306,11 @@ div.introduction {
 
   div.content div.explanation p:last-child {
     margin: 15px 0px 0px 0px;
+  }
+
+  div.content div.explanation a {
+    color: $explanation-link-color;
+    text-decoration: underline;
   }
 
   div.content div.explanation span.right {

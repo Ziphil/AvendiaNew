@@ -51,6 +51,8 @@ $card-title-shaleian-color: rgba(white, 0.2);
 $introduction-header-color: hsl($primary-hue, 30%, 35%);
 // テキスト色 > 概要の説明
 $explanation-color: black;
+// テキスト色 > 概要のリンク
+$explanation-link-color: hsl($primary-hue, 30%, 35%);
 // テキスト色 > 概要のサンプルテキスト
 $sample-color: rgba(white, 0.6);
 // テキスト色 > 単語数
@@ -85,7 +87,7 @@ $count-font-size: 96px;
 $icon-font-size: 64px;
 
 // 行の高さ > 全体
-$line-height: 1.6;
+$line-height: 1.8;
 // 行の高さ > 概要の説明
 $explanation-line-height: 1.8;
 // 行の高さ > 概要のサンプルテキスト
