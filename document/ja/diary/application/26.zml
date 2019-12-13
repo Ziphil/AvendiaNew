@@ -50,6 +50,7 @@
         >
       >
       の形の図式を &m<\scr<C>> 上の\em<鎖\fl<chain>> という。
+      また、&m<\scr<C>> がこのような形の図式の余極限を全てもつならば、&m<\scr<C>> は\em<鎖余完備\fl<chain-cocomplete>> であるという。
     >
   >
   \thm|type="def"|<
@@ -62,17 +63,11 @@
         >
       >
       の形の図式を &m<\scr<C>> 上の\em<余鎖\fl<cochain>> という。
-    >
-  >
-  \thm|type="def"|<
-    \p<
-      圏 &m<\scr<C>> において、鎖の余極限が全て存在するか、余鎖の極限が全て存在するとする。
-      このとき、&m<\scr<C>> は\em<鎖両完備\fl<chain-ambicomplete>> であるという。
+      また、&m<\scr<C>> がこのような形の図式の極限を全てもつならば、&m<\scr<C>> は\em<余鎖完備\fl<cochain-complete>> であるという。
     >
   >
   \p<
     まず、\a|href="23.html"|<11 月 23 日>の定理 2 を復習しよう。
-    なお、後の議論の状況に合わせるため、定理の記述は少し変えてある。
   >
   \thm|type="thm",id="adamek"|<
     \p<
@@ -95,7 +90,8 @@
           \ar|s="2",e="4",dash|<`s'>
         >
       >
-      を可換にする唯一の射 &m<`s'> があるが、この &m<`s'> が同型射であるならば、&m<(S, `s'\sp<><-1>)> は &m<F>-始代数である。
+      を可換にする唯一の射 &m<`s'> がとれる。
+      ここで、&m<F> が &m<S> を余極限として保存するならば、&m<`s'> は同型射となり &m<(S, `s'\sp<><-1>)> は &m<F>-始代数である。
     >
   >
   \thm|type="thm",id="coadamek"|<
@@ -119,22 +115,22 @@
           \ar|s="1",e="3",dash,inv|<`t'>
         >
       >
-      を可換にする唯一の射 &m<`t'> があるが、この &m<`t'> が同型射であるならば、&m<(T, `t'\sp<><-1>)> は &m<F>-終余代数である。
+      を可換にする唯一の射 &m<`t'> がとれる。
+      ここで、&m<F> が &m<T> を極限として保存するならば、&m<`t'> が同型射となり &m<(T, `t'\sp<><-1>)> は &m<F>-終余代数である。
     >
   >
   \p<
-    この方法による始代数や終余代数の構成にはそれぞれ始対象や終対象が必要であるが、考えている &m<\sb<\bfrm<PDcpo>><!>>-豊穣圏が鎖両完備であれば自動的に存在する。
+    この方法による始代数や終余代数の構成にはそれぞれ始対象や終対象が必要であるが、考えている &m<\sb<\bfrm<PDcpo>><!>>-豊穣圏が鎖余完備であれば自動的に存在する。
   >
   \thm|type="prp",id="zero"|<
     \p<
-      &m<\sb<\bfrm<PDcpo>><!>>-豊穣圏 &m<\scr<C>> が空でなく鎖両完備であるとする。
+      &m<\sb<\bfrm<PDcpo>><!>>-豊穣圏 &m<\scr<C>> が空でなく鎖余完備であるとする。
       このとき、&m<\scr<C>> は零対象をもつ。
     >
   >
   \prf<
     \p<
-      &m<\scr<C>> が鎖の余極限を全てもつ場合を考える。
-      このとき、対象 &m<V> を 1 つとると、鎖
+      対象 &m<V> を 1 つとって固定すると、鎖
       &mb<
         \diag<
           \v<V> \v<V> \v<V> \v<\cdots>>
@@ -160,9 +156,6 @@
       >
       となり、&m<L> が終対象であることも分かった。
       以上で、&m<L> は零対象となり、&m<\scr<C>> が零対象をもつことが示された。
-    >
-    \p<
-      &m<\scr<C>> が余鎖の極限をもつ場合は、双対的に &m<\bot>> だけから成る余鎖の極限を考えれば良い。
     >
   >
   \p<
@@ -192,7 +185,24 @@
         >
       >
       が全て成り立っているとする。
-      このとき、上部の鎖の余極限 &m<\sb<\op<colim>><n> \sb<S><n>> と下部の余鎖の極限 &m<\sb<\op<lim>><n> \sb<T><n>> について、どちらか一方が存在すればもう一方も存在し、両者は一致する。
+      このとき、上部の鎖の余極限 &m<S \coloneqq> \sb<\op<colim>><n> \sb<S><n>> が存在するならば、下部の余鎖の極限 &m<T \coloneqq> \sb<\op<lim>><n> \sb<T><n>> も存在し、&m<S> と &m<T> は一致する。
+    >
+    \p<
+      さらに、自己関手 &m<F: \scr<C> \to> \scr<C>> が射集合の有向部分集合の上限を保存するとする。
+      すると、2 つの図式
+      &mb<
+        \array|align="c"|<
+          \c<\diag<
+            \v<F \sb<S><0>> \v<F \sb<S><1>> \v<F \sb<S><2>> \v<\cdots>>
+            \ar|s="1",e="2"|<F \multi<f><1><0>> \ar|s="2",e="3"|<F \multi<f><2><1>> \ar|s="3",e="4"|<F \multi<f><3><2>>
+          >> \br>
+          \c<\diag<
+            \v<F \sb<T><0>> \v<F \sb<T><1>> \v<F \sb<T><2>> \v<\cdots>>
+            \ar|s="2",e="1",inv|<F \multi<g><0><1>> \ar|s="3",e="2",inv|<F \multi<g><1><2>> \ar|s="4",e="3",inv|<F \multi<g><2><3>>
+          >>
+        >
+      >
+      について、上の図式の余極限と下の図式の極限がともに存在し、&m<FS = \sb<\op<colim>><n> F \sb<S><n> = \sb<\op<lim>><n> F \sb<T><n>> である。
     >
   >
   \prf<
@@ -225,7 +235,7 @@
       が成り立つことが、帰納法によってすぐに示せる。
     >
     \p<
-      図式上部の鎖の余極限 &m<S \coloneqq> \sb<\op<colim>><n> \sb<S><n>> が存在する場合を考える。
+      図式上部の鎖の余極限 &m<S \coloneqq> \sb<\op<colim>><n> \sb<S><n>> をとる。
       自然数 &m<n> に対し、これに付随する構造射を &m<\multi<u><\infty>><n>: \sb<S><n> \to> S> とおく。
       すると、性質 &m<\wspade>> によって、自然数 &m<m> を固定すると族 &m<(\multi<p><m><n>) \sb<><n>> は余錐を成す。
       したがって、図式
@@ -242,24 +252,24 @@
       これが極限を定める錐になっていることを示す。
     >
     \p<
-      別の錐 &m<(\multi<h><n><\infty>>: B \to> \sb<T><n>) \sb<><n>> をとる。
-      すると、族 &m<(\multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<h><n><\infty>>) \sb<><n>> が単調増加であることが容易に分かるので、この族の上限をとることができる。
+      別の錐 &m<(\multi<k><n><\infty>>: B \to> \sb<T><n>) \sb<><n>> をとる。
+      すると、族 &m<(\multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<k><n><\infty>>) \sb<><n>> が単調増加であることが容易に分かるので、この族の上限をとることができる。
       そこで、
       &mb<
-        h \coloneqq> \bigsqcup<n> (\multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<h><n><\infty>>): B \to> S
+        k \coloneqq> \bigsqcup<n> (\multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<k><n><\infty>>): B \to> S
       >
       とおく。
       すると、各自然数 &m<m> に対し、
       &mb<
         \array|align="rcl"|<
-          \c<\multi<v><m><\infty>> \circ> h> \c<=> \c<\multi<v><m><\infty>> \circ> \bigsqcup<n> (\multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<h><n><\infty>>)> \br>
-          \c> \c<=> \c<\bigsqcup<n> (\multi<v><m><\infty>> \circ> \multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<h><n><\infty>>)> \br>
-          \c> \c<=> \c<\bigsqcup<n `> m> (\multi<p><m><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<h><n><\infty>>)> \br>
-          \c> \c<=> \c<\bigsqcup<n `> m> (\multi<g><m><n + 1> \circ> \multi<p><n + 1><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<h><n><\infty>>)> \br>
-          \c> \c<=> \c<\bigsqcup<n `> m> (\multi<g><m><n> \circ> \multi<g><n><n + 1> \circ> \multi<p><n + 1><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<h><n><\infty>>)> \br>
-          \c> \c<=> \c<\bigsqcup<n `> m> (\multi<g><m><n> \circ> \multi<h><n><\infty>>)> \br>
-          \c> \c<=> \c<\bigsqcup<n `> m> \multi<h><m><\infty>>> \br>
-          \c> \c<=> \c<\multi<h><m><\infty>>>
+          \c<\multi<v><m><\infty>> \circ> k> \c<=> \c<\multi<v><m><\infty>> \circ> \bigsqcup<n> (\multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<k><n><\infty>>)> \br>
+          \c> \c<=> \c<\bigsqcup<n> (\multi<v><m><\infty>> \circ> \multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<k><n><\infty>>)> \br>
+          \c> \c<=> \c<\bigsqcup<n `> m> (\multi<p><m><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<k><n><\infty>>)> \br>
+          \c> \c<=> \c<\bigsqcup<n `> m> (\multi<g><m><n + 1> \circ> \multi<p><n + 1><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<k><n><\infty>>)> \br>
+          \c> \c<=> \c<\bigsqcup<n `> m> (\multi<g><m><n> \circ> \multi<g><n><n + 1> \circ> \multi<p><n + 1><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<k><n><\infty>>)> \br>
+          \c> \c<=> \c<\bigsqcup<n `> m> (\multi<g><m><n> \circ> \multi<k><n><\infty>>)> \br>
+          \c> \c<=> \c<\bigsqcup<n `> m> \multi<k><m><\infty>>> \br>
+          \c> \c<=> \c<\multi<k><m><\infty>>>
         >
       >
       が成り立つ。
@@ -268,30 +278,30 @@
         \diag<
           \v<B> \v> \br>
           \v<S> \v<\sb<T><m>>
-          \ar|s="1",e="4"|<\multi<h><m><\infty>>> \ar|s="3",e="4",inv|<\multi<v><m><\infty>>>
-          \ar|s="1",e="3",inv|<h>
+          \ar|s="1",e="4"|<\multi<k><m><\infty>>> \ar|s="3",e="4",inv|<\multi<v><m><\infty>>>
+          \ar|s="1",e="3",inv|<k>
         >
       >
       が可換である。
-      したがって、あとはこのような &m<h> が一意であることを示せば良い。
+      したがって、あとはこのような &m<k> が一意であることを示せば良い。
     >
     \p<
-      上の図式を可換にするような別の射 &m<h': B \to> S> をとる。
+      上の図式を可換にするような別の射 &m<k': B \to> S> をとる。
       すると、
       &mb<
         \array|align="rcl"|<
-          \c<h> \c<=> \c<\bigsqcup<n> (\multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<h><n><\infty>>)> \br>
-          \c> \c<=> \c<\bigsqcup<n> (\multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<v><n><\infty>> \circ> h')>
+          \c<k> \c<=> \c<\bigsqcup<n> (\multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<k><n><\infty>>)> \br>
+          \c> \c<=> \c<\bigsqcup<n> (\multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<v><n><\infty>> \circ> k')>
         >
       >
       が成り立つ。
       ここで、族 &m<(\multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<v><n><\infty>>) \sb<><n>> が単調増加であることはすぐに示せるので、
       &mb<
         &mark<\wheart>>
-        h = \bigsqcup<n> (\multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<v><n><\infty>>) \circ> h'
+        k = \bigsqcup<n> (\multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<v><n><\infty>>) \circ> k'
       >
       と変形できる。
-      ところで、
+      ところで、各自然数 &m<m> に対し、
       &mb<
         \array|align="rcl"|<
           \c<\bigsqcup<n> (\multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<v><n><\infty>>) \circ> \multi<u><\infty>><m>>
@@ -306,13 +316,89 @@
       >
       が成り立つから、余極限からの普遍射の一意性によって、
       &mb<
+        &mark<\wclub>>
         \bigsqcup<n> (\multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<v><n><\infty>>) = \rm<id>
       >
       が成り立つ。
-      これと式 &m<\wheart>> によって &m<h = h'> を得るので、示したかった一意性が示された。
+      これと式 &m<\wheart>> によって &m<k = k'> を得る。
+      以上により、&m<S = \sb<\op<lim>><n> \sb<T><n>> が示された。
     >
     \p<
-      図式下部の余鎖の極限が存在する場合も、同様の議論によって補題の主張が示せる。
+      次に、自己関手 &m<F: \scr<C> \to> \scr<C>> をとり、これが射集合の有向部分集合の上限を保つとする。
+      族 &m<(F \multi<u><\infty>><n>: F \sb<S><n> \to> FS) \sb<><n>> が余錐を成すことは明らかである。
+    >
+    \p<
+      別の錐 &m<(\multi<h><n><\infty>>: F \sb<S><n> \to> A) \sb<><n>> をとる。
+      すると、族 &m<(\multi<h><\infty>><n + 1> \circ> F \multi<q><n + 1><n> \circ> F \multi<v><n><\infty>>) \sb<><n>> が単調増加であることが容易に分かるので、この族の上限をとることができる。
+      そこで、
+      &mb<
+        h \coloneqq> \bigsqcup<n> (\multi<h><\infty>><n + 1> \circ> F \multi<q><n + 1><n> \circ> F \multi<v><n><\infty>>): FS \to> A
+      >
+      とおく。
+      すると、各自然数 &m<m> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<h \circ> F \multi<u><\infty>><m>> \c<=> \c<\bigsqcup<n> (\multi<h><\infty>><n + 1> \circ> F \multi<q><n + 1><n> \circ> F \multi<v><n><\infty>>) \circ> F \multi<u><\infty>><m>> \br>
+          \c> \c<=> \c<\bigsqcup<n> (\multi<h><\infty>><n + 1> \circ> F \multi<q><n + 1><n> \circ> F \multi<v><n><\infty>> \circ> F \multi<u><\infty>><m>)> \br>
+          \c> \c<=> \c<\bigsqcup<n `> m> (\multi<h><\infty>><n + 1> \circ> F \multi<q><n + 1><n> \circ> F \multi<p><n><m>)> \br>
+          \c> \c<=> \c<\bigsqcup<n `> m> (\multi<h><\infty>><n + 1> \circ> F \multi<q><n + 1><n> \circ> F \multi<p><n><n> \circ> F \multi<f><n><m>)> \br>
+          \c> \c<=> \c<\bigsqcup<n `> m> (\multi<h><\infty>><n + 1> \circ> F \multi<f><n + 1><n> \circ> F \multi<f><n><m>)> \br>
+          \c> \c<=> \c<\bigsqcup<n `> m> (\multi<h><\infty>><n + 1> \circ> F \multi<f><n + 1><m>)> \br>
+          \c> \c<=> \c<\bigsqcup<n `> m> \multi<h><\infty>><m>> \br>
+          \c> \c<=> \c<\multi<h><\infty>><m>>
+        >
+      >
+      が成り立つ。
+      図式で書けば、
+      &mb<
+        \diag<
+          \v<F \sb<S><m>> \v<F S> \br>
+          \v> \v<A> \br>
+          \ar|s="1",e="4",inv|<\multi<h><\infty>><m>> \ar|s="1",e="2"|<F \multi<u><\infty>><m>>
+          \ar|s="2",e="4"|<h>
+        >
+      >
+      が可換である。
+      したがって、あとはこのような &m<h> が一意であることを示せば良い。
+    >
+    \p<
+      上の図式を可換にするような別の射 &m<h': FS \to> A> をとる。
+      すると、
+      &mb<
+        \array|align="rcl"|<
+          \c<h> \c<=> \c<\bigsqcup<n> (\multi<h><\infty>><n + 1> \circ> F \multi<q><n + 1><n> \circ> F \multi<v><n><\infty>>)> \br>
+          \c> \c<=> \c<\bigsqcup<n> (h' \circ> F \multi<u><\infty>><n + 1> \circ> F \multi<q><n + 1><n> \circ> F \multi<v><n><\infty>>)>
+        >
+      >
+      が成り立つ。
+      ここで、族 &m<(\multi<u><\infty>><n + 1> \circ> \multi<q><n + 1><n> \circ> \multi<v><n><\infty>>) \sb<><n>> は単調増加であり、&m<F> は有向部分集合の上限を保つことから特に順序を保つので、この族の各要素に &m<F> を施してできる族も単調増加である。
+      したがって、
+      &mb<
+        &mark<\wdiamond>>
+        h = h' \circ> \bigsqcup<n> (F \multi<u><\infty>><n + 1> \circ> F \multi<q><n + 1><n> \circ> F \multi<v><n><\infty>>)
+      >
+      と変形できる。
+      さらに、式 &m<\wclub>> の両辺に &m<F> を施すことで、
+      &mb<
+        \bigsqcup<n> (F \multi<u><\infty>><n + 1> \circ> F \multi<q><n + 1><n> \circ> F \multi<v><n><\infty>>) = \rm<id>
+      >
+      が分かるから、これを式 &m<\wdiamond>> に代入して &m<h = h'> を得る。
+      以上により、&m<FS = \sb<\op<colim>><n> F \sb<S><n>> が示された。
+    >
+    \p<
+      これにより、図式
+      &mb<
+        \diag<
+          \v<F \sb<S><0>> \v<F \sb<S><1>> \v<F \sb<S><2>> \v<\cdots>> \br>
+          \v<F \sb<T><0>> \v<F \sb<T><1>> \v<F \sb<T><2>> \v<\cdots>>
+          \ar|s="1",e="2"|<F \multi<f><1><0>> \ar|s="2",e="3"|<F \multi<f><2><1>> \ar|s="3",e="4"|<F \multi<f><3><2>>
+          \ar|s="6",e="5"|<F \multi<g><0><1>> \ar|s="7",e="6"|<F \multi<g><1><2>> \ar|s="8",e="7"|<F \multi<g><2><3>>
+          \ar|s="1",e="5",inv|<F \multi<p><0><0>> \ar|s="2",e="6",pos="40"|<F \multi<p><1><1>> \ar|s="3",e="7",pos="40"|<F \multi<p><2><2>>
+          \ar|s="5",e="2",inv|<F \multi<q><1><0>> \ar|s="6",e="3",inv|<F \multi<q><2><1>> \ar|s="7",e="4",inv|<F \multi<q><3><2>>
+        >
+      >
+      における上部の鎖の余極限が &m<FS> であることが分かったので、この定理の前半の主張によって、下部の余鎖の極限も &m<FS> である。
+      すなわち、&m<FS = \sb<\op<lim>><n> F \sb<T><n>> が示された。
     >
   >
   \p<
@@ -320,14 +406,14 @@
   >
   \thm|type="thm",id="main"|<
     \p<
-      &m<\sb<\bfrm<PDcpo>><!>>-豊穣圏 &m<\scr<C>> が空でなく鎖両完備であるとする。
-      自己関手 &m<F: \scr<C> \to> \scr<C>> が射集合の順序を保存するならば、&m<F> は代数的コンパクトである。
+      &m<\sb<\bfrm<PDcpo>><!>>-豊穣圏 &m<\scr<C>> が空でなく鎖余完備であるとする。
+      自己関手 &m<F: \scr<C> \to> \scr<C>> が射集合の有向部分集合の上限を保存するならば、&m<F> は代数的コンパクトである。
     >
   >
   \p<
-    証明の前に、1 つ注意をしておく。
-    定理中の &m<F> は、射集合の順序さえ保存していれば良く、&m<\sb<\bfrm<PDcpo>><!>>-豊穣関手になっている必要はない。
-    すなわち、射集合の有向部分集合の上限を保つ必要はないし、最小元も保つ必要はない。
+    証明の前に 1 つ注意をしておく。
+    定理中の &m<F> に課された条件は、射集合の有向部分集合の上限を保つことのみである。
+    したがって、最小元も保つ必要はないので、&m<\sb<\bfrm<PDcpo>><!>>-豊穣関手になっている必要はない。
   >
   \prf<
     \p<
@@ -385,8 +471,8 @@
         >
       >
       が成り立つ。
-      これより、余極限と極限の普遍射の一意性によって、&m<`t' \circ> `s' = \rm<id>> を得る。
-      一方、&m<`s' \circ> `t' = \rm<id>> が示せないので助けてください。
+      これより、&m<S> が余極限かつ極限であることから、普遍射の一意性によって &m<`t' \circ> `s' = \rm<id>> を得る。
+      同様の計算により、&m<FS> が余極限かつ極限であることから、&m<`s' \circ> `t' = \rm<id>> も得られる。
     >
     \p<
       以上により、&m<`s'> と &m<`t'> は互いに逆射だから同型射である。
@@ -399,11 +485,19 @@
   >
   \thm|type="thm"|<
     \p<
-      &m<\sb<\bfrm<PDcpo>><!>> 上の自己関手 &m<F: \sb<\bfrm<PDcpo>><!> \to> \sb<\bfrm<PDcpo>><!>> は、射集合の順序を保存すれば代数的コンパクトである。
+      &m<\sb<\bfrm<PDcpo>><!>> 上の自己関手 &m<F: \sb<\bfrm<PDcpo>><!> \to> \sb<\bfrm<PDcpo>><!>> は、射集合の有向部分集合の上限を保存すれば代数的コンパクトである。
     >
   >
   \p<
-    &m<\sb<\bfrm<PDcpo>><!>> の積や余積は順序を保存するので、この定理により、積と余積の組み合わせで定義された関手は全て代数的コンパクトになることが分かる。
+    なお、ここでは関手が有向部分集合の上限を保存するという条件のもとで証明したが、その代わりに関手が不動点をもつという条件のもとでも同じことが証明できる。
+    しかし、その証明には順序数を用いた議論が必要になり、少し複雑になる。
+    時間があればそちらの証明もまとめたいと思う。
+  >
+  \h1<追記 (2019 年 12 月 13 日)>
+  \p<
+    定理 \ref|thm="main"|> の議論が埋められていなかった箇所を埋め、全体を少し書き直しました。
+    元論文に書かれていた条件を見落としていたのが原因でした。
+    このことを指摘してくださった \ae|href="https://twitter.com/Mizunashi_Mana"|<@Mizunashi_Mana> 氏には、この場を借りて感謝します。
   >
   \h1<参考文献>
   \ul<
