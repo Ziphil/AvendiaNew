@@ -123,7 +123,9 @@ $hovered-link-color: hsl($hovered-hue, 40%, 40%);
 // テキスト色 > 無効リンク
 $invalid-color: hsl($secondary-hue, 0%, 70%);
 // テキスト色 > 箇条書きのマーカー
-$list-marker-color: hsl($secondary-hue, 40%, 50%);
+$list-marker-color: hsl($secondary-hue, 30%, 50%);
+// テキスト色 > ラベル
+$label-color: hsl($secondary-hue, 30%, 50%);
 // テキスト色 > エラーコード
 $error-code-color: $highlight-background-color;
 // テキスト色 > エラーメッセージ

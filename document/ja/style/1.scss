@@ -456,6 +456,11 @@ article.main {
     content: attr(data-number);
   }
 
+  p span.label {
+    margin: 0px $blank-padding 0px 0px;
+    color: $label-color;
+  }
+
   p span.redact {
     line-height: 100%;
     border: 1px $border-color solid;
@@ -1477,7 +1482,7 @@ article.main {
     @include before-after("定理 ", ".");
     float: left;
     margin: $vertical-margin $blank-padding 0px 0px;
-    color: $border-color;
+    color: $label-color;
     line-height: $line-height;
   }
 
@@ -1500,14 +1505,14 @@ article.main {
   div.proof {
     margin: $vertical-margin 0px;
     padding: 0px 0px 0px $proof-horizontal-padding;
-    border-left: 1px $border-color dashed;
+    border-left: 1px $label-color dashed;
   }
 
   div.proof >span.number {
     @include before-after("証明", ".");
     margin: 0px $blank-padding 0px 0px;
     float: left;
-    color: $border-color;
+    color: $label-color;
     line-height: $line-height;
   }
 
@@ -1519,7 +1524,7 @@ article.main {
 
   span.bibliography {
     font-size: 80%;
-    color: $border-color;
+    color: $label-color;
     vertical-align: baseline;
     position: relative;
     top: -0.5em;
