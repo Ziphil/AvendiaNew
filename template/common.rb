@@ -281,6 +281,14 @@ converter.add(["p"], ["page"]) do |element|
   next this
 end
 
+converter.add(["label"], ["page"]) do |element|
+  this = ""
+  this << Tag.build("span", "label") do |this|
+    this << apply(element, "page")
+  end
+  next this
+end
+
 converter.add(["img"], ["page"]) do |element|
   this = ""
   this << Tag.build("div", "img-wrapper") do |this|
