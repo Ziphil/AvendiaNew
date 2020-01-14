@@ -39,6 +39,8 @@ LANGUAGE_NAMES = {:ja => "日本語", :en => "English"}
 LATEST_VERSION_REGEX = /(5\s*代\s*5\s*期|Version\s*5\.5)/
 DICTIONARY_URL = "conlang/database/1.cgi"
 
+INLINE_ELEMENT_NAMES = ["x", "xn", "a"]
+
 converter.add(["page"], [""]) do |element|
   path, language = converter.path, converter.language
   foreign_language = FOREIGN_LANGUAGES[language]
@@ -804,6 +806,17 @@ converter.add_default(nil) do |text|
   string.gsub!(/(、|。)\s+(」|』)/){$1 + $2}
   string.gsub!(/(」|』|〉)\s+(、|。|,|\.)/){$1 + $2}
   string.gsub!(/(\(|「|『)\s+(「|『)/){$1 + $2}
-  string.gsub!(/(^|>)\s+(「|『)/){$1 + $2}
+  unless text.previous_sibling&.is_a?(Element) && INLINE_ELEMENT_NAMES.include?(text.previous_sibling&.name)
+    string.gsub!(/^\s+(「|『)/){$1}
+  end
+  unless text.next_sibling&.is_a?(Element) && INLINE_ELEMENT_NAMES.include?(text.next_sibling&.name)
+    string.gsub!(/(」|』)\s+$/){$1}
+  end
+  if text.previous_sibling
+    previous_sibling = text.previous_sibling
+    if previous_sibling.is_a?(Element) && previous_sibling.name == "label"
+      string.gsub!(/^\s+/, "")
+    end
+  end
   next string
 end
