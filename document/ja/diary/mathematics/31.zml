@@ -259,7 +259,7 @@
       >
       が分かる。
       この &m<K> はまず明らかにイデアルである。
-      さらに、上と同じ &m<q: A \otimes> B \headrarr> A `/ I \otimes> B `/ J> をとれば、準同型定理によって &m<(A \otimes> B) `/ K \cong> \op<Im> q \subseteq> A `/ I \otimes> B `/ J> が成り立つが、この左辺は有限次元なので、&m<(A \otimes> B) `/ K> も有限次元で、&m<K> は余有限である。
+      さらに、上と同じ &m<q: A \otimes> B \headrarr> A `/ I \otimes> B `/ J> をとれば、準同型定理によって &m<(A \otimes> B) `/ K \cong> \op<Im> q \subseteq> A `/ I \otimes> B `/ J> が成り立つが、この右辺は有限次元なので、&m<(A \otimes> B) `/ K> も有限次元で、&m<K> は余有限である。
       したがって、&m<f \otimes> g \in> \sp<(A \otimes> B)><\diamond>>> が成り立つ。
       以上により、&m<\sp<A><\diamond>> \otimes> \sp<B><\diamond>> \subseteq> \sp<(A \otimes> B)><\diamond>>> も示された。
     >
@@ -361,7 +361,7 @@
         >
       >
       で定める。
-      なお、&m<f f'> とは、&m<\sp<C><*>> の代数としての &m<f> と &m<f'> の積である。
+      なお、&m<f' f> とは、&m<\sp<C><*>> の代数としての &m<f'> と &m<f> の積である。
     >
     \p<
       任意に &m<c \in> C> と &m<f \in> \sp<C><*>> をとる。
