@@ -122,16 +122,17 @@ class WholeAvendiaConverter
         @mode = :normal
       end
     end
-    @paths = create_paths(rest_args)
+    @rest_args = rest_args
     @upload = upload
-    @ftp, @user = create_ftp(upload)
+    @paths = create_paths
+    @ftp, @user = create_ftp
     @parser = create_parser
     @converter = create_converter
   end
 
   def update_ftp
     @ftp&.close
-    @ftp, @user = create_ftp(@upload)
+    @ftp, @user = create_ftp
   end
 
   def execute
@@ -172,6 +173,9 @@ class WholeAvendiaConverter
     CONFIG.document_dirs.each do |language, dir|
       listener = Listen.to(dir) do |modified, added, removed|
         update_ftp
+        unless added.empty?
+          @paths = create_paths
+        end
         paths = (modified + added).uniq
         paths.each_with_index do |path, index|
           if @paths.any?{|s| s.first == path}
@@ -342,9 +346,9 @@ class WholeAvendiaConverter
     end
   end
 
-  def create_paths(args)
+  def create_paths
     paths = []
-    if args.empty?
+    if @rest_args.empty?
       CONFIG.document_dirs.each do |language, default|
         dirs = []
         dirs << default
@@ -360,7 +364,7 @@ class WholeAvendiaConverter
         end
       end
     else
-      path = args.map{|s| s.gsub("\\", "/").gsub("c:/", "C:/")}[0].encode("utf-8")
+      path = @rest_args.map{|s| s.gsub("\\", "/").gsub("c:/", "C:/")}[0].encode("utf-8")
       language = CONFIG.document_dirs.find{|s, t| path.include?(t)}&.first
       if language
         paths << [path, language]
@@ -378,9 +382,9 @@ class WholeAvendiaConverter
     return paths
   end
 
-  def create_ftp(upload)
+  def create_ftp
     ftp, user = nil, nil
-    if upload
+    if @upload
       ftp = Net::FTP.new(CONFIG.server_host, CONFIG.server_user, CONFIG.server_password)
       ftp.read_timeout = READ_TIMEOUT
     end
