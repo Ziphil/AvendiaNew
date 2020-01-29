@@ -10,6 +10,7 @@ include Zenithal
 BASE_PATH = File.expand_path("..", File.dirname($0)).encode("utf-8")
 
 Kernel.load(File.join(BASE_PATH, "converter/utility.rb"))
+Kernel.load(File.join(BASE_PATH, "converter/transformer.rb"))
 Kernel.load(File.join(BASE_PATH, "converter/word_converter.rb"))
 Kernel.load(File.join(BASE_PATH, "converter/config.rb"))
 Encoding.default_external = "UTF-8"
@@ -112,6 +113,8 @@ class WholeAvendiaConverter
     upload = false
     if options.include?("-l")
       @mode = :log
+    elsif options.include?("-t")
+      @mode = :transform
     else
       if options.include?("-u")
         upload = true
@@ -139,6 +142,8 @@ class WholeAvendiaConverter
     case @mode
     when :log
       execute_log
+    when :transform
+      execute_transform
     when :serve
       execute_serve
     when :normal
@@ -193,6 +198,15 @@ class WholeAvendiaConverter
   def execute_log
     @paths.each_with_index do |(path, language), index|
       result = save_log(path, language, index)
+    end
+  end
+
+  def execute_transform
+    @paths.each_with_index do |(path, language), index|
+      input = File.read(path)
+      transformer = GreekTransformer.new(input, path, language)
+      output = transformer.transform
+      File.write(path, output)
     end
   end
 
