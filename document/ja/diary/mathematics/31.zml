@@ -167,7 +167,7 @@
   \thm|type="def"|<
     \p<
       代数 &m<A> の線型空間としての部分空間 &m<I> をとる。
-      任意の &m<a \in> A> と &m<u \in> I> について、&m<ua \in> I> および &m<au \in> I> が成り立つとき、&m<I> を\em<イデアル\fl<ideal>> という。
+      任意の &m<a \in> A> と &m<u \in> I> について、&m<ua \in> I> および &m<au \in> I> が成り立つとき、&m<I> を &m<A> の\em<イデアル\fl<ideal>> という。
     >
   >
   \p<
@@ -177,7 +177,7 @@
     \p<
       代数 &m<A> に対し、
       &mb<
-        \sp<A><\diamond>> \coloneqq> `{ f \in> \sp<A><*> \mid> \op<Ker> f \text< は余有限なイデアルを含む> `}
+        \sp<A><\diamond>> \coloneqq> `{ f \in> \sp<A><*> \mid> A \text< の余有限イデアル > I \text< が存在して > I \subseteq> \op<Ker> f `}
       >
       と定める。
     >
@@ -188,7 +188,38 @@
     &m<A> が有限次元でない場合は、一般に &m<\sp<A><\diamond>> \subsetneq> \sp<A><*>> である。
   >
   \p<
-    まず最初に分かることとして、この構成はテンソル積をとる操作と可換である。
+    これに余代数の構造を定めていくのだが、まずこれが線型空間になっていることを示す。
+  >
+  \thm|type="lem",id="close"|<
+    \p<
+      代数 &m<A> に対し、&m<\sp<A><\diamond>>> は通常の和とスカラー倍について線型空間である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\sp<A><\diamond>>> がスカラー倍で閉じていることは、任意の &m<f \in> \sp<A><*>> とスカラー &m<k> に対して &m<\op<Ker> f = \op<Ker> kf> であることからすぐに分かる。
+      以下、&m<\sp<A><\diamond>>> が和で閉じていることを示す。
+    >
+    \p<
+      任意に元 &m<f, g \in> \sp<A><\diamond>>> をとると、&m<A> の余有限イデアル &m<I \subseteq> \op<Ker> f> および &m<J \subseteq> \op<Ker> g> がとれる。
+      ここで、&m<p: A `/ (I \cap> J) \to> A `/ I> を自然に定まる写像とすると、これは明らかに全射であるから &m<\op<Im> p = A `/ I> が分かる。
+      また、&m<\op<Ker> p \cong> I `/ (I \cap> J) \cong> (I + J) `/ J> も成り立つ。
+      したがって、&m<I> と &m<J> は余有限であるから、
+      &mb<
+        \array|align="rcl"|<
+          \c<\op<dim> A `/ (I \cap> J)> \c<=> \c<\op<dim> \op<Ker> p + \op<dim> \op<Im> p> \br>
+          \c> \c<=> \c<\op<dim> [(I + J) `/ J] + \op<dim> A `/ I> \br>
+          \c> \c<\leq>> \c<\op<dim> A `/ J + \op<dim> A `/ I> \br>
+          \c> \c<`<> \c<\infty>>
+        >
+      >
+      が分かり、これより &m<I \cap> J> も余有限である。
+      &m<I \cap> J \subseteq> \op<Ker> (f + g)> であるから、これより &m<f + g \in> \sp<A><\diamond>>> が得られた。
+      以上で、&m<\sp<A><\diamond>>> は和に関して閉じている。
+    >
+  >
+  \p<
+    次に分かることとして、この構成はテンソル積をとる操作と可換である。
   >
   \thm|type="lem",id="com"|<
     \p<
@@ -198,7 +229,7 @@
   >
   \prf<
     \p<
-      任意に元 &m<h \in> \sp<(A \otimes> B)><\diamond>>> をとると、余有限イデアル &m<K \subseteq> \op<Ker> h> がとれる。
+      任意に元 &m<h \in> \sp<(A \otimes> B)><\diamond>>> をとると、&m<A \otimes> B> の余有限イデアル &m<K \subseteq> \op<Ker> h> がとれる。
       これに対し、
       &mb<
         \array|align="rcl"|<
@@ -284,7 +315,7 @@
   \prf<
     \p<
       任意に元 &m<f \in> \sp<A><\diamond>>> をとる。
-      すると、定義によってある余有限イデアル &m<I \subseteq> \op<Ker> f> が存在する。
+      すると、定義によってある &m<A> の余有限イデアル &m<I \subseteq> \op<Ker> f> が存在する。
       任意の &m<a \in> A> および &m<u \in> I> に対し、&m<I \subseteq> \op<Ker> f> によって、
       &mb<
         \sp<`m><*> (f) (a \otimes> u) = f (`m (a \otimes> u)) = f (au) = 0
@@ -453,6 +484,12 @@
   >
   \p<
     この随伴を使うことで余自由な余代数を構成することができるのだが、長くなったのでそれについては後日触れることにする。
+  >
+  \h1<追記 (2020 年 2 月 10 日)>
+  \p<
+    補題 \ref|thm="close"|> とその証明を付け足し、その他の箇所で説明が曖昧だった点を修正しました。
+    この補題の証明のアイデアと説明が曖昧な点の指摘は、\ae|href="https://twitter.com/wktkshn"|<@wktkshn> 氏によるものです。
+    この場を借りて感謝します。
   >
   \h1<参考文献>
   \ol<
