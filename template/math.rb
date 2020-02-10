@@ -2,6 +2,7 @@
 
 
 THEOREM_TYPE_CLASSES = {"def" => "definition", "thm" => "theorem", "prp" => "proposition", "lem" => "lemma", "cor" => "corollary"}
+REFERENCE_TYPE_CLASSES = {"eq" => :equation, "thm" => :theorem, "bib" => :bibliography}
 
 converter.define_singleton_method(:reset_variables) do
   converter.variables[:number] = Hash.new{|h, s| h[s] = 0}
@@ -20,7 +21,7 @@ converter.define_singleton_method(:get_number) do |type, id|
   if numbers.key?(id)
     next numbers[id]
   else
-    element = converter.document.root.each_xpath("//*[@id='#{id}']").to_a.first
+    element = converter.document.root.each_xpath("//*[name()!='ref' and @id='#{id}']").to_a.first
     if element
       case type
       when :equation
@@ -138,19 +139,12 @@ end
 
 converter.add(["ref"], ["page"]) do |element|
   this = ""
-  if element.attribute("eq")
-    type = :equation
-    id = element.attribute("eq").to_s
-  elsif element.attribute("thm")
-    type = :theorem
-    id = element.attribute("thm").to_s
-  elsif element.attribute("bib")
-    type = :bibliography
-    id = element.attribute("bib").to_s
-  end
+  id = element.attribute("id")&.to_s
+  type = element.attribute("type")&.to_s
+  type_class = REFERENCE_TYPE_CLASSES[type]
   this << Tag.build("span") do |this|
-    this["class"] = type.to_s
-    this << get_number(type, id).to_s
+    this["class"] = type_class.to_s
+    this << get_number(type_class, id).to_s
   end
 end
 

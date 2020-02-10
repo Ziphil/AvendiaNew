@@ -208,7 +208,7 @@
   >
   \thm|type="def"|<
     \p<
-      添字付き圏 &m<`C: \sp<\scr<B>><\circ>> \to> \bfrm<Cat>> について、定義 \ref|thm="index"|> の記号で &m<\sb<`h><I>> および &m<\sb<`m><uv>> たちが全て恒等な自然変換であるとき、&m<`C> は\em<厳密\fl<strict>> であるという。
+      添字付き圏 &m<`C: \sp<\scr<B>><\circ>> \to> \bfrm<Cat>> について、定義 \ref|type="thm",id="index"|> の記号で &m<\sb<`h><I>> および &m<\sb<`m><uv>> たちが全て恒等な自然変換であるとき、&m<`C> は\em<厳密\fl<strict>> であるという。
     >
   >
   \thm|type="prp"|<

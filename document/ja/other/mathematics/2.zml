@@ -16,10 +16,10 @@
       \frac<\partial> f><\partial> x> (\sb<x><0>, \sb<y><0>) = \frac<\partial> f><\partial> y> (\sb<x><0>, \sb<y><0>) = 0
     >
     で与えられる。
-    この式 \ref|eq="stat"|> を満たす点 &m<(\sb<x><0>, \sb<y><0>)> は、関数 &m<f (x, y)> の\em<停留点\fl<stationary point>> もしくは\em<臨界点\fl<critical point>> と呼ばれる。
+    この式 \ref|type="eq",id="stat"|> を満たす点 &m<(\sb<x><0>, \sb<y><0>)> は、関数 &m<f (x, y)> の\em<停留点\fl<stationary point>> もしくは\em<臨界点\fl<critical point>> と呼ばれる。
   >
   \p<
-    さて、ここで問題となるのは、式 \ref|eq="stat"|> が極大点や極小点を与える必要条件にすぎないということである。
+    さて、ここで問題となるのは、式 \ref|type="eq",id="stat"|> が極大点や極小点を与える必要条件にすぎないということである。
     すなわち、停留点が必ずしも極大点や極小点になるわけではないのである。
     ここで、関数 &m<f (x, y)> についてより深い考察が必要になる。
   >
@@ -38,8 +38,8 @@
     ここで &m<`r \coloneqq> \sqrt<\sp<h><2> + \sp<k><2>>> とした。
   >
   \p<
-    以下では式 \ref|eq="stat"|> は成り立っているものとする。
-    このとき、式 \ref|eq="taylor"|> は、
+    以下では式 \ref|type="eq",id="stat"|> は成り立っているものとする。
+    このとき、式 \ref|type="eq",id="taylor"|> は、
     &mb<
       f (\sb<x><0> + h, \sb<y><0> + k) - f (\sb<x><0>, \sb<y><0>) = \frac<1><2> \paren<\sp<h><2> \frac<\sp<\partial>><2> f><\partial> \sp<x><2>> (\sb<x><0>, \sb<y><0>) + 2 hk \frac<\sp<\partial>><2> f><\partial> x \partial> y> (\sb<x><0>, \sb<y><0>) + \sp<k><2> \frac<\sp<\partial>><2> f><\partial> \sp<y><2>> (\sb<x><0>, \sb<y><0>)> + o (\sp<`r><2>)
     >
@@ -60,7 +60,7 @@
       B \coloneqq> \frac<\sp<\partial>><2> f><\partial> x \partial> y> (\sb<x><0>, \sb<y><0>) \qquad>
       C \coloneqq> \frac<\sp<\partial>><2> f><\partial> \sp<y><2>> (\sb<x><0>, \sb<y><0>)
     >
-    とおけば、式 \ref|eq="qf"|> は、
+    とおけば、式 \ref|type="eq",id="qf"|> は、
     &mb<
       X = A \sp<h><2> + B hk + C \sp<k><2>
     >
@@ -186,7 +186,7 @@
     ここでも同じようにして表記を変えてみる。
   >
   \p<
-    まず、上式 \ref|eq="diff"|> は、
+    まず、上式 \ref|type="eq",id="diff"|> は、
     &mb<
       f \paren<\matrix<\cc<\sb<x><0> + h> \cc<\sb<y><0> + k>>> = \paren<\matrix<\c<\frac<\partial> f><\partial> x> \paren<\matrix<\cc<\sb<x><0>> \cc<\sb<y><0>>>>> \c<\frac<\partial> f><\partial> y> \paren<\matrix<\cc<\sb<x><0>> \cc<\sb<y><0>>>>>>> \paren<\matrix<\cc<h> \cc<k>>> + o \vert<\matrix<\cc<h> \cc<k>>>
     >
@@ -200,7 +200,7 @@
   >
   \p<
     さて、こう書いてしまえば、多変数から多変数への写像の微分可能性も容易に定義できる。
-    例えば、前項に示した、2 変数から 2 変数への写像 &m<\bf<f> (\bf<x>)> を考えれば、式 \ref|eq="vec"|> を参考にして、
+    例えば、前項に示した、2 変数から 2 変数への写像 &m<\bf<f> (\bf<x>)> を考えれば、式 \ref|type="eq",id="vec"|> を参考にして、
     &mb<
       \bf<f> (\sb<\bf<x>><0> + \bf<h>) =
       \paren<\matrix<

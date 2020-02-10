@@ -165,9 +165,9 @@
     >
     \p<
       任意にカルテシアン自然変換 &m<`n: \widetildebelow<M> \to> \widetildebelow<M'>> をとる。
-      任意の &m<(`g, b) \in> \op<exp> A \times> B> と &m<x \in> M (`g, b)> に対し、補題 \ref|thm="iso"|> によって &m<(`g, (\sb<\rm<id>><`g>, x))> は &m<\bfrm<El> (\sp<\widetildebelow<M>><b>)> で正規対象である。
-      したがって、補題 \ref|thm="pres"|> によって &m<(`g, \sbsp<`n><`g><b> (\sb<\rm<id>><`g>, x))> は &m<\bfrm<El> (\widetildebelow<M'> \sp<><b>)> で正規対象でもある。
-      再び補題 \ref|thm="iso"|> を用いれば、ある元 &m<y \in> M' (`g, b)> が存在して、
+      任意の &m<(`g, b) \in> \op<exp> A \times> B> と &m<x \in> M (`g, b)> に対し、補題 \ref|type="thm",id="iso"|> によって &m<(`g, (\sb<\rm<id>><`g>, x))> は &m<\bfrm<El> (\sp<\widetildebelow<M>><b>)> で正規対象である。
+      したがって、補題 \ref|type="thm",id="pres"|> によって &m<(`g, \sbsp<`n><`g><b> (\sb<\rm<id>><`g>, x))> は &m<\bfrm<El> (\widetildebelow<M'> \sp<><b>)> で正規対象でもある。
+      再び補題 \ref|type="thm",id="iso"|> を用いれば、ある元 &m<y \in> M' (`g, b)> が存在して、
       &mb<
         (`g, \sbsp<`n><X><b> (\sb<\rm<id>><`g>, x)) \cong> (`g, (\sb<\rm<id>><`g>, y))
       >
@@ -187,13 +187,13 @@
         (`g, \sbsp<`n><`g><b> (\sb<\rm<id>><`g>, x)) \cong> (`g, (\sb<\rm<id>><`g>, \sb<`j><(`g, b)> x)) \cong> (`g, \widetildebelow<`j> \sbsp<><X><b> (\sb<\rm<id>><`g>, x))
       >
       が成り立つ。
-      補題 \ref|thm="iso"|> によって、&m<\bfrm<El> (\sp<\widetildebelow<M>><b>)> の正規対象は同型の違いを除いて全て &m<(`g, (\sb<\rm<id>><`g>, x))> の形だから、上の同型は &m<\sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>>> の射として &m<\widetildebelow<`j> = `n> が成り立つことを意味している。
+      補題 \ref|type="thm",id="iso"|> によって、&m<\bfrm<El> (\sp<\widetildebelow<M>><b>)> の正規対象は同型の違いを除いて全て &m<(`g, (\sb<\rm<id>><`g>, x))> の形だから、上の同型は &m<\sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>>> の射として &m<\widetildebelow<`j> = `n> が成り立つことを意味している。
       すなわち、&m<\widetildebelow<\text<->>> は充満である。
     >
   >
   \p<
     &m<\widetildebelow<\text<->>> が充満であることを示すにあたって、&m<\sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>>> の射の間に適当な同一視をしたことを用いたが、この同一視をしないと上の圏同値は一般に成り立たない。
-    この反例は Taylor\ref|bib="tqdg"|> によって与えられている。
+    この反例は Taylor\ref|type="bib",id="tqdg"|> によって与えられている。
     まだ読んでないので私は分かっていない。
   >
   \h1<参考文献>

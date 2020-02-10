@@ -109,13 +109,13 @@
   >
   \prf<
     \p<
-      &m<S \subseteq> \overline<S>> であるから &m<\sp<h><*> S \subseteq> \sp<h><*> \overline<S>> であるが、命題 \ref|thm="clstab"|> によって右辺は閉なので、両辺の閉包をとれば &m<\overline<\sp<h><*> S> \subseteq> \sp<h><*> \overline<S>> を得る。
+      &m<S \subseteq> \overline<S>> であるから &m<\sp<h><*> S \subseteq> \sp<h><*> \overline<S>> であるが、命題 \ref|type="thm",id="clstab"|> によって右辺は閉なので、両辺の閉包をとれば &m<\overline<\sp<h><*> S> \subseteq> \sp<h><*> \overline<S>> を得る。
       逆に、任意に &m<f \in> \sp<h><*> \overline<S>: E \to> D> をとると、&m<h \circ> f \in> \overline<S>> より &m<\sp<f><*> (\sp<h><*> S) \in> JE> であるから、すなわち &m<f \in> \overline<\sp<h><*> S>> が成り立つ。
       これより、&m<\overline<\sp<h><*> S> \supseteq> \sp<h><*> \overline<S>> も示された。
     >
   >
   \p<
-    命題 \ref|thm="clstab"|> によって、篩が閉であるという性質は引き戻しによって保存されるので、対象に対してその上の閉篩を返す対応は関手になる。
+    命題 \ref|type="thm",id="clstab"|> によって、篩が閉であるという性質は引き戻しによって保存されるので、対象に対してその上の閉篩を返す対応は関手になる。
   >
   \thm|type="def"|<
     \p<
@@ -196,7 +196,7 @@
       逆の包含関係である &m<\sp<f><*> U \supseteq> \sb<S><f>> は明らかに成り立つので、&m<\sp<f><*> U = \sb<S><f>> が成り立つ。
     >
     \p<
-      さて、&m<\sb<S><f>> は閉であることと命題 \ref|thm="starpres"|> を用いると、
+      さて、&m<\sb<S><f>> は閉であることと命題 \ref|type="thm",id="starpres"|> を用いると、
       &mb<
         \sp<f><*> \overline<U> = \overline<\sp<f><*> U> = \overline<\sb<S><f>> = \sb<S><f>
       >

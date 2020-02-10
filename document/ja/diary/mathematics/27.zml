@@ -145,7 +145,7 @@
   \prf<
     \p<
       任意に被覆篩 &m<W \in> JC> をとる。
-      命題 \ref|thm="equiv"|> によって、
+      命題 \ref|type="thm",id="equiv"|> によって、
       &mb<
         \text<-> \circ> W: \op<Hom> (\bf<y> C, \sp<P><+>) \to> \op<Hom> (W, \sp<P><+>)
       >

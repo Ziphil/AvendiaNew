@@ -9,7 +9,7 @@
   \p<
     最近、モノイダル圏上に定義される余自由余代数の具体的な構成に興味が出てきた。
     そこで、とりあえず最も基本的な例として、線型空間の圏における余自由余代数について少し勉強したので、軽くまとめておこうと思う。
-    以降の議論は、Sweedler\ref|bib="hax"|> によるものである。
+    以降の議論は、Sweedler\ref|type="bib",id="hax"|> によるものである。
   >
   \p<
     余代数の前に、代数の定義をおさらいしておく。
@@ -312,12 +312,12 @@
       であるから、&m<A \otimes> I \subseteq> \op<Ker> \sp<`m><*> (f)> が成り立つ。
       同様の計算により &m<I \otimes> A \subseteq> \op<Ker> \sp<`m><*> (f)> も成り立つ。
       したがって、&m<K \coloneqq> A \otimes> I + I \otimes> A> とおけば &m<K \subseteq> \op<Ker> \sp<`m><*> (f)> が成り立つ。
-      補題 \ref|thm="com"|> の証明で行った議論と同様にして、&m<K> は余有限イデアルであることが分かるので、&m<\sp<`m><*> (f) \in> \sp<(A \otimes> A)><\diamond>>> が得られる。
-      以上により、補題 \ref|thm="com"|> を用いて &m<\sp<`m><*> (\sp<A><\diamond>>) \subseteq> \sp<(A \otimes> A)><\diamond>> = \sp<A><\diamond>> \otimes> \sp<A><\diamond>>> が示された。
+      補題 \ref|type="thm",id="com"|> の証明で行った議論と同様にして、&m<K> は余有限イデアルであることが分かるので、&m<\sp<`m><*> (f) \in> \sp<(A \otimes> A)><\diamond>>> が得られる。
+      以上により、補題 \ref|type="thm",id="com"|> を用いて &m<\sp<`m><*> (\sp<A><\diamond>>) \subseteq> \sp<(A \otimes> A)><\diamond>> = \sp<A><\diamond>> \otimes> \sp<A><\diamond>>> が示された。
     >
   >
   \p<
-    補題 \ref|thm="multi"|> によって、代数 &m<(A, `m, `h)> があると、
+    補題 \ref|type="thm",id="multi"|> によって、代数 &m<(A, `m, `h)> があると、
     &mb<
       \array|align="rrcl"|<
         \c<`d:> \c<\sp<A><\diamond>>> \c<\longto>> \c<\sp<A><\diamond>> \otimes> \sp<A><\diamond>>> \br>
@@ -451,7 +451,7 @@
   >
   \prf<
     \p<
-      余代数 &m<C> に対して、補題 \ref|thm="psi"|> によって &m<i: C \to> \sp<C><**>> の終域を狭めたものを &m<`c: C \to> \sp<C><* \diamond>>> とおく。
+      余代数 &m<C> に対して、補題 \ref|type="thm",id="psi"|> によって &m<i: C \to> \sp<C><**>> の終域を狭めたものを &m<`c: C \to> \sp<C><* \diamond>>> とおく。
       また、代数 &m<A> に対しては、&m<j: \sp<A><\diamond>> \hookrarr> \sp<A><*>> を包含写像として、合成
       &mb<
         \diag<
@@ -476,7 +476,7 @@
   >
   \h1<追記 (2020 年 2 月 10 日)>
   \p<
-    補題 \ref|thm="close"|> とその証明を付け足し、その他の箇所で説明が曖昧だった点を修正しました。
+    補題 \ref|type="thm",id="close"|> とその証明を付け足し、その他の箇所で説明が曖昧だった点を修正しました。
     この補題の証明のアイデアと説明が曖昧な点の指摘は、\ae|href="https://twitter.com/wktkshn"|<@wktkshn> 氏によるものです。
     この場を借りて感謝します。
   >

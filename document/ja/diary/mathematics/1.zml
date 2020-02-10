@@ -124,7 +124,7 @@
   >
   \prf<
     \p<
-      Hasegawa\ref|bib="htaa"|> を参照。
+      Hasegawa\ref|type="bib",id="htaa"|> を参照。
       もしかしたらここにも書くかもしれない。
     >
   >
@@ -178,7 +178,7 @@
   >
   \prf<
     \p<
-      Hasegawa\ref|bib="htaa"|> を参照。
+      Hasegawa\ref|type="bib",id="htaa"|> を参照。
     >
   >
   \p<

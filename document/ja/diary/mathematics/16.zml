@@ -226,7 +226,7 @@
   >
   \prf<
     \p<
-      定義 \ref|thm="natobj"|> により、任意の &m<\scr<V>> の対象 &m<X> に対し、全単射
+      定義 \ref|type="thm",id="natobj"|> により、任意の &m<\scr<V>> の対象 &m<X> に対し、全単射
       &mb<
         \op<Hom> (X, FK) \cong> `{ \scr<V> \text<-豊穣自然変換 > `g: X \otimes> `[K, \hyphen>`] \raarr> F `}
       >
@@ -322,7 +322,7 @@
       >
       が示された。
       あとはこの全単射が &m<X> に関して自然であることを示せば良い。
-      そのためには、命題 \ref|thm="natiso"|> のときと同様に上の式の右辺を &m<SX> と書くことにしたとき、
+      そのためには、命題 \ref|type="thm",id="natiso"|> のときと同様に上の式の右辺を &m<SX> と書くことにしたとき、
       &mb<
         \diag<
           \v<\op<Hom> (X, FK)> \v<SX> \br>
