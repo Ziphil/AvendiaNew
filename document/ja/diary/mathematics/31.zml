@@ -299,17 +299,6 @@
     \p<
       代数 &m<(A, `m, `h)> をとる。
       &m<`j> によって &m<\sp<A><*> \otimes> \sp<A><*> \subseteq> \sp<(A \otimes> A)><*>> と見なすとき、&m<\sp<`m><*> (\sp<A><\diamond>>) \subseteq> \sp<A><\diamond>> \otimes> \sp<A><\diamond>>> が成り立つ。
-      ## すなわち、
-      ## &mb<
-      ##   \diag<
-      ##     \v<\sp<A><\diamond>>> \v<\sp<A><\diamond>> \otimes> \sp<A><\diamond>>> \br>
-      ##     \v> \v<\sp<A><*> \otimes> \sp<A><*>> \br>
-      ##     \v<\sp<A><*>> \v<\sp<(A \otimes> A)><*>>
-      ##     \ar|s="1",e="2",dash|<\sp<`m><*> \sb<\rvert>><\sp<A><\diamond>>>> \ar|s="5",e="6",inv|<\sp<`m><*>>
-      ##     \ar|s="1",e="5",tip="hook"|> \ar|s="2",e="4",tip="hook"|> \ar|s="4",e="6",tip="hook"|<\sb<`j><AA>>
-      ##   >
-      ## >
-      ## が可換になるような破線の線型写像が存在する。
     >
   >
   \prf<
