@@ -353,7 +353,7 @@ class WholeAvendiaConverter
   def print_error(path, language, index, error)
     output = ""
     output << "[#{language}: #{path}]\n"
-    output << error.full_message.gsub(/\e\[.*?[A-Za-z]/, "")
+    output << error.full_message.gsub(/\e\[.*?[A-Za-z]/, "").encode("utf-8")
     output << "\n"
     File.open(CONFIG.error_log_path, "a") do |file|
       file.puts(output)
