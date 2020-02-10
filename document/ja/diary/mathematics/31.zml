@@ -197,7 +197,7 @@
   >
   \prf<
     \p<
-      &m<\sp<A><\diamond>>> がスカラー倍で閉じていることは、任意の &m<f \in> \sp<A><*>> とスカラー &m<k> に対して &m<\op<Ker> f = \op<Ker> kf> であることからすぐに分かる。
+      &m<\sp<A><\diamond>>> がスカラー倍で閉じていることは、任意の &m<f \in> \sp<A><*>> とスカラー &m<k \in> \bb<K> \setminus> `{0`}> に対して &m<\op<Ker> f = \op<Ker> kf> であることからすぐに分かる。
       以下、&m<\sp<A><\diamond>>> が和で閉じていることを示す。
     >
     \p<
