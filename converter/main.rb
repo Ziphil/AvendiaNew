@@ -280,7 +280,7 @@ class WholeAvendiaConverter
     case extension
     when "zml"
       @parser.update(File.read(path), path, language)
-      document = @parser.parse
+      document = @parser.run
       @converter.update(document, path, language)
       output = @converter.convert("change-log")
       time = Time.now - 21600
