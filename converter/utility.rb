@@ -3,36 +3,6 @@
 
 class Tag
 
-  attr_accessor :name
-  attr_accessor :content
-
-  def initialize(name = nil, clazz = nil, close = true)
-    @name = name
-    @attributes = (clazz) ? {"class" => clazz} : {}
-    @content = ""
-    @close = close
-  end
-
-  def [](key)
-    return @attributes[key]
-  end
-
-  def []=(key, value)
-    @attributes[key] = value
-  end
-
-  def class
-    return @attributes["class"]
-  end
-
-  def class=(clazz)
-    @attributes["class"] = clazz
-  end
-
-  def <<(content)
-    @content << content
-  end
-
   def at_head
     outer_self = self
     delegator = SimpleDelegator.new(outer_self)
@@ -40,53 +10,6 @@ class Tag
       outer_self.content.sub!(/(\A\s*)/m){$1 + content.to_str}
     end
     return delegator
-  end
-
-  def to_s
-    result = ""
-    if @name
-      result << "<"
-      result << @name
-      @attributes.each do |key, value|
-        result << " #{key}=\"#{value}\""
-      end
-      result << ">"
-      result << @content
-      if @close
-        result << "</"
-        result << @name
-        result << ">"
-      end
-    else
-      result << @content
-    end
-    return result
-  end
-
-  def to_str
-    return self.to_s
-  end
-
-  def self.build(name = nil, clazz = nil, close = true, &block)
-    tag = Tag.new(name, clazz, close)
-    block.call(tag)
-    return tag
-  end
-
-end
-
-
-class Element
-
-  def inner_text(compress = false)
-    text = XPath.match(self, ".//text()").map{|s| s.value}.join("")
-    if compress
-      text.gsub!(/\r/, "")
-      text.gsub!(/\n\s*/, " ")
-      text.gsub!(/\s+/, " ")
-      text.strip!
-    end
-    return text
   end
 
 end
@@ -167,7 +90,9 @@ class String
 end
 
 
-module Command;extend self
+module Command
+
+  module_function
 
   def exec(command)
     output, error_output, status = Open3.capture3(command)

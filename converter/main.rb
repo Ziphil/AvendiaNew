@@ -31,8 +31,7 @@ class AvendiaParser < ZoticaParser
   end
 
   def update(source, path, language)
-    @source = StringReader.new(source)
-    @version = nil
+    super(source)
     @path = path
     @language = language
   end
@@ -42,21 +41,17 @@ end
 
 class AvendiaConverter < ZenithalConverter
 
-  attr_reader :document
   attr_reader :path
   attr_reader :language
-  attr_reader :variables
 
   def initialize(document, path, language)
     super(document, :text)
     @path = path
     @language = language
-    @variables = {}
   end
 
   def update(document, path, language)
-    @document = document
-    @configs = {}
+    super(document)
     @path = path
     @language = language
   end
