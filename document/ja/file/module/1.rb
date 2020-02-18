@@ -1,7 +1,7 @@
 # coding: utf-8
 
 
-module ShaleiaUtilities;extend self
+module ShaleiaUtilities
 
   TENSES = {"現在時制" => "a", "過去時制" => "e", "未来時制" => "i", "通時時制" => "o"}
   INTRANSITIVE_ASPECTS = {"開始相, 自動詞" => "f", "経過相, 自動詞" => "c", "完了相, 自動詞" => "k", "継続相, 自動詞" => "t", "終了相, 自動詞" => "p", "無相, 自動詞" => "s"}
@@ -12,7 +12,10 @@ module ShaleiaUtilities;extend self
   NEGATION_PREFIXES = {"否定" => "du"}
   USED_CAPTION_ALPHABETS = {"U" => "語法", "N" => "備考", "M" => "語義"} 
   CATEGORIES = {"名" => "noun", "動" => "verb", "形" => "adjective", "副" => "adverb", "助" => "preposition", "接" => "conjunction", "間" => "interjection", "縮" => "contraction"}
+
   ASPECTS = INTRANSITIVE_ASPECTS.merge(TRANSITIVE_ASPECTS)
+
+  module_function
 
   def search(search, mode = 0, type = 0, version = 0)
     whole_data = ShaleiaUtilities.whole_data(version)
@@ -324,7 +327,9 @@ module ShaleiaUtilities;extend self
 end
 
 
-module RequestUtilities;extend self
+module RequestUtilities
+
+  module_function
 
   def requests
     requests = Array.new
@@ -359,7 +364,9 @@ module RequestUtilities;extend self
 end
 
 
-module ShaleiaTime;extend self
+module ShaleiaTime
+
+  module_function
 
   def old_time(year, month, day, hour, minute, second)
     time = DateTime.new(year, month, day, hour, minute, second)

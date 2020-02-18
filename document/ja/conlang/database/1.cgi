@@ -168,9 +168,11 @@ class ShaleiaDictionary
 end
 
 
-module Source;extend self
+module Source
 
   CAPTION_ALPHABETS = {"E" => "語源", "U" => "語法", "N" => "備考", "P" => "成句"}
+
+  module_function
 
   def suggested_word_html(suggested_names, option_string)
     html = ""

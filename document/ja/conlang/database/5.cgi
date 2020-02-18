@@ -139,7 +139,9 @@ class WholeSearcher
 end
 
 
-module Source;extend self
+module Source
+
+  module_function
 
   def header(search = "", type = 0)
     html = ""
@@ -164,7 +166,9 @@ module Source;extend self
 end
 
 
-module SearchUtilities;extend self
+module SearchUtilities
+
+  module_function
 
   def paths
     dirs = ["../.."]

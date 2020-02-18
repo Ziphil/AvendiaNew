@@ -1,9 +1,11 @@
 # coding: utf-8
 
 
-module WordConverter;extend self
+module WordConverter
 
   DEFAULT_LEFT_NAMES = ["s'", "al'", "ac'", "di'"]
+
+  module_function
 
   def convert(match, url, link = true, version = 0, left_names = nil, option_string = "")
     left_names ||= DEFAULT_LEFT_NAMES

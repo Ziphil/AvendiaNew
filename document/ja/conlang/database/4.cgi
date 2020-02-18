@@ -129,7 +129,9 @@ class DictionaryDownloader
 end
 
 
-module Source;extend self
+module Source
+
+  module_function
 
   def header
     html = ""
