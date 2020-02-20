@@ -5,11 +5,11 @@ THEOREM_TYPE_CLASSES = {"def" => "definition", "thm" => "theorem", "prp" => "pro
 REFERENCE_TYPE_CLASSES = {"eq" => :equation, "thm" => :theorem, "bib" => :bibliography}
 
 converter.define_singleton_method(:reset_variables) do
+  converter.variables = {}
+  converter.variables[:latest] = false
   converter.variables[:number] = Hash.new{|h, s| h[s] = 0}
   converter.variables[:numbers] = Hash.new{|h, s| h[s] = {}}
 end
-
-converter.reset_variables
 
 converter.define_singleton_method(:set_number) do |type, id|
   converter.variables[:number][type] += 1
@@ -40,13 +40,13 @@ converter.define_singleton_method(:get_number) do |type, id|
 end
 
 converter.define_singleton_method(:create_script_string) do
-  unless converter.variables[:script_created]
+  unless converter.configs[:script_created]
     command = "npm run -s uglifyjs"
     Open3.popen3(command) do |stdin, stdout, stderr, thread|
       stdin.puts(ZoticaBuilder.create_script_string)
       stdin.close
-      converter.variables[:script_string] = stdout.read
-      converter.variables[:script_created] = true
+      converter.configs[:script_string] = stdout.read
+      converter.configs[:script_created] = true
     end
   end
 end
@@ -60,7 +60,7 @@ converter.add(["use-math"], ["header"]) do |element|
     this << ZoticaBuilder.create_style_string(font_url)
   end
   this << Tag.build("script") do |this|
-    this << converter.variables[:script_string]
+    this << converter.configs[:script_string]
   end
   next this + "\n"
 end
