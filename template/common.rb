@@ -149,7 +149,7 @@ converter.add(["ver"], ["navigation"]) do |element|
   this << Tag.build("div") do |this|
     if element.text == "*" || element.text =~ LATEST_VERSION_REGEX
       this.class = "version"
-      converter.variables[:latest] = true
+      variables[:latest] = true
     else
       this.class = "version caution"
     end
@@ -717,7 +717,7 @@ converter.add(["x"], ["page"]) do |element|
   this = ""
   content = apply(element, "page").to_s
   url = converter.url_prefix + DICTIONARY_URL
-  link = !!converter.variables[:latest] && converter.path =~ /conlang\/.+\/\d+(\-\w{2})?\.zml/
+  link = !!variables[:latest] && converter.path =~ /conlang\/.+\/\d+(\-\w{2})?\.zml/
   this << WordConverter.convert(content, url, link)
   next this
 end
