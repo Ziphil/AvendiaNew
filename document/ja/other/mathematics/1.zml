@@ -171,7 +171,7 @@
     まず、log の中の分数の分子分母に &m<\sp<e><-t `/ 2>> をかければ、
     &mb<
       \array|align="rcl"|<
-        \c<I> \c<=> \c<\log> \frac<\sp<e><\frac<t><2>> - \sp<e><- \frac<t><2>>><\sp<e><\frac<t><2>> + \sp<e><- \frac<t><2>>> + \cosh> t + C> \br>
+        \c<I> \c<=> \c<\log> \frac<\sp<e><t `/ 2> - \sp<e><- t `/ 2>><\sp<e><t `/ 2> + \sp<e><- t `/ 2>> + \cosh> t + C> \br>
         \c> \c<=> \c<\log> \tanh> \frac<t><2> + \cosh> t + C>
       >
     >
