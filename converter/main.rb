@@ -325,7 +325,7 @@ class WholeAvendiaConverter
     output << path_array.join(" ")
     output << "\e[0m"
     output << "   "
-    output << "\e[34m"
+    output << "\e[30m"
     if durations[:upload] || durations[:convert]
       duration = durations[:upload] || durations[:convert]
       output << duration.after_time.strftime("[%Y/%m/%d %H:%M:%S]")
