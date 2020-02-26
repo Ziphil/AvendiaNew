@@ -248,7 +248,7 @@
     \p<
       対称モノイダル閉圏 &m<\scr<V>> を考える。
       &m<\scr<V>>-豊穣小圏 &m<\scr<C>> および &m<\scr<V>>-豊穣圏 &m<\scr<D>> に対し、&m<\scr<V>>-豊穣関手 &m<F: \sp<\scr<C>><\circ>> \otimes> \scr<C> \to> \scr<D>> をとる。
-      重み付き極限 &m<\sb|fun|<\lim>><\widetilde<\scr<C>>> F> を &m<F> の\em<エンド\fl<end>> といい、&m<\int|s|<\scr<C>><> F> で表す。
+      重み付き極限 &m<\sb|fun|<\lim>><\widetilde<\scr<C>>> F> を &m<F> の\em<エンド\fl<end>> といい、&m<\int|in|<\scr<C>><> F> で表す。
     >
   >
   \p<
@@ -258,7 +258,7 @@
     \p<
       対称モノイダル閉圏 &m<\scr<V>> を考える。
       &m<\scr<V>>-豊穣小圏 &m<\scr<C>> および &m<\scr<V>>-豊穣圏 &m<\scr<D>> に対し、&m<\scr<V>>-豊穣関手 &m<F: \scr<C> \otimes> \sp<\scr<C>><\circ>> \to> \scr<D>> をとる。
-      重み付き余極限 &m<\sb|fun|<\op<colim>><\widetilde<\scr<C>>> F> を &m<F> の\em<コエンド\fl<coend>> といい、&m<\int|s|<><\scr<C>> F> で表す。
+      重み付き余極限 &m<\sb|fun|<\op<colim>><\widetilde<\scr<C>>> F> を &m<F> の\em<コエンド\fl<coend>> といい、&m<\int|in|<><\scr<C>> F> で表す。
     >
   >
   \p<
