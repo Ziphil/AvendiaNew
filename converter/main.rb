@@ -299,19 +299,19 @@ class WholeAvendiaConverter
     output = ""
     output << " "
     if index
-      output << "%3d" % (index + 1)
+      output << "%4d" % [index + 1, 9999].min
     else
       output << "   "
     end
     output << "\e[0m : \e[36m"
     if durations[:convert]
-      output << "%4d" % durations[:convert]
+      output << "%4d" % [durations[:convert].elapsed, 9999].min
     else
       output << "   ?"
     end
     output << "\e[0m + \e[35m"
     if durations[:upload]
-      output << "%4d" % durations[:upload]
+      output << "%4d" % [durations[:upload].elapsed, 9999].min
     else
       output << "   ?"
     end
@@ -324,7 +324,13 @@ class WholeAvendiaConverter
     path_array.unshift(language)
     output << path_array.join(" ")
     output << "\e[0m"
-    output << " "
+    output << "   "
+    output << "\e[34m"
+    if durations[:upload] || durations[:convert]
+      duration = durations[:upload] || durations[:convert]
+      output << duration.after_time.strftime("[%Y/%m/%d %H:%M:%S]")
+    end
+    output << "\e[0m"
     puts(output)
   end
 
@@ -336,10 +342,10 @@ class WholeAvendiaConverter
   def print_whole(size, options = {})
     output = ""
     if size > 0
-      output << "-" * 38
+      output << "-" * 39
       unless options[:only_line]
         output << "\n"
-        output << " " * 26 + "#{"%5d" % size} files"
+        output << " " * 27 + "#{"%5d" % size} files"
       end
     end
     puts(output)
@@ -440,7 +446,9 @@ class WholeAvendiaConverter
   def self.measure(&block)
     before_time = Time.now
     block.call
-    duration = (Time.now - before_time) * 1000
+    after_time = Time.now
+    elapsed = (after_time - before_time) * 1000
+    duration = Struct.new(:elapsed, :before_time, :after_time).new(elapsed, before_time, after_time)
     return duration
   end
 
