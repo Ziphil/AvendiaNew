@@ -17,7 +17,7 @@ export function easeInOutQuart(x: number, t: number, b: number, c: number, d: nu
 export function prepare(): void {
   document.querySelectorAll("a[href^=\"#\"]").forEach((element) => {
     element.addEventListener("click", (event) => {
-      let target = <HTMLElement>event.target;
+      let target = event.target as HTMLElement;
       let href = target.getAttribute("href");
       let position = 0;
       let maxPosition = query(document).height()! - query(window).height()!;
@@ -40,5 +40,5 @@ export function prepare(): void {
   });
 }
 
-query.easing["easeInOutQuart"] = <any>easeInOutQuart;
+query.easing["easeInOutQuart"] = easeInOutQuart as any;
 window.onload = prepare;

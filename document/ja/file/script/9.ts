@@ -41,10 +41,12 @@ export class Executor {
       });
     });
     document.querySelector("#left")!.addEventListener("input", (event) => {
-      this.validateInput(<HTMLInputElement>event.target, "left");
+      let target = event.target as HTMLInputElement;
+      this.validateInput(target, "left");
     });
     document.querySelector("#right")!.addEventListener("input", (event) => {
-      this.validateInput(<HTMLInputElement>event.target, "right");
+      let target = event.target as HTMLInputElement;
+      this.validateInput(target, "right");
     });
     document.querySelector("#left")!.addEventListener("paste", (event) => {
       event.preventDefault();

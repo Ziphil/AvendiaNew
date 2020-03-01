@@ -28,8 +28,8 @@ export class Stone {
   public opposite(): MayNull<Stone> {
     let tilePosition = this.tilePosition;
     let edgePosition = this.edgePosition;
-    let nextTilePosition = <MayNull<TilePosition>>null;
-    let nextEdgePosition = <MayNull<EdgePosition>>null;
+    let nextTilePosition = null as MayNull<TilePosition>;
+    let nextEdgePosition = null as MayNull<EdgePosition>;
     if (edgePosition === 0 || edgePosition === 1) {
       if (tilePosition >= 6) {
         nextTilePosition = tilePosition - 6;
@@ -137,8 +137,8 @@ export class Board {
   // 石が盤外に出てしまう場合は null を返します。
   public movedStone(stone: Stone): MayNull<Stone> {
     let tiles = this.tiles;
-    let nextStone = <MayNull<Stone>>stone;
-    let tile = <MayUndefined<Tile>>undefined;
+    let nextStone = stone as MayNull<Stone>;
+    let tile = undefined as MayUndefined<Tile>;
     while (nextStone && (tile = tiles[nextStone.tilePosition])) {
       nextStone = tile.movedStone(nextStone).opposite();
     }
@@ -346,7 +346,7 @@ export class Record {
   }
 
   public toString(short: boolean): string {
-    let strings = <Array<string>>[];
+    let strings = [] as Array<string>;
     for (let entry of this.entries) {
       let entryString = entry.toString(short);
       strings.push(entryString);
@@ -396,7 +396,7 @@ export class Tsuro {
   public load(string: string): void {
     let unusedTiles = TILES.concat();
     let regexp = new RegExp(RECORD_REGEXP, "g");
-    let match = <MayNull<RegExpExecArray>>null;
+    let match = null as MayNull<RegExpExecArray>;
     while ((match = regexp.exec(string)) !== null) {
       if (match[2] !== undefined) {
         let row = ROW_SYMBOLS.indexOf(match[2]);
@@ -513,7 +513,7 @@ export class Tsuro {
   }
 
   public placeableTilePositions(rotation: Rotation): Array<TilePosition> {
-    let tilePositions = <Array<TilePosition>>[];
+    let tilePositions = [] as Array<TilePosition>;
     for (let tilePosition = 0 ; tilePosition < 36 ; tilePosition ++) {
       let result = this.check(rotation, tilePosition);
       if (result !== null) {

@@ -123,7 +123,7 @@ export class Executor {
   private prepareElements(): void {
     document.querySelectorAll("input[name=\"mode\"]").forEach((element) => {
       element.addEventListener("change", (event) => {
-        let target = <HTMLInputElement>event.target;
+        let target = event.target as HTMLInputElement;
         let mode = parseInt(target.value);
         let arrowDiv = document.querySelector<HTMLElement>("#arrow")!;
         if (mode === 0) {
@@ -164,7 +164,7 @@ export class Executor {
         if (element.id === "mark-null") {
           this.mark(null);
         } else {
-          let mark = <WordMark>parseInt(element.id.replace(/^mark-/, ""));
+          let mark = parseInt(element.id.replace(/^mark-/, "")) as WordMark;
           this.mark(mark);
         }
       });
@@ -313,10 +313,11 @@ export class Executor {
 
   private updateStatistics(): void {
     let manager = this.manager;
-    for (let mark of [0, 1]) {
+    let marks = [0, 1] as Array<WordMark>;
+    for (let mark of marks) {
       let numeratorDiv = document.querySelector("#statistics-" + mark + " .numerator")!;
       let denominatorDiv = document.querySelector("#statistics-" + mark + " .denominator")!;
-      numeratorDiv.textContent = manager.count(<WordMark>mark).toString();
+      numeratorDiv.textContent = manager.count(mark).toString();
       denominatorDiv.textContent = manager.countMarked().toString();
     }
   }
@@ -427,8 +428,8 @@ export class Executor {
       if (request.readyState === 4 && request.status === 200) {
         let html = request.responseText;
         let regexp = new RegExp(PRONUNCIATION_REGEXP, "g");
-        let pronunciations = <Array<string>>[];
-        let match = <RegExpExecArray | null>null;
+        let pronunciations = [] as Array<string>;
+        let match = null as RegExpExecArray | null;
         while ((match = regexp.exec(html)) !== null) {
           pronunciations.push(match[1]);
         }

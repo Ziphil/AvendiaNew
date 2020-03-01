@@ -266,7 +266,7 @@ export class ChartRenderer {
     this.particles = [];
     this.timerSet = false;
     this.context.canvas.addEventListener("mousemove", (event) => {
-      let target = <HTMLElement>event.target;
+      let target = event.target as HTMLElement;
       let rect = target.getBoundingClientRect();
       this.mouse.x = event.clientX - rect.left;
       this.mouse.y = event.clientY - rect.top;
@@ -552,7 +552,7 @@ export class Executor {
     let mode = (modeString !== undefined) ? parseInt(modeString) : null;
     let pairs = location.search.substring(1).split("&");
     for (let pair of pairs) {
-      let match = <RegExpMatchArray | null>null;
+      let match = null as RegExpMatchArray | null;
       if ((match = pair.match(/input=(.+)/)) !== null) {
         input = decodeURIComponent(match[1]);
       } else if ((match = pair.match(/number=(.+)/)) !== null) {
@@ -652,7 +652,7 @@ export class Executor {
   private execute(first: boolean): void {
     let input = document.querySelector<HTMLInputElement>("#input")!.value;
     let modeString = document.querySelector<HTMLInputElement>("input[name=\"mode\"]:checked")!.value;
-    let mode = <HistoryMode>parseInt(modeString);
+    let mode = parseInt(modeString) as HistoryMode;
     this.history.update(input, mode);
     this.renderer.update(this.history);
     this.factory.update(this.history);

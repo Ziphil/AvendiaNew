@@ -242,7 +242,7 @@ export class Executor {
   }
 
   private createCalendars(): Array<Calendar> {
-    let calendars = <Array<Calendar>>[];
+    let calendars = [] as Array<Calendar>;
     calendars.push(new OldHairian("old-hairian"));
     calendars.push(new NewHairian("new-hairian"));
     calendars.push(new Gregorian("gregorian"));
