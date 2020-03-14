@@ -35,7 +35,7 @@
         >
         \div|class="download"|<
           \a|class="button",href="https://www.dropbox.com/sh/g75rqn97sdlpp0b/AAArHPjlZp5aAmij73dVGRvza?dl=0",target="_blank"|<Download>
-          \a|class="button",href="https://aur.archlinux.org/packages/zpdic/",target="_blank"|<AUR Package>
+          \a|class="button",href="http://zpdic.ziphil.com/",target="_blank"|<Web Version>
         >
       >
     >
