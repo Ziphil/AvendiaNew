@@ -5,6 +5,7 @@
 
 body {
   @include text-size-adjust;
+  @include lnum-variant;
   font-family: $serif-font-family;
   background: $page-background;
   margin: 0px;
@@ -31,11 +32,12 @@ div.navigation {
   a.title {
     margin: 0px 0px 0px 50px;
     padding: 0px;
-    font-family: $special-sans-font-family;
+    font-family: $special-font-family;
     font-size: $navigation-title-font-size;
     color: $title-color;
     text-decoration: none;
     line-height: $navigation-height;
+    letter-spacing: -0.05em;
     display: block;
   }
 
@@ -101,18 +103,20 @@ div.head {
   }
 
   div.logo div.title {
-    font-family: $special-sans-font-family;
+    margin: -10px 0px 10px 0px;
+    font-family: $special-font-family;
     font-size: $title-font-size;
     color: $title-color;
     line-height: 1;
+    letter-spacing: -0.05em;
   }
 
   div.logo div.version {
-    font-family: $special-sans-font-family;
+    font-family: $special-font-family;
     font-size: $top-version-font-size;
     color: $title-color;
     line-height: 1;
-    letter-spacing: 0.05em;
+    letter-spacing: -0.02em;
   }
 
   //
@@ -124,8 +128,9 @@ div.head {
   }
 
   div.information div.copy {
-    font-family: $special-serif-font-family;
+    font-family: $special-font-family;
     font-size: $copy-font-size;
+    font-style: italic;
     color: $title-color;
     line-height: $copy-line-height;
     @include small-screen {
@@ -144,8 +149,9 @@ div.head {
     height: $button-height;
     margin: 4px 10px;
     padding: 0px;
-    font-family: $special-serif-font-family;
+    font-family: $special-font-family;
     font-size: $button-font-size;
+    font-style: italic;
     color: $hovered-button-background-color;
     text-decoration: none;
     text-align: center;
@@ -178,9 +184,10 @@ div.content {
   h1 {
     margin: $section-vertical-margin 0px;
     padding: 0px;
-    font-family: $special-serif-font-family;
+    font-family: $special-font-family;
     font-size: $section-font-size;
     font-weight: normal;
+    font-style: italic;
     color: $section-color;
     line-height: 1;
     text-align: center;
@@ -363,10 +370,10 @@ div.content {
     width: $version-width;
     height: $version-height;
     margin: 0px 15px 0px 0px;
-    font-family: $special-sans-font-family;
+    font-family: $special-font-family;
     font-size: $version-font-size;
     color: $version-color;
-    letter-spacing: 0.05em;
+    letter-spacing: -0.02em;
     line-height: $version-height;
     text-align: center;
     border-radius: $version-height;
