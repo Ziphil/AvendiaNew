@@ -20,7 +20,7 @@ div.navigation {
   margin: 0px;
   padding: 0px;
   background: $navigation-background-color;
-  border-bottom: 2px $navigation-background-color solid;
+  border-bottom: 1px $navigation-background-color solid;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -84,7 +84,7 @@ div.navigation {
 
 
 div.head {
-  margin: $navigation-height + 2px 0px $content-vertical-margin 0px;
+  margin: $navigation-height + 1px 0px $content-vertical-margin 0px;
   padding: 80px 0px;
   background: $head-background;
   display: flex;
