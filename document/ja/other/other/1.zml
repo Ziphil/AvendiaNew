@@ -14,18 +14,6 @@
   \table<
     \tr<\th<言語名>\th<製作者名>\th<Twitter>\th<ホームページ>>
     \tr<
-      \td<アルカ>
-      \td<seren arbazard>
-      \td<>
-      \td<\ae|href="http://conlinguistics.org/arka/"|<人工言語アルカ公式サイト>>
-    >
-    \tr<
-      \td<凪霧>
-      \td<鮎川早月>
-      \td<>
-      \td<\ae|href="http://maykloaayukawa.wix.com/nagili"|<人工言語 凪霧>>
-    >
-    \tr<
       \td<シャレイア語>
       \td<Ziphil Shaleiras>
       \td<\ae|href="https://twitter.com/Ziphil"|<@Ziphil>>
@@ -74,34 +62,10 @@
       \td<\ae|href="http://starlightensign.com/"|<Starlight Ensign>>
     >
     \tr<
-      \td<エミュンス語>
-      \td<Lunias Jivejils>
-      \td<\ae|href="https://twitter.com/Jivejils"|<@Jivejils>>
-      \td<\ae|href="https://www65.atwiki.jp/gionshantveed/pages/216.html"|<gionshantveed @ ウィキ>>
-    >
-    \tr<
-      \td<ダン=ラ=ハン語>
-      \td<えかとん>
-      \td<\ae|href="https://twitter.com/GSVNNS_E"|<@GSVNNS_E>>
-      \td<>
-    >
-    \tr<
-      \td<レミウェイ>
-      \td<Yuki>
-      \td<\ae|href="https://twitter.com/Yuki_jukjis"|<@Yuki_jukjis>>
-      \td<\ae|href="https://yuki-jukjis.github.io/remi-wei/"|<remiwei v4 文法書>>
-    >
-    \tr<
-      \td<カルコレーシュ語>
-      \td<らんべ>
-      \td<\ae|href="https://twitter.com/lambeluza"|<@lambeluza>>
-      \td<\ae|href="https://sites.google.com/view/calcoradish/"|<らんべの箱庭>>
-    >
-    \tr<
-      \td<柳霞>
-      \td<高木柳沙>
-      \td<>
-      \td<\ae|href="https://sites.google.com/site/rengongyanyuliuxia/"|<人工言語 柳霞>>
+      \td<Verhil>
+      \td<hedalu244>
+      \td<\ae|href="https://twitter.com/hedalu244"|<@hedalu244>>
+      \td<\ae|href="https://hedalu244.github.io/varhil/"|<remiwei v4 文法書>>
     >
     \tr<
       \td<セルナーダ語>
@@ -114,6 +78,30 @@
       \td<蒼山菘>
       \td<\ae|href="https://twitter.com/nanakusa_003"|<@nanakusa_003>>
       \td<>
+    >
+    \tr<
+      \td<エミュンス語>
+      \td<Lunias Jivejils>
+      \td<\ae|href="https://twitter.com/Jivejils"|<@Jivejils>>
+      \td<\ae|href="https://www65.atwiki.jp/gionshantveed/pages/216.html"|<gionshantveed @ ウィキ>>
+    >
+    \tr<
+      \td<ダン=ラ=ハン語>
+      \td<えかとん>
+      \td<\ae|href="https://twitter.com/GSVNNS_E"|<@GSVNNS_E>>
+      \td<>
+    >
+    \tr<
+      \td<カルコレーシュ語>
+      \td<らんべ>
+      \td<\ae|href="https://twitter.com/lambeluza"|<@lambeluza>>
+      \td<\ae|href="https://sites.google.com/view/calcoradish/"|<らんべの箱庭>>
+    >
+    \tr<
+      \td<柳霞>
+      \td<高木柳沙>
+      \td<>
+      \td<\ae|href="https://sites.google.com/site/rengongyanyuliuxia/"|<人工言語 柳霞>>
     >
     \tr<
       \td<レイア語>
@@ -228,6 +216,18 @@
       \td<>
       \td<>
       \td<\ae|href="https://sites.google.com/site/chry7511/"|<Chry>>
+    >
+    \tr<
+      \td<アルカ>
+      \td<seren arbazard>
+      \td<>
+      \td<\ae|href="http://conlinguistics.org/arka/"|<人工言語アルカ公式サイト>>
+    >
+    \tr<
+      \td<凪霧>
+      \td<鮎川早月>
+      \td<>
+      \td<\ae|href="http://maykloaayukawa.wix.com/nagili"|<人工言語 凪霧>>
     >
     \tr<
       \td<シヴァン>
