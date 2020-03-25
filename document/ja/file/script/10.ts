@@ -602,7 +602,7 @@ export class Executor {
         return;
       }
     }
-    let string = <string>query("#history").val();
+    let string = query("#history").val() as string;
     try {
       this.tsuro = new Tsuro(string);
     } catch {
