@@ -6,32 +6,26 @@ require 'cgi'
 require 'date'
 require_relative '../../file/module/1'
 require_relative '../../file/module/2'
+require_relative '../../file/module/3'
 
 Encoding.default_external = "UTF-8"
 $stdout.sync = true
 
 
-class DictionaryDownloader
-
-  def initialize(cgi)
-    @cgi = cgi
-  end
+class DictionaryDownloader < CustomBase
 
   def prepare
     @mode = @cgi["mode"]
     @type = @cgi["type"]
   end
 
-  def run
-    prepare
+  def switch
     case @mode
     when "download"
       download
     else
       default
     end
-  rescue => exception
-    error(exception.message + "\n  " + exception.backtrace.join("\n  "))
   end
 
   def default
@@ -84,9 +78,7 @@ class DictionaryDownloader
     html << "<input type=\"hidden\" name=\"mode\" value=\"download\"></input>\n"
     html << "</form>\n"
     header = Source.header
-    @cgi.out do
-      next Source.whole(header, html)
-    end
+    @cgi.out{Source.whole(header, html)}
   end
 
   def download
@@ -101,29 +93,7 @@ class DictionaryDownloader
       header = {"type" => "application/oct-stream", "Content-Disposition" => "download;filename=shaleia.xdc"}
       file = File.new("../../file/dictionary/data/shaleia/1.xdc")
     end
-    @cgi.out(header) do
-      next file.read
-    end
-  end
-
-  def error(message)
-    html = ""
-    html << "<h1>エラー</h1>\n"
-    html << "<p>\n"
-    html << "エラーが発生しました。\n"
-    html << "</p>\n"
-    html << "<div class=\"code-wrapper\"><div class=\"code-inner-wrapper\"><table class=\"code\">\n"
-    message.gsub(/^(\s*)(.+)\.(rb|cgi):/){"#{$1}****.#{$3}:"}.each_line do |line|
-      html << "<tr><td>"
-      html << line.rstrip.html_escape
-      html << "</td></tr>\b"
-    end
-    html << "</table></div></div>\n"
-    html.gsub!("\b", "")
-    header = Source.header
-    @cgi.out do
-      next Source.whole(header, html)
-    end
+    @cgi.out(header){file.read}
   end
 
 end
@@ -147,4 +117,4 @@ module Source
 end
 
 
-DictionaryDownloader.new(CGI.new).run
+DictionaryDownloader.new(nil, CGI.new, Source).run

@@ -12,16 +12,15 @@ module ShaleiaUtilities
   NEGATION_PREFIXES = {"否定" => "du"}
   USED_CAPTION_ALPHABETS = {"U" => "語法", "N" => "備考", "M" => "語義"} 
   CATEGORIES = {"名" => "noun", "動" => "verb", "形" => "adjective", "副" => "adverb", "助" => "preposition", "接" => "conjunction", "間" => "interjection", "縮" => "contraction"}
-
-  ASPECTS = INTRANSITIVE_ASPECTS.merge(TRANSITIVE_ASPECTS)
+  ASPECTS = {}.merge(INTRANSITIVE_ASPECTS).merge(TRANSITIVE_ASPECTS)
 
   module_function
 
   def search(search, mode = 0, type = 0, version = 0)
-    whole_data = ShaleiaUtilities.whole_data(version)
-    names = ShaleiaUtilities.names(version)
-    equivalents = ShaleiaUtilities.equivalents(version)
-    changes = ShaleiaUtilities.changes(version)
+    whole_data = ShaleiaUtilities.fetch_whole_data(version)
+    names = ShaleiaUtilities.fetch_names(version)
+    equivalents = ShaleiaUtilities.fetch_equivalents(version)
+    changes = ShaleiaUtilities.fetch_changes(version)
     hit_names, suggested_names = [], []
     if mode == 0 || mode == 3
       names.each do |name|
@@ -125,7 +124,7 @@ module ShaleiaUtilities
     return [hit_names, suggested_names]
   end
 
-  def names(version = 0)
+  def fetch_names(version = 0)
     names = Array.new
     if File.exist?("../../file/dictionary/meta/name/#{version + 1}.txt")
       File.open("../../file/dictionary/meta/name/#{version + 1}.txt") do |file|
@@ -139,7 +138,12 @@ module ShaleiaUtilities
     return names
   end
 
-  def equivalents(version = 0)
+  def fetch_excluded_names
+    names = File.read("../../file/dictionary/meta/other/exclusion.txt").split(/\s*\n\s*/)
+    return names
+  end
+
+  def fetch_equivalents(version = 0)
     equivalents = Hash.new
     if File.exist?("../../file/dictionary/meta/equivalent/#{version + 1}.txt")
       File.open("../../file/dictionary/meta/equivalent/#{version + 1}.txt") do |file|
@@ -153,7 +157,7 @@ module ShaleiaUtilities
     return equivalents
   end
 
-  def changes(version = 0)
+  def fetch_changes(version = 0)
     changes = Hash.new{|h, s| h[s] = []}
     if File.exist?("../../file/dictionary/meta/change/#{version + 1}.txt")
       File.open("../../file/dictionary/meta/change/#{version + 1}.txt") do |file|
@@ -167,8 +171,8 @@ module ShaleiaUtilities
     return changes
   end
 
-  def logs
-    logs = []
+  def fetch_logs
+    logs = Array.new
     if File.exist?("../../file/dictionary/log/1.txt")
       File.open("../../file/dictionary/log/1.txt") do |file|
         file.each_line do |line|
@@ -179,7 +183,7 @@ module ShaleiaUtilities
     return logs
   end
 
-  def histories(version = 0)
+  def fetch_histories(version = 0)
     histories = Hash.new{|h, s| h[s] = 0}
     if File.exist?("../../file/dictionary/meta/history/#{version + 1}.txt")
       File.open("../../file/dictionary/meta/history/#{version + 1}.txt") do |file|
@@ -193,7 +197,7 @@ module ShaleiaUtilities
     return histories
   end
 
-  def whole_data(version = 0)
+  def fetch_whole_data(version = 0)
     whole_data = Hash.new{|h, s| h[s] = ""}
     current_name = nil
     if File.exist?("../../file/dictionary/data/shaleia/#{version + 1}.xdc")
@@ -210,8 +214,8 @@ module ShaleiaUtilities
     return whole_data
   end
 
-  def whole_data_without_meta(version = 0)
-    whole_data = ShaleiaUtilities.whole_data(version)
+  def fetch_whole_data_without_meta(version = 0)
+    whole_data = ShaleiaUtilities.fetch_whole_data(version)
     whole_data.reject!{|s, t| s.start_with?("META") || s.start_with?("$")}
     return whole_data
   end
@@ -238,7 +242,7 @@ module ShaleiaUtilities
   end
 
   def save_history(version = 0)
-    size = ShaleiaUtilities.whole_data_without_meta(version).size
+    size = ShaleiaUtilities.fetch_whole_data_without_meta(version).size
     hairia = ShaleiaTime.now_hairia
     File.open("../../file/dictionary/meta/history/#{version + 1}.txt", "a") do |file|
       file.puts(hairia.to_s + "; " + size.to_s)
@@ -247,7 +251,7 @@ module ShaleiaUtilities
   end
 
   def update(version = 0)
-    whole_data = ShaleiaUtilities.whole_data(version)
+    whole_data = ShaleiaUtilities.fetch_whole_data(version)
     whole_names = Array.new
     whole_equivalents = Hash.new{|h, s| h[s] = []}
     whole_changes = Hash.new{|h, s| h[s] = []}
@@ -331,7 +335,7 @@ module RequestUtilities
 
   module_function
 
-  def requests
+  def fetch
     requests = Array.new
     if File.exist?("../../file/dictionary/meta/request/1.txt")
       File.open("../../file/dictionary/meta/request/1.txt") do |file|
@@ -352,7 +356,7 @@ module RequestUtilities
   end
 
   def delete_at(index)
-    requests = RequestUtilities.requests
+    requests = RequestUtilities.fetch
     requests.delete_at(index)
     File.open("../../file/dictionary/meta/request/1.txt", "w") do |file|
       requests.each do |request|
@@ -399,7 +403,8 @@ module ShaleiaTime
 
   def hairia(year, month, day)
     difference = DateTime.new(year, month, day, 0, 0, 0) - DateTime.new(2012, 1, 23, 0, 0, 0)
-    return (difference + 1).to_i
+    hairia = (difference + 1).to_i
+    return hairia
   end
 
   def now_hairia

@@ -6,18 +6,15 @@ require 'cgi'
 require 'open-uri'
 require_relative '../../file/module/1'
 require_relative '../../file/module/2'
+require_relative '../../file/module/3'
 
 Encoding.default_external = "UTF-8"
 $stdout.sync = true
 
 
-class ShaleiaManager
+class ShaleiaManager < CustomBase
 
   PASSWORD = File.read("../../file/dictionary/meta/other/password.txt")
-
-  def initialize(cgi)
-    @cgi = cgi
-  end
 
   def prepare
     if @cgi.multipart?
@@ -38,8 +35,7 @@ class ShaleiaManager
     end
   end
 
-  def run
-    prepare
+  def switch
     case @command
     when "update"
       update
@@ -52,14 +48,12 @@ class ShaleiaManager
     else
       default
     end
-  rescue => exception
-    error(exception.message + "\n  " + exception.backtrace.join("\n  "))
   end
 
   def default
-    word_size = ShaleiaUtilities.names.size
-    requests = RequestUtilities.requests
-    logs = ShaleiaUtilities.logs
+    word_size = ShaleiaUtilities.fetch_names.size
+    logs = ShaleiaUtilities.fetch_logs
+    requests = RequestUtilities.fetch
     html = ""
     html << "<h1>辞書内部データ更新</h1>"
     html << "<form action=\"2.cgi\">"
@@ -101,57 +95,31 @@ class ShaleiaManager
     html << "<input type=\"hidden\" name=\"password\" value=\"#{@password}\"></input>"
     html << "</form>"
     header = Source.header
-    @cgi.out do 
-      next Source.whole(header, html)
-    end
+    @cgi.out{Source.whole(header, html)}
   end
 
   def update
     ShaleiaUtilities.update(@version)
-    @cgi.out({"status" => "REDIRECT", "location" => "2.cgi?password=#{@password}"}) do 
-      next ""
-    end
+    option = {"status" => "REDIRECT", "location" => "2.cgi?password=#{@password}"}
+    @cgi.out(option){""}
   end
 
   def delete_request
     RequestUtilities.delete_at(@index)
-    @cgi.out({"status" => "REDIRECT", "location" => "2.cgi?password=#{@password}"}) do 
-      next ""
-    end
+    option = {"status" => "REDIRECT", "location" => "2.cgi?password=#{@password}"}
+    @cgi.out(option){""}
   end
 
   def delete_logs
     ShaleiaUtilities.delete_logs
-    @cgi.out({"status" => "REDIRECT", "location" => "2.cgi?password=#{@password}"}) do 
-      next ""
-    end
+    option = {"status" => "REDIRECT", "location" => "2.cgi?password=#{@password}"}
+    @cgi.out(option){""}
   end
 
   def save_history
     ShaleiaUtilities.save_history(0)
-    @cgi.out({"status" => "REDIRECT", "location" => "2.cgi?password=#{@password}"}) do 
-      next ""
-    end
-  end
-
-  def error(message)
-    html = ""
-    html << "<h1>エラー</h1>\n"
-    html << "<p>\n"
-    html << "エラーが発生しました。\n"
-    html << "</p>\n"
-    html << "<div class=\"code-wrapper\"><div class=\"code-inner-wrapper\"><table class=\"code\">\n"
-    message.gsub(/^(\s*)(.+)\.(rb|cgi):/){"#{$1}****.#{$3}:"}.each_line do |line|
-      html << "<tr><td>"
-      html << line.rstrip.html_escape
-      html << "</td></tr>\b"
-    end
-    html << "</table></div></div>\n"
-    html.gsub!("\b", "")
-    header = Source.header
-    @cgi.out do
-      next Source.whole(header, html)
-    end
+    option = {"status" => "REDIRECT", "location" => "2.cgi?password=#{@password}"}
+    @cgi.out(option){""}
   end
 
 end
@@ -175,4 +143,4 @@ module Source
 end
 
 
-ShaleiaManager.new(CGI.new).run
+ShaleiaManager.new(nil, CGI.new, Source).run

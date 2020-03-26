@@ -5,16 +5,13 @@
 require 'cgi'
 require_relative '../../file/module/1'
 require_relative '../../file/module/2'
+require_relative '../../file/module/3'
 
 Encoding.default_external = "UTF-8"
 $stdout.sync = true
 
 
-class RequestManager
-
-  def initialize(cgi)
-    @cgi = cgi
-  end
+class RequestManager < CustomBase
 
   def prepare
     @mode = @cgi["mode"]
@@ -22,8 +19,7 @@ class RequestManager
     @size = @cgi["size"].to_i
   end
 
-  def run
-    prepare
+  def switch
     case @mode
     when "request", "依頼"
       request
@@ -32,15 +28,18 @@ class RequestManager
     else
       default
     end
-  rescue => exception
-    error(exception.message + "\n  " + exception.backtrace.join("\n  "))
   end
 
   def default
     header = Source.header(@content)
-    @cgi.out do 
-      next Source.whole(header)
-    end
+    @cgi.out{Source.whole(header)}
+  end
+
+  def request
+    requests = @content.split("\n").map{|s| s.strip}.reject{|s| s.empty?}
+    option = {"status" => "REDIRECT", "location" => "6.cgi?mode=finish&size=#{requests.size}"}
+    RequestUtilities.add(requests)
+    @cgi.out(option){""}
   end
 
   def finish
@@ -51,37 +50,7 @@ class RequestManager
     html << "ご協力ありがとうございます。\n"
     html << "</p>\n"
     header = Source.header
-    @cgi.out do
-      next Source.whole(header, html)
-    end
-  end
-
-  def request
-    requests = @content.split("\n").map{|s| s.strip}.reject{|s| s.empty?}
-    RequestUtilities.add(requests)
-    @cgi.out({"status" => "REDIRECT", "location" => "6.cgi?mode=finish&size=#{requests.size}"}) do 
-      next ""
-    end
-  end
-
-  def error(message)
-    html = ""
-    html << "<h1>エラー</h1>\n"
-    html << "<p>\n"
-    html << "エラーが発生しました。\n"
-    html << "</p>\n"
-    html << "<div class=\"code-wrapper\"><div class=\"code-inner-wrapper\"><table class=\"code\">\n"
-    message.gsub(/^(\s*)(.+)\.(rb|cgi):/){"#{$1}****.#{$3}:"}.each_line do |line|
-      html << "<tr><td>"
-      html << line.rstrip.html_escape
-      html << "</td></tr>\b"
-    end
-    html << "</table></div></div>\n"
-    html.gsub!("\b", "")
-    header = Source.header
-    @cgi.out do
-      next Source.whole(header, html)
-    end
+    @cgi.out{Source.whole(header, html)}
   end
 
 end
@@ -114,4 +83,4 @@ module Source
 end
 
 
-RequestManager.new(CGI.new).run
+RequestManager.new(nil, CGI.new, Source).run

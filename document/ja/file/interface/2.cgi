@@ -4,16 +4,13 @@
 
 require 'cgi'
 require 'date'
+require_relative '../../file/module/3'
 
 Encoding.default_external = "UTF-8"
 $stdout.sync = true
 
 
-class WeblioSaver
-
-  def initialize(cgi)
-    @cgi = cgi
-  end
+class WeblioSaver < CustomBase
 
   def prepare
     if @cgi.multipart?
@@ -27,8 +24,7 @@ class WeblioSaver
     end
   end
 
-  def run
-    prepare
+  def switch
     case @command
     when "get"
       get
@@ -37,8 +33,6 @@ class WeblioSaver
     when "save"
       save
     end
-  rescue => exception
-    error(exception.message.encode("utf-8") + "\n  " + exception.backtrace.join("\n  ").encode("utf-8"))
   end
 
   def get
@@ -46,9 +40,7 @@ class WeblioSaver
     if File.exist?("../../file/weblio/#{@number}.txt")
       output = File.read("../../file/weblio/#{@number}.txt")
     end
-    @cgi.out("text/plain") do
-      next output
-    end
+    @cgi.out("text/plain"){output}
   end
 
   def get_number
@@ -56,31 +48,16 @@ class WeblioSaver
     if File.exist?("../../file/weblio/meta.txt")
       number = File.read("../../file/weblio/meta.txt").to_i + 1
     end
-    @cgi.out("text/plain") do
-      next number.to_s
-    end
+    @cgi.out("text/plain"){number.to_s}
   end
 
   def save
     File.write("../../file/weblio/#{@number}.txt", @content)
     File.write("../../file/weblio/meta.txt", @number)
-    @cgi.out("text/plain") do
-      next "Done"
-    end
-  end
-
-  def error(message)
-    output = ""
-    message.gsub(/^(\s*)(.+)\.(rb|cgi):/){"#{$1}****.#{$3}:"}.each_line do |line|
-      output << line.rstrip
-      output << "\n"
-    end
-    @cgi.out("text/plain") do
-      next output
-    end
+    @cgi.out("text/plain"){"Done"}
   end
 
 end
 
 
-WeblioSaver.new(CGI.new).run
+WeblioSaver.new(nil, CGI.new).run

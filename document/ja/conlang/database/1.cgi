@@ -7,18 +7,13 @@ require 'uri'
 require 'date'
 require_relative '../../file/module/1'
 require_relative '../../file/module/2'
+require_relative '../../file/module/3'
 
 Encoding.default_external = "UTF-8"
 $stdout.sync = true
 
 
-class ShaleiaDictionary
-
-  EXCLUDED_NAMES = File.read("../../file/dictionary/meta/other/exclusion.txt").split(/\s*\n\s*/)
-
-  def initialize(cgi)
-    @cgi = cgi
-  end
+class ShaleiaDictionary < CustomBase
 
   def prepare
     @command = @cgi["mode"]
@@ -32,8 +27,7 @@ class ShaleiaDictionary
     @page = @cgi["page"].to_i
   end
 
-  def run
-    prepare
+  def switch
     case @command
     when "search", "検索"
       search
@@ -42,22 +36,19 @@ class ShaleiaDictionary
     else
       default
     end
-  rescue => exception
-    error(exception.message.encode("utf-8") + "\n  " + exception.backtrace.join("\n  ").encode("utf-8"))
   end
 
   def default
     header = Source.header
-    @cgi.out do
-      next Source.whole(header)
-    end
+    @cgi.out{Source.whole(header)}
   end
 
   def search
-    whole_data = ShaleiaUtilities.whole_data(@version)
+    whole_data = ShaleiaUtilities.fetch_whole_data(@version)
+    excluded_names = ShaleiaUtilities.fetch_excluded_names
     hit_names, suggested_names = ShaleiaUtilities.search(@search, @mode, @type, @version)
-    hit_names.reject!{|s| EXCLUDED_NAMES.include?(s)}
-    suggested_names.reject!{|_, s| EXCLUDED_NAMES.include?(s)}
+    hit_names.reject!{|s| excluded_names.include?(s)}
+    suggested_names.reject!{|_, s| excluded_names.include?(s)}
     hit_names.shuffle! if @random == 1
     size = hit_names.size
     option_string = "&version=#{@version}" + @option.map{|s| "&option=#{s}"}.join + @conversion.map{|s| "&conversion=#{s}"}.join
@@ -89,9 +80,7 @@ class ShaleiaDictionary
     end
     html << "</div>\n\n"
     header = Source.header(@search, @mode, @type, @version, @option, @conversion, @random)
-    @cgi.out do
-      next Source.whole(header, html)
-    end
+    @cgi.out{Source.whole(header, html)}
   end
 
   def fetch
@@ -99,17 +88,19 @@ class ShaleiaDictionary
     begin
       case @mode
       when 0
-        whole_data = ShaleiaUtilities.whole_data(0)
+        whole_data = ShaleiaUtilities.fetch_whole_data(0)
+        excluded_names = ShaleiaUtilities.fetch_excluded_names
         candidates = whole_data.reject do |name, data|
-          next EXCLUDED_NAMES.include?(name) || name.start_with?("META") || name.start_with?("$")
+          next excluded_names.include?(name) || name.start_with?("META") || name.start_with?("$")
         end
         name, data = candidates.to_a.sample
         output << Source.word_text(name, data)
       when 2
-        whole_data = ShaleiaUtilities.whole_data(0)
+        whole_data = ShaleiaUtilities.fetch_whole_data(0)
+        excluded_names = ShaleiaUtilities.fetch_excluded_names
         candidates = whole_data.map do |name, data|
           result = []
-          unless EXCLUDED_NAMES.include?(name)
+          unless excluded_names.include?(name)
             data.scan(/^S>\s*(.+)\s*→\s*(.+)/) do |sentence, translation|
               result << [name, sentence, translation]
             end
@@ -120,11 +111,11 @@ class ShaleiaDictionary
         name, sentence, translation = candidates.sample
         output << Source.example_text(name, sentence, translation)
       when 1
-        whole_data = ShaleiaUtilities.whole_data_without_meta(0)
+        whole_data = ShaleiaUtilities.fetch_whole_data_without_meta(0)
         output << whole_data.size.to_s
       when 3
-        whole_data = ShaleiaUtilities.whole_data_without_meta(0)
-        histories = ShaleiaUtilities.histories(0)
+        whole_data = ShaleiaUtilities.fetch_whole_data_without_meta(0)
+        histories = ShaleiaUtilities.fetch_histories(0)
         hairia = ShaleiaTime.now_hairia - @type
         history = histories.fetch(hairia, nil)
         if history
@@ -140,29 +131,7 @@ class ShaleiaDictionary
     rescue => exception
       output = ""
     end
-    @cgi.out("text/plain") do
-      next output
-    end
-  end
-
-  def error(message)
-    html = ""
-    html << "<h1>エラー</h1>\n"
-    html << "<p>\n"
-    html << "エラーが発生しました。\n"
-    html << "</p>\n"
-    html << "<div class=\"code-wrapper\"><div class=\"code-inner-wrapper\"><table class=\"code\">\n"
-    message.gsub(/^(\s*)(.+)\.(rb|cgi):/){"#{$1}****.#{$3}:"}.each_line do |line|
-      html << "<tr><td>"
-      html << line.rstrip.html_escape
-      html << "</td></tr>\b"
-    end
-    html << "</table></div></div>\n"
-    html.gsub!("\b", "")
-    header = Source.header
-    @cgi.out do
-      next Source.whole(header, html)
-    end
+    @cgi.out("text/plain"){output}
   end
 
 end
@@ -416,4 +385,4 @@ module Source
 end
 
 
-ShaleiaDictionary.new(CGI.new).run
+ShaleiaDictionary.new(nil, CGI.new, Source).run

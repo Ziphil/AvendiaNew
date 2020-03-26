@@ -4,17 +4,12 @@
 
 require 'cgi'
 require_relative '../../file/module/1'
-require_relative '../../file/module/2'
 
 Encoding.default_external = "UTF-8"
 $stdout.sync = true
 
 
-class WholeSearcher
-
-  def initialize(cgi)
-    @cgi = cgi
-  end
+class WholeSearcher < CustomBase
 
   def prepare
     @mode = @cgi["mode"]
@@ -23,23 +18,18 @@ class WholeSearcher
     @page = @cgi["page"].to_i
   end
 
-  def run
-    prepare
+  def switch
     case @mode
     when "search", "検索"
       search
     else
       default
     end
-  rescue => exception
-    error(exception.message + "\n  " + exception.backtrace.join("\n  "))
   end
 
   def default
     header = Source.header
-    @cgi.out do
-      next Source.whole(header)
-    end
+    @cgi.out{Source.whole(header)}
   end
 
   def search
@@ -111,29 +101,7 @@ class WholeSearcher
     end
     html << "</div>\n\n"
     header = Source.header(@search, @type)
-    @cgi.out do
-      next Source.whole(header, html)
-    end
-  end
-
-  def error(message)
-    html = ""
-    html << "<h1>エラー</h1>\n"
-    html << "<p>\n"
-    html << "エラーが発生しました。\n"
-    html << "</p>\n"
-    html << "<div class=\"code-wrapper\"><div class=\"code-inner-wrapper\"><table class=\"code\">\n"
-    message.gsub(/^(\s*)(.+)\.(rb|cgi):/){"#{$1}****.#{$3}:"}.each_line do |line|
-      html << "<tr><td>"
-      html << line.rstrip.html_escape
-      html << "</td></tr>\b"
-    end
-    html << "</table></div></div>\n"
-    html.gsub!("\b", "")
-    header = Source.header
-    @cgi.out do
-      next Source.whole(header, html)
-    end
+    @cgi.out{Source.whole(header, html)}
   end
 
 end
@@ -190,4 +158,4 @@ module SearchUtilities
 end
 
 
-WholeSearcher.new(CGI.new).run
+WholeSearcher.new(nil, CGI.new, Source).run
