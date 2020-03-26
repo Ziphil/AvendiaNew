@@ -41,7 +41,7 @@ class DictionaryDownloader < CustomBase
     html << "全てのデータを含む完全版です。\n"
     html << "</p>\n"
     html << "<form>\n"
-    html << "<input type=\"submit\" value=\"ダウンロード\"></input>　(#{ShaleiaUtilities.names.size} 語)\n"
+    html << "<input type=\"submit\" value=\"ダウンロード\"></input>　(#{ShaleiaUtilities.fetch_names.size} 語)\n"
     html << "<input type=\"hidden\" name=\"type\" value=\"zpdic\"></input>\n"
     html << "<input type=\"hidden\" name=\"mode\" value=\"download\"></input>\n"
     html << "</form>\n"
