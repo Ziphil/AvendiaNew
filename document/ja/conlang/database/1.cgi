@@ -170,12 +170,12 @@ module Source
     begin_equivalent, begin_example, begin_synonym = false, false, false
     old_name = name.clone
     name = name.gsub(/\~/, "")
-    if name.pronunciation == "" || version != 0
+    if ShaleiaStringUtilities.pronunciation(name) == "" || version != 0
       html << "<div class=\"head\">\n"
       html << "<span class=\"head-name\"><span class=\"sans\">#{name}</sans></span>\n"
     else
       html << "<div class=\"head\">\n"
-      html << "<span class=\"head-name\"><span class=\"sans\">#{name}</span></span><span class=\"pronunciation\">/#{name.pronunciation}/</span>\n"
+      html << "<span class=\"head-name\"><span class=\"sans\">#{name}</span></span><span class=\"pronunciation\">/#{ShaleiaStringUtilities.pronunciation(name)}/</span>\n"
     end
     data.each_line do |line|
       line.gsub!(/^\=:(.*)$/, "")
@@ -215,7 +215,7 @@ module Source
         html << "語義:"
         html << "</div>"
         html << "<div class=\"content\">"
-        html << match[1].convert_punctuation.chomp
+        html << ShaleiaStringUtilities.convert_punctuation(match[1]).chomp
         html << "</div></div>\n"
       end
       if option.include?(1) && match = line.match(/^([^MSE])>\s*(.+)/)
@@ -228,7 +228,7 @@ module Source
           html << CAPTION_ALPHABETS[match[1]] + ":"
           html << "</div>"
           html << "<div class=\"content\">"
-          html << match[2].convert_punctuation.chomp
+          html << ShaleiaStringUtilities.convert_punctuation(match[2]).chomp
           html << "</div></div>\n"
         end
       end
@@ -241,7 +241,7 @@ module Source
         html << CAPTION_ALPHABETS["E"] + ":"
         html << "</div>"
         html << "<div class=\"content\">"
-        html << match[1].convert_punctuation.chomp
+        html << ShaleiaStringUtilities.convert_punctuation(match[1]).chomp
         html << "</div></div>\n"
       end
       if option.include?(2) && match = line.match(/^S>\s*(.+)\s*→\s*(.+)/)
@@ -253,7 +253,7 @@ module Source
           html << "<ul class=\"conlang\">"
           begin_example = true
         end
-        html << "<li>#{match[1]}<ul><li>#{match[2].convert_punctuation}</li></ul></li>"
+        html << "<li>#{match[1]}<ul><li>#{ShaleiaStringUtilities.convert_punctuation(match[2])}</li></ul></li>"
       end
       if option.include?(3) && match = line.match(/^\-\s*(?:〈(.+)〉)?\s*(.+)/)
         if begin_equivalent
@@ -292,7 +292,7 @@ module Source
   def word_text(name, data)
     text = ""
     name = name.gsub(/\~/, "")
-    text << "#{name} /#{name.pronunciation}/ "
+    text << "#{name} /#{ShaleiaStringUtilities.pronunciation(name)}/ "
     equivalents = []
     meaning = nil
     data.each_line do |line|

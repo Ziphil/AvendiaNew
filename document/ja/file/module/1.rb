@@ -120,7 +120,7 @@ module ShaleiaUtilities
     end
     hit_names.uniq!
     suggested_names.uniq!
-    hit_names = hit_names.sort_by{|s| s.convert_dictionary(version)}
+    hit_names = hit_names.sort_by{|s| ShaleiaStringUtilities.convert_dictionary(s, version)}
     return [hit_names, suggested_names]
   end
 
@@ -416,7 +416,7 @@ module ShaleiaTime
 end
 
 
-class String
+module ShaleiaStringUtilities
 
   ALPHABET_ORDERS = {
     0 => "sztdkgfvpbcqxjrlmnhyaâáàeêéèiîoôòuûù",
@@ -426,8 +426,10 @@ class String
     4 => "sztdkgfvpbxjrlmnhy'aeiou"
   }
 
-  def convert_punctuation
-    string = self.clone
+  module_function
+
+  def convert_punctuation(string)
+    string = string.clone
     string.gsub!("、", "、 ")
     string.gsub!("。", "。 ")
     string.gsub!("「", " 「")
@@ -448,8 +450,8 @@ class String
     return string
   end
 
-  def convert_dictionary(version = 0)
-    string = self.clone.split(//)
+  def convert_dictionary(string, version = 0)
+    string = string.clone.split(//)
     data = ALPHABET_ORDERS[version]
     string.map!{|s| (data.include?(s)) ? data.index(s) + 1 : -1}
     if string[0] == -1
@@ -459,111 +461,79 @@ class String
     return string
   end
 
-  def to_new_orthography
-    string = self.clone
-    string.gsub!("aa", "â")
-    string.gsub!("ee", "ê")
-    string.gsub!("ii", "î")
-    string.gsub!("oo", "ô")
-    string.gsub!("uu", "û")
-    string.gsub!("ai", "á")
-    string.gsub!("ei", "é")
-    string.gsub!("ie", "í")
-    string.gsub!("au", "à")
-    string.gsub!("eu", "è")
-    string.gsub!("iu", "ì")
-    string.gsub!("oa", "ò")
-    string.gsub!("ua", "ù")
-    return string
+  def pronunciation(name, level = 2)
+    name = ShaleiaStringUtilities.divide_syllables(name)
+    name = "kiɴ" if name == "<k><i><n>"
+    name = "aɪ" if name == "<á>"
+    name = "eɪ" if name == "<é>"
+    name = "aʊ" if name == "<à>"
+    name = "laɪ" if name == "<l><á>"
+    name = "leɪ" if name == "<l><é>"
+    name = "daʊ" if name == "<d><à>"
+    name = "l" if name == "<l>"
+    name = "ɴ" if name == "<n>"
+    name.gsub!(/<(s|z|t|d|k|g|f|v|p|b|c|q|x|j|r|l|m|n|h|y)>.<\1>/){".<#{$1}>"}
+    name.gsub!("<s>", "s")
+    name.gsub!("<z>", "z")
+    name.gsub!("<t>", "t")
+    name.gsub!("<d>", "d")
+    name.gsub!("<k>", "k")
+    name.gsub!("<g>", "ɡ")
+    name.gsub!("<f>", "f")
+    name.gsub!("<v>", "v")
+    name.gsub!("<p>", "p")
+    name.gsub!("<b>", "b")
+    name.gsub!("<c>", "θ")
+    name.gsub!("<q>", "ð")
+    name.gsub!("<x>", "ʃ")
+    name.gsub!("<j>", "ʒ")
+    name.gsub!("<r>", "ɹ")
+    name.gsub!(/<l><(a|e|i|o|u|â|ê|î|ô|û|á|é|í|à|è|ì|ò|ù)>/){"l<#{$1}>"}
+    name.gsub!("<l>", "ɾ")
+    name.gsub!("<m>", "m")
+    name.gsub!("<n>", "n")
+    name.gsub!(/<h>(\.|$)/){["ə#{$1}", "ə#{$1}", $1][level]}
+    name.gsub!(/<h><(a|e|i|o|u|â|ê|î|ô|û|á|é|í|à|è|ì|ò|ù)>/){"h<#{$1}>"}
+    name.gsub!("<h>"){["ə", "", ""][level]}
+    name.gsub!("<y>", "j")
+    name.gsub!("<a>", "a")
+    name.gsub!("<e>", "e")
+    name.gsub!("<i>", "i")
+    name.gsub!("<o>", "ɔ")
+    name.gsub!("<u>", "u")
+    name.gsub!("<â>"){["aː", "a", "a"][level]}
+    name.gsub!("<ê>"){["eː", "e", "e"][level]}
+    name.gsub!("<î>"){["iː", "i", "i"][level]}
+    name.gsub!("<ô>"){["ɔː", "ɔ", "ɔ"][level]}
+    name.gsub!("<û>"){["uː", "u", "u"][level]}
+    name.gsub!("<á>"){["aɪ", "a", "a"][level]}
+    name.gsub!("<é>"){["eɪ", "e", "e"][level]}
+    name.gsub!("<í>"){["iə", "i", "i"][level]}
+    name.gsub!("<à>"){["aʊ", "ɶ", "a"][level]}
+    name.gsub!("<è>"){["eʊ", "ø", "e"][level]}
+    name.gsub!("<ì>"){["iʊ", "y", "i"][level]}
+    name.gsub!("<ò>"){["ɔɐ", "ʌ", "ɔ"][level]}
+    name.gsub!("<ù>"){["uɐ", "ɯ", "u"][level]}
+    name.gsub!(/<.>/, "")
+    name.gsub!(".", "")
+    return name
   end
 
-  def to_old_orthography
-    string = self.clone
-    string.gsub!("â", "aa")
-    string.gsub!("ê", "ee")
-    string.gsub!("î", "ii")
-    string.gsub!("ô", "oo")
-    string.gsub!("û", "uu")
-    string.gsub!("á", "ai")
-    string.gsub!("é", "ei")
-    string.gsub!("í", "ie")
-    string.gsub!("à", "au")
-    string.gsub!("è", "eu")
-    string.gsub!("ì", "iu")
-    string.gsub!("ò", "oa")
-    string.gsub!("ù", "ua")
-    return string
+  def divide_syllables(name)
+    name = name.clone
+    name.gsub!("'", "")
+    name.gsub!("-", "")
+    name = name.split(//).reverse.map{|s| "<#{s}>"}.join
+    name.gsub!(/((<[sztdkgfvpbcqxjrlmnhy]>)?<[aeiouâêîôûáéíàèìòù]>(<[sztdkgfvpbcqxjrlmnhy]>)?)/){$1 + "."}
+    name = name.scan(/(<.>|\.)/).reverse.join
+    name[0] = "" if name[0..0] == "."
+    return name
   end
 
-  def pronunciation(level = 2)
-    string = self.clone
-    string = string.devide
-    string = "kiɴ" if string == "<k><i><n>"
-    string = "aɪ" if string == "<á>"
-    string = "eɪ" if string == "<é>"
-    string = "aʊ" if string == "<à>"
-    string = "laɪ" if string == "<l><á>"
-    string = "leɪ" if string == "<l><é>"
-    string = "daʊ" if string == "<d><à>"
-    string = "l" if string == "<l>"
-    string = "ɴ" if string == "<n>"
-    string.gsub!(/<(s|z|t|d|k|g|f|v|p|b|c|q|x|j|r|l|m|n|h|y)>.<\1>/){".<#{$1}>"}
-    string.gsub!("<s>", "s")
-    string.gsub!("<z>", "z")
-    string.gsub!("<t>", "t")
-    string.gsub!("<d>", "d")
-    string.gsub!("<k>", "k")
-    string.gsub!("<g>", "ɡ")
-    string.gsub!("<f>", "f")
-    string.gsub!("<v>", "v")
-    string.gsub!("<p>", "p")
-    string.gsub!("<b>", "b")
-    string.gsub!("<c>", "θ")
-    string.gsub!("<q>", "ð")
-    string.gsub!("<x>", "ʃ")
-    string.gsub!("<j>", "ʒ")
-    string.gsub!("<r>", "ɹ")
-    string.gsub!(/<l><(a|e|i|o|u|â|ê|î|ô|û|á|é|í|à|è|ì|ò|ù)>/){"l<#{$1}>"}
-    string.gsub!("<l>", "ɾ")
-    string.gsub!("<m>", "m")
-    string.gsub!("<n>", "n")
-    string.gsub!(/<h>(\.|$)/){["ə#{$1}", "ə#{$1}", $1][level]}
-    string.gsub!(/<h><(a|e|i|o|u|â|ê|î|ô|û|á|é|í|à|è|ì|ò|ù)>/){"h<#{$1}>"}
-    string.gsub!("<h>"){["ə", "", ""][level]}
-    string.gsub!("<y>", "j")
-    string.gsub!("<a>", "a")
-    string.gsub!("<e>", "e")
-    string.gsub!("<i>", "i")
-    string.gsub!("<o>", "ɔ")
-    string.gsub!("<u>", "u")
-    string.gsub!("<â>"){["aː", "a", "a"][level]}
-    string.gsub!("<ê>"){["eː", "e", "e"][level]}
-    string.gsub!("<î>"){["iː", "i", "i"][level]}
-    string.gsub!("<ô>"){["ɔː", "ɔ", "ɔ"][level]}
-    string.gsub!("<û>"){["uː", "u", "u"][level]}
-    string.gsub!("<á>"){["aɪ", "a", "a"][level]}
-    string.gsub!("<é>"){["eɪ", "e", "e"][level]}
-    string.gsub!("<í>"){["iə", "i", "i"][level]}
-    string.gsub!("<à>"){["aʊ", "ɶ", "a"][level]}
-    string.gsub!("<è>"){["eʊ", "ø", "e"][level]}
-    string.gsub!("<ì>"){["iʊ", "y", "i"][level]}
-    string.gsub!("<ò>"){["ɔɐ", "ʌ", "ɔ"][level]}
-    string.gsub!("<ù>"){["uɐ", "ɯ", "u"][level]}
-    string.gsub!(/<.>/, "")
-    string.gsub!(".", "")
-    return string
-  end
+end
 
-  def devide
-    string = self.clone
-    string.gsub!("'", "")
-    string.gsub!("-", "")
-    string = string.split(//).reverse.map{|s| "<#{s}>"}.join
-    string.gsub!(/((<[sztdkgfvpbcqxjrlmnhy]>)?<[aeiouâêîôûáéíàèìòù]>(<[sztdkgfvpbcqxjrlmnhy]>)?)/){$1 + "."}
-    string = string.scan(/(<.>|\.)/).reverse.join
-    string[0] = "" if string[0..0] == "."
-    return string
-  end
+
+class String
 
   def url_escape
     string = self.clone
