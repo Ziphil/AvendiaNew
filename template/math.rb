@@ -112,10 +112,10 @@ converter.add(["thm"], ["page"]) do |element|
     this["class"] += " " + THEOREM_TYPE_CLASSES[type]
     this << Tag.build("span", "number") do |this|
       this << get_number(:theorem, id).to_s
-      label_element = element.elements.to_a("label").first
-      if label_element
+      name_element = element.elements.to_a("name").first
+      if name_element
         this << " ["
-        this << apply(label_element, "page")
+        this << apply(name_element, "page")
         this << "]"
       end
     end

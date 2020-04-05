@@ -328,7 +328,7 @@
     >
   >
   \thm|type="thm"|<
-    \label<標準化定理\fl<standardisation theorem>>
+    \name<標準化定理\fl<standardisation theorem>>
     \p<
       ラムダ項 &m<M, N> に対し、&m<M \sb|rel|<\headrarr>><`b> N> ならば &m<M \sb|rel|<\headrarr>><s> N> である。
     >  

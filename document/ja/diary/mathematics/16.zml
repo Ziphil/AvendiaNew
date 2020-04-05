@@ -178,7 +178,7 @@
     この定義のもと、豊穣圏における Yoneda の補題は以下のように定式化できる。
   >
   \thm|type="thm"|<
-    \label<豊穣 Yoneda の補題\fl<enriched — lemma>>
+    \name<豊穣 Yoneda の補題\fl<enriched — lemma>>
     \p<
       対称モノイダル閉圏 &m<\scr<V>> をとり、&m<\scr<V>>-豊穣小圏 &m<\scr<C>> および &m<\scr<V>>-豊穣関手 &m<F: \scr<C> \to> \scr<V>> を考える。
       任意の &m<\scr<C>> の対象 &m<K> に対し、自然変換対象 &m<\lbbracket> `[K, \hyphen>`], F \rbbracket>> が常に存在し、同型
