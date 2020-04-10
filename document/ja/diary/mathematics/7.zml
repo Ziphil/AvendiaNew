@@ -99,7 +99,7 @@
           \cc<
             \tree<
               \axm<`G, x: A \vdash> M: B>
-              \infr|n="1"|<`G \vdash> `l x \o|ord,t="txt"|<:> \sfun> A. \sfun> B: A \rmulti|bin|> B><\sb<\rmulti>><\rm<I>>>
+              \infr|n="1"|<`G \vdash> \rm<`l> x \o|ord,t="txt"|<:> \sfun> A. \sfun> B: A \rmulti|bin|> B><\sb<\rmulti>><\rm<I>>>
             >
           >
           \cc<
@@ -158,7 +158,7 @@
       線型項の簡約規則を以下によって定める。
       &mb<
         \array|align="rcl"|<
-          \c<(`l x \o|ord,t="txt"|<:> \sfun> A. \sfun> B) N> \c<\sb<\squigrarr>><`b>> \c<M `[x \coloneqq> N`]> \br>
+          \c<(\rm<`l> x \o|ord,t="txt"|<:> \sfun> A. \sfun> B) N> \c<\sb<\squigrarr>><`b>> \c<M `[x \coloneqq> N`]> \br>
           \c<\tt|fun|<let> \star|ord|> \rmap|bin|> \star|ord|> \sfun> \tt|fun|<in> M> \c<\sb<\squigrarr>><`b>> \c<M> \br>
           \c<\tt|fun|<let> x \otimes> y \rmap|bin|> M \otimes> N \sfun> \tt|fun|<in> P> \c<\sb<\squigrarr>><`b>> \c<P `[x \coloneqq> M, y \coloneqq> N`]> \br>
           \c<\tt|fun|<fst> \langle> M, N \rangle>> \c<\sb<\squigrarr>><`b>> \c<M> \br>
