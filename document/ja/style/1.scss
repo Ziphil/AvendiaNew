@@ -1434,8 +1434,23 @@ article.main {
 
   // 数式
 
+  span.math-block-wrapper {
+    @include scrollbar($main-background, $scrollbar-thumb-background);
+    margin: $wide-vertical-margin - 2px 0px;
+    padding: 0px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  div.theorem span.math-block-wrapper {
+    @include scrollbar($box-background, $scrollbar-thumb-background);
+  }
+
   span.math-block {
-    margin: $wide-vertical-margin 0px;
+    margin: 0px auto;
+    padding: 2px 0px;
     display: flex;
     align-items: baseline;
     line-height: 1;
