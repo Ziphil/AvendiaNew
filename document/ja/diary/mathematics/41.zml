@@ -184,7 +184,6 @@
           \c> \c<\equiv>> \c<\rm<`l> m. \sfun> \rm<`l> n. \sfun> \rm<`l> a. \sfun> n (m a)> \br>
           \c<\times|ord|>> \c<:> \c<(A \uharprarr|bin|> B) \times> (A' \uharprarr|bin|> B') \uharprarr|bin|> (A \times> A' \uharprarr|bin|> B \times> B')> \br>
           \c> \c<\equiv>> \c<\rm<`l> m. \sfun> \rm<`l> n. \sfun> \rm<`l> p. \sfun> \langle> m (\tt|fun|<fst> p), n (\tt|fun|<snd> p) \rangle>> \br>
-
         >
       >
       で定めている。
