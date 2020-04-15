@@ -196,8 +196,8 @@
   >
   \h1<参考文献>
   \ol<
-    \li|id="awcm"|<R. Atkey (2011)「What is a Categorical Model of Arrows?」『Electronic Notes in Theoretical Computer Science』229:19–37>
-    \li|id="hgma"|<J. Hughes (2000)「Generalising Monads to Arrows」『Science of Computer Programming』37:67–111>
+    \li|id="awcm"|<R. Atkey (2011)「What is a categorical model of arrows?」『Electronic Notes in Theoretical Computer Science』229:19–37>
+    \li|id="hgma"|<J. Hughes (2000)「Generalising monads to arrows」『Science of Computer Programming』37:67–111>
     \li|id="jcsa"|<B. Jacobs, C. Heunen, I. Hasuo (2009)「Categorical semantics for arrows」『Journal of Functional Programming』19:403–438>
     \li|id="llcc"|<J. Lambek (1980)「From lambda calculus to cartesian closed categories」『To H. B. Curry: Essays on Combinatory Logic, Lambda Calculus and Formalism』376–402>
   >
