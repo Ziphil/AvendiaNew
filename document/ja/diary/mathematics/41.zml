@@ -21,8 +21,8 @@
       まず、型 &m<A> と項 &m<M> を、
       &mb<
         \array|align="rcl"|<
-          \c<A> \c<\o|rel|<::=>> \c<`a \mid> 1 \mid> A \times> A \mid> A \uharprarr|bin|> A> \br>
-          \c<M> \c<\o|rel|<::=>> \c<a \mid> \star|ord|> \mid> \langle> M, M \rangle> \mid> \tt|fun|<fst> M \mid> \tt|fun|<snd> M \mid> \rm<`l> a. \sfun> M \mid> M M> 
+          \c<A> \c<\ccoloneqq>> \c<`a \mid> 1 \mid> A \times> A \mid> A \buharprarr> A> \br>
+          \c<M> \c<\ccoloneqq>> \c<a \mid> \star|ord|> \mid> \langle> M, M \rangle> \mid> \tt|fun|<fst> M \mid> \tt|fun|<snd> M \mid> \rm<`l> a. \sfun> M \mid> M M> 
         >
       >
       で定める。
@@ -57,10 +57,10 @@
           \cc<
             \tree<
               \axm<`G, a: A \vdash> M: B>
-              \infr|n="1"|<`G \vdash> \rm<`l>a. \sfun> M: A \uharprarr|bin|> B>
+              \infr|n="1"|<`G \vdash> \rm<`l>a. \sfun> M: A \buharprarr> B>
             > \qquad>
             \tree<
-              \axm<`G \vdash> M: A \uharprarr|bin|> B> \axm<`G \vdash> N: `# A>
+              \axm<`G \vdash> M: A \buharprarr> B> \axm<`G \vdash> N: `# A>
               \infr|n="2"|<`G \vdash> MN: B>
             >
           >
@@ -127,8 +127,8 @@
       まず、型 &m<A> と項 &m<M> を、
       &mb<
         \array|align="rcl"|<
-          \c<A> \c<\o|rel|<::=>> \c<\cdots> \mid> A \waverarr|bin|> A> \br>
-          \c<M> \c<\o|rel|<::=>> \c<\cdots> \mid> \tt|fun|<arr> M \mid> M \gggt|bin|> M \mid> \tt|fun|<first> M> 
+          \c<A> \c<\ccoloneqq>> \c<\cdots> \mid> A \bwaverarr> A> \br>
+          \c<M> \c<\ccoloneqq>> \c<\cdots> \mid> \tt|fun|<arr> M \mid> M \gggt|bin|> M \mid> \tt|fun|<first> M> 
         >
       >
       と拡張する。
@@ -137,20 +137,20 @@
         \array|align="c"|<
           \cc<
             \tree<
-              \axm<`G \vdash> M: A \uharprarr|bin|> B>
-              \infr|n="1"|<`G \vdash> \tt|fun|<arr> M: A \waverarr|bin|> B>
+              \axm<`G \vdash> M: A \buharprarr> B>
+              \infr|n="1"|<`G \vdash> \tt|fun|<arr> M: A \bwaverarr> B>
             >
           >
           \cc<
             \tree<
-              \axm<`G \vdash> F: A \waverarr|bin|> B> \axm<`G \vdash> G: B \waverarr|bin|> C>
-              \infr|n="2"|<`G \vdash> F \gggt|bin|> G: A \waverarr|bin|> C>
+              \axm<`G \vdash> F: A \bwaverarr> B> \axm<`G \vdash> G: B \bwaverarr> C>
+              \infr|n="2"|<`G \vdash> F \gggt|bin|> G: A \bwaverarr> C>
             >
           >
           \cc<
             \tree<
-              \axm<`G \vdash> F: A \waverarr|bin|> B>
-              \infr|n="1"|<`G \vdash> \tt|fun|<first> F: A \times> C \waverarr|bin|> B \times> C>
+              \axm<`G \vdash> F: A \bwaverarr> B>
+              \infr|n="1"|<`G \vdash> \tt|fun|<first> F: A \times> C \bwaverarr> B \times> C>
             >
           >
         >
@@ -174,15 +174,15 @@
       ここで、
       &mb<
         \array|align="rcl"|<
-          \c<\rm<id>> \c<:> \c<A \uharprarr|bin|> A> \br>
+          \c<\rm<id>> \c<:> \c<A \buharprarr> A> \br>
           \c> \c<\equiv>> \c<\rm<`l> a. \sfun> a> \br>
-          \c<\rm<fst>> \c<:> \c<A \times> B \uharprarr|bin|> A> \br>
+          \c<\rm<fst>> \c<:> \c<A \times> B \buharprarr> A> \br>
           \c> \c<\equiv>> \c<\rm<`l> p. \sfun> \tt|fun|<fst> p> \br>
-          \c<\rm<assoc>> \c<:> \c<(A \times> B) \times> C \uharprarr|bin|> A \times> (B \times> C)> \br>
+          \c<\rm<assoc>> \c<:> \c<(A \times> B) \times> C \buharprarr> A \times> (B \times> C)> \br>
           \c> \c<\equiv>> \c<\rm<`l> p. \sfun> \langle> \tt|fun|<fst> (\tt|fun|<fst> p), \langle> \tt|fun|<snd> (\tt|fun|<fst> p), \tt|fun|<snd> p) \rangle> \rangle>> \br>
-          \c<\rhd|ord|>> \c<:> \c<(A \uharprarr|bin|> B) \times> (B \uharprarr|bin|> C) \uharprarr|bin|> (A \uharprarr|bin|> C)> \br>
+          \c<\rhd|ord|>> \c<:> \c<(A \buharprarr> B) \times> (B \buharprarr> C) \buharprarr> (A \buharprarr> C)> \br>
           \c> \c<\equiv>> \c<\rm<`l> m. \sfun> \rm<`l> n. \sfun> \rm<`l> a. \sfun> n (m a)> \br>
-          \c<\times|ord|>> \c<:> \c<(A \uharprarr|bin|> B) \times> (A' \uharprarr|bin|> B') \uharprarr|bin|> (A \times> A' \uharprarr|bin|> B \times> B')> \br>
+          \c<\times|ord|>> \c<:> \c<(A \buharprarr> B) \times> (A' \buharprarr> B') \buharprarr> (A \times> A' \buharprarr> B \times> B')> \br>
           \c> \c<\equiv>> \c<\rm<`l> m. \sfun> \rm<`l> n. \sfun> \rm<`l> p. \sfun> \langle> m (\tt|fun|<fst> p), n (\tt|fun|<snd> p) \rangle>> \br>
         >
       >
