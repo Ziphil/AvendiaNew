@@ -180,9 +180,9 @@
           \c> \c<\equiv>> \c<\rm<`l> p. \sfun> \tt|fun|<fst> p> \br>
           \c<\rm<assoc>> \c<:> \c<(A \times> B) \times> C \buharprarr> A \times> (B \times> C)> \br>
           \c> \c<\equiv>> \c<\rm<`l> p. \sfun> \langle> \tt|fun|<fst> (\tt|fun|<fst> p), \langle> \tt|fun|<snd> (\tt|fun|<fst> p), \tt|fun|<snd> p) \rangle> \rangle>> \br>
-          \c<\rhd|ord|>> \c<:> \c<(A \buharprarr> B) \times> (B \buharprarr> C) \buharprarr> (A \buharprarr> C)> \br>
+          \c<\rhd|ord|>> \c<:> \c<(A \buharprarr> A') \times> (A' \buharprarr> A'') \buharprarr> (A \buharprarr> A'')> \br>
           \c> \c<\equiv>> \c<\rm<`l> m. \sfun> \rm<`l> n. \sfun> \rm<`l> a. \sfun> n (m a)> \br>
-          \c<\times|ord|>> \c<:> \c<(A \buharprarr> B) \times> (A' \buharprarr> B') \buharprarr> (A \times> A' \buharprarr> B \times> B')> \br>
+          \c<\times|ord|>> \c<:> \c<(A \buharprarr> A') \times> (B \buharprarr> B') \buharprarr> (A \times> B \buharprarr> A' \times> B')> \br>
           \c> \c<\equiv>> \c<\rm<`l> m. \sfun> \rm<`l> n. \sfun> \rm<`l> p. \sfun> \langle> m (\tt|fun|<fst> p), n (\tt|fun|<snd> p) \rangle>> \br>
         >
       >
