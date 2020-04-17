@@ -14,13 +14,13 @@
   \p<
     Freyd 圏を定義する準備として、まずはバイノイダル圏と前モノイダル圏を定義する。
     これらは通常のモノイダル圏の定義を弱めたもので、Power–Robinson\ref|type="bib",id="ppcn"|> によってプログラミング言語の表示的意味論を記述するために導入されたものである。
-    ここでは、後の議論で利用するため、対称モノイダル圏 &m<\scr<V>> を固定して &m<\scr<V>>-豊穣圏の文脈で定義を行う。
-    なお、&m<\scr<V>> に定まる演算は &m<\otimes>> で表し、その単位元は &m<\top>> とし、&m<\scr<V>>-豊穣圏 &m<\scr<D>> の射対象は &m<`[\text<->, \text<->`]> で表す。
+    ここでは、カルテシアン閉圏 &m<\scr<C>> に対して &m<\scr<C>>-豊穣圏の文脈で定義を行う。
+    なお、&m<\scr<C>>-豊穣圏 &m<\scr<D>> の射対象は &m<`[\text<->, \text<->`]> で表す。
   >
   \thm|type="def"|<
     \p<
-      &m<\scr<V>>-豊穣圏 &m<\scr<D>> を考える。
-      &m<\scr<D>> の対象 &m<A, B> に対し、&m<\scr<V>>-豊穣関手 &m<\text<-> \ltimes> B: \scr<D> \to> \scr<D>> および &m<A \rtimes> \text<->: \scr<D> \to> \scr<D>> がそれぞれ定まっていて、対象について &m<A \ltimes> B = A \rtimes> B> が成り立っているとする。
+      カルテシアン閉圏 &m<\scr<C>> および &m<\scr<C>>-豊穣圏 &m<\scr<D>> を考える。
+      &m<\scr<D>> の対象 &m<A, B> に対し、&m<\scr<C>>-豊穣関手 &m<\text<-> \ltimes> B: \scr<D> \to> \scr<D>> および &m<A \rtimes> \text<->: \scr<D> \to> \scr<D>> がそれぞれ定まっていて、対象について &m<A \ltimes> B = A \rtimes> B> が成り立っているとする。
       このとき、&m<\scr<D>> を\em<バイノイダル圏\fl<binoidal category>> という。
     >
   >
@@ -29,7 +29,7 @@
   >
   \p<
     モノイダル圏とバイノイダル圏との違いについて述べておこう。
-    ここでは、簡単のため &m<\scr<V> = \bfrm<Set>> として、一般の豊穣圏ではなく通常の圏を考える。
+    ここでは、簡単のため &m<\scr<C> = \bfrm<Set>> として、一般の豊穣圏ではなく通常の圏を考える。
     モノイダル圏 &m<\scr<D>> では、演算が 2 変数関手 &m<\bowtie|ord|>: \scr<D> \times> \scr<D> \to> \scr<D>> として定まっているので、2 つの射 &m<f: A \to> A', g: B \to> B'> に対して射 &m<f \bowtie> g: A \bowtie> B \to> A' \bowtie> B'> が存在し、可換図式
     &mb<
       \diag<
@@ -55,29 +55,29 @@
   >
   \thm|type="def"|<
     \p<
-      &m<\scr<V>>-豊穣バイノイダル圏 &m<\scr<D>> を考える。
-      &m<\scr<V>> の対象 &m<V> および &m<\scr<D>> の対象 &m<A, A'> に対して &m<\scr<V>> の射 &m<f: V \to> `[A, A'`]> をとる。
+      カルテシアン閉圏 &m<\scr<C>> および &m<\scr<C>>-豊穣バイノイダル圏 &m<\scr<D>> を考える。
+      &m<\scr<C>> の対象 &m<X> および &m<\scr<D>> の対象 &m<A, A'> に対し、&m<\scr<C>> の射 &m<f: X \to> `[A, A'`]> をとる。
       任意の &m<\scr<D>> の対象 &m<B, B'> に対し、図式
       &mb<
         \array|align="c"|<
           \cc<\diag|hor="-24"|<
-            \v<V \otimes> `[B, B'`]> \v> \v<`[B, B'`] \otimes> V> \br>
-            \v<`[A, A'`] \otimes> `[B, B'`]> \v> \v<`[B, B'`] \otimes> `[A, A'`]> \br>
-            \v<`[A \bowtie> B, A' \bowtie> B`] \otimes> `[A' \bowtie> B, A' \bowtie> B'`]> \v> \v<`[A \bowtie> B, A \bowtie> B'`] \otimes> `[A \bowtie> B', A' \bowtie> B'`]> \br>
+            \v<X \times> `[B, B'`]> \v> \v<`[B, B'`] \times> X> \br>
+            \v<`[A, A'`] \times> `[B, B'`]> \v> \v<`[B, B'`] \times> `[A, A'`]> \br>
+            \v<`[A \bowtie> B, A' \bowtie> B`] \times> `[A' \bowtie> B, A' \bowtie> B'`]> \v> \v<`[A \bowtie> B, A \bowtie> B'`] \times> `[A \bowtie> B', A' \bowtie> B'`]> \br>
             \v> \v<`[A \bowtie> B, A' \bowtie> B'`]> \v>
             \ar|s="1",e="3"|>
-            \ar|s="1",e="4",inv|<f \otimes> \rm<id>> \ar|s="3",e="6"|<\rm<id> \otimes> f>
-            \ar|s="4",e="7",inv|<(\text<-> \ltimes> B) \sb><AA'> \otimes> (A' \rtimes> \text<->) \sb><BB'>> \ar|s="6",e="9"|<(A \rtimes> \text<->) \sb><BB'> \otimes> (\text<-> \ltimes> B') \sb><AA'>>
+            \ar|s="1",e="4",inv|<f \times> \rm<id>> \ar|s="3",e="6"|<\rm<id> \times> f>
+            \ar|s="4",e="7",inv|<(\text<-> \ltimes> B) \sb><AA'> \times> (A' \rtimes> \text<->) \sb><BB'>> \ar|s="6",e="9"|<(A \rtimes> \text<->) \sb><BB'> \times> (\text<-> \ltimes> B') \sb><AA'>>
             \ar|s="7",e="11"|> \ar|s="9",e="11"|>
           >>
           \cc<\diag|hor="-24"|<
-            \v<V \otimes> `[B, B'`]> \v> \v<`[B, B'`] \otimes> V> \br>
-            \v<`[A, A'`] \otimes> `[B, B'`]> \v> \v<`[B, B'`] \otimes> `[A, A'`]> \br>
-            \v<`[B \bowtie> A, B \bowtie> A'`] \otimes> `[B \bowtie> A', B' \bowtie> A'`]> \v> \v<`[B \bowtie> A, B' \bowtie> A`] \otimes> `[B' \bowtie> A, B' \bowtie> A'`]> \br>
+            \v<X \times> `[B, B'`]> \v> \v<`[B, B'`] \times> X> \br>
+            \v<`[A, A'`] \times> `[B, B'`]> \v> \v<`[B, B'`] \times> `[A, A'`]> \br>
+            \v<`[B \bowtie> A, B \bowtie> A'`] \times> `[B \bowtie> A', B' \bowtie> A'`]> \v> \v<`[B \bowtie> A, B' \bowtie> A`] \times> `[B' \bowtie> A, B' \bowtie> A'`]> \br>
             \v> \v<`[B \bowtie> A, B' \bowtie> A'`]> \v>
             \ar|s="1",e="3"|>
-            \ar|s="1",e="4",inv|<f \otimes> \rm<id>> \ar|s="3",e="6"|<\rm<id> \otimes> f>
-            \ar|s="4",e="7",inv|<(B \rtimes> \text<->) \sb><AA'> \otimes> (\text<-> \ltimes> A') \sb><BB'>> \ar|s="6",e="9"|<(\text<-> \ltimes> A) \sb><BB'> \otimes> (B' \rtimes> \text<->) \sb><AA'>>
+            \ar|s="1",e="4",inv|<f \times> \rm<id>> \ar|s="3",e="6"|<\rm<id> \times> f>
+            \ar|s="4",e="7",inv|<(B \rtimes> \text<->) \sb><AA'> \times> (\text<-> \ltimes> A') \sb><BB'>> \ar|s="6",e="9"|<(\text<-> \ltimes> A) \sb><BB'> \times> (B' \rtimes> \text<->) \sb><AA'>>
             \ar|s="7",e="11"|> \ar|s="9",e="11"|>
           >>
         >
@@ -87,7 +87,7 @@
     >
   >
   \p<
-    図式が大きくて少し分かりづらいが、&m<\scr<V> = \bfrm<Set>> として通常の圏のみを考えるのであれば、次のように簡単に述べることができる。
+    図式が大きくて少し分かりづらいが、&m<\scr<C> = \bfrm<Set>> かつ &m<X = 1> として通常の圏のみを考えるのであれば、次のように簡単に述べることができる。
     すなわち、射 &m<f: A \to> A'> が中心的であることは、任意の射 &m<g: B \to> B'> に対して、
     &mb<
       \diag<
@@ -108,23 +108,23 @@
   >
   \thm|type="def"|<
     \p<
-      &m<\scr<V>>-豊穣バイノイダル圏 &m<\scr<D>> に対し、
+      カルテシアン閉圏 &m<\scr<C>> および &m<\scr<C>>-豊穣バイノイダル圏 &m<\scr<D>> に対し、
     >
     \ul<
       \li*<
         &m<\scr<D>> の対象 &m<\top>> が定まっている。
       >
       \li*<
-        各対象 &m<A, B, C> に対して、中心的な 4 種類の &m<\scr<V>> の射
+        各対象 &m<A, B, C> に対して、中心的な 4 種類の &m<\scr<C>> の射
         &mb<
           \array|align="rrcl"|<
-            \c<\sb<`a><ABC>:> \c<\top>> \c<\to>> \c<`[(A \bowtie> B) \bowtie> C, A \bowtie> (B \bowtie> C)`]> \br>
-            \c<\sb<`l><A>:> \c<\top>> \c<\to>> \c<`[\top>, \top> \bowtie> A`]> \br>
-            \c<\sb<`r><A>:> \c<\top>> \c<\to>> \c<`[\top>, A \bowtie> \top>`]> \br>
-            \c<\sb<`s><AB>:> \c<\top>> \c<\to>> \c<`[A \bowtie> B, B \bowtie> A`]>
+            \c<\sb<`a><ABC>:> \c<1> \c<\to>> \c<`[(A \bowtie> B) \bowtie> C, A \bowtie> (B \bowtie> C)`]> \br>
+            \c<\sb<`l><A>:> \c<1> \c<\to>> \c<`[\top>, \top> \bowtie> A`]> \br>
+            \c<\sb<`r><A>:> \c<1> \c<\to>> \c<`[\top>, A \bowtie> \top>`]> \br>
+            \c<\sb<`s><AB>:> \c<1> \c<\to>> \c<`[A \bowtie> B, B \bowtie> A`]>
           >
         >
-        が定まっており、これらがそれぞれ同型な &m<\scr<V>>-豊穣自然変換を定める。
+        が定まっており、これらがそれぞれ同型な &m<\scr<C>>-豊穣自然変換を定める。
       >
     >
     \p<
@@ -138,7 +138,8 @@
   >
   \thm|type="def"|<
     \p<
-      &m<\scr<V>>-豊穣対称前モノイダル圏 &m<\scr<C>, \scr<D>> の間の &m<\scr<V>>-豊穣関手 &m<J: \scr<C> \to> \scr<D>> に対し、
+      カルテシアン閉圏 &m<\scr<C>> をとる。
+      &m<\scr<C>>-豊穣対称前モノイダル圏 &m<\scr<D>', \scr<D>> の間の &m<\scr<C>>-豊穣関手 &m<J: \scr<D>' \to> \scr<D>> に対し、
     >
     \ul<
       \li*<
@@ -146,7 +147,7 @@
       >
       \li*<
         &m<J> は対称前モノイダル圏に定まる 2 種類の演算を等号として保つ。
-        すなわち、任意の &m<\scr<C>> の対象 &m<A, B> に対して、&m<J (A \bowtie> B) = JA \bowtie> JB> が成り立ち、さらに任意の &m<\scr<C>> の対象 &m<A', B'> に対して、図式
+        すなわち、任意の &m<\scr<D>'> の対象 &m<A, B> に対して、&m<J (A \bowtie> B) = JA \bowtie> JB> が成り立ち、さらに任意の &m<\scr<D>'> の対象 &m<A', B'> に対して、図式
         &mb<
           \diag|hor="thk"|<
             \v<`[A, A'`]> \v<`[JA, JA'`]> \br>
@@ -165,7 +166,7 @@
       >
       \li*<
         &m<J> は対称前モノイダル圏に定まる 4 種類の構造射を等号として保つ。
-        例えば &m<`l> については、任意の &m<\scr<C>> の対象 &m<A> に対して、図式
+        例えば &m<`l> については、任意の &m<\scr<D>'> の対象 &m<A> に対して、図式
         &mb<
           \diag<
             \v<\top>> \v> \br>
@@ -182,13 +183,9 @@
     >
   >
   \p<
-    カルテシアン閉圏 &m<\scr<C>> をとると、&m<\scr<C>> は直積によって対称モノイダル圏と見なせるので、以降は &m<\scr<V> = \scr<C>> として &m<\scr<C>>-豊穣圏を考えることにする。
-    &m<\scr<C>> 自身は、そのカルテシアン閉性によって &m<\scr<C>>-豊穣圏と見なせる。
+    さて、カルテシアン閉圏 &m<\scr<C>> に対し、&m<\scr<C>> 自身はカルテシアン閉性によって &m<\scr<C>>-豊穣圏と見なせる。
     さらに、&m<\scr<C>> は直積によって &m<\scr<C>>-豊穣対称前モノイダル圏の構造をもつ。
-    以降はこの構造を利用する。
-  >
-  \p<
-    以上の準備のもと、Freyd 圏が定義できる。
+    以降はこの構造を利用して、Freyd 圏は以下のように定義できる。
   >
   \thm|type="def"|<
     \p<
