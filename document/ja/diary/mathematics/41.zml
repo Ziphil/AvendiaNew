@@ -166,7 +166,7 @@
           \c<\tt|fun|<first> F \gggt|bin|> \tt|fun|<arr> \rm<fst>> \c<=> \c<\tt|fun|<arr> \rm<fst> \gggt|bin|> F> \br>
           \c<\tt|fun|<first> F \gggt|bin|> \tt|fun|<arr> (\rm<id> \times> F)> \c<=> \c<\tt|fun|<arr> (\rm<id> \times> F) \gggt|bin|> \tt|fun|<first> a> \br>
           \c<\tt|fun|<first> (\tt|fun|<first> F) \gggt|bin|> \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> F \gggt|bin|> \tt|fun|<first> \rm<assoc>> \br>
-          \c<\tt|fun|<first> (\tt|fun|<arr> F)> \c<=> \c<\tt|fun|<arr> (F \times> \rm<id>)> \br>
+          \c<\tt|fun|<first> (\tt|fun|<arr> M)> \c<=> \c<\tt|fun|<arr> (M \times> \rm<id>)> \br>
           \c<\tt|fun|<first> (F \gggt|bin|> G)> \c<=> \c<\tt|fun|<first> F \gggt|bin|> \tt|fun|<first> G> \br>
         >
       >
