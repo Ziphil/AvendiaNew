@@ -120,8 +120,8 @@
         &mb<
           \array|align="rrcl"|<
             \c<\sb<`a><ABC>:> \c<1> \c<\to>> \c<`[(A \bowtie> B) \bowtie> C, A \bowtie> (B \bowtie> C)`]> \br>
-            \c<\sb<`l><A>:> \c<1> \c<\to>> \c<`[\top>, \top> \bowtie> A`]> \br>
-            \c<\sb<`r><A>:> \c<1> \c<\to>> \c<`[\top>, A \bowtie> \top>`]> \br>
+            \c<\sb<`l><A>:> \c<1> \c<\to>> \c<`[A, \top> \bowtie> A`]> \br>
+            \c<\sb<`r><A>:> \c<1> \c<\to>> \c<`[A, A \bowtie> \top>`]> \br>
             \c<\sb<`s><AB>:> \c<1> \c<\to>> \c<`[A \bowtie> B, B \bowtie> A`]>
           >
         >

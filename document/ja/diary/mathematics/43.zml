@@ -14,7 +14,7 @@
   \thm|type="prp"|<
     \p<
       型システム &m<\bfrm<Arrow>> は、任意の豊穣 Freyd 圏で解釈をもつ。
-      さらに、&m<\bfrm<Arrow>> における型割り当て &m<`G \vdash> M: A> および &m<`G \vdash> N: A> に対し、&m<\bfrm<Arrrow>> で &m<M = N> が成り立つならば、任意の豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つ。
+      さらに、&m<\bfrm<Arrow>> における型割り当て &m<`G \vdash> M: A> および &m<`G \vdash> N: A> に対し、&m<\bfrm<Arrow>> で &m<M = N> が成り立つならば、任意の豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つ。
     >
   >
   \prf<
