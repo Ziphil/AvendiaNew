@@ -85,25 +85,26 @@
   \p<
     型システムの圏論的意味論とは、型システムに定まっている型と項をそれぞれ特定の圏の対象と射に対応させることを考えるものである。
     この対応は解釈と呼ばれ、次のように定式化される。
+    なお、解釈は 2 重の角括弧 (いわゆるオックスフォードブラケット) で囲んで表記するのが通例だが、表記が煩雑になるのを防ぐため、ここではオーバーラインで表記することにする。
   >
   \thm|type="def"|<
     \p<
       型システム &m<\frak<T>> を考える。
-      有限直積をもつ圏 &m<\scr<C>> に対し、変換 &m<\lbbracket> \text<-> \rbbracket>> が、
+      有限直積をもつ圏 &m<\scr<C>> に対し、変換 &m<\overline<\hyphen>>> が、
     >
     \ul<
       \li*<
-        &m<\frak<T>> の型 &m<A> に対し、&m<\scr<C>> の対象 &m<\lbbracket> A \rbbracket>> が定まっている。
+        &m<\frak<T>> の型 &m<A> に対し、&m<\scr<C>> の対象 &m<\overline<A>> が定まっている。
       >
       \li*<
-        &m<\frak<T>> における項の型割り当て &m<`G \vdash> M: A> に対し、&m<\scr<C>> の射 &m<\lbbracket> `G \vdash> M: A \rbbracket>: \lbbracket> `G \rbbracket> \to> \lbbracket> A \rbbracket>> が定まっている。
-        ここで、&m<`G \equiv> \sb<b><1>: \sb<B><1>, \cdots>, \sb<b><n>: \sb<B><n>> と書くとき、&m<\lbbracket> `G \rbbracket> = \lbbracket> \sb<B><1> \rbbracket> \times> \cdots> \times> \lbbracket> \sb<B><n> \rbbracket>> と定めた。
-        なお、記法を簡略化して、&m<\lbbracket> `G \vdash> M: A \rbbracket>> の代わりに単に &m<\lbbracket> M \rbbracket>> と書くこともある。
+        &m<\frak<T>> における項の型割り当て &m<`G \vdash> M: A> に対し、&m<\scr<C>> の射 &m<\overline<`G \vdash> M: A>: \overline<`G> \to> \overline<A>> が定まっている。
+        ここで、&m<`G \equiv> \sb<b><1>: \sb<B><1>, \cdots>, \sb<b><n>: \sb<B><n>> と書くとき、&m<\overline<`G> = \overline<\sb<B><1>> \times> \cdots> \times> \overline<\sb<B><n>>> と定めた。
+        なお、記法を簡略化して、&m<\overline<`G \vdash> M: A>> の代わりに単に &m<\overline<M>> と書くこともある。
       >
     >
     \p<
       を満たすように定まっている。
-      このとき、&m<\lbbracket> \text<-> \rbbracket>> を &m<\frak<T>> の &m<\scr<C>> での\em<解釈\fl<interpretation>> という。
+      このとき、&m<\overline<\hyphen>>> を &m<\frak<T>> の &m<\scr<C>> での\em<解釈\fl<interpretation>> という。
     >
   >
   \p<
@@ -113,7 +114,7 @@
   \thm|type="thm",id="equiv"|<
     \p<
       単純型付きラムダ計算 &m<\sb<\rm<`l>><1 \times|ord|>>> は、任意のカルテシアン閉圏で標準的な解釈をもつ。
-      さらに、&m<\sb<\rm<`l>><1 \times|ord|>>> における型割り当て &m<`G \vdash> M: A> および &m<`G \vdash> N: A> に対し、&m<\sb<\rm<`l>><1 \times|ord|>>> において &m<M = N> が成り立つための必要十分条件は、任意のカルテシアン閉圏において &m<\lbbracket> M \rbbracket> = \lbbracket> N \rbbracket>> が成り立つことである。
+      さらに、&m<\sb<\rm<`l>><1 \times|ord|>>> における型割り当て &m<`G \vdash> M: A> および &m<`G \vdash> N: A> に対し、&m<\sb<\rm<`l>><1 \times|ord|>>> において &m<M = N> が成り立つための必要十分条件は、任意のカルテシアン閉圏において &m<\overline<M> = \overline<N>> が成り立つことである。
     >
   >
   \p<
@@ -159,15 +160,15 @@
       最後に、同じ型を割り当てられた項の間の等号に、
       &mb<
         \array|align="rcl"|<
-          \c<\tt|fun|<arr> \rm<id> \gggt|bin|> M> \c<=> \c<M> \br>
-          \c<M \gggt|bin|> \tt|fun|<arr> \rm<id>> \c<=> \c<M> \br>
-          \c<\tt|fun|<arr> (M \rhd|bin|> N)> \c<=> \c<\tt|fun|<arr> M \gggt|bin|> \tt|fun|<arr> N> \br>
+          \c<\tt|fun|<arr> \rm<id> \gggt|bin|> F> \c<=> \c<F> \br>
+          \c<F \gggt|bin|> \tt|fun|<arr> \rm<id>> \c<=> \c<F> \br>
           \c<(F \gggt|bin|> G) \gggt|bin|> H> \c<=> \c<F \gggt|bin|> (G \gggt|bin|> H)> \br>
-          \c<\tt|fun|<first> F \gggt|bin|> \tt|fun|<arr> \rm<fst>> \c<=> \c<\tt|fun|<arr> \rm<fst> \gggt|bin|> F> \br>
-          \c<\tt|fun|<first> F \gggt|bin|> \tt|fun|<arr> (\rm<id> \times> M)> \c<=> \c<\tt|fun|<arr> (\rm<id> \times> M) \gggt|bin|> \tt|fun|<first> F> \br>
-          \c<\tt|fun|<first> (\tt|fun|<first> F) \gggt|bin|> \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|> \tt|fun|<first> F> \br>
+          \c<\tt|fun|<arr> (M \rhd|bin|> N)> \c<=> \c<\tt|fun|<arr> M \gggt|bin|> \tt|fun|<arr> N> \br>
           \c<\tt|fun|<first> (\tt|fun|<arr> M)> \c<=> \c<\tt|fun|<arr> (M \times> \rm<id>)> \br>
+          \c<\tt|fun|<first> F \gggt|bin|> \tt|fun|<arr> (\rm<id> \times> M)> \c<=> \c<\tt|fun|<arr> (\rm<id> \times> M) \gggt|bin|> \tt|fun|<first> F> \br>
           \c<\tt|fun|<first> (F \gggt|bin|> G)> \c<=> \c<\tt|fun|<first> F \gggt|bin|> \tt|fun|<first> G> \br>
+          \c<\tt|fun|<first> F \gggt|bin|> \tt|fun|<arr> \rm<fst>> \c<=> \c<\tt|fun|<arr> \rm<fst> \gggt|bin|> F> \br>
+          \c<\tt|fun|<first> (\tt|fun|<first> F) \gggt|bin|> \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|> \tt|fun|<first> F> \br>
         >
       >
       を追加し、合同関係になるように拡張する。
@@ -180,9 +181,9 @@
           \c> \c<\equiv>> \c<\rm<`l> p. \sfun> \tt|fun|<fst> p> \br>
           \c<\rm<assoc>> \c<:> \c<(A \times> B) \times> C \buharprarr> A \times> (B \times> C)> \br>
           \c> \c<\equiv>> \c<\rm<`l> p. \sfun> \langle> \tt|fun|<fst> (\tt|fun|<fst> p), \langle> \tt|fun|<snd> (\tt|fun|<fst> p), \tt|fun|<snd> p) \rangle> \rangle>> \br>
-          \c<\rhd|ord|>> \c<:> \c<(A \buharprarr> A') \times> (A' \buharprarr> A'') \buharprarr> (A \buharprarr> A'')> \br>
+          \c<\rhd|ord|>> \c<:> \c<(A \buharprarr> B) \times> (B \buharprarr> C) \buharprarr> (A \buharprarr> C)> \br>
           \c> \c<\equiv>> \c<\rm<`l> m. \sfun> \rm<`l> n. \sfun> \rm<`l> a. \sfun> n (m a)> \br>
-          \c<\times|ord|>> \c<:> \c<(A \buharprarr> A') \times> (B \buharprarr> B') \buharprarr> (A \times> B \buharprarr> A' \times> B')> \br>
+          \c<\times|ord|>> \c<:> \c<(A \buharprarr> B) \times> (B \buharprarr> D) \buharprarr> (A \times> C \buharprarr> B \times> D)> \br>
           \c> \c<\equiv>> \c<\rm<`l> m. \sfun> \rm<`l> n. \sfun> \rm<`l> p. \sfun> \langle> m (\tt|fun|<fst> p), n (\tt|fun|<snd> p) \rangle>> \br>
         >
       >
