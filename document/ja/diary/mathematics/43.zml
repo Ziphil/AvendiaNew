@@ -28,8 +28,6 @@
     >
     \p<
       次に、項の解釈を以下のように定める。
-    >
-    \p<
       型割り当て &m<`G \vdash> M: A \buharprarr> B> に対し、
       &mb<
         \overline<\tt|fun|<arr> M> = \tort<\diag<
