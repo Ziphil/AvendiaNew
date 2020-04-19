@@ -1,9 +1,9 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<下方射と上方射の Haskell 実装>
-  \use-math>
+  \use-math;
 
   \h1<日記 (2019 年 11 月 28 日)>
   \p<
@@ -15,7 +15,7 @@
   >
   \thm|type="prp"|<
     \p<
-      圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
+      圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
       &m<F>-代数 &m<(S, `s)> が始代数ならば、&m<`s> は同型射である。
     >
   >
@@ -25,7 +25,7 @@
       &m<(F S, F `s)> は &m<F>-代数であるから、図式
       &mb<
         \diag<
-          \v<F S> \v<FF S> \br>
+          \v<F S> \v<FF S> \br;
           \v<S> \v<F S>
           \ar|s="1",e="2"|<Ff> \ar|s="3",e="4",inv|<f>
           \ar|s="1",e="3",inv|<`s> \ar|s="2",e="4"|<F `s>
@@ -35,21 +35,21 @@
       すると、
       &mb<
         \diag<
-          \v<F S>  \v<F S> \br>
+          \v<F S>  \v<F S> \br;
           \v<S> \v<S>
-          \ar|s="1",e="2"|<F (`s \circ> f)> \ar|s="3",e="4",inv|<`s \circ> f>
+          \ar|s="1",e="2"|<F (`s \circ; f)> \ar|s="3",e="4",inv|<`s \circ; f>
           \ar|s="1",e="3",inv|<`s> \ar|s="2",e="4"|<`s>
         >
       >
-      が可換になるから、&m<`s \circ> f: S \to> S> は代数の射である。
-      一方、&m<\rm<id>: S \to> S> も明らかに代数の射である。
-      このような射は一意でなければならないので、&m<`s \circ> f = \rm<id>> が成り立つ。
-      また、最初の図式の可換性により、&m<f \circ> `s = F (`s \circ> f) = \rm<id>> も成り立つ。
+      が可換になるから、&m<`s \circ; f: S \to; S> は代数の射である。
+      一方、&m<\rm<id>: S \to; S> も明らかに代数の射である。
+      このような射は一意でなければならないので、&m<`s \circ; f = \rm<id>> が成り立つ。
+      また、最初の図式の可換性により、&m<f \circ; `s = F (`s \circ; f) = \rm<id>> も成り立つ。
       以上により、&m<f> は &m<`s> の逆射になるから、&m<`s> は同型射である。
     >
   >
   \p<
-    つまり、&m<F>-始代数 &m<(S, `s)> は &m<S \cong> F S> を満たすということなので、&m<F> の不動点であると見なすことができる。
+    つまり、&m<F>-始代数 &m<(S, `s)> は &m<S \cong; F S> を満たすということなので、&m<F> の不動点であると見なすことができる。
     さらに、別の &m<F>-代数があるとそれに向かって射が伸びることから、&m<F>-始代数は &m<F> の不動点の中でも最小不動点であると言うことができる。
     双対的に、&m<F>-終余代数は &m<F> の最大不動点である。
   >
@@ -88,7 +88,7 @@
     この式はまさに、下方射が満たすべき可換図式
     &mb<
       \diag|hor="vthk"|<
-        \v<\tt<f s>>  \v<\tt<f a>> \br>
+        \v<\tt<f s>>  \v<\tt<f a>> \br;
         \v<\tt<s>> \v<\tt<a>>
         \ar|s="1",e="2"|<\tt<fmap (cata alg)>> \ar|s="3",e="4",inv|<\tt<cata alg>>
         \ar|s="1",e="3",shift="-3",inv|<\tt<inF>> \ar|s="3",e="1",shift="-3",inv|<\tt<outF>> \ar|s="2",e="4"|<\tt<alg>>
@@ -102,7 +102,7 @@
     \a|href="22.html"|<11 月 16 日>と同じく、ある &m<V> を固定して、
     &mb<
       \array|align="rrcl"|<
-        \c<\sb<F><V>:> \c<A> \c<\longmapsto>> \c<1 + V \times> A>
+        \c<\sb<F><V>:> \c<A> \c<\longmapsto;> \c<1 + V \times; A>
       >
     >
     という形の関手を考えることにする。

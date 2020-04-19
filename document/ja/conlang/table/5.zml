@@ -1,10 +1,10 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<単位>
   \ver<5 代 1 期>
-  \use-math>
+  \use-math;
 
   \h1<単位>
   \p<
@@ -27,13 +27,13 @@
   >
   \table<
     \tr<\th<単語>\th<略称>\th<定義>\th<物理量>>
-    \tr<\td<*>\td<*>\td<1.3395919 &m<\rm<m> \cdot> \rm<g> \cdot> \sp<\rm<s>><-2> = \rm<mN>>>\td<力>>
-    \tr<\td<*>\td<*>\td<1.3395919 &m<\sp<\rm<m>><-1> \cdot> \rm<g> \cdot> \sp<\rm<s>><-2> = \rm<mPa>>>\td<圧力>>
-    \tr<\td<*>\td<*>\td<1.3395919 &m<\sp<\rm<m>><2> \cdot> \rm<g> \cdot> \sp<\rm<s>><-2> = \rm<mJ>>>\td<エネルギー, 仕事>>
-    \tr<\td<*>\td<*>\td<1.5504536 &m<\sp<\rm<m>><2> \cdot> \rm<g> \cdot> \sp<\rm<s>><-3> = \rm<mW>>>\td<仕事率>>
-    \tr<\td<*>\td<*>\td<0.8640000 &m<\rm<s> \cdot> \rm<A> = \rm<C>>>\td<電荷>>
-    \tr<\td<*>\td<*>\td<1.5504536 &m<\sp<\rm<m>><2> \cdot> \rm<g> \cdot> \sp<\rm<s>><-3> \cdot> \sp<\rm<A>><-1> = \rm<mV>>>\td<電位差>>
-    \tr<\td<*>\td<*>\td<1.5504536 &m<\sp<\rm<m>><2> \cdot> \rm<g> \cdot> \sp<\rm<s>><-3> \cdot> \sp<\rm<A>><-2> = \rm<mΩ>>>\td<電気抵抗>>
+    \tr<\td<*>\td<*>\td<1.3395919 &m<\rm<m> \cdot; \rm<g> \cdot; \sp<\rm<s>><-2> = \rm<mN>>>\td<力>>
+    \tr<\td<*>\td<*>\td<1.3395919 &m<\sp<\rm<m>><-1> \cdot; \rm<g> \cdot; \sp<\rm<s>><-2> = \rm<mPa>>>\td<圧力>>
+    \tr<\td<*>\td<*>\td<1.3395919 &m<\sp<\rm<m>><2> \cdot; \rm<g> \cdot; \sp<\rm<s>><-2> = \rm<mJ>>>\td<エネルギー, 仕事>>
+    \tr<\td<*>\td<*>\td<1.5504536 &m<\sp<\rm<m>><2> \cdot; \rm<g> \cdot; \sp<\rm<s>><-3> = \rm<mW>>>\td<仕事率>>
+    \tr<\td<*>\td<*>\td<0.8640000 &m<\rm<s> \cdot; \rm<A> = \rm<C>>>\td<電荷>>
+    \tr<\td<*>\td<*>\td<1.5504536 &m<\sp<\rm<m>><2> \cdot; \rm<g> \cdot; \sp<\rm<s>><-3> \cdot; \sp<\rm<A>><-1> = \rm<mV>>>\td<電位差>>
+    \tr<\td<*>\td<*>\td<1.5504536 &m<\sp<\rm<m>><2> \cdot; \rm<g> \cdot; \sp<\rm<s>><-3> \cdot; \sp<\rm<A>><-2> = \rm<mΩ>>>\td<電気抵抗>>
     \tr<\td<*>\td<*>\td<1.1574074 &m<\sp<\rm<s>><-1> = \rm<Hz>>>\td<周波数>>
     \tr<\td<*>\td<*>\td<1 rad>\td<平面角>>
     \tr<\td<*>\td<*>\td<1 sr>\td<立体角>>

@@ -1,9 +1,9 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<アローの圏論的意味論 (その 4)>
-  \use-math>
+  \use-math;
 
   \h1<日記 (2020 年 4 月 18 日)>
   \p<
@@ -21,28 +21,28 @@
       &m<\bfrm<Arrow>> において、パラメトリックな閉じた項 &m<\rm<second>> を、
       &mb<
         \array|align="rcl"|<
-          \c<\rm<second>> \c<:> \c<(A \bwaverarr> B) \buharprarr> (C \times> A \bwaverarr> B \times> A)> \br>
-          \c> \c<\equiv>> \c<\rm<`l> f. \sfun> \tt|fun|<arr> \rm<swap> \gggt|bin|> f \gggt|bin|> \tt|fun|<arr> \rm<swap>>
+          \c<\rm<second>> \c<:> \c<(A \bwaverarr; B) \buharprarr; (C \times; A \bwaverarr; B \times; A)> \br;
+          \c; \c<\equiv;> \c<\rm<`l> f. \sfun; \tt|fun|<arr> \rm<swap> \gggt|bin|; f \gggt|bin|; \tt|fun|<arr> \rm<swap>>
         >
       >
       と定めと、
       &mb<
         \array|align="rcl"|<
-          \c<\rm|fun|<second> (\tt|fun|<arr> M)> \c<=> \c<\tt|fun|<arr> (\rm<id> \times> M)> \br>
-          \c<\rm|fun|<second> F \gggt|bin|> \tt|fun|<arr> (M \times> \rm<id>)> \c<=> \c<\tt|fun|<arr> (M \times> \rm<id>) \gggt|bin|> \rm|fun|<second> F> \br>
-          \c<\rm|fun|<second> (F \gggt|bin|> G)> \c<=> \c<\rm|fun|<second> F \gggt|bin|> \rm|fun|<second> G> \br>
-          \c<\rm|fun|<second> F \gggt|bin|> \tt|fun|<arr> \rm<snd>> \c<=> \c<\tt|fun|<arr> \rm<snd> \gggt|bin|> F> \br>
-          \c<\rm|fun|<second> (\rm|fun|<second> F) \gggt|bin|> \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|> \rm|fun|<second> F> \br>
+          \c<\rm|fun|<second> (\tt|fun|<arr> M)> \c<=> \c<\tt|fun|<arr> (\rm<id> \times; M)> \br;
+          \c<\rm|fun|<second> F \gggt|bin|; \tt|fun|<arr> (M \times; \rm<id>)> \c<=> \c<\tt|fun|<arr> (M \times; \rm<id>) \gggt|bin|; \rm|fun|<second> F> \br;
+          \c<\rm|fun|<second> (F \gggt|bin|; G)> \c<=> \c<\rm|fun|<second> F \gggt|bin|; \rm|fun|<second> G> \br;
+          \c<\rm|fun|<second> F \gggt|bin|; \tt|fun|<arr> \rm<snd>> \c<=> \c<\tt|fun|<arr> \rm<snd> \gggt|bin|; F> \br;
+          \c<\rm|fun|<second> (\rm|fun|<second> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \rm|fun|<second> F> \br;
         >
       >
       が成り立つ。
       ここで、
       &mb<
         \array|align="rcl"|<
-          \c<\rm<swap>> \c<:> \c<A \times> B \buharprarr> B \times> A> \br>
-          \c> \c<\equiv>> \c<\rm<`l> p. \sfun> \langle> \tt|fun|<snd> p, \tt|fun|<fst> p \rangle>> \br>
-          \c<\rm<snd>> \c<:> \c<A \times> B \buharprarr> B> \br>
-          \c> \c<\equiv>> \c<\rm<`l> p. \sfun> \tt|fun|<snd> p> \br>
+          \c<\rm<swap>> \c<:> \c<A \times; B \buharprarr; B \times; A> \br;
+          \c; \c<\equiv;> \c<\rm<`l> p. \sfun; \langle; \tt|fun|<snd> p, \tt|fun|<fst> p \rangle;> \br;
+          \c<\rm<snd>> \c<:> \c<A \times; B \buharprarr; B> \br;
+          \c; \c<\equiv;> \c<\rm<`l> p. \sfun; \tt|fun|<snd> p> \br;
         >
       >
       と定めている。
@@ -59,7 +59,7 @@
   >
   \thm|type="prp",id="comp"|<
     \p<
-      &m<\bfrm<Arrow>> における型割り当て &m<`G \vdash> M: A> および &m<`G \vdash> N: A> に対し、任意の豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つならば、&m<\bfrm<Arrow>> で &m<M = N> が成り立つ。
+      &m<\bfrm<Arrow>> における型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、任意の豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つならば、&m<\bfrm<Arrow>> で &m<M = N> が成り立つ。
     >
   >
   \prf<
@@ -71,19 +71,19 @@
         &m<\scr<C>> の対象は、&m<\bfrm<Arrow>> の型全体とする。
       >
       \li*<
-        &m<\scr<C>> の対象 &m<A, B> の間の射は、&m<\bfrm<Arrow>> の型割り当て &m<a: A \vdash> M: B> の等号 (および自由変項 &m<a> の名前の変更) による同値類全体とする。
-        この同値類は &m<`{a: A \vdash> M: B`}> もしくはより簡潔に &m<`{M`}> で表す。
+        &m<\scr<C>> の対象 &m<A, B> の間の射は、&m<\bfrm<Arrow>> の型割り当て &m<a: A \vdash; M: B> の等号 (および自由変項 &m<a> の名前の変更) による同値類全体とする。
+        この同値類は &m<`{a: A \vdash; M: B`}> もしくはより簡潔に &m<`{M`}> で表す。
       >
       \li*<
-        &m<\scr<C>> の対象 &m<A> 上の恒等射は、&m<`{a: A \vdash> a: A`}> とする。
+        &m<\scr<C>> の対象 &m<A> 上の恒等射は、&m<`{a: A \vdash; a: A`}> とする。
       >
       \li*<
-        &m<\scr<C>> の射 &m<`{a: A \vdash> M: B`}> および &m<`{b: B \vdash> N: C`}> の合成は、&m<`{a: A \vdash> N `[b \coloneqq> M`]: C`}> とする。
+        &m<\scr<C>> の射 &m<`{a: A \vdash; M: B`}> および &m<`{b: B \vdash; N: C`}> の合成は、&m<`{a: A \vdash; N `[b \coloneqq; M`]: C`}> とする。
       >
     >
     \p<
       よく知られているように、このように定めると実際に圏を成し、いわゆる &m<\bfrm<Arrow>> の構文圏と呼ばれるものになる。
-      さらに、&m<\bfrm<Arrow>> は &m<\sb<\rm<`l>><1 \times>>> を部分システムとして含むので、これはカルテシアン閉圏になっている。
+      さらに、&m<\bfrm<Arrow>> は &m<\sb<\rm<`l>><1 \times;>> を部分システムとして含むので、これはカルテシアン閉圏になっている。
     >
     \p<
       続いて、&m<\scr<C>>-豊穣圏 &m<\scr<D>> を以下のように定める。
@@ -94,19 +94,19 @@
         すなわち、&m<\bfrm<Arrow>> の型全体である。
       >
       \li*<
-        &m<\scr<D>> の対象 &m<A, B> に対し、その間の射対象を &m<`[A, B`] = A \bwaverarr> B> で定める。
+        &m<\scr<D>> の対象 &m<A, B> に対し、その間の射対象を &m<`[A, B`] = A \bwaverarr; B> で定める。
       >
       \li*<
         &m<\scr<D>> の対象 &m<A> に対し、恒等射を定める射を、
         &mb<
-          \sb<j><A> = `{u: 1 \vdash> \tt|fun|<arr> \rm<id>: A \bwaverarr> A`}
+          \sb<j><A> = `{u: 1 \vdash; \tt|fun|<arr> \rm<id>: A \bwaverarr; A`}
         >
         とする。
       >
       \li*<
         &m<\scr<D>> の対象 &m<A, B, C> に対し、合成を定める射を、
         &mb<
-          \sb<c><ABC> = `{p: (A \bwaverarr> B) \times> (B \bwaverarr> C) \vdash> \tt|fun|<fst> p \gggt|bin|> \tt|fun|<snd> p: A \bwaverarr> C`}
+          \sb<c><ABC> = `{p: (A \bwaverarr; B) \times; (B \bwaverarr; C) \vdash; \tt|fun|<fst> p \gggt|bin|; \tt|fun|<snd> p: A \bwaverarr; C`}
         >
         とする。
       >
@@ -115,70 +115,70 @@
       これが実際に &m<\scr<C>>-豊穣圏を定めるためには、3 つの等式
       &mb<
         \array|align="rcl"|<
-          \c<\tt|fun|<arr> \rm<id> \gggt|bin|> F> \c<=> \c<F> \br>
-          \c<F \gggt|bin|> \tt|fun|<arr> \rm<id>> \c<=> \c<F> \br>
-          \c<(F \gggt|bin|> G) \gggt|bin|> H> \c<=> \c<F \gggt|bin|> (G \gggt|bin|> H)>
+          \c<\tt|fun|<arr> \rm<id> \gggt|bin|; F> \c<=> \c<F> \br;
+          \c<F \gggt|bin|; \tt|fun|<arr> \rm<id>> \c<=> \c<F> \br;
+          \c<(F \gggt|bin|; G) \gggt|bin|; H> \c<=> \c<F \gggt|bin|; (G \gggt|bin|; H)>
         >
       >
       が成り立つ必要があるが、これはまさに &m<\bfrm<Arrow>> の公理の一部そのものであるから成り立つ。
     >
     \p<
       次に、&m<\scr<D>> にバイノイダル圏の構造を定める。
-      &m<\scr<D>> の対象 &m<A, B> に対して &mb<A \ltimes> B = A \rtimes> B = A \times> B> とし、さらに &m<\scr<D>> の対象 &m<A', B'> に対して、
+      &m<\scr<D>> の対象 &m<A, B> に対して &mb<A \ltimes; B = A \rtimes; B = A \times; B> とし、さらに &m<\scr<D>> の対象 &m<A', B'> に対して、
       &mb<
         \array|align="rcl"|<
-          \c<(\text<-> \ltimes> B) \sb><AA'>> \c<=> \c<`{f: A \bwaverarr> A' \vdash> \rm|fun|<first> f: A \times> B \bwaverarr> A' \times> B`}> \br>
-          \c<(A \rtimes> \text<->) \sb><BB'>> \c<=> \c<`{f: B \bwaverarr> B' \vdash> \rm|fun|<second> f: A \times> B \bwaverarr> A \times> B'`}> \br>
+          \c<(\text<-> \ltimes; B) \sb<><AA'>> \c<=> \c<`{f: A \bwaverarr; A' \vdash; \rm|fun|<first> f: A \times; B \bwaverarr; A' \times; B`}> \br;
+          \c<(A \rtimes; \text<->) \sb<><BB'>> \c<=> \c<`{f: B \bwaverarr; B' \vdash; \rm|fun|<second> f: A \times; B \bwaverarr; A \times; B'`}> \br;
         >
       >
       と定める。
-      これが関手 &m<\text<-> \ltimes> B> と &m<A \rtimes> \text<->> を定めるための条件は、4 つの等式
+      これが関手 &m<\text<-> \ltimes; B> と &m<A \rtimes; \text<->> を定めるための条件は、4 つの等式
       &mb<
         \array|align="rcl"|<
-          \c<\rm|fun|<first> (\tt|fun|<arr> \rm<id>)> \c<=> \c<\tt|fun|<arr> \rm<id>> \br>
-          \c<\rm|fun|<second> (\tt|fun|<arr> \rm<id>)> \c<=> \c<\tt|fun|<arr> \rm<id>> \br>
-          \c<\rm|fun|<first> (F \gggt|bin|> G)> \c<=> \c<\rm|fun|<first> F \gggt|bin|> \rm|fun|<first> G> \br>
-          \c<\rm|fun|<second> (F \gggt|bin|> G)> \c<=> \c<\rm|fun|<second> F \gggt|bin|> \rm|fun|<second> G>
+          \c<\rm|fun|<first> (\tt|fun|<arr> \rm<id>)> \c<=> \c<\tt|fun|<arr> \rm<id>> \br;
+          \c<\rm|fun|<second> (\tt|fun|<arr> \rm<id>)> \c<=> \c<\tt|fun|<arr> \rm<id>> \br;
+          \c<\rm|fun|<first> (F \gggt|bin|; G)> \c<=> \c<\rm|fun|<first> F \gggt|bin|; \rm|fun|<first> G> \br;
+          \c<\rm|fun|<second> (F \gggt|bin|; G)> \c<=> \c<\rm|fun|<second> F \gggt|bin|; \rm|fun|<second> G>
         >
       >
-      に帰着されるが、最初の 2 つの式は明らかに成り立ち、残りの 2 つの式は &m<\bfrm<Arrow>> の公理と命題 \ref|type="thm",id="second"|> の一部そのものである。
+      に帰着されるが、最初の 2 つの式は明らかに成り立ち、残りの 2 つの式は &m<\bfrm<Arrow>> の公理と命題 \ref|type="thm",id="second"|; の一部そのものである。
     >
     \p<
       さらに、&m<\scr<D>> に前モノイダル圏の構造を定める。
-      まず、&m<\top> = 1> とおく。
+      まず、&m<\top; = 1> とおく。
       さらに、前モノイダル圏に必要な 4 種類の構造射を、&m<\scr<D>> の対象 &m<A, B, C> に対し、
       &mb<
         \array|align="rcl"|<
-          \c<\sb<`a><ABC>> \c<=> \c<`{u: 1 \vdash> \tt|fun|<arr> \rm<assoc>: (A \times> B) \times> C \bwaverarr> A \times> (B \times> C)`}> \br>
-          \c<\sb<`l><A>> \c<=> \c<`{u: 1 \vdash> \tt|fun|<arr> (\rm<`l> a. \sfun> \langle> \ostar>, a \rangle>) : A \bwaverarr> 1 \times> A`}> \br>
-          \c<\sb<`r><A>> \c<=> \c<`{u: 1 \vdash> \tt|fun|<arr> (\rm<`l> a. \sfun> \langle> a, \ostar> \rangle>) : A \bwaverarr> A \times> 1`}> \br>
-          \c<\sb<`s><AB>> \c<=> \c<`{u: 1 \vdash> \tt|fun|<arr> \rm<swap>: A \times> B \bwaverarr> B \times> A`}>
+          \c<\sb<`a><ABC>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> \rm<assoc>: (A \times; B) \times; C \bwaverarr; A \times; (B \times; C)`}> \br;
+          \c<\sb<`l><A>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;) : A \bwaverarr; 1 \times; A`}> \br;
+          \c<\sb<`r><A>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;) : A \bwaverarr; A \times; 1`}> \br;
+          \c<\sb<`s><AB>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> \rm<swap>: A \times; B \bwaverarr; B \times; A`}>
         >
       >
       で定める。
       これらがそれぞれ各変数について自然であることは、7 つの等式
       &mb<
         \array|align="rcl"|<
-          \c<\rm|fun|<first> (\rm|fun|<first> F) \gggt|bin|> \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|> \rm|fun|<first> F> \br>
-          \c<\rm|fun|<second> (\rm|fun|<first> F) \gggt|bin|> \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|> \rm|fun|<first> (\rm|fun|<second> F)> \br>
-          \c<\rm|fun|<second> (\rm|fun|<second> F) \gggt|bin|> \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|> \rm|fun|<second> F> \br>
-          \c<F \gggt|bin|> \tt|fun|<arr> (\rm<`l> a. \sfun> \langle> \ostar>, a \rangle>)> \c<=> \c<\tt|fun|<arr> (\rm<`l> a. \sfun> \langle> \ostar>, a \rangle>) \gggt|bin|> \rm|fun|<second> F> \br>
-          \c<F \gggt|bin|> \tt|fun|<arr> (\rm<`l> a. \sfun> \langle> a, \ostar> \rangle>)> \c<=> \c<\tt|fun|<arr> (\rm<`l> a. \sfun> \langle> a, \ostar> \rangle>) \gggt|bin|> \rm|fun|<first> F> \br>
-          \c<\rm|fun|<first> F \gggt|bin|> \tt|fun|<arr> \rm<swap>> \c<=> \c<\tt|fun|<arr> \rm<swap> \gggt|bin|> \rm|fun|<second> F> \br>
-          \c<\rm|fun|<second> F \gggt|bin|> \tt|fun|<arr> \rm<swap>> \c<=> \c<\tt|fun|<arr> \rm<swap> \gggt|bin|> \rm|fun|<first> F>
+          \c<\rm|fun|<first> (\rm|fun|<first> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \rm|fun|<first> F> \br;
+          \c<\rm|fun|<second> (\rm|fun|<first> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \rm|fun|<first> (\rm|fun|<second> F)> \br;
+          \c<\rm|fun|<second> (\rm|fun|<second> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \rm|fun|<second> F> \br;
+          \c<F \gggt|bin|; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;)> \c<=> \c<\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;) \gggt|bin|; \rm|fun|<second> F> \br;
+          \c<F \gggt|bin|; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;)> \c<=> \c<\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;) \gggt|bin|; \rm|fun|<first> F> \br;
+          \c<\rm|fun|<first> F \gggt|bin|; \tt|fun|<arr> \rm<swap>> \c<=> \c<\tt|fun|<arr> \rm<swap> \gggt|bin|; \rm|fun|<second> F> \br;
+          \c<\rm|fun|<second> F \gggt|bin|; \tt|fun|<arr> \rm<swap>> \c<=> \c<\tt|fun|<arr> \rm<swap> \gggt|bin|; \rm|fun|<first> F>
         >
       >
       に帰着され、さらに、これらがそれぞれ中心的であることは、8 つの等式
       &mb<
         \array|align="rcl"|<
-          \c<\rm|fun|<first> (\tt|fun|<arr> \rm<assoc>) \gggt|bin|> \rm|fun|<second> F> \c<=> \c<\rm|fun|<second> F \gggt|bin|> \rm|fun|<first> (\tt|fun|<arr> \rm<assoc>)> \br>
-          \c<\rm|fun|<second> (\tt|fun|<arr> \rm<assoc>) \gggt|bin|> \rm|fun|<first> F> \c<=> \c<\rm|fun|<first> F \gggt|bin|> \rm|fun|<second> (\tt|fun|<arr> \rm<assoc>)> \br>
-          \c<\rm|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun> \langle> \ostar>, a \rangle>)) \gggt|bin|> \rm|fun|<second> F> \c<=> \c<\rm|fun|<second> F \gggt|bin|> \rm|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun> \langle> \ostar>, a \rangle>))> \br>
-          \c<\rm|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun> \langle> \ostar>, a \rangle>)) \gggt|bin|> \rm|fun|<first> F> \c<=> \c<\rm|fun|<first> F \gggt|bin|> \rm|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun> \langle> \ostar>, a \rangle>))> \br>
-          \c<\rm|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun> \langle> a, \ostar> \rangle>)) \gggt|bin|> \rm|fun|<second> F> \c<=> \c<\rm|fun|<second> F \gggt|bin|> \rm|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun> \langle> a, \ostar> \rangle>))> \br>
-          \c<\rm|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun> \langle> a, \ostar> \rangle>)) \gggt|bin|> \rm|fun|<first> F> \c<=> \c<\rm|fun|<first> F \gggt|bin|> \rm|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun> \langle> a, \ostar> \rangle>))> \br>
-          \c<\rm|fun|<first> (\tt|fun|<arr> \rm<swap>) \gggt|bin|> \rm|fun|<second> F> \c<=> \c<\rm|fun|<second> F \gggt|bin|> \rm|fun|<first> (\tt|fun|<arr> \rm<swap>)> \br>
-          \c<\rm|fun|<second> (\tt|fun|<arr> \rm<swap>) \gggt|bin|> \rm|fun|<first> F> \c<=> \c<\rm|fun|<first> F \gggt|bin|> \rm|fun|<second> (\tt|fun|<arr> \rm<swap>)>
+          \c<\rm|fun|<first> (\tt|fun|<arr> \rm<assoc>) \gggt|bin|; \rm|fun|<second> F> \c<=> \c<\rm|fun|<second> F \gggt|bin|; \rm|fun|<first> (\tt|fun|<arr> \rm<assoc>)> \br;
+          \c<\rm|fun|<second> (\tt|fun|<arr> \rm<assoc>) \gggt|bin|; \rm|fun|<first> F> \c<=> \c<\rm|fun|<first> F \gggt|bin|; \rm|fun|<second> (\tt|fun|<arr> \rm<assoc>)> \br;
+          \c<\rm|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;)) \gggt|bin|; \rm|fun|<second> F> \c<=> \c<\rm|fun|<second> F \gggt|bin|; \rm|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;))> \br;
+          \c<\rm|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;)) \gggt|bin|; \rm|fun|<first> F> \c<=> \c<\rm|fun|<first> F \gggt|bin|; \rm|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;))> \br;
+          \c<\rm|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;)) \gggt|bin|; \rm|fun|<second> F> \c<=> \c<\rm|fun|<second> F \gggt|bin|; \rm|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;))> \br;
+          \c<\rm|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;)) \gggt|bin|; \rm|fun|<first> F> \c<=> \c<\rm|fun|<first> F \gggt|bin|; \rm|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;))> \br;
+          \c<\rm|fun|<first> (\tt|fun|<arr> \rm<swap>) \gggt|bin|; \rm|fun|<second> F> \c<=> \c<\rm|fun|<second> F \gggt|bin|; \rm|fun|<first> (\tt|fun|<arr> \rm<swap>)> \br;
+          \c<\rm|fun|<second> (\tt|fun|<arr> \rm<swap>) \gggt|bin|; \rm|fun|<first> F> \c<=> \c<\rm|fun|<first> F \gggt|bin|; \rm|fun|<second> (\tt|fun|<arr> \rm<swap>)>
         >
       >
       に帰着される。
@@ -188,37 +188,37 @@
       最後に、Freyd 圏の構造を定める。
       &m<\scr<D>> の対象 &m<A, B> に対して、
       &mb<
-        \sb<J><AB> = `{m: A \buharprarr> B \vdash> \tt|fun|<arr> m: A \bwaverarr> B`}
+        \sb<J><AB> = `{m: A \buharprarr; B \vdash; \tt|fun|<arr> m: A \bwaverarr; B`}
       >
       と定める。
       これが対象上恒等的であるための条件は、2 つの等式
       &mb<
         \array|align="rcl"|<
-          \c<\tt|fun|<arr> \rm<id>> \c<=> \c<\tt|fun|<arr> \rm<id>> \br>
-          \c<\tt|fun|<arr> (M \rhd|bin|> N)> \c<=> \c<\tt|fun|<arr> M \gggt|bin|> \tt|fun|<arr> N>
+          \c<\tt|fun|<arr> \rm<id>> \c<=> \c<\tt|fun|<arr> \rm<id>> \br;
+          \c<\tt|fun|<arr> (M \rhd|bin|; N)> \c<=> \c<\tt|fun|<arr> M \gggt|bin|; \tt|fun|<arr> N>
         >
       >
       に帰着される。
       また、これが前モノイダル圏の構造を保つことは、2 つの等式
       &mb<
         \array|align="rcl"|<
-          \c<\tt|fun|<arr> (M \times> \rm<id>)> \c<=> \c<\rm|fun|<first> (\tt|fun|<arr> M)> \br>
-          \c<\tt|fun|<arr> (\rm<id> \times> M)> \c<=> \c<\rm|fun|<second> (\tt|fun|<arr> M)>
+          \c<\tt|fun|<arr> (M \times; \rm<id>)> \c<=> \c<\rm|fun|<first> (\tt|fun|<arr> M)> \br;
+          \c<\tt|fun|<arr> (\rm<id> \times; M)> \c<=> \c<\rm|fun|<second> (\tt|fun|<arr> M)>
         >
       >
       に帰着され、さらに、これが中心的であることは、2 つの等式
       &mb<
         \array|align="rcl"|<
-          \c<\rm|fun|<first> (\tt|fun|<arr> M) \gggt|bin|> \rm|fun|<second> F> \c<=> \c<\rm|fun|<second> F \gggt|bin|> \rm|fun|<first> (\tt|fun|<arr> M)> \br>
-          \c<\rm|fun|<second> (\tt|fun|<arr> M) \gggt|bin|> \rm|fun|<first> F> \c<=> \c<\rm|fun|<first> F \gggt|bin|> \rm|fun|<second> (\tt|fun|<arr> M)>
+          \c<\rm|fun|<first> (\tt|fun|<arr> M) \gggt|bin|; \rm|fun|<second> F> \c<=> \c<\rm|fun|<second> F \gggt|bin|; \rm|fun|<first> (\tt|fun|<arr> M)> \br;
+          \c<\rm|fun|<second> (\tt|fun|<arr> M) \gggt|bin|; \rm|fun|<first> F> \c<=> \c<\rm|fun|<first> F \gggt|bin|; \rm|fun|<second> (\tt|fun|<arr> M)>
         >
       >
       に帰着される。
       これらの等式も全て簡単な計算によって導かれる。
     >
     \p<
-      以上により、豊穣 Freyd 圏 &m<(\scr<C>; \scr<D>, J)> が得られ、定義によって &m<\bfrm<Arrow>> のこの圏への解釈は恒等写像になっていることが分かる。
-      したがって、型割り当て &m<`G \vdash> M: A> および &m<`G \vdash> N: A> に対し、任意の豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つとすると、特に今定義した &m<(\scr<C>; \scr<D>, J)> においても &m<\overline<M> = \overline<N>> となり、それはすなわち &m<\bfrm<Arrow>> で &m<M = N> が成り立つということである。
+      以上により、豊穣 Freyd 圏 &m<(\scr<C>`; \scr<D>, J)> が得られ、定義によって &m<\bfrm<Arrow>> のこの圏への解釈は恒等写像になっていることが分かる。
+      したがって、型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、任意の豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つとすると、特に今定義した &m<(\scr<C>`; \scr<D>, J)> においても &m<\overline<M> = \overline<N>> となり、それはすなわち &m<\bfrm<Arrow>> で &m<M = N> が成り立つということである。
     >
   >
   \p<
@@ -227,12 +227,12 @@
   >
   \thm|type="thm"|<
     \p<
-      &m<\bfrm<Arrow>> における型割り当て &m<`G \vdash> M: A> および &m<`G \vdash> N: A> に対し、任意の豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つための必要十分条件は、&m<\bfrm<Arrow>> で &m<M = N> が成り立つことである。
+      &m<\bfrm<Arrow>> における型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、任意の豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つための必要十分条件は、&m<\bfrm<Arrow>> で &m<M = N> が成り立つことである。
     >
   >
   \prf<
     \p<
-      \a|href="43.html"|<4 月 18 日>の命題 1 と今回の命題 \ref|type="thm",id="comp"|> から従う。
+      \a|href="43.html"|<4 月 18 日>の命題 1 と今回の命題 \ref|type="thm",id="comp"|; から従う。
     >
   >
   \p<

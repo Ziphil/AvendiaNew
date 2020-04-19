@@ -1,5 +1,5 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<?>
@@ -17,7 +17,7 @@
   \cz<\p<
     {haha.}
     {zae, rest a kol e' sask tuuj a his e los soof o.}
-    {…a zas paki }\red|length="6"|>[.]
+    {…a zas paki }\red|length="6"|;[.]
     {zo stel a kol je tees e hekt li los fe.}
   >>
   \ch<\p<

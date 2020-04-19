@@ -1,32 +1,32 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \html|lang="ja"|<
   \head<
-    \meta|charset="UTF-8"|>
-    \link|rel="stylesheet",type="text/css",href="../../style/2.css"|>
+    \meta|charset="UTF-8"|;
+    \link|rel="stylesheet",type="text/css",href="../../style/2.css"|;
     \title<Avendia 19 — 人工言語シャレイア語>
   >
   \body<
 
     \div|class="top"|<
-      \img|alt="",src="../../material/idolmaster/32.png"|>
+      \img|alt="",src="../../material/idolmaster/32.png"|;
     >
 
     \div|class="link"|<
-      \a|href="#haruka"|<\img|alt="",src="../../material/idolmaster/16.png"|>>\a|href="#chihaya"|<\img|alt="",src="../../material/idolmaster/23.png"|>>\a|href="#yayoi"|<\img|alt="",src="../../material/idolmaster/17.png"|>>\br>
-      \a|href="#iori"|<\img|alt="",src="../../material/idolmaster/25.png"|>>\a|href="#ami"|<\img|alt="",src="../../material/idolmaster/18.png"|>>\a|href="#mami"|<\img|alt="",src="../../material/idolmaster/19.png"|>>\a|href="#azusa"|<\img|alt="",src="../../material/idolmaster/24.png"|>>\br>
-      \a|href="#ritsuko"|<\img|alt="",src="../../material/idolmaster/21.png"|>>\a|href="#yukiho"|<\img|alt="",src="../../material/idolmaster/27.png"|>>\a|href="#makoto"|<\img|alt="",src="../../material/idolmaster/28.png"|>>\a|href="#miki"|<\img|alt="",src="../../material/idolmaster/20.png"|>>\br>
-      \a|href="#takane"|<\img|alt="",src="../../material/idolmaster/26.png"|>>\a|href="#hibiki"|<\img|alt="",src="../../material/idolmaster/22.png"|>>
+      \a|href="#haruka"|<\img|alt="",src="../../material/idolmaster/16.png"|;>\a|href="#chihaya"|<\img|alt="",src="../../material/idolmaster/23.png"|;>\a|href="#yayoi"|<\img|alt="",src="../../material/idolmaster/17.png"|;>\br;
+      \a|href="#iori"|<\img|alt="",src="../../material/idolmaster/25.png"|;>\a|href="#ami"|<\img|alt="",src="../../material/idolmaster/18.png"|;>\a|href="#mami"|<\img|alt="",src="../../material/idolmaster/19.png"|;>\a|href="#azusa"|<\img|alt="",src="../../material/idolmaster/24.png"|;>\br;
+      \a|href="#ritsuko"|<\img|alt="",src="../../material/idolmaster/21.png"|;>\a|href="#yukiho"|<\img|alt="",src="../../material/idolmaster/27.png"|;>\a|href="#makoto"|<\img|alt="",src="../../material/idolmaster/28.png"|;>\a|href="#miki"|<\img|alt="",src="../../material/idolmaster/20.png"|;>\br;
+      \a|href="#takane"|<\img|alt="",src="../../material/idolmaster/26.png"|;>\a|href="#hibiki"|<\img|alt="",src="../../material/idolmaster/22.png"|;>
     >
 
     \div|class="translation",id="haruka"|<
-      \div|class="name"|<\img|alt="",src="../../material/idolmaster/1.png"|>>
+      \div|class="name"|<\img|alt="",src="../../material/idolmaster/1.png"|;>
       \div|class="main"|<
         \div|class="header"|<
           \div|class="title"|<ステキハピネス>
-          \div|class="composer"|<作詞: mft \span|class="small"|<様>\br>作曲: kyo \span|class="small"|<様>>
-          \div|class="clear"|>
+          \div|class="composer"|<作詞: mft \span|class="small"|<様>\br;作曲: kyo \span|class="small"|<様>>
+          \div|class="clear"|;
         >
         \table<
           \tr<\td<ハピネス このステキな気持ちを>\td<\span|class="sans"|<a tel e her, e revez axaslef iqife met,>>>
@@ -52,16 +52,16 @@
           \tr<\td<ずっと\span|class="japanese"|<×>3 届けたいよ>\td<\span|class="sans"|<olôx olôx olôx, rafot séqac ca loc.>>>
         >
       >
-      \div|class="clear"|>
+      \div|class="clear"|;
     >
 
     \div|class="translation",id="chihaya"|<
-      \div|class="name"|<\img|alt="",src="../../material/idolmaster/8.png"|>>
+      \div|class="name"|<\img|alt="",src="../../material/idolmaster/8.png"|;>
       \div|class="main"|<
         \div|class="header"|<
           \div|class="title"|<約束>
-          \div|class="composer"|<作詞: 森由里子\span|class="small"|<様>\br>作曲: 中川浩二\span|class="small"|<様>, 小林啓樹\span|class="small"|<様>>
-          \div|class="clear"|>
+          \div|class="composer"|<作詞: 森由里子\span|class="small"|<様>\br;作曲: 中川浩二\span|class="small"|<様>, 小林啓樹\span|class="small"|<様>>
+          \div|class="clear"|;
         >
         \table<
           \tr<\td<ねえ 目を閉じれば見える>\td<\span|class="sans"|<sê, qetot vo qofos izi katlis,>>>
@@ -79,16 +79,16 @@
           \tr<\td<Thank you for love>\td<\span|class="sans"|<hafe, e xar.>>>
         >
       >
-      \div|class="clear"|>
+      \div|class="clear"|;
     >
 
     \div|class="translation",id="yayoi"|<
-      \div|class="name"|<\img|alt="",src="../../material/idolmaster/2.png"|>>
+      \div|class="name"|<\img|alt="",src="../../material/idolmaster/2.png"|;>
       \div|class="main"|<
         \div|class="header"|<
           \div|class="title"|<ハートウォーミング>
-          \div|class="composer"|<作詞: アツミサオリ\span|class="small"|<様>\br>作曲: KanadeYUK \span|class="small"|<様>>
-          \div|class="clear"|>
+          \div|class="composer"|<作詞: アツミサオリ\span|class="small"|<様>\br;作曲: KanadeYUK \span|class="small"|<様>>
+          \div|class="clear"|;
         >
         \table<
           \tr<\td<今日も髪をキュッと結んで>\td<\span|class="sans"|<te saq evoc, kaditas ozèt a tel e sîk.>>>
@@ -110,16 +110,16 @@
           \tr<\td<笑顔にずっと包まれていく>\td<\span|class="sans"|<tálot nakusos e tel a socavhâr olôx.>>>
         >
       >
-      \div|class="clear"|>
+      \div|class="clear"|;
     >
 
     \div|class="translation",id="iori"|<
-      \div|class="name"|<\img|alt="",src="../../material/idolmaster/10.png"|>>
+      \div|class="name"|<\img|alt="",src="../../material/idolmaster/10.png"|;>
       \div|class="main"|<
         \div|class="header"|<
           \div|class="title"|<地球ミラーボウル>
-          \div|class="composer"|<作詞: KOH \span|class="small"|<様>\br>作曲: KOH \span|class="small"|<様>>
-          \div|class="clear"|>
+          \div|class="composer"|<作詞: KOH \span|class="small"|<様>\br;作曲: KOH \span|class="small"|<様>>
+          \div|class="clear"|;
         >
         \table<
           \tr<\td<始めから秘密の扉開けて>\td<\span|class="sans"|<ri fôves a tel la tal acates e téd atikup,>>>
@@ -140,16 +140,16 @@
           \tr<\td<世界はひとつ!>\td<\span|class="sans"|<vo xod atisoc afik!>>>
         >
       >
-      \div|class="clear"|>
+      \div|class="clear"|;
     >
 
     \div|class="translation",id="ami"|<
-      \div|class="name"|<\img|alt="",src="../../material/idolmaster/3.png"|>>
+      \div|class="name"|<\img|alt="",src="../../material/idolmaster/3.png"|;>
       \div|class="main"|<
         \div|class="header"|<
           \div|class="title"|<微笑んだから、 気づいたんだ。>
-          \div|class="composer"|<作詞: 松井洋平\span|class="small"|<様>\br>作曲: 増谷賢\span|class="small"|<様>>
-          \div|class="clear"|>
+          \div|class="composer"|<作詞: 松井洋平\span|class="small"|<様>\br;作曲: 増谷賢\span|class="small"|<様>>
+          \div|class="clear"|;
         >
         \table<
           \tr<\td<ほんとはね ほんの少し>\td<\span|class="sans"|<te fonat okòv e tel ovel etim,>>>
@@ -170,16 +170,16 @@
           \tr<\td<Ah･･･ 僕は君のこと好きなんだね>\td<\span|class="sans"|<â, sokak a'l te sot ekoz e'n, rêyat a tel e loc.>>>
         >
       >
-      \div|class="clear"|>
+      \div|class="clear"|;
     >
 
     \div|class="translation",id="mami"|<
-      \div|class="name"|<\img|alt="",src="../../material/idolmaster/4.png"|>>
+      \div|class="name"|<\img|alt="",src="../../material/idolmaster/4.png"|;>
       \div|class="main"|<
         \div|class="header"|<
           \div|class="title"|<ジェミー>
-          \div|class="composer"|<作詞: mft\span|class="small"|<様>\br>作曲: 田村信二\span|class="small"|<様>>
-          \div|class="clear"|>
+          \div|class="composer"|<作詞: mft\span|class="small"|<様>\br;作曲: 田村信二\span|class="small"|<様>>
+          \div|class="clear"|;
         >
         \table<
           \tr<\td<コドモ扱いしないで>\td<\span|class="sans"|<niselat ovip a tel e dutific.>>>
@@ -198,16 +198,16 @@
           \tr<\td<「どーかな?」>\td<\span|class="sans"|<pa e apéf?>>>
         >
       >
-      \div|class="clear"|>
+      \div|class="clear"|;
     >
 
     \div|class="translation",id="azusa"|<
-      \div|class="name"|<\img|alt="",src="../../material/idolmaster/9.png"|>>
+      \div|class="name"|<\img|alt="",src="../../material/idolmaster/9.png"|;>
       \div|class="main"|<
         \div|class="header"|<
           \div|class="title"|<隣に･･･>
-          \div|class="composer"|<作詞: 貝田由里子\span|class="small"|<様>\br>作曲: 椎名豪\span|class="small"|<様>>
-          \div|class="clear"|>
+          \div|class="composer"|<作詞: 貝田由里子\span|class="small"|<様>\br;作曲: 椎名豪\span|class="small"|<様>>
+          \div|class="clear"|;
         >
         \table<
           \tr<\td<空に抱かれ 雲が流れてく>\td<\span|class="sans"|<hirfisac a hasax cife kafelac e't a hîx.>>>
@@ -228,16 +228,16 @@
           \tr<\td<嘘つきだね>\td<\span|class="sans"|<pa salot e nodom?>>>
         >
       >
-      \div|class="clear"|>
+      \div|class="clear"|;
     >
 
     \div|class="translation",id="ritsuko"|<
-      \div|class="name"|<\img|alt="",src="../../material/idolmaster/6.png"|>>
+      \div|class="name"|<\img|alt="",src="../../material/idolmaster/6.png"|;>
       \div|class="main"|<
         \div|class="header"|<
           \div|class="title"|<魔法をかけて!>
-          \div|class="composer"|<作詞: 神前暁\span|class="small"|<様>\br>作曲: 神前暁\span|class="small"|<様>>
-          \div|class="clear"|>
+          \div|class="composer"|<作詞: 神前暁\span|class="small"|<様>\br;作曲: 神前暁\span|class="small"|<様>>
+          \div|class="clear"|;
         >
         \table<
           \tr<\td<鏡の中 ため息がひとつ>\td<\span|class="sans"|<vo caf izi dilik, hardotas a'l la tal al'atis.>>>
@@ -255,16 +255,16 @@
           \tr<\td<魔法をかけて!>\td<\span|class="sans"|<di'xalnehis a'c e'l!>>>
         >
       >
-      \div|class="clear"|>
+      \div|class="clear"|;
     >
 
     \div|class="translation",id="yukiho"|<
-      \div|class="name"|<\img|alt="",src="../../material/idolmaster/12.png"|>>
+      \div|class="name"|<\img|alt="",src="../../material/idolmaster/12.png"|;>
       \div|class="main"|<
         \div|class="header"|<
           \div|class="title"|<ALRIGHT*>
-          \div|class="composer"|<作詞: yura \span|class="small"|<様>\br>作曲: cota \span|class="small"|<様>>
-          \div|class="clear"|>
+          \div|class="composer"|<作詞: yura \span|class="small"|<様>\br;作曲: cota \span|class="small"|<様>>
+          \div|class="clear"|;
         >
         \table<
           \tr<\td<READY SET GO!!>\td<\span|class="sans"|<di'kevifaf a'c!>>>
@@ -288,16 +288,16 @@
           \tr<\td<さあ出発オーライ*>\td<\span|class="sans"|<câ, e caliq. oyâl.>>>
         >
       >
-      \div|class="clear"|>
+      \div|class="clear"|;
     >
 
     \div|class="translation",id="makoto"|<
-      \div|class="name"|<\img|alt="",src="../../material/idolmaster/13.png"|>>
+      \div|class="name"|<\img|alt="",src="../../material/idolmaster/13.png"|;>
       \div|class="main"|<
         \div|class="header"|<
           \div|class="title"|<迷走 Mind>
-          \div|class="composer"|<作詞: 小野田裕之\span|class="small"|<様>\br>作曲: 中川浩二\span|class="small"|<様>>
-          \div|class="clear"|>
+          \div|class="composer"|<作詞: 小野田裕之\span|class="small"|<様>\br;作曲: 中川浩二\span|class="small"|<様>>
+          \div|class="clear"|;
         >
         \table<
           \tr<\td<あとどれくらい進めばいいの?>\td<\span|class="sans"|<pa savat canisis a'l la ziked avôl epác?>>>
@@ -317,16 +317,16 @@
           \tr<\td<ひるまぬチカラを ボクに焼き付けて!>\td<\span|class="sans"|<di'silgidis a'c ca tel e kal ike'n dutisfizot e'l!>>>
         >
       >
-      \div|class="clear"|>
+      \div|class="clear"|;
     >
 
     \div|class="translation",id="miki"|<
-      \div|class="name"|<\img|alt="",src="../../material/idolmaster/5.png"|>>
+      \div|class="name"|<\img|alt="",src="../../material/idolmaster/5.png"|;>
       \div|class="main"|<
         \div|class="header"|<
           \div|class="title"|<relations>
-          \div|class="composer"|<作詞: mft \span|class="small"|<様>\br>作曲: 中川浩二\span|class="small"|<様>>
-          \div|class="clear"|>
+          \div|class="composer"|<作詞: mft \span|class="small"|<様>\br;作曲: 中川浩二\span|class="small"|<様>>
+          \div|class="clear"|;
         >
         \table<
           \tr<\td<夜の駐車場で>\td<\span|class="sans"|<te jodom, vo zîdloq azak,>>>
@@ -346,16 +346,16 @@
           \tr<\td<壊れるくらいに抱きしめて>\td<\span|class="sans"|<di'halxafis a'c e tel ozèt iti medel.>>>
         >
       >
-      \div|class="clear"|>
+      \div|class="clear"|;
     >
 
     \div|class="translation",id="takane"|<
-      \div|class="name"|<\img|alt="",src="../../material/idolmaster/11.png"|>>
+      \div|class="name"|<\img|alt="",src="../../material/idolmaster/11.png"|;>
       \div|class="main"|<
         \div|class="header"|<
           \div|class="title"|<風花>
-          \div|class="composer"|<作詞: 橋本由香利\span|class="small"|<様>\br>作曲: 橋本由香利\span|class="small"|<様>>
-          \div|class="clear"|>
+          \div|class="composer"|<作詞: 橋本由香利\span|class="small"|<様>\br;作曲: 橋本由香利\span|class="small"|<様>>
+          \div|class="clear"|;
         >
         \table<
           \tr<\td<いくつもの虹が重なり会うと>\td<\span|class="sans"|<te licas a'l e'n fedasac ca cáv a rihic avôl,>>>
@@ -376,16 +376,16 @@
           \tr<\td<心の中に散った 風花>\td<\span|class="sans"|<e kin delivac vo kûz izi yer, e náy-xaflit.>>>
         >
       >
-      \div|class="clear"|>
+      \div|class="clear"|;
     >
 
     \div|class="translation",id="hibiki"|<
-      \div|class="name"|<\img|alt="",src="../../material/idolmaster/7.png"|>>
+      \div|class="name"|<\img|alt="",src="../../material/idolmaster/7.png"|;>
       \div|class="main"|<
         \div|class="header"|<
           \div|class="title"|<shiny smile>
-          \div|class="composer"|<作詞: 朝日祭\span|class="small"|<様>\br>作曲: Yoshi \span|class="small"|<様>>
-          \div|class="clear"|>
+          \div|class="composer"|<作詞: 朝日祭\span|class="small"|<様>\br;作曲: Yoshi \span|class="small"|<様>>
+          \div|class="clear"|;
         >
         \table<
           \tr<\td<お気に入りのリボン>\td<\span|class="sans"|<e lofyet hilefat e a tel,>>>
@@ -412,7 +412,7 @@
           \tr<\td<私 君と shiny smile>\td<\span|class="sans"|<ofelaz. e socavhâr i loc.>>>
         >
       >
-      \div|class="clear"|>
+      \div|class="clear"|;
     >
 
   >

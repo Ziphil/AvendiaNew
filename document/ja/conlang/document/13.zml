@@ -1,13 +1,13 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<用語集>
   \ver<5 代 5 期>
-  \use-math>
+  \use-math;
 
   \h1<目次>
-  \section-table>
+  \section-table;
   \h1<語彙的品詞>
   \h2|id="lc"|<語彙的品詞\fl<lexical category>>
   \p<

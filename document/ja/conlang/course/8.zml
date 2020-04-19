@@ -1,5 +1,5 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<諾否疑問文>
@@ -75,7 +75,7 @@
     ･･･分かったよ。
     で、疑問文にするときに文末の記号を [?] にするって言ったけど、これもあくまで転写で、実際のシャレイア文字はこんな記号を使うよ。
   >
-  \img|src="../../file/other/5.png"|>
+  \img|src="../../file/other/5.png"|;
   >
   \cf<\p<
     うわ、本当に面倒な話だ･･･。

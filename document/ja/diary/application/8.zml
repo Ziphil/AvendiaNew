@@ -1,9 +1,9 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<ARC091-F: グランディ数>
-  \use-math>
+  \use-math;
 
   \h1<日記 (2018 年 3 月 13 日)>
   \p<
@@ -37,7 +37,7 @@
   >
   \ul<
     \li<&m<P> から状態の遷移ができない場合は &m<g (P) = 0>>
-    \li<上記以外の &m<P> に対する &m<g (P)> は集合 &m<`{ g (Q) \mid> Q \text< は > P \text< から遷移できる状態> `}> に属さない最小の非負整数>
+    \li<上記以外の &m<P> に対する &m<g (P)> は集合 &m<`{ g (Q) \mid; Q \text< は > P \text< から遷移できる状態> `}> に属さない最小の非負整数>
   >
   \p<
     すると、初期状態 &m<\sb<P><0>> に対する &m<g (\sb<P><0>)> を求めて、それが 0 以外なら先手の勝ちで 0 なら後手の勝ちとなります。
@@ -60,7 +60,7 @@
   >
   \ul<
     \li<非負整数 &m<q> に対して &m<g (qK, K) = q>>
-    \li<非負整数 &m<q> と整数 &m<r \srel> (0 `< r `< q)> に対して &m<g (qK + r, K) = g (qK + r - q - 1, K)>>
+    \li<非負整数 &m<q> と整数 &m<r \srel; (0 `< r `< q)> に対して &m<g (qK + r, K) = g (qK + r - q - 1, K)>>
   >
   \p<
     ただ、この通りに実装すると微妙に TLE します。

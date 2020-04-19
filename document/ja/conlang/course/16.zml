@@ -1,5 +1,5 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<まとめ>
@@ -16,24 +16,24 @@
   >
   \h1<スライド一覧>
   \h2|number="1"|<文字と発音>
-  \slide|id="475e7ebdb828468fbb0a7e5a33df4256"|>
+  \slide|id="475e7ebdb828468fbb0a7e5a33df4256"|;
   \h2|number="2"|<基本語順>
-  \slide|id="59afdb1c72e444d68dd81865bb7fe9ac"|>
+  \slide|id="59afdb1c72e444d68dd81865bb7fe9ac"|;
   \h2|number="3"|<不定詞の活用>
-  \slide|id="4eee7c7033b24cb0ab6ca7d35a1ca0a8"|>
+  \slide|id="4eee7c7033b24cb0ab6ca7d35a1ca0a8"|;
   \h2|number="4"|<時制と相と自他>
-  \slide|id="835c2cfdb29c461b887fa47348a2da34"|>
+  \slide|id="835c2cfdb29c461b887fa47348a2da34"|;
   \h2|number="5"|<否定表現>
-  \slide|id="18b50d9fef844312a7b04e5938d9e0c4"|>
+  \slide|id="18b50d9fef844312a7b04e5938d9e0c4"|;
   \h2|number="6"|<疑問表現>
-  \slide|id="0b333aa76e56416eb177f89a72fe2906"|>
+  \slide|id="0b333aa76e56416eb177f89a72fe2906"|;
   \h2|number="7"|<接続詞>
-  \slide|id="f819ec94cb674607942d3dc4cd84fcfd"|>
+  \slide|id="f819ec94cb674607942d3dc4cd84fcfd"|;
   \h2|number="8"|<{kin} 節>
-  \slide|id="38776ca2ed43473783e112321569b10b"|>
+  \slide|id="38776ca2ed43473783e112321569b10b"|;
   \h2|number="9"|<動詞の助動詞的用法>
-  \slide|id="2ae342e5d57044b8b67094a11096385a"|>
+  \slide|id="2ae342e5d57044b8b67094a11096385a"|;
   \h2|number="10"|<助詞句の順序>
-  \slide|id="78a698e53eed4637a1f702dd517692a3"|>
+  \slide|id="78a698e53eed4637a1f702dd517692a3"|;
 
 >

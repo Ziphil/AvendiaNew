@@ -1,5 +1,5 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<進捗確認>
@@ -13,7 +13,7 @@
     さて、しばらく時間が空いてしまったので、進捗の確認をしておきます。
     まず、現時点でのゲーム画面はこんな感じです。
   >
-  \img|src="../../file/game/1.png"|>
+  \img|src="../../file/game/1.png"|;
   \p<
     少女が移動して飛び跳ねるところまでのプログラムはできています。
     ついでに、マップエディタも完成しています。

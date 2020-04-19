@@ -1,5 +1,5 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<シャレイア語アーカイブ>
@@ -41,7 +41,7 @@
   >
   \h2<\h<1116>>
   \p<
-    {fesalat e zat qikes e a tel sora}[ ʻ]\red|length="6"|>[, ]{a tel evoc.}
+    {fesalat e zat qikes e a tel sora}[ ʻ]\red|length="6"|;[, ]{a tel evoc.}
     {vade, te qikos a tel e zat sora ces, zedos nisiz a'l li cit ca axaslef.}
   >
   \h2<\h<1128>>
@@ -87,7 +87,7 @@
   >
   \h2<\h<1195>>
   \p<
-    {e kin poqosis a'l e xif ayerif hasefat a vo hîxlon fe}[ ʻ]\red|length="6"|>[, ]{rafat a tel.}
+    {e kin poqosis a'l e xif ayerif hasefat a vo hîxlon fe}[ ʻ]\red|length="6"|;[, ]{rafat a tel.}
     {a xif, salit e ayerif, lo a ces, salit e ahál.}
   >
   \h2<\h<1196>>
@@ -223,7 +223,7 @@
   >
   \h2<\h<2107>>
   \p<
-    {vomac dufetekos e tel a}[ ʻ]\red|length="6"|>{ zite zîk ile lattaq asez.}
+    {vomac dufetekos e tel a}[ ʻ]\red|length="6"|;{ zite zîk ile lattaq asez.}
     {revat a tel e'n kodes e dol anispan itazi ces.}
     {qôfat opadit ovel etim e tel a cal.}
   >

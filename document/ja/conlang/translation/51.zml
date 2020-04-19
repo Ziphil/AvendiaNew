@@ -1,5 +1,5 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<『Alice's Adventures in Wonderland』解説>
@@ -14,7 +14,7 @@
     文章全体は\a|href="44.html"|<こちら>で読むことができます。
   >
   \h1<目次>
-  \section-table>
+  \section-table;
   \h1<第 1 段落>
   \h2|id="aa"|<1-1>
   \xl<
@@ -22,36 +22,36 @@
       \sh<{e ʻalis, pôzac ovel ebam zi'n déqat a's ca zehrisis vo fîc ica hinof, lo kavat a's e dat dozat lesas e a's.}>
       \ja<アリスは、お姉さんの近くで堤防の上に座ることにうんざりしていた上に、しなければならないことが何もなかった。>
       \gloss<
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig<\sh<{ʻalis}>\ex<アリス>>
-        &lig|punc=","|>
+        &lig|punc=","|;
         &lig|conj="-ac"|<\sh<{pôz}>\ex<うんざりさせる>>
         &lig|conj="o-"|<\sh<{vel}>\ex<>>
         &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
-        &lig|auto="zi"|>
-        &lig|auto="'n"|>
+        &lig|auto="zi"|;
+        &lig|auto="'n"|;
         &lig|conj="-at"|<\sh<{déq}>\ex<座る>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{'s}>\ex<彼女>>
-        &lig|auto="ca"|>
+        &lig|auto="ca"|;
         &lig<\sh<{zehrisis}>\ex<堤防>>
         &lig<\sh<{vo}>\ex<～の場所で>>
         &lig<\sh<{fîc}>\ex<近く>>
-        &lig|auto="ca",conj="i-"|>
+        &lig|auto="ca",conj="i-"|;
         &lig<\sh<{hinof}>\ex<姉>>
-        &lig|punc=","|>
+        &lig|punc=","|;
         &lig<\sh<{lo}>\ex<そして>>
         &lig|conj="-at"|<\sh<{kav}>\ex<もつ>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{'s}>\ex<彼女>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig<\sh<{dat}>\ex<何もない>>
         &lig|conj="-at"|<\sh<{doz}>\ex<しなければならなくする>>
         &lig|conj="-as"|<\sh<{les}>\ex<する>>
-        &lig|auto="e"|>
-        &lig|auto="a"|>
+        &lig|auto="e"|;
+        &lig|auto="a"|;
         &lig<\sh<{'s}>\ex<彼女>>
-        &lig|punc="."|>
+        &lig|punc="."|;
       >
     >
   >
@@ -77,7 +77,7 @@
       \ja<彼女は 1 度か 2 度お姉さんの読んでいる本を覗いたが、それには絵も会話もなかった。>
       \gloss<
         &lig|conj="-as"|<\sh<{zesqik}>\ex<覗く>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{ces}>\ex<彼女>>
         &lig<\sh<{la}>\ex<～の量で>>
         &lig<\sh<{tal}>\ex<回>>
@@ -86,22 +86,22 @@
         &lig<\sh<{é}>\ex<または>>
         &lig<\sh<{al'}>\ex<個の>>
         &lig|conj="a-"|<\sh<{qec}>\ex<2>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig<\sh<{xoq}>\ex<本>>
         &lig|conj="-ac"|<\sh<{lîd}>\ex<読む>>
-        &lig|auto="e"|>
-        &lig|auto="a"|>
+        &lig|auto="e"|;
+        &lig|auto="a"|;
         &lig<\sh<{hinof}>\ex<姉>>
-        &lig|punc=","|>
+        &lig|punc=","|;
         &lig<\sh<{dà}>\ex<しかし>>
         &lig|conj="du-at"|<\sh<{kav}>\ex<もつ>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{cit}>\ex<それ>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig<\sh<{qinat}>\ex<絵>>
         &lig<\sh<{o}>\ex<と>>
         &lig<\sh<{lek}>\ex<会話>>
-        &lig|punc="."|>
+        &lig|punc="."|;
       >
     >
   >
@@ -116,11 +116,11 @@
       \ja<そして、彼女は思った。>
       \gloss<
         &lig<\sh<{lo}>\ex<そして>>
-        &lig|punc=","|>
+        &lig|punc=","|;
         &lig|conj="-as"|<\sh<{rev}>\ex<思う>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{ces}>\ex<彼女>>
-        &lig|punc="."|>
+        &lig|punc="."|;
       >
     >
   >
@@ -130,11 +130,11 @@
       \sh<{pa salot e pil a sokus i xoq ide qinat o lek?}>
       \ja<絵も会話もない本の価値とは何なのだろうか?>
       \gloss<
-        &lig|auto="pa"|>
+        &lig|auto="pa"|;
         &lig|conj="-ot"|<\sh<{sal}>\ex<である>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig<\sh<{pil}>\ex<何>> 
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{sokus}>\ex<価値>>
         &lig|conj="i-"|<\sh<∅>\ex<～の>>
         &lig<\sh<{xoq}>\ex<本>>
@@ -142,7 +142,7 @@
         &lig<\sh<{qinat}>\ex<絵>>
         &lig<\sh<{o}>\ex<と>>
         &lig<\sh<{lek}>\ex<会話>>
-        &lig|punc="?"|>
+        &lig|punc="?"|;
       >
     >
   >
@@ -158,58 +158,58 @@
       \ja<そして、彼女は頭の中で考えた――暑さが彼女をとても眠くさせぼーっとさせていたので、それに集中することはできなかった――立ち上がってヒナギクの輪を作るためにヒナギクを拾うことに価値があるのかどうかを。>
       \gloss<
         &lig<\sh<{ce}>\ex<そして>>
-        &lig|punc=","|>
+        &lig|punc=","|;
         &lig|conj="-as"|<\sh<{sox}>\ex<考える>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{ces}>\ex<彼女>>
         &lig<\sh<{qi}>\ex<～で>>
         &lig<\sh<{soxot}>\ex<理性>>
         &lig<\sh<{—}>>
         &lig|conj="du-at"|<\sh<{qif}>\ex<できるようにする>>
         &lig|conj="-as"|<\sh<{lîgif}>\ex<集中する>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{'s}>\ex<彼女>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig<\sh<{cal}>\ex<そのこと>>
-        &lig|punc=","|>
+        &lig|punc=","|;
         &lig<\sh<{vade}>\ex<～なので>>
         &lig|conj="-at"|<\sh<{meber}>\ex<眠くする>>
         &lig<\sh<{o}>\ex<そして>>
         &lig|conj="-at"|<\sh<{folnas}>\ex<ぼーっとさせる>>
         &lig|conj="o-"|<\sh<{vel}>\ex<>>
         &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig<\sh<{'s}>\ex<彼女>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{zalnat}>\ex<熱気>>
         &lig<\sh<{—}>>
-        &lig|auto="e"|>
-        &lig|auto="'n"|>
+        &lig|auto="e"|;
+        &lig|auto="'n"|;
         &lig|conj="-at"|<\sh<{kav}>\ex<もつ>>
-        &lig|auto="á"|>
+        &lig|auto="á"|;
         &lig|conj="du-at"|<\sh<{l}>\ex<する>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig<\sh<{sokos}>\ex<価値>>
-        &lig|auto="a"|>
-        &lig|auto="kin"|>
+        &lig|auto="a"|;
+        &lig|auto="kin"|;
         &lig|conj="-is"|<\sh<{hit}>\ex<立つ>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{'s}>\ex<彼女>>
         &lig<\sh<{ce}>\ex<そして>>
         &lig|conj="-is"|<\sh<{dehis}>\ex<拾う>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{'s}>\ex<彼女>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig<\sh<{lissod}>\ex<ヒナギク>>
         &lig<\sh<{so}>\ex<～するために>>
         &lig|conj="-is"|<\sh<{qik}>\ex<作る>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{'s}>\ex<彼女>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig<\sh<{lîs}>\ex<輪>>
-        &lig|auto="zi"|>
+        &lig|auto="zi"|;
         &lig<\sh<{met}>\ex<それ>>
-        &lig|punc="."|>
+        &lig|punc="."|;
       >
     >
   >
@@ -236,24 +236,24 @@
       \gloss<
         &lig<\sh<{te}>\ex<～するとき>>
         &lig<\sh<{cal}>\ex<そのこと>>
-        &lig|punc=","|>
+        &lig|punc=","|;
         &lig|conj="-as"|<\sh<{cák}>\ex<来る>>
         &lig|conj="o-"|<\sh<{bâl}>\ex<突然>>
         &lig<\sh<{cife}>\ex<～しながら>>
         &lig<\sh<{vilis}>\ex<走ること>>
-        &lig|auto="ca"|>
+        &lig|auto="ca"|;
         &lig<\sh<{fîc}>\ex<近く>>
-        &lig|conj="i-",auto="ca"|>
+        &lig|conj="i-",auto="ca"|;
         &lig<\sh<{ces}>\ex<彼女>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{hapet}>\ex<ウサギ>>
         &lig|conj="a-"|<\sh<{xac}>\ex<白い>>
         &lig|conj="-at"|<\sh<{kav}>\ex<もつ>>
-        &lig|auto="a"|>
-        &lig|auto="e"|>
+        &lig|auto="a"|;
+        &lig|auto="e"|;
         &lig<\sh<{lisaz}>\ex<目>>
         &lig|conj="a-"|<\sh<{hafas}>\ex<ピンクの>>
-        &lig|punc="."|>
+        &lig|punc="."|;
       >
     >
   >
@@ -273,12 +273,12 @@
       \ja<そのことはとても驚くべきことではなかった。>
       \gloss<
         &lig|conj="du-at"|<\sh<{sal}>\ex<である>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{cal}>\ex<そのこと>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig|conj="a-"|<\sh<{niszaz}>\ex<驚くべき>>
         &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
-        &lig|punc="."|>
+        &lig|punc="."|;
       >
     >
   >
@@ -290,54 +290,54 @@
       \gloss<
         &lig|conj="-as"|<\sh<{rev}>\ex<思う>>
         &lig|conj="o-"|<\sh<{cavas}>\ex<さらに>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{ʻalis}>\ex<アリス>>
-        &lig|auto="e"|>
-        &lig|auto="'n"|>
+        &lig|auto="e"|;
+        &lig|auto="'n"|;
         &lig|conj="du-at"|<\sh<{sal}>\ex<である>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig|conj="a-"|<\sh<{tùk}>\ex<異常な>>
         &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
         &lig<\sh<{—}>>
         &lig|conj="-is"|<\sh<{fedak}>\ex<気づく>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{'s}>\ex<彼女>>
-        &lig|auto="e"|>
-        &lig|auto="'n"|>
+        &lig|auto="e"|;
+        &lig|auto="'n"|;
         &lig|conj="-et"|<\sh<{sal}>\ex<である>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{cal}>\ex<そのこと>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig|conj="adu-"|<\sh<{vekos}>\ex<普通の>>
         &lig<\sh<{te}>\ex<～するとき>>
         &lig|conj="-is"|<\sh<{sox}>\ex<考える>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{'s}>\ex<彼女>>
         &lig<\sh<{loke}>\ex<～について>>
         &lig<\sh<{cal}>\ex<そのこと>>
         &lig<\sh<{te}>\ex<～のときに>>
         &lig<\sh<{càd}>\ex<後>>
-        &lig|punc=","|>
+        &lig|punc=","|;
         &lig<\sh<{dà}>\ex<しかし>>
         &lig|conj="-at"|<\sh<{sal}>\ex<である>>
         &lig<\sh<{te}>\ex<～するとき>>
         &lig<\sh<{cal}>\ex<そのこと>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{zel}>\ex<こと>>
         &lig|conj="a-"|<\sh<{ves}>\ex<全ての>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig|conj="a-"|<\sh<{nalef}>\ex<自然な>>
         &lig|conj="e-"|<\sh<{koz}>\ex<まさに>>
         &lig|conj="i-"|<\sh<{tazi}>\ex<～にとって>>
         &lig<\sh<{ces}>\ex<彼女>>
         &lig<\sh<{—}>>
-        &lig|auto="a"|>
-        &lig|auto="kin"|>
+        &lig|auto="a"|;
+        &lig|auto="kin"|;
         &lig|conj="-as"|<\sh<{tufos}>\ex<呟く>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{hapet}>\ex<ウサギ>>
         &lig|conj="a-"|<\sh<{cik}>\ex<その>>
-        &lig|punc="."|>
+        &lig|punc="."|;
       >
     >
   >
@@ -357,12 +357,12 @@
       \ja<ああ、どうするのが良いのだろう?>
       \gloss<
         &lig<\sh<{â}>\ex<ああ>>
-        &lig|punc=","|>
-        &lig|auto="pa"|>
+        &lig|punc=","|;
+        &lig|auto="pa"|;
         &lig|conj="-at"|<\sh<{sav}>\ex<する方が良くする>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig<\sh<{pil}>\ex<どんなこと>>
-        &lig|punc="?"|>
+        &lig|punc="?"|;
       >
     >
   >
@@ -373,9 +373,9 @@
       \ja<私は遅れている!>
       \gloss<
         &lig|conj="-af"|<\sh<{melos}>\ex<遅れる>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{tel}>\ex<私>>
-        &lig|punc="!"|>
+        &lig|punc="!"|;
       >
     >
   >
@@ -387,32 +387,32 @@
       \gloss<
         &lig|conj="-as"|<\sh<{fotaq}>\ex<取り出す>>
         &lig|conj="o-"|<\sh<{nás}>\ex<実際>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{hapet}>\ex<ウサギ>>
         &lig|conj="a-"|<\sh<{cik}>\ex<その>>
-        &lig|auto="zi"|>
+        &lig|auto="zi"|;
         &lig<\sh<{cikot}>\ex<ポケット>>
         &lig|conj="i-"|<\sh<∅>\ex<～の>>
         &lig<\sh<{sevlat}>\ex<チョッキ>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig<\sh<{sokiq}>\ex<懐中時計>>
-        &lig|punc=","|>
+        &lig|punc=","|;
         &lig<\sh<{ce}>\ex<そして>>
         &lig|conj="-as"|<\sh<{lic}>\ex<見る>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{cit}>\ex<それ>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig<\sh<{sokiq}>\ex<懐中時計>>
         &lig|conj="a-"|<\sh<{cik}>\ex<その>>
-        &lig|punc=","|>
+        &lig|punc=","|;
         &lig<\sh<{ce}>\ex<そして>>
         &lig|conj="-as"|<\sh<{fôc}>\ex<始める>>
         &lig|conj="-as"|<\sh<{vilis}>\ex<走る>>
         &lig|conj="o-"|<\sh<{vop}>\ex<再び>>
         &lig|conj="o-"|<\sh<{fev}>\ex<すぐに>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{'t}>\ex<それ>>
-        &lig|punc="."|>
+        &lig|punc="."|;
       >
     >
   >
@@ -424,33 +424,33 @@
       \gloss<
         &lig<\sh<{vade}>\ex<～なので>>
         &lig|conj="-as"|<\sh<{kebat}>\ex<気づかせる>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig<\sh<{ʻalis}>\ex<アリス>>
-        &lig|auto="ca"|>
-        &lig|auto="kin"|>
+        &lig|auto="ca"|;
+        &lig|auto="kin"|;
         &lig|conj="-es"|<\sh<{vom}>\ex<繰り返す>>
         &lig|conj="-os"|<\sh<{lic}>\ex<見る>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{'s}>\ex<彼女>>
         &lig<\sh<{cate}>\ex<～まで>>
         &lig<\sh<{sot}>\ex<今>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig<\sh<{hapet}>\ex<ウサギ>>
         &lig|conj="a-"|<\sh<{dak}>\ex<どんな～もない>>
         &lig|conj="-at"|<\sh<{kôm}>\ex<着る>>
-        &lig|auto="a"|>
-        &lig|auto="e"|>
+        &lig|auto="a"|;
+        &lig|auto="e"|;
         &lig<\sh<{sevlat}>\ex<チョッキ>>
         &lig<\sh<{o}>\ex<そして>>
         &lig|conj="-as"|<\sh<{vîtic}>\ex<一瞥する>>
-        &lig|auto="a"|>
-        &lig|auto="e"|>
+        &lig|auto="a"|;
+        &lig|auto="e"|;
         &lig<\sh<{sokiq}>\ex<懐中時計>>
-        &lig|punc=","|>
+        &lig|punc=","|;
         &lig|conj="-af"|<\sh<{cat}>\ex<歩く>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{ces}>\ex<彼女>>
-        &lig|punc="."|>
+        &lig|punc="."|;
       >
     >
   >
@@ -473,23 +473,23 @@
       \gloss<
         &lig<\sh<{fa}>\ex<～しながら>>
         &lig|conj="-ac"|<\sh<{deliz}>\ex<従う>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{ces}>\ex<彼女>>
-        &lig|auto="zi"|>
+        &lig|auto="zi"|;
         &lig<\sh<{caxel}>\ex<好奇心>>
-        &lig|punc=","|>
+        &lig|punc=","|;
         &lig|conj="-as"|<\sh<{dilsiz}>\ex<横切る>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{ces}>\ex<彼女>>
-        &lig|auto="e"|>
+        &lig|auto="e"|;
         &lig<\sh<{nalvaf}>\ex<野原>>
         &lig<\sh<{so}>\ex<～するために>>
         &lig|conj="-is"|<\sh<{zizet}>\ex<追う>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{'s}>\ex<彼女>>
-        &lig|auto="ca"|>
+        &lig|auto="ca"|;
         &lig<\sh<{cit}>\ex<それ>>
-        &lig|punc="."|>
+        &lig|punc="."|;
       >
     >
   >
@@ -500,26 +500,26 @@
       \ja<幸運にも、彼女は生け垣の下の大きなウサギの巣穴にそれが入るのを見ることができた。>
       \gloss<
         &lig|conj="o-"|<\sh<{nistecaf}>\ex<幸運にも>>
-        &lig|punc=","|>
+        &lig|punc=","|;
         &lig|conj="-at"|<\sh<{qif}>\ex<できるようにする>>
         &lig|conj="-as"|<\sh<{lic}>\ex<見る>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{ces}>\ex<彼女>>
-        &lig|auto="e"|>
-        &lig|auto="'n"|>
+        &lig|auto="e"|;
+        &lig|auto="'n"|;
         &lig|conj="-as"|<\sh<{kûv}>\ex<入る>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{cit}>\ex<それ>>
-        &lig|auto="ca"|>
+        &lig|auto="ca"|;
         &lig<\sh<{filotsodvaf}>\ex<巣穴>>
         &lig|conj="a-"|<\sh<{vâc}>\ex<広い>>
         &lig|conj="i-"|<\sh<∅>\ex<～の>>
         &lig<\sh<{hapet}>\ex<ウサギ>>
         &lig|conj="i-"|<\sh<{vo}>\ex<～の場所の>>
         &lig<\sh<{fîcdem}>\ex<下>>
-        &lig|conj="i-",auto="zi"|>
+        &lig|conj="i-",auto="zi"|;
         &lig<\sh<{nátalkìd}>\ex<生け垣>>
-        &lig|punc="."|>
+        &lig|punc="."|;
       >
     >
   >
@@ -533,30 +533,30 @@
         &lig<\sh<{te}>\ex<～のときに>>
         &lig<\sh<{tesil}>\ex<瞬間>>
         &lig|conj="a-"|<\sh<{cál}>\ex<次の>>
-        &lig|punc=","|>
+        &lig|punc=","|;
         &lig|conj="-as"|<\sh<{fodlis}>\ex<飛び込む>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{ʻalis}>\ex<アリス>>
-        &lig|auto="ca"|>
+        &lig|auto="ca"|;
         &lig<\sh<{filot}>\ex<穴>>
         &lig|conj="a-"|<\sh<{cik}>\ex<その>>
-        &lig|punc=","|>
+        &lig|punc=","|;
         &lig<\sh<{fa}>\ex<～しながら>>
         &lig|conj="-es"|<\sh<{vom}>\ex<繰り返す>>
         &lig|conj="-os"|<\sh<{sox}>\ex<考える>>
         &lig|conj="o-"|<\sh<{dum}>\ex<全く～しない>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{ces}>\ex<彼女>>
-        &lig|auto="e"|>
-        &lig|auto="kin"|>
+        &lig|auto="e"|;
+        &lig|auto="kin"|;
         &lig|conj="-is"|<\sh<{foval}>\ex<出る>>
         &lig<\sh<{qi}>\ex<～することで>>
         &lig<\sh<{pil}>\ex<どんなこと>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{'s}>\ex<彼女>>
-        &lig|auto="zi"|>
+        &lig|auto="zi"|;
         &lig<\sh<{cêd}>\ex<そこ>>
-        &lig|punc="."|>
+        &lig|punc="."|;
       >
     >
   >

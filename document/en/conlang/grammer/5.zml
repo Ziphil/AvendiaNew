@@ -1,5 +1,5 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<Version 5.5>
@@ -55,14 +55,14 @@
     The small letters are listed as follows.
     A figure at the center of each cell illustrates a shape of a Shaleian alphabet, and a Latin alphabet at the upper left is its transliteration.
   >
-  \img|src="../../file/character/13.png"|>
+  \img|src="../../file/character/13.png"|;
   \p<
     The following table illustrates the capital letters.
     The capital letters are used for the first letter of every word, only when there is a particular need for emphasis or extra decoration, such as in a caption or a logo.
     Since they are equal in height and more easy to discern the small letters, they are also used for all the letters of an expression, when they must be kept small or they are expected to be instantly recognised such as in a signpost.
     The capital letters are not used in a normal text, even for the first letter of a sentence or a proper noun.
   >
-  \img|src="../../file/character/14.png"|>
+  \img|src="../../file/character/14.png"|;
   \p<
     Furthermore, diacritical marks are sometimes put on some letters.
     See \a|href="#8"|<Section 8> for details.
@@ -73,12 +73,12 @@
     Therefore there are ten numerals, which are listed below.
     The pronunciation and usage of the numerals will be explained in \a|href="#48"|<Section 48> and \a|href="#49"|<Section 49>.
   >
-  \img|src="../../file/character/15.png"|>
+  \img|src="../../file/character/15.png"|;
   \p<
     The numerals have also both small and capital letters, which are distinguished from each other.
     The capital numerals are illustrated as follows:
   >
-  \img|src="../../file/character/16.png"|>
+  \img|src="../../file/character/16.png"|;
   \p<
     Numbers are written sometimes in numerals such as {dev il'}[6] or {ben ic'}[12], sometimes in their pronunciation such as {dev il'aric} or {ben ic'atisetqec}.
   >
@@ -86,7 +86,7 @@
   \p<
     Shaleian language mainly uses the punctuation marks listed below: 
   >
-  \img|src="../../file/character/17.png"|>
+  \img|src="../../file/character/17.png"|;
   \p<
     Each mark has the following usage:
   >
@@ -125,7 +125,7 @@
     It displays only small letters, but the same diacritics are also used for the corresponding capital letters.
     Letters with and without diacritics are treated as distinct letters.
   >
-  \img|src="../../file/character/18.png"|>
+  \img|src="../../file/character/18.png"|;
   \p<
     Diacritics are not omitted in a normal text, but sometimes omitted when some decoration is applied to letters with them, such as in a poster.
   >
@@ -160,9 +160,9 @@
     Shaleian language uses the following consonants.
     A letter at the left of a phonetic symbol indicates the (transliteration of) corresponding Shaleian alphabet.
   >
-  \img|src="../../file/other/36.png"|>
+  \img|src="../../file/other/36.png"|;
   \p<
-    The letter [l] has complementary allophones; it is pronounced `/l`/ when a vowel follows it, and `/ɾ`/ otherwise.
+    The letter [l] has complementary allophones`; it is pronounced `/l`/ when a vowel follows it, and `/ɾ`/ otherwise.
     The phoneme `/w`/ appears only between a succession of certain letters.
     This will be discussed in detail in \a|href="#12"|<Section 12>.
     The usage of `/ɴ`/ will be explained later.
@@ -171,14 +171,14 @@
     The vowels are the following.
     The pronunciation of letters with diacritics will be explained in \a|href="#11"|<Section 11>.
   >
-  \img|src="../../file/other/37.png"|>
+  \img|src="../../file/other/37.png"|;
   \p<
     The three vowels `/ɪ`/, `/ʊ`/ and `/ɐ`/ appear as the second vowel of a diphthong, mentioned in \a|href="#11"|<Section 11>, and do not appear alone.
   >
   \p<
     Basically, all letters are pronounced according to the correspondence of letters and phonemes displayed in the preceding tables, except when some phonological changes occur.
     There are, however, a small number of exceptions.
-    For example, {kin} is pronounced `/kiɴ`/; the phoneme `/ɴ`/ appears only in {kin} and its abbreviation {'n}.
+    For example, {kin} is pronounced `/kiɴ`/`; the phoneme `/ɴ`/ appears only in {kin} and its abbreviation {'n}.
     The letter [h] also has a phonological exception.
     When it is placed at the end of a syllable, it may be pronounced `/h`/, but in most cases it is not pronounced at all.
   >
@@ -389,7 +389,7 @@
     The same holds for prepositional phrases modifying {nis}, other than {sal}.
   >
   \p<
-    There are two kinds of prepositions; one modifies verbs by forming a prepositional phrase, while the other modifies nonverbs.
+    There are two kinds of prepositions`; one modifies verbs by forming a prepositional phrase, while the other modifies nonverbs.
     The former is called a “verb-modifying preposition”, and the latter is called a “nonverb-modifying preposition”.
   >
   \xl<
@@ -426,7 +426,7 @@
   \h2|number="22"|<Adjectives and Adverbs>
   \p<
     In general, as phrases modifying verbs are put after them, modifiers follow modified words.
-    This rule is also applied to nouns and adjectives; adjectives are placed after nouns modified by them.
+    This rule is also applied to nouns and adjectives`; adjectives are placed after nouns modified by them.
   >
   \xl<
     \li<\sh<{lices a tel e nayef azaf.}>\ja<I looked at a red flower.>>
@@ -476,7 +476,7 @@
     There is, however, a conventional rule for ordering prepositional phrases.
   >
   \p<
-    In Shaleian, a focus falls on the beginning of a sentence; the beginning broaches a topic and the end offers information about it.
+    In Shaleian, a focus falls on the beginning of a sentence`; the beginning broaches a topic and the end offers information about it.
     Therefore, prepositional phrases are ordered so that the topic which is already brought up in the context comes at the beginning, and new information which is not mentioned yet comes at the end.
   >
   \xl<
@@ -623,7 +623,7 @@
   \h1<Questions>
   \h2|number="28"|<Polar Questions>
   \p<
-    Polar questions are those which ask whether something is true or not; they expect to be replied with “yes” or “no”.
+    Polar questions are those which ask whether something is true or not`; they expect to be replied with “yes” or “no”.
     One can construct such a question by placing {pa} before the verb of a sentence which represents what one wants to verify.
     The word {pa} is named an “interrogative adverb”.
     In addition to that, one must exchange the dek at the end of the sentence for a padek.
@@ -726,7 +726,7 @@
     \li<\sh<{pa sâfat a loc e pet ive zef o bag o nev?}>\ja<Which do you like, red, blue or yellow?>>
   >
   \p<
-    There is another way to perform it; choice questions are also created by connecting more than one sentences with the conjunction {á}, which means “or”.
+    There is another way to perform it`; choice questions are also created by connecting more than one sentences with the conjunction {á}, which means “or”.
     Note that the interrogative adverb {pa} is needed for the sentence after {á}.
   >
   \xl<
@@ -931,7 +931,7 @@
   >
   \p<
     Note that the notion of intransitive and transitive verbs in Shaleian is completely different from that which concerns the existence of an object.
-    Also take account of the difference between transitive verbs and causative expressions; a transitive verb means “to help someone to achieve it”, while a causative expression means “to make someone do it perhaps without assisting”.
+    Also take account of the difference between transitive verbs and causative expressions`; a transitive verb means “to help someone to achieve it”, while a causative expression means “to make someone do it perhaps without assisting”.
     Consider for example the distinction between “put someone to sleep” and “make someone sleep”.
   >
   \p<
@@ -988,7 +988,7 @@
     We will see this phenomenon in \a|href="#68"|<Section 68>.
   >
   \p<
-    Verbs which allow the auxilirary use are limited; they do not allow the auxilirary use just because the contitions are met.
+    Verbs which allow the auxilirary use are limited`; they do not allow the auxilirary use just because the contitions are met.
     Major verbs which have this use are {kil}, {qif}, {raf}, {doz} and {vom}. 
   >
   \h2|number="36"|<Verbal Infinitives as Nouns>

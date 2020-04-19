@@ -1,12 +1,12 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<不定詞の活用>
   \ver<5 代 5 期>
 
   \h1<スライド>
-  \slide|id="4eee7c7033b24cb0ab6ca7d35a1ca0a8"|>
+  \slide|id="4eee7c7033b24cb0ab6ca7d35a1ca0a8"|;
   \h1<新出単語>
   \p<
     各単語をクリックすると、オンライン辞典のその単語の項目にジャンプします。

@@ -1,9 +1,9 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<質料射と形相射>
-  \use-math>
+  \use-math;
 
   \h1<日記 (2019 年 11 月 29 日)>
   \p<
@@ -15,7 +15,7 @@
   >
   \p<
     まず、\a|href="24.html"|<11 月 28 日>の命題 1 を思い出そう。
-    この命題によると、&m<F>-始代数 &m<(S, `s)> に定まっている &m<`s> は同型射であるから、逆射 &m<\sp<`s><-1>: S \to> F S> が存在する。
+    この命題によると、&m<F>-始代数 &m<(S, `s)> に定まっている &m<`s> は同型射であるから、逆射 &m<\sp<`s><-1>: S \to; F S> が存在する。
     これによって、&m<F>-余代数 &m<(S, \sp<`s><-1>)> が誘導されることになる。
     これは一般に &m<F>-終余代数になるとは限らない。
     そして、これが &m<F>-終余代数になるというのが、今回重要になる特殊な性質である。
@@ -30,7 +30,7 @@
   >
   \thm|type="prp"|<
     \p<
-      圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
+      圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
       2 つの条件
     >
     \ul<
@@ -52,7 +52,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
+      圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
       &m<F> が上の命題の同値な 2 条件のいずれか (したがって両方) を満たすとき、&m<F> は\em<代数的コンパクト\fl<algebraically compact>> であるという。
     >
   >
@@ -69,8 +69,8 @@
     例えば、\a|href="22.html"|<11 月 16 日>に例として挙げた関手
     &mb<
       \array|align="rrcl"|<
-        \c<\sb<F><V>:> \c<\bfrm<Set>> \c<\longto>> \c<\bfrm<Set>> \br>
-        \c> \c<A> \c<\longmapsto>> \c<1 + V \times> A>
+        \c<\sb<F><V>:> \c<\bfrm<Set>> \c<\longto;> \c<\bfrm<Set>> \br;
+        \c; \c<A> \c<\longmapsto;> \c<1 + V \times; A>
       >
     >
     を考えると、&m<\sb<F><V>>-始代数が &m<V> の元から成る有限リスト全体であった一方、&m<\sb<F><V>>-終余代数は &m<V> の元から成る有限もしくは無限のリスト全体であったから、これらは一致しておらず &m<\sb<F><V>> は代数的コンパクトではない。
@@ -87,7 +87,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> 上の代数的コンパクトな自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
+      圏 &m<\scr<C>> 上の代数的コンパクトな自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
       &m<F>-代数 &m<(A, `a)> と &m<F>-余代数 &m<(C, `g)> に対し、合成
       &mb<
         \diag|hor="thk"|<
@@ -103,7 +103,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> 上の代数的コンパクトな自己関手 &m<F: \scr<C> \to> \scr<C>> をとる。
+      圏 &m<\scr<C>> 上の代数的コンパクトな自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
       対象が同じ &m<F>-代数 &m<(A, `a)> と &m<F>-余代数 &m<(A, `g)> に対し、合成
       &mb<
         \diag|hor="thk"|<

@@ -1,5 +1,5 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<Week 8 進捗報告>
@@ -12,7 +12,7 @@
   \p<
     何をしたかですが、金網やツタなどに掴まる処理を作ってみました。
   >
-  \img|src="../../file/game/17.png"|>
+  \img|src="../../file/game/17.png"|;
   \p<
     一気にコードを書いて、「どうせエラー出るだろうなぁ」的な気持ちで実行してみたら、意図した通りの動作になって、逆に疑心暗鬼になりました。
     ただ、どこかの偉い人が言った「done is better than perfect」に沿った方針で作っているので、そろそろコードが煩雑になってきました。

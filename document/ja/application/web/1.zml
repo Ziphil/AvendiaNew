@@ -1,12 +1,12 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \html|lang="ja"|<
   \head<
-    \meta|charset="UTF-8"|>
-    \script|src="../../file/script/7.js"|>
-    \link|rel="stylesheet",type="text/css",href="../../style/reset.css"|>
-    \link|rel="stylesheet",type="text/css",href="../../style/4.css"|>
+    \meta|charset="UTF-8"|;
+    \script|src="../../file/script/7.js"|;
+    \link|rel="stylesheet",type="text/css",href="../../style/reset.css"|;
+    \link|rel="stylesheet",type="text/css",href="../../style/4.css"|;
     \title<Weblio Vocabulary Rating>
   >
   \body<
@@ -23,11 +23,11 @@
       \div|class="main"|<
         \div|class="chart"|<
           \canvas|id="canvas",width="640",height="450"|<
-            \div|class="chart-rating"|>
-            \div|class="chart-date"|>
-            \div|class="chart-message"|>
-            \div|class="chart-axis"|>
-            \div|class="chart-line"|>
+            \div|class="chart-rating"|;
+            \div|class="chart-date"|;
+            \div|class="chart-message"|;
+            \div|class="chart-axis"|;
+            \div|class="chart-line"|;
           >
         >
         \div|class="caution"|<
@@ -62,10 +62,10 @@
           2018/06/01, 101.4
         >
         \div|class="radio"|<
-          \input|type="radio",name="mode",value="0",id="radio-mode-0",checked|>\label|for="radio-mode-0"|<回数軸>　\input|type="radio",name="mode",value="1",id="radio-mode-1"|>\label|for="radio-mode-1"|<日付軸>
+          \input|type="radio",name="mode",value="0",id="radio-mode-0",checked|;\label|for="radio-mode-0"|<回数軸>　\input|type="radio",name="mode",value="1",id="radio-mode-1"|;\label|for="radio-mode-1"|<日付軸>
         >
         \div|class="button"|<
-          \input|type="button",value="Show / Save",id="execute"|>
+          \input|type="button",value="Show / Save",id="execute"|;
         >
         \div|class="twitter"|<
           \button|type="button",id="tweet"|<Tweet>

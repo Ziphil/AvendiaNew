@@ -1,12 +1,12 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \html|lang="ja"|<
   \head<
-    \meta|charset="UTF-8"|>
-    \script|src="../../file/script/6.js"|>
-    \link|rel="stylesheet",type="text/css",href="../../style/reset.css"|>
-    \link|rel="stylesheet",type="text/css",href="../../style/3.css"|>
+    \meta|charset="UTF-8"|;
+    \script|src="../../file/script/6.js"|;
+    \link|rel="stylesheet",type="text/css",href="../../style/reset.css"|;
+    \link|rel="stylesheet",type="text/css",href="../../style/3.css"|;
     \title<ZpDIC>
   >
   \body<
@@ -15,11 +15,11 @@
       \a|class="title",href="#"|<ZpDIC>
       \div|class="box"|<
         \a|href="#features"|<機能>
-        \div|class="line"|>
+        \div|class="line"|;
         \a|href="#license"|<ライセンス>
-        \div|class="line"|>
+        \div|class="line"|;
         \a|href="#version-history"|<更新履歴>
-        \div|class="line"|>
+        \div|class="line"|;
         \a|href="#contact"|<お問い合わせ>
       >
     >
@@ -31,7 +31,7 @@
       >
       \div|class="information"|<
         \div|class="copy"|<
-          The&ref|n="nbsp"|>definitive&ref|n="nbsp"|>tool for&ref|n="nbsp"|>all&ref|n="nbsp"|>conlangers
+          The&ref|n="nbsp"|;definitive&ref|n="nbsp"|;tool for&ref|n="nbsp"|;all&ref|n="nbsp"|;conlangers
         >
         \div|class="download"|<
           \a|class="button",href="https://www.dropbox.com/sh/g75rqn97sdlpp0b/AAArHPjlZp5aAmij73dVGRvza?dl=0",target="_blank"|<Download>
@@ -43,7 +43,7 @@
     \div|class="content"|<
       \h1|id="features"|<Features>
       \div|class="feature"|<
-        \div|class="image"|<\img|alt="",src="../../file/application/5.png"|>>
+        \div|class="image"|<\img|alt="",src="../../file/application/5.png"|;>
         \div|class="explanation"|<
           \h2<逐次検索>
           \p<
@@ -53,7 +53,7 @@
         >
       >
       \div|class="feature"|<
-        \div|class="image"|<\img|alt="",src="../../file/application/10.png"|>\img|alt="",src="../../file/application/11.png"|>>
+        \div|class="image"|<\img|alt="",src="../../file/application/10.png"|;\img|alt="",src="../../file/application/11.png"|;>
         \div|class="explanation"|<
           \h2<文一括検索>
           \p<
@@ -63,7 +63,7 @@
         >
       >
       \div|class="feature"|<
-        \div|class="image"|<\img|alt="",src="../../file/application/7.png"|>\img|alt="",src="../../file/application/12.png"|>>
+        \div|class="image"|<\img|alt="",src="../../file/application/7.png"|;\img|alt="",src="../../file/application/12.png"|;>
         \div|class="explanation"|<
           \h2<活用サジェスト>
           \p<
@@ -73,7 +73,7 @@
         >
       >
       \div|class="feature"|<
-        \div|class="image"|<\img|alt="",src="../../file/application/6.png"|>>
+        \div|class="image"|<\img|alt="",src="../../file/application/6.png"|;>
         \div|class="explanation"|<
           \h2<OneToMany 形式対応>
           \p<
@@ -83,7 +83,7 @@
         >
       >
       \div|class="feature"|<
-        \div|class="image"|<\img|alt="",src="../../file/application/13.png"|>>
+        \div|class="image"|<\img|alt="",src="../../file/application/13.png"|;>
         \div|class="explanation"|<
           \h2<マーカー>
           \p<
@@ -93,7 +93,7 @@
         >
       >
       \div|class="feature"|<
-        \div|class="image"|<\img|alt="",src="../../file/application/8.png"|>>
+        \div|class="image"|<\img|alt="",src="../../file/application/8.png"|;>
         \div|class="explanation"|<
           \h2<データの解析>
           \p<
@@ -103,7 +103,7 @@
         >
       >
       \div|class="feature"|<
-        \div|class="image"|<\img|alt="",src="../../file/application/9.png"|>>
+        \div|class="image"|<\img|alt="",src="../../file/application/9.png"|;>
         \div|class="explanation"|<
           \h2<単語の自動生成>
           \p<

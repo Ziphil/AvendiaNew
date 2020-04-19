@@ -1,5 +1,5 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<加算合成>
@@ -25,7 +25,7 @@
   \p<
     試しにちょっと使ってみた結果がこちらになります。
   >
-  \img|src="../../file/game/22.png"|>
+  \img|src="../../file/game/22.png"|;
   \p<
     遊び半分でやったんですが、黄昏時のきれいな感じが出せて、これはこれで実際のゲーム内で採用しても良いんじゃないかという感じです。
   >

@@ -1,35 +1,35 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<『閉じたラムダ項に関する外延性の反例』>
-  \use-math>
+  \use-math;
 
   \h1<初めに>
   \p<
     ラムダ計算の &m<`b>-簡約から得られる形式理論 &m<\rm<`l> `b> に対し、&m<`h>-簡約に関する公理
     &mb<
-      \rm<`l> x. \sfun> Mx = M \scas> (x \nin> \op<FV> (M))
+      \rm<`l> x. \sfun; Mx = M \scas; (x \nin; \op<FV> (M))
     >
     を加えたものを &m<\rm<`l> `b`h> とする。
     このとき、いわゆる外延性
     &mb<
-      (\sp<><\forall>> Z \in> \rm<`L> \ssbin> [\sb|rel|<\vdash>><\rm<`l> `b `h> MZ = NZ]) \implies> [\sb|rel|<\vdash>><\rm<`l> `b `h> M = N]
+      (\sp<><\forall;> Z \in; \rm<`L> \ssbin; [\sb|rel|<\vdash;><\rm<`l> `b `h> MZ = NZ]) \implies; [\sb|rel|<\vdash;><\rm<`l> `b `h> M = N]
     >
     が成り立つことが知られている。
     一方で、この &m<Z> を閉じたラムダ項のみに制限した命題
     &mb<
-      (\sp<><\forall>> Z \in> \sp<\rm<`L>><\empty>> \ssbin> [\sb|rel|<\vdash>><\rm<`l> `b `h> MZ = NZ]) \implies> [\sb|rel|<\vdash>><\rm<`l> `b `h> M = N]
+      (\sp<><\forall;> Z \in; \sp<\rm<`L>><\empty;> \ssbin; [\sb|rel|<\vdash;><\rm<`l> `b `h> MZ = NZ]) \implies; [\sb|rel|<\vdash;><\rm<`l> `b `h> M = N]
     >
     は一般には成り立たない。
     この反例を構成する。
   >
   \p<
     以下、&m<`a>-同値なラムダ項は同一視する。
-    また、&m<\sb<\to>><h>> と &m<\sb<\headrarr>><h>> はそれぞれ 1 回および複数回の冠頭簡約を表す。
+    また、&m<\sb<\to;><h>> と &m<\sb<\headrarr;><h>> はそれぞれ 1 回および複数回の冠頭簡約を表す。
     なお、ここでは冠頭簡約とは、
     &mb<
-      (\rm<`l> x. \sfun> \sb<M><1>) \sb<M><2> \sb<M><3> \cdots> \sb<M><n> \sb|rel|<\headrarr>><h> \sb<M><2> `[x \coloneqq> \sb<M><1>`] \sb<M><3> \cdots> \sb<M><n> \scas> (n \geq> 2)
+      (\rm<`l> x. \sfun; \sb<M><1>) \sb<M><2> \sb<M><3> \cdots; \sb<M><n> \sb|rel|<\headrarr;><h> \sb<M><2> `[x \coloneqq; \sb<M><1>`] \sb<M><3> \cdots; \sb<M><n> \scas; (n \geq; 2)
     >
     という形の &m<`b>-簡約を指す。
     これは一般に言われる冠頭簡約とは少し異なるが、ここでは Plotkin の論文での用法に合わせた。
@@ -39,22 +39,22 @@
     なお、ここではコンビネータと閉じたラムダ項は同じ意味で用いる。
     &mb<
       \array|align="rcl"|<
-        \c<\bfrm<I>> \c<\equiv>> \c<\rm<`l> x. \sfun> x> \br>
-        \c<\bfrm<K>> \c<\equiv>> \c<\rm<`l> xy. \sfun> x> \br>
-        \c<\bfrm<S>> \c<\equiv>> \c<\rm<`l> xyz. \sfun> xz (yz)> \br>
-        \c<\bfrm<Y>> \c<\equiv>> \c<(\rm<`l> fx. \sfun> x (ffx)) (\rm<`l> fx. \sfun> x (ffx))> \br>
-        \c<\bfrm<`S>> \c<\equiv>> \c<\rm<`l> ufx. \sfun> f (ufx)>
+        \c<\bfrm<I>> \c<\equiv;> \c<\rm<`l> x. \sfun; x> \br;
+        \c<\bfrm<K>> \c<\equiv;> \c<\rm<`l> xy. \sfun; x> \br;
+        \c<\bfrm<S>> \c<\equiv;> \c<\rm<`l> xyz. \sfun; xz (yz)> \br;
+        \c<\bfrm<Y>> \c<\equiv;> \c<(\rm<`l> fx. \sfun; x (ffx)) (\rm<`l> fx. \sfun; x (ffx))> \br;
+        \c<\bfrm<`S>> \c<\equiv;> \c<\rm<`l> ufx. \sfun; f (ufx)>
       >
     >
     また、自然数 &m<n> に対して、その Church 数を
     &mb<
-      \underline<n> \equiv> \rm<`l> fx. \sfun> \un<\underbrace<f (f ( \cdots> (f>><n \text< 個>> x)))
+      \underline<n> \equiv; \rm<`l> fx. \sfun; \un<\underbrace<f (f ( \cdots; (f>><n \text< 個>> x)))
     >
     と表す。
-    ラムダ項 &m<M> の Gödel 数 は &m<`# M> とし、&m<M> の Gödel 数の Church 数を &m<\lceil> M \rceil> \equiv> `# M> で表す。
+    ラムダ項 &m<M> の Gödel 数 は &m<`# M> とし、&m<M> の Gödel 数の Church 数を &m<\lceil; M \rceil; \equiv; `# M> で表す。
   >
   \p<
-    ラムダ項全体は &m<\rm<`L>> で表し、閉じたラムダ項全体は &m<\sp<\rm<`L>><\empty>>> で表す。
+    ラムダ項全体は &m<\rm<`L>> で表し、閉じたラムダ項全体は &m<\sp<\rm<`L>><\empty;>> で表す。
   >
   \h1<Gödel 数の逆関数>
   \p<
@@ -66,19 +66,19 @@
       ラムダ項から成る集合 &m<\scr<A>> に対し、ラムダ項から成る集合 &m<\op<Comb> (\scr<A>)> を以下によって再帰的に定義する。
       &mb<
         \array|align="rcl"|<
-          \c<M \in> \scr<A>> \c<\implies>> \c<M \in> \op<Comb> (\scr<A>)> \br>
-          \c<P, Q \in> \op<Comb> (\scr<A>)> \c<\implies>> \c<PQ \in> \op<Comb> (\scr<A>)>
+          \c<M \in; \scr<A>> \c<\implies;> \c<M \in; \op<Comb> (\scr<A>)> \br;
+          \c<P, Q \in; \op<Comb> (\scr<A>)> \c<\implies;> \c<PQ \in; \op<Comb> (\scr<A>)>
         >
       >
       このとき、&m<\op<Comb> (\scr<A>)> の元を &m<\scr<A>> の\em<結合\fl<combination>> という。
-      &m<\scr<A> = `{ \sb<M><1>, \cdots>, \sb<M><n> `}> のときは、&m<\op<Comb> (\scr<A>)> を単に &m<\op<Comb> `{ \sb<M><1>, \cdots>, \sb<M><n> `}> と書く。
+      &m<\scr<A> = `{ \sb<M><1>, \cdots;, \sb<M><n> `}> のときは、&m<\op<Comb> (\scr<A>)> を単に &m<\op<Comb> `{ \sb<M><1>, \cdots;, \sb<M><n> `}> と書く。
     >
   >
   \thm|type="lem",id="mstar"|<
     \p<
       あるコンビネータ &m<\bfrm<X>> であって、
       &mb<
-        \sp<><\forall>> M \in> \sp<\rm<`L>><\empty>> \ssbin> \sp<><\exists>> \sp<M><*> \in> \op<Comb> `{ \bfrm<X> `} \ssbin> \sp<M><*> \sb|rel|<\headrarr>><`b> M
+        \sp<><\forall;> M \in; \sp<\rm<`L>><\empty;> \ssbin; \sp<><\exists;> \sp<M><*> \in; \op<Comb> `{ \bfrm<X> `} \ssbin; \sp<M><*> \sb|rel|<\headrarr;><`b> M
       >
       を満たすものが存在する。
     >
@@ -87,19 +87,19 @@
     \p<
       &m<\bfrm<X>> を
       &mb<
-        \bfrm<X> \equiv> \rm<`l> x. \sfun> x \bfrm<KSK>
+        \bfrm<X> \equiv; \rm<`l> x. \sfun; x \bfrm<KSK>
       >
       によって定義する。
       このとき、
       &mb<
         \array|align="rcl"|<
-          \c<\bfrm<XXX>> \c<\sb|rel|<\headrarr>><`b>> \c<\bfrm<K>> \br>
-          \c<\bfrm<X> (\bfrm<XX>)> \c<\sb|rel|<\headrarr>><`b>> \c<\bfrm<S>>
+          \c<\bfrm<XXX>> \c<\sb|rel|<\headrarr;><`b>> \c<\bfrm<K>> \br;
+          \c<\bfrm<X> (\bfrm<XX>)> \c<\sb|rel|<\headrarr;><`b>> \c<\bfrm<S>>
         >
       >
       が成り立つ。
-      さて、任意の閉じたラムダ項 &m<M> に対し、&m<\bfrm<K>> と &m<\bfrm<S>> の結合 &m<N> が存在して &m<N \sb|rel|<\headrarr>><`b> M> が成り立つ。
-      したがって、&m<N> に含まれる &m<\bfrm<K>> と &m<\bfrm<S>> をそれぞれ &m<\bfrm<XXX>> と &m<\bfrm<X> (\bfrm<XX>)> で置き換えたものを &m<\sp<M><*>> とおけば、&m<M \in> \op<Comb> `{ \bfrm<X> `}> であって &m<\sp<M><*> \sb|rel|<\headrarr>><`b> M> が成り立つ。
+      さて、任意の閉じたラムダ項 &m<M> に対し、&m<\bfrm<K>> と &m<\bfrm<S>> の結合 &m<N> が存在して &m<N \sb|rel|<\headrarr;><`b> M> が成り立つ。
+      したがって、&m<N> に含まれる &m<\bfrm<K>> と &m<\bfrm<S>> をそれぞれ &m<\bfrm<XXX>> と &m<\bfrm<X> (\bfrm<XX>)> で置き換えたものを &m<\sp<M><*>> とおけば、&m<M \in; \op<Comb> `{ \bfrm<X> `}> であって &m<\sp<M><*> \sb|rel|<\headrarr;><`b> M> が成り立つ。
     >
   >
   \thm|type="def"|<
@@ -107,15 +107,15 @@
       &m<\bfrm<X>> の結合 &m<M> に対し、自然数 &m<$ M> を以下によって再帰的に定義する。
       &mb<
         \array|align="rcl"|<
-          \c<$ \bfrm<X>> \c<=> \c<0> \br>
+          \c<$ \bfrm<X>> \c<=> \c<0> \br;
           \c<$ (PQ)> \c<=> \c<\op<pair> ($P, $Q)>
         >
       >
       ここで、pair は
       &mb<
         \array|align="rrcl"|<
-          \c<[\op<pair>]:> \c<\bb<N> \times> \bb<N>> \c<\longto>> \c<\bb<N>> \br>
-          \c> \c<(m, n)> \c<\longmapsto>> \c<\frac<(m + n) (m + n + 1)><2> + n + 1>
+          \c<[\op<pair>]:> \c<\bb<N> \times; \bb<N>> \c<\longto;> \c<\bb<N>> \br;
+          \c; \c<(m, n)> \c<\longmapsto;> \c<\frac<(m + n) (m + n + 1)><2> + n + 1>
         >
       >
       によって定義される全単射な再帰関数である。
@@ -125,7 +125,7 @@
     \p<
       閉じたラムダ項 &m<F> であって、
       &mb<
-        \sp<><\forall>> M \in> \op<Comb> `{ \bfrm<X> `} \ssbin> F \sfun> \underline<$ M> \sb|rel|<=><`b> M
+        \sp<><\forall;> M \in; \op<Comb> `{ \bfrm<X> `} \ssbin; F \sfun; \underline<$ M> \sb|rel|<=><`b> M
       >
       を満たすものが存在する。
     >
@@ -134,50 +134,50 @@
     \p<
       まず、上の定義における関数 pair に対し、任意の自然数 &m<m, n> について
       &mb<
-        \op<fst> (\op<pair> (m, n)) = m \qquad>
+        \op<fst> (\op<pair> (m, n)) = m \qquad;
         \op<snd> (\op<pair> (m, n)) = n
       >
       を満たす関数 &m<[\op<fst>], [\op<snd>]> は再帰的である。
       したがって、それを表現する閉じたラムダ項 &m<\bfrm<fst>, \bfrm<snd>> が存在する。
       さらに、
       &mb<
-        \bfrm<zero> \equiv> \rm<`l> u. \sfun> u (\rm<`l> v. \sfun> \rm<`l> xy. \sfun> y) (\rm<`l> xy. \sfun> x)
+        \bfrm<zero> \equiv; \rm<`l> u. \sfun; u (\rm<`l> v. \sfun; \rm<`l> xy. \sfun; y) (\rm<`l> xy. \sfun; x)
       >
       と定義する。
       これは与えられた Church 数が &m<\underline<0>> かどうかを判定するラムダ項である。
       これと上で定義した &m<\bfrm<fst>, \bfrm<snd>> を用いて、
       &mb<
-        F \equiv> \bfrm<Y> (\rm<`l> f. \sfun> \rm<`l> u. \sfun> \bfrm|fun|<zero> u \bfrm<X> (f (\bfrm|fun|<fst> u) (f (\bfrm|fun|<snd> u))))
+        F \equiv; \bfrm<Y> (\rm<`l> f. \sfun; \rm<`l> u. \sfun; \bfrm|fun|<zero> u \bfrm<X> (f (\bfrm|fun|<fst> u) (f (\bfrm|fun|<snd> u))))
       >
       とおく。
       この &m<F> が補題の条件を満たしていることを示す。
       証明は &m<M> に関する帰納法による。
     >
     \p<
-      &m<M \equiv> \bfrm<X>> のときは、
+      &m<M \equiv; \bfrm<X>> のときは、
       &mb<
         \array|align="rcl"|<
-          \c<F \sfun> \underline<$ \bfrm<X>>> \c<\equiv>> \c<F \underline<0>> \br>
-          \c> \c<\sb|rel|<=><`b>> \c<\bfrm|fun|<zero> \underline<0> \sfun> \bfrm<X> (F (\bfrm|fun|<fst> \underline<0>) (F (\bfrm|fun|<snd> \underline<0>)))> \br>
-          \c> \c<\sb|rel|<=><`b>> \c<\bfrm<X>>
+          \c<F \sfun; \underline<$ \bfrm<X>>> \c<\equiv;> \c<F \underline<0>> \br;
+          \c; \c<\sb|rel|<=><`b>> \c<\bfrm|fun|<zero> \underline<0> \sfun; \bfrm<X> (F (\bfrm|fun|<fst> \underline<0>) (F (\bfrm|fun|<snd> \underline<0>)))> \br;
+          \c; \c<\sb|rel|<=><`b>> \c<\bfrm<X>>
         >
       >
       であるから、補題は成り立つ。
     >
     \p<
-      &m<M \equiv> PQ> のときは、
+      &m<M \equiv; PQ> のときは、
       &mb<
-        U \equiv> \underline<\op<pair> ($ P, $ Q)>
+        U \equiv; \underline<\op<pair> ($ P, $ Q)>
       >
-      とおくと &m<U \sb|rel|<\neq>><`b> \underline<0>> だから、帰納法の仮定を用いて、
+      とおくと &m<U \sb|rel|<\neq;><`b> \underline<0>> だから、帰納法の仮定を用いて、
       &mb<
         \array|align="rcl"|<
-          \c<F \sfun> \underline<$ (PQ)>> \c<\equiv>> \c<F U> \br>
-          \c> \c<\sb|rel|<=><`b>> \c<\bfrm|fun|<zero> U \sfun> \bfrm<X> (F (\bfrm|fun|<fst> U) (F (\bfrm|fun|<snd> U)))> \br>
-          \c> \c<\sb|rel|<=><`b>> \c<F (\bfrm|fun|<fst> U) (F (\bfrm|fun|<snd> U))> \br>
-          \c> \c<\sb|rel|<=><`b>> \c<F \sfun> \underline<\op<fst> (\op<pair> ($ P, $ Q))> (F \sfun> \underline<\op<snd> (\op<pair> ($ P, $ Q))>)> \br>
-          \c> \c<\equiv>> \c<F \sfun> \underline<$ P> (F \sfun> \underline<$ Q>)> \br>
-          \c> \c<\sb|rel|<=><`b>> \c<PQ>
+          \c<F \sfun; \underline<$ (PQ)>> \c<\equiv;> \c<F U> \br;
+          \c; \c<\sb|rel|<=><`b>> \c<\bfrm|fun|<zero> U \sfun; \bfrm<X> (F (\bfrm|fun|<fst> U) (F (\bfrm|fun|<snd> U)))> \br;
+          \c; \c<\sb|rel|<=><`b>> \c<F (\bfrm|fun|<fst> U) (F (\bfrm|fun|<snd> U))> \br;
+          \c; \c<\sb|rel|<=><`b>> \c<F \sfun; \underline<\op<fst> (\op<pair> ($ P, $ Q))> (F \sfun; \underline<\op<snd> (\op<pair> ($ P, $ Q))>)> \br;
+          \c; \c<\equiv;> \c<F \sfun; \underline<$ P> (F \sfun; \underline<$ Q>)> \br;
+          \c; \c<\sb|rel|<=><`b>> \c<PQ>
         >
       >
       を得る。
@@ -188,23 +188,23 @@
     \p<
       閉じたラムダ項 &m<G> であって、
       &mb<
-        \sp<><\forall>> M \in> \sp<\rm<`L>><\empty>> \ssbin> G \lceil> M \rceil> \sb|rel|<=><`b> \underline<$ \sp<M><*>>
+        \sp<><\forall;> M \in; \sp<\rm<`L>><\empty;> \ssbin; G \lceil; M \rceil; \sb|rel|<=><`b> \underline<$ \sp<M><*>>
       >
       を満たすものが存在する。
-      なお、&m<\sp<M><*>> は補題 \ref|type="thm",id="mstar"|> で定義されたものである。
+      なお、&m<\sp<M><*>> は補題 \ref|type="thm",id="mstar"|; で定義されたものである。
     >
   >
   \prf<
     \p<
-      補題 \ref|type="thm",id="mstar"|> の証明から、閉じたラムダ項 &m<M> に対し、&m<\sp<M><*>> は &m<M> から再帰的に決定できる。
+      補題 \ref|type="thm",id="mstar"|; の証明から、閉じたラムダ項 &m<M> に対し、&m<\sp<M><*>> は &m<M> から再帰的に決定できる。
       したがって、
       &mb<
-        g: `# M \longmapsto> $ \sp<M><*>
+        g: `# M \longmapsto; $ \sp<M><*>
       >
       によって定義される部分関数は再帰的である。
       これを表現するラムダ項を &m<G> とおけば、
       &mb<
-        G \lceil> M \rceil> \sb|rel|<=><`b> \underline<g (`# M)> \equiv> \underline<$ \sp<M><*>>
+        G \lceil; M \rceil; \sb|rel|<=><`b> \underline<g (`# M)> \equiv; \underline<$ \sp<M><*>>
       >
       が成り立つ。
     >
@@ -213,21 +213,21 @@
     \p<
       コンビネータ &m<\bfrm<E>> であって、
       &mb<
-        \sp<><\forall>> M \in> \sp<\rm<`L>><\empty>> \ssbin> \bfrm<E> \lceil> M \rceil> \sb|rel|<=><`b> M
+        \sp<><\forall;> M \in; \sp<\rm<`L>><\empty;> \ssbin; \bfrm<E> \lceil; M \rceil; \sb|rel|<=><`b> M
       >
       を満たすものが存在する。
     >
   >
   \prf<
     \p<
-      補題 \ref|type="thm",id="deff"|> の &m<F> と補題 \ref|type="thm",id="defg"|> の &m<G> を用いて、
+      補題 \ref|type="thm",id="deff"|; の &m<F> と補題 \ref|type="thm",id="defg"|; の &m<G> を用いて、
       &mb<
-        \bfrm<E> \equiv> \rm<`l> u. \sfun> u F (G u)
+        \bfrm<E> \equiv; \rm<`l> u. \sfun; u F (G u)
       >
       とおけば良い。
       実際、閉じたラムダ項 &m<M> に対して、
       &mb<
-        \bfrm<E> \lceil> M \rceil> \sb|rel|<=><`b> F (G \lceil> M \rceil>) \sb|rel|<=><`b> F \sfun> \underline<$ \sp<M><*>> \sb|rel|<=><`b> \sp<M><*> \sb|rel|<=><`b> M
+        \bfrm<E> \lceil; M \rceil; \sb|rel|<=><`b> F (G \lceil; M \rceil;) \sb|rel|<=><`b> F \sfun; \underline<$ \sp<M><*>> \sb|rel|<=><`b> \sp<M><*> \sb|rel|<=><`b> M
       >
       が成り立つ。
     >
@@ -244,55 +244,55 @@
       \li*<
         簡約列
         &mb<
-          \sb<M><1> \to> \cdots> \to> \sb<M><m> \qquad>
-          \sb<N><1> \to> \cdots> \to> \sb<N><n>
+          \sb<M><1> \to; \cdots; \to; \sb<M><m> \qquad;
+          \sb<N><1> \to; \cdots; \to; \sb<N><n>
         >
         がそれぞれ長さ &m<m, n> の標準簡約列ならば、
         &mb<
-          \sb<M><1> \sb<N><1> \to> \cdots> \to> \sb<M><m> \sb<N><1> \to> \cdots> \to> \sb<M><m> \sb<N><n>
+          \sb<M><1> \sb<N><1> \to; \cdots; \to; \sb<M><m> \sb<N><1> \to; \cdots; \to; \sb<M><m> \sb<N><n>
         >
         も長さ &m<m + n> の標準簡約列である。
       >
       \li*<
         簡約列
         &mb<
-          \sb<M><1> \to> \cdots> \to> \sb<M><m>
+          \sb<M><1> \to; \cdots; \to; \sb<M><m>
         >
         が長さ &m<m> の標準簡約列ならば、
         &mb<
-          \rm<`l> x. \sfun> \sb<M><1> \to> \cdots> \to> \rm<`l> x. \sfun> \sb<M><m>
+          \rm<`l> x. \sfun; \sb<M><1> \to; \cdots; \to; \rm<`l> x. \sfun; \sb<M><m>
         >
         も長さ &m<m> の標準簡約列である。
       >
       \li*<
         簡約列
         &mb<
-          \sb<M><1> \to> \cdots> \to> \sb<M><m> \qquad>
-          \sb<N><1> \to> \cdots> \to> \sb<N><n>
+          \sb<M><1> \to; \cdots; \to; \sb<M><m> \qquad;
+          \sb<N><1> \to; \cdots; \to; \sb<N><n>
         >
         がそれぞれ長さ &m<m, n> の標準簡約列であるとする。
-        &m<\sb<M><m>> が &m<\sb<M><1>, \cdots>, \sb<M><m>> の中で最初のラムダ抽象項であり、あるラムダ項 &m<N> に対して &m<\sb<M><m> N \sb|rel|<\to>><h> \sb<N><1>> ならば、
+        &m<\sb<M><m>> が &m<\sb<M><1>, \cdots;, \sb<M><m>> の中で最初のラムダ抽象項であり、あるラムダ項 &m<N> に対して &m<\sb<M><m> N \sb|rel|<\to;><h> \sb<N><1>> ならば、
         &mb<
-          \sb<M><1> N \to> \cdots> \to> \sb<M><m> N \to> \sb<N><1> \to> \cdots> \to> \sb<N><n>
+          \sb<M><1> N \to; \cdots; \to; \sb<M><m> N \to; \sb<N><1> \to; \cdots; \to; \sb<N><n>
         >
         は長さ &m<m + n> の標準簡約列である。
       >
     >
     \p<
-      また、&m<M> から &m<N> への標準簡約列が存在することを &m<M \sb|rel|<\headrarr>><s> N> で表す。
+      また、&m<M> から &m<N> への標準簡約列が存在することを &m<M \sb|rel|<\headrarr;><s> N> で表す。
     >
   >
   \thm|type="lem",id="srsq"|<
     \p<
       簡約列
       &mb<
-        \sb<M><1> \to> \cdots> \to> \sb<M><m>
+        \sb<M><1> \to; \cdots; \to; \sb<M><m>
       >
       が標準簡約列であり、&m<\sb<M><m>> はこの簡約列に含まれるラムダ項の中で最初のラムダ抽象項であるとする。
       このとき、この簡約列を構成する全ての簡約は冠頭簡約である。
       すなわち、
       &mb<
-        \sb<M><1> \sb|rel|<\to>><h> \cdots> \sb|rel|<\to>><h> \sb<M><m>
+        \sb<M><1> \sb|rel|<\to;><h> \cdots; \sb|rel|<\to;><h> \sb<M><m>
       >
       が成り立つ。
     >
@@ -300,29 +300,29 @@
   \prf<
     \p<
       &m<m> に関する帰納法による。
-      &m<m = 1> ならば明らかなので、&m<m \geq> 2> とする。
-      &m<\sb<M><m>> は &m<\sb<M><1>, \cdots>, \sb<M><m>> の中の唯一のラムダ抽象項なので、標準簡約列
+      &m<m = 1> ならば明らかなので、&m<m \geq; 2> とする。
+      &m<\sb<M><m>> は &m<\sb<M><1>, \cdots;, \sb<M><m>> の中の唯一のラムダ抽象項なので、標準簡約列
       &mb<
-        `s: \sb<M><1> \to> \cdots> \to> \sb<M><m>
+        `s: \sb<M><1> \to; \cdots; \to; \sb<M><m>
       >
       が上の定義の 4 番目以外から作られることはない。
       すると &m<`s> は、
       &mb<
-        `s: \sb<P><1> Q \to> \cdots> \to> \sb<P><p> Q \to> \sb<Q><1> \to> \cdots> \to> \sb<Q><q>
+        `s: \sb<P><1> Q \to; \cdots; \to; \sb<P><p> Q \to; \sb<Q><1> \to; \cdots; \to; \sb<Q><q>
       >
       という形であり、
       &mb<
         \array|align="rl"|<
-          \c<`t:> \c<\sb<P><1> \to> \cdots> \to> \sb<P><p>> \br>
-          \c<`r:> \c<\sb<Q><1> \to> \cdots> \to> \sb<Q><q>>
+          \c<`t:> \c<\sb<P><1> \to; \cdots; \to; \sb<P><p>> \br;
+          \c<`r:> \c<\sb<Q><1> \to; \cdots; \to; \sb<Q><q>>
         >
       >
       は標準簡約列である。
-      また、&m<\sb<P><p> Q \sb|rel|<\to>><h> \sb<Q><1>> が成り立つ。
+      また、&m<\sb<P><p> Q \sb|rel|<\to;><h> \sb<Q><1>> が成り立つ。
       ここで &m<p `< m> および &m<q `< m> であるから、帰納法の仮定より &m<`t> と &m<`r> を構成する全ての簡約は冠頭簡約である。
       したがって、
       &mb<
-        \sb<P><1> Q \sb|rel|<\to>><h> \cdots> \sb|rel|<\to>><h> \sb<P><p> Q \sb|rel|<\to>><h> \sb<Q><1> \sb|rel|<\to>><h> \cdots> \sb|rel|<\to>><h> \sb<Q><q>
+        \sb<P><1> Q \sb|rel|<\to;><h> \cdots; \sb|rel|<\to;><h> \sb<P><p> Q \sb|rel|<\to;><h> \sb<Q><1> \sb|rel|<\to;><h> \cdots; \sb|rel|<\to;><h> \sb<Q><q>
       >
       であり、&m<`s> を構成する全ての簡約も冠頭簡約である。
     >
@@ -330,7 +330,7 @@
   \thm|type="thm"|<
     \name<標準化定理\fl<standardisation theorem>>
     \p<
-      ラムダ項 &m<M, N> に対し、&m<M \sb|rel|<\headrarr>><`b> N> ならば &m<M \sb|rel|<\headrarr>><s> N> である。
+      ラムダ項 &m<M, N> に対し、&m<M \sb|rel|<\headrarr;><`b> N> ならば &m<M \sb|rel|<\headrarr;><s> N> である。
     >  
   >
   \prf<
@@ -345,13 +345,13 @@
     以下、
     &mb<
       \array|align="rcl"|<
-        \c<H'> \c<\equiv>> \c<\rm<`l> h. \sfun> \rm<`l> guvw. \sfun> hgu (hg (\bfrm<`S> u) (g (\bfrm<`S> u)) wv) (\bfrm<E> u)> \br>
-        \c<H> \c<\equiv>> \c<\bfrm<Y> H'> \br>
-        \c<G'> \c<\equiv>> \c<\rm<`l> g. \sfun> \rm<`l> u. \sfun> H g (\bfrm<`S> u) (g (\bfrm<`S> u)) (\bfrm<E> (\bfrm<`S> u)) (gu)> \br>
-        \c<G> \c<\equiv>> \c<\bfrm<Y> G'> \br>
-        \c<F> \c<\equiv>> \c<HG> \br>
-        \c<M> \c<\equiv>> \c<F \underline<0> (G \underline<0>)> \br>
-        \c<N> \c<\equiv>> \c<\rm<`l> x. \sfun> M \bfrm<I>>
+        \c<H'> \c<\equiv;> \c<\rm<`l> h. \sfun; \rm<`l> guvw. \sfun; hgu (hg (\bfrm<`S> u) (g (\bfrm<`S> u)) wv) (\bfrm<E> u)> \br;
+        \c<H> \c<\equiv;> \c<\bfrm<Y> H'> \br;
+        \c<G'> \c<\equiv;> \c<\rm<`l> g. \sfun; \rm<`l> u. \sfun; H g (\bfrm<`S> u) (g (\bfrm<`S> u)) (\bfrm<E> (\bfrm<`S> u)) (gu)> \br;
+        \c<G> \c<\equiv;> \c<\bfrm<Y> G'> \br;
+        \c<F> \c<\equiv;> \c<HG> \br;
+        \c<M> \c<\equiv;> \c<F \underline<0> (G \underline<0>)> \br;
+        \c<N> \c<\equiv;> \c<\rm<`l> x. \sfun; M \bfrm<I>>
       >
     >
     とおく。
@@ -361,7 +361,7 @@
     \p<
       任意のラムダ項 &m<U, V, W> に対し、
       &mb<
-        FUVW \sb|rel|<\headrarr>><h> FU (F (\bfrm<`S> U) (G (\bfrm<`S> U)) WV) (\bfrm<E> U)
+        FUVW \sb|rel|<\headrarr;><h> FU (F (\bfrm<`S> U) (G (\bfrm<`S> U)) WV) (\bfrm<E> U)
       >
       が成り立つ。
     >
@@ -371,12 +371,12 @@
       計算すれば、
       &mb<
         \array|align="rcl"|<
-          \c<FUVW> \c<\equiv>> \c<\bfrm<Y> H' GUVW> \br>
-          \c> \c<\sb|rel|<\headrarr>><h>> \c<H' (\bfrm<Y> H') GUVW> \br>
-          \c> \c<\equiv>> \c<H' H GUVW> \br>
-          \c> \c<\equiv>> \c<(\rm<`l> h. \sfun> \rm<`l> guvw. \sfun> hgu (hg (\bfrm<`S> u) (g (\bfrm<`S> u)) wv) (\bfrm<E> u)) HGUVW> \br>
-          \c> \c<\sb|rel|<\headrarr>><h>> \c<HGU ((HG) (\bfrm<`S> U) (G (\bfrm<`S> U)) WV) (\bfrm<E> U)> \br>
-          \c> \c<\equiv>> \c<FU (F (\bfrm<`S> U) (G (\bfrm<`S> U)) WV) (\bfrm<E> U)>
+          \c<FUVW> \c<\equiv;> \c<\bfrm<Y> H' GUVW> \br;
+          \c; \c<\sb|rel|<\headrarr;><h>> \c<H' (\bfrm<Y> H') GUVW> \br;
+          \c; \c<\equiv;> \c<H' H GUVW> \br;
+          \c; \c<\equiv;> \c<(\rm<`l> h. \sfun; \rm<`l> guvw. \sfun; hgu (hg (\bfrm<`S> u) (g (\bfrm<`S> u)) wv) (\bfrm<E> u)) HGUVW> \br;
+          \c; \c<\sb|rel|<\headrarr;><h>> \c<HGU ((HG) (\bfrm<`S> U) (G (\bfrm<`S> U)) WV) (\bfrm<E> U)> \br;
+          \c; \c<\equiv;> \c<FU (F (\bfrm<`S> U) (G (\bfrm<`S> U)) WV) (\bfrm<E> U)>
         >
       >
       となり、示された。
@@ -396,11 +396,11 @@
       計算すれば、
       &mb<
         \array|align="rcl"|<
-          \c<GU> \c<\equiv>> \c<\bfrm<Y> G' U> \br>
-          \c> \c<\sb|rel|<=><`b>> \c<G' (\bfrm<Y> G') U> \br>
-          \c> \c<\equiv>> \c<G' GU> \br>
-          \c> \c<\sb|rel|<=><`b>> \c<HG (\bfrm<`S> U) (G (\bfrm<`S> U)) (\bfrm<E> (\bfrm<`S> U)) (GU)> \br>
-          \c> \c<\equiv>> \c<F (\bfrm<`S> U) (G (\bfrm<`S> U)) (\bfrm<E> (\bfrm<`S> U)) (GU)>
+          \c<GU> \c<\equiv;> \c<\bfrm<Y> G' U> \br;
+          \c; \c<\sb|rel|<=><`b>> \c<G' (\bfrm<Y> G') U> \br;
+          \c; \c<\equiv;> \c<G' GU> \br;
+          \c; \c<\sb|rel|<=><`b>> \c<HG (\bfrm<`S> U) (G (\bfrm<`S> U)) (\bfrm<E> (\bfrm<`S> U)) (GU)> \br;
+          \c; \c<\equiv;> \c<F (\bfrm<`S> U) (G (\bfrm<`S> U)) (\bfrm<E> (\bfrm<`S> U)) (GU)>
         >
       >
       となり、示された。
@@ -410,7 +410,7 @@
     \p<
       任意の自然数 &m<m, n> に対し、
       &mb<
-        F \underline<n> (G \underline<n>) (\bfrm<E> \underline<n>) \sb|rel|<=><`b> F \underline<n> (G \underline<n>) (\bfrm<E> \sfun> \underline<m + n>) 
+        F \underline<n> (G \underline<n>) (\bfrm<E> \underline<n>) \sb|rel|<=><`b> F \underline<n> (G \underline<n>) (\bfrm<E> \sfun; \underline<m + n>) 
       >
       が成り立つ。
     >
@@ -418,19 +418,19 @@
   \prf<
     \p<
       &m<m> に関する帰納法による。
-      &m<m = 0> のときは明らかなので、&m<m \geq> 1> とする。
+      &m<m = 0> のときは明らかなので、&m<m \geq; 1> とする。
       帰納法の仮定は、任意の自然数 &m<n> に対して、
       &mb<
-        F \underline<n> (G \underline<n>) (\bfrm<E> \underline<n>) \sb|rel|<=><`b> F \underline<n> (G \underline<n>) (\bfrm<E> \sfun> \underline<m + n - 1>) 
+        F \underline<n> (G \underline<n>) (\bfrm<E> \underline<n>) \sb|rel|<=><`b> F \underline<n> (G \underline<n>) (\bfrm<E> \sfun; \underline<m + n - 1>) 
       >
       が成り立つことである。
-      これと補題 \ref|type="thm",id="fuvw"|>, \ref|type="thm",id="gu"|> を用いれば、
+      これと補題 \ref|type="thm",id="fuvw"|;, \ref|type="thm",id="gu"|; を用いれば、
       &mb<
         \array|align="rcl"|<
-          \c<F \underline<n> (G \underline<n>) (\bfrm<E> \underline<n>)> \c<\sb|rel|<=><`b>> \c<F \underline<n> (F (\bfrm<`S> \underline<n>) (G (\bfrm<`S> \underline<n>)) (\bfrm<E> (\bfrm<`S> \underline<n>)) (G \underline<n>)) (\bfrm<E> \underline<n>)> \br>
-          \c> \c<\sb|rel|<=><`b>> \c<F \underline<n> (F \sfun> \underline<n + 1> (G \sfun> \underline<n + 1>) (\bfrm<E> \sfun> \underline<n + 1>) (G \underline<n>)) (\bfrm<E> \underline<n>)> \br>
-          \c> \c<\sb|rel|<=><`b>> \c<F \underline<n> (F \sfun> \underline<n + 1> (G \sfun> \underline<n + 1>) (\bfrm<E> \sfun> \underline<m + n>) (G \underline<n>)) (\bfrm<E> \underline<n>)> \br>
-          \c> \c<\sb|rel|<=><`b>> \c<F \underline<n> (G \underline<n>) (\bfrm<E> \sfun> \underline<m + n>)>
+          \c<F \underline<n> (G \underline<n>) (\bfrm<E> \underline<n>)> \c<\sb|rel|<=><`b>> \c<F \underline<n> (F (\bfrm<`S> \underline<n>) (G (\bfrm<`S> \underline<n>)) (\bfrm<E> (\bfrm<`S> \underline<n>)) (G \underline<n>)) (\bfrm<E> \underline<n>)> \br;
+          \c; \c<\sb|rel|<=><`b>> \c<F \underline<n> (F \sfun; \underline<n + 1> (G \sfun; \underline<n + 1>) (\bfrm<E> \sfun; \underline<n + 1>) (G \underline<n>)) (\bfrm<E> \underline<n>)> \br;
+          \c; \c<\sb|rel|<=><`b>> \c<F \underline<n> (F \sfun; \underline<n + 1> (G \sfun; \underline<n + 1>) (\bfrm<E> \sfun; \underline<m + n>) (G \underline<n>)) (\bfrm<E> \underline<n>)> \br;
+          \c; \c<\sb|rel|<=><`b>> \c<F \underline<n> (G \underline<n>) (\bfrm<E> \sfun; \underline<m + n>)>
         >
       >
       と計算でき、補題が示された。
@@ -448,13 +448,13 @@
   \prf<
     \p<
       &m<n = `# Z, n' = `# Z'> とおけば、&m<\bfrm<E> \underline<n> \sb|rel|<=><`b> Z, \bfrm<E> \underline<n'> \sb|rel|<=><`b> Z'> である。
-      したがって、補題 \ref|type="thm",id="fngnen"|> を用いれば、
+      したがって、補題 \ref|type="thm",id="fngnen"|; を用いれば、
       &mb<
         \array|align="rcl"|<
-          \c<MZ> \c<\sb|rel|<=><`b>> \c<F \underline<0> (G \underline<0>) (\bfrm<E> \underline<n>)> \br>
-          \c> \c<\sb|rel|<=><`b>> \c<F \underline<0> (G \underline<0>) (\bfrm<E> \underline<0>)> \br>
-          \c> \c<\sb|rel|<=><`b>> \c<F \underline<0> (G \underline<0>) (\bfrm<E> \underline<n'>)> \br>
-          \c> \c<\sb|rel|<=><`b>> \c<M Z'>
+          \c<MZ> \c<\sb|rel|<=><`b>> \c<F \underline<0> (G \underline<0>) (\bfrm<E> \underline<n>)> \br;
+          \c; \c<\sb|rel|<=><`b>> \c<F \underline<0> (G \underline<0>) (\bfrm<E> \underline<0>)> \br;
+          \c; \c<\sb|rel|<=><`b>> \c<F \underline<0> (G \underline<0>) (\bfrm<E> \underline<n'>)> \br;
+          \c; \c<\sb|rel|<=><`b>> \c<M Z'>
         >
       >
       となる。
@@ -465,14 +465,14 @@
       ラムダ項 &m<U, V, W, Z> をとる。
       長さ &m<l> の標準簡約列
       &mb<
-        FUVW \to> \cdots> \to> Z
+        FUVW \to; \cdots; \to; Z
       >
-      があり、&m<y \in> \op<FV> (V)> かつ &m<y \nin> \op<FV> (Z)> を満たしているとする。
+      があり、&m<y \in; \op<FV> (V)> かつ &m<y \nin; \op<FV> (Z)> を満たしているとする。
       このとき、長さ &m<l> 以下の標準簡約列
       &mb<
-        V \to> \cdots> \to> V'
+        V \to; \cdots; \to; V'
       >
-      であって、&m<y \nin> \op<FV> (V')> を満たすものが存在する。
+      であって、&m<y \nin; \op<FV> (V')> を満たすものが存在する。
     >
   >
   \prf<
@@ -480,13 +480,13 @@
       そうでないと仮定する。
       このとき、長さ &m<l> の標準簡約列
       &mb<
-        `s: FUVW \to> \cdots> \to> Z
+        `s: FUVW \to; \cdots; \to; Z
       >
-      が存在して、&m<y \in> \op<FV> (V)> かつ &m<y \nin> \op<FV> (Z)> を満たし、さらに任意のラムダ項 &m<V'> に対し、長さ &m<l> 以下の標準簡約列
+      が存在して、&m<y \in; \op<FV> (V)> かつ &m<y \nin; \op<FV> (Z)> を満たし、さらに任意のラムダ項 &m<V'> に対し、長さ &m<l> 以下の標準簡約列
       &mb<
-        V \to> \cdots> \to> V'
+        V \to; \cdots; \to; V'
       >
-      は &m<y \in> \op<FV> (V')> を必ず満たす。
+      は &m<y \in; \op<FV> (V')> を必ず満たす。
       &m<l> はこのようなものの中で最小になるようにとる。
     >
     \p<
@@ -498,95 +498,95 @@
       &m<`s> が 4 番目の形であるとき。
       このとき &m<`s> は、
       &mb<
-        `s: FUVW \to> \cdots> \to> (\rm<`l> w. \sfun> P) W \to> Q \to> \cdots> \to> Z
+        `s: FUVW \to; \cdots; \to; (\rm<`l> w. \sfun; P) W \to; Q \to; \cdots; \to; Z
       >
       という形であり、
       &mb<
         \array|align="rcl"|<
-          \c<`t> \c<:> \c<FUV \to> \cdots> \to> \rm<`l> w. \sfun> P> \br>
-          \c<`r> \c<:> \c<Q \to> \cdots> \to> Z>
+          \c<`t> \c<:> \c<FUV \to; \cdots; \to; \rm<`l> w. \sfun; P> \br;
+          \c<`r> \c<:> \c<Q \to; \cdots; \to; Z>
         >
       >
       はともに長さ &m<l> 未満の標準簡約列である。
-      また、&m<(\rm<`l> w. \sfun> P) W \sb|rel|<\to>><h> Q> が成り立つ。
+      また、&m<(\rm<`l> w. \sfun; P) W \sb|rel|<\to;><h> Q> が成り立つ。
     >
     \p<
-      &m<\rm<`l> w. \sfun> P> は &m<`t> に含まれるラムダ項の中で最初のラムダ抽象項なので、補題 \ref|type="thm",id="srsq"|> によって &m<`t> を構成する全ての簡約は冠頭簡約である。
-      したがって、&m<(\rm<`l> w. \sfun> P) W \sb|rel|<\to>><h> Q> と合わせて &m<FUVW \sb|rel|<\headrarr>><h> Q> が成り立つ。
-      さらに、&m<(\rm<`l> w. \sfun> P) W> は &m<`t> に含まれるラムダ項の中で最初のラムダ抽象項だから、補題 \ref|type="thm",id="fuvw"|> の証明で行った計算を見ることで、
+      &m<\rm<`l> w. \sfun; P> は &m<`t> に含まれるラムダ項の中で最初のラムダ抽象項なので、補題 \ref|type="thm",id="srsq"|; によって &m<`t> を構成する全ての簡約は冠頭簡約である。
+      したがって、&m<(\rm<`l> w. \sfun; P) W \sb|rel|<\to;><h> Q> と合わせて &m<FUVW \sb|rel|<\headrarr;><h> Q> が成り立つ。
+      さらに、&m<(\rm<`l> w. \sfun; P) W> は &m<`t> に含まれるラムダ項の中で最初のラムダ抽象項だから、補題 \ref|type="thm",id="fuvw"|; の証明で行った計算を見ることで、
       &mb<
-        Q \equiv> FU (F (\bfrm<`S> U) (G (\bfrm<`S> U)) WV) (\bfrm<E> U)
+        Q \equiv; FU (F (\bfrm<`S> U) (G (\bfrm<`S> U)) WV) (\bfrm<E> U)
       >
       が分かる。
       これより、&m<`r> の最初のラムダ項 &m<Q> は &m<F U \tilde<V> \tilde<W>> の形であり、&m<`r> の長さを &m<l'> とすると &m<l' `< l> である。
       したがって、&m<l> の最小性から、長さ &m<l'> 以下の標準簡約列
       &mb<
-        `p: F (\bfrm<`S> U) (G (\bfrm<`S> U)) WV \to> \cdots> \to> Z'
+        `p: F (\bfrm<`S> U) (G (\bfrm<`S> U)) WV \to; \cdots; \to; Z'
       >
-      が存在し、&m<y \nin> \op<FV> (Z')> が成り立つ。
+      が存在し、&m<y \nin; \op<FV> (Z')> が成り立つ。
       &m<`p> は標準簡約列の定義における 2 番目か 4 番目の形であるが、&m<F (\bfrm<`S> U) (G (\bfrm<`S> U)) W> から始まる冠頭簡約列にはラムダ抽象項が含まれ得ないので、&m<`t> は 2 番目の形でなければならない。
       すなわち &m<`p> は、
       &mb<
-        `p: F (\bfrm<`S> U) (G (\bfrm<`S> U)) WV \to> \cdots> \to> AV \to> \cdots> \to> A V'
+        `p: F (\bfrm<`S> U) (G (\bfrm<`S> U)) WV \to; \cdots; \to; AV \to; \cdots; \to; A V'
       >
       の形であり、
       &mb<
         \array|align="rcl"|<
-          \c<`u> \c<:> \c<F (\bfrm<`S> U) (G (\bfrm<`S> U)) W \to> \cdots> \to> A> \br>
-          \c<`k> \c<:> \c<V \to> \cdots> \to> V'>
+          \c<`u> \c<:> \c<F (\bfrm<`S> U) (G (\bfrm<`S> U)) W \to; \cdots; \to; A> \br;
+          \c<`k> \c<:> \c<V \to; \cdots; \to; V'>
         >
       >
       はともに長さが &m<l'> 以下の標準簡約列である。
-      しかし、&m<y \nin> \op<FV> (Z') = \op<FV> (AV')> より &m<y \nin> \op<FV> (V')> が成り立つから、&m<`k> の存在は仮定に反し矛盾である。
+      しかし、&m<y \nin; \op<FV> (Z') = \op<FV> (AV')> より &m<y \nin; \op<FV> (V')> が成り立つから、&m<`k> の存在は仮定に反し矛盾である。
     >
     \p<
       \label<場合 2:>
       &m<`s> が 2 番目の形であるとき。
       このとき &m<`s> は、
       &mb<
-        `s: FUVW \to> \cdots> \to> Z' W \to> \cdots> \to> Z' W'
+        `s: FUVW \to; \cdots; \to; Z' W \to; \cdots; \to; Z' W'
       >
       の形であり、
       &mb<
-        `t: FUV \to> \cdots> \to> Z'
+        `t: FUV \to; \cdots; \to; Z'
       >
       は長さ &m<l> 以下の標準簡約列である。
-      また、&m<y \nin> \op<FV> (Z) = \op<FV> (Z' W')> より &m<y \nin> \op<FV> (Z')> を得る。
+      また、&m<y \nin; \op<FV> (Z) = \op<FV> (Z' W')> より &m<y \nin; \op<FV> (Z')> を得る。
     >
     \p<
       この &m<`t> は標準簡約列の定義の 2 番目か 4 番目の形であるが、仮に 2 番目の形であるとすると、
       &mb<
-        `t: FUV \to> \cdots> \to> AV \to> \cdots> \to> AV'
+        `t: FUV \to; \cdots; \to; AV \to; \cdots; \to; AV'
       >
       の形となり、
       &mb<
-        V \to> \cdots> \to> V'
+        V \to; \cdots; \to; V'
       >
-      という標準簡約列が存在することになるが、&m<y \nin> \op<FV> (Z') = \op<FV> (AV')> より &m<y \nin> \op<FV> (V')> なので矛盾である。
+      という標準簡約列が存在することになるが、&m<y \nin; \op<FV> (Z') = \op<FV> (AV')> より &m<y \nin; \op<FV> (V')> なので矛盾である。
     >
     \p<
       これにより、&m<`t> は 4 番目の形である。
       すなわち &m<`t> は、
       &mb<
-        `t: FUV \to> \cdots> \to> (\rm<`l> v. \sfun> P) V \to> Q \to> \cdots> \to> Z'
+        `t: FUV \to; \cdots; \to; (\rm<`l> v. \sfun; P) V \to; Q \to; \cdots; \to; Z'
       >
       という形であり、
       &mb<
-        `p: Q \to> \cdots> \to> Z'
+        `p: Q \to; \cdots; \to; Z'
       >
       は長さ &m<l> 未満の標準簡約列である。
-      また、補題 \ref|type="thm",id="srsq"|> により &m<FUV \sb|rel|<\headrarr>><h> Q> が成り立つ。
-      これより、補題 \ref|type="thm",id="fuvw"|> の証明の計算を見れば、
+      また、補題 \ref|type="thm",id="srsq"|; により &m<FUV \sb|rel|<\headrarr;><h> Q> が成り立つ。
+      これより、補題 \ref|type="thm",id="fuvw"|; の証明の計算を見れば、
       &mb<
-        Q \equiv> \rm<`l> w. \sfun> FU (F (\bfrm<`S> U) (G (\bfrm<`S> U)) w V) (\bfrm<E> U)
+        Q \equiv; \rm<`l> w. \sfun; FU (F (\bfrm<`S> U) (G (\bfrm<`S> U)) w V) (\bfrm<E> U)
       >
       が分かる。
       したがって、&m<`p> は標準簡約列の 3 番目の形でなければならないから、
       &mb<
-        `r: FU (F (\bfrm<`S> U) (G (\bfrm<`S> U)) w V) (\bfrm<E> U) \to> \cdots> \to> \sp<Z><\ppr>>
+        `r: FU (F (\bfrm<`S> U) (G (\bfrm<`S> U)) w V) (\bfrm<E> U) \to; \cdots; \to; \sp<Z><\ppr;>
       >
       という標準簡約列がある。
-      &m<`r> の長さは &m<l> 未満で &m<y \nin> \op<FV> (\sp<Z><\ppr>>)> であるから、場合 1 の &m<`r> に対して行った議論と同様の議論をすれば、矛盾が導かれる。
+      &m<`r> の長さは &m<l> 未満で &m<y \nin; \op<FV> (\sp<Z><\ppr;>)> であるから、場合 1 の &m<`r> に対して行った議論と同様の議論をすれば、矛盾が導かれる。
     >
   >
   \thm|type="lem",id="fuvwtozb"|<
@@ -594,10 +594,10 @@
       ラムダ項 &m<U, V, W, Z> をとる。
       標準簡約列
       &mb<
-        FUVW \to> \cdots> \to> Z
+        FUVW \to; \cdots; \to; Z
       >
-      があり、&m<y \in> \op<FV> (W)> かつ &m<y \nin> \op<FV> (Z)> を満たしているとする。
-      このとき、あるラムダ項 &m<W'> であって、&m<W \sb|rel|<\headrarr>><`b> W'> かつ &m<W' \nin> \op<FV> (W')> を満たすものが存在する。
+      があり、&m<y \in; \op<FV> (W)> かつ &m<y \nin; \op<FV> (Z)> を満たしているとする。
+      このとき、あるラムダ項 &m<W'> であって、&m<W \sb|rel|<\headrarr;><`b> W'> かつ &m<W' \nin; \op<FV> (W')> を満たすものが存在する。
     >
   >
   \prf<
@@ -605,9 +605,9 @@
       そうでないと仮定する。
       このとき、長さ &m<l> の標準簡約列
       &mb<
-        `s: FUVW \to> \cdots> \to> Z
+        `s: FUVW \to; \cdots; \to; Z
       >
-      が存在して、&m<y \in> \op<FV> (W)> かつ &m<y \nin> \op<FV> (Z)> を満たし、さらに任意のラムダ項 &m<W'> に対し、&m<W \sb|rel|<\headrarr>><`b> W'> ならば &m<y \in> \op<FV> (W')> が成り立つ。
+      が存在して、&m<y \in; \op<FV> (W)> かつ &m<y \nin; \op<FV> (Z)> を満たし、さらに任意のラムダ項 &m<W'> に対し、&m<W \sb|rel|<\headrarr;><`b> W'> ならば &m<y \in; \op<FV> (W')> が成り立つ。
       &m<l> はこのようなものの中で最小になるようにとる。
     >
     \p<
@@ -618,88 +618,88 @@
       &m<`s> が 2 番目の形であるとき。
       このとき &m<`s> は、
       &mb<
-        `s: FUVW \to> \cdots> \to> PW \to> \cdots> \to> P W'
+        `s: FUVW \to; \cdots; \to; PW \to; \cdots; \to; P W'
       >
       の形であり、
       &mb<
-        W \to> \cdots> \to> W'
+        W \to; \cdots; \to; W'
       >
       という標準簡約列が存在する。
-      これより &m<W \sb|rel|<\headrarr>><`b> W'> であり、&m<y \nin> \op<FV> (Z) = \op<FV> (P W')> より &m<y \nin> \op<FV> (W')> であるから、矛盾である。
+      これより &m<W \sb|rel|<\headrarr;><`b> W'> であり、&m<y \nin; \op<FV> (Z) = \op<FV> (P W')> より &m<y \nin; \op<FV> (W')> であるから、矛盾である。
     >
     \p<
       \label<場合 2:>
       &m<`s> が 4 番目の形であるとき。
       このとき &m<`s> は、
       &mb<
-        `s: FUVW \to> \cdots> \to> (\rm<`l> w. \sfun> P) W \to> Q \to> \cdots> \to> Z
+        `s: FUVW \to; \cdots; \to; (\rm<`l> w. \sfun; P) W \to; Q \to; \cdots; \to; Z
       >
       の形であり、
       &mb<
-        `t: Q \to> \cdots> \to> Z
+        `t: Q \to; \cdots; \to; Z
       >
       は長さ &m<l> 未満の標準簡約列である。
       &m<`t> の長さを &m<l'> とする。
-      また、補題 \ref|type="thm",id="srsq"|> により &m<FUVW \sb|rel|<\headrarr>><h> Q> が成り立つから、
+      また、補題 \ref|type="thm",id="srsq"|; により &m<FUVW \sb|rel|<\headrarr;><h> Q> が成り立つから、
       &mb<
-        Q \equiv> FU (F (\bfrm<`S> U) (G (\bfrm<`S> G)) WV) (\bfrm<E> U)
+        Q \equiv; FU (F (\bfrm<`S> U) (G (\bfrm<`S> G)) WV) (\bfrm<E> U)
       >
       が分かる。
-      &m<y \in> \op<FV> (F (\bfrm<`S> U) (G (\bfrm<`S> G)) WV)> かつ &m<y \nin> \op<FV> (Z)> だから、補題 \ref|type="thm",id="fuvwtoza"|> より、長さ &m<l'> 以下の標準簡約列
+      &m<y \in; \op<FV> (F (\bfrm<`S> U) (G (\bfrm<`S> G)) WV)> かつ &m<y \nin; \op<FV> (Z)> だから、補題 \ref|type="thm",id="fuvwtoza"|; より、長さ &m<l'> 以下の標準簡約列
       &mb<
-        `r: F (\bfrm<`S> U) (G (\bfrm<`S> G)) WV \to> \cdots> \to> Z'
+        `r: F (\bfrm<`S> U) (G (\bfrm<`S> G)) WV \to; \cdots; \to; Z'
       >
-      が存在して、&m<y \nin> \op<FV> (Z')> である。
+      が存在して、&m<y \nin; \op<FV> (Z')> である。
       ここで &m<F (\bfrm<`S> U) (G (\bfrm<`S> G)) W> から始まる冠頭簡約列にはラムダ抽象項が含まれ得ないので、&m<`r> は標準簡約列の定義の 2 番目の形でなければならない。
       すなわち &m<`r> は、
       &mb<
-        `r: F (\bfrm<`S> U) (G (\bfrm<`S> G)) WV \to> \cdots> \to> \sp<Z><\ppr>> V \to> \cdots> \to> \sp<Z><\ppr>> V'
+        `r: F (\bfrm<`S> U) (G (\bfrm<`S> G)) WV \to; \cdots; \to; \sp<Z><\ppr;> V \to; \cdots; \to; \sp<Z><\ppr;> V'
       >
       の形であり、
       &mb<
-        `p: F (\bfrm<`S> U) (G (\bfrm<`S> G)) W \to> \cdots> \to> \sp<Z><\ppr>>
+        `p: F (\bfrm<`S> U) (G (\bfrm<`S> G)) W \to; \cdots; \to; \sp<Z><\ppr;>
       >
       は長さ &m<l'> 以下の標準簡約列である。
-      また、&m<y \nin> \op<FV> (Z') = \op<FV> (\sp<Z><\ppr>> \sp<V><\ppr>>)> より &m<y \nin> \op<FV> (\sp<Z><\ppr>>)> である。
-      したがって、&m<l' `< l> だから、&m<l> の最小性より、ある &m<W'> が存在して &m<W \sb|rel|<\headrarr>><`b> W> かつ &m<y \nin> \op<FV> (W')> となるが、これは仮定に反し矛盾である。
+      また、&m<y \nin; \op<FV> (Z') = \op<FV> (\sp<Z><\ppr;> \sp<V><\ppr;>)> より &m<y \nin; \op<FV> (\sp<Z><\ppr;>)> である。
+      したがって、&m<l' `< l> だから、&m<l> の最小性より、ある &m<W'> が存在して &m<W \sb|rel|<\headrarr;><`b> W> かつ &m<y \nin; \op<FV> (W')> となるが、これは仮定に反し矛盾である。
     >
   >
   \thm|type="lem",id="mxmy"|<
     \p<
       変項 &m<x, y> に対し、
       &mb<
-        x \nequiv> y \implies> Mx \sb|rel|<\neq>><`b`h> My
+        x \nequiv; y \implies; Mx \sb|rel|<\neq;><`b`h> My
       >
       が成り立つ。
     >
   >
   \prf<
     \p<
-      &m<x \nequiv> y> かつ &m<Mx \sb|rel|<=><`b`h> My> と仮定する。
-      Church–Rosser の定理より、あるラムダ項 &m<Z'> が存在して、&m<Mx \sb|rel|<\headrarr>><`b`h> Z'> および &m<My \sb|rel|<\headrarr>><`b`h> Z'> が成り立つ。
-      また、&m<`h>-簡約は延期できるので、あるラムダ項 &m<Z> が存在して、&m<My \sb|rel|<\headrarr>><`b> Z \headrarr> Z'> が成り立つ。
-      標準化定理より、&m<My \sb|rel|<\headrarr>><s> Z> である。
+      &m<x \nequiv; y> かつ &m<Mx \sb|rel|<=><`b`h> My> と仮定する。
+      Church–Rosser の定理より、あるラムダ項 &m<Z'> が存在して、&m<Mx \sb|rel|<\headrarr;><`b`h> Z'> および &m<My \sb|rel|<\headrarr;><`b`h> Z'> が成り立つ。
+      また、&m<`h>-簡約は延期できるので、あるラムダ項 &m<Z> が存在して、&m<My \sb|rel|<\headrarr;><`b> Z \headrarr; Z'> が成り立つ。
+      標準化定理より、&m<My \sb|rel|<\headrarr;><s> Z> である。
     >
     \p<
-      &m<M> は閉じているので &m<y \nin> \op<FV> (Mx)> であり、&m<\op<FV> (Mx) \supseteq> \op<FV> (Z') = \op<FV> (Z)> が成り立つから、&m<y \nin> \op<FV> (Z)> でもある。
-      また、明らかに &m<y \in> \op<FV> (y)> である。
-      さらに、&m<My \equiv> F \underline<0> (G \underline<0>) y> であるから、これは補題 \ref|type="thm",id="fuvwtozb"|> が使える形である。
-      したがって、補題 \ref|type="thm",id="fuvwtozb"|> により、あるラムダ項 &m<W'> が存在して、&m<y \sb|rel|<\headrarr>><`b> W'> かつ &m<y \nin> \op<FV> (W')> が成り立つ。
-      &m<y> は変項なので、&m<W' \equiv> y> でなければならず、これより &m<y \nin> \op<FV> (y)> となり矛盾である。
+      &m<M> は閉じているので &m<y \nin; \op<FV> (Mx)> であり、&m<\op<FV> (Mx) \supseteq; \op<FV> (Z') = \op<FV> (Z)> が成り立つから、&m<y \nin; \op<FV> (Z)> でもある。
+      また、明らかに &m<y \in; \op<FV> (y)> である。
+      さらに、&m<My \equiv; F \underline<0> (G \underline<0>) y> であるから、これは補題 \ref|type="thm",id="fuvwtozb"|; が使える形である。
+      したがって、補題 \ref|type="thm",id="fuvwtozb"|; により、あるラムダ項 &m<W'> が存在して、&m<y \sb|rel|<\headrarr;><`b> W'> かつ &m<y \nin; \op<FV> (W')> が成り立つ。
+      &m<y> は変項なので、&m<W' \equiv; y> でなければならず、これより &m<y \nin; \op<FV> (y)> となり矛盾である。
     >
   >
   \thm|type="thm"|<
     \p<
       上で定義した &m<M, N> は、
       &mb<
-        (\sp<><\forall>> Z \in> \sp<\rm<`L>><\empty>> \ssbin> MZ \sb|rel|<=><`b`h> NZ) \implies> M \sb|rel|<=><`b`h> N
+        (\sp<><\forall;> Z \in; \sp<\rm<`L>><\empty;> \ssbin; MZ \sb|rel|<=><`b`h> NZ) \implies; M \sb|rel|<=><`b`h> N
       >
       を満たさない。
     >
   >
   \prf<
     \p<
-      任意に閉じたラムダ項 &m<Z> をとると、&m<\bfrm<I>> も閉じたラムダ項だから、補題 \ref|type="thm",id="mzmz"|> によって &m<MZ \sb|rel|<=><`b> M \bfrm<I>> である。
+      任意に閉じたラムダ項 &m<Z> をとると、&m<\bfrm<I>> も閉じたラムダ項だから、補題 \ref|type="thm",id="mzmz"|; によって &m<MZ \sb|rel|<=><`b> M \bfrm<I>> である。
       一方、&m<N> の定義により、&m<NZ \sb|rel|<=><`b> M \bfrm<I>> である。
       したがって、&m<MZ \sb|rel|<=><`b`h> NZ> を得る。
     >
@@ -707,15 +707,15 @@
       &m<M \sb|rel|<=><`b`h> N> と仮定する。
       任意の変項 &m<x, y> に対し、&m<Mx \sb|rel|<=><`b`h> Nx> および &m<Mx \sb|rel|<=><`b`h> Ny> である。
       さらに &m<N> の定義から、&m<Nx \sb|rel|<=><`b`h> M \bfrm<I>> および &m<Ny \sb|rel|<=><`b`h> M \bfrm<I>> も成り立つ。
-      以上により &m<Mx \sb|rel|<=><`b`h> My> を得るが、これは補題 \ref|type="thm",id="mxmy"|> に反する。
-      したがって、&m<M \sb|rel|<\neq>><`b`h> N> である。
+      以上により &m<Mx \sb|rel|<=><`b`h> My> を得るが、これは補題 \ref|type="thm",id="mxmy"|; に反する。
+      したがって、&m<M \sb|rel|<\neq;><`b`h> N> である。
     >
   >
   \h1<補足>
   \p<
     前節で示したように、閉じたラムダ項に対してのみの外延性
     &mb<
-      (\sp<><\forall>> Z \in> \sp<\rm<`L>><\empty>> \ssbin> MZ \sb|rel|<=><`b`h> NZ) \implies> M \sb|rel|<=><`b`h> N
+      (\sp<><\forall;> Z \in; \sp<\rm<`L>><\empty;> \ssbin; MZ \sb|rel|<=><`b`h> NZ) \implies; M \sb|rel|<=><`b`h> N
     >
     は一般には成り立たないが、&m<M> と &m<N> が特定の条件を満たしている範囲であれば成り立つ。
     その条件の 1 つとして、以下のものが知られている。
@@ -724,7 +724,7 @@
     \p<
       ラムダ項 &m<M> について、
       &mb<
-        \sp<><\forall>> N \in> \rm<`L> \ssbin> \sp<><\exists>> M' \in> \rm<`L> \ssbin> M \sb|rel|<\headrarr>><`b`h> M' \scand> N \in> \op<Sub> (M')
+        \sp<><\forall;> N \in; \rm<`L> \ssbin; \sp<><\exists;> M' \in; \rm<`L> \ssbin; M \sb|rel|<\headrarr;><`b`h> M' \scand; N \in; \op<Sub> (M')
       >
       が成り立つとき、&m<M> を &m<`b`h>-\em<普遍生成子\fl<universal generator>> という。
       なお、&m<\op<Sub> (M')> は &m<M'> の部分項全体の集合を表す。
@@ -734,7 +734,7 @@
     \p<
       ラムダ項 &m<M, N> のうち、どちらか一方が &m<`b`h>-普遍生成子でなければ、
       &mb<
-        (\sp<><\forall>> Z \in> \sp<\rm<`L>><\empty>> \ssbin> MZ \sb|rel|<=><`b`h> NZ) \implies> M \sb|rel|<=><`b`h> N
+        (\sp<><\forall;> Z \in; \sp<\rm<`L>><\empty;> \ssbin; MZ \sb|rel|<=><`b`h> NZ) \implies; M \sb|rel|<=><`b`h> N
       >
       が成り立つ。
     >

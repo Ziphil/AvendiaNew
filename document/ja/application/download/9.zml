@@ -1,9 +1,9 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<Zotica>
-  \use-math>
+  \use-math;
 
   \h1<概要>
   \p<
@@ -30,8 +30,8 @@
   >
   &mb<
     \array|align="c"|<
-      \cc<x = \frac<- b \pm> \sqrt<\sp<b><2> - 4 ac>><2 a>>
-      \cc<\un<\lim>><n \to> \infty>> \frac<1><n> \sum<k = 0><n - 1> f \paren<\frac<k><n>> = \int<0><1> f (x) dx>
+      \cc<x = \frac<- b \pm; \sqrt<\sp<b><2> - 4 ac>><2 a>>
+      \cc<\un<\lim;><n \to; \infty;> \frac<1><n> \sum<k = 0><n - 1> f \paren<\frac<k><n>> = \int<0><1> f (x) dx>
       \cc<F (z) = \frac<1><2 `p i> \oint<C> \frac<F (`z)><`z - z> d `z>
     >
   >

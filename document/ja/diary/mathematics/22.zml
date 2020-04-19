@@ -1,9 +1,9 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<錐状極限>
-  \use-math>
+  \use-math;
 
   \h1<日記 (2018 年 9 月 3 日)>
   \p<
@@ -19,48 +19,48 @@
   >
   \thm|type="def"|<
     \p<
-      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> に対し、2-関手 &m<F: \scr<J> \to> \scr<C>> があるとする。
-      &m<\bfrm<1>> の唯一の対象への定値関手 &m<\sb<`D><\bfrm<1>>: \scr<J> \to> \bfrm<Cat>> を重みとして用いた &m<F> の 2-極限を\em<錐状極限\fl<conical limit>> といい、単に &m<\lim> F> で表す。
+      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> に対し、2-関手 &m<F: \scr<J> \to; \scr<C>> があるとする。
+      &m<\bfrm<1>> の唯一の対象への定値関手 &m<\sb<`D><\bfrm<1>>: \scr<J> \to; \bfrm<Cat>> を重みとして用いた &m<F> の 2-極限を\em<錐状極限\fl<conical limit>> といい、単に &m<\lim; F> で表す。
     >
   >
   \p<
     一般の 2-極限は普遍性をもつ柱として特徴付けられた。
-    錐状極限は、&m<\sb<`D><\bfrm<1>>> を重みとして用いた特殊な場合であるから、ある &m<\scr<C>> の対象 &m<A> を含む &m<`s: \sb<`D><\bfrm<1>> \raarr> `[A, F \hyphen>`]> という形の柱であって普遍性をもつものとして特徴付けられる。
+    錐状極限は、&m<\sb<`D><\bfrm<1>>> を重みとして用いた特殊な場合であるから、ある &m<\scr<C>> の対象 &m<A> を含む &m<`s: \sb<`D><\bfrm<1>> \raarr; `[A, F \hyphen;`]> という形の柱であって普遍性をもつものとして特徴付けられる。
     今後のため、これをもう少し初等的に言い換えておこう。
   >
   \p<
-    まず、柱 &m<`s: \sb<`D><\bfrm<1>> \raarr> `[A, F \hyphen>`]> は、&m<\scr<J>> の各対象 &m<I> に対して定められた関手 &m<\sb<`s><I>: \bfrm<1> \to> `[A, FI`]> から成る。
-    この関手は &m<\bfrm<1>> の唯一の対象 &m<\star|ord|>> の像によって一意に定まるから、&m<\scr<C>> の 1-射 &m<\sb<\bar<`s>><I>: A \to> FI> と同一視できる。
+    まず、柱 &m<`s: \sb<`D><\bfrm<1>> \raarr; `[A, F \hyphen;`]> は、&m<\scr<J>> の各対象 &m<I> に対して定められた関手 &m<\sb<`s><I>: \bfrm<1> \to; `[A, FI`]> から成る。
+    この関手は &m<\bfrm<1>> の唯一の対象 &m<\star|ord|;> の像によって一意に定まるから、&m<\scr<C>> の 1-射 &m<\sb<\bar<`s>><I>: A \to; FI> と同一視できる。
   >
   \p<
     &m<`s> は 2-自然変換なので自然性を満たすが、それは &m<\bfrm<Cat>> における図式
     &mb<
       \diag<
-        \v<`[I, J`]> \v<`[\bfrm<1>, \bfrm<1>`]> \br>
+        \v<`[I, J`]> \v<`[\bfrm<1>, \bfrm<1>`]> \br;
         \v<`[`[A, FI`], `[A, FJ`]`]> \v<`[\bfrm<1>, `[A, FJ`]`]>
-        \ar|s="1",e="2"|<\sb<`D><\bfrm<1>>> \ar|s="1",e="3",inv|<`[A,  F \hyphen>`]>
-        \ar|s="2",e="4"|<c (\hyphen>, \sb<`s><J>)> \ar|s="3",e="4",inv|<c (\sb<`s><I>, \hyphen>)>
+        \ar|s="1",e="2"|<\sb<`D><\bfrm<1>>> \ar|s="1",e="3",inv|<`[A,  F \hyphen;`]>
+        \ar|s="2",e="4"|<c (\hyphen;, \sb<`s><J>)> \ar|s="3",e="4",inv|<c (\sb<`s><I>, \hyphen;)>
       >
     >
     が可換であるということであった。
-    これはまず、任意の &m<\scr<J>> の 1-射 &m<u: I \to> J> (すなわち &m<`[I, J`]> の対象) に対して、通常の関手の等式
+    これはまず、任意の &m<\scr<J>> の 1-射 &m<u: I \to; J> (すなわち &m<`[I, J`]> の対象) に対して、通常の関手の等式
     &mb<
-      \sb<`s><J> \circ> \sb<`D><\bfrm<1>> = `[A, Fu`] \circ> \sb<`s><I>
+      \sb<`s><J> \circ; \sb<`D><\bfrm<1>> = `[A, Fu`] \circ; \sb<`s><I>
     >
     が成り立つことを要求している。
-    この等式の両辺は &m<\bfrm<1>> からの関手なので &m<\star|ord|>> の像のみを考えれば良く、したがってこれは、&m<\scr<C>> の 1-射の等式
+    この等式の両辺は &m<\bfrm<1>> からの関手なので &m<\star|ord|;> の像のみを考えれば良く、したがってこれは、&m<\scr<C>> の 1-射の等式
     &mb<
-      \sb<\bar<`s>><J> = Fu \circ> \sb<\bar<`s>><I>
+      \sb<\bar<`s>><J> = Fu \circ; \sb<\bar<`s>><I>
     >
     と同値である。
-    次に、上の図式は、任意の &m<\scr<J>> の 2-射 &m<`v: u \raarr> v: I \to> J> (すなわち &m<`[I, J`]> の射) に対して、通常の自然変換の等式
+    次に、上の図式は、任意の &m<\scr<J>> の 2-射 &m<`v: u \raarr; v: I \to; J> (すなわち &m<`[I, J`]> の射) に対して、通常の自然変換の等式
     &mb<
-      \sb<`s><J> \rtriangle> \sb<`D><\bfrm<1>> `v = `[A, F `v`] \ltriangle> \sb<`s><I>
+      \sb<`s><J> \rtriangle; \sb<`D><\bfrm<1>> `v = `[A, F `v`] \ltriangle; \sb<`s><I>
     >
     が成り立つことも要求している。
-    これも &m<\star>> における成分を考えて、&m<\scr<C>> の 2-射の等式
+    これも &m<\star;> における成分を考えて、&m<\scr<C>> の 2-射の等式
     &mb<
-      \sb<\rm<id>><\sb<\bar<`s>><J>> = F `v \ltriangle> \sb<\bar<`s>><I>
+      \sb<\rm<id>><\sb<\bar<`s>><J>> = F `v \ltriangle; \sb<\bar<`s>><I>
     >
     が成り立つことと同値であることが分かる。
   >
@@ -69,16 +69,16 @@
   >
   \thm|type="def"|<
     \p<
-      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to> \scr<C>> をとり、さらに &m<\scr<C>> の対象 &m<A> をとる。
-      &m<\scr<J>> の対象 &m<I> に対して &m<\scr<C>> の 1-射 &m<\sb<\bar<`s>><I>: A \to> FI> が定められており、以下の条件を満たすとする。
+      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to; \scr<C>> をとり、さらに &m<\scr<C>> の対象 &m<A> をとる。
+      &m<\scr<J>> の対象 &m<I> に対して &m<\scr<C>> の 1-射 &m<\sb<\bar<`s>><I>: A \to; FI> が定められており、以下の条件を満たすとする。
     >
     \ul<
       \li*<
-        任意の &m<\scr<J>> の 1-射 &m<u: I \to> J> に対し、
+        任意の &m<\scr<J>> の 1-射 &m<u: I \to; J> に対し、
         &mb<
           \diag|hor="thn"|<
-            \v> \v<A> \v> \br>
-            \v<FI> \v> \v<FJ>
+            \v; \v<A> \v; \br;
+            \v<FI> \v; \v<FJ>
             \ar|s="2",e="4",inv|<\sb<\bar<`s>><I>> \ar|s="2",e="6"|<\sb<\bar<`s>><J>>
             \ar|s="4",e="6",inv|<Fu>
           >
@@ -86,19 +86,19 @@
         は可換である。
       >
       \li*<
-        任意の &m<\scr<J>> の 2-射 &m<`v: u \raarr> v: I \to> J> に対し、
+        任意の &m<\scr<J>> の 2-射 &m<`v: u \raarr; v: I \to; J> に対し、
         &mb<
           \diag<
             \v<A> \v<FI> \v<FJ>
             \ar|s="1",e="2"|<\sb<\bar<`s>><I>>
             \ar|s="2:r10",e="3:l10",bend="40"|<Fu> \ar|s="2:r90",e="3:l90",bend="-40",inv|<Fv>
-            \ar|s="2:r10",e="3:l10",bend="40",line="0",name="h",inv|> \ar|s="2:r90",e="3:l90",bend="-40",line="0",name="k"|>
+            \ar|s="2:r10",e="3:l10",bend="40",line="0",name="h",inv|; \ar|s="2:r90",e="3:l90",bend="-40",line="0",name="k"|;
             \ar|s="h:c",e="k:c",line="2"|<F `v>
-          > \qquad>
+          > \qquad;
           \diag<
             \v<A> \v<FJ>
             \ar|s="1:r10",e="2:l10",bend="40"|<\sb<\bar<`s>><J>> \ar|s="1:r90",e="2:l90",bend="-40",inv|<\sb<\bar<`s>><J>>
-            \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|> \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|>
+            \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|; \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|;
             \ar|s="h:c",e="k:c",line="2"|<\rm<id>>
           >
         >
@@ -106,7 +106,7 @@
       >
     >
     \p<
-      このとき、族 &m<(\sb<\bar<`s>><I>) \sb<><I \in> \scr<J>>> を &m<F> の\em<錐\fl<cone>> といい、&m<\bar<`s>: A \daarr> F> で表す。
+      このとき、族 &m<(\sb<\bar<`s>><I>) \sb<><I \in; \scr<J>>> を &m<F> の\em<錐\fl<cone>> といい、&m<\bar<`s>: A \daarr; F> で表す。
     >
   >
   \p<
@@ -115,19 +115,19 @@
   >
   \p<
     柱の 2 次元的普遍性には柱の間の自然調整が出てくるので、重みとして &m<\sb<`D><\bfrm<1>>> を考えている場合の柱の間の自然調整についても初等的な言い換えをしておこう。
-    2 つの柱 &m<`s, `t: \sb<`D><\bfrm<1>> \raarr> `[A, F \hyphen>`]> と自然調整 &m<`J: `s \raaarr> `t> をとる。
-    これは、&m<\scr<J>> の対象 &m<I> に対して定められた自然変換 &m<\sb<`J><I>: \sb<`s><I> \raarr> \sb<`t><I>> から成る。
-    &m<\star>> における成分を考えれば、これは &m<\scr<C>> の 2-射 &m<\sb<\bar<`J>><I>: \sb<\bar<`s>><I> \raarr> \sb<\bar<`t>><I>> と同一視できる。
+    2 つの柱 &m<`s, `t: \sb<`D><\bfrm<1>> \raarr; `[A, F \hyphen;`]> と自然調整 &m<`J: `s \raaarr; `t> をとる。
+    これは、&m<\scr<J>> の対象 &m<I> に対して定められた自然変換 &m<\sb<`J><I>: \sb<`s><I> \raarr; \sb<`t><I>> から成る。
+    &m<\star;> における成分を考えれば、これは &m<\scr<C>> の 2-射 &m<\sb<\bar<`J>><I>: \sb<\bar<`s>><I> \raarr; \sb<\bar<`t>><I>> と同一視できる。
   >
   \p<
-    &m<`J> の自然性とは、任意の &m<\scr<J>> の 1-射 &m<u: I \to> J> に対し、通常の自然変換 (すなわち &m<\bfrm<Cat>> の 2-射) の等式
+    &m<`J> の自然性とは、任意の &m<\scr<J>> の 1-射 &m<u: I \to; J> に対し、通常の自然変換 (すなわち &m<\bfrm<Cat>> の 2-射) の等式
     &mb<
-      \sb<`J><J> \ltriangle> \sb<`D><\bfrm<1>> u = `[A, Fu`] \rtriangle> \sb<`J><I>
+      \sb<`J><J> \ltriangle; \sb<`D><\bfrm<1>> u = `[A, Fu`] \rtriangle; \sb<`J><I>
     >
     が等しいということであった。
-    &m<\star>> における成分を考えると、これは &m<\scr<C>> の 2-射の等式
+    &m<\star;> における成分を考えると、これは &m<\scr<C>> の 2-射の等式
     &mb<
-      \sb<\bar<`J>><J> = Fu \rtriangle> \sb<\bar<`J>><I>
+      \sb<\bar<`J>><J> = Fu \rtriangle; \sb<\bar<`J>><I>
     >
     と同値である。
   >
@@ -136,24 +136,24 @@
   >
   \thm|type="def"|<
     \p<
-      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to> \scr<C>> をとり、さらに錐 &m<\bar<`s>, \bar<`t>: A \daarr> F> をとる。
-      &m<\scr<J>> の対象 &m<I> に対して &m<\scr<C>> の 2-射 &m<\sb<\bar<`J>><I>: \sb<\bar<`s>><I> \raarr> \sb<\bar<`t>><I>> が定められており、以下の条件を満たすとする。
+      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to; \scr<C>> をとり、さらに錐 &m<\bar<`s>, \bar<`t>: A \daarr; F> をとる。
+      &m<\scr<J>> の対象 &m<I> に対して &m<\scr<C>> の 2-射 &m<\sb<\bar<`J>><I>: \sb<\bar<`s>><I> \raarr; \sb<\bar<`t>><I>> が定められており、以下の条件を満たすとする。
     >
     \ul<
       \li*<
-        任意の &m<\scr<J>> の 1-射 &m<u: I \to> J> に対し、
+        任意の &m<\scr<J>> の 1-射 &m<u: I \to; J> に対し、
         &mb<
           \diag<
             \v<A> \v<FI> \v<FJ>
             \ar|s="2",e="3"|<Fu>
             \ar|s="1:r10",e="2:l10",bend="40"|<\sb<\bar<`s>><I>> \ar|s="1:r90",e="2:l90",bend="-40",inv|<\sb<\bar<`t>><I>>
-            \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|> \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|>
+            \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|; \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|;
             \ar|s="h:c",e="k:c",line="2"|<\sb<\bar<`J>><I>>
-          > \qquad>
+          > \qquad;
           \diag<
             \v<A> \v<FJ>
             \ar|s="1:r10",e="2:l10",bend="40"|<\sb<\bar<`s>><J>> \ar|s="1:r90",e="2:l90",bend="-40",inv|<\sb<\bar<`t>><J>>
-            \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|> \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|>
+            \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|; \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|;
             \ar|s="h:c",e="k:c",line="2"|<\sb<\bar<`J>><J>>
           >
         >
@@ -161,7 +161,7 @@
       >
     >
     \p<
-      このとき、族 &m<(\sb<\bar<`J>><I>) \sb<><I \in> \scr<J>>> を\em<錐の射\fl<morphism of cones>> といい、&m<\bar<`J>: \bar<`s> \raaarr> \bar<`t>> で表す。
+      このとき、族 &m<(\sb<\bar<`J>><I>) \sb<><I \in; \scr<J>>> を\em<錐の射\fl<morphism of cones>> といい、&m<\bar<`J>: \bar<`s> \raaarr; \bar<`t>> で表す。
     >
   >
   \p<
@@ -169,14 +169,14 @@
   >
   \thm|type="def"|<
     \p<
-      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to> \scr<C>> に対し、錐 &m<\bar<`h>: L \daarr> F> が以下の条件を満たすとする。
+      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to; \scr<C>> に対し、錐 &m<\bar<`h>: L \daarr; F> が以下の条件を満たすとする。
     >
     \ul<
       \li*<
-        任意の錐 &m<\bar<`s>: A \daarr> F> に対し、ある &m<\scr<C>> の 1-射 &m<f: A \to> L> が一意に存在し、任意の &m<\scr<J>> の対象 &m<I> に対して、
+        任意の錐 &m<\bar<`s>: A \daarr; F> に対し、ある &m<\scr<C>> の 1-射 &m<f: A \to; L> が一意に存在し、任意の &m<\scr<J>> の対象 &m<I> に対して、
         &mb<
           \diag<
-            \v<A> \v> \br>
+            \v<A> \v; \br;
             \v<L> \v<FI>
             \ar|s="1",e="4"|<\sb<\bar<`s>><I>> \ar|s="1",e="3",inv|<f> \ar|s="3",e="4",inv|<\sb<\bar<`h>><I>>
           >
@@ -190,23 +190,23 @@
   >
   \thm|type="def"|<
     \p<
-      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to> \scr<C>> に対し、錐 &m<\bar<`h>: A \daarr> F> が 1 次元的普遍性を満たし、さらに以下の条件を満たすとする。
+      2-小圏 &m<\scr<J>> と 2-圏 &m<\scr<C>> および 2-関手 &m<F: \scr<J> \to; \scr<C>> に対し、錐 &m<\bar<`h>: A \daarr; F> が 1 次元的普遍性を満たし、さらに以下の条件を満たすとする。
     >
     \ul<
       \li*<
-        任意の錐 &m<\bar<`s>, \bar<`t>: A \daarr> F> と任意の錐の射 &m<\bar<`J>: \bar<`s> \raaarr> \bar<`t>> に対し、ある &m<\scr<C>> の 2-射 &m<`a: f \raarr> g> が一意に存在し、任意の &m<\scr<J>> の対象 &m<I> に対して、
+        任意の錐 &m<\bar<`s>, \bar<`t>: A \daarr; F> と任意の錐の射 &m<\bar<`J>: \bar<`s> \raaarr; \bar<`t>> に対し、ある &m<\scr<C>> の 2-射 &m<`a: f \raarr; g> が一意に存在し、任意の &m<\scr<J>> の対象 &m<I> に対して、
         &mb<
           \diag<
             \v<A> \v<L> \v<FI>
             \ar|s="2",e="3"|<\sb<\bar<`h>><I>>
             \ar|s="1:r10",e="2:l10",bend="40"|<f> \ar|s="1:r90",e="2:l90",bend="-40",inv|<g>
-            \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|> \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|>
+            \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|; \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|;
             \ar|s="h:c",e="k:c",line="2"|<`a>
-          > \qquad>
+          > \qquad;
           \diag<
             \v<A> \v<FI>
             \ar|s="1:r10",e="2:l10",bend="40"|<\sb<\bar<`s>><I>> \ar|s="1:r90",e="2:l90",bend="-40",inv|<\sb<\bar<`t>><I>>
-            \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|> \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|>
+            \ar|s="1:r10",e="2:l10",bend="40",line="0",name="h",inv|; \ar|s="1:r90",e="2:l90",bend="-40",line="0",name="k"|;
             \ar|s="h:c",e="k:c",line="2"|<\sb<\bar<`J>><I>>
           >
         >
@@ -223,7 +223,7 @@
   >
   \p<
     なお、一般の豊穣圏において錐状極限のようなものを考えることができないというわけではない。
-    これについては、Kelly\ref|type="bib",id="kbce"|> の 3.8 節を参照すると良い。
+    これについては、Kelly\ref|type="bib",id="kbce"|; の 3.8 節を参照すると良い。
   >
   \h1<参考文献>
   \ol<

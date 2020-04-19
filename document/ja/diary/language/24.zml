@@ -1,5 +1,5 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<『創世記』1.20～1.21>
@@ -131,7 +131,7 @@
   >
   \table<
     \caption<{πᾶς}>
-    \tr<\th>\th<男>\th<女>\th<中>>
+    \tr<\th;\th<男>\th<女>\th<中>>
     \tr<\th<単.主>\td<{πᾶς}>\td<{πᾶσα}>\td<{πᾶν}>>
     \tr<\th<単.属>\td<{παντός}>\td<{πάσης}>\td<{παντός}>>
     \tr<\th<単.与>\td<{παντί}>\td<{πάσῃ}>\td<{παντί}>>

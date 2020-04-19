@@ -1,5 +1,5 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<『原論』巻 1 定義 15～16>
@@ -61,7 +61,7 @@
   >
   \table<
     \caption<{εἷς}>
-    \tr<\th>\th<男>\th<女>\th<中>>
+    \tr<\th;\th<男>\th<女>\th<中>>
     \tr<\th<主>\td<{εἷς}>\td<{μία}>\td<{ἕν}>>
     \tr<\th<属>\td<{ἑνός}>\td<{μιᾶς}>\td<{ἑνός}>>
     \tr<\th<与>\td<{ἑνί}>\td<{μιᾷ}>\td<{ἑνί}>>
@@ -73,7 +73,7 @@
   >
   \table<
     \caption<{πᾶς}>
-    \tr<\th>\th<男>\th<女>\th<中>>
+    \tr<\th;\th<男>\th<女>\th<中>>
     \tr<\th<単.主>\td<{πᾶς}>\td<{πᾶσα}>\td<{πᾶν}>>
     \tr<\th<単.属>\td<{παντός}>\td<{πάσης}>\td<{παντός}>>
     \tr<\th<単.与>\td<{παντί}>\td<{πάσῃ}>\td<{παντί}>>

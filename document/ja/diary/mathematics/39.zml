@@ -1,28 +1,28 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<スター自律圏と Chu 構成>
-  \use-math>
+  \use-math;
 
   \h1<日記 (2020 年 4 月 8 日)>
   \p<
-    \a|href="35.html"|<4 月 5 日>と \a|href="38.html"|<4 月 6 日>で扱った 3 種類のモデルは、乗法的論理積 &m<\otimes>> (とその単位元 &m<\top>>) と指数的演算子 &m<!> のみを解釈するものであった。
+    \a|href="35.html"|<4 月 5 日>と \a|href="38.html"|<4 月 6 日>で扱った 3 種類のモデルは、乗法的論理積 &m<\otimes;> (とその単位元 &m<\top;>) と指数的演算子 &m<!> のみを解釈するものであった。
     線型論理にはこれ以外にも論理結合子があるので、それらも解釈しようとすると追加の構造が必要になる。
     ここでは、否定結合子の解釈について触れようと思う。
   >
   \p<
     否定結合子の解釈には、スター自律圏の構造を使うのが一般的である。
-    これは Barr\ref|type="bib",id="sac"|> によって導入された構造で、圏の全ての対象がその圏の中に双対をもつようなものである。
+    これは Barr\ref|type="bib",id="sac"|; によって導入された構造で、圏の全ての対象がその圏の中に双対をもつようなものである。
     スター自律圏の記述には、以下の 2 種類の方法がある。
   >
   \thm|type="def",id="sca"|<
     \p<
       対称モノイダル圏 &m<\scr<C>> を考える。
-      ここに、次の条件を満たすような忠実充満関手 &m<\sp<\text<->><*>: \sp<\scr<C>><\circ>> \to> \scr<C>> が定まっているとする。
+      ここに、次の条件を満たすような忠実充満関手 &m<\sp<\text<->><*>: \sp<\scr<C>><\circ;> \to; \scr<C>> が定まっているとする。
       すなわち、任意の対象 &m<A, B, C> に対して、全ての変数に対して自然な全単射
       &mb<
-        \op<Hom> (A \otimes> B, \sp<C><*>) \cong> \op<Hom> (A, (B \otimes> C) \sp><*>)
+        \op<Hom> (A \otimes; B, \sp<C><*>) \cong; \op<Hom> (A, (B \otimes; C) \sp<><*>)
       >
       が成り立つ。
       このとき、&m<\scr<C>> を\em<スター自律圏\fl<star-autonomous category>> という。
@@ -32,10 +32,10 @@
   \thm|type="def",id="scb"|<
     \p<
       対称モノイダル圏 &m<\scr<C>> を考える。
-      &m<\scr<C>> がモノイダル閉であり、次の条件を満たすような対象 &m<\bot>> が定まっているとする。
-      すなわち、任意の対象 &m<A> に対して、モノイダル閉性の余単位 &m<\sb<`e><A \bot>>: A \otimes> (A \rmulti|bin|> \bot>) \to> \bot>> の転置 &m<\sb<`k><A>: A \to> (A \rmulti|bin|> \bot>) \rmulti|bin|> \bot>> は同型射である。
+      &m<\scr<C>> がモノイダル閉であり、次の条件を満たすような対象 &m<\bot;> が定まっているとする。
+      すなわち、任意の対象 &m<A> に対して、モノイダル閉性の余単位 &m<\sb<`e><A \bot;>: A \otimes; (A \rmulti|bin|; \bot;) \to; \bot;> の転置 &m<\sb<`k><A>: A \to; (A \rmulti|bin|; \bot;) \rmulti|bin|; \bot;> は同型射である。
       このとき、&m<\scr<C>> を\em<スター自律圏\fl<star-autonomous category>> という。
-      また、対象 &m<\bot>> を\em<大域的双対対象\fl<global dualising object>> と呼ぶ。
+      また、対象 &m<\bot;> を\em<大域的双対対象\fl<global dualising object>> と呼ぶ。
     >
   >
   \p<
@@ -53,165 +53,165 @@
   >
   \p<
     スター自律圏とは任意の対象が双対をもつような圏であるわけだが、もとの圏がモノイダル閉で引き戻しをもつならば、全ての対象が双対をもつとは限らない場合でも、双対をもつように圏を拡大できることが知られている。
-    この操作は Chu\ref|type="bib",id="csa"|> によるもので、Chu 構成と呼ばれる。
+    この操作は Chu\ref|type="bib",id="csa"|; によるもので、Chu 構成と呼ばれる。
   >
   \thm|type="def"|<
     \p<
-      モノイダル閉圏 &m<\scr<C>> の対象 &m<\bbot>> を 1 つ固定し、圏 &m<\bfrm<Chu> (\scr<C>, \bbot>)> を以下のように定義する。
+      モノイダル閉圏 &m<\scr<C>> の対象 &m<\bbot;> を 1 つ固定し、圏 &m<\bfrm<Chu> (\scr<C>, \bbot;)> を以下のように定義する。
     >
     \ul<
       \li*<
-        &m<\bfrm<Chu> (\scr<C>, \bbot>)> の対象は、&m<\scr<C>> の対象 &m<\sb<A><1>, \sb<A><2>> と射 &m<a: \sb<A><1> \otimes> \sb<A><2> \to> \bbot>> の組 &m<(\sb<A><1>, \sb<A><2>, a)> とする。
+        &m<\bfrm<Chu> (\scr<C>, \bbot;)> の対象は、&m<\scr<C>> の対象 &m<\sb<A><1>, \sb<A><2>> と射 &m<a: \sb<A><1> \otimes; \sb<A><2> \to; \bbot;> の組 &m<(\sb<A><1>, \sb<A><2>, a)> とする。
       >
       \li*<
-        &m<\bfrm<Chu> (\scr<C>, \bbot>)> の 2 つの対象 &m<(\sb<A><1>, \sb<A><2>, a), (\sb<B><1>, \sb<B><2>, b)> の間の射は、&m<\scr<C>> の射 &m<\sb<f><1>: \sb<A><1> \to> \sb<B><1>, \sb<f><2>: \sb<B><2> \to> \sb<A><2>> の組 &m<(\sb<f><1>, \sb<f><2>)> であって、図式
+        &m<\bfrm<Chu> (\scr<C>, \bbot;)> の 2 つの対象 &m<(\sb<A><1>, \sb<A><2>, a), (\sb<B><1>, \sb<B><2>, b)> の間の射は、&m<\scr<C>> の射 &m<\sb<f><1>: \sb<A><1> \to; \sb<B><1>, \sb<f><2>: \sb<B><2> \to; \sb<A><2>> の組 &m<(\sb<f><1>, \sb<f><2>)> であって、図式
         &mb<
           \diag<
-            \v<\sb<A><1> \otimes> \sb<B><2>> \v<\sb<A><1> \otimes> \sb<A><2>> \br>
-            \v<\sb<B><1> \otimes> \sb<B><2>> \v<\bbot>>
-            \ar|s="1",e="2"|<\rm<id> \otimes> \sb<f><2>> \ar|s="1",e="3",inv|<\sb<f><1> \otimes> \rm<id>>
+            \v<\sb<A><1> \otimes; \sb<B><2>> \v<\sb<A><1> \otimes; \sb<A><2>> \br;
+            \v<\sb<B><1> \otimes; \sb<B><2>> \v<\bbot;>
+            \ar|s="1",e="2"|<\rm<id> \otimes; \sb<f><2>> \ar|s="1",e="3",inv|<\sb<f><1> \otimes; \rm<id>>
             \ar|s="2",e="4"|<a> \ar|s="3",e="4",inv|<b>
           >
         >
         を可換にするものである。
       >
       \li*<
-        &m<\bfrm<Chu> (\scr<C>, \bbot>)> の射の合成は、成分ごとの合成であるとする。
+        &m<\bfrm<Chu> (\scr<C>, \bbot;)> の射の合成は、成分ごとの合成であるとする。
       >
     >
     \p<
-      この圏 &m<\bfrm<Chu> (\scr<C>, \bbot>)> を、&m<\scr<C>> による \em<Chu 構成\fl<— construction>> という。
+      この圏 &m<\bfrm<Chu> (\scr<C>, \bbot;)> を、&m<\scr<C>> による \em<Chu 構成\fl<— construction>> という。
     >
   >
   \thm|type="thm"|<
     \p<
-      モノイダル閉圏 &m<\scr<C>> およびその対象 &m<\bbot>> をとる。
-      &m<\scr<C>> が引き戻しをもつならば、&m<\bfrm<Chu> (\scr<C>, \bbot>)> はスター自律圏の構造をもつ。
+      モノイダル閉圏 &m<\scr<C>> およびその対象 &m<\bbot;> をとる。
+      &m<\scr<C>> が引き戻しをもつならば、&m<\bfrm<Chu> (\scr<C>, \bbot;)> はスター自律圏の構造をもつ。
     >
   >
   \prf<
     \p<
-      まず、&m<\bfrm<Chu> (\scr<C>, \bbot>)> に対称モノイダル圏の構造を定義する。
+      まず、&m<\bfrm<Chu> (\scr<C>, \bbot;)> に対称モノイダル圏の構造を定義する。
       対象 &m<(\sb<A><1>, \sb<A><2>, a), (\sb<B><1>, \sb<B><2>, b)> に対し、
       &mb<
         \array|align="rcl"|<
-          \c<\widehat<a>> \c<\coloneqq>> \c<\tort<\diag<
-            \v<\sb<B><1> \rmulti|bin|> \sb<A><2>> \v<\sb<B><1> \rmulti|bin|> (\sb<A><1> \rmulti|bin|> \bbot>)> \v<(\sb<A><1> \otimes> \sb<B><1>) \rmulti|bin|> \bbot>>
-            \ar|s="1",e="2"|<\rm<id> \rmulti|bin|> \sp<a><\sharp>>> \ar|s="2",e="3"|>
-          >>> \br>
-          \c<\widehat<b>> \c<\coloneqq>> \c<\tort<\diag<
-            \v<\sb<A><1> \rmulti|bin|> \sb<B><2>> \v<\sb<A><1> \rmulti|bin|> (\sb<B><1> \rmulti|bin|> \bbot>)> \v<(\sb<A><1> \otimes> \sb<B><1>) \rmulti|bin|> \bbot>>
-            \ar|s="1",e="2"|<\rm<id> \rmulti|bin|> \sp<b><\sharp>>> \ar|s="2",e="3"|>
-          >>> \br>
+          \c<\widehat<a>> \c<\coloneqq;> \c<\tort<\diag<
+            \v<\sb<B><1> \rmulti|bin|; \sb<A><2>> \v<\sb<B><1> \rmulti|bin|; (\sb<A><1> \rmulti|bin|; \bbot;)> \v<(\sb<A><1> \otimes; \sb<B><1>) \rmulti|bin|; \bbot;>
+            \ar|s="1",e="2"|<\rm<id> \rmulti|bin|; \sp<a><\sharp;>> \ar|s="2",e="3"|;
+          >>> \br;
+          \c<\widehat<b>> \c<\coloneqq;> \c<\tort<\diag<
+            \v<\sb<A><1> \rmulti|bin|; \sb<B><2>> \v<\sb<A><1> \rmulti|bin|; (\sb<B><1> \rmulti|bin|; \bbot;)> \v<(\sb<A><1> \otimes; \sb<B><1>) \rmulti|bin|; \bbot;>
+            \ar|s="1",e="2"|<\rm<id> \rmulti|bin|; \sp<b><\sharp;>> \ar|s="2",e="3"|;
+          >>> \br;
         >
       >
       とおく。
-      ここで、&m<\sp<a><\sharp>>: \sb<A><2> \to> \sb<A><1> \rmulti|bin|> \bbot>> と &m<\sp<b><\sharp>>: \sb<B><2> \to> \sb<B><1> \rmulti|bin|> \bbot> > はそれぞれ &m<a> と &m<b> の転置であり、ラベルのない射は標準的な同型射である。
+      ここで、&m<\sp<a><\sharp;>: \sb<A><2> \to; \sb<A><1> \rmulti|bin|; \bbot;> と &m<\sp<b><\sharp;>: \sb<B><2> \to; \sb<B><1> \rmulti|bin|; \bbot; > はそれぞれ &m<a> と &m<b> の転置であり、ラベルのない射は標準的な同型射である。
       これらの射を用いて、引き戻し
       &mb<
         \diag<
-          \v<\sb<X><2>> \v<\sb<B><1> \rmulti|bin|> \sb<A><2>> \br>
-          \v<\sb<A><1> \rmulti|bin|> \sb<B><2>> \v<(\sb<A><1> \otimes> \sb<B><1>) \rmulti|bin|> \bbot>>
-          \ar|s="1",e="2",dash|> \ar|s="1",e="3",dash|>
+          \v<\sb<X><2>> \v<\sb<B><1> \rmulti|bin|; \sb<A><2>> \br;
+          \v<\sb<A><1> \rmulti|bin|; \sb<B><2>> \v<(\sb<A><1> \otimes; \sb<B><1>) \rmulti|bin|; \bbot;>
+          \ar|s="1",e="2",dash|; \ar|s="1",e="3",dash|;
           \ar|s="2",e="4"|<\widehat<a>> \ar|s="3",e="4",inv|<\widehat<b>>
         >
       >
-      を計算すると、その合成射として &m<x': \sb<X><2> \to> (\sb<A><1> \otimes> \sb<B><1>) \rmulti|bin|> \bbot>> が定まる。
-      この転置を &m<x: \sb<X><2> \otimes> (\sb<A><1> \otimes> \sb<B><1>) \to> \bbot>> とおき、
+      を計算すると、その合成射として &m<x': \sb<X><2> \to; (\sb<A><1> \otimes; \sb<B><1>) \rmulti|bin|; \bbot;> が定まる。
+      この転置を &m<x: \sb<X><2> \otimes; (\sb<A><1> \otimes; \sb<B><1>) \to; \bbot;> とおき、
       &mb<
-        (\sb<A><1>, \sb<A><2>, a) \otimes> (\sb<B><1>, \sb<B><2>, b) \coloneqq> (\sb<A><1> \otimes> \sb<B><1>, \sb<X><2>, x)
+        (\sb<A><1>, \sb<A><2>, a) \otimes; (\sb<B><1>, \sb<B><2>, b) \coloneqq; (\sb<A><1> \otimes; \sb<B><1>, \sb<X><2>, x)
       >
       と定義する。
-      これにより、&m<\bfrm<Chu> (\scr<C>, \bbot>)> のテンソル積が定まった。
-      このテンソル積は明らかに対称であり、また単位元は &m<\top> \coloneqq> (\top>, \bbot>, \sb<`l><\bbot>>)> で与えられる。
-      ここで、&m<\sb<`l><\bbot>>: \top> \otimes> \bbot> \to> \bbot>> は標準的な同型射である。 
+      これにより、&m<\bfrm<Chu> (\scr<C>, \bbot;)> のテンソル積が定まった。
+      このテンソル積は明らかに対称であり、また単位元は &m<\top; \coloneqq; (\top;, \bbot;, \sb<`l><\bbot;>)> で与えられる。
+      ここで、&m<\sb<`l><\bbot;>: \top; \otimes; \bbot; \to; \bbot;> は標準的な同型射である。 
     >
     \p<
-      次に、&m<\bfrm<Chu> (\scr<C>, \bbot>)> にスター自律圏の構造を与える。
+      次に、&m<\bfrm<Chu> (\scr<C>, \bbot;)> にスター自律圏の構造を与える。
       対象の第 1 成分と第 2 成分を入れ替える関手
       &mb<
         \array|align="rrcl"|<
-          \c<\sp<\text<->><*>:> \c<\bfrm<Chu> (\scr<C>, \bbot>) \sp><\circ>>> \c<\longto>> \c<\bfrm<Chu> (\scr<C>, \bbot>)> \br>
-          \c> \c<(\sb<A><1>, \sb<A><2>, a)> \c<\longmapsto>> \c<(\sb<A><2>, \sb<A><1>, a \circ> \sb<`s><\sb<A><2> \sb<A><1>>)>
+          \c<\sp<\text<->><*>:> \c<\bfrm<Chu> (\scr<C>, \bbot;) \sp<><\circ;>> \c<\longto;> \c<\bfrm<Chu> (\scr<C>, \bbot;)> \br;
+          \c; \c<(\sb<A><1>, \sb<A><2>, a)> \c<\longmapsto;> \c<(\sb<A><2>, \sb<A><1>, a \circ; \sb<`s><\sb<A><2> \sb<A><1>>)>
         >
       >
       を考えると、これが双対関手を定める。
-      なお、&m<\sb<`s><\sb<A><2> \sb<A><1>>: \sb<A><2> \otimes> \sb<A><1> \to> \sb<A><1> \otimes> \sb<A><2>> はテンソル積の順序を入れ替える同型射である。
+      なお、&m<\sb<`s><\sb<A><2> \sb<A><1>>: \sb<A><2> \otimes; \sb<A><1> \to; \sb<A><1> \otimes; \sb<A><2>> はテンソル積の順序を入れ替える同型射である。
       この関手は明らかに忠実充満であるから、任意の対象 &m<(\sb<A><1>, \sb<A><2>, a), (\sb<B><1>, \sb<B><2>, b), (\sb<C><1>, \sb<C><2>, c)> に対し、
       &mb<
-        \op<Hom> ((\sb<A><1>, \sb<A><2>, a) \otimes> (\sb<B><1>, \sb<B><2>, b), (\sb<C><1>, \sb<C><2>, c) \sp><*>) \cong>
-        \op<Hom> ((\sb<A><1>, \sb<A><2>, a), ((\sb<B><1>, \sb<B><2>, b) \otimes> (\sb<C><1>, \sb<C><2>, c)) \sp><*>)
+        \op<Hom> ((\sb<A><1>, \sb<A><2>, a) \otimes; (\sb<B><1>, \sb<B><2>, b), (\sb<C><1>, \sb<C><2>, c) \sp<><*>) \cong;
+        \op<Hom> ((\sb<A><1>, \sb<A><2>, a), ((\sb<B><1>, \sb<B><2>, b) \otimes; (\sb<C><1>, \sb<C><2>, c)) \sp<><*>)
       >
       が全ての変数に対して自然に成り立つことを示せば良い。
       テンソル積の定義によって、
       &mb<
         \diag<
-          \v<\sb<X><2>> \v<\sb<B><1> \rmulti|bin|> \sb<A><2>> \br>
-          \v<\sb<A><1> \rmulti|bin|> \sb<B><2>> \v<(\sb<A><1> \otimes> \sb<B><1>) \rmulti|bin|> \bbot>>
+          \v<\sb<X><2>> \v<\sb<B><1> \rmulti|bin|; \sb<A><2>> \br;
+          \v<\sb<A><1> \rmulti|bin|; \sb<B><2>> \v<(\sb<A><1> \otimes; \sb<B><1>) \rmulti|bin|; \bbot;>
           \ar|s="1",e="2"|<q> \ar|s="1",e="3",inv|<p>
           \ar|s="2",e="4"|<\widehat<a>> \ar|s="3",e="4",inv|<\widehat<b>>
-        > \qquad>
+        > \qquad;
         \diag<
-          \v<\sb<Y><2>> \v<\sb<C><1> \rmulti|bin|> \sb<B><2>> \br>
-          \v<\sb<B><1> \rmulti|bin|> \sb<C><2>> \v<(\sb<B><1> \otimes> \sb<C><1>) \rmulti|bin|> \bbot>>
+          \v<\sb<Y><2>> \v<\sb<C><1> \rmulti|bin|; \sb<B><2>> \br;
+          \v<\sb<B><1> \rmulti|bin|; \sb<C><2>> \v<(\sb<B><1> \otimes; \sb<C><1>) \rmulti|bin|; \bbot;>
           \ar|s="1",e="2"|<s> \ar|s="1",e="3",inv|<r>
           \ar|s="2",e="4"|<\widehat<b>> \ar|s="3",e="4",inv|<\widehat<c>>
         >
       >
       をともに引き戻しとし、&m<x> と &m<y> をそれぞれの合成射とすれば、示すべき式は、
       &mb<
-        &mark<\wheart>>
-        \op<Hom> ((\sb<A><1> \otimes> \sb<B><1>, \sb<X><2>, x), (\sb<C><2>, \sb<C><1>, c \circ> \sb<`s><\sb<C><2> \sb<C><1>>)) \cong>
-        \op<Hom> ((\sb<A><1>, \sb<A><2>, a), (\sb<Y><2>, \sb<B><1> \otimes> \sb<C><1>, y \circ> \sb<`s><\sb<Y><2>, \sb<B><1> \otimes> \sb<C><1>>))
+        &mark<\wheart;>
+        \op<Hom> ((\sb<A><1> \otimes; \sb<B><1>, \sb<X><2>, x), (\sb<C><2>, \sb<C><1>, c \circ; \sb<`s><\sb<C><2> \sb<C><1>>)) \cong;
+        \op<Hom> ((\sb<A><1>, \sb<A><2>, a), (\sb<Y><2>, \sb<B><1> \otimes; \sb<C><1>, y \circ; \sb<`s><\sb<Y><2>, \sb<B><1> \otimes; \sb<C><1>>))
       >
       と書ける。
       これを示す。
     >
     \p<
-      射 &m<(\sb<f><1>, \sb<f><2>): (\sb<A><1> \otimes> \sb<B><1>, \sb<X><2>, x) \to> (\sb<C><2>, \sb<C><1>, c \circ> \sb<`s><\sb<C><2> \sb<C><1>>)> をとる。
+      射 &m<(\sb<f><1>, \sb<f><2>): (\sb<A><1> \otimes; \sb<B><1>, \sb<X><2>, x) \to; (\sb<C><2>, \sb<C><1>, c \circ; \sb<`s><\sb<C><2> \sb<C><1>>)> をとる。
       図式
       &mb<
         \diag<
-          \v<\sb<A><1>> \v> \v> \br>
-          \v> \v<\sb<Y><2>> \v<\sb<C><1> \rmulti|bin|> \sb<B><2>> \br>
-          \v> \v<\sb<B><1> \rmulti|bin|> \sb<C><2>> \v<(\sb<B><1> \otimes> \sb<C><1>) \rmulti|bin|> \bbot>>
+          \v<\sb<A><1>> \v; \v; \br;
+          \v; \v<\sb<Y><2>> \v<\sb<C><1> \rmulti|bin|; \sb<B><2>> \br;
+          \v; \v<\sb<B><1> \rmulti|bin|; \sb<C><2>> \v<(\sb<B><1> \otimes; \sb<C><1>) \rmulti|bin|; \bbot;>
           \ar|s="5",e="6"|<s> \ar|s="5",e="8",inv|<r>
           \ar|s="6",e="9"|<\widehat<b>> \ar|s="8",e="9",inv|<\widehat<c>>
-          \ar|s="1",e="8",bend="-20",inv|<\sp<\sb<f><1>><\sharp>>> \ar|s="1",e="6",bend="20"|<(p \circ> \sb<f><2>) \sp><\natural>>>
+          \ar|s="1",e="8",bend="-20",inv|<\sp<\sb<f><1>><\sharp;>> \ar|s="1",e="6",bend="20"|<(p \circ; \sb<f><2>) \sp<><\natural;>>
           \ar|s="1",e="5",dash|<\sb<g><1>>
         >
       >
       を考える。
-      ここで、&m<\sp<\sb<f><1>><\sharp>>> は &m<\sb<f><1>: \sb<A><1> \otimes> \sb<B><1> \to> \sb<C><2>> の転置であり、&m<(p \circ> \sb<f><2>) \sp><\natural>>> は &m<p \circ> \sb<f><2>: \sb<C><1> \to> \sb<A><1> \rmulti|bin|> \sb<B><2>> と 2 回の転置で対応する射である。
-      この図式の外側は可換であることが示せるので、全体を可換にするような破線の射 &m<\sb<g><1>: \sb<A><1> \to> \sb<Y><2>> が一意に存在する。
-      さらに、&m<\sb<g><2>: \sb<B><1> \otimes> \sb<C><1> \to> \sb<A><2>> を &m<q \circ> \sb<f><2>: \sb<C><1> \to> \sb<B><1> \rmulti|bin|> \sb<A><2>> の転置として定める。
-      すると、求めていた射 &m<(\sb<g><1>, \sb<g><2>): (\sb<A><1>, \sb<A><2>, a) \to> (\sb<Y><2>, \sb<B><1> \otimes> \sb<C><1>, y \circ> \sb<`s><\sb<Y><2>, \sb<B><1> \otimes> \sb<C><1>>)> が得られる。
-      この逆の構成も、同様に引き戻しの普遍性を用いて行うことができるので、式 &m<\wheart>> が示された。
+      ここで、&m<\sp<\sb<f><1>><\sharp;>> は &m<\sb<f><1>: \sb<A><1> \otimes; \sb<B><1> \to; \sb<C><2>> の転置であり、&m<(p \circ; \sb<f><2>) \sp<><\natural;>> は &m<p \circ; \sb<f><2>: \sb<C><1> \to; \sb<A><1> \rmulti|bin|; \sb<B><2>> と 2 回の転置で対応する射である。
+      この図式の外側は可換であることが示せるので、全体を可換にするような破線の射 &m<\sb<g><1>: \sb<A><1> \to; \sb<Y><2>> が一意に存在する。
+      さらに、&m<\sb<g><2>: \sb<B><1> \otimes; \sb<C><1> \to; \sb<A><2>> を &m<q \circ; \sb<f><2>: \sb<C><1> \to; \sb<B><1> \rmulti|bin|; \sb<A><2>> の転置として定める。
+      すると、求めていた射 &m<(\sb<g><1>, \sb<g><2>): (\sb<A><1>, \sb<A><2>, a) \to; (\sb<Y><2>, \sb<B><1> \otimes; \sb<C><1>, y \circ; \sb<`s><\sb<Y><2>, \sb<B><1> \otimes; \sb<C><1>>)> が得られる。
+      この逆の構成も、同様に引き戻しの普遍性を用いて行うことができるので、式 &m<\wheart;> が示された。
     >
   >
   \p<
-    命題 \ref|type="thm",id="stequiv"|> の証明によって、スター自律圏の対象 &m<A, B> に対し、モノイダル閉圏の構造と双対関手は &m<A \rmulti|bin|> B \cong> (A \otimes> \sp<B><*>) \sp><*>> という関係で結びついていることが分かる。
-    このことから、&m<\bfrm<Chu> (\scr<C>, \bbot>)> の対象 &m<(\sb<A><1>, \sb<A><2>, a), (\sb<B><1>, \sb<B><2>, b)> に対し、引き戻し
+    命題 \ref|type="thm",id="stequiv"|; の証明によって、スター自律圏の対象 &m<A, B> に対し、モノイダル閉圏の構造と双対関手は &m<A \rmulti|bin|; B \cong; (A \otimes; \sp<B><*>) \sp<><*>> という関係で結びついていることが分かる。
+    このことから、&m<\bfrm<Chu> (\scr<C>, \bbot;)> の対象 &m<(\sb<A><1>, \sb<A><2>, a), (\sb<B><1>, \sb<B><2>, b)> に対し、引き戻し
     &mb<
       \diag<
-        \v<\sb<X><1>> \v<\sb<B><2> \rmulti|bin|> \sb<A><2>> \br>
-        \v<\sb<A><1> \rmulti|bin|> \sb<B><1>> \v<(\sb<A><1> \otimes> \sb<B><2>) \rmulti|bin|> \bbot>>
-        \ar|s="1",e="2",dash|> \ar|s="1",e="3",dash|>
+        \v<\sb<X><1>> \v<\sb<B><2> \rmulti|bin|; \sb<A><2>> \br;
+        \v<\sb<A><1> \rmulti|bin|; \sb<B><1>> \v<(\sb<A><1> \otimes; \sb<B><2>) \rmulti|bin|; \bbot;>
+        \ar|s="1",e="2",dash|; \ar|s="1",e="3",dash|;
         \ar|s="2",e="4"|<\widehat<a>> \ar|s="3",e="4",inv|<\widehat<b>>
       >
     >
-    を計算し、得られる合成射の転置を &m<x: \sb<X><1> \otimes> (\sb<A><1> \otimes> \sb<B><2>) \to> \bbot>> とすれば、
+    を計算し、得られる合成射の転置を &m<x: \sb<X><1> \otimes; (\sb<A><1> \otimes; \sb<B><2>) \to; \bbot;> とすれば、
     &mb<
-      (\sb<A><1>, \sb<A><2>, a) \rmulti|bin|> (\sb<B><1>, \sb<B><2>, b) \coloneqq> (\sb<X><1>, \sb<A><1> \otimes> \sb<B><2>, x)
+      (\sb<A><1>, \sb<A><2>, a) \rmulti|bin|; (\sb<B><1>, \sb<B><2>, b) \coloneqq; (\sb<X><1>, \sb<A><1> \otimes; \sb<B><2>, x)
     >
     と書けることが分かる。
-    また、大域的双対対象については、&m<\bot> \cong> \sp<\top>><*>> であることから、&m<\bot> \cong> (\bbot>, \top>, \sb<`r><\bbot>>)> と書ける。
+    また、大域的双対対象については、&m<\bot; \cong; \sp<\top;><*>> であることから、&m<\bot; \cong; (\bbot;, \top;, \sb<`r><\bbot;>)> と書ける。
   >
   \thm|type="thm"|<
     \p<
-      モノイダル閉圏 &m<\scr<C>> およびその対象 &m<\bbot>> をとる。
-      このとき、&m<\scr<C>> は &m<\bfrm<Chu> (\scr<C>, \bbot>)> の余反射的部分圏と見なせる。
-      すなわち、忠実充満関手 &m<\bf<i>: \scr<C> \to> \bfrm<Chu> (\scr<C>, \bbot>)> が存在して、これに右随伴関手が存在する。
+      モノイダル閉圏 &m<\scr<C>> およびその対象 &m<\bbot;> をとる。
+      このとき、&m<\scr<C>> は &m<\bfrm<Chu> (\scr<C>, \bbot;)> の余反射的部分圏と見なせる。
+      すなわち、忠実充満関手 &m<\bf<i>: \scr<C> \to; \bfrm<Chu> (\scr<C>, \bbot;)> が存在して、これに右随伴関手が存在する。
     >
   >
   \prf<
@@ -219,35 +219,35 @@
       まず、包含関手は、
       &mb<
         \array|align="rrcl"|<
-          \c<\bf<i>:> \c<\scr<C>> \c<\longto>> \c<\bfrm<Chu> (\scr<C>, \bbot>)> \br>
-          \c> \c<\tort<
+          \c<\bf<i>:> \c<\scr<C>> \c<\longto;> \c<\bfrm<Chu> (\scr<C>, \bbot;)> \br;
+          \c; \c<\tort<
             \diag|ver="thn"|<
-              \v<A> \br> \v<B>
+              \v<A> \br; \v<B>
               \ar|s="1",e="2"|<f>
             >
-          >> \c<\longmapsto>> \c<\tort<
+          >> \c<\longmapsto;> \c<\tort<
             \diag|ver="thn"|<
-              \v<(A, A \rmulti|bin|>\bbot>, \sb<`e><A \bbot>>)> \br> \v<(B, B \rmulti|bin|>\bbot>, \sb<`e><B \bbot>>)>
-              \ar|s="1",e="2"|<(f, f \rmulti|bin|> \rm<id>)>
+              \v<(A, A \rmulti|bin|;\bbot;, \sb<`e><A \bbot;>)> \br; \v<(B, B \rmulti|bin|;\bbot;, \sb<`e><B \bbot;>)>
+              \ar|s="1",e="2"|<(f, f \rmulti|bin|; \rm<id>)>
             >
           >>
         >
       >
       によって与えられる。
-      ここで、&m<\sb<`e><A \bbot>>: A \otimes> (A \rmulti|bin|> \bbot>) \to> \bbot>> はモノイダル閉性の余単位である。
+      ここで、&m<\sb<`e><A \bbot;>: A \otimes; (A \rmulti|bin|; \bbot;) \to; \bbot;> はモノイダル閉性の余単位である。
       これが忠実充満なのは明らかである。
       さらに、この右随伴関手は、第 1 成分への射影
       &mb<
         \array|align="rrcl"|<
-          \c<\bf<r>:> \c<\bfrm<Chu> (\scr<C>, \bbot>)> \c<\longto>> \c<\scr<C>> \br>
-          \c> \c<\tort<
+          \c<\bf<r>:> \c<\bfrm<Chu> (\scr<C>, \bbot;)> \c<\longto;> \c<\scr<C>> \br;
+          \c; \c<\tort<
             \diag|ver="thn"|<
-              \v<(\sb<A><1>, \sb<A><2>, a)> \br> \v<(\sb<B><1>, \sb<B><2>, b)>
+              \v<(\sb<A><1>, \sb<A><2>, a)> \br; \v<(\sb<B><1>, \sb<B><2>, b)>
               \ar|s="1",e="2"|<(\sb<f><1>, \sb<f><2>)>
             >
-          >> \c<\longmapsto>> \c<\tort<
+          >> \c<\longmapsto;> \c<\tort<
             \diag|ver="thn"|<
-              \v<\sb<A><1>> \br> \v<\sb<B><1>>
+              \v<\sb<A><1>> \br; \v<\sb<B><1>>
               \ar|s="1",e="2"|<\sb<f><1>>
             >
           >>
@@ -258,8 +258,8 @@
     >
   >
   \p<
-    以上のことから、乗法的論理積と指数的演算子を解釈する線型論理の圏論的モデル (すなわち線型圏) &m<\scr<C>> があるとして、それに加えて否定結合子も解釈できるモデルが欲しいとなれば、Chu 構成 &m<\bfrm<Chu> (\scr<C>, \bbot>)> を作るというのが 1 つの方法として考えられる。
-    しかし、&m<\bfrm<Chu> (\scr<C>, \bbot>)> が線型圏になるように関手 &m<!: \bfrm<Chu> (\scr<C>, \bbot>) \to> \bfrm<Chu> (\scr<C>, \bbot>)> を定めるのは容易ではない。
+    以上のことから、乗法的論理積と指数的演算子を解釈する線型論理の圏論的モデル (すなわち線型圏) &m<\scr<C>> があるとして、それに加えて否定結合子も解釈できるモデルが欲しいとなれば、Chu 構成 &m<\bfrm<Chu> (\scr<C>, \bbot;)> を作るというのが 1 つの方法として考えられる。
+    しかし、&m<\bfrm<Chu> (\scr<C>, \bbot;)> が線型圏になるように関手 &m<!: \bfrm<Chu> (\scr<C>, \bbot;) \to; \bfrm<Chu> (\scr<C>, \bbot;)> を定めるのは容易ではない。
     これに関しては、また別の機会で触れようと思う。
   >
   \h1<参考文献>

@@ -1,12 +1,12 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \html|lang="ja"|<
   \head<
-    \meta|charset="UTF-8"|>
-    \script|src="../../file/script/8.js"|>
-    \link|rel="stylesheet",type="text/css",href="../../style/reset.css"|>
-    \link|rel="stylesheet",type="text/css",href="../../style/5.css"|>
+    \meta|charset="UTF-8"|;
+    \script|src="../../file/script/8.js"|;
+    \link|rel="stylesheet",type="text/css",href="../../style/reset.css"|;
+    \link|rel="stylesheet",type="text/css",href="../../style/5.css"|;
     \title<単語データからランダムで表示するやつ>
   >
   \body<
@@ -18,52 +18,52 @@
           \div|id="denominator",class="denominator"|<0>
         >
         \div|class="mark"|<
-          \span|class="wrong",id="wrong-mark"|<&ref|c="xF00A"|>>
-          \span|class="correct",id="correct-mark"|<&ref|c="xF009"|>>
+          \span|class="wrong",id="wrong-mark"|<&ref|c="xF00A"|;>
+          \span|class="correct",id="correct-mark"|<&ref|c="xF009"|;>
         >
       >
       \div|class="main"|<
         \div|class="question"|<
           \div|class="english"|<
-            \div|id="english",class="word"|>
-            \div|id="pronunciation",class="pronunciation"|>
+            \div|id="english",class="word"|;
+            \div|id="pronunciation",class="pronunciation"|;
           >
-          \div|id="arrow",class="arrow"|>
-          \div|id="japanese",class="japanese"|>
+          \div|id="arrow",class="arrow"|;
+          \div|id="japanese",class="japanese"|;
         >
         \div|class="radio"|<
-          \input|type="radio",name="mode",value="0",id="radio-mode-0",checked|>\label|for="radio-mode-0"|<英語→日本語>　\input|type="radio",name="mode",value="1",id="radio-mode-1"|>\label|for="radio-mode-1"|<日本語→英語>\br>
-          \input|type="checkbox",name="enable-sound",id="enable-sound",checked|>\label|for="enable-sound"|<サウンド>\br>
-          \input|type="checkbox",name="show-list",id="show-list"|>\label|for="show-list"|<単語一覧>
+          \input|type="radio",name="mode",value="0",id="radio-mode-0",checked|;\label|for="radio-mode-0"|<英語→日本語>　\input|type="radio",name="mode",value="1",id="radio-mode-1"|;\label|for="radio-mode-1"|<日本語→英語>\br;
+          \input|type="checkbox",name="enable-sound",id="enable-sound",checked|;\label|for="enable-sound"|<サウンド>\br;
+          \input|type="checkbox",name="show-list",id="show-list"|;\label|for="show-list"|<単語一覧>
         >
         \div|class="button"|<
-          \input|class="small left",type="button",value="− 20",id="previous-40"|>\input|class="small middle",type="button",value="− 10",id="previous-20"|>\input|class="small middle",type="button",value="− 5",id="previous-10"|>\input|class="small right",type="button",value="− 1",id="previous-2"|>　\input|type="button",value="Previous",id="previous-1"|>　\input|type="button",value="Next",id="next-1"|>　\input|class="small left",type="button",value="+ 1",id="next-2"|>\input|class="small middle",type="button",value="+ 5",id="next-10"|>\input|class="small middle",type="button",value="+ 10",id="next-20"|>\input|class="small right",type="button",value="+ 20",id="next-40"|>
+          \input|class="small left",type="button",value="− 20",id="previous-40"|;\input|class="small middle",type="button",value="− 10",id="previous-20"|;\input|class="small middle",type="button",value="− 5",id="previous-10"|;\input|class="small right",type="button",value="− 1",id="previous-2"|;　\input|type="button",value="Previous",id="previous-1"|;　\input|type="button",value="Next",id="next-1"|;　\input|class="small left",type="button",value="+ 1",id="next-2"|;\input|class="small middle",type="button",value="+ 5",id="next-10"|;\input|class="small middle",type="button",value="+ 10",id="next-20"|;\input|class="small right",type="button",value="+ 20",id="next-40"|;
         >
         \div|class="button"|<
-          \input|class="small red icon",type="button",value="",id="mark-1"|>　\input|class="small gray icon",type="button",value="",id="mark-null"|>　\input|class="small green icon",type="button",value="",id="mark-0"|>
+          \input|class="small red icon",type="button",value="",id="mark-1"|;　\input|class="small gray icon",type="button",value="",id="mark-null"|;　\input|class="small green icon",type="button",value="",id="mark-0"|;
         >
         \div|class="button"|<
-          \input|type="button",value="Reflesh",id="reflesh"|>　\input|type="button",value="Shuffle",id="shuffle"|>
+          \input|type="button",value="Reflesh",id="reflesh"|;　\input|type="button",value="Shuffle",id="shuffle"|;
         >
         \div|class="upload"|<
-          \label|for="file"|<Upload>\input|id="file",type="file",multiple="multiple"|>
+          \label|for="file"|<Upload>\input|id="file",type="file",multiple="multiple"|;
         >
       >
     >
 
     \div|class="side list-wrapper",id="list-wrapper"|<
-      \table|id="list"|>
+      \table|id="list"|;
     >
     \div|class="side statistics-wrapper"|<
       \div|id="statistics-1",class="statistics red"|<
-        \div|class="mark"|<&ref|c="xF00A"|>>
+        \div|class="mark"|<&ref|c="xF00A"|;>
         \div|class="number"|<
           \div|class="numerator"|<0>
           \div|class="denominator"|<0>
         >
       >
       \div|id="statistics-0",class="statistics green"|<
-        \div|class="mark"|<&ref|c="xF009"|>>
+        \div|class="mark"|<&ref|c="xF009"|;>
         \div|class="number"|<
           \div|class="numerator"|<0>
           \div|class="denominator"|<0>
@@ -72,10 +72,10 @@
     >
 
     \audio|id="correct-sound",preload="auto"|<
-  	  \source|src="../../file/sound/1.wav",type="audio/wav"|>
+  	  \source|src="../../file/sound/1.wav",type="audio/wav"|;
     >
     \audio|id="wrong-sound",preload="auto"|<
-      \source|src="../../file/sound/2.wav",type="audio/wav"|>
+      \source|src="../../file/sound/2.wav",type="audio/wav"|;
     >
 
   >

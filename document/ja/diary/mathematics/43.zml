@@ -1,9 +1,9 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<アローの圏論的意味論 (その 3)>
-  \use-math>
+  \use-math;
 
   \h1<日記 (2020 年 4 月 18 日)>
   \p<
@@ -14,42 +14,42 @@
   \thm|type="prp"|<
     \p<
       型システム &m<\bfrm<Arrow>> は、任意の豊穣 Freyd 圏で解釈をもつ。
-      さらに、&m<\bfrm<Arrow>> における型割り当て &m<`G \vdash> M: A> および &m<`G \vdash> N: A> に対し、&m<\bfrm<Arrow>> で &m<M = N> が成り立つならば、任意の豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つ。
+      さらに、&m<\bfrm<Arrow>> における型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、&m<\bfrm<Arrow>> で &m<M = N> が成り立つならば、任意の豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つ。
     >
   >
   \prf<
     \p<
-      任意に豊穣 Freyd 圏 &m<(\scr<C>; \scr<D>, J)> をとる。
+      任意に豊穣 Freyd 圏 &m<(\scr<C>`; \scr<D>, J)> をとる。
       まず、型の解釈を、
       &mb<
-        \overline<A \bwaverarr> B> = `[ \overline<A>, \overline<B>`]
+        \overline<A \bwaverarr; B> = `[\overline<A>, \overline<B>`]
       >
       と定め、それ以外の場合についてはラムダ計算の標準的な解釈の通りとする。
     >
     \p<
       次に、項の解釈を以下のように定める。
-      型割り当て &m<`G \vdash> M: A \buharprarr> B> に対し、
+      型割り当て &m<`G \vdash; M: A \buharprarr; B> に対し、
       &mb<
         \overline<\tt|fun|<arr> M> = \tort<\diag<
-          \v<\overline<`G>> \v<\overline<A> \buharprarr> \overline<B>> \v<`[\overline<A>, \overline<B>`]>
+          \v<\overline<`G>> \v<\overline<A> \buharprarr; \overline<B>> \v<`[\overline<A>, \overline<B>`]>
           \ar|s="1",e="2"|<\overline<M>> \ar|s="2",e="3"|<J>
         >> 
       >
       とする。
-      次に、型割り当て &m<`G \vdash> F: A \bwaverarr> B> および &m<`G \vdash> G: B \bwaverarr> C> に対し、
+      次に、型割り当て &m<`G \vdash; F: A \bwaverarr; B> および &m<`G \vdash; G: B \bwaverarr; C> に対し、
       &mb<
-        \overline<F \gggt|bin|> G> = \tort<\diag<
-          \v<\overline<`G>> \v<`[\overline<A>, \overline<B>`] \times> `[\overline<B>, \overline<C>`]> \v<`[\overline<A>, \overline<C>`]>
+        \overline<F \gggt|bin|; G> = \tort<\diag<
+          \v<\overline<`G>> \v<`[\overline<A>, \overline<B>`] \times; `[\overline<B>, \overline<C>`]> \v<`[\overline<A>, \overline<C>`]>
           \ar|s="1",e="2"|<(\overline<F>, \overline<G>)> \ar|s="2",e="3"|<c>
         >> 
       >
       とする。
       なお、&m<c> は &m<\scr<D>> の合成を定める射である。
-      最後に、型割り当て &m<`G \vdash> F: A \bwaverarr> B> に対し、
+      最後に、型割り当て &m<`G \vdash; F: A \bwaverarr; B> に対し、
       &mb<
         \overline<\tt|fun|<first> F> = \tort<\diag<
-          \v<\overline<`G>> \v<`[\overline<A>, \overline<B>`]> \v<`[\overline<A> \times> \overline<C>, \overline<B> \times> \overline<C>`]>
-          \ar|s="1",e="2"|<\overline<F>> \ar|s="2",e="3"|<\text<-> \ltimes> \overline<C>>
+          \v<\overline<`G>> \v<`[\overline<A>, \overline<B>`]> \v<`[\overline<A> \times; \overline<C>, \overline<B> \times; \overline<C>`]>
+          \ar|s="1",e="2"|<\overline<F>> \ar|s="2",e="3"|<\text<-> \ltimes; \overline<C>>
         >> 
       >
       とする。
@@ -57,31 +57,31 @@
       これ以外の場合についてはラムダ計算の標準的な解釈の通りとする。
     >
     \p<
-      以上により、&m<\bfrm<Arrow>> の &m<(\scr<C>; \scr<D>, J)> における解釈が定まった。
+      以上により、&m<\bfrm<Arrow>> の &m<(\scr<C>`; \scr<D>, J)> における解釈が定まった。
       以降、\a|href="41.html"|<4 月 15 日>の定義 4 で定められた &m<\bfrm<Arrow>> における 9 つの等式が、&m<\scr<C>> の射としても成り立つことを順に示す。
     >
     \p<
       \label<等式 1:>
-      型割り当て &m<`G \vdash> F: A \bwaverarr> B> に対し、
+      型割り当て &m<`G \vdash; F: A \bwaverarr; B> に対し、
       &mb<
-        \overline<\tt|fun|<arr> \rm<id> \gggt|bin|> F> = \overline<F>
+        \overline<\tt|fun|<arr> \rm<id> \gggt|bin|; F> = \overline<F>
       >
       を示す。
       そのためには、図式
       &mb<
         \diag<
-          \v<\overline<`G>> \v> \br>
-          \v<1 \times> \overline<`G>> \v> \br>
-          \v<1 \times> `[\overline<A>, \overline<B>`]> \v> \br>
-          \v<(\overline<A> \buharprarr> \overline<A>) \times> `[\overline<A>, \overline<B>`]> \v> \br>
-          \v<`[\overline<A>, \overline<A>`] \times> `[\overline<A>, \overline<B>`]> \v<`[\overline<A>, \overline<B>`]> \br>
-          \ar|s="1",e="3"|> \ar|s="3",e="5",inv|<\rm<id> \times> \overline<F>> \ar|s="5",e="7",inv|<\overline<\rm<id>> \times> \rm<id>>
-          \ar|s="7",e="9",inv|<J \times> \rm<id>> \ar|s="9",e="10",inv|<c> \ar|s="5",e="10",bend="20"|>
+          \v<\overline<`G>> \v; \br;
+          \v<1 \times; \overline<`G>> \v; \br;
+          \v<1 \times; `[\overline<A>, \overline<B>`]> \v; \br;
+          \v<(\overline<A> \buharprarr; \overline<A>) \times; `[\overline<A>, \overline<B>`]> \v; \br;
+          \v<`[\overline<A>, \overline<A>`] \times; `[\overline<A>, \overline<B>`]> \v<`[\overline<A>, \overline<B>`]> \br;
+          \ar|s="1",e="3"|; \ar|s="3",e="5",inv|<\rm<id> \times; \overline<F>> \ar|s="5",e="7",inv|<\overline<\rm<id>> \times; \rm<id>>
+          \ar|s="7",e="9",inv|<J \times; \rm<id>> \ar|s="9",e="10",inv|<c> \ar|s="5",e="10",bend="20"|;
           \ar|s="1",e="10",bend="30"|<\overline<F>>
         >
       >
       の外側が可換であることを示せば良い。
-      &m<\overline<\rm<id>>: 1 \to> \overline<A> \buharprarr> \overline<A>> は (&m<\scr<C>>-豊穣圏としての) &m<\scr<C>> の恒等射を与える射であるから、&m<J> の関手性によって &m<J \circ> \overline<\rm<id>>> は &m<\scr<D>> の恒等射を与える射である。
+      &m<\overline<\rm<id>>: 1 \to; \overline<A> \buharprarr; \overline<A>> は (&m<\scr<C>>-豊穣圏としての) &m<\scr<C>> の恒等射を与える射であるから、&m<J> の関手性によって &m<J \circ; \overline<\rm<id>>> は &m<\scr<D>> の恒等射を与える射である。
       したがって、左下の三角形部分は可換である。
       加えて、右上の曲がった三角形部分は明らかに可換であるから、全体も可換となって示したいことが示された。
     >
@@ -94,18 +94,18 @@
     >
     \p<
       \label<等式 5:>
-      型割り当て &m<`G \vdash> M: A \buharprarr> B> に対し、
+      型割り当て &m<`G \vdash; M: A \buharprarr; B> に対し、
       &mb<
-        \overline<\tt|fun|<first> (\tt|fun|<arr> M)> = \overline<\tt|fun|<arr> (M \times> \rm<id>)>
+        \overline<\tt|fun|<first> (\tt|fun|<arr> M)> = \overline<\tt|fun|<arr> (M \times; \rm<id>)>
       >
       を示す。
       そのためには、図式
       &mb<
         \diag<
-          \v<\overline<`G>> \v<\overline<A> \buharprarr> \overline<B>> \v<`[\overline<A>, \overline<B>`]> \br>
-          \v> \v<\overline<A> \times> \overline<C> \buharprarr> \overline<B> \times> \overline<C>> \v<`[\overline<A>  \times> \overline<C>, \overline<B>  \times> \overline<C>`]>
+          \v<\overline<`G>> \v<\overline<A> \buharprarr; \overline<B>> \v<`[\overline<A>, \overline<B>`]> \br;
+          \v; \v<\overline<A> \times; \overline<C> \buharprarr; \overline<B> \times; \overline<C>> \v<`[\overline<A>  \times; \overline<C>, \overline<B>  \times; \overline<C>`]>
           \ar|s="1",e="2"|<\overline<M>>
-          \ar|s="2",e="5",inv|<\text<-> \times> \overline<C>> \ar|s="3",e="6"|<\text<-> \ltimes> \overline<C>>
+          \ar|s="2",e="5",inv|<\text<-> \times; \overline<C>> \ar|s="3",e="6"|<\text<-> \ltimes; \overline<C>>
           \ar|s="2",e="3"|<J> \ar|s="5",e="6",inv|<J>
         >
       >
@@ -113,26 +113,26 @@
     >
     \p<
       \label<等式 6:>
-      型割り当て &m<`G \vdash> F: A \bwaverarr> B> および &m<`G \vdash> M: C \buharprarr> D> に対し、
+      型割り当て &m<`G \vdash; F: A \bwaverarr; B> および &m<`G \vdash; M: C \buharprarr; D> に対し、
       &mb<
-        \overline<\tt|fun|<first> F \gggt|bin|> \tt|fun|<arr> (\rm<id> \times> M)> = \overline<\tt|fun|<arr> (\rm<id> \times> M) \gggt|bin|> \tt|fun|<first> F>
+        \overline<\tt|fun|<first> F \gggt|bin|; \tt|fun|<arr> (\rm<id> \times; M)> = \overline<\tt|fun|<arr> (\rm<id> \times; M) \gggt|bin|; \tt|fun|<first> F>
       >
       を示す。
       &mb<
         \diag|hor="-18,-24,-18"|<
-          \v> \v> \v<\overline<`G>> \v> \v> \br>
-          \v> \v<`[\overline<A>, \overline<B>`] \times> (\overline<C> \buharprarr> \overline<D>)> \v> \v<(\overline<C> \buharprarr> \overline<D>) \times> `[\overline<A>, \overline<B>`]> \v> \br>
-          \v<`[\overline<A>, \overline<B>`] \times> (\overline<B> \times> \overline<C> \buharprarr> \overline<B> \times> \overline<D>)> \v<`[\overline<A>, \overline<B>`] \times> `[\overline<C>, \overline<D>`]> \v>
-          \v<`[\overline<C>, \overline<D>`] \times> `[\overline<A>, \overline<B>`]> \v<(\overline<A> \times> \overline<C> \buharprarr> \overline<A> \times> \overline<D>) \times> `[\overline<A>, \overline<B>`]> \br>
-          \v> \v<`[\overline<A>, \overline<B>`] \times> `[\overline<B> \times> \overline<C>, \overline<B> \times> \overline<D>`]> \v> \v<`[\overline<A> \times> \overline<C>, \overline<A> \times> \overline<D>`] \times> `[\overline<A>, \overline<B>`]> \v> \br>
-          \v> \v<`[\overline<A> \times> \overline<C>, \overline<B> \times> \overline<C>`] \times> `[\overline<B> \times> \overline<C>, \overline<B> \times> \overline<D>`]> \v> \v<`[\overline<A> \times> \overline<C>, \overline<A> \times> \overline<D>`] \times> `[\overline<A> \times> \overline<D>, \overline<B> \times> \overline<D>`]> \v> \br>
-          \v> \v> \v<`[\overline<A> \times> \overline<C>, \overline<B> \times> \overline<D>`]> \v> \v>
-          \ar|s="3",e="7",inv|<(\overline<F>, \overline<M>)> \ar|s="3",e="9"|<(\overline<M>, \overline<F>)> \ar|s="7",e="9"|>
-          \ar|s="7",e="12"|<\rm<id> \times> J> \ar|s="9",e="14",inv|<J \times> \rm<id>>
-          \ar|s="7",e="11",inv|<\rm<id> \times> (\overline<B> \times> \text<->)> \ar|s="9",e="15"|<(\overline<A> \times> \text<->) \times> \rm<id>>
-          \ar|s="12",e="17"|<\rm<id> \times> (\overline<B> \rtimes> \text<->)> \ar|s="14",e="19",inv|<(\overline<A> \rtimes> \text<->) \times> \rm<id>>
-          \ar|s="11",e="17",inv|<\rm<id> \times> J> \ar|s="15",e="19"|<J \times> \rm<id>>
-          \ar|s="17",e="22",inv|<(\text<-> \ltimes> \overline<C>) \times> \rm<id>> \ar|s="19",e="24",inv|<\rm<id> \times> (\text<-> \ltimes> \overline<D>)>
+          \v; \v; \v<\overline<`G>> \v; \v; \br;
+          \v; \v<`[\overline<A>, \overline<B>`] \times; (\overline<C> \buharprarr; \overline<D>)> \v; \v<(\overline<C> \buharprarr; \overline<D>) \times; `[\overline<A>, \overline<B>`]> \v; \br;
+          \v<`[\overline<A>, \overline<B>`] \times; (\overline<B> \times; \overline<C> \buharprarr; \overline<B> \times; \overline<D>)> \v<`[\overline<A>, \overline<B>`] \times; `[\overline<C>, \overline<D>`]> \v;
+          \v<`[\overline<C>, \overline<D>`] \times; `[\overline<A>, \overline<B>`]> \v<(\overline<A> \times; \overline<C> \buharprarr; \overline<A> \times; \overline<D>) \times; `[\overline<A>, \overline<B>`]> \br;
+          \v; \v<`[\overline<A>, \overline<B>`] \times; `[\overline<B> \times; \overline<C>, \overline<B> \times; \overline<D>`]> \v; \v<`[\overline<A> \times; \overline<C>, \overline<A> \times; \overline<D>`] \times; `[\overline<A>, \overline<B>`]> \v; \br;
+          \v; \v<`[\overline<A> \times; \overline<C>, \overline<B> \times; \overline<C>`] \times; `[\overline<B> \times; \overline<C>, \overline<B> \times; \overline<D>`]> \v; \v<`[\overline<A> \times; \overline<C>, \overline<A> \times; \overline<D>`] \times; `[\overline<A> \times; \overline<D>, \overline<B> \times; \overline<D>`]> \v; \br;
+          \v; \v; \v<`[\overline<A> \times; \overline<C>, \overline<B> \times; \overline<D>`]> \v; \v;
+          \ar|s="3",e="7",inv|<(\overline<F>, \overline<M>)> \ar|s="3",e="9"|<(\overline<M>, \overline<F>)> \ar|s="7",e="9"|;
+          \ar|s="7",e="12"|<\rm<id> \times; J> \ar|s="9",e="14",inv|<J \times; \rm<id>>
+          \ar|s="7",e="11",inv|<\rm<id> \times; (\overline<B> \times; \text<->)> \ar|s="9",e="15"|<(\overline<A> \times; \text<->) \times; \rm<id>>
+          \ar|s="12",e="17"|<\rm<id> \times; (\overline<B> \rtimes; \text<->)> \ar|s="14",e="19",inv|<(\overline<A> \rtimes; \text<->) \times; \rm<id>>
+          \ar|s="11",e="17",inv|<\rm<id> \times; J> \ar|s="15",e="19"|<J \times; \rm<id>>
+          \ar|s="17",e="22",inv|<(\text<-> \ltimes; \overline<C>) \times; \rm<id>> \ar|s="19",e="24",inv|<\rm<id> \times; (\text<-> \ltimes; \overline<D>)>
           \ar|s="22",e="28",inv|<c> \ar|s="24",e="28"|<c>
         >
       >
@@ -143,7 +143,7 @@
     >
     \p<
       \label<等式 7, 9:>
-      等式 7 は関手 &m<\text<-> \ltimes> \overline<D>> の関手性から従い、等式 9 は &m<\scr<D>> のバイノイダル演算の結合性を保証する自然変換の自然性から従う。
+      等式 7 は関手 &m<\text<-> \ltimes; \overline<D>> の関手性から従い、等式 9 は &m<\scr<D>> のバイノイダル演算の結合性を保証する自然変換の自然性から従う。
       いずれも用意なので、証明は省略する。
     >
     \p<

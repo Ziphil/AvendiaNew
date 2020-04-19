@@ -1,9 +1,9 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<解析的関手と弱正規形>
-  \use-math>
+  \use-math;
 
   \h1<日記 (2018 年 2 月 2 日)>
   \p<
@@ -12,7 +12,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> の対象 &m<S> に対し、表現可能関手 &m<\sb<\op<Hom>><\scr<C>> (S, \text<->): \scr<C> \to> \bfrm<Set>> がフィルター余極限を保存するとき、&m<S> は\em<有限\fl<finite>> であるという。
+      圏 &m<\scr<C>> の対象 &m<S> に対し、表現可能関手 &m<\sb<\op<Hom>><\scr<C>> (S, \text<->): \scr<C> \to; \bfrm<Set>> がフィルター余極限を保存するとき、&m<S> は\em<有限\fl<finite>> であるという。
       圏 &m<\scr<C>> の有限対象全体は &m<\op<Fin> (\scr<C>)> で表す。
     >
   >
@@ -30,10 +30,10 @@
     >
     \ul<
       \li*<
-        任意の &m<a \in> A> に対して &m<X a> は有限集合 である。
+        任意の &m<a \in; A> に対して &m<X a> は有限集合 である。
       >
       \li*<
-        有限個の &m<a \in> A> を除いて &m<X a = 0> である。
+        有限個の &m<a \in; A> を除いて &m<X a = 0> である。
       >
     >
     \p<
@@ -46,8 +46,8 @@
     これは、
     &mb<
       \array|align="rrcl"|<
-        \c<`{ \sb<a><1>, \sb<a><1>, \sb<a><2> `}:> \c<A> \c<\longrarr>> \c<\bfrm<Set>> \br>
-        \c> \c<a> \c<\longmapsto>> \case<\cc<2><(a = \sb<a><1>)> \cc<1><(a = \sb<a><2>)> \cc<0><(\text<上記以外>)>>
+        \c<`{ \sb<a><1>, \sb<a><1>, \sb<a><2> `}:> \c<A> \c<\longrarr;> \c<\bfrm<Set>> \br;
+        \c; \c<a> \c<\longmapsto;> \case<\cc<2><(a = \sb<a><1>)> \cc<1><(a = \sb<a><2>)> \cc<0><(\text<上記以外>)>>
       >
     >
     のことである。
@@ -57,18 +57,18 @@
   >
   \thm|type="def"|<
     \p<
-      関手 &m<F: \scr<C> \to> \bfrm<Set>> を考える。
-      ある添字集合 &m<I> が存在し、各 &m<i \in> I> に対して &m<\scr<C>> の有限対象 &m<\sb<S><i>> と部分群 &m<\sb<K><i> \leq> \sb<\op<Aut>><\scr<C>> (\sb<S><i>)> が存在して、&m<X \in> \scr<C>> に対し、
+      関手 &m<F: \scr<C> \to; \bfrm<Set>> を考える。
+      ある添字集合 &m<I> が存在し、各 &m<i \in; I> に対して &m<\scr<C>> の有限対象 &m<\sb<S><i>> と部分群 &m<\sb<K><i> \leq; \sb<\op<Aut>><\scr<C>> (\sb<S><i>)> が存在して、&m<X \in; \scr<C>> に対し、
       &mb<
-        FX \cong> \coprod<i \in> I><> \sb<K><i> \backslash> \sb<\op<Hom>><\scr<C>> (\sb<S><i>, X)
+        FX \cong; \coprod<i \in; I><> \sb<K><i> \backslash; \sb<\op<Hom>><\scr<C>> (\sb<S><i>, X)
       >
       と表せるとする。
       このとき、&m<F> は\em<解析的\fl<analytic>> であるという。
-      ここで、&m<\sb<K><i> \backslash> \sb<\op<Hom>><\scr<C>> (\sb<S><i>, X)> は左からの群作用
+      ここで、&m<\sb<K><i> \backslash; \sb<\op<Hom>><\scr<C>> (\sb<S><i>, X)> は左からの群作用
       &mb<
         \array|align="rcl"|<
-          \c<\sb<K><i> \times> \sb<\op<Hom>><\scr<C>> (\sb<S><i>, X)> \c<\longrarr>> \c<\sb<\op<Hom>><\scr<C>> (\sb<S><i>, X)> \br>
-          \c<(p, f)> \c<\longmapsto>> \c<f \circ> \sp<p><- 1>>
+          \c<\sb<K><i> \times; \sb<\op<Hom>><\scr<C>> (\sb<S><i>, X)> \c<\longrarr;> \c<\sb<\op<Hom>><\scr<C>> (\sb<S><i>, X)> \br;
+          \c<(p, f)> \c<\longmapsto;> \c<f \circ; \sp<p><- 1>>
         >
       >
       による商集合である。
@@ -83,10 +83,10 @@
     >
     \ul<
       \li*<
-        任意の対象 &m<T> に対して &m<\sb<\op<Hom>><\scr<C>> (S, T) \neq> 0>。
+        任意の対象 &m<T> に対して &m<\sb<\op<Hom>><\scr<C>> (S, T) \neq; 0>。
       >
       \li*<
-        任意の対象 &m<T> への射 &m<f, g: S \to> T> に対して、ある同型射 &m<p: S \to> S> が存在して &m<g = f \circ> p> が成り立つ。
+        任意の対象 &m<T> への射 &m<f, g: S \to; T> に対して、ある同型射 &m<p: S \to; S> が存在して &m<g = f \circ; p> が成り立つ。
       >
     >
     \p<
@@ -95,7 +95,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> の射 &m<f: U \to> X> に対し、&m<f> をスライス圏 &m<\scr<C> `/ X> の対象と見なすと推移的であるとき、&m<f> を &m<X> の\em<弱正規形\fl<weak normal form>> という。
+      圏 &m<\scr<C>> の射 &m<f: U \to; X> に対し、&m<f> をスライス圏 &m<\scr<C> `/ X> の対象と見なすと推移的であるとき、&m<f> を &m<X> の\em<弱正規形\fl<weak normal form>> という。
     >
   >
   \p<
@@ -105,7 +105,7 @@
   >
   \thm|type="thm"|<
     \p<
-      関手 &m<F: \sp<\bfrm<Set>><A> \to> \bfrm<Set>> について、3 条件
+      関手 &m<F: \sp<\bfrm<Set>><A> \to; \bfrm<Set>> について、3 条件
     >
     \ul<
       \li*<
@@ -115,7 +115,7 @@
         &m<F> はフィルター余極限と広義弱引き戻しを保つ。
       >
       \li*<
-        &m<\bfrm<El> (F)> の任意の対象 &m<(X, x)> に対し、その弱正規形 &m<f: (U, u) \to> (X, x)> が存在し、&m<U> は有限である。
+        &m<\bfrm<El> (F)> の任意の対象 &m<(X, x)> に対し、その弱正規形 &m<f: (U, u) \to; (X, x)> が存在し、&m<U> は有限である。
       >
     >
     \p<
@@ -124,7 +124,7 @@
   >
   \prf<
     \p<
-      Hasegawa\ref|type="bib",id="htaa"|> を参照。
+      Hasegawa\ref|type="bib",id="htaa"|; を参照。
       もしかしたらここにも書くかもしれない。
     >
   >
@@ -134,10 +134,10 @@
   >
   \thm|type="def"|<
     \p<
-      関手 &m<F: \scr<C> \to> \bfrm<Set>> を考える。
-      ある添字集合 &m<I> が存在し、各 &m<i \in> I> に対して &m<\scr<C>> の有限対象 &m<\sb<S><i>> が存在して、&m<X \in> \scr<C>> に対し、
+      関手 &m<F: \scr<C> \to; \bfrm<Set>> を考える。
+      ある添字集合 &m<I> が存在し、各 &m<i \in; I> に対して &m<\scr<C>> の有限対象 &m<\sb<S><i>> が存在して、&m<X \in; \scr<C>> に対し、
       &mb<
-        FX \cong> \coprod<i \in> I><> \sb<\op<Hom>><\scr<C>> (\sb<S><i>, X)
+        FX \cong; \coprod<i \in; I><> \sb<\op<Hom>><\scr<C>> (\sb<S><i>, X)
       >
       と表せるとする。
       このとき、&m<F> は\em<正規\fl<normal>> であるという。
@@ -151,7 +151,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<C>> の射 &m<f: U \to> X> に対し、&m<f> をスライス圏 &m<\scr<C> `/ X> の対象と見なすと始対象であるとき、&m<f> を &m<X> の\em<正規形\fl<normal form>> という。
+      圏 &m<\scr<C>> の射 &m<f: U \to; X> に対し、&m<f> をスライス圏 &m<\scr<C> `/ X> の対象と見なすと始対象であるとき、&m<f> を &m<X> の\em<正規形\fl<normal form>> という。
     >
   >
   \p<
@@ -159,7 +159,7 @@
   >
   \thm|type="thm"|<
     \p<
-      関手 &m<F: \sp<\bfrm<Set>><A> \to> \bfrm<Set>> について、3 条件
+      関手 &m<F: \sp<\bfrm<Set>><A> \to; \bfrm<Set>> について、3 条件
     >
     \ul<
       \li*<
@@ -169,7 +169,7 @@
         &m<F> はフィルター余極限と広義引き戻しを保つ。
       >
       \li*<
-        &m<\bfrm<El> (F)> の任意の対象 &m<(X, x)> に対し、その正規形 &m<f: (U, u) \to> (X, x)> が存在し、&m<U> は有限である。
+        &m<\bfrm<El> (F)> の任意の対象 &m<(X, x)> に対し、その正規形 &m<f: (U, u) \to; (X, x)> が存在し、&m<U> は有限である。
       >
     >
     \p<
@@ -178,7 +178,7 @@
   >
   \prf<
     \p<
-      Hasegawa\ref|type="bib",id="htaa"|> を参照。
+      Hasegawa\ref|type="bib",id="htaa"|; を参照。
     >
   >
   \p<

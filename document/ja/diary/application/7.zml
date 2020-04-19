@@ -1,9 +1,9 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<ABC089-D: 累積和>
-  \use-math>
+  \use-math;
 
   \h1<日記 (2018 年 3 月 4 日)>
   \p<
@@ -31,12 +31,12 @@
   \p<
     &m<x> が書かれているマスから &m<x + D> が書かれているマスに駒を動かすのに必要な魔力を &m<M (x)> とおくと、&m<i> 回目の実技試験で消費する魔力は、
     &mb<
-      M (\sb<L><i>) + M (\sb<L><i> + D) + M (\sb<L><i> + 2 D) + \cdots> + M (\sb<R><i> - D)
+      M (\sb<L><i>) + M (\sb<L><i> + D) + M (\sb<L><i> + 2 D) + \cdots; + M (\sb<R><i> - D)
     >
     で求まります。
     ここで、各 &m<x> に対して &m<\sb<m><x> = x % D> とおき、
     &mb<
-      \sb<M><\rm<acc>> (x) = M (m) + M (m + D) + M (m + 2 D) + \cdots> + M (x - D)
+      \sb<M><\rm<acc>> (x) = M (m) + M (m + D) + M (m + 2 D) + \cdots; + M (x - D)
     >
     と定めれば、先程の消費魔力は &m<\sb<M><\rm<acc>> (\sb<R><i>) - \sb<M><\rm<acc>> (\sb<L><i>)> と書けます。
     したがって、&m<\sb<M><\rm<acc>> (x)> をあらかじめ計算しておけば、各実技試験での消費魔力は &m<O (1)> で求めることができます。

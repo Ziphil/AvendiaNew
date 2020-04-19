@@ -1,13 +1,13 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \html|lang="ja"|<
   \head<
-    \meta|charset="UTF-8"|>
-    \meta|name="viewport",content="width=device-width,initial-scale=0.7"|>
-    \script|src="file/script/12.js"|>
-    \link|rel="stylesheet",type="text/css",href="style/reset.css"|>
-    \link|rel="stylesheet",type="text/css",href="style/8.css"|>
+    \meta|charset="UTF-8"|;
+    \meta|name="viewport",content="width=device-width,initial-scale=0.7"|;
+    \script|src="file/script/12.js"|;
+    \link|rel="stylesheet",type="text/css",href="style/reset.css"|;
+    \link|rel="stylesheet",type="text/css",href="style/8.css"|;
     \title<Avendia>
   >
   \body<
@@ -19,7 +19,7 @@
           \span<lOkE xeR,>
           \span<rEvEt A tEl> 
           \span<E'n rEkOtAt LoKe A'l>
-          \span<OvEl IfElI qEl,>\br>
+          \span<OvEl IfElI qEl,>\br;
           \span<Pa KiLaT a'L vAdE pIl Te SoT>
           \span<e'N EtUt PaFiKoS a'L?>
         >
@@ -98,7 +98,7 @@
         >
       >
       \div|class="arrow"|<
-        \div|class="tip"|>
+        \div|class="tip"|;
       >
     >
 
@@ -176,21 +176,21 @@
           >
           \div|class="table"|<
             \div|class="row"|<
-              \a|class="icon twitter",href="https://twitter.com/Ziphil",target="_blank"|>
+              \a|class="icon twitter",href="https://twitter.com/Ziphil",target="_blank"|;
               \div|class="explanation"|<
                 主に Twitter 上で活動しています。
                 私への連絡は Twitter を介するのが最も早く確実です。
               >
             >
             \div|class="row"|<
-              \a|class="icon youtube",href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/",target="_blank"|>
+              \a|class="icon youtube",href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/",target="_blank"|;
               \div|class="explanation"|<
                 制作過程を YouTube ライブで配信することがあります。
                 配信日時は Twitter で告知します。
               >
             >
             \div|class="row"|<
-              \a|class="icon github",href="https://github.com/Ziphil",target="_blank"|>
+              \a|class="icon github",href="https://github.com/Ziphil",target="_blank"|;
               \div|class="explanation"|<
                 人工言語の様々なデータはほとんど GitHub で管理しています。
               >
@@ -202,7 +202,7 @@
             \div|class="japanese"|<更新履歴>
             \div|class="shaleian"|<zAt AfEc>
           >
-          \change-log|size="5"|>
+          \change-log|size="5"|;
         >
       >
     >

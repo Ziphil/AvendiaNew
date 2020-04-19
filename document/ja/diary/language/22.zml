@@ -1,5 +1,5 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<『創世記』1.15～1.16>
@@ -85,7 +85,7 @@
   >
   \table<
     \caption<{μεγάς}>
-    \tr<\th>\th<男>\th<女>\th<中>>
+    \tr<\th;\th<男>\th<女>\th<中>>
     \tr<\th<単.主>\td<{μεγάς}>\td<{μεγάλη}>\td<{μέγα}>>
     \tr<\th<単.属>\td<{μελάλου}>\td<{μεγάλης}>\td<{μεγάλου}>>
     \tr<\th<単.与>\td<{μεγάλῳ}>\td<{μεγάῃ}>\td<{μεγάλῳ}>>

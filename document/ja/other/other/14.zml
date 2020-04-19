@@ -1,11 +1,11 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<ミザソーグ語文法>
 
   \h1<目次>
-  \section-table>
+  \section-table;
   \h1|id="bib"|<参考文献>
   \p<
     このページの内容は、\ae|href="https://twitter.com/nanakusa_003"|<@nanakusa_003> 氏のツイートをもとにまとめたものです。
@@ -56,7 +56,7 @@
   >
   \table<
     \caption<{dau}>
-    \tr<\th>\th<肯定>\th<否定>\th<疑問>>
+    \tr<\th;\th<肯定>\th<否定>\th<疑問>>
     \tr<\th<現在>\td<{dau}>\td<{daeme}>\td<{daa}>>
     \tr<\th<過去>\td<{dai}>\td<{die}>\td<{dia}>>
     \tr<\th<未来>\td<{dan}>\td<{danne}>\td<{dana}>>
@@ -87,7 +87,7 @@
     基本形からこの語尾を除いた部分が語幹となり、語幹に様々な活用語尾を付けることで時制や肯否を表す。
   >
   \table<
-    \tr<\th>\th<肯定>\th<否定>\th<疑問>>
+    \tr<\th;\th<肯定>\th<否定>\th<疑問>>
     \tr<\th<現在>\td<-[u]`/-[ü]>\td<-[ome]`/-[ömë]>\td<-[a]`/-[ä]>>
     \tr<\th<現在進行>\td<-[ee]`/-[ëë]>\td<-[eome]`/-[eömë]>\td<-[ea]`/-[ëä]>>
     \tr<\th<現在継続>\td<-[eie]`/-[ëië]>\td<-[einome]`/-[ëinömë]>\td<-[eita]`/-[ëitä]>>
@@ -321,7 +321,7 @@
     三人称では性別を区別しない。
   >
   \table<
-    \tr<\th>\th<単数>\th<双数>\th<複数>>
+    \tr<\th;\th<単数>\th<双数>\th<複数>>
     \tr<\th<一人称>\td<{aa}>\td<{ai}>\td<{aakolu}>>
     \tr<\th<二人称>\td<{ia}>\td<{ii}>\td<{iakolu}>>
     \tr<\th<三人称>\td<{oa}>\td<{ooa}>\td<{oakolu}>>

@@ -1,9 +1,9 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<正規関手の圏と集合族の圏>
-  \use-math>
+  \use-math;
 
   \h1<日記 (2018 年 2 月 6 日)>
   \p<
@@ -15,11 +15,11 @@
   >
   \thm|type="def"|<
     \p<
-      関手 &m<F, G: \scr<C> \to> \scr<D>> の間の自然変換 &m<`n: F \to> G> を考える。
-      任意の &m<\scr<C>> の射 &m<u: S \to> T> に対し、図式
+      関手 &m<F, G: \scr<C> \to; \scr<D>> の間の自然変換 &m<`n: F \to; G> を考える。
+      任意の &m<\scr<C>> の射 &m<u: S \to; T> に対し、図式
       &mb<
         \diag<
-          \v<FS> \v<GS> \br>
+          \v<FS> \v<GS> \br;
           \v<FT> \v<GT>
           \ar|s="1",e="2"|<\sb<`n><S>> \ar|s="1",e="3",inv|<Fu>
           \ar|s="3",e="4",inv|<\sb<`n><T>> \ar|s="2",e="4"|<Gu>
@@ -33,12 +33,12 @@
   >
   \thm|type="def"|<
     \p<
-      関手 &m<F: \sp<\bfrm<Set>><A> \to> \sp<\bfrm<Set>><B>> を考える。
-      任意の &m<b \in> B> に対し、関手
+      関手 &m<F: \sp<\bfrm<Set>><A> \to; \sp<\bfrm<Set>><B>> を考える。
+      任意の &m<b \in; B> に対し、関手
       &mb<
         \array|align="rrcl"|<
-          \c<\sp<F><b>:> \c<\sp<\bfrm<Set>><A>> \c<\longrarr>> \c<\bfrm<Set>> \br>
-          \c> \c<X> \c<\longmapsto>> \c<(F X) b>
+          \c<\sp<F><b>:> \c<\sp<\bfrm<Set>><A>> \c<\longrarr;> \c<\bfrm<Set>> \br;
+          \c; \c<X> \c<\longmapsto;> \c<(F X) b>
         >
       >
       が正規であるとき、&m<F> は\em<正規\fl<normal>> であるという。
@@ -53,15 +53,15 @@
     >
     \ul<
       \li*<
-        対象は、解析的関手 &m<F: \sp<\bfrm<Set>><A> \to> \sp<\bfrm<Set>><B>> 全体とする。
+        対象は、解析的関手 &m<F: \sp<\bfrm<Set>><A> \to; \sp<\bfrm<Set>><B>> 全体とする。
       >
       \li*<
-        2 つの対象 &m<F, G> の間の射は、カルテシアン自然変換 &m<`n: F \to> G> の以下に定義する同値類全体とする。
+        2 つの対象 &m<F, G> の間の射は、カルテシアン自然変換 &m<`n: F \to; G> の以下に定義する同値類全体とする。
       >
     >
     \p<
       として定義する。
-      ここで、&m<`n, `n': F \to> G> に対し &m<`n> と &m<`n'> が同値であるとは、任意の &m<b \in> B> および任意の &m<\bfrm<El> (\sp<F><b>)> の正規対象 &m<(X, x)> に対して、&m<\bfrm<El> (G)> で &m<(X, \sbsp<`n><X><b> x) \cong> (X, \sbsp<`n><X><\pr> b> x)> が成り立つこととする。
+      ここで、&m<`n, `n': F \to; G> に対し &m<`n> と &m<`n'> が同値であるとは、任意の &m<b \in; B> および任意の &m<\bfrm<El> (\sp<F><b>)> の正規対象 &m<(X, x)> に対して、&m<\bfrm<El> (G)> で &m<(X, \sbsp<`n><X><b> x) \cong; (X, \sbsp<`n><X><\pr; b> x)> が成り立つこととする。
     >
   >
   \thm|type="def"|<
@@ -77,33 +77,33 @@
     さて、上で定義した正規関手が成す圏がある集合族の圏と同値になることを示すのだが、その圏同値を与える関手を定義する。
   >
   \p<
-    関手 &m<M: \op<exp> A \times> B \to> \bfrm<Set>> を考え、各 &m<b \in> B> に対し、
+    関手 &m<M: \op<exp> A \times; B \to; \bfrm<Set>> を考え、各 &m<b \in; B> に対し、
     &mb<
       \array|align="rrcl"|<
-        \c<\sp<\widetildebelow<M>><b>:> \c<\sp<\bfrm<Set>><A>> \c<\longrarr>> \c<\bfrm<Set>> \br>
-        \c> \c<X> \c<\longmapsto>> \c<\coprod<`g \in> \op<exp> A><> (\sb<\op<Hom>><\sp<\bfrm<Set>><A>> (`g, X) \times> M (`g, b))>
+        \c<\sp<\widetildebelow<M>><b>:> \c<\sp<\bfrm<Set>><A>> \c<\longrarr;> \c<\bfrm<Set>> \br;
+        \c; \c<X> \c<\longmapsto;> \c<\coprod<`g \in; \op<exp> A><> (\sb<\op<Hom>><\sp<\bfrm<Set>><A>> (`g, X) \times; M (`g, b))>
       >
     >
     とおくと、これは正規関手になる。
-    したがって、これによって定まる関手 &m<\widetildebelow<M>: \sp<\bfrm<Set>><A> \to> \sp<\bfrm<Set>><B>> も正規である。
+    したがって、これによって定まる関手 &m<\widetildebelow<M>: \sp<\bfrm<Set>><A> \to; \sp<\bfrm<Set>><B>> も正規である。
   >
   \p<
-    また、別の関手 &m<M': \op<exp> A \times> B \to> \bfrm<Set>> と自然変換 &m<`j: M \to> M'> を考え、各 &m<b \in> X> と &m<X \in> \sp<\bfrm<Set>><A>> に対し、
+    また、別の関手 &m<M': \op<exp> A \times; B \to; \bfrm<Set>> と自然変換 &m<`j: M \to; M'> を考え、各 &m<b \in; X> と &m<X \in; \sp<\bfrm<Set>><A>> に対し、
     &mb<
       \array|align="rrcl"|<
-        \c<\widetildebelow<`j>\sbsp<><X><b>:> \c<\sp<\widetildebelow<M>><b> X> \c<\longrarr>> \c<\widetildebelow<M'> \sp<><b> X> \br>
-        \c> \c<(f, x) @ `g> \c<\longmapsto>> \c<(f, \sb<`j><(`g, b)> x) @ `g>
+        \c<\widetildebelow<`j>\sbsp<><X><b>:> \c<\sp<\widetildebelow<M>><b> X> \c<\longrarr;> \c<\widetildebelow<M'> \sp<><b> X> \br;
+        \c; \c<(f, x) @ `g> \c<\longmapsto;> \c<(f, \sb<`j><(`g, b)> x) @ `g>
       >
     >
-    とおくと、自然変換 &m<\sp<\widetildebelow<`j>><b>: \sp<\widetildebelow<M>><b> \to> \widetildebelow<M'> \sp<><b>> が定まるが、これはカルテシアンであることが容易に確認できる。
-    したがって、これが定める自然変換 &m<\widetildebelow<`j>: \widetildebelow<M> \to> \widetildebelow<M'>> もカルテシアンである。
+    とおくと、自然変換 &m<\sp<\widetildebelow<`j>><b>: \sp<\widetildebelow<M>><b> \to; \widetildebelow<M'> \sp<><b>> が定まるが、これはカルテシアンであることが容易に確認できる。
+    したがって、これが定める自然変換 &m<\widetildebelow<`j>: \widetildebelow<M> \to; \widetildebelow<M'>> もカルテシアンである。
   >
   \p<
     以上の操作により、関手
     &mb<
       \array|align="rrcl"|<
-        \c<\widetildebelow<\text<->>:> \c<\sp<\bfrm<Set>><\op<exp> A \times> B>> \c<\longrarr>> \c<\sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>>> \br>
-        \c> \c<M> \c<\longmapsto>> \c<\widetildebelow<M>>
+        \c<\widetildebelow<\text<->>:> \c<\sp<\bfrm<Set>><\op<exp> A \times; B>> \c<\longrarr;> \c<\sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>>> \br;
+        \c; \c<M> \c<\longmapsto;> \c<\widetildebelow<M>>
       >
     >
     が定まった。
@@ -112,7 +112,7 @@
   >
   \thm|type="lem",id="pres"|<
     \p<
-      正規関手 &m<F, G: \sp<\bfrm<Set>><A> \to> \bfrm<Set>> の間のカルテシアン自然変換 &m<`n: F \to> G> を考える。
+      正規関手 &m<F, G: \sp<\bfrm<Set>><A> \to; \bfrm<Set>> の間のカルテシアン自然変換 &m<`n: F \to; G> を考える。
       &m<\bfrm<El> (F)> において &m<(X, x)> が正規対象であることと &m<\bfrm<El> (G)> において &m<(X, \sb<`n><X> x)> が正規対象であることは同値である。
     >
   >
@@ -124,7 +124,7 @@
   >
   \thm|type="lem",id="iso"|<
     \p<
-      関手 &m<M: \op<exp> A \times> B \to> \bfrm<Set>> を考え、&m<b \in> B> をとる。
+      関手 &m<M: \op<exp> A \times; B \to; \bfrm<Set>> を考え、&m<b \in; B> をとる。
       &m<\bfrm<El> (\sp<\widetildebelow<M>><b>)> の任意の正規対象 &m<(X, (f, x) @ `g)> は、&m<(`g, (\sb<\rm<id>><`g>, x) @ `g)> と同型である。
     >
   >
@@ -133,18 +133,18 @@
       &m<(X, (f, x))> は正規対象なので、&m<\bfrm<El> (\sp<\widetildebelow<M>><b>)> の図式
       &mb<
         \diag<
-          \v<(X, (f, x))> \v<(X, (f, x))> \br>
-          \v<(`g, (\sb<\rm<id>><`g>, x))> \v>
+          \v<(X, (f, x))> \v<(X, (f, x))> \br;
+          \v<(`g, (\sb<\rm<id>><`g>, x))> \v;
           \ar|s="1",e="2"|<\rm<id>> \ar|s="1",e="3",dash,inv|<u> \ar|s="3",e="2",inv|<f>
         >
       >
       を可換にする射 &m<u> が一意に存在する。
-      特に &m<f \circ> u = \sb<\rm<id>><X>> である。
+      特に &m<f \circ; u = \sb<\rm<id>><X>> である。
       さらに &m<\sp<\widetildebelow<M>><b>> の定義によって、
       &mb<
-        (\sb<\rm<id>><`g>, x) = (\sp<\widetildebelow<M>><b> u) (f, x) = (u \circ> f, x)
+        (\sb<\rm<id>><`g>, x) = (\sp<\widetildebelow<M>><b> u) (f, x) = (u \circ; f, x)
       >
-      であるから、特に &m<u \circ> f = \sb<\rm<id>><`g>> が成り立つ。
+      であるから、特に &m<u \circ; f = \sb<\rm<id>><`g>> が成り立つ。
       すなわち、&m<f> は同型射なので補題の主張が成り立つ。
     >
   >
@@ -152,7 +152,7 @@
     \p<
       圏同値
       &mb<
-        \sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>> \cong> \sp<\bfrm<Set>><\op<exp> A \times> B>
+        \sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>> \cong; \sp<\bfrm<Set>><\op<exp> A \times; B>
       >
       が成立する。
     >
@@ -164,36 +164,36 @@
       したがって、&m<\widetildebelow<\text<->>> が充満であることを示せば証明が完了する。
     >
     \p<
-      任意にカルテシアン自然変換 &m<`n: \widetildebelow<M> \to> \widetildebelow<M'>> をとる。
-      任意の &m<(`g, b) \in> \op<exp> A \times> B> と &m<x \in> M (`g, b)> に対し、補題 \ref|type="thm",id="iso"|> によって &m<(`g, (\sb<\rm<id>><`g>, x))> は &m<\bfrm<El> (\sp<\widetildebelow<M>><b>)> で正規対象である。
-      したがって、補題 \ref|type="thm",id="pres"|> によって &m<(`g, \sbsp<`n><`g><b> (\sb<\rm<id>><`g>, x))> は &m<\bfrm<El> (\widetildebelow<M'> \sp<><b>)> で正規対象でもある。
-      再び補題 \ref|type="thm",id="iso"|> を用いれば、ある元 &m<y \in> M' (`g, b)> が存在して、
+      任意にカルテシアン自然変換 &m<`n: \widetildebelow<M> \to; \widetildebelow<M'>> をとる。
+      任意の &m<(`g, b) \in; \op<exp> A \times; B> と &m<x \in; M (`g, b)> に対し、補題 \ref|type="thm",id="iso"|; によって &m<(`g, (\sb<\rm<id>><`g>, x))> は &m<\bfrm<El> (\sp<\widetildebelow<M>><b>)> で正規対象である。
+      したがって、補題 \ref|type="thm",id="pres"|; によって &m<(`g, \sbsp<`n><`g><b> (\sb<\rm<id>><`g>, x))> は &m<\bfrm<El> (\widetildebelow<M'> \sp<><b>)> で正規対象でもある。
+      再び補題 \ref|type="thm",id="iso"|; を用いれば、ある元 &m<y \in; M' (`g, b)> が存在して、
       &mb<
-        (`g, \sbsp<`n><X><b> (\sb<\rm<id>><`g>, x)) \cong> (`g, (\sb<\rm<id>><`g>, y))
+        (`g, \sbsp<`n><X><b> (\sb<\rm<id>><`g>, x)) \cong; (`g, (\sb<\rm<id>><`g>, y))
       >
       が成り立つことが分かる。
       このような &m<y> は一意だから、これによって、射
       &mb<
         \array|align="rrcl"|<
-          \c<\sb<`j><(`g, b)>:> \c<M (`g, b)> \c<\longrarr>> \c<M' (`g, b)> \br>
-          \c> \c<x> \c<\longmapsto>> \c<y>
+          \c<\sb<`j><(`g, b)>:> \c<M (`g, b)> \c<\longrarr;> \c<M' (`g, b)> \br;
+          \c; \c<x> \c<\longmapsto;> \c<y>
         >
       >
-      が定まり、さらに自然変換 &m<`j: M \to> M'> が定まる。
+      が定まり、さらに自然変換 &m<`j: M \to; M'> が定まる。
     >
     \p<
-      ここで、任意の &m<(`g, b) \in> \op<exp> A \times> B> および &m<x \in> M (`g, b)> に対し、
+      ここで、任意の &m<(`g, b) \in; \op<exp> A \times; B> および &m<x \in; M (`g, b)> に対し、
       &mb<
-        (`g, \sbsp<`n><`g><b> (\sb<\rm<id>><`g>, x)) \cong> (`g, (\sb<\rm<id>><`g>, \sb<`j><(`g, b)> x)) \cong> (`g, \widetildebelow<`j> \sbsp<><X><b> (\sb<\rm<id>><`g>, x))
+        (`g, \sbsp<`n><`g><b> (\sb<\rm<id>><`g>, x)) \cong; (`g, (\sb<\rm<id>><`g>, \sb<`j><(`g, b)> x)) \cong; (`g, \widetildebelow<`j> \sbsp<><X><b> (\sb<\rm<id>><`g>, x))
       >
       が成り立つ。
-      補題 \ref|type="thm",id="iso"|> によって、&m<\bfrm<El> (\sp<\widetildebelow<M>><b>)> の正規対象は同型の違いを除いて全て &m<(`g, (\sb<\rm<id>><`g>, x))> の形だから、上の同型は &m<\sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>>> の射として &m<\widetildebelow<`j> = `n> が成り立つことを意味している。
+      補題 \ref|type="thm",id="iso"|; によって、&m<\bfrm<El> (\sp<\widetildebelow<M>><b>)> の正規対象は同型の違いを除いて全て &m<(`g, (\sb<\rm<id>><`g>, x))> の形だから、上の同型は &m<\sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>>> の射として &m<\widetildebelow<`j> = `n> が成り立つことを意味している。
       すなわち、&m<\widetildebelow<\text<->>> は充満である。
     >
   >
   \p<
     &m<\widetildebelow<\text<->>> が充満であることを示すにあたって、&m<\sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>>> の射の間に適当な同一視をしたことを用いたが、この同一視をしないと上の圏同値は一般に成り立たない。
-    この反例は Taylor\ref|type="bib",id="tqdg"|> によって与えられている。
+    この反例は Taylor\ref|type="bib",id="tqdg"|; によって与えられている。
     まだ読んでないので私は分かっていない。
   >
   \h1<参考文献>

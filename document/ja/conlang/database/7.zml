@@ -1,12 +1,12 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<文字フォント>
   \ver<5 代 5 期>
 
   \h1<Vekos ファミリー>
-  \img|src="../../file/other/57.png"|>
+  \img|src="../../file/other/57.png"|;
   \p<
     標準的なサンセリフ体です。
     3 種類のウェイトと 3 種類の字幅があり、合計で以下の 11 個のフォントファイルから成ります。
@@ -32,7 +32,7 @@
     \ae|class="form",href="https://www.dropbox.com/sh/j8foichvfvs455j/AACjhbc-EZEPWDYxLTfkoU3ia?dl=0"|<ダウンロード>　(ver 1.2.0)
   >
   \h1<Gilit ファミリー>
-  \img|src="../../file/other/58.png"|>
+  \img|src="../../file/other/58.png"|;
   \p<
     三角形が特徴的なシフ体です。
     合計で以下の 8 個のフォントファイルから成ります。
@@ -59,7 +59,7 @@
     \ae|class="form",href="https://www.dropbox.com/sh/zule0g0dr8pa6nf/AACUIEyNu5rb0md93u34yy-Ya?dl=0"|<ダウンロード>　(ver 1.2.1)
   >
   \h1<Shaleian ファミリー>
-  \img|src="../../file/other/50.png"|>
+  \img|src="../../file/other/50.png"|;
   \p<
     シャレイア文字を手書きするときの規範となる、いわゆる教科書体としての役割を果たすフォントです。
     アルファベットと数字および一部の記号が含まれます。

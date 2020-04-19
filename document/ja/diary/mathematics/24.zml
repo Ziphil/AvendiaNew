@@ -1,9 +1,9 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<エンドとコエンド>
-  \use-math>
+  \use-math;
 
   \h1<日記 (2018 年 10 月 28 日)>
   \p<
@@ -14,32 +14,32 @@
   >
   \thm|type="def"|<
     \p<
-      関手 &m<F, G: \sp<\scr<C>><\circ>> \times> \scr<C> \to> \scr<D>> をとる。
-      &m<\scr<C>> の対象 &m<C> に対して &m<\scr<D>> の射 &m<\sb<`a><C>: F (C, C) \to> G (C, C)> が定まっており、任意の &m<\scr<C>> の射 &m<f: C\to> C'> に対し、
+      関手 &m<F, G: \sp<\scr<C>><\circ;> \times; \scr<C> \to; \scr<D>> をとる。
+      &m<\scr<C>> の対象 &m<C> に対して &m<\scr<D>> の射 &m<\sb<`a><C>: F (C, C) \to; G (C, C)> が定まっており、任意の &m<\scr<C>> の射 &m<f: C\to; C'> に対し、
       &mb<
         \diag<
-          \v<F (C', C)> \v<F (C, C)> \v<G (C, C)> \br>
+          \v<F (C', C)> \v<F (C, C)> \v<G (C, C)> \br;
           \v<F (C', C')> \v<G (C', C')> \v<G (C, C')>
           \ar|s="1",e="2"|<F (f, \rm<id>)> \ar|s="1",e="4",inv|<F (\rm<id>, f)> \ar|s="2",e="3"|<\sb<`a><C>>
           \ar|s="3",e="6"|<G (\rm<id>, g)> \ar|s="4",e="5",inv|<\sb<`a><C'>> \ar|s="5",e="6",inv|<G (f, \rm<id>)>
         >
       >
       が可換であるとする。
-      このとき、&m<`a> を\em<双自然変換\fl<dinatural transformation>> といい、&m<`a: F \raarr> G> で表す。
+      このとき、&m<`a> を\em<双自然変換\fl<dinatural transformation>> といい、&m<`a: F \raarr; G> で表す。
     >
   >
   \thm|type="def"|<
     \p<
-      関手 &m<F: \sp<\scr<C>><\circ>> \times> \scr<C> \to> \scr<D>> をとる。
-      &m<\scr<D>> の対象 &m<D> に対して &m<`a: \sb<`D><D> \raarr> F> の形の双自然変換を、&m<D> における &m<F> の\em<楔\fl<wedge>> といい、&m<`a: D \ddot<\to>> F> で表す。
+      関手 &m<F: \sp<\scr<C>><\circ;> \times; \scr<C> \to; \scr<D>> をとる。
+      &m<\scr<D>> の対象 &m<D> に対して &m<`a: \sb<`D><D> \raarr; F> の形の双自然変換を、&m<D> における &m<F> の\em<楔\fl<wedge>> といい、&m<`a: D \ddot<\to;> F> で表す。
       ここで、&m<\sb<`D><D>> は &m<D> に値をもつ定値関手である。
     >
   >
   \p<
-    つまり、&m<D> における &m<F> の楔とは、&m<\scr<C>> の各対象 &m<C> に対する &m<\scr<D>> の射 &m<\sb<`a><C>: D \to> P (C, C)> の族で、任意の &m<\scr<C>> の射 &m<f: C\to> C'> に対し、
+    つまり、&m<D> における &m<F> の楔とは、&m<\scr<C>> の各対象 &m<C> に対する &m<\scr<D>> の射 &m<\sb<`a><C>: D \to; P (C, C)> の族で、任意の &m<\scr<C>> の射 &m<f: C\to; C'> に対し、
     &mb<
       \diag<
-        \v<D> \v<F (C, C)> \br>
+        \v<D> \v<F (C, C)> \br;
         \v<F (C', C')> \v<F (C, C')>
         \ar|s="1",e="3",inv|<\sb<`a><C'>> \ar|s="1",e="2"|<\sb<`a><C>> \ar|s="2",e="4"|<F (\rm<id>, f)> \ar|s="3",e="4",inv|<F (f, \rm<id>)>
       >
@@ -51,12 +51,12 @@
   >
   \thm|type="def"|<
     \p<
-      関手 &m<F: \sp<\scr<C>><\circ>> \times> \scr<C> \to> \scr<D>> をとる。
-      &m<F> のある楔 &m<\bar<`a>: \bar<D> \ddot<\to>> F> が以下の条件を満たすとする。
-      すなわち、任意の &m<F> の楔 &m<`a: D \ddot<\to>> F> に対し、&m<\scr<D>> の射 &m<h: D \to> \bar<D>> が唯一存在し、任意の &m<\scr<C>> の対象 &m<C> について、
+      関手 &m<F: \sp<\scr<C>><\circ;> \times; \scr<C> \to; \scr<D>> をとる。
+      &m<F> のある楔 &m<\bar<`a>: \bar<D> \ddot<\to;> F> が以下の条件を満たすとする。
+      すなわち、任意の &m<F> の楔 &m<`a: D \ddot<\to;> F> に対し、&m<\scr<D>> の射 &m<h: D \to; \bar<D>> が唯一存在し、任意の &m<\scr<C>> の対象 &m<C> について、
       &mb<
         \diag<
-          \v<D> \v> \br>
+          \v<D> \v; \br;
           \v<\bar<D>> \v<F (C, C)>
           \ar|s="3",e="4",inv|<\sb<\bar<`a>><C>> \ar|s="1",e="4"|<\sb<`a><C>> \ar|s="1",e="3",inv|<h>
         >
@@ -64,7 +64,7 @@
       は可換である。
       このとき、&m<\bar<D>> を &m<F> の\em<エンド\fl<end>> といい、
       &mb<
-        \bar<D> \eqqcolon> \int<C \in> \scr<C>> F (C, C)
+        \bar<D> \eqqcolon; \int<C \in; \scr<C>> F (C, C)
       >
       と表す。
     >
@@ -75,26 +75,26 @@
   >
   \thm|type="def"|<
     \p<
-      関手 &m<F: \sp<\scr<C>><\circ>> \times> \scr<C> \to> \scr<D>> をとる。
-      &m<\scr<D>> の対象 &m<D> に対して &m<`a: F \raarr> \sb<`D><D>> の形の双自然変換を、&m<D> における &m<F> の\em<余楔\fl<cowedge>> といい、&m<`a: F \ddot<\to>> D> で表す。
+      関手 &m<F: \sp<\scr<C>><\circ;> \times; \scr<C> \to; \scr<D>> をとる。
+      &m<\scr<D>> の対象 &m<D> に対して &m<`a: F \raarr; \sb<`D><D>> の形の双自然変換を、&m<D> における &m<F> の\em<余楔\fl<cowedge>> といい、&m<`a: F \ddot<\to;> D> で表す。
     >
   >
   \thm|type="def"|<
     \p<
-      関手 &m<F: \sp<\scr<C>><\circ>> \times> \scr<C> \to> \scr<D>> をとる。
-      &m<F> のある余楔 &m<\bar<`a>: F \ddot<\to>> \bar<D>> が以下の条件を満たすとする。
-      すなわち、任意の &m<F> の楔 &m<`a: F \ddot<\to>> D> に対し、&m<\scr<D>> の射 &m<h: \bar<D> \to> D> が唯一存在し、任意の &m<\scr<C>> の対象 &m<C> について、
+      関手 &m<F: \sp<\scr<C>><\circ;> \times; \scr<C> \to; \scr<D>> をとる。
+      &m<F> のある余楔 &m<\bar<`a>: F \ddot<\to;> \bar<D>> が以下の条件を満たすとする。
+      すなわち、任意の &m<F> の楔 &m<`a: F \ddot<\to;> D> に対し、&m<\scr<D>> の射 &m<h: \bar<D> \to; D> が唯一存在し、任意の &m<\scr<C>> の対象 &m<C> について、
       &mb<
         \diag<
-          \v<F (C, C)> \v<\bar<D>> \br>
-          \v> \v<D>
+          \v<F (C, C)> \v<\bar<D>> \br;
+          \v; \v<D>
           \ar|s="1",e="2"|<\sb<\bar<`a>><C>> \ar|s="1",e="4",inv|<\sb<`a><C>> \ar|s="2",e="4"|<h>
         >
       >
       は可換である。
       このとき、&m<\bar<D>> を &m<F> の\em<コエンド\fl<coend>> といい、
       &mb<
-        \bar<D> \eqqcolon> \int><C \in> \scr<C>> F (C, C)
+        \bar<D> \eqqcolon; \int<><C \in; \scr<C>> F (C, C)
       >
       と表す。
     >
@@ -112,10 +112,10 @@
         &m<\bfrm<Tw> (\scr<C>)> の対象は、&m<\scr<C>> の射とする。
       >
       \li*<
-        &m<\bfrm<Tw> (\scr<C>)> の 2 つの対象 &m<f: C \to> C', g: D \to> D'> の間の射は、&m<\scr<C>> の射 &m<h: D \to> C, k: C' \to> D'> の組であって、
+        &m<\bfrm<Tw> (\scr<C>)> の 2 つの対象 &m<f: C \to; C', g: D \to; D'> の間の射は、&m<\scr<C>> の射 &m<h: D \to; C, k: C' \to; D'> の組であって、
         &mb<
           \diag<
-            \v<C> \v<D> \br>
+            \v<C> \v<D> \br;
             \v<C'> \v<D'>
             \ar|s="1",e="3",inv|<f> \ar|s="2",e="1",inv|<h> \ar|s="2",e="4"|<g> \ar|s="3",e="4",inv|<k>
           >
@@ -129,21 +129,21 @@
     >
   >
   \p<
-    簡単に言ってしまえば、ここで定義した &m<\bfrm<Tw> (\scr<C>)> は、関手 &m<\sb<\rm<Hom>><\scr<C>>: \sp<\scr<C>><\circ>> \times> \scr<C> \to> \bfrm<Set>> の要素圏 &m<\bfrm<El> (\sb<\rm<Hom>><\scr<C>>)> のことである。
+    簡単に言ってしまえば、ここで定義した &m<\bfrm<Tw> (\scr<C>)> は、関手 &m<\sb<\rm<Hom>><\scr<C>>: \sp<\scr<C>><\circ;> \times; \scr<C> \to; \bfrm<Set>> の要素圏 &m<\bfrm<El> (\sb<\rm<Hom>><\scr<C>>)> のことである。
   >
   \thm|type="prp"|<
     \p<
-      関手 &m<F: \sp<\scr<C>><\circ>> \times> \scr<C> \to> \scr<D>> をとる。
+      関手 &m<F: \sp<\scr<C>><\circ;> \times; \scr<C> \to; \scr<D>> をとる。
       関手 &m<\tilde<F>> を
       &mb<
         \array|align="rrcl"|<
-          \c<\tilde<F>:> \c<\bfrm<Tw> (\scr<C>)> \c<\longto>> \c<\scr<D>> \br>
-          \c> \c<f> \c<\longmapsto>> \c<F (\op<dom> f, \op<cod> f)>
+          \c<\tilde<F>:> \c<\bfrm<Tw> (\scr<C>)> \c<\longto;> \c<\scr<D>> \br;
+          \c; \c<f> \c<\longmapsto;> \c<F (\op<dom> f, \op<cod> f)>
         >
       >
       で定めると、&m<F> のエンドが存在することと &m<\tilde<F>> の極限が存在することは同値であり、これらが存在するならば、
       &mb<
-        \int<C \in> \scr<C>> F (C, C) \cong> \un<\lim>><f \in> \bfrm<Tw> (\scr<C>)> \tilde<F> f
+        \int<C \in; \scr<C>> F (C, C) \cong; \un<\lim;><f \in; \bfrm<Tw> (\scr<C>)> \tilde<F> f
       >
       が成り立つ。
     >
@@ -160,12 +160,12 @@
   >
   \thm|type="prp",id="hom"|<
     \p<
-      関手 &m<F: \sp<\scr<C>><\circ>> \times> \scr<C> \to> \scr<D>> をとる。
+      関手 &m<F: \sp<\scr<C>><\circ;> \times; \scr<C> \to; \scr<D>> をとる。
       任意の &m<\scr<D>> の対象 &m<D> に対し、式中の左辺のエンドやコエンドが存在するならば、
       &mb<
         \array|align="rcl"|<
-          \c<\sb<\op<Hom>><\scr<D>> \paren<D, \int<C \in> \scr<C>> F (C, C)>> \c<\cong>> \c<\int<C \in> \scr<C>> \sb<\op<Hom>><\scr<D>> (D, F (C, C))> \br>
-          \c<\sb<\op<Hom>><\scr<D>> \paren<\int><C \in> \scr<C>> F (C, C), D>> \c<\cong>> \c<\int<C \in> \scr<C>> \sb<\op<Hom>><\scr<D>> (F (C, C), D)>
+          \c<\sb<\op<Hom>><\scr<D>> \paren<D, \int<C \in; \scr<C>> F (C, C)>> \c<\cong;> \c<\int<C \in; \scr<C>> \sb<\op<Hom>><\scr<D>> (D, F (C, C))> \br;
+          \c<\sb<\op<Hom>><\scr<D>> \paren<\int<><C \in; \scr<C>> F (C, C), D>> \c<\cong;> \c<\int<C \in; \scr<C>> \sb<\op<Hom>><\scr<D>> (F (C, C), D)>
         >
       >
       が成り立つ。
@@ -177,9 +177,9 @@
   >
   \thm|type="thm",id="nat"|<
     \p<
-      関手 &m<F, G: \scr<C> \to> \scr<D>> に対し、
+      関手 &m<F, G: \scr<C> \to; \scr<D>> に対し、
       &mb<
-        \op<Nat> (F, G) \cong> \int<C \in> \scr<C>> \sb<\op<Hom>><\scr<D>> (FC, GC)
+        \op<Nat> (F, G) \cong; \int<C \in; \scr<C>> \sb<\op<Hom>><\scr<D>> (FC, GC)
       >
       が成り立つ。
     >
@@ -190,11 +190,11 @@
     >
   >
   \p<
-    さて、この式は要するに、&m<\scr<C>> の各対象 &m<C> に対する &m<\scr<D>> の射 &m<f: FC \to> GC> たちを集めていけば、自然変換 &m<`g: F \raarr> G> が得られるということである。
+    さて、この式は要するに、&m<\scr<C>> の各対象 &m<C> に対する &m<\scr<D>> の射 &m<f: FC \to; GC> たちを集めていけば、自然変換 &m<`g: F \raarr; G> が得られるということである。
     エンドの記号として積分記号を用いるのが、このことから頷けるだろう。
   >
   \p<
-    命題 \ref|type="thm",id="hom"|> と定理 \ref|type="thm",id="nat"|> を用いることで、いろいろな圏論上の概念がエンドやコエンドで表すことができるようになる。
+    命題 \ref|type="thm",id="hom"|; と定理 \ref|type="thm",id="nat"|; を用いることで、いろいろな圏論上の概念がエンドやコエンドで表すことができるようになる。
     次回はそれについて触れていきたいと思う。
   >
   \h1<参考文献>

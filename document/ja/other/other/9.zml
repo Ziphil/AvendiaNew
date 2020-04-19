@@ -1,9 +1,9 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<デザインチェック>
-  \use-math>
+  \use-math;
 
   \h1|id="h"|<第 1 見出し>
   \p<
@@ -24,7 +24,7 @@
   >
   \p<
     日記などの個人情報を含む資料を公開する場合は、適宜個人名などを削除してください。
-    \red|length="12"|>のようにすると削除できます。
+    \red|length="12"|;のようにすると削除できます。
     なんかこれはこれで怪しさが増しますね。
   >
   \h1|id="hx"|<{qilxaléh} を含む見出し>
@@ -114,7 +114,7 @@
     表が書けます。
   >
   \table<
-    \tr<\th>\th<列 1>\th<列 2>>
+    \tr<\th;\th<列 1>\th<列 2>>
     \tr<\th<見出しセル>\td<普通のセル>\td<普通のセル>>
     \tr<\th<見出しセル>\td<普通のセルのものすごく長めの列>\td<普通のセル>>
     \tr<\th<見出しセル>\td<普通のセル>\td<普通のセルのものすごく長めの列>>
@@ -135,8 +135,8 @@
   >
   \table<
     \caption<キャプション>
-    \tr<\th>\th<見出し列 1>\th<見出し列 2>\th<見出し列 3>\th<見出し列 4>>
-    \tr<\th>\th|col="2"|<結合セル>\th<見出し列 3>\th<見出し列 4>>
+    \tr<\th;\th<見出し列 1>\th<見出し列 2>\th<見出し列 3>\th<見出し列 4>>
+    \tr<\th;\th|col="2"|<結合セル>\th<見出し列 3>\th<見出し列 4>>
     \tr<\th<見出し行 1>\td<セル>\td<セル>\td<セル>\td<セル>>
     \tr<\th<見出し行 2>\td<セル>\td<セル>\td<セル>\td<セル>>
     \tr<\th<見出し行 3>\td<セル>\td<セル>\td<セル>\td<セル>>
@@ -157,7 +157,7 @@
     >
   >
   \h1<目次>
-  \section-table>
+  \section-table;
   \h1|id="pn"|<番号付き段落>
   \p|par="1"|<
     考察点などを記す際に、どこの文章のことを言っているか分かるように段落の番号を表示することがあります。
@@ -199,16 +199,16 @@
       \ja<私は昨日泳ぐことができるようになった。>
       \gloss<
         &lig|conj="-es"|<\sh<{kil}>\ex<可能になる>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{tel}>\ex<私>>
         &lig<\sh<{te}>\ex<～の時刻に>>
         &lig<\sh<{tazît}>\ex<昨日>>
-        &lig|auto="e"|>
-        &lig|auto="kin"|>
+        &lig|auto="e"|;
+        &lig|auto="kin"|;
         &lig|conj="-os"|<\sh<{ricam}>\ex<泳ぐ>>
-        &lig|auto="a"|>
+        &lig|auto="a"|;
         &lig<\sh<{tel}>\ex<私>>
-        &lig|punc="."|>
+        &lig|punc="."|;
       >
     >
   >
@@ -217,42 +217,42 @@
     グロスを表示したい場合は以下のようにします。
   >
   \gloss<
-    &lig|auto="e"|>
+    &lig|auto="e"|;
     &lig<\sh<{ʻalis}>\ex<アリス>>
-    &lig|punc=","|>
+    &lig|punc=","|;
     &lig|conj="-ac"|<\sh<{pôz}>\ex<うんざりさせる>>
     &lig|conj="o-"|<\sh<{vel}>\ex<>>
     &lig|conj="e-"|<\sh<{bam}>\ex<とても>>
-    &lig|auto="zi"|>
-    &lig|auto="'n"|>
+    &lig|auto="zi"|;
+    &lig|auto="'n"|;
     &lig|conj="-at"|<\sh<{déq}>\ex<座る>>
-    &lig|auto="a"|>
+    &lig|auto="a"|;
     &lig<\sh<{'s}>\ex<彼女>>
-    &lig|auto="ca"|>
+    &lig|auto="ca"|;
     &lig<\sh<{zehrisis}>\ex<堤防>>
     &lig<\sh<{vo}>\ex<～の場所で>>
     &lig<\sh<{fîc}>\ex<近く>>
-    &lig|auto="ca",conj="i-"|>
+    &lig|auto="ca",conj="i-"|;
     &lig<\sh<{hinof}>\ex<姉>>
-    &lig|punc=","|>
+    &lig|punc=","|;
     &lig<\sh<{lo}>\ex<そして>>
     &lig|conj="-at"|<\sh<{kav}>\ex<もつ>>
-    &lig|auto="a"|>
+    &lig|auto="a"|;
     &lig<\sh<{'s}>\ex<彼女>>
-    &lig|auto="e"|>
+    &lig|auto="e"|;
     &lig<\sh<{dat}>\ex<何もない>>
     &lig|conj="-at"|<\sh<{doz}>\ex<しなければならなくする>>
     &lig|conj="-as"|<\sh<{les}>\ex<する>>
-    &lig|auto="e"|>
-    &lig|auto="a"|>
+    &lig|auto="e"|;
+    &lig|auto="a"|;
     &lig<\sh<{'s}>\ex<彼女>>
-    &lig|punc="."|>
-    &lig|punc="«"|>
-    &lig|auto="pa"|>
+    &lig|punc="."|;
+    &lig|punc="«"|;
+    &lig|auto="pa"|;
     &lig|conj="-ot"|<\sh<{sal}>\ex<である>>
-    &lig|auto="e"|>
+    &lig|auto="e"|;
     &lig<\sh<{pil}>\ex<何>> 
-    &lig|auto="a"|>
+    &lig|auto="a"|;
     &lig<\sh<{sokus}>\ex<価値>>
     &lig|conj="i-"|<\sh<∅>\ex<～の>>
     &lig<\sh<{xoq}>\ex<本>>
@@ -260,7 +260,7 @@
     &lig<\sh<{qinat}>\ex<絵>>
     &lig<\sh<{o}>\ex<と>>
     &lig<\sh<{lek}>\ex<会話>>
-    &lig|punc="?»"|>
+    &lig|punc="?»"|;
   >
   \h1|id="math"|<数式>
   \p<
@@ -327,15 +327,15 @@
     以下はテキストエリアです。
   >
   \form<
-    \textarea|class="normal",name="content",cols="50",rows="6"|>\br>
-    \input|type="submit",name="mode",value="決定"|>
+    \textarea|class="normal",name="content",cols="50",rows="6"|;\br;
+    \input|type="submit",name="mode",value="決定"|;
   >
   \p<
     以下は \m<input> 要素を用いたフォームとしてのボタンと、\m<a> 要素をそれっぽい見た目にしてボタンのように表示しているものです。
     ほとんど同じ見た目になっていることを確認してください。
   >
   \form<
-    \input|type="submit",name="mode",value="ボタン"|> \a|class="form"|<ボタン>
+    \input|type="submit",name="mode",value="ボタン"|; \a|class="form"|<ボタン>
   >
   \p<
     ここにあるフォームは実際には動きません。

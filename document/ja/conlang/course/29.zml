@@ -1,5 +1,5 @@
-\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<『シャレイア語 最重要 600 語』>
@@ -14,7 +14,7 @@
     以下の PDF ファイルも随時更新されます。
   >
   \h1<PDF ファイル>
-  \pdf|src="../../file/course/3.pdf"|>
+  \pdf|src="../../file/course/3.pdf"|;
   \p<
     以下のリンクから PDF ファイルを直接ダウンロードすることもできます。
   >

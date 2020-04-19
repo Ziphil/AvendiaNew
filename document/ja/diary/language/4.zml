@@ -1,5 +1,5 @@
-﻿\zml?|version="1.0"|>
-\xml?|version="1.0",encoding="UTF-8"|>
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
   \name<『原論』巻 1 定義 5～6>
@@ -52,7 +52,7 @@
   >
   \table<
     \caption<{ἔχω}>
-    \tr<\th>\th<直.能.現>>
+    \tr<\th;\th<直.能.現>>
     \tr<\th<一単>\td<[ἔχ-ω]>>
     \tr<\th<二単>\td<[ἔχ-εις]>>
     \tr<\th<三単>\td<[ἔχ-ει]>>
