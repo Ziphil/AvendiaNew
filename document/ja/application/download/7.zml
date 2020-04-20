@@ -14,11 +14,11 @@
     詳細は\ae|href="https://github.com/Ziphil/AvendiaNew"|<こちら>をご覧ください。
   >
   \p<
-    以下は ZenML ドキュメントの例です。
+    以下は ZenML ドキュメント (ver 1.1 文法) の例です。
   >
   \pre~<
-    \zml?|version="1.0"|`>
-    \xml?|version="1.0",encoding="UTF-8"|`>
+    \zml?|version="1.1"|;
+    \xml?|version="1.0",encoding="UTF-8"|;
     
     \body<
       \h1<見出し`>
