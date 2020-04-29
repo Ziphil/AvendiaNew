@@ -22,7 +22,7 @@
       &mb<
         \array|align="rcl"|<
           \c<\rm<second>> \c<:> \c<(A \bwaverarr; B) \buharprarr; (C \times; A \bwaverarr; B \times; A)> \br;
-          \c; \c<\equiv;> \c<\rm<`l> f. \sfun; \tt|fun|<arr> \rm<swap> \gggt|bin|; f \gggt|bin|; \tt|fun|<arr> \rm<swap>>
+          \c; \c<\equiv;> \c<\rm<`l> f. \sfun; \tt|fun|<arr> \rm<swap> \gggt|bin|; \tt|fun|<first> f \gggt|bin|; \tt|fun|<arr> \rm<swap>>
         >
       >
       と定めと、
@@ -55,7 +55,12 @@
     >
   >
   \p<
-    この準備のもと、前回の結果の逆が示せる。
+    この逆に、&m<\bfrm<Arrow>> のプリミティブな項として &m<\tt<first>> の代わりに上記の 5 つの等式を満たす &m<\tt<second>> を導入した場合でも、同様の方法で &m<\rm|tt|<first>> を定義することができ、それは \a|href="41.html"|<4 月 15 日>の定義中の 5 つの等式を満たす。
+    したがって、&m<\bfrm<Arrow>> を定義するときに、&m<\tt<first>> のみをプリミティブな項として入れるか、&m<\tt<second>> のみをプリミティブな項として入れるか、もしくは両方とも入れるかは、単に慣習の問題であって、どれを採用しても結局同値な体系になる。
+    これ以降では、利便性のため &m<\tt<second>> もプリミティブに入っていたものとして議論する。
+  >
+  \p<
+    さて、以上の準備のもと、前回の結果の逆が示せる。
   >
   \thm|type="prp",id="comp"|<
     \p<
@@ -72,13 +77,13 @@
       >
       \li*<
         &m<\scr<C>> の対象 &m<A, B> の間の射は、&m<\bfrm<Arrow>> の型割り当て &m<a: A \vdash; M: B> の等号 (および自由変項 &m<a> の名前の変更) による同値類全体とする。
-        この同値類は &m<`{a: A \vdash; M: B`}> もしくはより簡潔に &m<`{M`}> で表す。
+        この同値類は &m<\lceil; a: A \vdash; M: B \rceil;> もしくはより簡潔に &m<\lceil; M \rceil;> で表す。
       >
       \li*<
-        &m<\scr<C>> の対象 &m<A> 上の恒等射は、&m<`{a: A \vdash; a: A`}> とする。
+        &m<\scr<C>> の対象 &m<A> 上の恒等射は、&m<\lceil; a: A \vdash; a: A \rceil;> とする。
       >
       \li*<
-        &m<\scr<C>> の射 &m<`{a: A \vdash; M: B`}> および &m<`{b: B \vdash; N: C`}> の合成は、&m<`{a: A \vdash; N `[b \coloneqq; M`]: C`}> とする。
+        &m<\scr<C>> の射 &m<\lceil; a: A \vdash; M: B \rceil;> および &m<\lceil; b: B \vdash; N: C \rceil;> の合成は、&m<\lceil; a: A \vdash; N `[b \coloneqq; M`]: C \rceil;> とする。
       >
     >
     \p<
@@ -99,14 +104,14 @@
       \li*<
         &m<\scr<D>> の対象 &m<A> に対し、恒等射を定める射を、
         &mb<
-          \sb<j><A> = `{u: 1 \vdash; \tt|fun|<arr> \rm<id>: A \bwaverarr; A`}
+          \sb<j><A> = \lceil; u: 1 \vdash; \tt|fun|<arr> \rm<id>: A \bwaverarr; A \rceil;
         >
         とする。
       >
       \li*<
         &m<\scr<D>> の対象 &m<A, B, C> に対し、合成を定める射を、
         &mb<
-          \sb<c><ABC> = `{p: (A \bwaverarr; B) \times; (B \bwaverarr; C) \vdash; \tt|fun|<fst> p \gggt|bin|; \tt|fun|<snd> p: A \bwaverarr; C`}
+          \sb<c><ABC> = \lceil; p: (A \bwaverarr; B) \times; (B \bwaverarr; C) \vdash; \tt|fun|<fst> p \gggt|bin|; \tt|fun|<snd> p: A \bwaverarr; C \rceil;
         >
         とする。
       >
@@ -127,18 +132,18 @@
       &m<\scr<D>> の対象 &m<A, B> に対して &mb<A \ltimes; B = A \rtimes; B = A \times; B> とし、さらに &m<\scr<D>> の対象 &m<A', B'> に対して、
       &mb<
         \array|align="rcl"|<
-          \c<(\text<-> \ltimes; B) \sb<><AA'>> \c<=> \c<`{f: A \bwaverarr; A' \vdash; \rm|fun|<first> f: A \times; B \bwaverarr; A' \times; B`}> \br;
-          \c<(A \rtimes; \text<->) \sb<><BB'>> \c<=> \c<`{f: B \bwaverarr; B' \vdash; \rm|fun|<second> f: A \times; B \bwaverarr; A \times; B'`}> \br;
+          \c<(\text<-> \ltimes; B) \sb<><AA'>> \c<=> \c<\lceil; f: A \bwaverarr; A' \vdash; \tt|fun|<first> f: A \times; B \bwaverarr; A' \times; B \rceil;> \br;
+          \c<(A \rtimes; \text<->) \sb<><BB'>> \c<=> \c<\lceil; f: B \bwaverarr; B' \vdash; \tt|fun|<second> f: A \times; B \bwaverarr; A \times; B' \rceil;> \br;
         >
       >
       と定める。
       これが関手 &m<\text<-> \ltimes; B> と &m<A \rtimes; \text<->> を定めるための条件は、4 つの等式
       &mb<
         \array|align="rcl"|<
-          \c<\rm|fun|<first> (\tt|fun|<arr> \rm<id>)> \c<=> \c<\tt|fun|<arr> \rm<id>> \br;
-          \c<\rm|fun|<second> (\tt|fun|<arr> \rm<id>)> \c<=> \c<\tt|fun|<arr> \rm<id>> \br;
-          \c<\rm|fun|<first> (F \gggt|bin|; G)> \c<=> \c<\rm|fun|<first> F \gggt|bin|; \rm|fun|<first> G> \br;
-          \c<\rm|fun|<second> (F \gggt|bin|; G)> \c<=> \c<\rm|fun|<second> F \gggt|bin|; \rm|fun|<second> G>
+          \c<\tt|fun|<first> (\tt|fun|<arr> \rm<id>)> \c<=> \c<\tt|fun|<arr> \rm<id>> \br;
+          \c<\tt|fun|<second> (\tt|fun|<arr> \rm<id>)> \c<=> \c<\tt|fun|<arr> \rm<id>> \br;
+          \c<\tt|fun|<first> (F \gggt|bin|; G)> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<first> G> \br;
+          \c<\tt|fun|<second> (F \gggt|bin|; G)> \c<=> \c<\rm|fun|<second> F \gggt|bin|; \rm|fun|<second> G>
         >
       >
       に帰着されるが、最初の 2 つの式は明らかに成り立ち、残りの 2 つの式は &m<\bfrm<Arrow>> の公理と命題 \ref|type="thm",id="second"|; の一部そのものである。
@@ -149,36 +154,36 @@
       さらに、前モノイダル圏に必要な 4 種類の構造射を、&m<\scr<D>> の対象 &m<A, B, C> に対し、
       &mb<
         \array|align="rcl"|<
-          \c<\sb<`a><ABC>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> \rm<assoc>: (A \times; B) \times; C \bwaverarr; A \times; (B \times; C)`}> \br;
-          \c<\sb<`l><A>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;) : A \bwaverarr; 1 \times; A`}> \br;
-          \c<\sb<`r><A>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;) : A \bwaverarr; A \times; 1`}> \br;
-          \c<\sb<`s><AB>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> \rm<swap>: A \times; B \bwaverarr; B \times; A`}>
+          \c<\sb<`a><ABC>> \c<=> \c<\lceil; u: 1 \vdash; \tt|fun|<arr> \rm<assoc>: (A \times; B) \times; C \bwaverarr; A \times; (B \times; C) \rceil;> \br;
+          \c<\sb<`l><A>> \c<=> \c<\lceil; u: 1 \vdash; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;) : A \bwaverarr; 1 \times; A \rceil;> \br;
+          \c<\sb<`r><A>> \c<=> \c<\lceil; u: 1 \vdash; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;) : A \bwaverarr; A \times; 1 \rceil;> \br;
+          \c<\sb<`s><AB>> \c<=> \c<\lceil; u: 1 \vdash; \tt|fun|<arr> \rm<swap>: A \times; B \bwaverarr; B \times; A \rceil;>
         >
       >
       で定める。
       これらがそれぞれ各変数について自然であることは、7 つの等式
       &mb<
         \array|align="rcl"|<
-          \c<\rm|fun|<first> (\rm|fun|<first> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \rm|fun|<first> F> \br;
-          \c<\rm|fun|<second> (\rm|fun|<first> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \rm|fun|<first> (\rm|fun|<second> F)> \br;
-          \c<\rm|fun|<second> (\rm|fun|<second> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \rm|fun|<second> F> \br;
-          \c<F \gggt|bin|; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;)> \c<=> \c<\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;) \gggt|bin|; \rm|fun|<second> F> \br;
-          \c<F \gggt|bin|; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;)> \c<=> \c<\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;) \gggt|bin|; \rm|fun|<first> F> \br;
-          \c<\rm|fun|<first> F \gggt|bin|; \tt|fun|<arr> \rm<swap>> \c<=> \c<\tt|fun|<arr> \rm<swap> \gggt|bin|; \rm|fun|<second> F> \br;
-          \c<\rm|fun|<second> F \gggt|bin|; \tt|fun|<arr> \rm<swap>> \c<=> \c<\tt|fun|<arr> \rm<swap> \gggt|bin|; \rm|fun|<first> F>
+          \c<\tt|fun|<first> (\tt|fun|<first> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \tt|fun|<first> F> \br;
+          \c<\tt|fun|<second> (\tt|fun|<first> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \tt|fun|<first> (\tt|fun|<second> F)> \br;
+          \c<\tt|fun|<second> (\tt|fun|<second> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \tt|fun|<second> F> \br;
+          \c<F \gggt|bin|; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;)> \c<=> \c<\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;) \gggt|bin|; \tt|fun|<second> F> \br;
+          \c<F \gggt|bin|; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;)> \c<=> \c<\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;) \gggt|bin|; \tt|fun|<first> F> \br;
+          \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<arr> \rm<swap>> \c<=> \c<\tt|fun|<arr> \rm<swap> \gggt|bin|; \tt|fun|<second> F> \br;
+          \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<arr> \rm<swap>> \c<=> \c<\tt|fun|<arr> \rm<swap> \gggt|bin|; \tt|fun|<first> F>
         >
       >
       に帰着され、さらに、これらがそれぞれ中心的であることは、8 つの等式
       &mb<
         \array|align="rcl"|<
-          \c<\rm|fun|<first> (\tt|fun|<arr> \rm<assoc>) \gggt|bin|; \rm|fun|<second> F> \c<=> \c<\rm|fun|<second> F \gggt|bin|; \rm|fun|<first> (\tt|fun|<arr> \rm<assoc>)> \br;
-          \c<\rm|fun|<second> (\tt|fun|<arr> \rm<assoc>) \gggt|bin|; \rm|fun|<first> F> \c<=> \c<\rm|fun|<first> F \gggt|bin|; \rm|fun|<second> (\tt|fun|<arr> \rm<assoc>)> \br;
-          \c<\rm|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;)) \gggt|bin|; \rm|fun|<second> F> \c<=> \c<\rm|fun|<second> F \gggt|bin|; \rm|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;))> \br;
-          \c<\rm|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;)) \gggt|bin|; \rm|fun|<first> F> \c<=> \c<\rm|fun|<first> F \gggt|bin|; \rm|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;))> \br;
-          \c<\rm|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;)) \gggt|bin|; \rm|fun|<second> F> \c<=> \c<\rm|fun|<second> F \gggt|bin|; \rm|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;))> \br;
-          \c<\rm|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;)) \gggt|bin|; \rm|fun|<first> F> \c<=> \c<\rm|fun|<first> F \gggt|bin|; \rm|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;))> \br;
-          \c<\rm|fun|<first> (\tt|fun|<arr> \rm<swap>) \gggt|bin|; \rm|fun|<second> F> \c<=> \c<\rm|fun|<second> F \gggt|bin|; \rm|fun|<first> (\tt|fun|<arr> \rm<swap>)> \br;
-          \c<\rm|fun|<second> (\tt|fun|<arr> \rm<swap>) \gggt|bin|; \rm|fun|<first> F> \c<=> \c<\rm|fun|<first> F \gggt|bin|; \rm|fun|<second> (\tt|fun|<arr> \rm<swap>)>
+          \c<\tt|fun|<first> (\tt|fun|<arr> \rm<assoc>) \gggt|bin|; \tt|fun|<second> F> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> \rm<assoc>)> \br;
+          \c<\tt|fun|<second> (\tt|fun|<arr> \rm<assoc>) \gggt|bin|; \tt|fun|<first> F> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<second> (\tt|fun|<arr> \rm<assoc>)> \br;
+          \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;)) \gggt|bin|; \tt|fun|<second> F> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;))> \br;
+          \c<\tt|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;)) \gggt|bin|; \tt|fun|<first> F> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;))> \br;
+          \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;)) \gggt|bin|; \tt|fun|<second> F> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;))> \br;
+          \c<\tt|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;)) \gggt|bin|; \tt|fun|<first> F> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;))> \br;
+          \c<\tt|fun|<first> (\tt|fun|<arr> \rm<swap>) \gggt|bin|; \tt|fun|<second> F> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> \rm<swap>)> \br;
+          \c<\tt|fun|<second> (\tt|fun|<arr> \rm<swap>) \gggt|bin|; \tt|fun|<first> F> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<second> (\tt|fun|<arr> \rm<swap>)>
         >
       >
       に帰着される。
@@ -188,7 +193,7 @@
       最後に、Freyd 圏の構造を定める。
       &m<\scr<D>> の対象 &m<A, B> に対して、
       &mb<
-        \sb<J><AB> = `{m: A \buharprarr; B \vdash; \tt|fun|<arr> m: A \bwaverarr; B`}
+        \sb<J><AB> = \lceil; m: A \buharprarr; B \vdash; \tt|fun|<arr> m: A \bwaverarr; B \rceil;
       >
       と定める。
       これが対象上恒等的であるための条件は、2 つの等式
@@ -202,15 +207,15 @@
       また、これが前モノイダル圏の構造を保つことは、2 つの等式
       &mb<
         \array|align="rcl"|<
-          \c<\tt|fun|<arr> (M \times; \rm<id>)> \c<=> \c<\rm|fun|<first> (\tt|fun|<arr> M)> \br;
-          \c<\tt|fun|<arr> (\rm<id> \times; M)> \c<=> \c<\rm|fun|<second> (\tt|fun|<arr> M)>
+          \c<\tt|fun|<arr> (M \times; \rm<id>)> \c<=> \c<\tt|fun|<first> (\tt|fun|<arr> M)> \br;
+          \c<\tt|fun|<arr> (\rm<id> \times; M)> \c<=> \c<\tt|fun|<second> (\tt|fun|<arr> M)>
         >
       >
       に帰着され、さらに、これが中心的であることは、2 つの等式
       &mb<
         \array|align="rcl"|<
-          \c<\rm|fun|<first> (\tt|fun|<arr> M) \gggt|bin|; \rm|fun|<second> F> \c<=> \c<\rm|fun|<second> F \gggt|bin|; \rm|fun|<first> (\tt|fun|<arr> M)> \br;
-          \c<\rm|fun|<second> (\tt|fun|<arr> M) \gggt|bin|; \rm|fun|<first> F> \c<=> \c<\rm|fun|<first> F \gggt|bin|; \rm|fun|<second> (\tt|fun|<arr> M)>
+          \c<\tt|fun|<first> (\tt|fun|<arr> M) \gggt|bin|; \tt|fun|<second> F> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> M)> \br;
+          \c<\tt|fun|<second> (\tt|fun|<arr> M) \gggt|bin|; \tt|fun|<first> F> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<second> (\tt|fun|<arr> M)>
         >
       >
       に帰着される。

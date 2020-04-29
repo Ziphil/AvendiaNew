@@ -132,7 +132,7 @@
           \ar|s="7",e="11",inv|<\rm<id> \times; (\overline<B> \times; \text<->)> \ar|s="9",e="15"|<(\overline<A> \times; \text<->) \times; \rm<id>>
           \ar|s="12",e="17"|<\rm<id> \times; (\overline<B> \rtimes; \text<->)> \ar|s="14",e="19",inv|<(\overline<A> \rtimes; \text<->) \times; \rm<id>>
           \ar|s="11",e="17",inv|<\rm<id> \times; J> \ar|s="15",e="19"|<J \times; \rm<id>>
-          \ar|s="17",e="22",inv|<(\text<-> \ltimes; \overline<C>) \times; \rm<id>> \ar|s="19",e="24",inv|<\rm<id> \times; (\text<-> \ltimes; \overline<D>)>
+          \ar|s="17",e="22",inv|<(\text<-> \ltimes; \overline<C>) \times; \rm<id>> \ar|s="19",e="24"|<\rm<id> \times; (\text<-> \ltimes; \overline<D>)>
           \ar|s="22",e="28",inv|<c> \ar|s="24",e="28"|<c>
         >
       >
