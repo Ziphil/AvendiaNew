@@ -143,7 +143,7 @@
           \c<\tt|fun|<first> (\tt|fun|<arr> \rm<id>)> \c<=> \c<\tt|fun|<arr> \rm<id>> \br;
           \c<\tt|fun|<second> (\tt|fun|<arr> \rm<id>)> \c<=> \c<\tt|fun|<arr> \rm<id>> \br;
           \c<\tt|fun|<first> (F \gggt|bin|; G)> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<first> G> \br;
-          \c<\tt|fun|<second> (F \gggt|bin|; G)> \c<=> \c<\rm|fun|<second> F \gggt|bin|; \rm|fun|<second> G>
+          \c<\tt|fun|<second> (F \gggt|bin|; G)> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<second> G>
         >
       >
       に帰着されるが、最初の 2 つの式は明らかに成り立ち、残りの 2 つの式は &m<\bfrm<Arrow>> の公理と命題 \ref|type="thm",id="second"|; の一部そのものである。
