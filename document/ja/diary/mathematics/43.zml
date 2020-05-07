@@ -22,9 +22,11 @@
       任意に豊穣 Freyd 圏 &m<(\scr<C>`; \scr<D>, J)> をとる。
       まず、型の解釈を、
       &mb<
-        \overline<A \bwaverarr; B> = `[\overline<A>, \overline<B>`]
+        \overline<`[A, B`]> = `[\overline<A>, \overline<B>`]
       >
-      と定め、それ以外の場合についてはラムダ計算の標準的な解釈の通りとする。
+      と定める。
+      記号が同じなので少し分かりづらいが、左辺の括弧は &m<\bfrm<Arrow>> に定められた型構築子で、右辺の括弧は &m<\scr<D>> の射対象である。
+      それ以外の場合についてはラムダ計算の標準的な解釈の通りとする。
     >
     \p<
       次に、項の解釈を以下のように定める。
@@ -36,7 +38,7 @@
         >> 
       >
       とする。
-      次に、型割り当て &m<`G \vdash; F: A \bwaverarr; B> および &m<`G \vdash; G: B \bwaverarr; C> に対し、
+      次に、型割り当て &m<`G \vdash; F: `[A, B`]> および &m<`G \vdash; G: `[B, C`]> に対し、
       &mb<
         \overline<F \gggt|bin|; G> = \tort<\diag<
           \v<\overline<`G>> \v<`[\overline<A>, \overline<B>`] \times; `[\overline<B>, \overline<C>`]> \v<`[\overline<A>, \overline<C>`]>
@@ -45,7 +47,7 @@
       >
       とする。
       なお、&m<c> は &m<\scr<D>> の合成を定める射である。
-      最後に、型割り当て &m<`G \vdash; F: A \bwaverarr; B> に対し、
+      最後に、型割り当て &m<`G \vdash; F: `[A, B`]> に対し、
       &mb<
         \overline<\tt|fun|<first> F> = \tort<\diag<
           \v<\overline<`G>> \v<`[\overline<A>, \overline<B>`]> \v<`[\overline<A> \times; \overline<C>, \overline<B> \times; \overline<C>`]>
@@ -62,7 +64,7 @@
     >
     \p<
       \label<等式 1:>
-      型割り当て &m<`G \vdash; F: A \bwaverarr; B> に対し、
+      型割り当て &m<`G \vdash; F: `[A, B`]> に対し、
       &mb<
         \overline<\tt|fun|<arr> \rm<id> \gggt|bin|; F> = \overline<F>
       >
@@ -113,7 +115,7 @@
     >
     \p<
       \label<等式 6:>
-      型割り当て &m<`G \vdash; F: A \bwaverarr; B> および &m<`G \vdash; M: C \buharprarr; D> に対し、
+      型割り当て &m<`G \vdash; F: `[A, B`]> および &m<`G \vdash; M: C \buharprarr; D> に対し、
       &mb<
         \overline<\tt|fun|<first> F \gggt|bin|; \tt|fun|<arr> (\rm<id> \times; M)> = \overline<\tt|fun|<arr> (\rm<id> \times; M) \gggt|bin|; \tt|fun|<first> F>
       >

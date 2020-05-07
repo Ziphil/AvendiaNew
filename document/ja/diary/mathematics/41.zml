@@ -128,7 +128,7 @@
       まず、型 &m<A> と項 &m<M> を、
       &mb<
         \array|align="rcl"|<
-          \c<A> \c<\ccoloneqq;> \c<\cdots; \mid; A \bwaverarr; A> \br;
+          \c<A> \c<\ccoloneqq;> \c<\cdots; \mid; `[A, A`]> \br;
           \c<M> \c<\ccoloneqq;> \c<\cdots; \mid; \tt|fun|<arr> M \mid; M \gggt|bin|; M \mid; \tt|fun|<first> M> 
         >
       >
@@ -139,19 +139,19 @@
           \cc<
             \tree<
               \axm<`G \vdash; M: A \buharprarr; B>
-              \infr|n="1"|<`G \vdash; \tt|fun|<arr> M: A \bwaverarr; B>
+              \infr|n="1"|<`G \vdash; \tt|fun|<arr> M: `[A, B`]>
             >
           >
           \cc<
             \tree<
-              \axm<`G \vdash; F: A \bwaverarr; B> \axm<`G \vdash; G: B \bwaverarr; C>
-              \infr|n="2"|<`G \vdash; F \gggt|bin|; G: A \bwaverarr; C>
+              \axm<`G \vdash; F: `[A, B`]> \axm<`G \vdash; G: `[B, C`]>
+              \infr|n="2"|<`G \vdash; F \gggt|bin|; G: `[A, C`]>
             >
           >
           \cc<
             \tree<
-              \axm<`G \vdash; F: A \bwaverarr; B>
-              \infr|n="1"|<`G \vdash; \tt|fun|<first> F: A \times; C \bwaverarr; B \times; C>
+              \axm<`G \vdash; F: `[A, B`]>
+              \infr|n="1"|<`G \vdash; \tt|fun|<first> F: `[A \times; C, B \times; C`]>
             >
           >
         >

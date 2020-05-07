@@ -18,10 +18,10 @@
   >
   \thm|type="prp",id="second"|<
     \p<
-      &m<\bfrm<Arrow>> において、パラメトリックな閉じた項 &m<\rm<second>> を、
+      &m<\bfrm<Arrow>> において、型多相な閉じた項 &m<\rm<second>> を、
       &mb<
         \array|align="rcl"|<
-          \c<\rm<second>> \c<:> \c<(A \bwaverarr; B) \buharprarr; (C \times; A \bwaverarr; B \times; A)> \br;
+          \c<\rm<second>> \c<:> \c<`[A, B`] \buharprarr; `[C \times; A, B \times; A`]> \br;
           \c; \c<\equiv;> \c<\rm<`l> f. \sfun; \tt|fun|<arr> \rm<swap> \gggt|bin|; \tt|fun|<first> f \gggt|bin|; \tt|fun|<arr> \rm<swap>>
         >
       >
@@ -61,6 +61,7 @@
   >
   \p<
     さて、以上の準備のもと、前回の結果の逆が示せる。
+    これを証明するにあたっての核となる箇所は、&m<\bfrm<Arrow>> において特定の等式が成立することを確かめるところであるが、これはただ計算すれば良いだけので、示すべき等式を挙げるだけに留めて計算の過程は省略する。
   >
   \thm|type="prp",id="comp"|<
     \p<
@@ -77,13 +78,13 @@
       >
       \li*<
         &m<\scr<C>> の対象 &m<A, B> の間の射は、&m<\bfrm<Arrow>> の型割り当て &m<a: A \vdash; M: B> の等号 (および自由変項 &m<a> の名前の変更) による同値類全体とする。
-        この同値類は &m<\lceil; a: A \vdash; M: B \rceil;> もしくはより簡潔に &m<\lceil; M \rceil;> で表す。
+        この同値類は &m<`{a: A \vdash; M: B`}> もしくはより簡潔に &m<`{M`}> で表す。
       >
       \li*<
-        &m<\scr<C>> の対象 &m<A> 上の恒等射は、&m<\lceil; a: A \vdash; a: A \rceil;> とする。
+        &m<\scr<C>> の対象 &m<A> 上の恒等射は、&m<`{a: A \vdash; a: A`}> とする。
       >
       \li*<
-        &m<\scr<C>> の射 &m<\lceil; a: A \vdash; M: B \rceil;> および &m<\lceil; b: B \vdash; N: C \rceil;> の合成は、&m<\lceil; a: A \vdash; N `[b \coloneqq; M`]: C \rceil;> とする。
+        &m<\scr<C>> の射 &m<`{a: A \vdash; M: B`}> および &m<`{b: B \vdash; N: C`}> の合成は、&m<`{a: A \vdash; N `[b \coloneqq; M`]: C`}> とする。
       >
     >
     \p<
@@ -99,19 +100,19 @@
         すなわち、&m<\bfrm<Arrow>> の型全体である。
       >
       \li*<
-        &m<\scr<D>> の対象 &m<A, B> に対し、その間の射対象を &m<`[A, B`] = A \bwaverarr; B> で定める。
+        &m<\scr<D>> の対象 &m<A, B> に対し、その間の射対象を &m<`[A, B`] = `[A, B`]> で定める。
       >
       \li*<
         &m<\scr<D>> の対象 &m<A> に対し、恒等射を定める射を、
         &mb<
-          \sb<j><A> = \lceil; u: 1 \vdash; \tt|fun|<arr> \rm<id>: A \bwaverarr; A \rceil;
+          \sb<j><A> = `{u: 1 \vdash; \tt|fun|<arr> \rm<id>: `[A, A`]`}
         >
         とする。
       >
       \li*<
         &m<\scr<D>> の対象 &m<A, B, C> に対し、合成を定める射を、
         &mb<
-          \sb<c><ABC> = \lceil; p: (A \bwaverarr; B) \times; (B \bwaverarr; C) \vdash; \tt|fun|<fst> p \gggt|bin|; \tt|fun|<snd> p: A \bwaverarr; C \rceil;
+          \sb<c><ABC> = `{p: `[A, B`] \times; `[B, C`] \vdash; \tt|fun|<fst> p \gggt|bin|; \tt|fun|<snd> p: `[A, C`]`}
         >
         とする。
       >
@@ -132,8 +133,8 @@
       &m<\scr<D>> の対象 &m<A, B> に対して &mb<A \ltimes; B = A \rtimes; B = A \times; B> とし、さらに &m<\scr<D>> の対象 &m<A', B'> に対して、
       &mb<
         \array|align="rcl"|<
-          \c<(\text<-> \ltimes; B) \sb<><AA'>> \c<=> \c<\lceil; f: A \bwaverarr; A' \vdash; \tt|fun|<first> f: A \times; B \bwaverarr; A' \times; B \rceil;> \br;
-          \c<(A \rtimes; \text<->) \sb<><BB'>> \c<=> \c<\lceil; f: B \bwaverarr; B' \vdash; \tt|fun|<second> f: A \times; B \bwaverarr; A \times; B' \rceil;> \br;
+          \c<(\text<-> \ltimes; B) \sb<><AA'>> \c<=> \c<`{f: `[A, A'`] \vdash; \tt|fun|<first> f: `[A \times; B, A' \times; B`]`}> \br;
+          \c<(A \rtimes; \text<->) \sb<><BB'>> \c<=> \c<`{f: `[B, B'`] \vdash; \tt|fun|<second> f: `[A \times; B, A \times; B'`]`}> \br;
         >
       >
       と定める。
@@ -154,10 +155,10 @@
       さらに、前モノイダル圏に必要な 4 種類の構造射を、&m<\scr<D>> の対象 &m<A, B, C> に対し、
       &mb<
         \array|align="rcl"|<
-          \c<\sb<`a><ABC>> \c<=> \c<\lceil; u: 1 \vdash; \tt|fun|<arr> \rm<assoc>: (A \times; B) \times; C \bwaverarr; A \times; (B \times; C) \rceil;> \br;
-          \c<\sb<`l><A>> \c<=> \c<\lceil; u: 1 \vdash; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;) : A \bwaverarr; 1 \times; A \rceil;> \br;
-          \c<\sb<`r><A>> \c<=> \c<\lceil; u: 1 \vdash; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;) : A \bwaverarr; A \times; 1 \rceil;> \br;
-          \c<\sb<`s><AB>> \c<=> \c<\lceil; u: 1 \vdash; \tt|fun|<arr> \rm<swap>: A \times; B \bwaverarr; B \times; A \rceil;>
+          \c<\sb<`a><ABC>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> \rm<assoc>: `[(A \times; B) \times; C, A \times; (B \times; C)`]`}> \br;
+          \c<\sb<`l><A>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;) : `[A, 1 \times; A`]`}> \br;
+          \c<\sb<`r><A>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;) : `[A, A \times; 1`]`}> \br;
+          \c<\sb<`s><AB>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> \rm<swap>: `[A \times; B, B \times; A`]`}>
         >
       >
       で定める。
@@ -193,7 +194,7 @@
       最後に、Freyd 圏の構造を定める。
       &m<\scr<D>> の対象 &m<A, B> に対して、
       &mb<
-        \sb<J><AB> = \lceil; m: A \buharprarr; B \vdash; \tt|fun|<arr> m: A \bwaverarr; B \rceil;
+        \sb<J><AB> = `{m: A \buharprarr; B \vdash; \tt|fun|<arr> m: `[A, B`]`}
       >
       と定める。
       これが対象上恒等的であるための条件は、2 つの等式
@@ -222,7 +223,7 @@
       これらの等式も全て簡単な計算によって導かれる。
     >
     \p<
-      以上により、豊穣 Freyd 圏 &m<(\scr<C>`; \scr<D>, J)> が得られ、定義によって &m<\bfrm<Arrow>> のこの圏への解釈は恒等写像になっていることが分かる。
+      以上により、豊穣 Freyd 圏 &m<(\scr<C>`; \scr<D>, J)> が得られ、定義によって &m<\bfrm<Arrow>> のこの圏への解釈はほぼ恒等写像になっていることが分かる。
       したがって、型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、任意の豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つとすると、特に今定義した &m<(\scr<C>`; \scr<D>, J)> においても &m<\overline<M> = \overline<N>> となり、それはすなわち &m<\bfrm<Arrow>> で &m<M = N> が成り立つということである。
     >
   >
