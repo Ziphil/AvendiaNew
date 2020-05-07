@@ -1,0 +1,52 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+\page<
+  \name<アロー ＋ 適用計算>
+  \use-math;
+
+  \h1<日記 (2020 年 4 月 29 日)>
+  \p<
+    \a|href="44.html"|<4 月 18 日>までのアローに関する日記の続き。
+    これまでは、Haskell に定まったいるアローを形式化し、それに対応する圏論的構造を模索するという内容で、最終的に豊穣 Freyd 圏に辿り着いた。
+    ここからは、アローにさらなく構造を加えたシステムを取り上げ、その付加的構造に対応する圏論的構造を模索することを考える。
+    まずは、アローを値に適用するという操作そのものをアローとして扱うことを許したシステムを考える。
+  >
+  \p<
+    今回扱うのは、以下の型システムである。
+    これは Haskell での定義をそのまま写し取ったものである。
+  >
+  \thm|type="def"|<
+    \p<
+      型システム &m<\bfrm<ArrowApply>> を &m<\bfrm<Arrow>> の拡張として以下のように定める。
+      まず、型については拡張せず、項 &m<M> について、
+      &mb<
+        \array|align="rcl"|<
+          \c<M> \c<\ccoloneqq;> \c<\cdots; \mid; \tt<app>> 
+        >
+      >
+      と拡張する。
+      次に、項の型割り当ての推論規則に、
+      &mb<
+        \array|align="c"|<
+          \cc<
+            \tree<
+              \infr|n="0"|<\vdash; \srel; \tt<app>: (A \bwaverarr; B) \times; A \bwaverarr; B>
+            >
+          >
+        >
+      >
+      を追加する。
+      最後に、同じ型を割り当てられた項の間の等号に、
+      &mb<
+        \array|align="rcl"|<
+          \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;))) \gggt|bin|; \tt<app>> \c<=> \c<\tt|fun|<arr> \rm<id>> \br;
+          \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> g. \sfun; F \gggt|bin|; g)) \gggt|bin|; \tt<app>> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt<app>> \br;
+          \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> f. \sfun; f \gggt|bin|; G)) \gggt|bin|; \tt<app>> \c<=> \c<\tt<app> \gggt|bin|; G> \br;
+        >
+      >
+      を追加し、合同関係になるように拡張する。
+    >
+  >
+
+>
