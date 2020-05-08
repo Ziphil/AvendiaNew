@@ -82,16 +82,16 @@ converter.add(["math-block"], ["page"]) do |element|
       this << Tag.build("span", "math-wrapper") do |this|
         this << apply(element, "math-html")
       end
-      if id
-        this["id"] = id
-        this << Tag.build("span", "number") do |this|
-          this << get_number(:equation, id).to_s
-        end
+    end
+    if id
+      this["id"] = id
+      this << Tag.build("span", "number") do |this|
+        this << get_number(:equation, id).to_s
       end
-      if mark_element
-        this << Tag.build("span", "mark") do |this|
-          this << apply(mark_element, "math-html")
-        end
+    end
+    if mark_element
+      this << Tag.build("span", "mark") do |this|
+        this << apply(mark_element, "math-html")
       end
     end
   end

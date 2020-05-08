@@ -1461,8 +1461,8 @@ article.main {
     text-align: center;
   }
 
-  span.math-block >span.number,
-  span.math-block >span.mark {
+  span.math-block-wrapper >span.number,
+  span.math-block-wrapper >span.mark {
     width: $ordered-list-marker-width;
     height: 10px;
     margin-left: 0px - $ordered-list-marker-width;
