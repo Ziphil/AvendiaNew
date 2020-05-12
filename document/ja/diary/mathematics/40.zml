@@ -172,29 +172,29 @@
   \thm|type="def"|<
     \p<
       型システム &m<\frak<T>> を考える。
-      有限直積をもつ圏 &m<\scr<C>> に対し、変換 &m<\lbbracket; \text<-> \rbbracket;> が、
+      有限直積をもつ圏 &m<\scr<C>> に対し、変換 &m<\overline<\hyphen;>> が、
     >
     \ul<
       \li*<
-        &m<\frak<T>> の型 &m<A> に対し、&m<\scr<C>> の対象 &m<\lbbracket; A \rbbracket;> が定まっている。
+        &m<\frak<T>> の型 &m<A> に対し、&m<\scr<C>> の対象 &m<\overline<A>> が定まっている。
       >
       \li*<
-        &m<\frak<T>> における項の型割り当て &m<`G \vdash; M: A> に対し、&m<\scr<C>> の射 &m<\lbbracket; `G \vdash; M: A \rbbracket;: \lbbracket; `G \rbbracket; \to; \lbbracket; A \rbbracket;> が定まっている。
-        ここで、&m<`G \equiv; \sb<b><1>: \sb<B><1>, \cdots;, \sb<b><n>: \sb<B><n>> と書くとき、&m<\lbbracket; `G \rbbracket; = \lbbracket; \sb<B><1> \rbbracket; \times; \cdots; \times; \lbbracket; \sb<B><n> \rbbracket;> と定めた。
-        なお、記法を簡略化して、&m<\lbbracket; `G \vdash; M: A \rbbracket;> の代わりに単に &m<\lbbracket; M \rbbracket;> と書くこともある。
+        &m<\frak<T>> における項の型割り当て &m<`G \vdash; M: A> に対し、&m<\scr<C>> の射 &m<\overline<`G \vdash; M: A>: \overline<`G> \to; \overline<A>> が定まっている。
+        ここで、&m<`G \equiv; \sb<b><1>: \sb<B><1>, \cdots;, \sb<b><n>: \sb<B><n>> と書くとき、&m<\overline<`G> = \overline<\sb<B><1>> \times; \cdots; \times; \overline<\sb<B><n>>> と定めた。
+        なお、記法を簡略化して、&m<\overline<`G \vdash; M: A>> の代わりに単に &m<\overline<M>> と書くこともある。
       >
     >
     \p<
       を満たすように定まっている。
-      このとき、&m<\lbbracket; \text<-> \rbbracket;> を &m<\frak<T>> の\em<解釈\fl<interpretation>> という。
+      このとき、&m<\overline<\hyphen;>> を &m<\frak<T>> の\em<解釈\fl<interpretation>> という。
     >
   >
   \thm|type="def"|<
     \p<
       型システム &m<\frak<T>> を考える。
-      有限直積をもつ圏 &m<\scr<C>> と解釈 &m<\lbbracket; \text<-> \rbbracket;> が、次の条件を満たすとする。
-      すなわち、&m<\frak<T>> における同じ型をもつ任意の型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、&m<\frak<T>> において &m<M = N> ならば &m<\scr<C>> の射として &m<\lbbracket; M \rbbracket; = \lbbracket; N \rbbracket;> が成り立つ。
-      このとき、&m<(\scr<C>, \lbbracket; \text<-> \rbbracket;)> を &m<\frak<T>> の\em<モデル\fl<model>> という。
+      有限直積をもつ圏 &m<\scr<C>> と解釈 &m<\overline<\hyphen;>> が、次の条件を満たすとする。
+      すなわち、&m<\frak<T>> における同じ型をもつ任意の型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、&m<\frak<T>> において &m<M = N> ならば &m<\scr<C>> の射として &m<\overline<M> = \overline<N>> が成り立つ。
+      このとき、&m<(\scr<C>, \overline<\hyphen;>)> を &m<\frak<T>> の\em<モデル\fl<model>> という。
     >
   >
   \p<
@@ -211,10 +211,10 @@
       まず、型の解釈を
       &mb<
         \array|align="c"|<
-          \cc<\lbbracket; 1 \rbbracket; = 1>
+          \cc<\overline<1> = 1>
           \cc<
-            \lbbracket; A \times; B \rbbracket; = \lbbracket; A \rbbracket; \times; \lbbracket; B \rbbracket; \qquad;
-            \lbbracket; `# A \rbbracket; = `# \lbbracket; A \rbbracket;
+            \overline<A \times; B> = \overline<A> \times; \overline<B> \qquad;
+            \overline<`# A> = `# \overline<A>
           >
         >
       >
@@ -226,38 +226,38 @@
       bind に対応する型割り当て規則以外の場合は、
       &mb<
         \array|align="rcl"|<
-          \c<\lbbracket; `G, a: A, `G' \vdash; a: A \rbbracket;> \c<=> \c<\sb<\rm<pr>><\lbbracket; A \rbbracket;>> \br;
-          \c<\lbbracket; [\vdash;] \srel; \star|ord|;: 1 \rbbracket;> \c<=> \c<\sb<\rm<id>><1>> \br;
-          \c<\lbbracket; `G \vdash; \langle; M, N \rangle;: A \times; B \rbbracket;> \c<=> \c<(\lbbracket; `G \vdash; M: A \rbbracket;, \lbbracket; `G \vdash; N: B \rbbracket;)> \br;
-          \c<\lbbracket; `G \vdash; \tt|fun|<fst> M: A \rbbracket;> \c<=> \c<\sb<\rm<pr>><\lbbracket; A \rbbracket;> \circ; \lbbracket; `G \vdash; M: A \times; B \rbbracket;> \br;
-          \c<\lbbracket; `G \vdash; \tt|fun|<snd> M: B \rbbracket;> \c<=> \c<\sb<\rm<pr>><\lbbracket; B \rbbracket;> \circ; \lbbracket; `G \vdash; M: A \times; B \rbbracket;> \br;
-          \c<\lbbracket; `G \vdash; \tt|fun|<return> M: `# A \rbbracket;> \c<=> \c<\sb<`h><\lbbracket; A \rbbracket;> \circ; \lbbracket; `G \vdash; M: A \rbbracket;> \br;
+          \c<\overline<`G, a: A, `G' \vdash; a: A>> \c<=> \c<\sb<\rm<pr>><\overline<A>>> \br;
+          \c<\overline<[\vdash;] \srel; \star|ord|;: 1>> \c<=> \c<\sb<\rm<id>><1>> \br;
+          \c<\overline<`G \vdash; \langle; M, N \rangle;: A \times; B>> \c<=> \c<(\overline<`G \vdash; M: A>, \overline<`G \vdash; N: B>)> \br;
+          \c<\overline<`G \vdash; \tt|fun|<fst> M: A>> \c<=> \c<\sb<\rm<pr>><\overline<A>> \circ; \overline<`G \vdash; M: A \times; B>> \br;
+          \c<\overline<`G \vdash; \tt|fun|<snd> M: B>> \c<=> \c<\sb<\rm<pr>><\overline<B>> \circ; \overline<`G \vdash; M: A \times; B>> \br;
+          \c<\overline<`G \vdash; \tt|fun|<return> M: `# A>> \c<=> \c<\sb<`h><\overline<A>> \circ; \overline<`G \vdash; M: A>> \br;
         >
       >
       によって定める。
       なお、式中の &m<\rm<pr>> で書かれた射は、直積からの適切な射影を表す。
       bind に対応する型割り当てについては、強モナドに定まっている強度を用いて、
       &mb<
-        \lbbracket; `G \vdash; N `{ a \mapsto; M `}: `# B \rbbracket; =
+        \overline<`G \vdash; N `{ a \mapsto; M `}: `# B> =
         \tort<\diag<
-          \v<\lbbracket; `G \rbbracket;> \v<\lbbracket; `G \rbbracket; \times; `# \lbbracket; A \rbbracket;>
-          \v<`# (\lbbracket; `G \rbbracket; \times; \lbbracket; A \rbbracket;)> \v<`# `# \lbbracket; B \rbbracket;> \v<`# \lbbracket; B \rbbracket;>
-          \ar|s="1",e="2"|<(\rm<id>, \lbbracket; M \rbbracket;)> \ar|s="2",e="3"|<\sb<`t><\lbbracket; `G \rbbracket;, \lbbracket; A \rbbracket;>>
-          \ar|s="3",e="4"|<`# \lbbracket; N \rbbracket;> \ar|s="4",e="5"|<\sb<`m><\lbbracket; B \rbbracket;>>
+          \v<\overline<`G>> \v<\overline<`G> \times; `# \overline<A>>
+          \v<`# (\overline<`G> \times; \overline<A>)> \v<`# `# \overline<B>> \v<`# \overline<B>>
+          \ar|s="1",e="2"|<(\rm<id>, \overline<M>)> \ar|s="2",e="3"|<\sb<`t><\overline<`G>, \overline<A>>>
+          \ar|s="3",e="4"|<`# \overline<N>> \ar|s="4",e="5"|<\sb<`m><\overline<B>>>
         >>
       >
       と定める。
     >
     \p<
-      このようにすると解釈 &m<\lbbracket; \text<-> \rbbracket;> が定まり、これは項の等号を保存することが (手間はかかるが) 難しくない計算で確かめられる。
-      以上により、&m<(\scr<C>, \lbbracket; \text<-> \rbbracket;)> はモデルになる。
+      このようにすると解釈 &m<\overline<\hyphen;>> が定まり、これは項の等号を保存することが (手間はかかるが) 難しくない計算で確かめられる。
+      以上により、&m<(\scr<C>, \overline<\hyphen;>)> はモデルになる。
     >
   >
   \p<
     この証明において強モナドに定まった強度が必要なのは、&m<N `{ a \mapsto; M `}> という形の項の解釈を定める箇所である。
-    このような項を解釈するためには、2 つの射 &m<m: \lbbracket; `G \rbbracket; \to; `# \lbbracket; A \rbbracket;, n: \lbbracket; `G \rbbracket; \times; \lbbracket; A \rbbracket; \to; `# \lbbracket; B \rbbracket;> を用いて &m<\lbbracket; `G \rbbracket; \to; `# \lbbracket; B \rbbracket;> という形の射を作る必要がある。
-    &m<m> と &m<n> を組み合わせてこの形の射を作ろうとすると、&m<n> の始域を &m<\lbbracket; `G \rbbracket; \times; \lbbracket; A \rbbracket;> から &m<\lbbracket; `G \rbbracket; \times; `# \lbbracket; A \rbbracket;> にしたいが、モナドの構造を用いて対象の全体に &m<`#> を付けることはできても、直積の片方にのみ &m<`#> を付けることは一般には不可能である。
-    そこで、&m<\lbbracket; `G \rbbracket; \times; `# \lbbracket; A \rbbracket; \to; `# (\lbbracket; `G \rbbracket; \times; \lbbracket; A \rbbracket;)> という形の射、すなわち強度が必要になるのである。
+    このような項を解釈するためには、2 つの射 &m<m: \overline<`G> \to; `# \overline<A>, n: \overline<`G> \times; \overline<A> \to; `# \overline<B>> を用いて &m<\overline<`G> \to; `# \overline<B>> という形の射を作る必要がある。
+    &m<m> と &m<n> を組み合わせてこの形の射を作ろうとすると、&m<n> の始域を &m<\overline<`G> \times; \overline<A>> から &m<\overline<`G> \times; `# \overline<A>> にしたいが、モナドの構造を用いて対象の全体に &m<`#> を付けることはできても、直積の片方にのみ &m<`#> を付けることは一般には不可能である。
+    そこで、&m<\overline<`G> \times; `# \overline<A> \to; `# (\overline<`G> \times; \overline<A>)> という形の射、すなわち強度が必要になるのである。
   >
   \h1<参考文献>
   \ol<
