@@ -411,6 +411,7 @@ class WholeAvendiaConverter
     parser.brace_name = "x"
     parser.bracket_name = "xn"
     parser.slash_name = "i"
+    parser.register_raw_macro("raw")
     dir = CONFIG.macro_dir
     Dir.each_child(dir) do |entry|
       if entry.end_with?(".rb")
