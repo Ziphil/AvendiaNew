@@ -1746,7 +1746,7 @@
     >
     とおくと、上記の記号を用いて写像 
     &mb<
-      `S \colon \scr<M> \to; \scr<E>`; M \mapsto; \sb<\sim|ord|;><M>
+      `S: \scr<M> \to; \scr<E>`; M \mapsto; \sb<\sim|ord|;><M>
     >
     が定義でき、これによって &m<L `/ K> の中間体と &m<S> の同値関係が結びつく。
     なお、次に示すように &m<`S> は単射になる。

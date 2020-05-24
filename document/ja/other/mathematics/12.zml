@@ -12,7 +12,7 @@
   >
   \thm|type="def"|<
     \p<
-      トポス &m<\scr<E>> において、任意の全射 &m<e: X \headrarr; I> に対してある射 &m<s: I \to; X> が存在して &m<e \circ; s = \sb\rm<id><I>> を満たすとする。
+      トポス &m<\scr<E>> において、任意の全射 &m<e: X \headrarr; I> に対してある射 &m<s: I \to; X> が存在して &m<e \circ; s = \sb<\rm<id>><I>> を満たすとする。
       このとき、&m<\scr<E>> は\em<選択公理\fl<axiom of choice>> を満たすという。
     >
   >

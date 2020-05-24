@@ -306,7 +306,7 @@
     これは、&m<\scr<C>>-豊穣関手 &m<J \text<-> \ltimes; B: \scr<C> \to; \scr<D>> および &m<`[B, \text<->`]: \scr<D> \to; \scr<C>> が &m<\scr<C>>-豊穣随伴を成すということである。
     この随伴の単位は、
     &mb<
-      \sb<`h><AB> = \overline<u: 1 \vdash; \rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;): A \buharprarr `[B, A \times; B`]>
+      \sb<`h><AB> = \overline<u: 1 \vdash; \rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;): A \buharprarr; `[B, A \times; B`]>
     >
     で与えられる。
     また、随伴の余単位は、証明中で定義した &m<\overline<\rm<app>>> で与えられる。
