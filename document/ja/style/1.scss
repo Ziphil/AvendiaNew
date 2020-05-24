@@ -329,7 +329,8 @@ article.content-table {
     box-shadow: $shadow-setting $hovered-index-shadow-color;
   }
 
-  div.index-container a.index span.date {
+  div.index-container a.index span.date,
+  div.index-container div.index span.date {
     margin: 0px $blank-padding 0px 0px;
     padding: 0px;
     font-size: 80%;
