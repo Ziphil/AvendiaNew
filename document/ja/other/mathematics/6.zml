@@ -2,7 +2,7 @@
 \xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
-  \name<『代数学 III 授業ノート』>
+  \name<代数学 III 授業ノート>
   \use-math;
 
   \h1|id="table"|<目次>
@@ -471,7 +471,7 @@
       が成り立つ。
     >
   >
-  \thm|type="thm",id="mornumber1"|<
+  \thm|type="thm",id="mornumbera"|<
     \p<
       体 &m<K> とその拡大体 &m<L, K'> をとり、&m<L> は &m<K> の有限次拡大とする。
       このとき、
@@ -683,7 +683,7 @@
   >
   \p<
     なお、後に述べる分離拡大の言葉を用いて、この定理の同値な 3 条件を言い換えることができる。
-    これは定理 \ref|type="thm",id="mornumber2"|; を参照すること。
+    これは定理 \ref|type="thm",id="mornumberb"|; を参照すること。
   >
   \h1|id="rootadj"|<根の添加と分解体>
   \thm|type="def"|<
@@ -1174,7 +1174,7 @@
   \p<
     これは解析学における通常の関数の微分と同じであるから、微分に関する線型性や Leibniz 則は成り立つ。
   >
-  \thm|type="lem",id="seplem1"|<
+  \thm|type="lem",id="seplema"|<
     \p<
       体 &m<K> において、多項式 &m<P \in; K `[X`]> と元 &m<a \in; K> を考える。
       このとき、
@@ -1205,7 +1205,7 @@
       したがって、&m<Q (a) = 0> と &m<P' (a) = 0> は同値であり、補題が示された。
     >
   >
-  \thm|type="lem",id="seplem2"|<
+  \thm|type="lem",id="seplemb"|<
     \p<
       体の拡大 &m<K' `/ K> と多項式 &m<P, Q \in; K `[X`]> をとる。
       このとき、
@@ -1250,10 +1250,10 @@
       &m<P> の分解体を &m<K'> とする。
       条件 1 が成り立つとすると、&m<P'> は &m<K' `[X`]> において相異なる 1 次式の積に分解する。
       したがって、&m<\sp<(X - a)><2> \mid; P'> を満たす &m<a \in; K'> は存在しない。
-      よって補題 \ref|type="thm",id="seplem1"|; より、&m<X - a \mid; P> かつ &m<X - a \mid; P'> なる &m<a \in; K'> は存在しない。
+      よって補題 \ref|type="thm",id="seplema"|; より、&m<X - a \mid; P> かつ &m<X - a \mid; P'> なる &m<a \in; K'> は存在しない。
       これは、&m<a \in; K'> が &m<X - a \mid; P> を満たせば &m<X - a \nmid; P'> であることを意味している。
       すなわち、&m<P> の因子を &m<P'> は因子としてもたないので、&m<P> と &m<P'> は &m<K' `[X`]> で互いに素であることになる。
-      これより補題 \ref|type="thm",id="seplem2"|; から、&m<P> と &m<P'> は &m<K `[X`]> でも互いに素になる。
+      これより補題 \ref|type="thm",id="seplemb"|; から、&m<P> と &m<P'> は &m<K `[X`]> でも互いに素になる。
       したがって、条件 2 が示された。
       この議論は逆にも辿れるので、2 つの条件の同値性が示された。
     >
@@ -1413,7 +1413,7 @@
       したがって &m<`s \in; \sb<\op<Mor>><\sb<\bb<F>><p>> (K, K)> である。
       逆に &m<`s \in; \sb<\op<Mor>><\sb<\bb<F>><p>> (K, K)> をとると、&m<K> が有限であることから &m<`s> は全単射になるので、&m<`s \in; \op<Aut> (K)> が成り立つ。
       以上により、&m<\op<Aut> (K) = \sb<\op<Mor>><\sb<\bb<F>><p>> (K, K)> である。
-      すると、定理 \ref|type="thm",id="mornumber1"|; によって、
+      すると、定理 \ref|type="thm",id="mornumbera"|; によって、
       &mb<
         &mark<\sharp;>
         `# \op<Aut> (K) = `# \sb<\op<Mor>><\sb<\bb<F>><p>> (K, K) \leq; `[K \colon|rel|; \sb<\bb<F>><p>`] = n
@@ -1514,9 +1514,9 @@
     したがって、&m<K> は &m<\sb<\bb<F>><p>> の分離拡大である。
   >
   \p<
-    分離拡大の言葉を用いて、定理 \ref|type="thm",id="mornumber1"|; に同値な条件をもう 1 つ付け加える。
+    分離拡大の言葉を用いて、定理 \ref|type="thm",id="mornumbera"|; に同値な条件をもう 1 つ付け加える。
   >
-  \thm|type="thm",id="mornumber2"|<
+  \thm|type="thm",id="mornumberb"|<
     \p<
       体 &m<K> とその拡大体 &m<L, K'> をとり、&m<L> は &m<K> の有限次拡大とする。
       このとき、
@@ -1546,7 +1546,7 @@
   >
   \prf<
     \p<
-      定理 \ref|type="thm",id="mornumber1"|; において、最初の主張と条件 1, 2, 3 の同値性はすでに示されている。
+      定理 \ref|type="thm",id="mornumbera"|; において、最初の主張と条件 1, 2, 3 の同値性はすでに示されている。
       したがって、条件 2 と条件 4 の同値性を示せば十分であるが、これは単に言葉を言い換えたに過ぎない。
     >
   >
@@ -1582,11 +1582,11 @@
     \p<
       \label<条件 2 &m<\raarr;> 条件 3:>
       条件 2 の &m<\sb<a><1>, \cdots;, \sb<a><n> \in; L> をとり、それぞれの最小多項式を &m<\sb<P><1>, \cdots;, \sb<P><n> \in; K `[X`]> とする。
-      &m<\sb<P><1> \cdots; \sb<P><n>> の分解体を &m<K'> とすれば、命題 \ref|type="thm",id="conjsplit"|; によって &m<K'> は &m<L> の任意の元の共役を全て属するので、定理 \ref|type="thm",id="mornumber2"|; の条件 3 と条件 1 の同値性により、示された。
+      &m<\sb<P><1> \cdots; \sb<P><n>> の分解体を &m<K'> とすれば、命題 \ref|type="thm",id="conjsplit"|; によって &m<K'> は &m<L> の任意の元の共役を全て属するので、定理 \ref|type="thm",id="mornumberb"|; の条件 3 と条件 1 の同値性により、示された。
     >
     \p<
       \label<条件 3 &m<\raarr;> 条件 1:>
-      定理 \ref|type="thm",id="mornumber2"|; の条件 1 と条件 4 の同値性から明らかである。
+      定理 \ref|type="thm",id="mornumberb"|; の条件 1 と条件 4 の同値性から明らかである。
     >
   >
   \thm|type="prp",id="midsplit"|<
@@ -2006,7 +2006,7 @@
   >
   \prf<
     \p<
-      この命題の主張は、定理 \ref|type="thm",id="mornumber2"|; の条件 1 と条件 4 の同値性そのものである。
+      この命題の主張は、定理 \ref|type="thm",id="mornumberb"|; の条件 1 と条件 4 の同値性そのものである。
     >
   >
   \thm|type="prp",id="compositgalois"|<
@@ -2027,7 +2027,7 @@
   >
   \p<
     有限次分離拡大 &m<L `/ K> と &m<K> の拡大体 &m<K'> に対し、&m<K'> は &m<L> の任意の元の &m<K> 上共役を全て属するとする。
-    &m<n \coloneqq; `[L \colon|rel|; K`]> とおけば、定理 \ref|type="thm",id="mornumber2"|; によって &m<`# \sb<\op<Mor>><K> (L, K') = n> である。
+    &m<n \coloneqq; `[L \colon|rel|; K`]> とおけば、定理 \ref|type="thm",id="mornumberb"|; によって &m<`# \sb<\op<Mor>><K> (L, K') = n> である。
     そこで、&m<\sb<\op<Mor>><K> (L, K')> の相異なる元を &m<\sb<`s><1>, \cdots;, \sb<`s><n>> とすれば、&m<\sb<`s><1> (L), \cdots;, \sb<`s><n> (L)> は &m<K'> の部分体であるから、これら全ての合成体 &m<\tilde<L> \leq; K'> をとることができる。
   >
   \thm|type="prp"|<
@@ -2044,7 +2044,7 @@
     >
     \p<
       &m<\sb<`s><i> (L)> たちの &m<K> 上生成元を全て集めれば &m<\tilde<L>> の &m<K> 上生成元になる。
-      &m<K'> はこれらの生成元の共役は全て属するので、定理 \ref|type="thm",id="mornumber2"|; の条件 2 と条件 3 の同値性を使うことで、&m<K'> は &m<\tilde<L>> の任意の元の共役を全て属することが分かる。
+      &m<K'> はこれらの生成元の共役は全て属するので、定理 \ref|type="thm",id="mornumberb"|; の条件 2 と条件 3 の同値性を使うことで、&m<K'> は &m<\tilde<L>> の任意の元の共役を全て属することが分かる。
       ところで、任意の &m<`f \in; \sb<\op<Mor>><K> (\tilde<L>, K')> に対し、
       &mb<
         \array|align="rcl"|<

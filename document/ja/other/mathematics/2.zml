@@ -2,7 +2,7 @@
 \xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
-  \name<『Hesse 行列と Jacobi 行列』>
+  \name<Hesse 行列と Jacobi 行列>
   \use-math;
 
   \h1<Hesse 行列>

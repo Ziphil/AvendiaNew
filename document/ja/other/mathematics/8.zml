@@ -2,7 +2,7 @@
 \xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
-  \name<『閉じたラムダ項に関する外延性の反例』>
+  \name<閉じたラムダ項に関する外延性の反例>
   \use-math;
 
   \h1<初めに>
