@@ -420,7 +420,7 @@
   >
   \thm|type="def"|<
     \p<
-      整列順序集合 &m<(X, \preceq|ord|;)> に対し、&m<W \cong; `a> を満たすような順序数 &m<`a> を &m<X> の\em<順序型\fl<order type>> といい、&m<\op<type> (X)> で表す。
+      整列順序集合 &m<X> に対し、&m<X \cong; `a> を満たすような順序数 &m<`a> を &m<X> の\em<順序型\fl<order type>> といい、&m<\op<type> (X)> で表す。
     >
   >
   \h1<参考文献>
