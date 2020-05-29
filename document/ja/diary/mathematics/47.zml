@@ -388,7 +388,7 @@
         \bigcup<y \in; O (x)> \sb<f><y>: \bigcup<y \in; O (x)> \bar<O> (y) \to; \bigcup<y \in; O (x)> \sb<`a><y>
       >
       が定義できる。
-      この写像 &m<f> とおく。
+      この写像を &m<f> とおく。
       各 &m<\sb<f><y>> が順序同型写像であることから、この &m<f> が狭義単調増加な全射であることがすぐに従う。
       また、&m<f> の定義域 &m<\bigcup|in|<y> \bar<O> (y)> は &m<O (x)> に等しい。
       さらに、定理 \ref|type="thm",id="ordcup"|; により、&m<f> の値域 &m<`a \coloneqq; \bigcup|in|<y> \sb<`a><y>> は順序数である。
