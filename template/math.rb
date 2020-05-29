@@ -1,7 +1,7 @@
 # coding: utf-8
 
 
-THEOREM_TYPE_CLASSES = {"def" => "definition", "thm" => "theorem", "prp" => "proposition", "lem" => "lemma", "cor" => "corollary"}
+THEOREM_TYPE_CLASSES = {"def" => "definition", "thm" => "theorem", "prp" => "proposition", "lem" => "lemma", "cor" => "corollary", "axm" => "axiom"}
 REFERENCE_TYPE_CLASSES = {"eq" => :equation, "thm" => :theorem, "bib" => :bibliography}
 
 converter.define_singleton_method(:reset_variables) do

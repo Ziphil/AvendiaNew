@@ -1518,6 +1518,10 @@ article.main {
     @include before-after("系 ", ".");
   }
 
+  div.theorem.axiom >span.number {
+    @include before-after("公理 ", ".");
+  }
+
   div.proof {
     margin: $vertical-margin 0px;
     padding: 0px 0px 0px $proof-horizontal-padding;
