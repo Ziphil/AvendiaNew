@@ -300,7 +300,7 @@
       &mb<
         \array|align="rcl"|<
           \c<f (`j)> \c<=> \c<O (f (`j))> \br;
-          \c; \c<=> \c<f (O (`j))> \br;
+          \c; \c<=> \c<f `[O (`j)`]> \br;
           \c; \c<=> \c<`{f (`h) \in; `b \mid; `h \subset; `j`}> \br;
           \c; \c<=> \c<`{`h \in; `a \mid; `h \subset; `j`}> \br;
           \c; \c<=> \c<O (`j)> \br;
@@ -398,13 +398,13 @@
       が成り立つことを示す。
       まず、
       &mb<
-        \sb<f><x> (\bar<O> (y)) = \bar<O> (\sb<f><x> (y)) = O (\sb<f><x> (y)) \cup; `{\sb<f><x> (y)`}
+        \sb<f><x> `[\bar<O> (y)`] = \bar<O> (\sb<f><x> (y)) = O (\sb<f><x> (y)) \cup; `{\sb<f><x> (y)`}
       >
       が成り立つ。
       &m<\sb<f><x> (y) \in; \sb<`a><y>> であって &m<\sb<`a><y>> は順序数だから、補題 \ref|type="thm",id="segid"|; によって &m<O (\sb<f><x> (y)) = \sb<f><x> (y)> が成り立つ。
       また、定理 \ref|type="thm",id="elemord"|; によって &m<\sb<f><x> (y)> は順序数だから、さらに定理 \ref|type="thm",id="succ"|; によって &m<\sb<f><x> (y) \cup; `{\sb<f><x> (y)`}> も順序数である。
-      したがって、これと等しい &m<\sb<f><x> (\bar<O> (y))> も順序数である。
-      ここで補題 \ref|type="thm",id="isoim"|; を使えば、制限 &m<\sb<f><x> \rvert; \sb<><\bar<O> (y)>: \bar<O> (y) \to; \sb<f><x> (\bar<O> (y))> が順序同型写像であることが分かる。
+      したがって、これと等しい &m<\sb<f><x> `[\bar<O> (y)`]> も順序数である。
+      ここで補題 \ref|type="thm",id="isoim"|; を使えば、制限 &m<\sb<f><x> \rvert; \sb<><\bar<O> (y)>: \bar<O> (y) \to; \sb<f><x> `[\bar<O> (y)`]> が順序同型写像であることが分かる。
       ところで、&m<\sb<f><y>: \bar<O> (y) \to; \sb<`a><y>> は &m<\bar<O> (y)> から何らかの順序数への一意な順序同型写像であったから、&m<\sb<f><x> \rvert; \sb<><\bar<O> (y)> = \sb<f><y>> でなければならない。
       すなわち、&m<\sb<f><y> \subseteq; \sb<f><x>> である。
     >
