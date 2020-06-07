@@ -170,7 +170,7 @@
     \p<
       まず、
       &mb<
-        \scr<F> \coloneqq; \set<\op<ord> ((Y, \preceq|ord|;))><\array|align="l"|<
+        \scr<F> \coloneqq; \set<\op<ord> (Y, \preceq|ord|;)><\array|align="l"|<
           \cc<Y \in; \frak<P> (X), \preceq|ord|; \in; \frak<P> (X \times; X)>
           \cc<&raw<&m<\preceq;> は &m<Y> 上の整列順序>>
         >>
