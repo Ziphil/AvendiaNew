@@ -62,7 +62,7 @@
   >
   \thm|type="def"|<
     \p<
-      計算体系 &m<\sb<\rm<`l>><>> の項の上の関係 &m<\squigrarr;> を、値呼び評価環境 &m<E> と項 &m<M> と値 &m<V> に対し、
+      計算体系 &m<\sb<\rm<`l>><>> の項の上の関係 &m<\squigrarr|ord|;> を、値呼び評価環境 &m<E> と項 &m<M> と値 &m<V> に対し、
       &mb<
         E `[(\rm<`l> x. \sfun; M) V`] \squigrarr; E `[M `[x \coloneqq; V`]`]
       >
@@ -167,7 +167,7 @@
   >
   \thm|type="def"|<
     \p<
-      計算体系 &m<\sb<\rm<`l>><\rm<c>>> の値呼び簡約 &m<\squigrarr;> を、&m<\sb<\rm<`l>><>> の値呼び簡約に対して以下を追加する形で定める。
+      計算体系 &m<\sb<\rm<`l>><\rm<c>>> の値呼び簡約 &m<\squigrarr|ord|;> を、&m<\sb<\rm<`l>><>> の値呼び簡約に対して以下を追加する形で定める。
       すなわち、値呼び評価環境 &m<E> と項 &m<M> に対し、
       &mb<
         \array|align="rcl"|<
@@ -179,8 +179,8 @@
     >
   >
   \p<
-    以降、&m<\squigrarr;> の反射推移閉包を &m<\sp<\squigrarr;><*>> で表すことにする。
-    すなわち、&m<\squigrarr;> が 1 ステップの簡約を表すのに対し、&m<\sp<\squigrarr;><*>> は 0 ステップ以上の任意回数の簡約を表す。
+    以降、&m<\squigrarr|ord|;> の反射推移閉包を &m<\sp<\squigrarr|ord|;><*>> で表すことにする。
+    すなわち、&m<\squigrarr|ord|;> が 1 ステップの簡約を表すのに対し、&m<\sp<\squigrarr|ord|;><*>> は 0 ステップ以上の任意回数の簡約を表す。
   >
   \p<
     新しい演算子の直観的な説明は次の通りである。
