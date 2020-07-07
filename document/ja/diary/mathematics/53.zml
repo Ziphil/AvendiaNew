@@ -39,14 +39,14 @@
     したがって、&m<(\tt|fun|<abort> M) N> において &m<\tt|fun|<abort> M> の外側にある &m<N> は破棄されるべきである。
     そこで、局所的に、
     &mb<
-      (\tt|fun|<abort> M) N \sb<\squigrarr;><\rm<Lr>> \tt|fun|<abort> M
+      (\tt|fun|<abort> M) N \sb<\rhd;><\rm<Lr>> \tt|fun|<abort> M
     >
     という書き換えを行えばうまくいきそうだと考えられる。
   >
   \p<
     後者の &m<V (\tt|fun|<abort> M)> の形で現れる場合も、同様に考えて、&m<\tt|fun|<abort> M> の外側にある &m<V> を破棄して、
     &mb<
-      V (\tt|fun|<abort> M) \sb<\squigrarr;><\rm<Lr>> \tt|fun|<abort> M
+      V (\tt|fun|<abort> M) \sb<\rhd;><\rm<Lr>> \tt|fun|<abort> M
     >
     とすれば良さそうである。
   >
@@ -54,11 +54,11 @@
     これら 2 つの規則を次々と適用していけば、&m<E `[\tt|fun|<abort> M`]> という項は、&m<E> に相当する部分が全て破棄されて単に &m<\tt|fun|<abort> M> に書き換えられる。
     そこで、
     &mb<
-      \tt|fun|<abort> M \sb<\squigrarr;><\rm<Lo>> M
+      \tt|fun|<abort> M \sb<\rhd;><\rm<Lo>> M
     >
     という書き換えを最後に行うことにすれば、式 &m<\wspade;> が再現できる。
-    ここで注意すべき点として、最初の 2 つの書き換え (&m<\sb<\squigrarr|ord|;><\rm<Lr>>> で書いた) はある大きな項の内部の書き換えだが、最後のこの書き換え (&m<\sb<\squigrarr|ord|;><\rm<Lo>>> で書いた) は項全体が &m<\tt|fun|<abort> M> という形になって初めて適用されなけれならない。
-    つまり、大きな項の真の部分項として現れる &m<\tt|fun|<abort> M> に対して &m<\sb<\squigrarr|ord|;><\rm<Lo>>> を適用して &m<M> に置き換えてはいけない。 
+    ここで注意すべき点として、最初の 2 つの書き換え (&m<\sb<\rhd|ord|;><\rm<Lr>>> で書いた) はある大きな項の内部の書き換えだが、最後のこの書き換え (&m<\sb<\rhd|ord|;><\rm<Lo>>> で書いた) は項全体が &m<\tt|fun|<abort> M> という形になって初めて適用されなけれならない。
+    つまり、大きな項の真の部分項として現れる &m<\tt|fun|<abort> M> に対して &m<\sb<\rhd|ord|;><\rm<Lo>>> を適用して &m<M> に置き換えてはいけない。 
   >
   \p<
     次に &m<\tt<cont>> について考察する。
@@ -89,14 +89,14 @@
     目標は &m<M (\rm<`l> x. \sfun; \tt|fun|<abort> E' `[x N`])> という形であったが、これは &m<X' \equiv; M (\rm<`l> x. \sfun; k (x N))> とすれば実現できる。
     以上の観察により、局所的に、
     &mb<
-      (\tt|fun|<cont> M) N \sb<\squigrarr;><\rm<Lr>> \tt|fun|<cont> (\rm<`l> k. \sfun; M (\rm<`l> x. \sfun; k (x N)))
+      (\tt|fun|<cont> M) N \sb<\rhd;><\rm<Lr>> \tt|fun|<cont> (\rm<`l> k. \sfun; M (\rm<`l> x. \sfun; k (x N)))
     >
     という書き換えをすれば良さそうであることが分かった。
   >
   \p<
     後者の &m<V (\tt|fun|<cont> M)> の場合も、同様にして、
     &mb<
-      V (\tt|fun|<cont> M) \sb<\squigrarr;><\rm<Lr>> \tt|fun|<cont> (\rm<`l> k. \sfun; M (\rm<`l> x. \sfun; k (V x)))
+      V (\tt|fun|<cont> M) \sb<\rhd;><\rm<Lr>> \tt|fun|<cont> (\rm<`l> k. \sfun; M (\rm<`l> x. \sfun; k (V x)))
     >
     という規則が考えられる。
   >
@@ -104,41 +104,62 @@
     これら 2 つの規則を次々と適用していけば、&m<E `[\tt|fun|<cont> M`]> という項は、ある項 &m<X> について &m<\tt|fun|<cont> X> という形に書き換えられる。
     そこで、
     &mb<
-      \tt|fun|<cont> X \sb<\squigrarr;><\rm<Lo>> X (\rm<`l> x. \sfun; \tt|fun|<abort> x)
+      \tt|fun|<cont> X \sb<\rhd;><\rm<Lo>> X (\rm<`l> x. \sfun; \tt|fun|<abort> x)
     >
     という書き換えを最後に行えば、式 &m<\wspade;> が再現できる。
     この規則も前と同様に、部分式の書き換えの最後のみで行わなければならないことには注意すべきである。
   >
   \p<
-    以上の考察をまとめると、以下のような書き換え規則が定義できる。
+    これにより、式 &m<\wspade;> を再現しそうな局所的な書き換え規則が得られた。
+    この規則の厳密な定義を書き下す前に、まずは「局所的に書き換える」とはどのような意味なのかを明確にするため、以下の用語を用意する。
   >
   \thm|type="def"|<
     \p<
-      計算体系 &m<\sb<\rm<`l>><\rm<c>>> の項の上の関係 &m<\sb<\squigrarr|ord|;><\rm<Lr>>> を、項 &m<M, N> と値 &m<V> に対し、
+      計算体系 &m<\sb<\rm<`l>><\rm<c>>> の項の上の関係 &m<\rhd;> に対し、同じく後の上の関係 &m<\squigrarr;> を次を満たす最小の関係として定める。
+      すなわち、項 &m<M, N, P> に対し、
       &mb<
         \array|align="rcl"|<
-          \c<(\rm<`l> x. \sfun; M) V> \c<\sb<\squigrarr;><\rm<Lr>>> \c<M `[x \coloneqq; V`]> \br;
-          \c<(\tt|fun|<abort> M) N> \c<\sb<\squigrarr;><\rm<Lr>>> \c<\tt|fun|<abort> M> \br;
-          \c<V (\tt|fun|<abort> M)> \c<\sb<\squigrarr;><\rm<Lr>>> \c<\tt|fun|<abort> M> \br;
-          \c<(\tt|fun|<cont> M) N> \c<\sb<\squigrarr;><\rm<Lr>>> \c<\tt|fun|<cont> (\rm<`l> k. \sfun; M (\rm<`l> x. \sfun; k (x N)))> \br;
-          \c<V (\tt|fun|<cont> M)> \c<\sb<\squigrarr;><\rm<Lr>>> \c<\tt|fun|<cont> (\rm<`l> k. \sfun; M (\rm<`l> x. \sfun; k (V x)))>
+          \c<M \rhd; N> \c<\implies;> \c<M \squigrarr; N> \br;
+          \c<M \squigrarr; N> \c<\implies;> \c<\rm<`l> x. \sfun; M \squigrarr; \rm<`l> x. \sfun; N> \br;
+          \c<M \squigrarr; N> \c<\implies;> \c<MP \squigrarr; NP> \br;
+          \c<M \squigrarr; N> \c<\implies;> \c<PM \squigrarr; PN> \br;
+          \c<M \squigrarr; N> \c<\implies;> \c<\tt|fun|<abort> M \squigrarr; \tt|fun|<abort> N> \br;
+          \c<M \squigrarr; N> \c<\implies;> \c<\tt|fun|<cont> M \squigrarr; \tt|fun|<cont> N>
         >
       >
-      で定める。
-      さらに、関係 &m<\sb<\squigrarr|ord|;><\rm<Lo>>> を、項 &m<M> に対し、
-      &mb<
-        \array|align="rcl"|<
-          \c<\tt|fun|<abort> M> \c<\sb<\squigrarr;><\rm<Lo>>> \c<M> \br;
-          \c<\tt|fun|<cont> M> \c<\sb<\squigrarr;><\rm<Lo>>> \c<M (\rm<`l> x. \sfun; \tt|fun|<abort> x)>
-        >
-      >
-      で定める。
-      最後に、関係 &m<\sb<\squigrarr|ord|;><\rm<L>>> を、&m<\sb<\squigrarr|ord|;><\rm<Lr>>> の合同閉包と &m<\sb<\squigrarr|ord|;><\rm<Lo>>> 自身の合併として定める。
-      なお、&m<\sb<\squigrarr|ord|;><\rm<Lr>>> の合同閉包とは、ある部分項を &m<\sb<\squigrarr|ord|;><\rm<Lr>>> に従って書き換えるという関係である。
+      が成り立つ。
+      このとき、&m<\squigrarr|ord|;> を &m<\rhd;> の\em<合同閉包\fl<congruent closure>> という。
     >
   >
   \p<
-    この定義は、最初に意図していた以下の性質を満たす。
+    以上のもと、次のような書き換え規則が定義できる。
+  >
+  \thm|type="def"|<
+    \p<
+      計算体系 &m<\sb<\rm<`l>><\rm<c>>> の項の上の関係 &m<\sb<\rhd|ord|;><\rm<Lr>>> を、項 &m<M, N> と値 &m<V> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<(\rm<`l> x. \sfun; M) V> \c<\sb<\rhd;><\rm<Lr>>> \c<M `[x \coloneqq; V`]> \br;
+          \c<(\tt|fun|<abort> M) N> \c<\sb<\rhd;><\rm<Lr>>> \c<\tt|fun|<abort> M> \br;
+          \c<V (\tt|fun|<abort> M)> \c<\sb<\rhd;><\rm<Lr>>> \c<\tt|fun|<abort> M> \br;
+          \c<(\tt|fun|<cont> M) N> \c<\sb<\rhd;><\rm<Lr>>> \c<\tt|fun|<cont> (\rm<`l> k. \sfun; M (\rm<`l> x. \sfun; k (x N)))> \br;
+          \c<V (\tt|fun|<cont> M)> \c<\sb<\rhd;><\rm<Lr>>> \c<\tt|fun|<cont> (\rm<`l> k. \sfun; M (\rm<`l> x. \sfun; k (V x)))>
+        >
+      >
+      で定める。
+      さらに、関係 &m<\sb<\rhd|ord|;><\rm<Lo>>> を、項 &m<M> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<\tt|fun|<abort> M> \c<\sb<\rhd;><\rm<Lo>>> \c<M> \br;
+          \c<\tt|fun|<cont> M> \c<\sb<\rhd;><\rm<Lo>>> \c<M (\rm<`l> x. \sfun; \tt|fun|<abort> x)>
+        >
+      >
+      で定める。
+      最後に、関係 &m<\sb<\squigrarr|ord|;><\rm<L>>> を、&m<\sb<\rhd|ord|;><\rm<Lr>>> の合同閉包と &m<\sb<\rhd|ord|;><\rm<Lo>>> 自身の合併として定める。
+    >
+  >
+  \p<
+    この関係は、最初に意図していた以下の性質を満たす。
   >
   \thm|type="thm"|<
     \p<
@@ -189,6 +210,11 @@
     \p<
       それ以外の場合も同様である。
     >
+  >
+  \h1<追記 (2020 年 7 月 7 日)>
+  \p<
+    合同閉包の厳密な定義を追加した。
+    また、局所的な置き換えと全体の置き換えの違いを明確にするため、記号を変えてそれぞれ &m<\rhd;> と &m<\squigrarr;> で表すことにした。
   >
   \h1<参考文献>
   \ol<
