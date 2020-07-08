@@ -28,7 +28,8 @@
   \thm|type="def"|<
     \p<
       計算体系 &m<\sb<\rm<`l>><>> の言語を以下のように定める。
-      変項の集合を固定してその元をメタ変項 &m<x> で表すことにし、その上で、
+      可算集合 &m<\bb<V>> を固定し、この元を\em<変項\fl<variable>> と呼ぶ。
+      さらに、変項をメタ変項 &m<x> で表すことにし、その上で、
       &mb<
         \array|align="rcl"|<
           \c<M> \c<\ccoloneqq;> \c<x \mid; \rm<`l> x. \sfun; M \mid; M M> \br;
