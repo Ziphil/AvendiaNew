@@ -82,7 +82,7 @@
           \c<x `[a \coloneqq; b \mid; E`]> \c<\equiv;> \c<x> \br;
           \c<(\rm<`l> x. \sfun; P) `[a \coloneqq; b \mid; E`]> \c<\equiv;> \c<\rm<`l> x. \sfun; P `[a \coloneqq; b \mid; E`]> \br;
           \c<(P Q) `[a \coloneqq; b \mid; E`]> \c<\equiv;> \c<(P `[a \coloneqq; b \mid; E`]) (Q `[a \coloneqq; b \mid; E`])> \br;
-          \c<(\rm<`m> a. \sfun; P) `[a \coloneqq; b \mid; E`]> \c<\equiv;> \c<\rm<`m> a. \sfun; P  `[a \coloneqq; b \mid; E`]> \br;
+          \c<(\rm<`m> c. \sfun; P) `[a \coloneqq; b \mid; E`]> \c<\equiv;> \c<\rm<`m> c. \sfun; P  `[a \coloneqq; b \mid; E`]> \br;
           \c<(`{c`} P) `[a \coloneqq; b \mid; E`]> \c<\equiv;> \c<\case<
             \c<`{b`} \sfun; E `[P`]> \c<(c \equiv; a)> \br;
             \c<`{c`} \sfun; P `[a \coloneqq; b \mid; E`]> \c<(c \nequiv; a)>
