@@ -24,18 +24,16 @@
       さらに、変項と名前をそれぞれメタ変項 &m<x> と &m<a> で表すことにし、その上で、
       &mb<
         \array|align="rcl"|<
-          \c<M> \c<\ccoloneqq;> \c<x \mid; \rm<`l> x. \sfun; M \mid; M M \mid; \rm<`m> a. \sfun; K \mid; `{a`} M> \br;
-          \c<K> \c<\ccoloneqq;> \c<`{a`} M> \br;
+          \c<M> \c<\ccoloneqq;> \c<x \mid; \rm<`l> x. \sfun; M \mid; M M \mid; \rm<`m> a. \sfun; M \mid; `{a`} M> \br;
           \c<V> \c<\ccoloneqq;> \c<x \mid; \rm<`l> x. \sfun; M> 
         >
       >
       とする。
-      このとき、&m<M> と &m<K> と &m<V> で定まるものをそれぞれ\em<項\fl<term>> と\em<名前付き項\fl<named term>> と\em<値\fl<value>> という。
+      このとき、&m<M> と &m<V> で定まるものをそれぞれ\em<項\fl<term>> と\em<値\fl<value>> という。
     >
   >
   \p<
-    項のうち、&m<`{a`} M> の形をしたものが名前付き項である。
-    定義を見て分かるように、&m<\rm<`m>>-抽象の中身は名前付き項しか許していないので、&m<\rm<`m>>-抽象は必ず &m<\rm<`m> a. \sfun; `{b`} M> の形になる。
+    項のうち、&m<\rm<`m> a. \sfun; M> の形のものは &m<\rm<`m>>-抽象と呼ぶことがあり、&m<`{a`} M> の形をしたものは名前付き項と呼ぶことがある。
   >
   \p<
     なお、同じ記号が複数の意味合いで使われすぎるのを防ぐため、通常の慣習から以下の 2 点について記号を変えた。
@@ -157,23 +155,23 @@
   >
   \p<
     最後に、&m<\sb<\rm<`l>><\rm<c>>>-計算が &m<\rm<`l`m>>-計算の中でシミュレートできることを述べて、今日の内容を終わりとする。
-    &m<\rm<`l`m>>-計算において、名前 &m<k, a, b> を固定しておいて、
+    &m<\rm<`l`m>>-計算において、
     &mb<
       \array|align="rcl"|<
-        \c<\rm<abort>> \c<\equiv;> \c<\rm<`l> m. \sfun; \rm<`m> b. \sfun; `{k`} m> \br;
-        \c<\rm<cont>> \c<\equiv;> \c<\rm<`l> m. \sfun; \rm<`m> a. \sfun; `{k`} (m (\rm<`l> x. \sfun; \rm<`m> b. \sfun; `{a`} x))> \br;
+        \c<\rm<abort>> \c<\equiv;> \c<\rm<`l> m. \sfun; \rm<`m> b. \sfun; m> \br;
+        \c<\rm<cont>> \c<\equiv;> \c<\rm<`l> m. \sfun; \rm<`m> a. \sfun; m (\rm<`l> x. \sfun; \rm<`m> b. \sfun; `{a`} x)> \br;
       >
     >
     とおく。
-    すると、任意の値呼び評価環境 &m<E> と項 &m<M> に対して、
+    すると、任意の値呼び評価環境 &m<E> と項 &m<M> と名前 &m<k> に対して、
     &mb<
       \array|align="rcl"|<
-        \c<`{k`} \sfun; E `[\rm|fun|<abort> M`]> \c<\sp<\squigrarr;><*>> \c<`{k`} M> \br;
-        \c<`{k`} \sfun; E `[\rm|fun|<cont> M`]> \c<\sp<\squigrarr;><*>> \c<`{k`} (M (\rm<`l> x. \sfun; \rm|fun|<abort> E `[x`]))>
+        \c<`{k`} E `[\rm|fun|<abort> M`]> \c<\sp<\squigrarr;><*>> \c<M> \br;
+        \c<`{k`} E `[\rm|fun|<cont> M`]> \c<\sp<\squigrarr;><*>> \c<M (\rm<`l> x. \sfun; \rm|fun|<abort> [] `{k`} E `[x`]))>
       >
     >
     が成り立つことが、&m<E> に関する帰納法で簡単に示せる。
-    これは、先頭に &m<`{k`}> が付いていることを除けば、&m<\sb<\rm<`l>><\rm<c>>>-計算の簡約規則と同一である。
+    これは、評価環境の先頭に &m<`{k`}> が付いていることを除けば、&m<\sb<\rm<`l>><\rm<c>>>-計算の簡約規則と同一である。
     先頭に &m<`{k`}> が必要なのは、&m<\rm<`m>>-抽象は名前付き項にされないと簡約が進まないというテクニカルな理由によるものである。
   >
   \h1<参考文献>
