@@ -39,8 +39,8 @@
   >
   \p<
     変項文脈 &m<`G> に対して、そこに変項と型の組 &m<x: A> を追加して得られるものを &m<`G, x: A> と書くが、このとき暗黙的に &m<`G> に現れる変項と &m<x> は異なるものとする。
-    また、変項文脈 &m<`G, `G'> に対して、&m<`G'> に現れる変項と型の組が全て &m<`G> にも現れることを &m<`G' \subseteq; `G> で表す。
-    特に、&m<`G'> を並び替えて &m<`G> が得られるときは &m<`G' \subseteq; `G> が成り立つ。
+    また、変項文脈 &m<`G, `G'> に対して、&m<`G> に現れる変項と型の組が全て &m<`G'> にも現れることを &m<`G \subseteq; `G'> で表す。
+    特に、&m<`G> を並び替えて &m<`G'> が得られるときは &m<`G \subseteq; `G'> が成り立つ。
     名前文脈についても同様の記号を用いる。
   >
   \p<
@@ -65,7 +65,7 @@
               \axm<`G \vdash; M: A \mid; `D>
               \infr|n="1"|<`G' \vdash; M: A \mid; `D'><\text<Weak>>
             >
-          ><\scas; (`G' \subseteq; `G, `D' \subseteq; `D)>
+          ><\scas; (`G \subseteq; `G', `D \subseteq; `D')>
           \cc<
             \tree<
               \axm<`G, x: A \vdash; M: B \mid; `D>
