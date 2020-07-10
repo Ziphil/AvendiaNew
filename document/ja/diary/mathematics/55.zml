@@ -153,6 +153,23 @@
       型システム &m<\rm<`l`m>> の型 &m<A> に対し、&m<\rm<`l`m>> において型 &m<A> をもつ閉じた項が存在することは、古典論理において &m<A> がトートロジーであることと同値である。
     >
   >
+  \prf<
+    \p<
+      &m<\rm<`l`m>> における型割り当て
+      &mb<
+        \sb<x><1>: \sb<B><1>, \cdots;, \sb<x><m>: \sb<B><m> \vdash; M: A \mid; \sb<a><1>: \sb<C><1>, \cdots;, \sb<a><n>: \sb<C><n>
+      >
+      が、古典論理における演繹
+      &mb<
+        \sb<B><1>, \cdots;, \sb<B><m>, \neg; \sb<C><1>, \cdots;, \neg; \sb<C><n> \vdash; A
+      >
+      に対応することを見れば良い。
+    >
+  >
+  \h1<追記 (2020 年 7 月 10 日)>
+  \p<
+    最後の定理に簡単な解説を追加した。
+  >
   \h1<参考文献>
   \ol<
     \li|id="ochf"|<C.-H. L. Ong, C. A. Stewart (1997)「A Curry-Howard foundation for functional computation with control」『Proceedings of the 24th ACM SIGPLAN-SIGACT symposium on principles of programming languages』215–227>
