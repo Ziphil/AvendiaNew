@@ -120,9 +120,6 @@ bundle exec ruby converter/main.rb -l (ファイル名の絶対パス)
 
 - .htaccess ファイル
 - `document/ja/style/reset.css`
-- `document/ja/file/script/cookie.js`
-- `document/ja/file/script/jquery.js`
-- `document/ja/file/script/xdomain.js`
 - `document/ja/file/application/` 以下にある画像ファイル
 - `document/ja/file/character/` 以下にある画像ファイル
 - `document/ja/file/cource/` 以下にある PDF ファイル
