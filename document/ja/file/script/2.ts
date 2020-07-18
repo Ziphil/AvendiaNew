@@ -3,11 +3,14 @@
 
 export function prepare(): void {
   let element = document.querySelector<HTMLInputElement>("[name=\"search\"]")!;
+  let checkbox = document.querySelector<HTMLInputElement>("#checkbox-conversion-0")!;
   element.addEventListener("keyup", (event) => {
-    let text = element.value;
-    let nextText = convert(text);
-    if (text !== nextText) {
-      element.value = nextText;
+    if (checkbox.checked) {
+      let text = element.value;
+      let nextText = convert(text);
+      if (text !== nextText) {
+        element.value = nextText;
+      }
     }
   });
   element.focus();
