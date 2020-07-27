@@ -2,6 +2,9 @@
 <h1>『Avendia』生成スクリプト</h1>
 </div>
 
+![](https://img.shields.io/github/commit-activity/y/Ziphil/AvendiaNew?label=commits)
+![](https://img.shields.io/github/search/Ziphil/AvendiaNew/extension:zml?label=pages)
+
 
 ## 概要
 シャレイア語公式サイト『[Avendia](http://ziphil.com/)』を生成するためのスクリプトとその原稿ファイルです。
