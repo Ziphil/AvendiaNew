@@ -41,14 +41,14 @@
       正則基数 &m<`k> をとる。
       圏 &m<\scr<I>> が 3 条件
     >
-    \ul*<
-      \li<
+    \ul<
+      \li*<
         &m<\scr<I>> は空でない。
       >
-      \li<
+      \li*<
         &m<\scr<I>> の対象から成る集合 &m<`{\sb<i><a>`} \sb<><a \in; A>> でその濃度が &m<`k> 未満であるものに対し、ある対象 &m<\bar<i>> および各 &m<a \in; A> に対して射 &m<\sb<u><a>: \sb<i><a> \to; \bar<i>> が存在する。
       >
-      \li<
+      \li*<
         &m<\scr<I>> の対象 &m<i, i'> をとる。
         &m<\scr<I>> の射から成る集合 &m<`{\sb<u><a>: i \to; i'`} \sb<><a \in; A>> でその濃度が &m<`k> 未満であるものに対し、ある対象 &m<\bar<i>> および射 &m<\bar<u>: i' \to; \bar<i>> が存在し、各 &m<a \in; A> に対して &m<\sb<u><a> \rtriangle; \bar<u>> は &m<a> によらず全て等しい。
       >
