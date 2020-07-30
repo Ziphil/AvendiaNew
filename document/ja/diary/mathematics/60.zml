@@ -1,0 +1,54 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+\page<
+  \name<局所表示可能圏と到達可能圏>
+  \use-math;
+
+  \h1<日記 (2020 年 7 月 31 日)>
+  \p<
+    今日は、局所表示可能圏と到達可能圏を定義する。
+  >
+  \thm|type="def"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      圏 &m<\scr<C>> が、2 条件
+    >
+    \ul<
+      \li*<
+        &m<\scr<C>> は余完備である。
+      >
+      \li*<
+        &m<\scr<C>> の &m<`k>-表示可能対象から成る集合 &m<\scr<A> \subseteq; \op<Ob> (\scr<C>)> が存在し、&m<\scr<C>> の任意の対象は &m<\scr<A>> に属する対象の &m<`k>-有向余極限として表せる。
+      >
+    >
+    \p<
+      をともに満たすとき、&m<\scr<C>> は &m<`k>-\em<局所表示可能\fl<locally presentable>> であるという。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      圏 &m<\scr<C>> が、2 条件
+    >
+    \ul<
+      \li*<
+        &m<\scr<C>> は &m<`k>-有向余極限を全てもつ。
+      >
+      \li*<
+        &m<\scr<C>> の &m<`k>-表示可能対象から成る集合 &m<\scr<A> \subseteq; \op<Ob> (\scr<C>)> が存在し、&m<\scr<C>> の任意の対象は &m<\scr<A>> に属する対象の &m<`k>-有向余極限として表せる。
+      >
+    >
+    \p<
+      をともに満たすとき、&m<\scr<C>> は &m<`k>-\em<到達可能\fl<accessible>> であるという。
+    >
+  >
+  \p<
+    ≡╹ω╹≡。
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="lpa"|<J. Adámek, J. Rosický (1994)『Locally Presentable and Accessible Categories』Cambridge University Press>
+  >
+
+>
