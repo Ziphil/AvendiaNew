@@ -31,9 +31,10 @@ end
 
 converter.define_singleton_method(:get_number) do |type, id|
   number, prefix = "?", nil
+  base_type = type.to_s.gsub(/^clever_/, "").intern
   if variables[:numbers][type].key?(id)
     number = variables[:numbers][type][id]
-    prefix = variables[:prefixes][type][id]
+    prefix = variables[:prefixes][base_type][id]
   else
     element = converter.document.root.each_xpath("//*[name()!='ref' and @id='#{id}']").to_a.first
     if element
@@ -42,18 +43,19 @@ converter.define_singleton_method(:get_number) do |type, id|
         number = element.each_xpath("preceding::math-block[@id]").to_a.size + 1
       when :theorem, :clever_theorem
         number = element.each_xpath("preceding::thm").to_a.size + 1
-        if type == :clever_theorem
-          type = :theorem
-          prefix = create_prefix(type, element)
-        end
+        prefix = create_prefix(base_type, element)
       when :bibliography
         number = element.each_xpath("preceding-sibling::li").to_a.size + 1
       end
       variables[:numbers][type][id] = number
-      variables[:prefixes][type][id] = prefix
+      variables[:prefixes][base_type][id] = prefix
     end
   end
-  string = (prefix) ? prefix.to_s + " " + number.to_s : number.to_s
+  if prefix && type =~ /^clever_/
+    string = prefix.to_s + " " + number.to_s
+  else
+    string = number.to_s
+  end
   next string
 end
 
@@ -128,7 +130,7 @@ converter.add(["thm"], ["page"]) do |element|
   this = ""
   id = element.attribute("id")&.to_s
   type = element.attribute("type").to_s
-  set_number(:theorem, id)
+  set_number(:theorem, id, element)
   this << Tag.build("div", "theorem") do |this|
     this["class"] += " " + THEOREM_TYPE_CLASSES[type]
     this << Tag.build("span", "number") do |this|
