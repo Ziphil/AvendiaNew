@@ -72,12 +72,12 @@
     \p<
       &m<`k>-小図式 &m<G: \scr<K> \to; \scr<C>> の余極限 &m<(\sb<c><k>: Gk \to; C) \sb<><k \in; \scr<K>>> で、&m<\scr<K>> の各対象 &m<k> について &m<\scr<C>> で &m<Gk> が &m<`k>-表示可能であるものをとる。
       このとき、&m<C> も &m<`k>-表示可能であることを示せば良い。
-      そのために補題 \ref|type="thm",id="preseq"|; を用いる。
+      そのために\ref|type="cthm",id="preseq"|; を用いる。
     >
     \p<
       &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> の余極限 &m<(\sb<d><i>: Fi \to; D) \sb<><i \in; \scr<I>>> および &m<\scr<C>> の射 &m<f: C \to; D> をとる。
       &m<f> が本質的に一意に分解できることを示せば良い。
-      まず、&m<\scr<K>> の各対象 &m<k> について &m<\sb<c><k> \rtriangle; f: Gk \to; D> を考えると、&m<Gk> が &m<`k>-表示可能で &m<D> が &m<`k>-有向余極限であることから、補題 \ref|type="thm",id="preseq"|; によってある &m<\scr<I>> の対象 &m<\sb<j><k>> が存在して、
+      まず、&m<\scr<K>> の各対象 &m<k> について &m<\sb<c><k> \rtriangle; f: Gk \to; D> を考えると、&m<Gk> が &m<`k>-表示可能で &m<D> が &m<`k>-有向余極限であることから、\ref|type="cthm",id="preseq"|; によってある &m<\scr<I>> の対象 &m<\sb<j><k>> が存在して、
       &mb<
         \diag<
           \v<Gk> \v<C> \v<D> \br;
@@ -158,7 +158,7 @@
         \sb<c><k> \rtriangle; f = \sb<c><k> \rtriangle; g \rtriangle; \sb<d><i> = \sb<c><k> \rtriangle; g' \rtriangle; \sb<d><i>
       >
       が存在することになる。
-      &m<Gk> は &m<`k>-表示可能で &m<D> は &m<`k>-有向余極限なので、補題 \ref|type="thm",id="preseq"|; によってある &m<\scr<I>> の対象 &m<\sb<i>> が存在して、
+      &m<Gk> は &m<`k>-表示可能で &m<D> は &m<`k>-有向余極限なので、\ref|type="cthm",id="preseq"|; によってある &m<\scr<I>> の対象 &m<\sb<i>> が存在して、
       &mb<
         \sb<c><k> \rtriangle; g \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort; = \sb<c><k> \rtriangle; g' \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort;
       >
