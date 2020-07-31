@@ -2,40 +2,59 @@
 
 
 THEOREM_TYPE_CLASSES = {"def" => "definition", "thm" => "theorem", "prp" => "proposition", "lem" => "lemma", "cor" => "corollary", "axm" => "axiom"}
-REFERENCE_TYPE_CLASSES = {"eq" => :equation, "thm" => :theorem, "bib" => :bibliography}
+THEOREM_TYPE_NAMES = {"def" => "定義", "thm" => "定理", "prp" => "命題", "lem" => "補題", "cor" => "系", "axm" => "公理"}
+REFERENCE_TYPE_CLASSES = {"eq" => :equation, "thm" => :theorem, "cthm" => :clever_theorem, "bib" => :bibliography}
 
 converter.define_singleton_method(:reset_variables) do
   variables[:latest] = false
   variables[:number] = Hash.new{|h, s| h[s] = 0}
   variables[:numbers] = Hash.new{|h, s| h[s] = {}}
+  variables[:prefixes] = Hash.new{|h, s| h[s] = {}}
 end
 
-converter.define_singleton_method(:set_number) do |type, id|
+converter.define_singleton_method(:create_prefix) do |type, element = nil|
+  prefix = nil
+  if element
+    case type
+    when :theorem
+      prefix = THEOREM_TYPE_NAMES[element.attribute("type")&.to_s]
+    end
+  end
+  next prefix
+end
+
+converter.define_singleton_method(:set_number) do |type, id, element = nil|
   variables[:number][type] += 1
   variables[:numbers][type][id] = variables[:number][type]
+  variables[:prefixes][type][id] = create_prefix(type, element)
 end
 
 converter.define_singleton_method(:get_number) do |type, id|
-  numbers = variables[:numbers][type]
-  if numbers.key?(id)
-    next numbers[id]
+  number, prefix = "?", nil
+  if variables[:numbers][type].key?(id)
+    number = variables[:numbers][type][id]
+    prefix = variables[:prefixes][type][id]
   else
     element = converter.document.root.each_xpath("//*[name()!='ref' and @id='#{id}']").to_a.first
     if element
       case type
       when :equation
         number = element.each_xpath("preceding::math-block[@id]").to_a.size + 1
-      when :theorem
+      when :theorem, :clever_theorem
         number = element.each_xpath("preceding::thm").to_a.size + 1
+        if type == :clever_theorem
+          type = :theorem
+          prefix = create_prefix(type, element)
+        end
       when :bibliography
         number = element.each_xpath("preceding-sibling::li").to_a.size + 1
       end
-      numbers[id] = number
-      next number
-    else
-      next "?"
+      variables[:numbers][type][id] = number
+      variables[:prefixes][type][id] = prefix
     end
   end
+  string = (prefix) ? prefix.to_s + " " + number.to_s : number.to_s
+  next string
 end
 
 converter.define_singleton_method(:create_script_string) do
