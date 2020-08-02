@@ -99,7 +99,7 @@
         \diag<
           \v<A> \v<M> \v<A> \br;
           \v; \v<M'>
-          \ar|s="1",e="5",tip="tail",inv|<c'> \ar|s="1",e="2"|<c> \ar|s="2",e="3",tip="tail"|<m> \ar|s="5",e="3",inv|<m'>
+          \ar|s="1",e="5",inv|<c'> \ar|s="1",e="2"|<c> \ar|s="2",e="3",tip="tail"|<m> \ar|s="5",e="3",tip="tail",inv|<m'>
         > \qquad;
         \diag|hor="thn"|<
           \v<M'> \v; \v<M'> \br;
