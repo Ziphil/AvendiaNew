@@ -184,7 +184,7 @@
   \thm|type="thm"|<
     \p<
       正則基数 &m<`k> をとる。
-      圏 &m<\scr<C>> が &m<`k>-到達可能ならば、&m<\sb<\bfrm<Pres>><`k> (\scr<C>)> は小である。
+      &m<`k>-到達可能圏 &m<\scr<C>> に対し、&m<\sb<\bfrm<Pres>><`k> (\scr<C>)> は小である。
     >
   >
   \prf<
