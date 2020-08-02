@@ -5,9 +5,9 @@
   \name<局所表示可能圏と到達可能圏>
   \use-math;
 
-  \h1<日記 (2020 年 7 月 31 日)>
+  \h1<日記 (2020 年 8 月 2 日)>
   \p<
-    今日は、局所表示可能圏と到達可能圏を定義する。
+    今日は、局所表示可能圏と到達可能圏を定義し、その定義の言い換えについての考察を行う。
   >
   \thm|type="def"|<
     \p<
@@ -44,11 +44,350 @@
     >
   >
   \p<
-    ≡╹ω╹≡。
+    &m<`k>-局所表示可能性と &m<`k>-到達可能性の定義において、2 番目の条件は共通しており、1 番目の条件のみが異なっている。
+    具体的には、&m<`k>-局所表示可能性では全ての小余極限の存在が課されているが、&m<`k>-到達可能性では &m<`k>-有向余極限の存在のみが課されている。
+    したがって、任意の圏は &m<`k>-局所表示可能であれば &m<`k>-到達可能である。
+  >
+  \p<
+    以降は、これらの概念に共通して課されている条件の方に注目し、いくつかの同値な言い換えを行う。
+    まず最初に、この条件において存在が要求されている &m<\scr<A>> が極限的生成子になることが分かる。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> の対象から成る集合 &m<\scr<A> \subseteq; \op<Ob> (\scr<C>)> をとる。
+      &m<\scr<C>> の射 &m<f, f': C \to; D> について、任意の &m<\scr<A>> の元 &m<A> と任意の &m<\scr<C>> の射 &m<h: A \to; C> に対して &m<h \rtriangle; f = h \rtriangle; f'> であるとすると、&m<f = f'> が成り立つとする。
+      このとき、&m<\scr<A>> を\em<生成子\fl<generator>> という。
+    >
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> の生成子 &m<\scr<A> \subseteq; \op<Ob> (\scr<C>)> をとる。
+      &m<\scr<C>> の対象 &m<C> の部分対象 &m<m: M \tailrarr; C> について、任意の &m<\scr<A>> の元 &m<A> と任意の &m<\scr<C>> の射 &m<h: A \to; C> に対して &m<h> は &m<m> を経由して分解されるとすると、&m<m> は同型射になるとする。
+      このとき、&m<\scr<A>> は\em<極限的\fl<extremal>> であるという。
+    >
+  >
+  \thm|type="thm",id="sgen"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      &m<`k>-到達可能圏 &m<\scr<C>> において、定義から存在が仮定されている集合 &m<\scr<A>> は極限的生成子である。
+    >
+  >
+  \prf<
+    \p<
+      まず、&m<\scr<A>> が生成子であることを示す。
+      射 &m<f, f': C \to; D> をとり、任意の &m<\scr<A>> の元 &m<A> と任意の射 &m<h: A \to; C> に対して &m<h \rtriangle; f = h \rtriangle; f'> であると仮定する。
+      さて、&m<`k>-到達可能性の定義により、&m<\scr<A>> に属する対象の &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> が存在して &m<C = \op<colim> F> と表せる。
+      その余極限余錐を &m<(\sb<c><i>: Fi \to; C) \sb<><i \in; \scr<I>>> で書く。
+      すると、任意の &m<\scr<I>> の対象 &m<i> について、&m<F> のとり方から &m<Fi> は &m<\scr<A>> に属するから、仮定より &m<\sb<c><i> \rtriangle; f = \sb<c><i> \rtriangle; f'> が成り立つ。
+      したがって、余極限の普遍性によって &m<f = f'> が得られる。
+    >
+    \p<
+      次に、&m<\scr<A>> が極限的であることを示す。
+      部分対象 &m<m: M \tailrarr; C> をとり、任意の &m<\scr<A>> の元 &m<A> と任意の射 &m<h: A \to; C> に対して &m<h> は &m<m> を経由して分解されると仮定する。
+      さて、再び &m<\scr<A>> に属する対象の &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> によって &m<C = \op<colim> F> と表し、その余極限余錐を &m<(\sb<c><i>: Fi \to; C) \sb<><i \in; \scr<I>>> で書く。
+      すると、任意の &m<\scr<I>> の対象 &m<i> について、仮定より &m<\sb<c><i>> は &m<m> を経由して分解される。
+      すなわち、射 &m<\sb<d><i>: Fi \to; M> が存在して、
+      &mb<
+        \diag<
+          \v<Fi> \v<C> \br;
+          \v; \v<M>
+          \ar|s="1",e="2"|<\sb<c><i>> \ar|s="4",e="2",tip="tail",inv|<m> \ar|s="1",e="4",inv|<\sb<d><i>>
+        >
+      >
+      は可換である。
+      すると、&m<m> が単射であることから、&m<(\sb<d><i>: Fi \to; M) \sb<><i \in; \scr<I>>> は &m<F> の余錐になる。
+      したがって、余極限の普遍性を用いると、射 &m<h: C \to; M> が存在して、任意の &m<\scr<I>> の対象 &m<i> に対し、
+      &mb<
+        \diag<
+          \v<Fi> \v<C> \br;
+          \v; \v<M>
+          \ar|s="1",e="2"|<\sb<c><i>> \ar|s="2",e="4"|<h> \ar|s="1",e="4",inv|<\sb<d><i>>
+        >
+      >
+      が可換になる。
+      すると、任意の &m<\scr<I>> の対象 &m<i> に対し、
+      &mb<
+        \sb<c><i> \rtriangle; h \rtriangle; m = \sb<d><i> \rtriangle; m = \sb<c><i>
+      >
+      が成り立つから、&m<h \rtriangle; m = \sb<\rm<id>><C>> である。
+      以上により、&m<m> は単射かつ分裂全射なので同型射になる。
+    >
+  >
+  \p<
+    なお、極限的生成子については以下が知られている。
+    証明は Stack Exchange の回答\ref|type="bib",id="web"|;を参考にした。
+    この事実はこの後の定理を証明する際に用いる。
+  >
+  \thm|type="lem",id="genwp"|<
+    \p<
+      圏 &m<\scr<C>> をとる。
+      &m<\scr<C>> の有限個の部分対象に共通部分が存在し、さらに &m<\scr<C>> が極限的生成子をもつならば、&m<\scr<C>> は冪化可能である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\scr<C>> の極限的生成子を &m<\scr<A>> とする。
+      定義から &m<\scr<A>> は集合なので、各対象 &m<C> に対し、
+      &mb<
+        \sb<S><C> \coloneqq; \bigcup<A \in; \scr<A>> \op<Hom> (A, C)
+      >
+      は集合である。
+      ここで、
+      &mb<
+        \array|align="rrcl"|<
+          \c<`F:> \c<\op<Sub> (C)> \c<\longto;> \c<\frak<P> (\sb<S><C>)> \br;
+          \c; \c<m> \c<\longmapsto;> \c<`{h \in; \sb<S><C> \mid; &raw<&m<h> は &m<m> を経由して分解される>`}>
+        >
+      >
+      と定める。
+      &m<`F> が単射であることが示されれば、&m<\op<Sub> (C)> は &m<\frak<P> (\sb<S><C>)> の部分クラスと見なすことができ、&m<\sb<S><C>> が集合であることから &m<\frak<P> (\sb<S><C>)> も集合であることから、&m<\op<Sub> (C)> が集合であることが示される。
+      そこで、&m<`F> が単射であることを示す。
+    >
+    \p<
+      任意に部分対象 &m<m: M \tailrarr; C, m': M' \tailrarr; C> をとり、&m<`F (m) = `F (m')> が成り立つとする。
+      仮定から、この 2 つの共通部分 &m<\bar<m>: M \cap; M \tailrarr; C> が存在する。
+      すなわち、
+      &mb<
+        \diag<
+          \v<M \cap; M'> \v<M'> \br;
+          \v<M> \v<C>
+          \ar|s="1",e="2",tip="tail",dash|<n'> \ar|s="1",e="3",tip="tail",dash,inv|<n>
+          \ar|s="2",e="4",tip="tail"|<m'> \ar|s="3",e="4",tip="tail",inv|<m>
+        >
+      >
+      が引き戻しとしてとれる。
+      さて、任意に &m<\scr<A>> の元 &m<A> と射 &m<h: A \to; M> をとる。
+      定義から &m<h \rtriangle; m> は &m<`F (m)> に属するから、&m<`F (m) = `F (m')> より &m<h \rtriangle; m> は &m<`F (m')> にも属する。
+      すなわち、
+      &mb<
+        \diag<
+          \v<A> \v<M> \v<C> \br;
+          \v; \v<M'> \v;
+          \ar|s="1",e="2"|<h> \ar|s="2",e="3",tip="tail"|<m>
+          \ar|s="1",e="5",dash,inv|<h'> \ar|s="5",e="3",tip="tail",inv|<m'>
+        >
+      >
+      という分解が存在する。
+      すると、引き戻しの普遍性によって、
+      &mb<
+        \diag<
+          \v<A> \v; \v; \br;
+          \v; \v<M \cap; M'> \v<M'> \br;
+          \v; \v<M> \v<C>
+          \ar|s="1",e="6",bend="20"|<h'> \ar|s="1",e="8",bend="-20",inv|<h> \ar|s="1",e="5",dash|;
+          \ar|s="5",e="6",tip="tail"|<n'> \ar|s="5",e="8",tip="tail",inv|<n>
+          \ar|s="6",e="9",tip="tail"|<m'> \ar|s="8",e="9",tip="tail",inv|<m>
+        >
+      >
+      を可換にする破線の射が存在し、特に &m<h> は &m<n> を経由して分解される。
+      &m<h> は任意にとっていたので、極限的生成子の定義によって &m<n> は同型射である。
+      同様の議論により、&m<n'> も同型射であることが分かる。
+      したがって、部分対象として &m<n = n'> であるから、&m<`F> が単射であることが示された。
+    >
+  >
+  \p<
+    さて、共通して課されている条件の同値な言い換えを述べるため、次のような定義をする。
+  >
+  \thm|type="def"|<
+    \p<
+      圏 &m<\scr<C>> の対象から成るクラス &m<\scr<A> \subseteq; \op<Ob> (\scr<C>)> について、&m<\scr<A>> の同型類の全体が集合サイズであるとき、&m<\scr<A>> は\em<本質的小\fl<essentially small>> であるという。
+    >
+  >
+  \p<
+    共通の条件についてすぐに分かるのは、存在が要求されている &m<\scr<A>> を (それ自身が集合サイズとは限らない) 本質的小なクラスにとっても良いということである。
+    これは、余極限をとる図式に属する対象を同型なものに取り替えても余極限自身は変わらないので、&m<\scr<A>> が本質的小なクラスとしてとれれば、&m<\scr<A>> の各同型類から選んだ代表元全体を改めて &m<\scr<A>> とすれば良いからである。
+  >
+  \p<
+    さらに、次の定理で示すように、&m<\scr<A>> として表示可能対象の全体をとった場合のみを考えても良いことが分かる。
+  >
+  \thm|type="thm"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      圏 &m<\scr<C>> について、2 条件
+    >
+    \ol<
+      \li*<
+        &m<\scr<C>> の &m<`k>-表示可能対象から成る集合 &m<\scr<A> \subseteq; \op<Ob> (\scr<C>)> が存在し、&m<\scr<C>> の任意の対象は &m<\scr<A>> に属する対象の &m<`k>-有向余極限として表せる。
+      >
+      \li*<
+        &m<\scr<C>> の &m<`k>-表示可能対象の全体は本質的小であり、&m<\scr<C>> の任意の対象は &m<`k>-表示可能対象の &m<`k>-有向余極限として表せる。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 1:>
+      &m<\scr<C>> の &m<`k>-表示可能対象の全体を &m<\scr<A>> とおけば、定理の前に述べたことに注意すれば条件 1 が満たされる。
+    >
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 2:>
+      まず\ref|type="cthm",id="sgen"|; によって &m<\scr<A>> は極限的生成子である。
+      さらに、? 月 ? 日の定理 ? によって &m<\scr<C>> は完備だから、\ref|type="cthm",id="genwp"|; が使えて &m<\scr<C>> が冪化可能であることが分かる。
+      したがって、
+      &mb<
+        \scr<A>' \coloneqq; \bigcup<A \in; \scr<A>> \op<Sub> (A)
+      >
+      は集合である。
+      これにより、任意の &m<`k>-表示可能対象が &m<\scr<A>'> に属することを示せば良い。
+      すなわち、任意の &m<`k>-表示可能対象が &m<\scr<A>> に属する元の部分対象になることを示す。
+    >
+    \p<
+      任意に &m<`k>-表示可能対象 &m<C> をとる。
+      仮定を用いて、&m<\scr<A>> に属する対象の &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> によって &m<C = \op<colim> F> と表し、その余極限余錐を &m<(\sb<c><i>: Fi \to; C) \sb<><i \in; \scr<I>>> で書く。
+      すると、\a|href="59.html"|<7 月 30 日>の補題 2 によって、&m<\sb<\rm<id>><C>: C \to; C> は、ある &m<\scr<I>> の対象 &m<i> について、
+      &mb<
+        \diag|hor="thn"|<
+          \v<C> \v; \v<C> \br;
+          \v; \v<Fi> \v;
+          \ar|s="1",e="3"|<\sb<\rm<id>><C>> \ar|s="1",e="5",dash,inv|<m> \ar|s="5",e="3",inv|<\sb<c><i>>
+        >
+      >
+      と分解できる。
+      これより、&m<m> は単射だから &m<C> は &m<Fi> の部分対象であり、&m<F> のとり方から &m<Fi> は &m<\scr<A>> の元なので、示したかったことが示された。
+    >
+  >
+  \p<
+    もう 1 つの同値な言い換えとして、&m<`k>-表示可能対象から成る極限的生成子が存在するとも言い換えられる。
+    ただし、同値性の証明には余完備性が必要なので、&m<`k>-局所表示可能性を証明したい際にしか使えないことに注意したい。
+  >
+  \thm|type="thm"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      圏 &m<\scr<C>> が余完備ならば、2 条件
+    >
+    \ol<
+      \li*<
+        &m<\scr<C>> の &m<`k>-表示可能対象から成る集合 &m<\scr<A> \subseteq; \op<Ob> (\scr<C>)> が存在し、&m<\scr<C>> の任意の対象は &m<\scr<A>> に属する対象の &m<`k>-有向余極限として表せる。
+      >
+      \li*<
+        &m<\scr<C>> の &m<`k>-表示可能対象から成る極限的生成子 &m<\tilde<\scr<A>> \subseteq; \op<Ob> (\scr<C>)> が存在する。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \label<条件 1 &m<\raarr;> 条件 2:>
+      \ref|type="cthm",id="sgen"|; により、&m<\scr<A>> は極限的生成子である。
+    >
+    \p<
+      \label<条件 2 &m<\raarr;> 条件 1:>
+      &m<\tilde<\scr<A>>> を &m<\scr<C>> の充満部分圏と見なし、&m<`k>-小余極限をとる操作に関して閉じているような &m<\tilde<\scr<A>>> を含む最小の &m<\scr<C>> の部分圏を &m<\scr<A>> とおく。
+      すると、&m<\scr<A>> は本質的小で、\a|href="59.html"|<7 月 30 日>の補題 4 によって &m<\scr<A>> の対象は全て &m<`k>-表示可能である。
+      さらに、\a|href="58.html"|<7 月 29 日>の定理 8 によって &m<`k>-フィルター余極限は &m<`k>-有向余極限に取り替えられるから、&m<\scr<C>> の任意の対象が &m<\scr<A>> の対象の &m<`k>-フィルター余極限として表せることを示せば良い。
+    >
+    \p<
+      任意に &m<\scr<C>> の対象 &m<C> をとる。
+      スライス圏からの忘却関手
+      &mb<
+        \array|align="rrcl"|<
+          \c<F:> \c<\scr<A> `/ C> \c<\longto;> \c<\scr<C>> \br;
+          \c; \c<\ltort; h: A \to; C \rtort;> \c<\longmapsto;> \c<A>
+        >
+      >
+      を考える。
+      &m<\scr<C>> は余完備だから、&m<F> の余極限 &m<(\sp<h><*>: Fh \to; \sp<C><*>) \sb<><h \in; \scr<A> `/ C>> が存在する。
+      また、&m<(h: Fh \to; C) \sb<><h \in; \scr<A> `/ C>> は &m<F> の余錐になるので、余極限の普遍性によってある射 &m<m: \sp<C><*> \to; C> が存在して、任意の &m<\scr<A> `/ C> の対象 &m<h: A \to; C> に対して、
+      &mb<
+        \diag<
+          \v<A> \v<\sp<C><*>> \br;
+          \v; \v<C>
+          \ar|s="1",e="2"|<\sp<h><*>> \ar|s="1",e="4",inv|<h> \ar|s="2",e="4"|<m>
+        >
+      >
+      が可換になる。
+    >
+    \p<
+      さて、定義から &m<\scr<A>> は &m<`k>-小余極限をもつので、&m<\scr<A> `/ C> も &m<`k>-小余極限をもつ。
+      したがって、&m<\scr<A> `/ C> は &m<`k>-フィルターである。
+      また、&m<F> の定義から &m<F> の像は &m<\scr<A>> の対象である。
+      したがって、&m<F> の余極限である &m<\sp<C><*>> は &m<\scr<A>> の対象の &m<`k>-フィルター余極限であるということになる。
+      これにより、&m<m: \sp<C><*> \to; C> が同型射であることが示されれば、&m<C> も &m<\scr<A>> の対象の &m<`k>-フィルター余極限であることが分かり、示したかったことが示される。
+    >
+    \p<
+      ところが、&m<m> が同型射であることを示すには、&m<m> が単射であることを示せば十分である。
+      なぜなら、&m<m> が単射であることが示されれば、任意の &m<\scr<A>> の対象 &m<A> と射 &m<h: A \to; C> に対し、上の図式の可換性によって &m<f> は &m<m> を経由して分解されるので、&m<\scr<A>> が極限的生成子であることから &m<m> が同型射であることが従うからである。
+      よって、&m<m> が単射であることを示す。
+    >
+    \p<
+      &m<\scr<C>> の射 &m<f, f': B \to; \sp<C><*>> をとり、&m<f \rtriangle; m = f' \rtriangle; m> であるとする。
+      &m<\tilde<\scr<A>>> は生成子だから、&m<B> が &m<\tilde<\scr<A>>> の元であるとしても一般性を失わない。
+      すると、&m<B> が &m<`k>-表示可能で &m<\sp<C><*>> は &m<`k>-フィルター余極限だから、ある &m<\scr<A> `/ C> の対象 &m<h: A \to; C, h': A' \to; C> が存在して、
+      &mb<
+        \diag|hor="thn"|<
+          \v<B> \v; \v<\sp<C><*>> \br;
+          \v; \v<Fh>
+          \ar|s="1",e="3"|<f> \ar|s="1",e="5",dash|; \ar|s="5",e="3",inv|<\sp<h><*>>
+        > \qquad;
+        \diag|hor="thn"|<
+          \v<B> \v; \v<\sp<C><*>> \br;
+          \v; \v<Fh'>
+          \ar|s="1",e="3"|<f'> \ar|s="1",e="5",dash|; \ar|s="5",e="3",inv|<\sp<h'><*>>
+        >
+      >
+      と分解できる。
+      &m<\scr<A> `/ C> は &m<`k>-フィルターだから、&m<\scr<A> `/ C> において &m<h> と &m<h'> の両方からの射がある &m<\bar<h>> が存在する。
+      すると、&m<f> と &m<f'> はともにこの &m<\bar<h>> を用いた分解
+      &mb<
+        \diag|hor="thn"|<
+          \v<B> \v; \v<\sp<C><*>> \br;
+          \v; \v<F \bar<h>>
+          \ar|s="1",e="3"|<f> \ar|s="1",e="5",dash,inv|<g> \ar|s="5",e="3",inv|<\sp<\bar<h>><*>>
+        > \qquad;
+        \diag|hor="thn"|<
+          \v<B> \v; \v<\sp<C><*>> \br;
+          \v; \v<F \bar<h>>
+          \ar|s="1",e="3"|<f'> \ar|s="1",e="5",dash,inv|<g'> \ar|s="5",e="3",inv|<\sp<\bar<h>><*>>
+        >
+      >
+      ができる。
+      ここで、&m<\scr<C>> において余等化子
+      &mb<
+        \diag<
+          \v<B> \v<\bar<A>> \v<S>
+          \ar|s="1",e="2",shift="3"|<g> \ar|s="1",e="2",shift="-3",inv|<g'> \ar|s="2",e="3",dash|<s>
+        >
+      >
+      をとると、
+      &mb<
+        \array|align="c"|<
+          \c<g \rtriangle; \bar<h> = g \rtriangle; \sp<\bar<h>><*> \rtriangle; m = f \rtriangle; m> \br;
+          \c<g' \rtriangle; \bar<h> = g' \rtriangle; \sp<\bar<h>><*> \rtriangle; m = f' \rtriangle; m>
+        >
+      >
+      が成り立つが、最初に &m<f \rtriangle; m = f' \rtriangle; m> であると仮定しているので、これより &m<g \rtriangle; \bar<h> = g' \rtriangle; \bar<h>> を得る。
+      したがって、余等化子の普遍性を使えば、射 &m<t: S \to; C> が存在して、
+      &mb<
+        \diag<
+          \v<B> \v<\bar<A>> \v<S> \br;
+          \v; \v; \v<C>
+          \ar|s="1",e="2",shift="3"|<g> \ar|s="1",e="2",shift="-3",inv|<g'> \ar|s="2",e="3"|<s>
+          \ar|s="2",e="6",inv|<\bar<h>> \ar|s="3",e="6"|<t>
+        >
+      >
+      が可換になることが分かる。
+      ここで、&m<g> と &m<g'> はともに &m<\scr<A>> の射でもあり、&m<\scr<A>> は &m<`k>-小極限をとる操作について閉じていたので、&m<S> は &m<\scr<A>> の対象になる。
+      したがって、&m<t> は &m<\scr<A> `/ C> の対象でもあり、&m<s> は &m<\scr<A> `/ C> の射 &m<s: \bar<h> \to; t> とも見なせる。
+      すると、&m<(\sp<h><*>) \sb<><h \in; \scr<A> `/ C>> が余錐であることから、&m<\sp<\bar<h>><*> = s \rtriangle; \sp<t><*>> が成り立つことが分かる。
+      これを利用すると、
+      &mb<
+        \array|align="c"|<
+          \c<f = g \rtriangle; \sp<\bar<h>><*> = g \rtriangle; s \rtriangle; \sp<t><*>> \br;
+          \c<f' = g' \rtriangle; \sp<\bar<h>><*> = g' \rtriangle; s \rtriangle; \sp<t><*>> \br;        >
+      >
+      が分かり、さらに &m<g \rtriangle; s = g' \rtriangle; s> であるから、&m<f = f'> が示された。
+      以上により、&m<m> は単射である。
+    >
   >
   \h1<参考文献>
   \ol<
     \li|id="lpa"|<J. Adámek, J. Rosický (1994)『Locally Presentable and Accessible Categories』Cambridge University Press>
+    \li|id="web"|<『A category with a strong generator is well-powered — Mathematics Stack Exchange』&ref|c="x20"|;\ae|href="https://math.stackexchange.com/questions/253927/a-category-with-a-strong-generator-is-well-powered"|<こちら>>
   >
 
 >
