@@ -20,7 +20,7 @@
   >
   \thm|type="def"|<
     \p<
-      関手 &m<H: \scr<K> \to; \scr<I>> をとる。
+      小圏の間の関手 &m<H: \scr<K> \to; \scr<I>> をとる。
       任意の関手 &m<F: \scr<I> \to; \scr<C>> に対し、&m<\op<colim> F> と &m<\op<colim> (H \rtriangle; F)> のうちどちらか一方が存在するならばもう一方も存在し、そのとき自然な射 &m<\op<colim> (H \rtriangle; F) \to; \op<colim> F> は同型射であるとする。
       このとき、&m<H> は\em<終\fl<final>> であるという。
     >
@@ -42,7 +42,7 @@
   >
   \thm|type="lem",id="setcol"|<
     \p<
-      関手 &m<F: \scr<K> \to; \bfrm<Set>> の余極限は、
+      小図式 &m<F: \scr<K> \to; \bfrm<Set>> の余極限は、
       &mb<
         \op<colim> F = \paren<\coprod<k \in; \scr<K>> Fk> `/ \sim|ord|;
       >
@@ -61,7 +61,7 @@
   >
   \thm|type="lem",id="onep"|<
     \p<
-      圏 &m<\scr<I>> とその対象 &m<i> に対し、表現可能関手 &m<\op<Hom> (i, \hyphen;): \scr<I> \to; \bfrm<Set>> の余極限は 1 点集合である。
+      小圏 &m<\scr<I>> とその対象 &m<i> に対し、表現可能関手 &m<\op<Hom> (i, \hyphen;): \scr<I> \to; \bfrm<Set>> の余極限は 1 点集合である。
     >
   >
   \prf<
@@ -101,7 +101,7 @@
   >
   \thm|type="thm"|<
     \p<
-      関手 &m<H: \scr<K> \to; \scr<I>> に対し、2 条件
+      小圏の間の関手 &m<H: \scr<K> \to; \scr<I>> に対し、2 条件
     >
     \ol<
       \li*<
