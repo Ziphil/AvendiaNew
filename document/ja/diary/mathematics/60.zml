@@ -66,7 +66,7 @@
   >
   \thm|type="lem",id="splsub"|<
     \p<
-      圏 &m<\scr<C>> の対象 &m<A> に対し、&m<A> の分裂部分対象全体 &m<\sb<\op<Sub>><\rm<sp>> (A)> は集合サイズである。
+      圏 &m<\scr<C>> の対象 &m<A> に対し、&m<A> の分裂部分対象全体 &m<\sp<\op<Sub>><\rm<sp>> (A)> は集合サイズである。
     >
   >
   \prf<
@@ -74,12 +74,12 @@
       まず、
       &mb<
         \array|align="rrcl"|<
-          \c<`F:> \c<\sb<\op<Sub>><\rm<sp>> (A)> \c<\longto;> \c<\frak<P> (\op<Hom> (A, A))> \br;
+          \c<`F:> \c<\sp<\op<Sub>><\rm<sp>> (A)> \c<\longto;> \c<\frak<P> (\op<Hom> (A, A))> \br;
           \c; \c<\ltort; m: M \tailrarr; A \rtort;> \c<\longmapsto;> \c<`{c \rtriangle; m \mid; &raw<&m<c: A \to; M> は &m<m \rtriangle; c = \sb<\op<id>><M>> を満たす>`}>
         >
       >
       とおく。
-      &m<`F> が単射であることが示されれば、&m<\sb<\op<Sub>><\rm<sp>> (A)> は &m<\frak<P> (\op<Hom> (A, A))> の部分クラスと見なすことができ、&m<\op<Hom> (A, A)> が集合であることから &m<\frak<P> (\op<Hom> (A, A))> も集合なので、&m<\sb<\op<Sub>><\rm<sp>> (A)> が集合であることが示される。
+      &m<`F> が単射であることが示されれば、&m<\sp<\op<Sub>><\rm<sp>> (A)> は &m<\frak<P> (\op<Hom> (A, A))> の部分クラスと見なすことができ、&m<\op<Hom> (A, A)> が集合であることから &m<\frak<P> (\op<Hom> (A, A))> も集合なので、&m<\sp<\op<Sub>><\rm<sp>> (A)> が集合であることが示される。
       そこで、&m<`F> が単射であることを示す。
     >
     \p<
@@ -147,7 +147,7 @@
       \label<条件 1 &m<\raarr;> 条件 2:>
       &m<\scr<A>> は集合であるから、\ref|type="cthm",id="splsub"|; を使えば、
       &mb<
-        \scr<A>' \coloneqq; \bigcup<A \in; \scr<A>> \sb<\op<Sub>><\rm<sp>> (A)
+        \scr<A>' \coloneqq; \bigcup<A \in; \scr<A>> \sp<\op<Sub>><\rm<sp>> (A)
       >
       が集合であることが分かる。
       したがって、任意の &m<`k>-表示可能対象が &m<\scr<A>'> に属するある元と同型であることを示せば良い。
