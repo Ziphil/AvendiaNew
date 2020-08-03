@@ -205,7 +205,7 @@
   \thm|type="prp",id="compsub"|<
     \p<
       圏 &m<\scr<D>> の反射的部分圏 &m<\scr<C> \subseteq; \scr<D>> をとる。
-      &m<\scr<C>> が完備ならば、&m<\scr<D>> も完備である。
+      &m<\scr<D>> が完備ならば、&m<\scr<C>> も完備である。
     >
   >
   \p<
