@@ -125,7 +125,7 @@
         \array|align="rrcl"|<
           \c<T:> \c<`[A, L`]> \c<\longto;> \c<\lbbracket; W, `[A, F \hyphen;`] \rbbracket;> \br;
           \c; \c<f> \c<\longmapsto;> \c<\sp<f><*> \dot<\circ;> `h> \br;
-          \c; \c<`a> \c<\longmapsto;> \c<\sp<`a><*> \hat<\ltriangle;> `h>
+          \c; \c<`a> \c<\longmapsto;> \c<\sp<`a><*> \hat<\ast;> `h>
         >
       >
       に拡張できる。

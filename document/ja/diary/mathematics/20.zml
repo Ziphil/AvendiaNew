@@ -177,9 +177,9 @@
       2-圏 &m<\scr<C>, \scr<D>> において、2-弛緩関手 &m<F, G, H: \scr<C> \to; \scr<D>> および 2-弛緩自然変換 &m<`s: F \raarr; G> と &m<`r, `f: G \raarr; H> および自然調整 &m<`C: `r \raaarr; `f> をとる。
       &m<\scr<C>> の対象 &m<A> に対し、
       &mb<
-        (`C \hat<\ltriangle;> `s) \sb<><A> \coloneqq; \sb<`C><A> \ltriangle; \sb<`s><A>: \sb<`r><A> \circ; \sb<`s><A> \raarr; \sb<`f><A> \circ; \sb<`s><A>
+        (`C \hat<\ast;> `s) \sb<><A> \coloneqq; \sb<`C><A> \ast; \sb<`s><A>: \sb<`r><A> \circ; \sb<`s><A> \raarr; \sb<`f><A> \circ; \sb<`s><A>
       >
-      によって定まる自然調整 &m<`C \hat<\ltriangle;> `s: `r \dot<\circ;> `s \raaarr; `f \dot<\circ;> `s> を、&m<`s> と &m<`C> の\em<左髭結合\fl<left whiskering>> という。
+      によって定まる自然調整 &m<`C \hat<\ast;> `s: `r \dot<\circ;> `s \raaarr; `f \dot<\circ;> `s> を、&m<`s> と &m<`C> の\em<左髭結合\fl<left whiskering>> という。
     >
   >
   \thm|type="def"|<
@@ -187,9 +187,9 @@
       2-圏 &m<\scr<C>, \scr<D>> において、2-弛緩関手 &m<F, G, H: \scr<C> \to; \scr<D>> および 2-弛緩自然変換 &m<`s, `t: F \raarr; G> と &m<`r: G \raarr; H> および自然調整 &m<`J: `s \raaarr; `t> をとる。
       &m<\scr<C>> の対象 &m<A> に対し、
       &mb<
-        (`r \hat<\rtriangle;> `J) \sb<><A> \coloneqq; \sb<`r><A> \rtriangle; \sb<`J><A>: \sb<`r><A> \circ; \sb<`s><A> \raarr; \sb<`r><A> \circ; \sb<`t><A>
+        (`r \hat<\ast;> `J) \sb<><A> \coloneqq; \sb<`r><A> \ast; \sb<`J><A>: \sb<`r><A> \circ; \sb<`s><A> \raarr; \sb<`r><A> \circ; \sb<`t><A>
       >
-      によって定まる自然調整 &m<`r \hat<\rtriangle;> `J: `r \dot<\circ;> `s \raaarr; `r \dot<\circ;> `t> を、&m<`J> と &m<`r> の\em<右髭結合\fl<right whiskering>> という。
+      によって定まる自然調整 &m<`r \hat<\ast;> `J: `r \dot<\circ;> `s \raaarr; `r \dot<\circ;> `t> を、&m<`J> と &m<`r> の\em<右髭結合\fl<right whiskering>> という。
     >
   >
   \p<

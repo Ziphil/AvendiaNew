@@ -140,7 +140,7 @@
     \p<
       2-圏 &m<\scr<C>> において、1-射 &m<f: A \to; B> と &m<h, k: B \to; C> および 2-射 &m<`b: h \raarr; k> に対し、
       &mb<
-        `b \ltriangle; f \coloneqq; \sb<c><ABC> (\sb<\rm<id>><f>, `b): h \circ; f \raarr; k \circ; f
+        `b \ast; f \coloneqq; \sb<c><ABC> (\sb<\rm<id>><f>, `b): h \circ; f \raarr; k \circ; f
       >
       を &m<f> と &m<`b> の\em<左髭結合\fl<left whiskering>> という。
     >
@@ -149,7 +149,7 @@
     \p<
       2-圏 &m<\scr<C>> において、1-射 &m<f, g: A \to; B> と &m<h: B \to; C> および 2-射 &m<`a: f \raarr; g> に対し、
       &mb<
-        h \rtriangle; `a \coloneqq; \sb<c><ABC> (`a, \sb<\rm<id>><h>): h \circ; f \raarr; h \circ; g
+        h \ast; `a \coloneqq; \sb<c><ABC> (`a, \sb<\rm<id>><h>): h \circ; f \raarr; h \circ; g
       >
       をそれぞれ &m<`a> と &m<h> の\em<右髭結合\fl<right whiskering>>  という。
     >
@@ -169,7 +169,7 @@
         \v<A> \v<C>
         \ar|s="1",e="2",bend="30"|<h \circ; f> \ar|s="1",e="2",bend="-30",inv|<k \circ; f>
         \ar|s="1",e="2",bend="30",line="0",name="f",inv|; \ar|s="1",e="2",bend="-30",line="0",name="h"|;
-        \ar|s="f:c",e="h:c",line="2"|<`b \ltriangle; f>
+        \ar|s="f:c",e="h:c",line="2"|<`b \ast; f>
       >
     >
     という操作である。

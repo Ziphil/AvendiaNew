@@ -55,12 +55,12 @@
     と同値である。
     次に、上の図式は、任意の &m<\scr<J>> の 2-射 &m<`v: u \raarr; v: I \to; J> (すなわち &m<`[I, J`]> の射) に対して、通常の自然変換の等式
     &mb<
-      \sb<`s><J> \rtriangle; \sb<`D><\bfrm<1>> `v = `[A, F `v`] \ltriangle; \sb<`s><I>
+      \sb<`s><J> \ast; \sb<`D><\bfrm<1>> `v = `[A, F `v`] \ast; \sb<`s><I>
     >
     が成り立つことも要求している。
     これも &m<\star;> における成分を考えて、&m<\scr<C>> の 2-射の等式
     &mb<
-      \sb<\rm<id>><\sb<\bar<`s>><J>> = F `v \ltriangle; \sb<\bar<`s>><I>
+      \sb<\rm<id>><\sb<\bar<`s>><J>> = F `v \ast; \sb<\bar<`s>><I>
     >
     が成り立つことと同値であることが分かる。
   >
@@ -122,12 +122,12 @@
   \p<
     &m<`J> の自然性とは、任意の &m<\scr<J>> の 1-射 &m<u: I \to; J> に対し、通常の自然変換 (すなわち &m<\bfrm<Cat>> の 2-射) の等式
     &mb<
-      \sb<`J><J> \ltriangle; \sb<`D><\bfrm<1>> u = `[A, Fu`] \rtriangle; \sb<`J><I>
+      \sb<`J><J> \ast; \sb<`D><\bfrm<1>> u = `[A, Fu`] \ast; \sb<`J><I>
     >
     が等しいということであった。
     &m<\star;> における成分を考えると、これは &m<\scr<C>> の 2-射の等式
     &mb<
-      \sb<\bar<`J>><J> = Fu \rtriangle; \sb<\bar<`J>><I>
+      \sb<\bar<`J>><J> = Fu \ast; \sb<\bar<`J>><I>
     >
     と同値である。
   >

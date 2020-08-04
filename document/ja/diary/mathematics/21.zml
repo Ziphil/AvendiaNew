@@ -65,7 +65,7 @@
           \array|align="rrcl"|<
             \c<(\sp<f><*>) \sb<><I>:> \c<`[L, FI`]> \c<\longto;> \c<`[A, FI`]> \br;
             \c; \c<h> \c<\longmapsto;> \c<h \circ; f> \br;
-            \c; \c<`a> \c<\longmapsto;> \c<`a \ltriangle; f>
+            \c; \c<`a> \c<\longmapsto;> \c<`a \ast; f>
           >
         >
         で定義されるものとする。
@@ -115,7 +115,7 @@
         >
         をもつが、これは &m<\scr<C>> の 1-射 &m<h: L \to; FI> に対し、
         &mb<
-          (\sp<`a><*>) \sb<><I, h> \coloneqq; h \rtriangle; `a: h \circ; f \raarr; h \circ; g: A \to; FI
+          (\sp<`a><*>) \sb<><I, h> \coloneqq; h \ast; `a: h \circ; f \raarr; h \circ; g: A \to; FI
         >
         で定義されるものとする。
       >
