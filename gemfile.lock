@@ -13,7 +13,7 @@ GEM
     ttfunk (1.6.2.1)
     wdm (0.1.1)
     zenml (1.6.1)
-    zotica (1.4.0)
+    zotica (1.5.0)
       sassc (~> 2)
       ttfunk (~> 1)
       zenml (~> 1, >= 1.6.0)
