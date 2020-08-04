@@ -19,11 +19,11 @@
     \p<
       圏 &m<\scr<A>, \scr<B>, \scr<C>> を考える。
       2 つの関手 &m<\sb<F><\rm<L>>: \scr<A> \times; \lvert; \scr<B> \rvert; \to; \scr<C>> と &m<\sb<F><\rm<R>>: \lvert; \scr<A> \rvert; \times; \scr<B> \to; \scr<C>> について、任意の &m<\scr<A>> の対象 &m<A> と &m<\scr<B>> の対象 &m<B> に対して &m<\sb<F><\rm<L>> (A, B) = \sb<F><\rm<R>> (A, B)> が成り立っているとする。
-      このとき、組 &m<(\sb<F><\rm<L>>, \sb<F><\rm<R>>)> を\em<バイノイダル関手\fl<binoidal functor>> といい、&m<F: \scr<A> \o|bin|<⬦> \scr<B> \to; \scr<C>> で表す。
+      このとき、組 &m<(\sb<F><\rm<L>>, \sb<F><\rm<R>>)> を\em<バイノイダル関手\fl<binoidal functor>> といい、&m<F: \scr<A> \rhombus; \scr<B> \to; \scr<C>> で表す。
     >
   >
   \p<
-    ここで &m<\scr<A> \o|bin|<⬦> \scr<B>> という記号を用いたが、圏 &m<\scr<A>, \scr<B>> から別の圏 &m<\scr<A> \o|bin|<⬦> \scr<B>> を実際に構成して、通常の意味での関手 &m<F: \scr<A> \o|bin|<⬦> \scr<B> \to; \scr<C>> が上の意味でのバイノイダル関手に一致するようにすることができる。
+    ここで &m<\scr<A> \rhombus; \scr<B>> という記号を用いたが、圏 &m<\scr<A>, \scr<B>> から別の圏 &m<\scr<A> \rhombus; \scr<B>> を実際に構成して、通常の意味での関手 &m<F: \scr<A> \rhombus; \scr<B> \to; \scr<C>> が上の意味でのバイノイダル関手に一致するようにすることができる。
     この圏上の演算は奇妙テンソル積と呼ばれる。
   >
   \thm|type="def",id="ften"|<
@@ -33,12 +33,12 @@
       &mb<
         \diag<
           \v<\lvert; \scr<A> \rvert; \times; \lvert; \scr<B> \rvert;> \v<\lvert; \scr<A> \rvert; \times; \scr<B>> \br;
-          \v<\scr<A> \times; \lvert; \scr<B> \rvert;> \v<\scr<A> \o|bin|<⬦> \scr<B>>
+          \v<\scr<A> \times; \lvert; \scr<B> \rvert;> \v<\scr<A> \rhombus; \scr<B>>
           \ar|s="1",e="2",tip="hook"|; \ar|s="1",e="3",tip="hook"|;
           \ar|s="2",e="4",dash|; \ar|s="3",e="4",dash|;
         >
       >
-      によって得られる圏 &m<\scr<A> \o|bin|<⬦> \scr<B>> を、&m<\scr<A>> と &m<\scr<B>> の\em<奇妙テンソル積\fl<funny tensor product>> という。
+      によって得られる圏 &m<\scr<A> \rhombus; \scr<B>> を、&m<\scr<A>> と &m<\scr<B>> の\em<奇妙テンソル積\fl<funny tensor product>> という。
     >
   >
   \p<
@@ -47,7 +47,7 @@
   \thm|type="prp"|<
     \p<
       圏 &m<\scr<A>, \scr<B>, \scr<C>> を考える。
-      定義 \ref|type="thm",id="binf"|; の意味におけるバイノイダル関手 &m<F: \scr<A> \o|bin|<⬦> \scr<B> \to; \scr<C>> を与えることは、定義 \ref|type="thm",id="ften"|; の記号における通常の関手 &m<F: \scr<A> \o|bin|<⬦> \scr<B> \to; \scr<C>> を与えることと同値である。
+      定義 \ref|type="thm",id="binf"|; の意味におけるバイノイダル関手 &m<F: \scr<A> \rhombus; \scr<B> \to; \scr<C>> を与えることは、定義 \ref|type="thm",id="ften"|; の記号における通常の関手 &m<F: \scr<A> \rhombus; \scr<B> \to; \scr<C>> を与えることと同値である。
     >
   >
   \prf<
@@ -60,7 +60,7 @@
   >
   \thm|type="def"|<
     \p<
-      圏 &m<\scr<D>> の上に関手 &m<\bowtie|ord|;: \scr<D> \o|bin|<⬦> \scr<D> \to; \scr<D>> が定まっているとき、&m<\scr<D>> を\em<バイノイダル圏\fl<binoidal category>> という。
+      圏 &m<\scr<D>> の上に関手 &m<\bowtie|ord|;: \scr<D> \rhombus; \scr<D> \to; \scr<D>> が定まっているとき、&m<\scr<D>> を\em<バイノイダル圏\fl<binoidal category>> という。
     >
   >
   \p<
@@ -70,7 +70,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<B>, \scr<C>> と関手 &m<F, G: \scr<B> \to; \scr<C>> を考える。
-      &m<\scr<B>> の対象 &m<B> に対して &m<\scr<C>> の射 &m<\sb<`u><B>: FB \to; GB> が単に定まっている族 &m<(\sb<`u><B>) \sb<><B \in; \scr<B>>> を、&m<F> から &m<G> への\em<不自然変換\fl<unnatural transformation>> といい、&m<`u: F \o|rel|<⤃> G> で表す。
+      &m<\scr<B>> の対象 &m<B> に対して &m<\scr<C>> の射 &m<\sb<`u><B>: FB \to; GB> が単に定まっている族 &m<(\sb<`u><B>) \sb<><B \in; \scr<B>>> を、&m<F> から &m<G> への\em<不自然変換\fl<unnatural transformation>> といい、&m<`u: F \vertraarr; G> で表す。
     >
   >
   \thm|type="def"|<
@@ -82,7 +82,7 @@
         &m<\bfrm<UNat> (\scr<B>, \scr<C>)> の対象は、関手 &m<F: \scr<B> \to; \scr<C>> の全体とする。
       >
       \li*<
-        &m<\bfrm<UNat> (\scr<B>, \scr<C>)> の 2 つの対象 &m<F, G> の間の射は、不自然変換 &m<`u: F \o|rel|<⤃> G> の全体とする。
+        &m<\bfrm<UNat> (\scr<B>, \scr<C>)> の 2 つの対象 &m<F, G> の間の射は、不自然変換 &m<`u: F \vertraarr; G> の全体とする。
       >
     >
     \p<
@@ -91,10 +91,10 @@
   >
   \thm|type="prp"|<
     \p<
-      対称モノイダル圏 &m<(\bfrm<Cat>, \o|ord|<⬦>)> は閉であり、圏 &m<\scr<B>, \scr<C>> の冪は &m<\bfrm<UNat> (\scr<B>, \scr<C>)> で与えられる。
+      対称モノイダル圏 &m<(\bfrm<Cat>, \rhombus|ord|;)> は閉であり、圏 &m<\scr<B>, \scr<C>> の冪は &m<\bfrm<UNat> (\scr<B>, \scr<C>)> で与えられる。
       すなわち、任意の圏 &m<\scr<A>, \scr<B>, \scr<C>> に対し、全単射
       &mb<
-        \sb<\op<Hom>><\bfrm<Cat>> (\scr<A> \o|bin|<⬦> \scr<B>, \scr<C>) \cong; \sb<\op<Hom>><\bfrm<Cat>> (\scr<A>, \bfrm<UNat> (\scr<B>, \scr<C>))
+        \sb<\op<Hom>><\bfrm<Cat>> (\scr<A> \rhombus; \scr<B>, \scr<C>) \cong; \sb<\op<Hom>><\bfrm<Cat>> (\scr<A>, \bfrm<UNat> (\scr<B>, \scr<C>))
       >
       が全ての変数について自然に成り立つ。
     >
@@ -106,12 +106,12 @@
   >
   \p<
     通常の直積によって対称モノイダル圏と見なした &m<(\bfrm<Cat>, \times|ord|;)> は閉であるから、これによって豊穣された圏を考えることができるが、&m<(\bfrm<Cat>, \times|ord|;)>-豊穣圏とは 2-圏のことであった。
-    上の命題により、奇妙テンソル積によって対称モノイダル圏と見なした &m<(\bfrm<Cat>, \o|ord|<⬦>)> も閉であるから、これによって豊穣された圏も考えることができる。
+    上の命題により、奇妙テンソル積によって対称モノイダル圏と見なした &m<(\bfrm<Cat>, \rhombus|ord|;)> も閉であるから、これによって豊穣された圏も考えることができる。
     これは 2-圏よりも弱い概念を与え、半双圏と呼ばれることがある。
   >
   \thm|type="def"|<
     \p<
-      &m<(\bfrm<Cat>, \o|ord|<⬦>)>-豊穣圏のことを\em<半双圏\fl<sesquicategory>> という。
+      &m<(\bfrm<Cat>, \rhombus|ord|;)>-豊穣圏のことを\em<半双圏\fl<sesquicategory>> という。
     >
   >
   \p<
