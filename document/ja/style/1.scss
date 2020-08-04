@@ -1486,6 +1486,10 @@ article.main {
     letter-spacing: -1px;
   }
 
+  math-o[data-cont=":"] {
+    font-family: "Math" !important;
+  }
+
   // 定理環境
 
   div.theorem {
