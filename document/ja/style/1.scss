@@ -1495,31 +1495,11 @@ article.main {
   }
 
   div.theorem >span.number {
-    @include before-after("定理 ", ".");
+    @include before-after("", ".");
     float: left;
     margin: $vertical-margin $blank-padding 0px 0px;
     color: $label-color;
     line-height: $line-height;
-  }
-
-  div.theorem.definition >span.number {
-    @include before-after("定義 ", ".");
-  }
-
-  div.theorem.proposition >span.number {
-    @include before-after("命題 ", ".");
-  }
-
-  div.theorem.lemma >span.number {
-    @include before-after("補題 ", ".");
-  }
-
-  div.theorem.corollary >span.number {
-    @include before-after("系 ", ".");
-  }
-
-  div.theorem.axiom >span.number {
-    @include before-after("公理 ", ".");
   }
 
   div.proof {

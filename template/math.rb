@@ -134,7 +134,7 @@ converter.add(["thm"], ["page"]) do |element|
   this << Tag.build("div", "theorem") do |this|
     this["class"] += " " + THEOREM_TYPE_CLASSES[type]
     this << Tag.build("span", "number") do |this|
-      this << get_number(:theorem, id).to_s
+      this << THEOREM_TYPE_NAMES[type] + " " + get_number(:theorem, id).to_s
       name_element = element.elements.to_a("name").first
       if name_element
         this << " ["
