@@ -156,8 +156,8 @@
       &mb<
         \array|align="rcl"|<
           \c<\sb<`a><ABC>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> \rm<assoc>: `[(A \times; B) \times; C, A \times; (B \times; C)`]`}> \br;
-          \c<\sb<`l><A>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;) : `[A, 1 \times; A`]`}> \br;
-          \c<\sb<`r><A>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;) : `[A, A \times; 1`]`}> \br;
+          \c<\sb<`l><A>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \tstar;, a \rangle;) : `[A, 1 \times; A`]`}> \br;
+          \c<\sb<`r><A>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \tstar; \rangle;) : `[A, A \times; 1`]`}> \br;
           \c<\sb<`s><AB>> \c<=> \c<`{u: 1 \vdash; \tt|fun|<arr> \rm<swap>: `[A \times; B, B \times; A`]`}>
         >
       >
@@ -168,8 +168,8 @@
           \c<\tt|fun|<first> (\tt|fun|<first> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \tt|fun|<first> F> \br;
           \c<\tt|fun|<second> (\tt|fun|<first> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \tt|fun|<first> (\tt|fun|<second> F)> \br;
           \c<\tt|fun|<second> (\tt|fun|<second> F) \gggt|bin|; \tt|fun|<arr> \rm<assoc>> \c<=> \c<\tt|fun|<arr> \rm<assoc> \gggt|bin|; \tt|fun|<second> F> \br;
-          \c<F \gggt|bin|; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;)> \c<=> \c<\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;) \gggt|bin|; \tt|fun|<second> F> \br;
-          \c<F \gggt|bin|; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;)> \c<=> \c<\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;) \gggt|bin|; \tt|fun|<first> F> \br;
+          \c<F \gggt|bin|; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \tstar;, a \rangle;)> \c<=> \c<\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \tstar;, a \rangle;) \gggt|bin|; \tt|fun|<second> F> \br;
+          \c<F \gggt|bin|; \tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \tstar; \rangle;)> \c<=> \c<\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \tstar; \rangle;) \gggt|bin|; \tt|fun|<first> F> \br;
           \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<arr> \rm<swap>> \c<=> \c<\tt|fun|<arr> \rm<swap> \gggt|bin|; \tt|fun|<second> F> \br;
           \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<arr> \rm<swap>> \c<=> \c<\tt|fun|<arr> \rm<swap> \gggt|bin|; \tt|fun|<first> F>
         >
@@ -179,10 +179,10 @@
         \array|align="rcl"|<
           \c<\tt|fun|<first> (\tt|fun|<arr> \rm<assoc>) \gggt|bin|; \tt|fun|<second> F> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> \rm<assoc>)> \br;
           \c<\tt|fun|<second> (\tt|fun|<arr> \rm<assoc>) \gggt|bin|; \tt|fun|<first> F> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<second> (\tt|fun|<arr> \rm<assoc>)> \br;
-          \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;)) \gggt|bin|; \tt|fun|<second> F> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;))> \br;
-          \c<\tt|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;)) \gggt|bin|; \tt|fun|<first> F> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \ostar;, a \rangle;))> \br;
-          \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;)) \gggt|bin|; \tt|fun|<second> F> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;))> \br;
-          \c<\tt|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;)) \gggt|bin|; \tt|fun|<first> F> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \ostar; \rangle;))> \br;
+          \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \tstar;, a \rangle;)) \gggt|bin|; \tt|fun|<second> F> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \tstar;, a \rangle;))> \br;
+          \c<\tt|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \tstar;, a \rangle;)) \gggt|bin|; \tt|fun|<first> F> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; \tstar;, a \rangle;))> \br;
+          \c<\tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \tstar; \rangle;)) \gggt|bin|; \tt|fun|<second> F> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \tstar; \rangle;))> \br;
+          \c<\tt|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \tstar; \rangle;)) \gggt|bin|; \tt|fun|<first> F> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<second> (\tt|fun|<arr> (\rm<`l> a. \sfun; \langle; a, \tstar; \rangle;))> \br;
           \c<\tt|fun|<first> (\tt|fun|<arr> \rm<swap>) \gggt|bin|; \tt|fun|<second> F> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<first> (\tt|fun|<arr> \rm<swap>)> \br;
           \c<\tt|fun|<second> (\tt|fun|<arr> \rm<swap>) \gggt|bin|; \tt|fun|<first> F> \c<=> \c<\tt|fun|<first> F \gggt|bin|; \tt|fun|<second> (\tt|fun|<arr> \rm<swap>)>
         >
