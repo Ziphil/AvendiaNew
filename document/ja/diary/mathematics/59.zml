@@ -18,7 +18,7 @@
   \thm|type="lem",id="preseq"|<
     \p<
       正則基数 &m<`k> をとる。
-      圏 &m<\scr<C>> の対象 &m<C> に対し、2 条件
+      圏 &m<\scr<C>> の対象 &m<C> に対し、3 条件
     >
     \ol<
       \li*<
@@ -26,8 +26,13 @@
       >
       \li*<
         &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> の余極限 &m<(\sb<d><i>: Fi \to; D) \sb<><i \in; \scr<I>>> をとる。
-        このとき、任意の &m<\scr<C>> の射 &m<f: C \to; D> に対し、ある &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<g: C \to; Fi> が存在して &m<f = g \rtriangle; \sb<d><i>> と分解できる。
-        さらに、任意の &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<g, g': C \to; Fi> について &m<f = g \rtriangle; \sb<d><i> = g' \rtriangle; \sb<d><i>> であるならば、ある &m<\scr<I>> の対象 &m<\bar<i>> が存在して、&m<i \leq; \bar<i>> であって &m<g \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort; = g' \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort;> が成り立つ。
+        このとき、任意の &m<\scr<C>> の射 &m<f: C \to; D> に対し、ある &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<g: C \to; Fi> が存在して &m<f = g \rtriangle; \sb<d><i>> という分解ができる。
+        さらに、任意の &m<\scr<I>> の対象 &m<i, i'> と &m<\scr<C>> の射 &m<g: C \to; Fi, g': C \to; Fi'> について &m<f = g \rtriangle; \sb<d><i> = g' \rtriangle; \sb<d><i'>> であるならば、ある &m<\scr<I>> の対象 &m<\bar<i>> が存在して、&m<i \leq; \bar<i>> かつ &m<i' \leq; \bar<i>> であって &m<g \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort; = g' \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort;> が成り立つ。
+      >
+      \li*<
+        &m<`k>-フィルター図式 &m<F: \scr<I> \to; \scr<C>> の余極限 &m<(\sb<d><i>: Fi \to; D) \sb<><i \in; \scr<I>>> をとる。
+        このとき、任意の &m<\scr<C>> の射 &m<f: C \to; D> に対し、ある &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<g: C \to; Fi> が存在して &m<f = g \rtriangle; \sb<d><i>> という分解ができる。
+        さらに、任意の &m<\scr<I>> の対象 &m<i, i'> と &m<\scr<C>> の射 &m<g: C \to; Fi, g': C \to; Fi'> について &m<f = g \rtriangle; \sb<d><i> = g' \rtriangle; \sb<d><i'>> であるならば、ある &m<\scr<I>> の対象 &m<\bar<i>> と射 &m<u: i \to; \bar<i>, u': i' \to; \bar<i>> が存在して、&m<g \rtriangle; Fu = g' \rtriangle; Fu'> が成り立つ。
       >
     >
     \p<
@@ -37,12 +42,13 @@
   \prf<
     \p<
       \a|href="57.html"|<7 月 27 日>の補題 2 を用いて &m<\bfrm<Set>> での余極限を書き下すと証明できる。
+      条件 3 との同値性については、\a|href="58.html"|<7 月 28 日>の定理 8 によって &m<`k>-有向余極限と &m<`k>-フィルター余極限が同じものであることを利用する。
       詳細は省略する。
     >
   >
   \p<
     この補題により、ある対象 &m<C> が &m<`k>-表示可能であることの良い換えとして、その &m<C> から何らかの &m<`k>-有向余極限への射が、その余極限を構成している射の 1 つを経由する形で本質的に一意に分解できると言うことができる。
-    ここで「本質的に一意」と言っているのは、2 種類の分解 &m<g, g': C \to; Fi> が与えられたら、より大きな &m<\bar<i>> のもとでは &m<g, g'> は等しくなるという意味である。
+    ここで「本質的に一意」と言っているのは、2 種類の分解 &m<g: C \to; Fi, g': C \to; Fi'> が与えられたら、より大きな &m<\bar<i>> のもとでは &m<g, g'> は等しくなるという意味である。
   >
   \p<
     表示可能性についてすぐに分かるのは、紐付けられた基数を大きくしても良いということである。
@@ -169,6 +175,10 @@
       >
       が成り立つが、これは &m<f> の分解が本質的に一意であるということである。
     >
+  >
+  \h1<追記 (2020 年 8 月 5 日)>
+  \p<
+    \ref|type="cthm",id="preseq"|; にフィルター余極限の場合の条件を追加した。
   >
   \h1<参考文献>
   \ol<
