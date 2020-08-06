@@ -122,7 +122,6 @@ bundle exec ruby converter/main.rb -l (ファイル名の絶対パス)
 したがって、『Avendia』を完全に再現するためには、これらのファイルは別途用意する必要があります。
 
 - .htaccess ファイル
-- `document/ja/style/reset.css`
 - `document/ja/file/` 以下にあるファイル
 
 このうち、辞書データは[別リポジトリ](https://github.com/Ziphil/ShaleianDictionary)で管理しています。

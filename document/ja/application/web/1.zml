@@ -5,7 +5,6 @@
   \head<
     \meta|charset="UTF-8"|;
     \script|src="../../program/script/7.js"|;
-    \link|rel="stylesheet",type="text/css",href="../../style/reset.css"|;
     \link|rel="stylesheet",type="text/css",href="../../style/4.css"|;
     \title<Weblio Vocabulary Rating>
   >
