@@ -127,6 +127,10 @@ class ShaleiaDictionary < CustomBase
         else
           output << "?"
         end
+      when 4
+        version = @type
+        whole_data = ShaleiaUtilities.fetch_whole_data_without_meta(version)
+        output << "{\"schemaVersion\":1,\"color\":\"informational\",\"label\":\"words\",\"message\": \"#{whole_data.size}\"}"
       end
     rescue => exception
       output = ""
