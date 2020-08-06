@@ -3,8 +3,8 @@
 
 
 require 'cgi'
-require_relative '../../file/module/1'
-require_relative '../../file/module/3'
+require_relative '../../program/module/1'
+require_relative '../../program/module/3'
 
 Encoding.default_external = "UTF-8"
 $stdout.sync = true

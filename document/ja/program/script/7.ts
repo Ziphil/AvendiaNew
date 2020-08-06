@@ -45,7 +45,7 @@ const TWITTER_HASHTAG = "WeblioRating";
 const INTERVAL = 50;
 const COOKIE_AGE = 10000;
 
-const INTERFACE_URL = "../../file/interface/2.cgi";
+const INTERFACE_URL = "../../program/interface/2.cgi";
 
 type HistoryMode = 0 | 1;
 type Coordinates = {x: number, y: number};

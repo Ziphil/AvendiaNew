@@ -123,18 +123,10 @@ bundle exec ruby converter/main.rb -l (ファイル名の絶対パス)
 
 - .htaccess ファイル
 - `document/ja/style/reset.css`
-- `document/ja/file/application/` 以下にある画像ファイル
-- `document/ja/file/character/` 以下にある画像ファイル
-- `document/ja/file/cource/` 以下にある PDF ファイル
-- `document/ja/file/dictionary/` 以下にある辞書データ関連ファイル
-- `document/ja/file/game/` 以下にある画像ファイル
-- `document/ja/file/grammer/` 以下にある PDF ファイル
-- `document/ja/file/mathematics/` 以下にある PDF ファイル
-- `document/ja/file/mathematics_diary/` 以下にある PDF ファイル
-- `document/ja/file/other/` 以下にある画像ファイル
+- `document/ja/file/` 以下にあるファイル
 
 このうち、辞書データは[別リポジトリ](https://github.com/Ziphil/ShaleianDictionary)で管理しています。
-GitHub の Webhook 機能の通知を受け取るための CGI スクリプトを `(サーバーアドレス)/file/interface/1.cgi` として用意してあるので、ペイロード URL にこのアドレスを指定しておくと、プッシュ時などに自動でサーバー上のデータを更新できます。
+GitHub の Webhook 機能の通知を受け取るための CGI スクリプトを `(サーバーアドレス)/program/interface/1.cgi` として用意してあるので、ペイロード URL にこのアドレスを指定しておくと、プッシュ時などに自動でサーバー上のデータを更新できます。
 
 ### サイトの公開について
 サイトの管理者である Ziphil の許可を得ずに、このリポジトリに含まれるファイルおよびそれを変換したファイルを、オンラインで公開することを禁じます。

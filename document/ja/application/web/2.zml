@@ -4,7 +4,7 @@
 \html|lang="ja"|<
   \head<
     \meta|charset="UTF-8"|;
-    \script|src="../../file/script/8.js"|;
+    \script|src="../../program/script/8.js"|;
     \link|rel="stylesheet",type="text/css",href="../../style/reset.css"|;
     \link|rel="stylesheet",type="text/css",href="../../style/5.css"|;
     \title<単語データからランダムで表示するやつ>

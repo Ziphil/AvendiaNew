@@ -5,7 +5,7 @@
   \head<
     \meta|charset="UTF-8"|;
     \meta|name="viewport",content="width=1170px"|;
-    \script|src="../../file/script/10.js"|;
+    \script|src="../../program/script/10.js"|;
     \link|rel="stylesheet",type="text/css",href="../../style/reset.css"|;
     \link|rel="stylesheet",type="text/css",href="../../style/7.css"|;
     \title<Tsolitaire>
