@@ -53,7 +53,7 @@
       として具体的に与えられる。
       ここで、同値関係 &m<\sim;> は、&m<x \in; Fk> と &m<x' \in; Fk'> に対して、
       &mb<
-        x \sim; x' \implied; \multi<u><><><><\exists;>: k \to; k' \ssbin; (Fu) x = x'
+        x \sim; x' \implied; &raw<ある &m<\scr<I>> の射 &m<u: k \to; k'> について &m<(Fu) x = x'>>
       >
       を満たす最小の同値関係である。
     >
