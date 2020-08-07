@@ -16,8 +16,8 @@
   \thm|type="prp",id="regcard"|<
     \p<
       正則基数 &m<`k> をとる。
-      ある集合 &m<A> で添字付けられた集合族 &m<`{\sb<X><a>`} \sb<><a \in; A>> に対し、&m<\lvert; A \rvert; `< `k> であり、さらに任意の &m<a \in; A> に対して &m<\lvert; \sb<X><a> \rvert; `< `k> であるとする。
-      このとき、&m<\lvert; \bigcup|in|<a \in; A> \sb<X><a> \rvert; `< `k> が成り立つ。
+      ある集合 &m<L> で添字付けられた集合族 &m<`{\sb<X><l>`} \sb<><l \in; L>> に対し、&m<\lvert; L \rvert; `< `k> であり、さらに任意の &m<l \in; L> に対して &m<\lvert; \sb<X><l> \rvert; `< `k> であるとする。
+      このとき、&m<\lvert; \bigcup|in|<l \in; L> \sb<X><l> \rvert; `< `k> が成り立つ。
     >
   >
   \p<
@@ -46,11 +46,11 @@
         &m<\scr<I>> は空でない。
       >
       \li*<
-        &m<\scr<I>> の対象から成る集合 &m<`{\sb<i><a>`} \sb<><a \in; A>> でその濃度が &m<`k> 未満であるものに対し、ある対象 &m<\bar<i>> および各 &m<a \in; A> に対して射 &m<\sb<u><a>: \sb<i><a> \to; \bar<i>> が存在する。
+        &m<\scr<I>> の対象から成る集合 &m<`{\sb<i><l>`} \sb<><l \in; L>> でその濃度が &m<`k> 未満であるものに対し、ある対象 &m<\bar<i>> および各 &m<l \in; L> に対して射 &m<\sb<u><l>: \sb<i><l> \to; \bar<i>> が存在する。
       >
       \li*<
         &m<\scr<I>> の対象 &m<i, i'> をとる。
-        &m<\scr<I>> の射から成る集合 &m<`{\sb<u><a>: i \to; i'`} \sb<><a \in; A>> でその濃度が &m<`k> 未満であるものに対し、ある対象 &m<\bar<i>> および射 &m<\bar<u>: i' \to; \bar<i>> が存在し、各 &m<a \in; A> に対して &m<\sb<u><a> \rtriangle; \bar<u>> は &m<a> によらず全て等しい。
+        &m<\scr<I>> の射から成る集合 &m<`{\sb<u><l>: i \to; i'`} \sb<><l \in; L>> でその濃度が &m<`k> 未満であるものに対し、ある対象 &m<\bar<i>> および射 &m<\bar<u>: i' \to; \bar<i>> が存在し、各 &m<l \in; L> に対して &m<\sb<u><l> \rtriangle; \bar<u>> は &m<l> によらず全て等しい。
       >
     >
     \p<
@@ -128,8 +128,8 @@
         \scr<K> \coloneqq; `{\scr<A> \subseteq; \scr<I> \mid; &raw<&m<\scr<A>> は &m<`k>-小であって等号に関して唯一の終対象をもつ>`}
       >
       とおき、包含関係によって順序を入れる。
-      すると、濃度が &m<`k> 未満の &m<\scr<K>> の部分集合 &m<`{\sb<\scr<A>><a>`} \sb<><a \in; A>> に対し、&m<\bar<\scr<A>> \coloneqq; \bigcup|in|<a \in; A> \sb<\scr<A>><a>> とおくと、これの射全体の集合は濃度が &m<`k> 未満の集合を &m<`k> 未満個合併したものであるから、命題 \ref|type="thm",id="regcard"|; によってその濃度は &m<`k> 未満である。 
-      したがって、仮定の条件によって &m<\bar<\scr<A>> \sp<><*>> をとることができ、定義から &m<\bar<\scr<A>> \sp<><*>> に &m<\scr<K>> に属し、さらに &m<\bar<\scr<A>> \sp<><*>> は &m<`{\sb<\scr<A>><a>`} \sb<><a \in; A>> の上界を与える。
+      すると、濃度が &m<`k> 未満の &m<\scr<K>> の部分集合 &m<`{\sb<\scr<A>><l>`} \sb<><l \in; L>> に対し、&m<\bar<\scr<A>> \coloneqq; \bigcup|in|<l \in; L> \sb<\scr<A>><l>> とおくと、これの射全体の集合は濃度が &m<`k> 未満の集合を &m<`k> 未満個合併したものであるから、命題 \ref|type="thm",id="regcard"|; によってその濃度は &m<`k> 未満である。 
+      したがって、仮定の条件によって &m<\bar<\scr<A>> \sp<><*>> をとることができ、定義から &m<\bar<\scr<A>> \sp<><*>> に &m<\scr<K>> に属し、さらに &m<\bar<\scr<A>> \sp<><*>> は &m<`{\sb<\scr<A>><l>`} \sb<><l \in; L>> の上界を与える。
       以上により、&m<\scr<K>> は &m<`k>-有向である。
     >
     \p<
