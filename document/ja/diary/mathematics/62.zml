@@ -5,7 +5,7 @@
   \name<到達可能圏の基数の取り替え>
   \use-math;
 
-  \h1<日記 (2020 年 8 月 6 日)>
+  \h1<日記 (2020 年 8 月 8 日)>
   \p<
     局所表示可能圏と到達可能圏は、どちらもパラメータとして正則基数が付けられていた。
     今日は、この正則基数を別のより大きな正則基数に取り替えられるかという問題を考える。
@@ -28,8 +28,8 @@
     >
   >
   \p<
-    しかし、一般に到達可能圏を考えるとなると、状況は少し複雑になる。
-    これを議論するための準備として、次のような具体的な圏を考える。
+    しかし、一般の到達可能圏を考えるとなると、状況は少し複雑になる。
+    これについて議論するための準備として、次のような具体的な圏を考える。
   >
   \thm|type="def"|<
     \p<
@@ -41,8 +41,7 @@
         &m<\sb<\bfrm<DPos>><`k>> の対象は、&m<`k>-有向順序集合の全体とする。
       >
       \li*<
-        &m<\sb<\bfrm<DPos>><`k>> の 2 つの対象 &m<S, T> の間の射は、単調単射 &m<f: S \to; T> の全体とする。
-        ここで、&m<f> が単調とは、任意の &m<S> の元 &m<s, s'> に対して &m<s \leq; s'> ならば &m<fs \leq; fs'> であることとする。
+        &m<\sb<\bfrm<DPos>><`k>> の 2 つの対象 &m<S, T> の間の射は、順序を保つ単射 &m<f: S \to; T> の全体とする。
       >
     >
     \p<
@@ -128,7 +127,8 @@
     >
   >
   \p<
-    最後に、有向順序集合への包含写像が関手として終であることの言い換えについて述べておく。
+    最後に、有向順序集合への包含写像が関手として終であることの同値な言い換えについて述べておく。
+    ただし、今日はこの同値性を用いないので、有向順序集合への包含写像が終であるということを以下の 2 番目の条件で定義したと見なしても、今後の議論で問題になることはない。
   >
   \thm|type="lem",id="dirfin"|<
     \p<
@@ -149,7 +149,7 @@
   >
   \prf<
     \p<
-      ≡╹ω╹≡。
+      \a|href="57.html"|<7 月 27 日>の定理 6 を用いれば容易である。
     >
   >
   \p<
@@ -171,7 +171,7 @@
         任意の集合 &m<X> であって &m<\lvert; X \rvert; `< `l> であるものに対し、ある集合 &m<S \subseteq; \sb<\frak<P>><`k> (X)> であって &m<\lvert; S \rvert; `< `l> であるものが存在し、包含写像 &m<S \hookrarr; \sb<\frak<P>><`k> (X)> を関手と見なすと終である。
       >
       \li*<
-        任意の &m<`k>-有向順序集合 &m<I> およびその部分集合 &m<M \subseteq; I> であって &m<\lvert; M \rvert; `< `l> であるものに対し、ある部分集合 &m<\bar<M> \subseteq; I> であって &m<\lvert; \bar<M> \rvert; `< `l> であるものが存在し、&m<M \subseteq; \bar<M>> であってさらに &m<\bar<M>> は &m<`k>-有向である。
+        任意の &m<`k>-有向順序集合 &m<I> およびその部分集合 &m<X \subseteq; I> であって &m<\lvert; X \rvert; `< `l> であるものに対し、ある部分集合 &m<\sp<X><*> \subseteq; I> であって &m<\lvert; \sp<X><*> \rvert; `< `l> であるものが存在し、&m<X \subseteq; \sp<X><*>> であってさらに &m<\sp<X><*>> は &m<`k>-有向である。
       >
     >
     \p<
@@ -195,81 +195,84 @@
     >
     \p<
       任意の &m<X> の元 &m<x> に対し、1 元集合 &m<`{x`}> は &m<\sb<\frak<P>><`k> (X)> の元だから、\ref|type="cthm",id="dircol"|; による余極限の具体的な表示を見れば、ある &m<\scr<I>> の対象 &m<\sb<i><x>> が存在して &m<`{x`} \in; F \sb<i><x>> であることが分かる。
-      &m<\lvert; X \rvert; `< `l> であって &m<\scr<I>> は &m<`l>-有向だから、&m<(\sb<i><x>) \sb<><x \in; X>> の上界 &m<\bar<i>> がとれる。
+      &m<\lvert; X \rvert; `< `l> であって &m<\scr<I>> は &m<`l>-有向だから、集合 &m<`{\sb<i><x>`} \sb<><x \in; X>> の上界 &m<\bar<i>> がとれる。
       すると、任意の &m<X> の元 &m<x> に対し、&m<F \sb<i><x> \subseteq; F \bar<i>> となるから、&m<`{x`} \in; F \bar<i>> が分かる。
       すなわち、&m<F \bar<i>> は任意の 1 元集合を属する。
     >
     \p<
       この &m<F \bar<i>> が存在を示したい集合になっていることを示す。
       そのためには、あとは &m<F \bar<i> \subseteq; \sb<\frak<P>><`k> (X)> が終であることが示せば良い。
-      任意に &m<\sb<\frak<P>><`k> (X)> の元 &m<M> をとる。
-      &m<M> の各元の 1 元集合から成る族 &m<(`{m`}) \sb<><m \in; M>> を考えると、すでに述べたようにこれらはそれぞれ &m<F \bar<i>> の元である。
-      さらに &m<\lvert; M \rvert; `< `k> であって &m<F \bar<i>> は &m<`k>-有向順序集合だから、&m<(`{m`}) \sb<><m \in; M>> の上界 &m<N> が &m<F \bar<i>> の元としてとれる。
-      これはつまり &m<M \subseteq; N> が成り立つということだから、示したいことが示された。
+      任意に &m<\sb<\frak<P>><`k> (X)> の元 &m<Y> をとる。
+      &m<Y> の各元の 1 元集合から成る族 &m<`{`{y`}`} \sb<><y \in; Y>> を考えると、すでに述べたようにこれらはそれぞれ &m<F \bar<i>> の元である。
+      さらに &m<\lvert; Y \rvert; `< `k> であって &m<F \bar<i>> は &m<`k>-有向順序集合だから、&m<`{`{y`}`} \sb<><y \in; Y>> の上界 &m<Z> が &m<F \bar<i>> の元としてとれる。
+      これはつまり &m<Y \subseteq; Z> が成り立つということだから、示したいことが示された。
     >
     \p<
       \label<条件 3 &m<\raarr;> 条件 4:>
-      任意に &m<`k>-有向順序集合 &m<I> およびその部分集合 &m<M \subseteq; I> をとり、&m<\lvert; M \rvert; `< `l> であるとする。
-      これから、超限帰納法によって &m<I> の部分集合の増加列 &m<(\sb<M><`a>) \sb<><`a `< `k>> を構成する。
-      さらに同時に、各 &m<`a> について &m<\lvert; \sb<M><`a> \rvert; `< `l> であることも示す。
+      任意に &m<`k>-有向順序集合 &m<I> およびその部分集合 &m<X \subseteq; I> をとり、&m<\lvert; X \rvert; `< `l> であるとする。
+      これから、超限帰納法によって &m<I> の部分集合の増加列 &m<(\sb<X><`a>) \sb<><`a `< `k>> を構成する。
+      さらに同時に、各 &m<`a> について &m<\lvert; \sb<X><`a> \rvert; `< `l> であることも示す。
     >
     \p<
-      &m<`a = 0> のときは、&m<\sb<M><0> \coloneqq; M> とおく。
-      明らかに &m<\lvert; \sb<M><0> \rvert; `< `l> である。
+      基底ケースでは、&m<\sb<X><0> \coloneqq; X> とおく。
+      明らかに &m<\lvert; \sb<X><0> \rvert; `< `l> である。
     >
     \p<
-      &m<`a> が後続順序数のときを考える。
-      &m<\sb<M><`a - 1>> に仮定を使うことで、終部分集合 &m<S \subseteq; \sb<\frak<P>><`k> (\sb<M><`a - 1>)> であって &m<\lvert; S \rvert; `< `l> であるものがとれる。
-      &m<S> の元 &m<N> をとると、&m<\lvert; N \rvert; `< `k> であって &m<I> は &m<`k>-有向だから、&m<N> の上界 &m<\sb<\top;><N>> がとれる。
+      後続順序数のケースを考える。
+      &m<\sb<X><`a>> が定まっているとする。
+      これに仮定を使うことで、終部分集合 &m<S \subseteq; \sb<\frak<P>><`k> (\sb<X><`a>)> であって &m<\lvert; S \rvert; `< `l> であるものがとれる。
+      &m<S> の元 &m<Z> をとると、&m<\lvert; Z \rvert; `< `k> であって &m<I> は &m<`k>-有向だから、&m<Z> の上界 &m<\sb<\top;><Z>> がとれる。
       そこで、
       &mb<
-        \sb<M><`a> \coloneqq; \bigcup<N \in; S> (N \cup; `{\sb<\top;><N>`})
+        \sb<X><`a + 1> \coloneqq; \bigcup<Z \in; S> (Z \cup; `{\sb<\top;><Z>`})
       >
       とおく。
-      &m<\lvert; S \rvert; `< `l> であり、&m<S> の元 &m<N> について &m<\lvert; N \cup; `{\sb<\top;><N>`} \rvert; `< `k `< `l> でもあるから、&m<`l> が正則基数であることより &m<\lvert; \sb<M><`a> \rvert; `< `l> であることが分かる。
-      なお、&m<\sb<M><`a - 1> \subseteq; \sb<M><`a>> であることは以下のようにして分かる。
-      任意に &m<\sb<M><`a - 1>> から元 &m<m> をとると、1 元集合 &m<`{m`}> は &m<\sb<\frak<P>><`k> (\sb<M><`a - 1>)> の元だから、&m<S> が終であることより、ある &m<S> の元 &m<\sb<N><m>> が存在して &m<`{m`} \subseteq; \sb<N><m>> すなわち &m<m \in; \sb<N><m>> が成り立つ。
-      これより、&m<m \in; \sb<M><`a>> が分かる。
+      &m<\lvert; S \rvert; `< `l> であり、&m<S> の元 &m<Z> について &m<\lvert; Z \cup; `{\sb<\top;><Z>`} \rvert; `< `k `< `l> でもあるから、&m<`l> が正則基数であることより &m<\lvert; \sb<X><`a + 1> \rvert; `< `l> であることが分かる。
+      なお、&m<\sb<X><`a> \subseteq; \sb<X><`a + 1>> であることは以下のようにして分かる。
+      任意に &m<\sb<X><`a>> から元 &m<m> をとると、1 元集合 &m<`{m`}> は &m<\sb<\frak<P>><`k> (\sb<X><`a>)> の元だから、&m<S> が終であることより、ある &m<S> の元 &m<\sb<Z><m>> が存在して &m<`{m`} \subseteq; \sb<Z><m>> すなわち &m<m \in; \sb<Z><m>> が成り立つ。
+      これより、&m<m> は &m<\sb<X><`a + 1>> の元である。
     >
     \p<
-      &m<`a> が極限順序数のときは、
+      極限順序数のケースを考える。
+      このときは、
       &mb<
-        \sb<M><`a> \coloneqq; \bigcup<`b `< `a> \sb<M><`b>
+        \sb<X><`a> \coloneqq; \bigcup<`j `< `a> \sb<X><`j>
       >
       とおく。
-      このときも、&m<`l> が正則基数であることから &m<\lvert; \sb<M><`a> \rvert; `< `l> であることが分かる。
+      すると、前の場合と同様に、&m<`l> が正則基数であることから &m<\lvert; \sb<X><`a> \rvert; `< `l> であることが分かる。
     >
     \p<
-      以上のように定義された &m<I> の部分集合の増加列 &m<(\sb<M><`a>) \sb<><`a `< `k>> を用いて、
+      以上のように定義された &m<I> の部分集合の増加列 &m<(\sb<X><`a>) \sb<><`a `< `k>> を用いて、
       &mb<
-        \bar<M> \coloneqq; \bigcup<`a `< `k> \sb<M><`a>
+        \sp<X><*> \coloneqq; \bigcup<`a `< `k> \sb<X><`a>
       >
       と定める。
       これが存在を示したい集合になっていることを示す。
-      &m<`l> が正則基数であることから &m<\lvert; \bar<M> \rvert; `< `l> は分かり、さらに &m<(\sb<M><`a>) \sb<><`a `< `k>> が単調増加であることより &m<M = \sb<M><0> \subseteq; \bar<M>> であるから、あとは &m<\bar<M>> が &m<`k>-有向であることを示せば良い。
+      &m<`l> が正則基数であることから &m<\lvert; \sp<X><*> \rvert; `< `l> であることは分かり、さらに &m<(\sb<X><`a>) \sb<><`a `< `k>> が単調増加であることから &m<X = \sb<X><0> \subseteq; \sp<X><*>> である。
+      したがって、あとは &m<\sp<X><*>> が &m<`k>-有向であることを示せば良い。
     >
     \p<
-      任意に部分集合 &m<Y \subseteq; \bar<M>> をとり、&m<\lvert; Y \rvert; `< `k> であるとする。
-      &m<\bar<M>> の定義から、各 &m<Y> の元 &m<y> に対して、ある &m<\sb<`b><y>> が存在して &m<y \in; \sb<M><\sb<`b><y>>> が成り立つ。
-      ここで &m<\bar<`a> \coloneqq; \op<sup> \sfun; `{\sb<`a><y>`} \sb<><y \in; Y>> とおけば、&m<`k> が正則基数であることから &m<\bar<`a> `< `k> であり、任意の &m<Y> の元 &m<y> に対して &m<y \in; \sb<M><\bar<`a>>> が成り立つ。
-      これはすなわち &m<Y \subseteq; \sb<M><\bar<`a>>> であるということであり、さらに &m<\lvert; Y \rvert; `< `k> でもあったから &m<Y \in; \sb<\frak<P>><`k> (\sb<M><`a>)> である。
+      任意に部分集合 &m<Y \subseteq; \sp<X><*>> をとり、&m<\lvert; Y \rvert; `< `k> であるとする。
+      &m<\sp<X><*>> の定義から、各 &m<Y> の元 &m<y> に対して、ある &m<\sb<`a><y>> が存在して &m<y \in; \sb<X><\sb<`a><y>>> が成り立つ。
+      ここで &m<\bar<`a> \coloneqq; \op<sup> [] `{\sb<`a><y>`} \sb<><y \in; Y>> とおけば、&m<`k> が正則基数であることから &m<\bar<`a> `< `k> であり、任意の &m<Y> の元 &m<y> に対して &m<y \in; \sb<X><\bar<`a>>> が成り立つ。
+      これはすなわち &m<Y \subseteq; \sb<X><\bar<`a>>> であるということであり、さらに &m<\lvert; Y \rvert; `< `k> でもあったから &m<Y \in; \sb<\frak<P>><`k> (\sb<X><`a>)> である。
     >
     \p<
-      ここで &m<\sb<M><\bar<`a> + 1>> の定義を思い出そう。
-      これは、終部分集合 &m<S \subseteq; \sb<\frak<P>><`k> (\sb<M><\bar<`a>>)> をとり、さらに各 &m<S> の元 &m<N> の上界 &m<\sb<\top;><N>> をとって、
+      ここで &m<\sb<X><\bar<`a> + 1>> の定義を思い出そう。
+      これは、終部分集合 &m<S \subseteq; \sb<\frak<P>><`k> (\sb<X><\bar<`a>>)> をとり、さらに各 &m<S> の元 &m<Z> の上界 &m<\sb<\top;><Z>> をとって、
       &mb<
-        \sb<M><\bar<`a> + 1> \coloneqq; \bigcup<N \in; S> (N \cup; `{\sb<\top;><N>`})
+        \sb<X><\bar<`a> + 1> \coloneqq; \bigcup<Z \in; S> (Z \cup; `{\sb<\top;><Z>`})
       >
       と定義されていた。
-      ところで &m<Y \in; \sb<\frak<P>><`k> (\sb<M><`a>)> であったから、&m<S> が終であることより、ある &m<S> の元 &m<N> をとって &m<Y \subseteq; N> が成り立つようにできる。
-      したがって、&m<\sb<\top;><N>> が &m<N> の上界であることから、&m<\sb<\top;><N>> は &m<Y> の上界でもある。
-      &m<\sb<\top;><N> \in; \sb<M><\bar<`a> + 1> \subseteq; \bar<M>> であるから、これで &m<Y> の上界が &m<\bar<M>> にとれたことになる。
-      以上により、&m<\bar<M>> は &m<`k>-有向である。
+      ところで &m<Y \in; \sb<\frak<P>><`k> (\sb<X><`a>)> であったから、&m<S> が終であることより、ある &m<S> の元 &m<Z> をとって &m<Y \subseteq; Z> が成り立つようにできる。
+      したがって、&m<\sb<\top;><Z>> が &m<Z> の上界であることから、&m<\sb<\top;><Z>> は &m<Y> の上界でもある。
+      &m<\sb<\top;><Z> \in; \sb<X><\bar<`a> + 1> \subseteq; \sp<X><*>> であるから、これで &m<Y> の上界が &m<\sp<X><*>> にとれたことになる。
+      以上により、&m<\sp<X><*>> は &m<`k>-有向である。
     >
     \p<
       \label<条件 4 &m<\raarr;> 条件 1:>
       &m<`k>-到達可能圏 &m<\scr<C>> をとる。
-      まず、&m<\scr<C>> は &m<`k>-有向余極限をもち、&m<`l>-有向余極限は &m<`k>-有向余極限だから、&m<\scr<C>> は &m<`l>-有向余極限ももつ。
+      まず、&m<\scr<C>> は &m<`k>-有向余極限をもつが、&m<`l>-有向余極限は &m<`k>-有向余極限だから、&m<\scr<C>> は &m<`l>-有向余極限ももつ。
       ここで、
       &mb<
         \scr<A> \coloneqq; `{A \in; \scr<C> \mid; &raw<&m<A> は &m<\sb<\bfrm<Pres>><`k> (\scr<C>)> の対象の &m<`k>-有向 &m<`l>-小余極限として表せる>`}
@@ -287,25 +290,25 @@
     \p<
       ここで、
       &mb<
-        \scr<K> \coloneqq; `{M \subseteq; \scr<I> \mid; &raw<&m<\lvert; M \rvert; `< `l> であって &m<M> は &m<`k>-有向> `}
+        \scr<K> \coloneqq; `{X \subseteq; \scr<I> \mid; &raw<&m<\lvert; X \rvert; `< `l> であって &m<X> は &m<`k>-有向> `}
       >
       とおき、包含関係によって順序集合と見なす。
-      ここで、&m<\scr<K>> の元の族 &m<(\sb<M><x>) \sb<><x \in; X>> でその要素が &m<`l> 未満であるものをとる。
-      &m<M \coloneqq; \bigcup|in|<x \in; X> \sb<M><x>> とおけば、これは濃度が &m<`l> 未満の集合を &m<`l> 未満個合併したものであるから、&m<`l> は正則基数であることより &m<M> 自身の濃度も &m<`l> 未満である。
-      これより &m<M> に仮定が使えて、部分集合 &m<\bar<M> \subseteq; \scr<I>> が存在し、&m<\lvert; \bar<M> \rvert; `< `l> および &m<M \subseteq; \bar<M>> および &m<\bar<M>> は &m<`k>-有向である。
-      すなわち、&m<\bar<M>> は &m<\scr<K>> の元であって、&m<(\sb<M><x>) \sb<><x \in; X>> の上界を与えている。
+      ここで、&m<\scr<K>> の元の族 &m<`{\sb<X><l>`} \sb<><l \in; L>> でその要素が &m<`l> 未満であるものをとる。
+      &m<\bar<X> \coloneqq; \bigcup|in|<l \in; L> \sb<X><l>> とおけば、これは濃度が &m<`l> 未満の集合を &m<`l> 未満個合併したものであるから、&m<`l> は正則基数であることより &m<X> 自身の濃度も &m<`l> 未満である。
+      これより &m<\bar<X>> に仮定が使えて、部分集合 &m<\sp<\bar<X>><*> \subseteq; \scr<I>> が存在し、&m<\lvert; \sp<\bar<X>><*> \rvert; `< `l> および &m<\bar<X> \subseteq; \sp<\bar<X>><*>> であって &m<\sp<\bar<X>><*>> は &m<`k>-有向である。
+      すなわち、&m<\sp<\bar<X>><*>> は &m<\scr<K>> の元であって、&m<`{\sb<X><l>`} \sb<><l \in; L>> の上界を与えている。
       以上により、&m<\scr<K>> は &m<`l>-有向である。
     >
     \p<
-      さて、&m<\scr<K>> の対象 &m<M> に対し、
+      さて、&m<\scr<K>> の対象 &m<X> に対し、
       &mb<
-        GM \coloneqq; \op<colim> (\ltort; M \hookrarr; \scr<I> \rtort; \rtriangle; F) 
+        GX \coloneqq; \op<colim> (\ltort; X \hookrarr; \scr<I> \rtort; \rtriangle; F) 
       >
       とおく。
-      &m<M> は &m<`k>-有向かつ &m<`l>-小であり、&m<F> の像は全て &m<\sb<\bfrm<Pres>><`k> (\scr<C>)> の対象であったから、&m<GM> は &m<\scr<A>> の元である。
-      また、余極限の普遍性によって射 &m<\sb<d><M>: GM \to; C> がとれる。
-      ここで、&m<\scr<K>> の対象 &m<M, M'> が &m<M \subseteq; M'> を満たすとすると、再び余極限の普遍性によって射 &m<GM \to; GM'> がとれるから、これによって関手 &m<G: \scr<K> \to; \scr<C>> と見なせる。
-      さらに、&m<(\sb<d><M>: GM \to; C) \sb<><M \in; \scr<K>>> は余錐を成し、余極限にもなっていることが容易に示せる。
+      &m<X> は &m<`k>-有向かつ &m<`l>-小であり、&m<F> の像は全て &m<\sb<\bfrm<Pres>><`k> (\scr<C>)> の対象であったから、&m<GM> は &m<\scr<A>> の元である。
+      また、余極限の普遍性によって射 &m<\sb<d><X>: GM \to; C> がとれる。
+      ここで、&m<\scr<K>> の対象 &m<X, X'> が &m<X \subseteq; X'> を満たすとすると、再び余極限の普遍性によって射 &m<GM \to; GM'> がとれるから、これによって関手 &m<G: \scr<K> \to; \scr<C>> と見なせる。
+      さらに、&m<(\sb<d><X>: GX \to; C) \sb<><X \in; \scr<K>>> は余錐を成し、余極限にもなっていることが容易に示せる。
       以上で、&m<C> が &m<\scr<A>> の元の &m<`l>-有向余極限として表せることが示せたが、これがまさに示したかったことである。
     >
   >
