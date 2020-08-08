@@ -169,25 +169,25 @@
       したがって、あとは &m<\scr<I>'> は補題 \ref|type="thm",id="fdcon"|; の条件を満たすことを示せば良い。
     >
     \p<
-      任意に &m<`k>-小な部分圏 &m<\scr<A> \subseteq; \scr<I>'> をとると、&m<\scr<I>'> は &m<`k>-フィルターであるから、補題 \ref|type="thm",id="fileq"|; によって余錐 &m<(\sb<u><a>: a \to; (i, `j)) \sb<><a \in; \scr<A>>> が存在する。
-      ここで、部分圏 &m<\sp<\scr<A>><*> \subseteq; \scr<I>> を次のように定義する。
-      まず、&m<`j + 1 \in; `k> であることに注意して、
+      任意に &m<`k>-小な部分圏 &m<\scr<A> \subseteq; \scr<I>'> をとると、&m<\scr<I>'> は &m<`k>-フィルターであるから、補題 \ref|type="thm",id="fileq"|; によって余錐 &m<(\sb<u><a>: a \to; (i, `a)) \sb<><a \in; \scr<A>>> が存在する。
+      ここで、部分圏 &m<\sp<\scr<A>><*> \subseteq; \scr<I>'> を次のように定義する。
+      まず、&m<`a + 1 \in; `k> であることに注意して、&m<\top; \coloneqq; (i, `a + 1)> は &m<\scr<I>'> の対象であることを踏まえて、
       &mb<
-        \op<Ob> (\sp<\scr<A>><*>) \coloneqq; \op<Ob> (\scr<A>) \cup; `{(i, `j + 1)`}
+        \op<Ob> (\sp<\scr<A>><*>) \coloneqq; \op<Ob> (\scr<A>) \cup; `{\top;`}
       >
       とする。
-      さらに、恒等射と包含写像によって定まる &m<\scr<I>'> の射 &m<v: (i, `j) \to; (i, `j + 1)> を考え、&m<\sp<\scr<A>><*>> の対象 &m<a, a'> に対し、
+      さらに、恒等射と包含写像によって定まる &m<\scr<I>'> の射 &m<v: (i, `a) \to; (i, `a + 1)> を考え、&m<\sp<\scr<A>><*>> の対象 &m<a, a'> に対し、
       &mb<
         \sb<\op<Hom>><\sp<\scr<A>><*>> (a, a') \coloneqq; \case<
           \c<\sb<\op<Hom>><\scr<A>> (a, a')> \c<(a \in; \scr<A>, a' \in; \scr<A>)> \br;
-          \c<`{\sb<u><a> \rtriangle; v`}> \c<(a \in; \scr<A>, a' = (i, `j + 1))> \br;
-          \c<\empty;> \c<(a = (i, `j + 1), a' \in; \scr<A>)> \br;
-          \c<`{\sb<\rm<id>><(i, `j + 1)>`}> \c<(a = a' = (i, `j + 1))> \br;
+          \c<`{\sb<u><a> \rtriangle; v`}> \c<(a \in; \scr<A>, a' = \top;)> \br;
+          \c<\empty;> \c<(a = \top;, a' \in; \scr<A>)> \br;
+          \c<`{\sb<\rm<id>><\top;>`}> \c<(a = \top;, a' = \top;)> \br;
         >
       >
       と定める。
       すると、&m<(\sb<u><a>) \sb<><a \in; \scr<A>>> が余錐であることから &m<\sp<\scr<A>><*>> が合成に関して閉じていることが分かるので、&m<\sp<\scr<A>><*>> は矛盾なく定義されている。
-      さらに、射集合の定義から、&m<(i, `j + 1)> は &m<\sp<\scr<A>><*>> の唯一の終対象になる。
+      さらに、射集合の定義から、&m<\top;> は &m<\sp<\scr<A>><*>> の唯一の終対象になる。
       以上により、&m<\scr<I>'> は補題 \ref|type="thm",id="fdcon"|; の条件を満たす。
     >
   >
