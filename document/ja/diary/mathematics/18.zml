@@ -92,25 +92,25 @@
     &mb<
       \array|align="rcl"|<
         \c<
-          \diag|hor="thk"|<
+          \tort<\diag|hor="thk"|<
             \v<A> \v<B>
             \ar|s="1:r0",e="2:l0",bend="50"|<f> \ar|s="1:r100",e="2:l100",bend="-50",inv|<h>
             \ar|s="1:r0",e="2:l0",bend="50",line="0",name="f",inv|; \ar|s="1:r100",e="2:l100",bend="-50",line="0",name="h"|;
             \ar|s="1",e="2",name="gu"|; \ar|s="1",e="2",line="0",name="gd",inv|;
             \ar|s="f:c",e="gu:c",line="2"|<`a> \ar|s="gd:c",e="h:c",line="2"|<`b>
-          >
+          >>
         >
         \c<\sfun; \longmapsto; \sfun;>
         \c<
-          \diag|hor="thk"|<
+          \tort<\diag|hor="thk"|<
             \v<A> \v<B>
             \ar|s="1",e="2",bend="30"|<f> \ar|s="1",e="2",bend="-30",inv|<h>
             \ar|s="1",e="2",bend="30",line="0",name="f",inv|; \ar|s="1",e="2",bend="-30",line="0",name="h"|;
             \ar|s="f:c",e="h:c",line="2"|<`b \dot<\circ;> `a>
-          >
+          >>
         > \br;
         \c<
-          \diag|hor="thk"|<
+          \tort<\diag|hor="thk"|<
             \v<A> \v<B> \v<C>
             \ar|s="1",e="2",bend="30"|<f> \ar|s="1",e="2",bend="-30",inv|<g>
             \ar|s="1",e="2",bend="30",line="0",name="f",inv|; \ar|s="1",e="2",bend="-30",line="0",name="g"|;
@@ -118,16 +118,16 @@
             \ar|s="2",e="3",bend="30"|<h> \ar|s="2",e="3",bend="-30",inv|<k>
             \ar|s="2",e="3",bend="30",line="0",name="h",inv|; \ar|s="2",e="3",bend="-30",line="0",name="k"|;
             \ar|s="h:c",e="k:c",line="2"|<`b>
-          >
+          >>
         >
         \c<\sfun; \longmapsto; \sfun;>
         \c<
-          \diag|hor="thk"|<
+          \tort<\diag|hor="thk"|<
             \v<A> \v<C>
             \ar|s="1",e="2",bend="30"|<h \circ; f> \ar|s="1",e="2",bend="-30",inv|<k \circ; g>
             \ar|s="1",e="2",bend="30",line="0",name="f",inv|; \ar|s="1",e="2",bend="-30",line="0",name="h"|;
             \ar|s="f:c",e="h:c",line="2"|<`b * `a>
-          >
+          >>
         >
       >
     >
@@ -157,20 +157,20 @@
   \p<
     例えば、左髭結合は
     &mb<
-      \diag|hor="med,thk"|<
+      \tort<\diag|hor="med,thk"|<
         \v<A> \v<B> \v<C>
         \ar|s="1",e="2"|<f>
         \ar|s="2",e="3",bend="30"|<h> \ar|s="2",e="3",bend="-30",inv|<k>
         \ar|s="2",e="3",bend="30",line="0",name="h",inv|; \ar|s="2",e="3",bend="-30",line="0",name="k"|;
         \ar|s="h:c",e="k:c",line="2"|<`b>
-      >
+      >>
       \sfun; \longmapsto; \sfun;
-      \diag|hor="thk"|<
+      \tort<\diag|hor="thk"|<
         \v<A> \v<C>
         \ar|s="1",e="2",bend="30"|<h \circ; f> \ar|s="1",e="2",bend="-30",inv|<k \circ; f>
         \ar|s="1",e="2",bend="30",line="0",name="f",inv|; \ar|s="1",e="2",bend="-30",line="0",name="h"|;
         \ar|s="f:c",e="h:c",line="2"|<`b \ast; f>
-      >
+      >>
     >
     という操作である。
     図式中の &m<h, k, `b> が成す部分に左から頬髭のような感じで &m<f> をくっ付けているので、左髭結合と呼ぶのだと思う。

@@ -110,7 +110,7 @@
     &mb<
       \array|align="rcl"|<
         \c<
-          \diag|hor="vthk"|<
+          \tort<\diag|hor="vthk"|<
             \v<\scr<C>> \v<\scr<D>>
             \ar|s="1",e="2",bend="40"|<F>
             \ar|s="1",e="2",bend="40",line="0",pos="20",name="a",inv|; \ar|s="1",e="2",bend="40",line="0",pos="50",name="c",inv|; \ar|s="1",e="2",bend="40",line="0",pos="80",name="x",inv|;
@@ -120,11 +120,11 @@
             \ar|s="c:c",e="d:c",line="2",name="f",inv|; \ar|s="c:c",e="d:c",line="0",name="g"|;
             \ar|s="x:c",e="y:c",line="2"|<`r> \ar|s="x:c",e="y:c",line="0",name="h",inv|;
             \ar|s="e:c",e="f:c",line="3"|<`J> \ar|s="g:c",e="h:c",line="3"|<`C>
-          >
+          >>
         >
         \c<\sfun; \longmapsto; \sfun;>
         \c<
-          \diag|hor="vthk"|<
+          \tort<\diag|hor="vthk"|<
             \v<\scr<C>> \v<\scr<D>>
             \ar|s="1",e="2",bend="40"|<F>
             \ar|s="1",e="2",bend="40",line="0",pos="25",name="a",inv|; \ar|s="1",e="2",bend="40",line="0",pos="50",name="c",inv|; \ar|s="1",e="2",bend="40",line="0",pos="75",name="x",inv|;
@@ -133,10 +133,10 @@
             \ar|s="a:c",e="b:c",line="2",inv|<`s> \ar|s="a:c",e="b:c",line="0",name="e"|;
             \ar|s="x:c",e="y:c",line="2"|<`r> \ar|s="x:c",e="y:c",line="0",name="h",inv|;
             \ar|s="e:c",e="h:c",line="3"|<`C \hat<\circ;> `J>
-          >
+          >>
         > \br;
         \c<
-          \diag|hor="vthk"|<
+          \tort<\diag|hor="vthk"|<
             \v<\scr<C>> \v<\scr<D>>
             \ar|s="1:r10",e="2:l10",bend="50"|<F>
             \ar|s="1:r10",e="2:l10",bend="50",line="0",pos="30",name="a",inv|; \ar|s="1:r10",e="2:l10",bend="50",line="0",pos="70",name="c",inv|;
@@ -149,11 +149,11 @@
             \ar|s="e:c",e="f:c",line="2",inv|<`r> \ar|s="e:c",e="f:c",line="0",name="y"|;
             \ar|s="g:c",e="h:c",line="2"|<`f> \ar|s="g:c",e="h:c",line="0",name="z",inv|;
             \ar|s="w:c",e="x:c",line="3"|<`J> \ar|s="y:c",e="z:c",line="3",inv|<`C>
-          >
+          >>
         >
         \c<\sfun; \longmapsto; \sfun;>
         \c<
-          \diag|hor="vthk"|<
+          \tort<\diag|hor="vthk"|<
             \v<\scr<C>> \v<\scr<D>>
             \ar|s="1",e="2",bend="40"|<F>
             \ar|s="1",e="2",bend="40",line="0",pos="25",name="a",inv|; \ar|s="1",e="2",bend="40",line="0",pos="75",name="c",inv|;
@@ -162,7 +162,7 @@
             \ar|s="a:c",e="f:c",line="2",inv|<`r \dot<\circ;> `s> \ar|s="a:c",e="f:c",line="0",name="w"|;
             \ar|s="c:c",e="h:c",line="2"|<`f \dot<\circ;> `t> \ar|s="c:c",e="h:c",line="0",name="x",inv|;
             \ar|s="w:c",e="x:c",line="3"|<`C \hat<*> `J>
-          >
+          >>
         >
       >
     >
