@@ -253,7 +253,7 @@
       したがって、任意の &m<\scr<C>> の対象 &m<C> に対し、
       &mb<
         \array|align="rrcl"|<
-          \c<`F:> \c<\sb<\op<Sub>><\scr<C>> (C)> \c<\longto;> \c<\sb<\op<Sub>><\sp<\bfrm<Set>><\sp<\scr<A>><\circ;>>> (\bf<z> C)> \br;
+          \c<Ш:> \c<\sb<\op<Sub>><\scr<C>> (C)> \c<\longto;> \c<\sb<\op<Sub>><\sp<\bfrm<Set>><\sp<\scr<A>><\circ;>>> (\bf<z> C)> \br;
           \c; \c<m> \c<\longmapsto;> \c<\bf<z> m>
         >
       >

@@ -74,16 +74,16 @@
       まず、
       &mb<
         \array|align="rrcl"|<
-          \c<`F:> \c<\sp<\op<Sub>><\rm<sp>> (A)> \c<\longto;> \c<\frak<P> (\op<Hom> (A, A))> \br;
+          \c<Ш:> \c<\sp<\op<Sub>><\rm<sp>> (A)> \c<\longto;> \c<\frak<P> (\op<Hom> (A, A))> \br;
           \c; \c<\ltort; m: M \tailrarr; A \rtort;> \c<\longmapsto;> \c<`{c \rtriangle; m \mid; &raw<&m<c: A \to; M> は &m<m \rtriangle; c = \sb<\op<id>><M>> を満たす>`}>
         >
       >
       とおく。
-      &m<`F> が単射であることが示されれば、&m<\sp<\op<Sub>><\rm<sp>> (A)> は &m<\frak<P> (\op<Hom> (A, A))> の部分クラスと見なすことができ、&m<\op<Hom> (A, A)> が集合であることから &m<\frak<P> (\op<Hom> (A, A))> も集合なので、&m<\sp<\op<Sub>><\rm<sp>> (A)> が集合であることが示される。
-      そこで、&m<`F> が単射であることを示す。
+      &m<Ш> が単射であることが示されれば、&m<\sp<\op<Sub>><\rm<sp>> (A)> は &m<\frak<P> (\op<Hom> (A, A))> の部分クラスと見なすことができ、&m<\op<Hom> (A, A)> が集合であることから &m<\frak<P> (\op<Hom> (A, A))> も集合なので、&m<\sp<\op<Sub>><\rm<sp>> (A)> が集合であることが示される。
+      そこで、&m<Ш> が単射であることを示す。
     >
     \p<
-      任意に分裂部分対象 &m<m: M \tailrarr; A, m': M' \tailrarr; A> をとり、&m<`F m = `F m'> が成り立つとする。
+      任意に分裂部分対象 &m<m: M \tailrarr; A, m': M' \tailrarr; A> をとり、&m<Ш m = Ш m'> が成り立つとする。
       &m<m> は分裂するから、射 &m<c: A \to; M> が存在して、
       &mb<
         \diag|hor="thn"|<
@@ -93,7 +93,7 @@
         >
       >
       は可換である。
-      定義から &m<c \rtriangle; m> は &m<`F m> に属するが、&m<`F m = `F m'> であるから &m<c \rtriangle; m> は &m<`F m'> にも属する。
+      定義から &m<c \rtriangle; m> は &m<Ш m> に属するが、&m<Ш m = Ш m'> であるから &m<c \rtriangle; m> は &m<Ш m'> にも属する。
       すなわち、射 &m<c': A \to; M'> が存在して、
       &mb<
         \diag<
@@ -118,7 +118,7 @@
         >
       >
       は可換で、上辺の 2 本の射は互いに逆になっていることが分かる。
-      したがって、部分対象として &m<m = m'> であることが得られたので、&m<`F> が単射であることが示された。
+      したがって、部分対象として &m<m = m'> であることが得られたので、&m<Ш> が単射であることが示された。
     >
   >
   \thm|type="thm",id="pressm"|<
