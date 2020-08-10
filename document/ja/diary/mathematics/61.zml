@@ -25,15 +25,24 @@
       の余錐 &m<(a: Ga \to; C) \sb<><a \in; \scr<A> `/ C>> が余極限になるとき、&m<\scr<A>> は\em<稠密\fl<dense>> であるという。
     >
   >
-  \p<
-    以降、圏 &m<\scr<C>> とその小部分圏 &m<\scr<A> \subseteq; \scr<C>> に対し、その制限 Yoneda 埋め込みを、
-    &mb<
-      \array|align="rrcl"|<
-        \c<\bf<z>:> \c<\scr<C>> \c<\longto;> \c<\sp<\bfrm<Set>><\sp<\scr<A>><\circ;>>> \br;
-        \c; \c<C> \c<\longmapsto;> \c<\op<Hom> (\hyphen;, C)>
+  \thm|type="def",id="ryon"|<
+    \p<
+      圏 &m<\scr<C>> とその小部分圏 &m<\scr<A> \subseteq; \scr<C>> に対し、関手
+      &mb<
+        \array|align="rrcl"|<
+          \c<\bf<z>:> \c<\scr<C>> \c<\longto;> \c<\sp<\bfrm<Set>><\sp<\scr<A>><\circ;>>> \br;
+          \c; \c<C> \c<\longmapsto;> \c<\tort<
+            \array|align="rcl"|<
+              \c<\sp<\scr<A>><\circ;>> \c<\longto;> \c<\bfrm<Set>> \br;
+              \c<A> \c<\longmapsto;> \c<\op<Hom> (A, C)>
+            >
+          >>
+        >
       >
+      を\em<制限 Yoneda 埋め込み\fl<restricted — embedding>>という。
     >
-    で表すことにする。
+  >
+  \p<
     &m<\scr<A>> と &m<\bf<z>> には以下の関係がある。
   >
   \thm|type="lem",id="denff"|<
