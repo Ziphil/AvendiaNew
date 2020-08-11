@@ -10,9 +10,11 @@ module ShaleiaUtilities
   ADVERB_PREFIXES = {"副詞" => "e"}
   PARTICLE_PREFIXES = {"非動詞修飾" => "i"}
   NEGATION_PREFIXES = {"否定" => "du"}
-  USED_CAPTION_ALPHABETS = {"U" => "語法", "N" => "備考", "M" => "語義"} 
   CATEGORIES = {"名" => "noun", "動" => "verb", "形" => "adjective", "副" => "adverb", "助" => "preposition", "接" => "conjunction", "間" => "interjection", "縮" => "contraction"}
   ASPECTS = {}.merge(INTRANSITIVE_ASPECTS).merge(TRANSITIVE_ASPECTS)
+
+  USED_CONTENT_ALPHABETS = {"U" => "語法", "N" => "備考", "M" => "語義"} 
+  CONTENT_ALPHABETS = {"M" => "meaning", "E" => "etymology", "U" => "usage", "N" => "note", "P" => "phrase", "S" => "example"}
 
   module_function
 
@@ -44,15 +46,15 @@ module ShaleiaUtilities
               NEGATION_PREFIXES.each do |nagation_type, nagation|
                 if nagation + modified_name + tense + aspect == search
                   if whole_data[name] =~ /^\+.*〈.*動.*〉/
-                    suggested_names << ["動詞型不定詞の活用 (#{tense_type}, #{aspect_type}, #{nagation_type}) <span class=\"japanese\">…</span> ", name]
+                    suggested_names << ["動詞型不定詞の活用 (#{tense_type}, #{aspect_type}, #{nagation_type})", name]
                   end
                 elsif modified_name + tense + aspect == search
                   if whole_data[name] =~ /^\+.*〈.*動.*〉/
-                    suggested_names << ["動詞型不定詞の活用 (#{tense_type}, #{aspect_type}) <span class=\"japanese\">…</span> ", name]
+                    suggested_names << ["動詞型不定詞の活用 (#{tense_type}, #{aspect_type})", name]
                   end
                 elsif nagation + modified_name == search
                   if whole_data[name] =~ /^\+.*〈.*名.*〉/
-                    suggested_names << ["名詞型不定詞の活用 (#{nagation_type}) <span class=\"japanese\">…</span> ", name]
+                    suggested_names << ["名詞型不定詞の活用 (#{nagation_type})", name]
                   end
                 end
               end
@@ -62,11 +64,11 @@ module ShaleiaUtilities
             NEGATION_PREFIXES.each do |nagation_type, nagation|
               if prefix + nagation + modified_name == search
                 if whole_data[name] =~ /^\+.*〈.*動.*〉/
-                  suggested_names << ["動詞型不定詞の活用 (#{prefix_type}, #{nagation_type}) <span class=\"japanese\">…</span> ", name]
+                  suggested_names << ["動詞型不定詞の活用 (#{prefix_type}, #{nagation_type})", name]
                 end
               elsif prefix + modified_name == search
                 if whole_data[name] =~ /^\+.*〈.*動.*〉/
-                  suggested_names << ["動詞型不定詞の活用 (#{prefix_type}) <span class=\"japanese\">…</span> ", name]
+                  suggested_names << ["動詞型不定詞の活用 (#{prefix_type})", name]
                 end
               end
             end
@@ -75,11 +77,11 @@ module ShaleiaUtilities
             NEGATION_PREFIXES.each do |nagation_type, nagation|
               if prefix + nagation + modified_name == search
                 if whole_data[name] =~ /^\+.*〈.*副.*〉/
-                  suggested_names << ["副詞型不定詞の活用 (#{prefix_type}, #{nagation_type}) <span class=\"japanese\">…</span> ", name]
+                  suggested_names << ["副詞型不定詞の活用 (#{prefix_type}, #{nagation_type})", name]
                 end              
               elsif prefix + modified_name == search
                 if whole_data[name] =~ /^\+.*〈.*副.*〉/
-                  suggested_names << ["副詞型不定詞の活用 (#{prefix_type}) <span class=\"japanese\">…</span> ", name]
+                  suggested_names << ["副詞型不定詞の活用 (#{prefix_type})", name]
                 end
               end
             end
@@ -87,14 +89,14 @@ module ShaleiaUtilities
           PARTICLE_PREFIXES.each do |prefix_type, prefix|
             if prefix + modified_name == search
               if whole_data[name] =~ /^\+.*〈.*助.*〉/
-                suggested_names << ["助接詞の活用 (#{prefix_type.gsub(/\d/, "")}) <span class=\"japanese\">…</span> ", name]
+                suggested_names << ["助接詞の活用 (#{prefix_type.gsub(/\d/, "")})", name]
               end
             end            
           end
           changes.each do |change_name, change_whole_data|
             if change_name == search
               change_whole_data.each do |change_data|
-                suggested_names << ["単語の変更 <span class=\"japanese\">…</span> <span class=\"sans\">#{search}</span> → ", change_data[0]]
+                suggested_names << ["単語の変更", change_data[0]]
               end
             end
           end
@@ -122,6 +124,51 @@ module ShaleiaUtilities
     suggested_names.uniq!
     hit_names = hit_names.sort_by{|s| ShaleiaStringUtilities.convert_dictionary(s, version)}
     return [hit_names, suggested_names]
+  end
+
+  def parse(name, data)
+    word = {}
+    word["name"] = name
+    word["date"] = 0
+    word["sort"] = ""
+    word["equivalents"] = []
+    word["contents"] = []
+    word["synonyms"] = []
+    data.each_line do |line|
+      if match = line.match(/^\+\s*(\d+)\s*〈(.+)〉/)
+        word["date"] = match[1].to_i
+        word["sort"] = match[2]
+      end
+      if match = line.match(/^\=\s*〈(.+?)〉\s*(.+)/)
+        equivalent = {}
+        equivalent["category"] = match[1]
+        equivalent["names"] = match[2].chomp.split(/\s*,\s*/)
+        word["equivalents"] << equivalent
+      end
+      if match = line.match(/^([^S])>\s*(.+)/)
+        type = CONTENT_ALPHABETS[match[1]]
+        if type
+          content = {}
+          content["type"] = type
+          content["text"] = match[2].chomp
+          word["contents"] << content
+        end
+      end
+      if match = line.match(/^S>\s*(.+)\s*→\s*(.+)/)
+        content = {}
+        content["type"] = CONTENT_ALPHABETS["S"]
+        content["shaleian"] = match[1].chomp
+        content["japanese"] = match[2].chomp
+        word["contents"] << content
+      end
+      if match = line.match(/^\-\s*(?:〈(.+)〉)?\s*(.+)/)
+        synonym = {}
+        synonym["category"] = match[1]
+        synonym["names"] = match[2].chomp.split(/\s*,\s*/)
+        word["synonyms"] << synonym
+      end
+    end
+    return word
   end
 
   def fetch_names(version = 0)

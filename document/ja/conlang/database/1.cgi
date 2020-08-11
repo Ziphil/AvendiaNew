@@ -151,7 +151,7 @@ module Source
     html = ""
     html << "<ul class=\"suggest\">\n"
     suggested_names.each do |explanation, name|
-      html << "<li>#{explanation}"
+      html << "<li>#{explanation} <span class=\"japanese\">…</span> "
       html << "<a href=\"1.cgi?search=#{name}&mode=search&type=0&agree=0#{option_string}\" class=\"sans\">#{name.gsub(/(\+|\~)/, "")}</a>"
       html << " ?</li>\n"
     end

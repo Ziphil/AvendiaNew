@@ -75,20 +75,24 @@ class BackendBase
     return @body
   end
 
-  def [](name, default = nil)
+  def [](name)
     if @cgi.multipart?
       if !@cgi.params[name].empty?
         return @cgi.params[name][0].read
       else
-        return default
+        return nil
       end
     else
       if @cgi[name]
         return @cgi[name]
       else
-        return default
+        return nil
       end
     end
+  end
+
+  def params(name)
+    return @cgi.params[name]
   end
 
 end
