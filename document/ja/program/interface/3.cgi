@@ -41,7 +41,7 @@ class ShaleiaInterface < BackendBase
     result["words"] = []
     result["suggestions"] = []
     hit_names[page * 30, 30].each do |name|
-      result["words"] << ShaleiaUtilities.parse(name, whole_data[name])
+      result["words"] << ShaleiaUtilities.parse(name, whole_data[name], version)
     end
     suggested_names.each do |explanation, name|
       result["suggestions"] << {"explanation" => explanation, "name" => name}

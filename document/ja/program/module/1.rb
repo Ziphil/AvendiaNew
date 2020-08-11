@@ -126,11 +126,12 @@ module ShaleiaUtilities
     return [hit_names, suggested_names]
   end
 
-  def parse(name, data)
+  def parse(name, data, version = 0)
     word = {}
     word["name"] = name
+    word["pronunciation"] = (version == 0) ? ShaleiaStringUtilities.pronunciation(name) : nil
     word["date"] = 0
-    word["sort"] = ""
+    word["sort"] = nil
     word["equivalents"] = []
     word["contents"] = []
     word["synonyms"] = []
