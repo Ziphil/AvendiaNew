@@ -51,6 +51,15 @@ class BackendBase
     @responded = true
   end
 
+  def respond_download(file, name)
+    option = {}
+    option["status"] = "OK"
+    option["type"] = "application/oct-stream"
+    option["Content-Disposition"] = "download;filename=#{name}"
+    @cgi.out(option){file.read}
+    @responded = true
+  end
+
   def respond_error(message, status = nil)
     option, output = {}, {}
     option["status"] = status || "SERVER_ERROR"
