@@ -47,7 +47,7 @@ class BackendBase
 
   def respond_error(message)
     option, output = {}, {}
-    option["status"] = "SERVER_ERROR"
+    option["status"] = "OK"
     option["type"] = "application/json"
     output["error"] = "error"
     output["message"] = message
