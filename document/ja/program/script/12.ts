@@ -29,12 +29,12 @@ export class Executor {
   }
 
   private createUrl<M extends keyof DayType>(mode: M, day: DayType[M]): string {
-    let url = "conlang/database/1.cgi?mode=fetch";
+    let url = "program/interface/3.cgi";
     if (mode === "current") {
-      url += "&type=1";
+      url += "?mode=fetch_word_size";
     } else {
-      url += "&type=3";
-      url += "&agree=" + day;
+      url += "?mode=fetch_progress";
+      url += "&duration=" + day;
     }
     return url;
   }
