@@ -215,10 +215,18 @@
         圏 &m<\sb<\bfrm<DPos>><`k>> は &m<`l>-到達可能である。
       >
       \li*<
-        任意の集合 &m<X> であって &m<\lvert; X \rvert; `< `l> であるものに対し、ある集合 &m<S \subseteq; \sb<\frak<P>><`k> (X)> であって &m<\lvert; S \rvert; `< `l> であるものが存在し、包含写像 &m<S \hookrarr; \sb<\frak<P>><`k> (X)> を関手と見なすと終である。
+        任意の集合 &m<X> であって &m<\lvert; X \rvert; `< `l> であるものに対し、ある部分集合 &m<S \subseteq; \sb<\frak<P>><`k> (X)> であって &m<\lvert; S \rvert; `< `l> であるものが存在し、その包含写像 &m<S \hookrarr; \sb<\frak<P>><`k> (X)> を関手と見なすと終である。
       >
       \li*<
         任意の &m<`k>-有向順序集合 &m<I> およびその部分集合 &m<X \subseteq; I> であって &m<\lvert; X \rvert; `< `l> であるものに対し、ある部分集合 &m<\sp<X><*> \subseteq; I> であって &m<\lvert; \sp<X><*> \rvert; `< `l> であるものが存在し、&m<X \subseteq; \sp<X><*>> であってさらに &m<\sp<X><*>> は &m<`k>-有向である。
+      >
+      \li*<
+        任意の &m<`k>-有向順序集合 &m<I> に対し、
+        &mb<
+          \scr<K> \coloneqq; `{X \subseteq; I \mid; &raw<&m<\lvert; X \rvert; `< `l> であって &m<X> は &m<`k>-有向> `}
+        >
+        とおき、包含関係によって順序集合と見なす。
+        このとき、&m<\scr<K>> は &m<`l>-有向である。
       >
     >
     \p<
@@ -317,7 +325,15 @@
       以上により、&m<\sp<X><*>> は &m<`k>-有向である。
     >
     \p<
-      \label<条件 4 &m<\raarr;> 条件 1:>
+      \label<条件 4 &m<\raarr;> 条件 5:>
+      &m<\scr<K>> の元の族 &m<`{\sb<X><l>`} \sb<><l \in; L>> でその個数が &m<`l> 未満であるものをとる。
+      &m<\bar<X> \coloneqq; \bigcup|in|<l \in; L> \sb<X><l>> とおけば、これは濃度が &m<`l> 未満の集合を &m<`l> 未満個合併したものであるから、&m<`l> は正則基数であることより &m<X> 自身の濃度も &m<`l> 未満である。
+      これより &m<\bar<X>> に仮定が使えて、部分集合 &m<\sp<\bar<X>><*> \subseteq; I> が存在し、&m<\lvert; \sp<\bar<X>><*> \rvert; `< `l> および &m<\bar<X> \subseteq; \sp<\bar<X>><*>> であって &m<\sp<\bar<X>><*>> は &m<`k>-有向である。
+      すなわち、&m<\sp<\bar<X>><*>> は &m<\scr<K>> の元であって、&m<`{\sb<X><l>`} \sb<><l \in; L>> の上界を与えている。
+      以上により、&m<\scr<K>> は &m<`l>-有向である。
+    >
+    \p<
+      \label<条件 5 &m<\raarr;> 条件 1:>
       &m<`k>-到達可能圏 &m<\scr<C>> をとる。
       まず、&m<\scr<C>> は &m<`k>-有向余極限をもつが、&m<`l>-有向余極限は &m<`k>-有向余極限だから、&m<\scr<C>> は &m<`l>-有向余極限ももつ。
       ここで、
@@ -333,26 +349,16 @@
       任意に &m<\scr<C>> の対象 &m<C> をとる。
       &m<\scr<C>> は &m<`k>-到達可能だから、ある &m<\sb<\bfrm<Pres>><`k> (\scr<C>)> の対象の &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> が存在して、&m<C = \op<colim> F> と書ける。
       この余極限余錐を &m<(\sb<c><i>: Fi \to; C) \sb<><i \in; \scr<I>>> とおく。
-    >
-    \p<
       ここで、
       &mb<
         \scr<K> \coloneqq; `{X \subseteq; \scr<I> \mid; &raw<&m<\lvert; X \rvert; `< `l> であって &m<X> は &m<`k>-有向> `}
       >
-      とおき、包含関係によって順序集合と見なす。
-      ここで、&m<\scr<K>> の元の族 &m<`{\sb<X><l>`} \sb<><l \in; L>> でその個数が &m<`l> 未満であるものをとる。
-      &m<\bar<X> \coloneqq; \bigcup|in|<l \in; L> \sb<X><l>> とおけば、これは濃度が &m<`l> 未満の集合を &m<`l> 未満個合併したものであるから、&m<`l> は正則基数であることより &m<X> 自身の濃度も &m<`l> 未満である。
-      これより &m<\bar<X>> に仮定が使えて、部分集合 &m<\sp<\bar<X>><*> \subseteq; \scr<I>> が存在し、&m<\lvert; \sp<\bar<X>><*> \rvert; `< `l> および &m<\bar<X> \subseteq; \sp<\bar<X>><*>> であって &m<\sp<\bar<X>><*>> は &m<`k>-有向である。
-      すなわち、&m<\sp<\bar<X>><*>> は &m<\scr<K>> の元であって、&m<`{\sb<X><l>`} \sb<><l \in; L>> の上界を与えている。
-      以上により、&m<\scr<K>> は &m<`l>-有向である。
-    >
-    \p<
-      さて、&m<\scr<K>> の対象 &m<X> に対し、
+      とおくと、仮定によってこれは &m<`l>-有向である。
+      &m<\scr<K>> の元 &m<X> に対し、
       &mb<
         GX \coloneqq; \op<colim> (\ltort; X \hookrarr; \scr<I> \rtort; \rtriangle; F) 
       >
-      とおく。
-      &m<X> は &m<`k>-有向かつ &m<`l>-小であり、&m<F> の像は全て &m<\sb<\bfrm<Pres>><`k> (\scr<C>)> の対象であったから、&m<GX> は &m<\scr<A>> の元である。
+      とおくと、&m<X> は &m<`k>-有向かつ &m<`l>-小であり、&m<F> の像は全て &m<\sb<\bfrm<Pres>><`k> (\scr<C>)> の対象であったから、&m<GX> は &m<\scr<A>> の元である。
       また、余極限の普遍性によって射 &m<\sb<d><X>: GX \to; C> がとれる。
       ここで、&m<\scr<K>> の対象 &m<X, X'> が &m<X \subseteq; X'> を満たすとすると、再び余極限の普遍性によって射 &m<GX \to; GX'> がとれるから、これによって関手 &m<G: \scr<K> \to; \scr<C>> と見なせる。
       さらに、&m<(\sb<d><X>: GX \to; C) \sb<><X \in; \scr<K>>> は余錐を成し、余極限にもなっていることが容易に示せる。
@@ -422,6 +428,11 @@
   \h1<追記 (2020 年 8 月 10 日)>
   \p<
     今後の参照用に、パラメータの正則基数を任意に大きく取り替えられることを定理として改めてまとめた。
+  >
+  \h1<追記 (2020 年 8 月 11 日)>
+  \p<
+    今後の議論で使うため、\ref|type="cthm",id="acck"|; に条件を追加した。
+    それに伴って、証明も少し変更した。
   >
   \h1<参考文献>
   \ol<
