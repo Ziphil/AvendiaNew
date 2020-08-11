@@ -2,15 +2,10 @@
 # coding: utf-8
 
 
-require 'cgi'
 require 'json'
 require 'open-uri'
 require_relative '../../program/module/1'
-require_relative '../../program/module/2'
-require_relative '../../program/module/3'
-
-Encoding.default_external = "UTF-8"
-$stdout.sync = true
+require_relative '../../program/module/4'
 
 
 class ShaleiaUploader < CustomBase
@@ -27,7 +22,7 @@ class ShaleiaUploader < CustomBase
 
   def fetch_github
     output = ""
-    parsed_body = JSON.parse(@body)
+    parsed_body = JSON.parse(self.body)
     repository_name = parsed_body["repository"]["full_name"]
     after_hash = parsed_body["after"]
     file_name = parsed_body["head_commit"]["modified"][0] || DEFAULT_FILE_NAME
@@ -44,7 +39,7 @@ class ShaleiaUploader < CustomBase
         output << line
       end
     end
-    @cgi.out("text/plain"){output}
+    respond(output, :text)
   end
 
 end
