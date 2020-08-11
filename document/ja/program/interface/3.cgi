@@ -11,11 +11,29 @@ class ShaleiaInterface < BackendBase
 
   def switch
     case @command
+    when "download"
+      download
     when "fetch_word_size"
       fetch_word_size
     when "fetch_progress"
       fetch_progress
     end
+  end
+
+  def download
+    type = self["type"]
+    case type
+    when "pdic"
+      file = File.new("../../file/dictionary/data/personal/1.dic")
+      name = "shaleia.dic"
+    when "otm"
+      file = File.new("../../file/dictionary/data/slime/1.json")
+      name = "shaleia.json"
+    when "zpdic"
+      file = File.new("../../file/dictionary/data/shaleia/1.xdc")
+      name = "shaleia.xdc"
+    end
+    respond_download(file, name)
   end
 
   def fetch_word_size
