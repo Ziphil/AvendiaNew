@@ -13,12 +13,17 @@ class BackendBase
   def initialize(body, cgi)
     @body = body
     @cgi = cgi
+    @responded = false
   end
 
   def run
     begin
       prepare
       switch
+      unless @responded
+        message = "noop"
+        respond_error(message, "BAD_REQUEST")
+      end
     rescue => exception
       message = exception.message.encode("utf-8") + "\n  " + exception.backtrace.join("\n  ").encode("utf-8")
       respond_error(message)
@@ -43,11 +48,12 @@ class BackendBase
       option["type"] = "text/plain"
       @cgi.out(option){output.to_s}
     end
+    @responded = true
   end
 
-  def respond_error(message)
+  def respond_error(message, status = nil)
     option, output = {}, {}
-    option["status"] = "OK"
+    option["status"] = status || "SERVER_ERROR"
     option["type"] = "application/json"
     output["error"] = "error"
     output["message"] = message
