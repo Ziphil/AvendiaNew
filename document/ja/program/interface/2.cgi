@@ -2,27 +2,11 @@
 # coding: utf-8
 
 
-require 'cgi'
 require 'date'
-require_relative '../../program/module/3'
-
-Encoding.default_external = "UTF-8"
-$stdout.sync = true
+require_relative '../../program/module/4'
 
 
-class WeblioSaver < CustomBase
-
-  def prepare
-    if @cgi.multipart?
-      @command = (!@cgi.params["mode"].empty?) ? @cgi.params["mode"][0].read : ""
-      @number = (!@cgi.params["number"].empty?) ? @cgi.params["number"][0].read : ""
-      @content = (!@cgi.params["content"].empty?) ? @cgi.params["content"][0].read : ""
-    else
-      @command = @cgi["mode"]
-      @number = @cgi["number"]
-      @content = @cgi["content"]
-    end
-  end
+class WeblioSaver < BackendBase
 
   def switch
     case @command
@@ -36,11 +20,12 @@ class WeblioSaver < CustomBase
   end
 
   def get
+    number = self["number"].to_i
     output = "No data"
-    if File.exist?("../../file/weblio/#{@number}.txt")
-      output = File.read("../../file/weblio/#{@number}.txt")
+    if File.exist?("../../file/weblio/#{number}.txt")
+      output = File.read("../../file/weblio/#{number}.txt")
     end
-    @cgi.out("text/plain"){output}
+    respond(output, :text)
   end
 
   def get_number
@@ -48,13 +33,15 @@ class WeblioSaver < CustomBase
     if File.exist?("../../file/weblio/meta.txt")
       number = File.read("../../file/weblio/meta.txt").to_i + 1
     end
-    @cgi.out("text/plain"){number.to_s}
+    respond(number, :text)
   end
 
   def save
-    File.write("../../file/weblio/#{@number}.txt", @content)
-    File.write("../../file/weblio/meta.txt", @number)
-    @cgi.out("text/plain"){"Done"}
+    number = self["number"].to_i
+    content = self["content"]
+    File.write("../../file/weblio/#{number}.txt", content)
+    File.write("../../file/weblio/meta.txt", number)
+    respond("Done", :text)
   end
 
 end
