@@ -17,6 +17,8 @@ class ShaleiaInterface < BackendBase
       fetch_word_size
     when "fetch_progress"
       fetch_progress
+    when "fetch_badge"
+      fetch_badge
     end
   end
 
@@ -59,6 +61,17 @@ class ShaleiaInterface < BackendBase
       output = "?"
     end
     respond(output, :text)
+  end
+
+  def fetch_badge
+    version = self["version"].to_i
+    whole_data = ShaleiaUtilities.fetch_whole_data_without_meta(version)
+    output = {}
+    output["schemaVersion"] = 1
+    output["color"] = "informational"
+    output["label"] = "words"
+    output["message"] = whole_data.size
+    respond(output)
   end
 
 end
