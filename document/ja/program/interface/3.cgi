@@ -18,6 +18,8 @@ class ShaleiaInterface < BackendBase
       download
     when "fetch_twitter"
       fetch_twitter
+    when "fetch_twitter_example"
+      fetch_twitter_example
     when "fetch_word_size"
       fetch_word_size
     when "fetch_progress"
@@ -86,6 +88,33 @@ class ShaleiaInterface < BackendBase
     meaning_content = word.contents.find{|s| s.type == "meaning"}
     output << equivalent_strings.join(" ")
     output << " ❖ " + meaning_content.text if meaning_content
+    output.gsub!(/&#x([0-9A-Fa-f]+);/){$1.to_i(16).chr}
+    output << " "
+    output << "http://ziphil.com/conlang/database/1.cgi?search=#{URI.encode(name)}&mode=search&type=0&agree=0"
+    respond(output, :text)
+  end
+
+  def fetch_twitter_example
+    whole_data = ShaleiaUtilities.fetch_whole_data(0)
+    excluded_names = ShaleiaUtilities.fetch_excluded_names
+    candidates = whole_data.map do |name, data|
+      result = []
+      unless excluded_names.include?(name)
+        word = ShaleiaUtilities.parse(name, data, 0, true)
+        example_contents = word.contents.select{|s| s.type == "example"}
+        example_contents.each do |content|
+          result << [name, content]
+        end
+      end
+      next result
+    end
+    candidates.flatten!(1)
+    name, content = candidates.sample
+    output = ""
+    name = name.gsub(/\~/, "")
+    shaleian = content.shaleian.gsub(/\{(.+?)\}|\[(.+?)\]/){$1 || $2}.strip
+    japanese = content.japanese.strip
+    output << shaleian + " ► " + japanese
     output.gsub!(/&#x([0-9A-Fa-f]+);/){$1.to_i(16).chr}
     output << " "
     output << "http://ziphil.com/conlang/database/1.cgi?search=#{URI.encode(name)}&mode=search&type=0&agree=0"
