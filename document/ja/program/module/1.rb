@@ -126,7 +126,7 @@ module ShaleiaUtilities
     return [hit_names, suggested_names]
   end
 
-  def parse(name, data, version = 0)
+  def parse(name, data, version = 0, struct = false)
     word = {}
     word["name"] = name
     word["pronunciation"] = (version == 0) ? ShaleiaStringUtilities.pronunciation(name) : nil
@@ -144,31 +144,33 @@ module ShaleiaUtilities
         equivalent = {}
         equivalent["category"] = match[1]
         equivalent["names"] = match[2].chomp.split(/\s*,\s*/)
+        equivalent = OpenStruct.new(equivalent) if struct
         word["equivalents"] << equivalent
       end
       if match = line.match(/^([^S])>\s*(.+)/)
-        type = CONTENT_ALPHABETS[match[1]]
-        if type
-          content = {}
-          content["type"] = type
-          content["text"] = match[2].chomp
-          word["contents"] << content
-        end
+        content = {}
+        content["type"] = CONTENT_ALPHABETS[match[1]]
+        content["text"] = match[2].chomp
+        content = OpenStruct.new(content) if struct
+        word["contents"] << content
       end
       if match = line.match(/^S>\s*(.+)\s*→\s*(.+)/)
         content = {}
         content["type"] = CONTENT_ALPHABETS["S"]
         content["shaleian"] = match[1].chomp
         content["japanese"] = match[2].chomp
+        content = OpenStruct.new(content) if struct
         word["contents"] << content
       end
       if match = line.match(/^\-\s*(?:〈(.+)〉)?\s*(.+)/)
         synonym = {}
         synonym["category"] = match[1]
         synonym["names"] = match[2].chomp.split(/\s*,\s*/)
+        synonym = OpenStruct.new(synonym) if struct
         word["synonyms"] << synonym
       end
     end
+    word = OpenStruct.new(word) if struct
     return word
   end
 
@@ -568,7 +570,7 @@ module ShaleiaStringUtilities
   end
 
   def divide_syllables(name)
-    name = name.clone
+    name = name.dup
     name.gsub!("'", "")
     name.gsub!("-", "")
     name = name.split(//).reverse.map{|s| "<#{s}>"}.join

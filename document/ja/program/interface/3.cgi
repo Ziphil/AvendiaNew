@@ -3,6 +3,7 @@
 
 
 require 'date'
+require 'uri'
 require_relative '../../program/module/1'
 require_relative '../../program/module/4'
 
@@ -15,6 +16,8 @@ class ShaleiaInterface < BackendBase
       search
     when "download"
       download
+    when "fetch_twitter"
+      fetch_twitter
     when "fetch_word_size"
       fetch_word_size
     when "fetch_progress"
@@ -63,6 +66,30 @@ class ShaleiaInterface < BackendBase
       name = "shaleia.xdc"
     end
     respond_download(file, name)
+  end
+
+  def fetch_twitter
+    whole_data = ShaleiaUtilities.fetch_whole_data(0)
+    excluded_names = ShaleiaUtilities.fetch_excluded_names
+    candidates = whole_data.reject do |name, data|
+      next excluded_names.include?(name) || name.start_with?("META") || name.start_with?("$")
+    end
+    name, data = candidates.to_a.sample
+    word = ShaleiaUtilities.parse(name, data, 0, true)
+    output = ""
+    output << word.name.gsub(/\~/, "")
+    output << " /" + word.pronunciation + "/ "
+    equivalent_strings = word.equivalents.map do |equivalent|
+      equivalent_string = equivalent.names.join(", ").gsub(/\/(.+?)\/|\{(.+?)\}|\[(.+?)\]/){$1 || $2 || $3}
+      next "〈#{equivalent.category}〉#{equivalent_string}"
+    end
+    meaning_content = word.contents.find{|s| s.type == "meaning"}
+    output << equivalent_strings.join(" ")
+    output << " ❖ " + meaning_content.text if meaning_content
+    output.gsub!(/&#x([0-9A-Fa-f]+);/){$1.to_i(16).chr}
+    output << " "
+    output << "http://ziphil.com/conlang/database/1.cgi?search=#{URI.encode(name)}&mode=search&type=0&agree=0"
+    respond(output, :text)
   end
 
   def fetch_word_size
