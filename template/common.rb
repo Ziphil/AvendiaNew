@@ -751,6 +751,11 @@ converter.add(["sup", "sub"], ["page", "page.section-table"]) do |element|
   next this
 end
 
+converter.add(["div", "span"], ["page"]) do |element|
+  this = pass_element(element, "page", false)
+  next this
+end
+
 converter.add(["h"], ["page", "page.section-table"]) do |element|
   this = ""
   this << Tag.build("span", "hairia") do |this|
