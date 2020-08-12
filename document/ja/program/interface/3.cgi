@@ -153,7 +153,7 @@ class ShaleiaInterface < BackendBase
     output["schemaVersion"] = 1
     output["color"] = "informational"
     output["label"] = "words"
-    output["message"] = whole_data.size
+    output["message"] = whole_data.size.to_s
     respond(output)
   end
 

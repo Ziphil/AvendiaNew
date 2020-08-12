@@ -8,7 +8,7 @@ require_relative '../../program/module/1'
 require_relative '../../program/module/4'
 
 
-class ShaleiaUploader < CustomBase
+class ShaleiaUploader < BackendBase
 
   PASSWORD = File.read("../../file/dictionary/meta/other/password.txt")
   GOOGLE_URL = "https://script.google.com/macros/s/AKfycbxLhjMTVq4ybjW2waZp5xgbo2emqBMBkOkz-XMx-GzjA2W4K8M/exec"

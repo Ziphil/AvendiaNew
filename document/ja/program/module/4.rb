@@ -69,8 +69,6 @@ class BackendBase
     @cgi.out(option){JSON.generate(output)}
   end
 
-  private
-
   def body
     return @body
   end
