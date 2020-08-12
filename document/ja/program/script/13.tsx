@@ -1,6 +1,9 @@
 //
 
 import axios from "axios";
+import {
+  debounce as lodashDebounce
+} from "lodash";
 import * as queryParser from "query-string";
 import * as react from "react";
 import {
@@ -63,6 +66,14 @@ type RootState = {
   result: Result
 };
 
+function debounce(duration: number): MethodDecorator {
+  let decorator = function (target: object, name: string | symbol, descriptor: PropertyDescriptor): PropertyDescriptor {
+    descriptor.value = lodashDebounce(descriptor.value, duration);
+    return descriptor;
+  };
+  return decorator;
+}
+
 
 export class Root extends Component<{}, RootState> {
 
@@ -102,6 +113,7 @@ export class Root extends Component<{}, RootState> {
     }
   }
 
+  @debounce(500)
   private async updateResults(): Promise<void> {
     await this.updateResultsImmediately();
   }
