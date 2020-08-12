@@ -14,7 +14,8 @@ import {
 
 
 type Equivalent = {category: string, names: Array<string>};
-type Content = {type: "example", shaleian: string, japanese: string} | {type: string, text: string};
+type Content = {type: string, text: string};
+type Example = {type: "例文", shaleian: string, japanese: string};
 type Synonym = {category: string, names: Array<string>};
 
 
@@ -26,6 +27,7 @@ export class Word {
   public sort!: string;
   public equivalents!: Array<Equivalent>;
   public contents!: Array<Content>;
+  public examples!: Array<Example>;
   public synonyms!: Array<Synonym>;
 
   public constructor(object: object) {
@@ -197,7 +199,13 @@ export class Root extends Component<{}, RootState> {
   }
 
   private renderResult(): ReactNode {
-    let node;
+    let wordNodes = this.state.result.words.map((word) => <WordPane word={word}/>);
+    let node = (
+      <Fragment>
+        <h1>検索結果</h1>
+        {wordNodes}
+      </Fragment>
+    );
     return node;
   }
 
@@ -206,6 +214,116 @@ export class Root extends Component<{}, RootState> {
       <Fragment>
         {this.renderForm()}
         {this.renderResult()}
+      </Fragment>
+    );
+    return node;
+  }
+
+}
+
+
+export class WordPane extends Component<{word: Word}, {}> {
+
+  private renderHead(): ReactNode {
+    let word = this.props.word;
+    let node = (
+      <div className="head">
+        <span className="head-name">
+          <span className="sans">{word.name.replace("~", "")}</span>
+        </span>
+        <span className="pronunciation">/{word.pronunciation}/</span>
+        <span className="date">{word.date}</span>
+        <span className="box">{word.sort}</span>
+      </div>
+    );
+    return node;
+  }
+
+  private renderEquivalents(): ReactNode {
+    let word = this.props.word;
+    let innerNodes = word.equivalents.map((equivalent) => {
+      let innerNode = (
+        <Fragment>
+          <span className="box">{equivalent.category}</span>
+          {equivalent.names.join(", ")}
+          <br/>
+        </Fragment>
+      );
+      return innerNode;
+    });
+    let node = (
+      <p className="equivalent">
+        {innerNodes}
+      </p>
+    );
+    return node;
+  }
+
+  private renderContents(): ReactNode {
+    let word = this.props.word;
+    let nodes = word.contents.map((content) => {
+      let node = (
+        <div className="explanation">
+          <div className="kind">{content.type}:</div>
+          <div className="content">{content.text}</div>
+        </div>
+      );
+      return node;
+    });
+    return nodes;
+  }
+
+  private renderExamples(): ReactNode {
+    let word = this.props.word;
+    let innerNodes = word.examples.map((example) => {
+      let innerNode = (
+        <li>
+          {example.shaleian}
+          <ul><li>{example.japanese}</li></ul>
+        </li>
+      );
+      return innerNode;
+    });
+    let node = (
+      <ul className="conlang">
+        {innerNodes}
+      </ul>
+    );
+    return node;
+  }
+
+  private renderSynonyms(): ReactNode {
+    let word = this.props.word;
+    let innerNodes = word.synonyms.map((synonym) => synonym.names.join(", ")).join("; ");
+    let node = (
+      <p className="synonym">
+        {innerNodes}
+      </p>
+    );
+    return node;
+  }
+
+  private renderMain(): ReactNode {
+    let word = this.props.word;
+    let node = (
+      <div className="result-wrapper">
+        <div className="border"/>
+        <div className="result">
+          {word.equivalents.length > 0 && this.renderEquivalents()}
+          {word.contents.length > 0 && this.renderContents()}
+          {word.examples.length > 0 && this.renderExamples()}
+          {word.synonyms.length > 0 && this.renderSynonyms()}
+        </div>
+      </div>
+    );
+    return node;
+  }
+
+  public render(): ReactNode {
+    let node = (
+      <Fragment>
+        {this.renderHead()}
+        {this.renderMain()}
       </Fragment>
     );
     return node;

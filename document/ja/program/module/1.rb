@@ -14,7 +14,7 @@ module ShaleiaUtilities
   ASPECTS = {}.merge(INTRANSITIVE_ASPECTS).merge(TRANSITIVE_ASPECTS)
 
   USED_CONTENT_ALPHABETS = {"U" => "語法", "N" => "備考", "M" => "語義"} 
-  CONTENT_ALPHABETS = {"M" => "meaning", "E" => "etymology", "U" => "usage", "N" => "note", "P" => "phrase", "S" => "example"}
+  CONTENT_ALPHABETS = {"M" => "語義", "E" => "語源", "U" => "語法", "N" => "備考", "P" => "成句", "S" => "例文"}
 
   module_function
 
@@ -134,6 +134,7 @@ module ShaleiaUtilities
     word["sort"] = nil
     word["equivalents"] = []
     word["contents"] = []
+    word["examples"] = []
     word["synonyms"] = []
     data.each_line do |line|
       if match = line.match(/^\+\s*(\d+)\s*〈(.+)〉/)
@@ -147,7 +148,7 @@ module ShaleiaUtilities
         equivalent = OpenStruct.new(equivalent) if struct
         word["equivalents"] << equivalent
       end
-      if match = line.match(/^([^S])>\s*(.+)/)
+      if match = line.match(/^([^SO])>\s*(.+)/)
         content = {}
         content["type"] = CONTENT_ALPHABETS[match[1]]
         content["text"] = match[2].chomp
@@ -155,12 +156,12 @@ module ShaleiaUtilities
         word["contents"] << content
       end
       if match = line.match(/^S>\s*(.+)\s*→\s*(.+)/)
-        content = {}
-        content["type"] = CONTENT_ALPHABETS["S"]
-        content["shaleian"] = match[1].chomp
-        content["japanese"] = match[2].chomp
-        content = OpenStruct.new(content) if struct
-        word["contents"] << content
+        example = {}
+        example["type"] = CONTENT_ALPHABETS["S"]
+        example["shaleian"] = match[1].chomp
+        example["japanese"] = match[2].chomp
+        example = OpenStruct.new(example) if struct
+        word["examples"] << example
       end
       if match = line.match(/^\-\s*(?:〈(.+)〉)?\s*(.+)/)
         synonym = {}
