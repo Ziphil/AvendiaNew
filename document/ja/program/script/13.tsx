@@ -14,9 +14,9 @@ import {
 
 
 type Equivalent = {category: string, names: Array<string>};
-type Content = {type: string, text: string};
+type Content = {type: string | null, text: string};
 type Example = {type: "例文", shaleian: string, japanese: string};
-type Synonym = {category: string, names: Array<string>};
+type Synonym = {category: string | null, names: Array<string>};
 
 
 export class Word {
@@ -226,12 +226,15 @@ export class WordPane extends Component<{word: Word}, {}> {
 
   private renderHead(): ReactNode {
     let word = this.props.word;
+    let pronunciationNode = (word.pronunciation !== null) && (
+      <span className="pronunciation">/{word.pronunciation}/</span>
+    );
     let node = (
       <div className="head">
         <span className="head-name">
           <span className="sans">{word.name.replace("~", "")}</span>
         </span>
-        <span className="pronunciation">/{word.pronunciation}/</span>
+        {pronunciationNode}
         <span className="date">{word.date}</span>
         <span className="box">{word.sort}</span>
       </div>
