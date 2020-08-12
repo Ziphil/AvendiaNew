@@ -11,6 +11,7 @@ import {
 import {
   render
 } from "react-dom";
+import htmlParser from "react-html-parser";
 
 
 type Equivalent = {category: string, names: Array<string>};
@@ -32,6 +33,79 @@ export class Word {
 
   public constructor(object: object) {
     Object.assign(this, object);
+  }
+
+  public static convert(string: string, version: number, leftNames: Array<string> = []): string {
+    string = string.replace(/\bH(\d+)/g, (_, date) => {
+      return `<span class=\"hairia\">${date}</span>`;
+    });
+    string = string.replace(/\/(.+?)\//g, (_, innerString) => {
+      return `<i>${innerString}</i>`;
+    });
+    string = string.replace(/\{(.+?)\}|\[(.+?)\]/g, (_, ...innerStrings) => {
+      let innerString = innerStrings[0] ?? innerStrings[1];
+      let link = !!innerStrings[0];
+      return Word.convertShaleian(innerString, link, version, leftNames);
+    });
+    return string;
+  }
+
+  public static convertShaleian(string: string, link: boolean, version: number, leftNames: Array<string> = []): string {
+    let url = window.location.origin + window.location.pathname;
+    if (link) {
+      string = "%" + string.replace(/\s+/g, "% %").replace(/\-/g, "%-%") + "%";
+      string = string.replace(/%([\"\[«…]*)(.*?)([!\?\.,\"\]»…]*)%/g, (_, left, matchedName, right) => {
+        let modifiedName = matchedName.replace(/<\/?\w+>/g, "");
+        let innerMatch = matchedName.match(/(.+)'(.+)/);
+        if (innerMatch !== null) {
+          let abbreviationLeft = innerMatch[1];
+          let abbreviationRight = innerMatch[2];
+          let modifiedLeft = abbreviationLeft.replace(/<\/?\w+>/g, "");
+          let modifiedRight = abbreviationRight.replace(/<\/?\w+>/g, "");
+          if (leftNames.includes(`${modifiedLeft}'`)) {
+            let html = left;
+            if (abbreviationLeft.match(/^[0-9:]$/)) {
+              html += abbreviationLeft + "'";
+            } else {
+              html += `<a href=\"${url}?search=${modifiedLeft}'&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationLeft}'</a>`;
+            }
+            if (abbreviationRight.match(/^[0-9:]$/)) {
+              html += abbreviationRight;
+            } else {
+              html += `<a href=\"${url}?search=${modifiedRight}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationRight}</a>`;
+            }
+            html += right;
+            return html;
+          } else {
+            let html = left;
+            if (abbreviationLeft.match(/^[0-9:]$/)) {
+              html += abbreviationLeft;
+            } else {
+              html += `<a href=\"${url}?search=${modifiedLeft}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationLeft}</a>`;
+            }
+            if (abbreviationRight.match(/^[0-9:]$/)) {
+              html += "'" + abbreviationRight;
+            } else {
+              html += `<a href=\"${url}?search='${modifiedRight}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">'${abbreviationRight}</a>`;
+            }
+            html += right;
+            return html;
+          }
+        } else {
+          let html = left;
+          if (matchedName.match(/^[0-9:]$|^ʻ|^—$/)) {
+            html += matchedName;
+          } else {
+            html += `<a href=\"${url}?search=${modifiedName}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${matchedName}</a>`;
+          }
+          html += right;
+          return html;
+        }
+      });
+      return `<span class=\"sans\">${string}</span>`;
+    } else {
+      return `<span class=\"sans\">${string}</span>`;
+    }
   }
 
 }
@@ -119,7 +193,8 @@ export class Root extends Component<{}, RootState> {
 
   private deserializeQuery(): void {
     let queryString = this.deserializeQueryBase();
-    window.history.replaceState({}, document.title, window.location.origin + window.location.pathname + "?" + queryString);
+    let url = window.location.origin + window.location.pathname;
+    window.history.replaceState({}, document.title, url + "?" + queryString);
   }
 
   private serializeQueryBase(): RootState {
@@ -188,8 +263,8 @@ export class Root extends Component<{}, RootState> {
           <input type="radio" name="version" value="1" id="version-1" checked={this.state.version === 1} onChange={() => this.handleChange({version: 1})}/>
           <label htmlFor="version-1">1 代 2 期</label>
           <br/>
-          <input type="checkbox" name="conversion" value="0" id="checkbox-conversion-0" defaultChecked={true}/>
-          <label htmlFor="checkbox-conversion-0">正書法変換</label>{"　"}
+          <input type="checkbox" name="conversion" value="0" id="conversion-0" defaultChecked={true}/>
+          <label htmlFor="conversion-0">正書法変換</label>{"　"}
           <input type="checkbox" name="random" value="1" id="random-1" checked={this.state.random} onChange={(event) => this.handleChange({random: event.target.checked})}/>
           <label htmlFor="random-1">結果シャッフル</label>
         </form>
@@ -199,7 +274,10 @@ export class Root extends Component<{}, RootState> {
   }
 
   private renderResult(): ReactNode {
-    let wordNodes = this.state.result.words.map((word) => <WordPane word={word}/>);
+    let version = this.state.version;
+    let wordNodes = this.state.result.words.map((word, index) => {
+      return <WordPane word={word} version={version} key={index}/>;
+    });
     let node = (
       <Fragment>
         <h1>検索結果</h1>
@@ -222,7 +300,7 @@ export class Root extends Component<{}, RootState> {
 }
 
 
-export class WordPane extends Component<{word: Word}, {}> {
+export class WordPane extends Component<{word: Word, version: number}> {
 
   private renderHead(): ReactNode {
     let word = this.props.word;
@@ -244,11 +322,12 @@ export class WordPane extends Component<{word: Word}, {}> {
 
   private renderEquivalents(): ReactNode {
     let word = this.props.word;
-    let innerNodes = word.equivalents.map((equivalent) => {
+    let version = this.props.version;
+    let innerNodes = word.equivalents.map((equivalent, index) => {
       let innerNode = (
-        <Fragment>
+        <Fragment key={index}>
           <span className="box">{equivalent.category}</span>
-          {equivalent.names.join(", ")}
+          {htmlParser(Word.convert(equivalent.names.join(", "), version))}
           <br/>
         </Fragment>
       );
@@ -264,11 +343,12 @@ export class WordPane extends Component<{word: Word}, {}> {
 
   private renderContents(): ReactNode {
     let word = this.props.word;
-    let nodes = word.contents.map((content) => {
+    let version = this.props.version;
+    let nodes = word.contents.map((content, index) => {
       let node = (
-        <div className="explanation">
+        <div className="explanation" key={index}>
           <div className="kind">{content.type}:</div>
-          <div className="content">{content.text}</div>
+          <div className="content">{htmlParser(Word.convert(content.text, version))}</div>
         </div>
       );
       return node;
@@ -278,11 +358,12 @@ export class WordPane extends Component<{word: Word}, {}> {
 
   private renderExamples(): ReactNode {
     let word = this.props.word;
-    let innerNodes = word.examples.map((example) => {
+    let version = this.props.version;
+    let innerNodes = word.examples.map((example, index) => {
       let innerNode = (
-        <li>
-          {example.shaleian}
-          <ul><li>{example.japanese}</li></ul>
+        <li key={index}>
+          {htmlParser(Word.convert(example.shaleian, version))}
+          <ul><li>{htmlParser(Word.convert(example.japanese, version))}</li></ul>
         </li>
       );
       return innerNode;
@@ -297,7 +378,8 @@ export class WordPane extends Component<{word: Word}, {}> {
 
   private renderSynonyms(): ReactNode {
     let word = this.props.word;
-    let innerNodes = word.synonyms.map((synonym) => synonym.names.join(", ")).join("; ");
+    let version = this.props.version;
+    let innerNodes = htmlParser(Word.convert(word.synonyms.map((synonym) => synonym.names.join(", ")).join("; "), version));
     let node = (
       <p className="synonym">
         {innerNodes}
