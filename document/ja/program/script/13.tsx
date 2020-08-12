@@ -35,79 +35,6 @@ export class Word {
     Object.assign(this, object);
   }
 
-  public static convert(string: string, version: number, leftNames: Array<string> = []): string {
-    string = string.replace(/\bH(\d+)/g, (_, date) => {
-      return `<span class=\"hairia\">${date}</span>`;
-    });
-    string = string.replace(/\/(.+?)\//g, (_, innerString) => {
-      return `<i>${innerString}</i>`;
-    });
-    string = string.replace(/\{(.+?)\}|\[(.+?)\]/g, (_, ...innerStrings) => {
-      let innerString = innerStrings[0] ?? innerStrings[1];
-      let link = !!innerStrings[0];
-      return Word.convertShaleian(innerString, link, version, leftNames);
-    });
-    return string;
-  }
-
-  public static convertShaleian(string: string, link: boolean, version: number, leftNames: Array<string> = []): string {
-    let url = window.location.origin + window.location.pathname;
-    if (link) {
-      string = "%" + string.replace(/\s+/g, "% %").replace(/\-/g, "%-%") + "%";
-      string = string.replace(/%([\"\[«…]*)(.*?)([!\?\.,\"\]»…]*)%/g, (_, left, matchedName, right) => {
-        let modifiedName = matchedName.replace(/<\/?\w+>/g, "");
-        let innerMatch = matchedName.match(/(.+)'(.+)/);
-        if (innerMatch !== null) {
-          let abbreviationLeft = innerMatch[1];
-          let abbreviationRight = innerMatch[2];
-          let modifiedLeft = abbreviationLeft.replace(/<\/?\w+>/g, "");
-          let modifiedRight = abbreviationRight.replace(/<\/?\w+>/g, "");
-          if (leftNames.includes(`${modifiedLeft}'`)) {
-            let html = left;
-            if (abbreviationLeft.match(/^[0-9:]$/)) {
-              html += abbreviationLeft + "'";
-            } else {
-              html += `<a href=\"${url}?search=${modifiedLeft}'&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationLeft}'</a>`;
-            }
-            if (abbreviationRight.match(/^[0-9:]$/)) {
-              html += abbreviationRight;
-            } else {
-              html += `<a href=\"${url}?search=${modifiedRight}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationRight}</a>`;
-            }
-            html += right;
-            return html;
-          } else {
-            let html = left;
-            if (abbreviationLeft.match(/^[0-9:]$/)) {
-              html += abbreviationLeft;
-            } else {
-              html += `<a href=\"${url}?search=${modifiedLeft}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationLeft}</a>`;
-            }
-            if (abbreviationRight.match(/^[0-9:]$/)) {
-              html += "'" + abbreviationRight;
-            } else {
-              html += `<a href=\"${url}?search='${modifiedRight}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">'${abbreviationRight}</a>`;
-            }
-            html += right;
-            return html;
-          }
-        } else {
-          let html = left;
-          if (matchedName.match(/^[0-9:]$|^ʻ|^—$/)) {
-            html += matchedName;
-          } else {
-            html += `<a href=\"${url}?search=${modifiedName}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${matchedName}</a>`;
-          }
-          html += right;
-          return html;
-        }
-      });
-      return `<span class=\"sans\">${string}</span>`;
-    } else {
-      return `<span class=\"sans\">${string}</span>`;
-    }
-  }
-
 }
 
 
@@ -327,7 +254,7 @@ export class WordPane extends Component<{word: Word, version: number}> {
       let innerNode = (
         <Fragment key={index}>
           <span className="box">{equivalent.category}</span>
-          {htmlParser(Word.convert(equivalent.names.join(", "), version))}
+          {htmlParser(StringConverter.convert(equivalent.names.join(", "), version, {equivalentParen: true}))}
           <br/>
         </Fragment>
       );
@@ -348,7 +275,7 @@ export class WordPane extends Component<{word: Word, version: number}> {
       let node = (
         <div className="explanation" key={index}>
           <div className="kind">{content.type}:</div>
-          <div className="content">{htmlParser(Word.convert(content.text, version))}</div>
+          <div className="content">{htmlParser(StringConverter.convert(content.text, version))}</div>
         </div>
       );
       return node;
@@ -362,8 +289,8 @@ export class WordPane extends Component<{word: Word, version: number}> {
     let innerNodes = word.examples.map((example, index) => {
       let innerNode = (
         <li key={index}>
-          {htmlParser(Word.convert(example.shaleian, version))}
-          <ul><li>{htmlParser(Word.convert(example.japanese, version))}</li></ul>
+          {htmlParser(StringConverter.convert(example.shaleian, version))}
+          <ul><li>{htmlParser(StringConverter.convert(example.japanese, version))}</li></ul>
         </li>
       );
       return innerNode;
@@ -379,7 +306,8 @@ export class WordPane extends Component<{word: Word, version: number}> {
   private renderSynonyms(): ReactNode {
     let word = this.props.word;
     let version = this.props.version;
-    let innerNodes = htmlParser(Word.convert(word.synonyms.map((synonym) => synonym.names.join(", ")).join("; "), version));
+    let string = word.synonyms.map((synonym) => synonym.names.join(", ")).join("; ");
+    let innerNodes = htmlParser(StringConverter.convert(string, version, {synonymAsterisk: true}));
     let node = (
       <p className="synonym">
         {innerNodes}
@@ -412,6 +340,123 @@ export class WordPane extends Component<{word: Word, version: number}> {
       </Fragment>
     );
     return node;
+  }
+
+}
+
+
+type StringConverterOptions = {
+  equivalentParen?: boolean,
+  synonymAsterisk?: boolean
+};
+
+
+export class StringConverter {
+
+  public static convert(string: string, version: number, options: StringConverterOptions = {}): string {
+    string = string.replace(/\bH(\d+)/g, (_, date) => {
+      return `<span class=\"hairia\">${date}</span>`;
+    });
+    string = string.replace(/\/(.+?)\//g, (_, innerString) => {
+      return `<i>${innerString}</i>`;
+    });
+    string = string.replace(/\{(.+?)\}|\[(.+?)\]/g, (_, ...innerStrings) => {
+      let innerString = innerStrings[0] ?? innerStrings[1];
+      let link = !!innerStrings[0];
+      return StringConverter.convertShaleian(innerString, link, version);
+    });
+    if (options.equivalentParen) {
+      string = string.replace(/\((.+?)\)\s*/g, (_, innerString) => {
+        return `<span class=\"small\">${innerString}</span>`;
+      });
+    }
+    if (options.synonymAsterisk) {
+      string = string.replace(/\*/g, (_) => {
+        return `<span class=\"asterisk\">†</span>`;
+      });
+    }
+    string = StringConverter.convertPunctuation(string);
+    return string;
+  }
+
+  public static convertPunctuation(string: string): string {
+    string = string.replace(/、/g, "、 ");
+    string = string.replace(/。/g, "。 ");
+    string = string.replace(/「/g, " 「");
+    string = string.replace(/」/g, "」 ");
+    string = string.replace(/」 、/g, "」、");
+    string = string.replace(/」 。/g, "」。");
+    string = string.replace(/『/g, " 『");
+    string = string.replace(/』/g, "』 ");
+    string = string.replace(/』 、/g, "』、");
+    string = string.replace(/』 。/g, "』。");
+    string = string.replace(/〈/g, " 〈");
+    string = string.replace(/〉/g, "〉 ");
+    string = string.replace(/〉 、/g, "〉、");
+    string = string.replace(/〉 。/g, "〉。");
+    string = string.replace(/…/g, "<span class=\"japanese\">…</span>");
+    string = string.replace(/  /g, " ");
+    string = string.replace(/^\s*/g, "");
+    return string;
+  }
+
+  public static convertShaleian(string: string, link: boolean, version: number): string {
+    let url = window.location.origin + window.location.pathname;
+    let leftNames = ["s'", "al'", "ac'", "di'"];
+    if (link) {
+      string = "%" + string.replace(/\s+/g, "% %").replace(/\-/g, "%-%") + "%";
+      string = string.replace(/%([\"\[«…]*)(.*?)([!\?\.,\"\]»…]*)%/g, (_, left, matchedName, right) => {
+        let modifiedName = matchedName.replace(/<\/?\w+>/g, "");
+        let innerMatch = matchedName.match(/(.+)'(.+)/);
+        if (innerMatch !== null) {
+          let abbreviationLeft = innerMatch[1];
+          let abbreviationRight = innerMatch[2];
+          let modifiedLeft = abbreviationLeft.replace(/<\/?\w+>/g, "");
+          let modifiedRight = abbreviationRight.replace(/<\/?\w+>/g, "");
+          if (leftNames.includes(`${modifiedLeft}'`)) {
+            let html = left;
+            if (abbreviationLeft.match(/^[0-9:]$/)) {
+              html += abbreviationLeft + "'";
+            } else {
+              html += `<a href=\"${url}?search=${modifiedLeft}'&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationLeft}'</a>`;
+            }
+            if (abbreviationRight.match(/^[0-9:]$/)) {
+              html += abbreviationRight;
+            } else {
+              html += `<a href=\"${url}?search=${modifiedRight}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationRight}</a>`;
+            }
+            html += right;
+            return html;
+          } else {
+            let html = left;
+            if (abbreviationLeft.match(/^[0-9:]$/)) {
+              html += abbreviationLeft;
+            } else {
+              html += `<a href=\"${url}?search=${modifiedLeft}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationLeft}</a>`;
+            }
+            if (abbreviationRight.match(/^[0-9:]$/)) {
+              html += "'" + abbreviationRight;
+            } else {
+              html += `<a href=\"${url}?search='${modifiedRight}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">'${abbreviationRight}</a>`;
+            }
+            html += right;
+            return html;
+          }
+        } else {
+          let html = left;
+          if (matchedName.match(/^[0-9:]$|^ʻ|^—$/)) {
+            html += matchedName;
+          } else {
+            html += `<a href=\"${url}?search=${modifiedName}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${matchedName}</a>`;
+          }
+          html += right;
+          return html;
+        }
+      });
+      return `<span class=\"sans\">${string}</span>`;
+    } else {
+      return `<span class=\"sans\">${string}</span>`;
+    }
   }
 
 }
