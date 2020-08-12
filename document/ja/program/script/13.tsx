@@ -9,7 +9,8 @@ import * as react from "react";
 import {
   Component,
   Fragment,
-  ReactNode
+  ReactNode,
+  SyntheticEvent
 } from "react";
 import {
   render
@@ -53,8 +54,8 @@ export class Suggestion {
 }
 
 
-type RawResult = {words: Array<object>, suggestions: Array<object>};
-type Result = {words: Array<Word>, suggestions: Array<Suggestion>};
+type RawResult = {words: Array<object>, suggestions: Array<object>, hitSize: number};
+type Result = {words: Array<Word>, suggestions: Array<Suggestion>, hitSize: number};
 
 type RootState = {
   search: string,
@@ -84,7 +85,7 @@ export class Root extends Component<{}, RootState> {
     page: 0,
     version: 0,
     random: false,
-    result: {words: [], suggestions: []}
+    result: {words: [], suggestions: [], hitSize: 0}
   };
 
   public constructor(props: {}) {
@@ -102,10 +103,11 @@ export class Root extends Component<{}, RootState> {
       let rawResult = response.data as RawResult;
       let words = rawResult.words.map((word) => new Word(word));
       let suggestions = rawResult.suggestions.map((suggestion) => new Suggestion(suggestion));
-      let result = {words, suggestions};
+      let hitSize = rawResult.hitSize;
+      let result = {words, suggestions, hitSize};
       this.setState({result});
     } else {
-      let result = {words: [], suggestions: []};
+      let result = {words: [], suggestions: [], hitSize: 0};
       this.setState({result});
     }
     if (deserialize) {
@@ -148,23 +150,33 @@ export class Root extends Component<{}, RootState> {
     return nextState;
   }
 
-  private deserializeQueryBase(): string {
+  private deserializeQueryBase(overriddenState?: Partial<RootState>): string {
     let query = {} as any;
-    query["search"] = this.state.search;
-    query["type"] = this.state.mode;
-    query["agree"] = this.state.type;
-    query["version"] = this.state.version;
-    query["random"] = +this.state.random;
-    query["page"] = this.state.page;
+    let state = Object.assign({}, this.state, overriddenState);
+    query["search"] = state.search;
+    query["type"] = state.mode;
+    query["agree"] = state.type;
+    query["version"] = state.version;
+    query["random"] = +state.random;
+    query["page"] = state.page;
     let queryString = queryParser.stringify(query);
     return queryString;
   }
 
-  private async handleChange(nextState: Partial<RootState>): Promise<void> {
+  private handleSearchChange(nextState: Partial<RootState>, event?: SyntheticEvent): void {
     let page = 0;
     let anyNextState = nextState as any;
+    event?.preventDefault();
     this.setState({...anyNextState, page}, () => {
       this.updateResults();
+    });
+  }
+
+  private handlePageChange(page: number, event?: SyntheticEvent): void {
+    event?.preventDefault();
+    this.setState({page}, async () => {
+      window.scrollTo(0, 0);
+      await this.updateResultsImmediately(true);
     });
   }
 
@@ -172,39 +184,39 @@ export class Root extends Component<{}, RootState> {
     let node = (
       <Fragment>
         <h1>検索フォーム</h1>
-        <form>
-          <input type="text" name="search" value={this.state.search} onChange={(event) => this.handleChange({search: event.target.value})}/>
+        <form onSubmit={(event) => event.preventDefault()}>
+          <input type="text" name="search" value={this.state.search} onChange={(event) => this.handleSearchChange({search: event.target.value})}/>
           <br/>
-          <input type="radio" name="type" value="3" id="type-3" checked={this.state.mode === 3} onChange={() => this.handleChange({mode: 3})}/>
+          <input type="radio" name="type" value="3" id="type-3" checked={this.state.mode === 3} onChange={() => this.handleSearchChange({mode: 3})}/>
           <label htmlFor="type-3">単語<span className="japanese">＋</span>訳語</label>{"　"}
-          <input type="radio" name="type" value="0" id="type-0" checked={this.state.mode === 0} onChange={() => this.handleChange({mode: 0})}/>
+          <input type="radio" name="type" value="0" id="type-0" checked={this.state.mode === 0} onChange={() => this.handleSearchChange({mode: 0})}/>
           <label htmlFor="type-0">単語</label>{"　"}
-          <input type="radio" name="type" value="1" id="type-1" checked={this.state.mode === 1} onChange={() => this.handleChange({mode: 1})}/>
+          <input type="radio" name="type" value="1" id="type-1" checked={this.state.mode === 1} onChange={() => this.handleSearchChange({mode: 1})}/>
           <label htmlFor="type-1">訳語</label>{"　"}
-          <input type="radio" name="type" value="2" id="type-2" checked={this.state.mode === 2} onChange={() => this.handleChange({mode: 2})}/>
+          <input type="radio" name="type" value="2" id="type-2" checked={this.state.mode === 2} onChange={() => this.handleSearchChange({mode: 2})}/>
           <label htmlFor="type-2">全文</label>
           <br/>
-          <input type="radio" name="agree" value="0" id="agree-0" checked={this.state.type === 0} onChange={() => this.handleChange({type: 0})}/>
+          <input type="radio" name="agree" value="0" id="agree-0" checked={this.state.type === 0} onChange={() => this.handleSearchChange({type: 0})}/>
           <label htmlFor="agree-0">完全一致</label>{"　"}
-          <input type="radio" name="agree" value="1" id="agree-1" checked={this.state.type === 1} onChange={() => this.handleChange({type: 1})}/>
+          <input type="radio" name="agree" value="1" id="agree-1" checked={this.state.type === 1} onChange={() => this.handleSearchChange({type: 1})}/>
           <label htmlFor="agree-1">部分一致</label>{"　"}
-          <input type="radio" name="agree" value="2" id="agree-2" checked={this.state.type === 2} onChange={() => this.handleChange({type: 2})}/>
+          <input type="radio" name="agree" value="2" id="agree-2" checked={this.state.type === 2} onChange={() => this.handleSearchChange({type: 2})}/>
           <label htmlFor="agree-2">最小対語</label>
           <br/>
-          <input type="radio" name="version" value="0" id="version-0" checked={this.state.version === 0} onChange={() => this.handleChange({version: 0})}/>
+          <input type="radio" name="version" value="0" id="version-0" checked={this.state.version === 0} onChange={() => this.handleSearchChange({version: 0})}/>
           <label htmlFor="version-0">5 代 5 期</label>{"　"}
-          <input type="radio" name="version" value="2" id="version-2" checked={this.state.version === 2} onChange={() => this.handleChange({version: 2})}/>
+          <input type="radio" name="version" value="2" id="version-2" checked={this.state.version === 2} onChange={() => this.handleSearchChange({version: 2})}/>
           <label htmlFor="version-2">3 代 6 期</label>{"　"}
-          <input type="radio" name="version" value="4" id="version-4" checked={this.state.version === 4} onChange={() => this.handleChange({version: 4})}/>
+          <input type="radio" name="version" value="4" id="version-4" checked={this.state.version === 4} onChange={() => this.handleSearchChange({version: 4})}/>
           <label htmlFor="version-4">3 代 4 期</label>{"　"}
-          <input type="radio" name="version" value="3" id="version-3" checked={this.state.version === 3} onChange={() => this.handleChange({version: 3})}/>
+          <input type="radio" name="version" value="3" id="version-3" checked={this.state.version === 3} onChange={() => this.handleSearchChange({version: 3})}/>
           <label htmlFor="version-3">2 代 7 期</label>{"　"}
-          <input type="radio" name="version" value="1" id="version-1" checked={this.state.version === 1} onChange={() => this.handleChange({version: 1})}/>
+          <input type="radio" name="version" value="1" id="version-1" checked={this.state.version === 1} onChange={() => this.handleSearchChange({version: 1})}/>
           <label htmlFor="version-1">1 代 2 期</label>
           <br/>
           <input type="checkbox" name="conversion" value="0" id="conversion-0" defaultChecked={true}/>
           <label htmlFor="conversion-0">正書法変換</label>{"　"}
-          <input type="checkbox" name="random" value="1" id="random-1" checked={this.state.random} onChange={(event) => this.handleChange({random: event.target.checked})}/>
+          <input type="checkbox" name="random" value="1" id="random-1" checked={this.state.random} onChange={(event) => this.handleSearchChange({random: event.target.checked})}/>
           <label htmlFor="random-1">結果シャッフル</label>
         </form>
       </Fragment>
@@ -226,11 +238,48 @@ export class Root extends Component<{}, RootState> {
     return node;
   }
 
+  private renderNumber(): ReactNode {
+    let page = this.state.page;
+    let hitSize = this.state.result.hitSize;
+    let url = window.location.origin + window.location.pathname;
+    let leftArrowNode = (() => {
+      if (page > 0) {
+        let queryString = this.deserializeQueryBase({page: page - 1});
+        return <a className="left-arrow" href={url + "?" + queryString} onClick={(event) => this.handlePageChange(page - 1, event)}/>;
+      } else {
+        return <span className="left-arrow invalid"/>;
+      }
+    })();
+    let rightArrowNode = (() => {
+      if (page * 30 + 30 < hitSize) {
+        let queryString = this.deserializeQueryBase({page: page + 1});
+        return <a className="right-arrow" href={url + "?" + queryString} onClick={(event) => this.handlePageChange(page + 1, event)}/>;
+      } else {
+        return <span className="right-arrow invalid"/>;
+      }
+    })();
+    let fractionNode = (
+      <div className="fraction">
+        <div className="page">{Math.min(page * 30 + 1, hitSize)} ～ {Math.min(page * 30 + 30, hitSize)}</div>
+        <div className="total">{hitSize}</div>
+      </div>
+    );
+    let node = (
+      <div className="number">
+        {leftArrowNode}
+        {fractionNode}
+        {rightArrowNode}
+      </div>
+    );
+    return node;
+  }
+
   public render(): ReactNode {
     let node = (
       <Fragment>
         {this.renderForm()}
         {this.renderResult()}
+        {this.renderNumber()}
       </Fragment>
     );
     return node;

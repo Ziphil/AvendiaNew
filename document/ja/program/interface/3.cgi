@@ -45,6 +45,7 @@ class ShaleiaInterface < BackendBase
     result = {}
     result["words"] = []
     result["suggestions"] = []
+    result["hitSize"] = hit_names.size
     hit_names[page * 30, 30].each do |name|
       result["words"] << ShaleiaUtilities.parse(name, whole_data[name], version)
     end
