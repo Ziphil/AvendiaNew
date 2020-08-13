@@ -225,13 +225,23 @@ export class Root extends Component<{}, RootState> {
   }
 
   private renderResult(): ReactNode {
+    let result = this.state.result;
     let version = this.state.version;
-    let wordNodes = this.state.result.words.map((word, index) => {
+    let wordNodes = result.words.map((word, index) => {
       return <WordPane word={word} version={version} key={index}/>;
     });
+    let suggestionNodes = result.suggestions.map((suggestion, index) => {
+      return <SuggestionPane suggestion={suggestion} version={version} key={index}/>;
+    });
+    let suggestionNode = (result.suggestions.length > 0) && (
+      <ul className="suggest">
+        {suggestionNodes}
+      </ul>
+    );
     let node = (
       <Fragment>
         <h1>検索結果</h1>
+        {suggestionNode}
         {wordNodes}
       </Fragment>
     );
@@ -399,6 +409,26 @@ export class WordPane extends Component<{word: Word, version: number}> {
         {this.renderHead()}
         {this.renderMain()}
       </Fragment>
+    );
+    return node;
+  }
+
+}
+
+
+export class SuggestionPane extends Component<{suggestion: Suggestion, version: number}> {
+
+  public render(): ReactNode {
+    let suggestion = this.props.suggestion;
+    let url = window.location.origin + window.location.pathname;
+    let href = `${url}?search=${suggestion.name}&type=0&agree=0&version=${this.props.version}`;
+    let node = (
+      <li>
+        {suggestion.explanation}
+        {" → "}
+        <a className="sans" href={href}>{suggestion.name}</a>
+        {" ?"}
+      </li>
     );
     return node;
   }
