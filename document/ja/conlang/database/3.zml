@@ -12,22 +12,26 @@
       \tr<
         \td<旧ハイリア暦: &ref|n="nbsp"|;>
         \td<\input|type="text",id="old-hairian-year",size="3"|; 年 \input|type="text",id="old-hairian-month",size="2"|; 月 \input|type="text",id="old-hairian-day",size="2"|; 日>
-        \td<　\input|type="button",id="old-hairian",value="変換"|;>
+        \td<　>
+        \td<\input|type="button",id="old-hairian",value="変換"|;>
       >
       \tr<
         \td<新ハイリア暦: &ref|n="nbsp"|;>
         \td<\input|type="text",id="new-hairian-year",size="3"|; 年 \input|type="text",id="new-hairian-month",size="2"|; 月 \input|type="text",id="new-hairian-day",size="2"|; 日>
-        \td<　\input|type="button",id="new-hairian",value="変換"|;>
+        \td<　>
+        \td<\input|type="button",id="new-hairian",value="変換"|;>
       >
       \tr<
         \td<グレゴリオ暦: &ref|n="nbsp"|;>
         \td<\input|type="text",id="gregorian-year",size="3"|; 年 \input|type="text",id="gregorian-month",size="2"|; 月 \input|type="text",id="gregorian-day",size="2"|; 日>
-        \td<　\input|type="button",id="gregorian",value="変換"|;>
+        \td<　>
+        \td<\input|type="button",id="gregorian",value="変換"|;>
       >
       \tr<
         \td<ハイリア数: &ref|n="nbsp"|;>
         \td<\h<\input|type="text",id="hairia-day",size="4"|;>>
-        \td<　\input|type="button",id="hairia",value="変換"|;>
+        \td<　>
+        \td<\input|type="button",id="hairia",value="変換"|;>
       >
     >
   >
