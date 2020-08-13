@@ -155,9 +155,9 @@ export class Root extends Component<{}, RootState> {
           <input type="text" name="search" value={this.state.search} onChange={(event) => this.handleSearchChange({search: event.target.value})}/>
           <br/>
           <input type="radio" name="type" value="0" id="type-0" checked={this.state.mode === 0} onChange={() => this.handleSearchChange({mode: 0})}/>
-          <label htmlFor="type-0">単語</label>{"　"}
+          <label htmlFor="type-0">全文</label>{"　"}
           <input type="radio" name="type" value="1" id="type-1" checked={this.state.mode === 1} onChange={() => this.handleSearchChange({mode: 1})}/>
-          <label htmlFor="type-1">訳語</label>
+          <label htmlFor="type-1">シャレイア語</label>
         </form>
       </Fragment>
     );
