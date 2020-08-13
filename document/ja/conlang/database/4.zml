@@ -4,6 +4,7 @@
 \page|link="h"|<
   \name<辞典データダウンロード>
   \ver<5 代 5 期>
+  \import-script|src="12.js"|;
 
   \h1<概要>
   \p<
@@ -17,7 +18,7 @@
     オンライン辞典もこのデータを参照しています。
   >
   \form<
-    \a|class="form",href="../../program/interface/3.cgi?mode=download&type=zpdic"|<ダウンロード>　(? 語)
+    \a|class="form",href="../../program/interface/3.cgi?mode=download&type=zpdic"|<ダウンロード>　(\span|id="whole-count"|<?> 語)
   >
   \h2<OneToMany-JSON 形式>
   \p<

@@ -26,7 +26,7 @@ export class Executor {
   }
 
   private createUrl(mode: "current" | "difference", day: number): string {
-    let url = "program/interface/3.cgi";
+    let url = window.location.protocol + "//" + window.location.host + "/program/interface/3.cgi";
     if (mode === "current") {
       url += "?mode=fetch_word_size";
     } else {
