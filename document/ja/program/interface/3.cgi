@@ -18,6 +18,8 @@ class ShaleiaInterface < BackendBase
       request
     when "download"
       download
+    when "save_history"
+      save_history
     when "fetch_twitter"
       fetch_twitter
     when "fetch_twitter_example"
@@ -81,6 +83,13 @@ class ShaleiaInterface < BackendBase
       name = "shaleia.xdc"
     end
     respond_download(file, name)
+  end
+
+  def save_history
+    size = ShaleiaUtilities.save_history(0)
+    result = {}
+    result["size"] = size
+    respond(result)
   end
 
   def fetch_twitter
