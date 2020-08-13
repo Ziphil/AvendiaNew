@@ -1,9 +1,6 @@
 //
 
 
-type DayType = {current: 0, difference: number};
-
-
 export class Executor {
 
   public prepare(): void {
@@ -12,7 +9,7 @@ export class Executor {
     this.fetch("#month-count", "difference", 30);
   }
 
-  private fetch<M extends keyof DayType>(query: string, mode: M, day: DayType[M]): void {
+  private fetch(query: string, mode: "current" | "difference", day: number): void {
     let request = new XMLHttpRequest();
     let url = this.createUrl(mode, day);
     request.open("GET", url, true);
@@ -28,7 +25,7 @@ export class Executor {
     });
   }
 
-  private createUrl<M extends keyof DayType>(mode: M, day: DayType[M]): string {
+  private createUrl(mode: "current" | "difference", day: number): string {
     let url = "program/interface/3.cgi";
     if (mode === "current") {
       url += "?mode=fetch_word_size";
