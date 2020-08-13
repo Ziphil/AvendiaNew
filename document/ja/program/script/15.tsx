@@ -316,16 +316,6 @@ export class MatchPane extends Component<{match: Match}> {
 }
 
 
-export class Executor {
-
-  public prepare(): void {
-    render(<Root/>, document.getElementById("root"));
-  }
-
-}
-
-
-let executor = new Executor();
 window.addEventListener("load", () => {
-  executor.prepare();
+  render(<Root/>, document.getElementById("root"));
 });
