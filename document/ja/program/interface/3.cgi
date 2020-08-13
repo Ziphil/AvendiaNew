@@ -112,7 +112,7 @@ class ShaleiaInterface < BackendBase
     output << " ❖ " + meaning_content.text if meaning_content
     output.gsub!(/&#x([0-9A-Fa-f]+);/){$1.to_i(16).chr}
     output << " "
-    output << "http://ziphil.com/conlang/database/1.cgi?search=#{URI.encode(name)}&mode=search&type=0&agree=0"
+    output << "http://ziphil.com/conlang/database/1.html?search=#{URI.encode(name)}&mode=search&type=0&agree=0"
     respond(output, :text)
   end
 
