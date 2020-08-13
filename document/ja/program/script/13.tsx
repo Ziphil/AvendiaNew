@@ -214,8 +214,6 @@ export class Root extends Component<{}, RootState> {
           <input type="radio" name="version" value="1" id="version-1" checked={this.state.version === 1} onChange={() => this.handleSearchChange({version: 1})}/>
           <label htmlFor="version-1">1 代 2 期</label>
           <br/>
-          <input type="checkbox" name="conversion" value="0" id="conversion-0" defaultChecked={true}/>
-          <label htmlFor="conversion-0">正書法変換</label>{"　"}
           <input type="checkbox" name="random" value="1" id="random-1" checked={this.state.random} onChange={(event) => this.handleSearchChange({random: event.target.checked})}/>
           <label htmlFor="random-1">結果シャッフル</label>
         </form>

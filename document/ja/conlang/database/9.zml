@@ -4,7 +4,6 @@
 \page|link="h"|<
   \name<シャレイア語辞典>
   \ver<>
-  \import-script|src="2.js"|;
   \import-script|src="13.js"|;
 
   \div|id="root"|;
