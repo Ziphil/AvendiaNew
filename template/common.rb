@@ -752,7 +752,7 @@ converter.add(["sup", "sub"], ["page", "page.section-table"]) do |element|
 end
 
 converter.add(["div", "span"], ["page"]) do |element|
-  this = pass_element(element, "page", false)
+  this = pass_element(element, "page")
   next this
 end
 
