@@ -64,7 +64,8 @@ type RootState = {
   version: number,
   random: boolean,
   page: number,
-  result: Result
+  result: Result,
+  errorMessage: string | null
 };
 
 function debounce(duration: number): MethodDecorator {
@@ -85,7 +86,8 @@ export class Root extends Component<{}, RootState> {
     page: 0,
     version: 0,
     random: false,
-    result: {words: [], suggestions: [], hitSize: 0}
+    result: {words: [], suggestions: [], hitSize: 0},
+    errorMessage: null
   };
 
   public constructor(props: {}) {
@@ -98,17 +100,19 @@ export class Root extends Component<{}, RootState> {
   }
 
   private async updateResultsImmediately(deserialize: boolean = true): Promise<void> {
-    let response = await axios.get("../../program/interface/3.cgi?mode=search&" + this.deserializeQueryBase());
+    let response = await axios.get("../../program/interface/3.cgi?mode=search&" + this.deserializeQueryBase(), {validateStatus: () => true});
     if (response.status === 200 && !("error" in response.data)) {
       let rawResult = response.data as RawResult;
       let words = rawResult.words.map((word) => new Word(word));
       let suggestions = rawResult.suggestions.map((suggestion) => new Suggestion(suggestion));
       let hitSize = rawResult.hitSize;
+      let errorMessage = null;
       let result = {words, suggestions, hitSize};
-      this.setState({result});
+      this.setState({result, errorMessage});
     } else {
+      let errorMessage = response.data.message;
       let result = {words: [], suggestions: [], hitSize: 0};
-      this.setState({result});
+      this.setState({result, errorMessage});
     }
     if (deserialize) {
       this.deserializeQuery();
@@ -246,6 +250,28 @@ export class Root extends Component<{}, RootState> {
     return node;
   }
 
+  private renderErrorMessage(): ReactNode {
+    let errorMessage = this.state.errorMessage!;
+    let lineNodes = errorMessage.split(/\r\n|\r|\n/).map((line, index) => {
+      return <tr key={index}><td>{line}</td></tr>;
+    });
+    let node = (
+      <Fragment>
+        <h1>エラー</h1>
+        <div className="code-wrapper">
+          <div className="code-inner-wrapper">
+            <table className="code">
+              <tbody>
+                {lineNodes}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </Fragment>
+    );
+    return node;
+  }
+
   private renderNumber(): ReactNode {
     let page = this.state.page;
     let hitSize = this.state.result.hitSize;
@@ -283,11 +309,17 @@ export class Root extends Component<{}, RootState> {
   }
 
   public render(): ReactNode {
+    let resultNode = (() => {
+      if (this.state.errorMessage === null) {
+        return <Fragment>{this.renderResult()}{this.renderNumber()}</Fragment>;
+      } else {
+        return this.renderErrorMessage();
+      }
+    })();
     let node = (
       <Fragment>
         {this.renderForm()}
-        {this.renderResult()}
-        {this.renderNumber()}
+        {resultNode}
       </Fragment>
     );
     return node;
@@ -385,7 +417,7 @@ export class WordPane extends Component<{word: Word, version: number}> {
     return node;
   }
 
-  private renderMain(): ReactNode {
+  private renderBody(): ReactNode {
     let word = this.props.word;
     let node = (
       <div className="result-wrapper">
@@ -405,7 +437,7 @@ export class WordPane extends Component<{word: Word, version: number}> {
     let node = (
       <Fragment>
         {this.renderHead()}
-        {this.renderMain()}
+        {this.renderBody()}
       </Fragment>
     );
     return node;
@@ -554,10 +586,6 @@ export class StringConverter {
 export class Executor {
 
   public prepare(): void {
-    this.renderRoot();
-  }
-
-  private renderRoot(): void {
     render(<Root/>, document.getElementById("root"));
   }
 
