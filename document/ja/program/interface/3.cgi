@@ -14,6 +14,8 @@ class ShaleiaInterface < BackendBase
     case @command
     when "search"
       search
+    when "request"
+      request
     when "download"
       download
     when "fetch_twitter"
@@ -52,6 +54,16 @@ class ShaleiaInterface < BackendBase
     suggested_names.each do |explanation, name|
       result["suggestions"] << {"explanation" => explanation, "name" => name}
     end
+    respond(result)
+  end
+
+  def request
+    content = self["content"]
+    requests = content.split("\n").map{|s| s.strip}.reject{|s| s.empty?}
+    RequestUtilities.add(requests)
+    result = {}
+    result["requests"] = requests
+    result["size"] = requests.size
     respond(result)
   end
 
