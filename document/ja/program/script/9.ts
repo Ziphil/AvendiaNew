@@ -1,5 +1,9 @@
 //
 
+import {
+  ExecutorBase
+} from "./module/executor";
+
 
 const RADIX = 16;
 const HIGHLIGHT_COLOR = "hsl(240, 60%, 60%)";
@@ -8,17 +12,18 @@ const HIGHLIGHT_BACKGROUND_COLOR = "hsl(240, 100%, 98%)";
 type Status = 0 | 1;
 
 
-export class Executor {
+export class Executor extends ExecutorBase {
 
   private status: Status;
   private previousInput: {left: string, right: string};
 
   public constructor() {
+    super();
     this.status = 0;
     this.previousInput = {left: "", right: ""};
   }
 
-  public prepare(): void {
+  protected prepare(): void {
     this.prepareInitial();
     this.prepareElements();
     this.createTable();
@@ -260,7 +265,4 @@ export class Executor {
 }
 
 
-let executor = new Executor();
-window.addEventListener("load", () => {
-  executor.prepare();
-});
+Executor.regsiter();

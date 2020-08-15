@@ -1,9 +1,13 @@
 //
 
+import {
+  ExecutorBase
+} from "./module/executor";
 
-export class Executor {
 
-  public prepare(): void {
+export class Executor extends ExecutorBase {
+
+  protected prepare(): void {
     this.fetch("#whole-count", "current", 0);
     this.fetch("#week-count", "difference", 7);
     this.fetch("#month-count", "difference", 30);
@@ -39,7 +43,4 @@ export class Executor {
 }
 
 
-let executor = new Executor();
-window.addEventListener("load", () => {
-  executor.prepare();
-});
+Executor.regsiter();

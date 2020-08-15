@@ -1,21 +1,25 @@
 //
 
 import axios from "axios";
-import {
-  debounce as lodashDebounce
-} from "lodash";
 import * as queryParser from "query-string";
 import * as react from "react";
 import {
   Component,
   Fragment,
-  ReactNode,
-  SyntheticEvent
+  ReactNode
 } from "react";
 import {
   render
 } from "react-dom";
-import htmlParser from "react-html-parser";
+import {
+  StringConverter
+} from "./module/converter";
+import {
+  ExecutorBase
+} from "./module/executor";
+import {
+  RootBase
+} from "./module/search";
 
 
 type Equivalent = {category: string, names: Array<string>};
@@ -68,16 +72,8 @@ type RootState = {
   errorMessage: string | null
 };
 
-function debounce(duration: number): MethodDecorator {
-  let decorator = function (target: object, name: string | symbol, descriptor: PropertyDescriptor): PropertyDescriptor {
-    descriptor.value = lodashDebounce(descriptor.value, duration);
-    return descriptor;
-  };
-  return decorator;
-}
 
-
-export class Root extends Component<{}, RootState> {
+export class Root extends RootBase<{}, RootState> {
 
   public state: RootState = {
     search: "",
@@ -90,16 +86,7 @@ export class Root extends Component<{}, RootState> {
     errorMessage: null
   };
 
-  public constructor(props: {}) {
-    super(props);
-    this.serializeQuery(true);
-  }
-
-  public async componentDidMount(): Promise<void> {
-    await this.updateResultsImmediately(false);
-  }
-
-  private async updateResultsImmediately(deserialize: boolean = true): Promise<void> {
+  protected async updateResultsBase(): Promise<void> {
     let response = await axios.get("../../program/interface/3.cgi?mode=search&" + this.deserializeQueryBase(), {validateStatus: () => true});
     if (response.status === 200 && !("error" in response.data)) {
       let rawResult = response.data as RawResult;
@@ -114,35 +101,9 @@ export class Root extends Component<{}, RootState> {
       let result = {words: [], suggestions: [], hitSize: 0};
       this.setState({result, errorMessage});
     }
-    if (deserialize) {
-      this.deserializeQuery();
-    }
   }
 
-  @debounce(500)
-  private async updateResults(): Promise<void> {
-    await this.updateResultsImmediately();
-  }
-
-  private serializeQuery(first: boolean, callback?: () => void): void {
-    let nextState = this.serializeQueryBase();
-    if (first) {
-      this.state = Object.assign(this.state, nextState);
-      if (callback) {
-        callback();
-      }
-    } else {
-      this.setState(nextState, callback);
-    }
-  }
-
-  private deserializeQuery(): void {
-    let queryString = this.deserializeQueryBase();
-    let url = window.location.origin + window.location.pathname;
-    window.history.replaceState({}, document.title, url + "?" + queryString);
-  }
-
-  private serializeQueryBase(): RootState {
+  protected serializeQueryBase(): RootState {
     let query = queryParser.parse(window.location.search);
     let nextState = {} as any;
     nextState.search = (typeof query["search"] === "string") ? query["search"] : "";
@@ -154,7 +115,7 @@ export class Root extends Component<{}, RootState> {
     return nextState;
   }
 
-  private deserializeQueryBase(overriddenState?: Partial<RootState>): string {
+  protected deserializeQueryBase(overriddenState?: Partial<RootState>): string {
     let query = {} as any;
     let state = Object.assign({}, this.state, overriddenState);
     query["search"] = state.search;
@@ -165,23 +126,6 @@ export class Root extends Component<{}, RootState> {
     query["page"] = state.page;
     let queryString = queryParser.stringify(query);
     return queryString;
-  }
-
-  private handleSearchChange(nextState: Partial<RootState>, event?: SyntheticEvent): void {
-    let page = 0;
-    let anyNextState = nextState as any;
-    event?.preventDefault();
-    this.setState({...anyNextState, page}, () => {
-      this.updateResults();
-    });
-  }
-
-  private handlePageChange(page: number, event?: SyntheticEvent): void {
-    event?.preventDefault();
-    this.setState({page}, async () => {
-      window.scrollTo(0, 0);
-      await this.updateResultsImmediately(true);
-    });
   }
 
   private renderForm(): ReactNode {
@@ -250,68 +194,10 @@ export class Root extends Component<{}, RootState> {
     return node;
   }
 
-  private renderErrorMessage(): ReactNode {
-    let errorMessage = this.state.errorMessage!;
-    let lineNodes = errorMessage.split(/\r\n|\r|\n/).map((line, index) => {
-      return <tr key={index}><td>{line}</td></tr>;
-    });
-    let node = (
-      <Fragment>
-        <h1>エラー</h1>
-        <div className="code-wrapper">
-          <div className="code-inner-wrapper">
-            <table className="code">
-              <tbody>
-                {lineNodes}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </Fragment>
-    );
-    return node;
-  }
-
-  private renderNumber(): ReactNode {
-    let page = this.state.page;
-    let hitSize = this.state.result.hitSize;
-    let url = window.location.origin + window.location.pathname;
-    let leftArrowNode = (() => {
-      if (page > 0) {
-        let queryString = this.deserializeQueryBase({page: page - 1});
-        return <a className="left-arrow" href={url + "?" + queryString} onClick={(event) => this.handlePageChange(page - 1, event)}/>;
-      } else {
-        return <span className="left-arrow invalid"/>;
-      }
-    })();
-    let rightArrowNode = (() => {
-      if (page * 30 + 30 < hitSize) {
-        let queryString = this.deserializeQueryBase({page: page + 1});
-        return <a className="right-arrow" href={url + "?" + queryString} onClick={(event) => this.handlePageChange(page + 1, event)}/>;
-      } else {
-        return <span className="right-arrow invalid"/>;
-      }
-    })();
-    let fractionNode = (
-      <div className="fraction">
-        <div className="page">{Math.min(page * 30 + 1, hitSize)} ～ {Math.min(page * 30 + 30, hitSize)}</div>
-        <div className="total">{hitSize}</div>
-      </div>
-    );
-    let node = (
-      <div className="number">
-        {leftArrowNode}
-        {fractionNode}
-        {rightArrowNode}
-      </div>
-    );
-    return node;
-  }
-
   public render(): ReactNode {
     let resultNode = (() => {
       if (this.state.errorMessage === null) {
-        return <Fragment>{this.renderResult()}{this.renderNumber()}</Fragment>;
+        return <Fragment>{this.renderResult()}{this.renderNumber(30)}</Fragment>;
       } else {
         return this.renderErrorMessage();
       }
@@ -355,7 +241,7 @@ export class WordPane extends Component<{word: Word, version: number}> {
       let innerNode = (
         <Fragment key={index}>
           <span className="box">{equivalent.category}</span>
-          {htmlParser(StringConverter.convert(equivalent.names.join(", "), version, {equivalentParen: true}))}
+          {StringConverter.parse(equivalent.names.join(", "), {version, equivalentParen: true})}
           <br/>
         </Fragment>
       );
@@ -376,7 +262,7 @@ export class WordPane extends Component<{word: Word, version: number}> {
       let node = (
         <div className="explanation" key={index}>
           <div className="kind">{content.type}:</div>
-          <div className="content">{htmlParser(StringConverter.convert(content.text, version))}</div>
+          <div className="content">{StringConverter.parse(content.text, {version})}</div>
         </div>
       );
       return node;
@@ -390,8 +276,8 @@ export class WordPane extends Component<{word: Word, version: number}> {
     let innerNodes = word.examples.map((example, index) => {
       let innerNode = (
         <li key={index}>
-          {htmlParser(StringConverter.convert(example.shaleian, version))}
-          <ul><li>{htmlParser(StringConverter.convert(example.japanese, version))}</li></ul>
+          {StringConverter.parse(example.shaleian, {version})}
+          <ul><li>{StringConverter.parse(example.japanese, {version})}</li></ul>
         </li>
       );
       return innerNode;
@@ -408,10 +294,9 @@ export class WordPane extends Component<{word: Word, version: number}> {
     let word = this.props.word;
     let version = this.props.version;
     let string = word.synonyms.map((synonym) => synonym.names.join(", ")).join("; ");
-    let innerNodes = htmlParser(StringConverter.convert(string, version, {synonymAsterisk: true}));
     let node = (
       <p className="synonym">
-        {innerNodes}
+        {StringConverter.parse(string, {version, synonymAsterisk: true})}
       </p>
     );
     return node;
@@ -466,123 +351,6 @@ export class SuggestionPane extends Component<{suggestion: Suggestion, version: 
 }
 
 
-type StringConverterOptions = {
-  equivalentParen?: boolean,
-  synonymAsterisk?: boolean
-};
-
-
-export class StringConverter {
-
-  public static convert(string: string, version: number, options: StringConverterOptions = {}): string {
-    string = string.replace(/\bH(\d+)/g, (_, date) => {
-      return `<span class=\"hairia\">${date}</span>`;
-    });
-    string = string.replace(/\/(.+?)\//g, (_, innerString) => {
-      return `<i>${innerString}</i>`;
-    });
-    string = string.replace(/\{(.+?)\}|\[(.+?)\]/g, (_, ...innerStrings) => {
-      let innerString = innerStrings[0] ?? innerStrings[1];
-      let link = !!innerStrings[0];
-      return StringConverter.convertShaleian(innerString, link, version);
-    });
-    if (options.equivalentParen) {
-      string = string.replace(/\((.+?)\)\s*/g, (_, innerString) => {
-        return `<span class=\"small\">${innerString}</span>`;
-      });
-    }
-    if (options.synonymAsterisk) {
-      string = string.replace(/\*/g, (_) => {
-        return `<span class=\"asterisk\">†</span>`;
-      });
-    }
-    string = StringConverter.convertPunctuation(string);
-    return string;
-  }
-
-  public static convertPunctuation(string: string): string {
-    string = string.replace(/、/g, "、 ");
-    string = string.replace(/。/g, "。 ");
-    string = string.replace(/「/g, " 「");
-    string = string.replace(/」/g, "」 ");
-    string = string.replace(/」 、/g, "」、");
-    string = string.replace(/」 。/g, "」。");
-    string = string.replace(/『/g, " 『");
-    string = string.replace(/』/g, "』 ");
-    string = string.replace(/』 、/g, "』、");
-    string = string.replace(/』 。/g, "』。");
-    string = string.replace(/〈/g, " 〈");
-    string = string.replace(/〉/g, "〉 ");
-    string = string.replace(/〉 、/g, "〉、");
-    string = string.replace(/〉 。/g, "〉。");
-    string = string.replace(/…/g, "<span class=\"japanese\">…</span>");
-    string = string.replace(/  /g, " ");
-    string = string.replace(/^\s*/g, "");
-    return string;
-  }
-
-  public static convertShaleian(string: string, link: boolean, version: number): string {
-    let url = window.location.origin + window.location.pathname;
-    let leftNames = ["s'", "al'", "ac'", "di'"];
-    if (link) {
-      string = "%" + string.replace(/\s+/g, "% %").replace(/\-/g, "%-%") + "%";
-      string = string.replace(/%([\"\[«…]*)(.*?)([!\?\.,\"\]»…]*)%/g, (_, left, matchedName, right) => {
-        let modifiedName = matchedName.replace(/<\/?\w+>/g, "");
-        let innerMatch = matchedName.match(/(.+)'(.+)/);
-        if (innerMatch !== null) {
-          let abbreviationLeft = innerMatch[1];
-          let abbreviationRight = innerMatch[2];
-          let modifiedLeft = abbreviationLeft.replace(/<\/?\w+>/g, "");
-          let modifiedRight = abbreviationRight.replace(/<\/?\w+>/g, "");
-          if (leftNames.includes(`${modifiedLeft}'`)) {
-            let html = left;
-            if (abbreviationLeft.match(/^[0-9:]$/)) {
-              html += abbreviationLeft + "'";
-            } else {
-              html += `<a href=\"${url}?search=${modifiedLeft}'&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationLeft}'</a>`;
-            }
-            if (abbreviationRight.match(/^[0-9:]$/)) {
-              html += abbreviationRight;
-            } else {
-              html += `<a href=\"${url}?search=${modifiedRight}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationRight}</a>`;
-            }
-            html += right;
-            return html;
-          } else {
-            let html = left;
-            if (abbreviationLeft.match(/^[0-9:]$/)) {
-              html += abbreviationLeft;
-            } else {
-              html += `<a href=\"${url}?search=${modifiedLeft}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationLeft}</a>`;
-            }
-            if (abbreviationRight.match(/^[0-9:]$/)) {
-              html += "'" + abbreviationRight;
-            } else {
-              html += `<a href=\"${url}?search='${modifiedRight}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">'${abbreviationRight}</a>`;
-            }
-            html += right;
-            return html;
-          }
-        } else {
-          let html = left;
-          if (matchedName.match(/^[0-9:]$|^ʻ|^—$/)) {
-            html += matchedName;
-          } else {
-            html += `<a href=\"${url}?search=${modifiedName}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${matchedName}</a>`;
-          }
-          html += right;
-          return html;
-        }
-      });
-      return `<span class=\"sans\">${string}</span>`;
-    } else {
-      return `<span class=\"sans\">${string}</span>`;
-    }
-  }
-
-}
-
-
-window.addEventListener("load", () => {
+ExecutorBase.addLoadListener(() => {
   render(<Root/>, document.getElementById("root"));
 });

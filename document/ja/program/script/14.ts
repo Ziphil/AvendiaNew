@@ -1,9 +1,13 @@
 //
 
+import {
+  ExecutorBase
+} from "./module/executor";
 
-export class Executor {
 
-  public prepare(): void {
+export class Executor extends ExecutorBase {
+
+  protected prepare(): void {
     let textArea = document.querySelector<HTMLTextAreaElement>("[name=\"content\"]")!;
     document.querySelector("#submit")!.addEventListener("click", (event) => {
       let request = new XMLHttpRequest();
@@ -37,7 +41,4 @@ export class Executor {
 }
 
 
-let executor = new Executor();
-window.addEventListener("load", () => {
-  executor.prepare();
-});
+Executor.regsiter();

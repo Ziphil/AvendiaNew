@@ -1,20 +1,22 @@
 //
 
 import axios from "axios";
-import {
-  debounce as lodashDebounce
-} from "lodash";
 import * as queryParser from "query-string";
 import * as react from "react";
 import {
   Component,
   Fragment,
-  ReactNode,
-  SyntheticEvent
+  ReactNode
 } from "react";
 import {
   render
 } from "react-dom";
+import {
+  ExecutorBase
+} from "./module/executor";
+import {
+  RootBase
+} from "./module/search";
 
 
 export class Match {
@@ -41,16 +43,8 @@ type RootState = {
   errorMessage: string | null
 };
 
-function debounce(duration: number): MethodDecorator {
-  let decorator = function (target: object, name: string | symbol, descriptor: PropertyDescriptor): PropertyDescriptor {
-    descriptor.value = lodashDebounce(descriptor.value, duration);
-    return descriptor;
-  };
-  return decorator;
-}
 
-
-export class Root extends Component<{}, RootState> {
+export class Root extends RootBase<{}, RootState> {
 
   public state: RootState = {
     search: "",
@@ -60,16 +54,7 @@ export class Root extends Component<{}, RootState> {
     errorMessage: null
   };
 
-  public constructor(props: {}) {
-    super(props);
-    this.serializeQuery(true);
-  }
-
-  public async componentDidMount(): Promise<void> {
-    await this.updateResultsImmediately(false);
-  }
-
-  private async updateResultsImmediately(deserialize: boolean = true): Promise<void> {
+  protected async updateResultsBase(): Promise<void> {
     let response = await axios.get("../../program/interface/4.cgi?mode=search&" + this.deserializeQueryBase(), {validateStatus: () => true});
     if (response.status === 200 && !("error" in response.data)) {
       let rawResult = response.data as RawResult;
@@ -83,35 +68,9 @@ export class Root extends Component<{}, RootState> {
       let result = {matches: [], hitSize: 0};
       this.setState({result, errorMessage});
     }
-    if (deserialize) {
-      this.deserializeQuery();
-    }
   }
 
-  @debounce(500)
-  private async updateResults(): Promise<void> {
-    await this.updateResultsImmediately();
-  }
-
-  private serializeQuery(first: boolean, callback?: () => void): void {
-    let nextState = this.serializeQueryBase();
-    if (first) {
-      this.state = Object.assign(this.state, nextState);
-      if (callback) {
-        callback();
-      }
-    } else {
-      this.setState(nextState, callback);
-    }
-  }
-
-  private deserializeQuery(): void {
-    let queryString = this.deserializeQueryBase();
-    let url = window.location.origin + window.location.pathname;
-    window.history.replaceState({}, document.title, url + "?" + queryString);
-  }
-
-  private serializeQueryBase(): RootState {
+  protected serializeQueryBase(): RootState {
     let query = queryParser.parse(window.location.search);
     let nextState = {} as any;
     nextState.search = (typeof query["search"] === "string") ? query["search"] : "";
@@ -120,7 +79,7 @@ export class Root extends Component<{}, RootState> {
     return nextState;
   }
 
-  private deserializeQueryBase(overriddenState?: Partial<RootState>): string {
+  protected deserializeQueryBase(overriddenState?: Partial<RootState>): string {
     let query = {} as any;
     let state = Object.assign({}, this.state, overriddenState);
     query["search"] = state.search;
@@ -128,23 +87,6 @@ export class Root extends Component<{}, RootState> {
     query["page"] = state.page;
     let queryString = queryParser.stringify(query);
     return queryString;
-  }
-
-  private handleSearchChange(nextState: Partial<RootState>, event?: SyntheticEvent): void {
-    let page = 0;
-    let anyNextState = nextState as any;
-    event?.preventDefault();
-    this.setState({...anyNextState, page}, () => {
-      this.updateResults();
-    });
-  }
-
-  private handlePageChange(page: number, event?: SyntheticEvent): void {
-    event?.preventDefault();
-    this.setState({page}, async () => {
-      window.scrollTo(0, 0);
-      await this.updateResultsImmediately(true);
-    });
   }
 
   private renderForm(): ReactNode {
@@ -178,68 +120,10 @@ export class Root extends Component<{}, RootState> {
     return node;
   }
 
-  private renderErrorMessage(): ReactNode {
-    let errorMessage = this.state.errorMessage!;
-    let lineNodes = errorMessage.split(/\r\n|\r|\n/).map((line, index) => {
-      return <tr key={index}><td>{line}</td></tr>;
-    });
-    let node = (
-      <Fragment>
-        <h1>エラー</h1>
-        <div className="code-wrapper">
-          <div className="code-inner-wrapper">
-            <table className="code">
-              <tbody>
-                {lineNodes}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </Fragment>
-    );
-    return node;
-  }
-
-  private renderNumber(): ReactNode {
-    let page = this.state.page;
-    let hitSize = this.state.result.hitSize;
-    let url = window.location.origin + window.location.pathname;
-    let leftArrowNode = (() => {
-      if (page > 0) {
-        let queryString = this.deserializeQueryBase({page: page - 1});
-        return <a className="left-arrow" href={url + "?" + queryString} onClick={(event) => this.handlePageChange(page - 1, event)}/>;
-      } else {
-        return <span className="left-arrow invalid"/>;
-      }
-    })();
-    let rightArrowNode = (() => {
-      if (page * 30 + 30 < hitSize) {
-        let queryString = this.deserializeQueryBase({page: page + 1});
-        return <a className="right-arrow" href={url + "?" + queryString} onClick={(event) => this.handlePageChange(page + 1, event)}/>;
-      } else {
-        return <span className="right-arrow invalid"/>;
-      }
-    })();
-    let fractionNode = (
-      <div className="fraction">
-        <div className="page">{Math.min(page * 30 + 1, hitSize)} ～ {Math.min(page * 30 + 30, hitSize)}</div>
-        <div className="total">{hitSize}</div>
-      </div>
-    );
-    let node = (
-      <div className="number">
-        {leftArrowNode}
-        {fractionNode}
-        {rightArrowNode}
-      </div>
-    );
-    return node;
-  }
-
   public render(): ReactNode {
     let resultNode = (() => {
       if (this.state.errorMessage === null) {
-        return <Fragment>{this.renderResult()}{this.renderNumber()}</Fragment>;
+        return <Fragment>{this.renderResult()}{this.renderNumber(15)}</Fragment>;
       } else {
         return this.renderErrorMessage();
       }
@@ -316,6 +200,6 @@ export class MatchPane extends Component<{match: Match}> {
 }
 
 
-window.addEventListener("load", () => {
+ExecutorBase.addLoadListener(() => {
   render(<Root/>, document.getElementById("root"));
 });

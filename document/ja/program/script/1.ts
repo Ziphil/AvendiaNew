@@ -1,24 +1,14 @@
 //
 
+import {
+  ExecutorBase
+} from "./module/executor";
+import {
+  FloorMath
+} from "./module/math";
+
 
 type Hairia = number;
-
-
-export class FloorMath {
-
-  public static div(a: number, b: number): number {
-    if (a >= 0) {
-      return Math.floor(a / b);
-    } else {
-      return - Math.floor((b - a - 1) / b);
-    }
-  }
-
-  public static mod(a: number, b: number): number {
-    return a - FloorMath.div(a, b) * b;
-  }
-
-}
 
 
 export class AbstractDate {
@@ -149,15 +139,16 @@ export class RawHairia extends Calendar {
 }
 
 
-export class Executor {
+export class Executor extends ExecutorBase {
 
   private calendars: Array<Calendar>;
 
   public constructor() {
+    super();
     this.calendars = this.createCalendars();
   }
 
-  public prepare(): void {
+  protected prepare(): void {
     this.prepareInitial();
     this.prepareButtons();
     this.prepareEvents();
@@ -253,7 +244,4 @@ export class Executor {
 }
 
 
-let executor = new Executor();
-window.addEventListener("load", () => {
-  executor.prepare();
-});
+Executor.regsiter();

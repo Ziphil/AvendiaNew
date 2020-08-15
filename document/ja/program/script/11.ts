@@ -1,15 +1,18 @@
 //
 
 import * as query from "jquery";
+import {
+  ExecutorBase
+} from "./module/executor";
 
 
 const SPEED = 700;
 const MARGIN = 50;
 
 
-export class Executor {
+export class Executor extends ExecutorBase {
 
-  public prepare(): void {
+  protected prepare(): void {
     document.querySelectorAll("a[href^=\"#\"]").forEach((element) => {
       element.addEventListener("click", (event) => {
         let target = event.target as HTMLElement;
@@ -46,7 +49,4 @@ query.easing["easeInOutQuart"] = function (percent: number, t?: any, b?: any, c?
   }
 };
 
-let executor = new Executor();
-window.addEventListener("load", () => {
-  executor.prepare();
-});
+Executor.regsiter();

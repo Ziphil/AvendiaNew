@@ -1,5 +1,9 @@
 //
 
+import {
+  ExecutorBase
+} from "./module/executor";
+
 
 const DICTIONARY_URL = "https://en.oxforddictionaries.com/definition/";
 const PRONUNCIATION_REGEXP = "&lt;span class=\"phoneticspelling\"&gt;(.+)&lt;\/span&gt;";
@@ -83,19 +87,20 @@ export class WordManager {
 }
 
 
-export class Executor {
+export class Executor extends ExecutorBase {
 
   private manager: WordManager;
   private request: XMLHttpRequest | null;
   private count: number;
 
   public constructor() {
+    super();
     this.manager = new WordManager();
     this.request = null;
     this.count = 0;
   }
 
-  public prepare(): void {
+  protected prepare(): void {
     this.prepareDocument();
     this.prepareElements();
     this.prepareButtons();
@@ -453,7 +458,4 @@ export class Executor {
 }
 
 
-let executor = new Executor();
-window.addEventListener("load", () => {
-  executor.prepare();
-});
+Executor.regsiter();

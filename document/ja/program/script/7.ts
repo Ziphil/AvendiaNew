@@ -1,5 +1,9 @@
 //
 
+import {
+  ExecutorBase
+} from "./module/executor";
+
 
 const DIGIT_SIZE = 3;
 const RATING_WEIGHT = 0.9;
@@ -517,7 +521,7 @@ export class ElementFactory {
 }
 
 
-export class Executor {
+export class Executor extends ExecutorBase {
 
   private context!: CanvasRenderingContext2D;
   private history: History;
@@ -525,6 +529,7 @@ export class Executor {
   private factory: ElementFactory;
 
   public constructor() {
+    super();
     this.history = new History();
     this.factory = new ElementFactory();
   }
@@ -567,7 +572,7 @@ export class Executor {
     return {input, number, mode};
   }
 
-  public prepare(): void {
+  protected prepare(): void {
     this.prepareVariables();
     this.prepareForms();
     this.prepareButtons();
@@ -701,7 +706,4 @@ export class Executor {
 }
 
 
-let executor = new Executor();
-window.addEventListener("load", () => {
-  executor.prepare();
-});
+Executor.regsiter();

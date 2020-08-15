@@ -1,9 +1,13 @@
 //
 
+import {
+  ExecutorBase
+} from "./module/executor";
 
-export class Executor {
 
-  public prepare(): void {
+export class Executor extends ExecutorBase {
+
+  protected prepare(): void {
     let element = document.querySelector<HTMLInputElement>("[name=\"search\"]")!;
     let checkbox = document.querySelector<HTMLInputElement>("#checkbox-conversion-0")!;
     element.addEventListener("keyup", (event) => {
@@ -39,7 +43,4 @@ export class Executor {
 }
 
 
-let executor = new Executor();
-window.addEventListener("load", () => {
-  executor.prepare();
-});
+Executor.regsiter();

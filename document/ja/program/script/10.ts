@@ -1,6 +1,9 @@
 //
 
 import * as query from "jquery";
+import {
+  ExecutorBase
+} from "./module/executor";
 
 
 type MayNull<T> = T | null;
@@ -570,13 +573,14 @@ export class Tsuro {
 }
 
 
-export class Executor {
+export class Executor extends ExecutorBase {
 
   private tsuro: Tsuro;
   private rotation: Rotation;
   private hoveredTilePosition: MayNull<TilePosition>;
 
   public constructor() {
+    super();
     this.tsuro = new Tsuro();
     this.rotation = 0;
     this.hoveredTilePosition = null;
@@ -630,7 +634,7 @@ export class Executor {
     }
   }
 
-  public prepare(): void {
+  protected prepare(): void {
     this.prepareTiles();
     this.prepareStones();
     this.prepareNextHand();
@@ -964,7 +968,4 @@ export class Executor {
 }
 
 
-let executor = new Executor();
-window.addEventListener("load", () => {
-  executor.prepare();
-});
+Executor.regsiter();
