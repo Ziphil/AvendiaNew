@@ -4,8 +4,8 @@
 
 require 'json'
 require 'open-uri'
-require_relative '../../program/module/1'
-require_relative '../../program/module/4'
+require_relative 'module/backend'
+require_relative 'module/utilities'
 
 
 class ShaleiaUploader < BackendBase

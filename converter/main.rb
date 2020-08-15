@@ -258,11 +258,20 @@ class WholeAvendiaConverter
       option[:cache_location] = File.join(CONFIG.output_dir(language), ".sass-cache")
       output = SassC::Engine.new(File.read(path), option).render
       File.write(output_path, output)
+    when "rb", "cgi"
+      output = File.read(path)
+      output.gsub!(/^\s*require_relative\s*('|")(.+)(\1)/) do
+        raw_module_path = $2
+        module_path = File.join(File.dirname(path), raw_module_path) + ".rb"
+        module_content = File.read(module_path)
+        next module_content
+      end
+      File.write(output_path, output)
     when "ts", "tsx"
       command = "npm run -s browserify -- #{path}"
       output = Command.exec(command)
       File.write(output_path, output)
-    when "css", "rb", "cgi", "js"
+    when "css", "js"
       output = File.read(path)
       File.write(output_path, output)
     else

@@ -3,7 +3,7 @@
 
 
 require 'date'
-require_relative '../../program/module/4'
+require_relative 'module/backend'
 
 
 class WeblioSaver < BackendBase
