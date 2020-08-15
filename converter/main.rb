@@ -11,7 +11,7 @@ BASE_PATH = File.expand_path("..", File.dirname($0)).encode("utf-8")
 
 Kernel.load(File.join(BASE_PATH, "converter/utility.rb"))
 Kernel.load(File.join(BASE_PATH, "converter/transformer.rb"))
-Kernel.load(File.join(BASE_PATH, "converter/word_converter.rb"))
+Kernel.load(File.join(BASE_PATH, "converter/converter.rb"))
 Kernel.load(File.join(BASE_PATH, "converter/config.rb"))
 Encoding.default_external = "UTF-8"
 $stdout.sync = true
