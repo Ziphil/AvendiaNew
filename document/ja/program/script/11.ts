@@ -13,6 +13,7 @@ const MARGIN = 50;
 export class Executor extends ExecutorBase {
 
   protected prepare(): void {
+    let gap = query("#navigation").height() ?? 0;
     document.querySelectorAll("a[href^=\"#\"]").forEach((element) => {
       element.addEventListener("click", (event) => {
         let target = event.target as HTMLElement;
@@ -22,7 +23,7 @@ export class Executor extends ExecutorBase {
         if (href !== null && href !== "#" && href !== "#top") {
           let after = document.getElementById(href.slice(1));
           if (after !== null) {
-            position = query(after).offset()!.top - MARGIN;
+            position = query(after).offset()!.top - gap - MARGIN;
           }
         }
         if (position < 0) {
@@ -31,8 +32,7 @@ export class Executor extends ExecutorBase {
         if (position > maxPosition) {
           position = maxPosition;
         }
-        let body = query("html, body");
-        body.animate({scrollTop: position}, SPEED, "easeInOutQuart");
+        query("html, body").animate({scrollTop: position}, SPEED, "easeInOutQuart");
         event.preventDefault();
       });
     });

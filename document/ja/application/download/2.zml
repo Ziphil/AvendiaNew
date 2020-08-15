@@ -4,13 +4,13 @@
 \html|lang="ja"|<
   \head<
     \meta|charset="UTF-8"|;
-    \script|src="../../program/script/6.js"|;
+    \script|src="../../program/script/11.js"|;
     \link|rel="stylesheet",type="text/css",href="../../style/3.css"|;
     \title<ZpDIC>
   >
   \body<
 
-    \div|id="top",class="navigation"|<
+    \div|id="navigation",class="navigation"|<
       \a|class="title",href="#"|<ZpDIC>
       \div|class="box"|<
         \a|href="#features"|<機能>
