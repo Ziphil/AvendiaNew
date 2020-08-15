@@ -29,8 +29,6 @@ div.navigation {
   z-index: 100;
   top: 0px;
 
-  //
-  
   a.title {
     margin: 0px 0px 0px 50px;
     padding: 0px;
@@ -42,8 +40,6 @@ div.navigation {
     letter-spacing: -0.05em;
     display: block;
   }
-
-  //
 
   div.box {
     margin: 0px 50px 0px 0px;
@@ -96,8 +92,6 @@ div.head {
     flex-direction: column;
   }
 
-  //
-
   div.logo {
     margin: 0px 50px 0px 50px;
     padding: 0px;
@@ -120,8 +114,6 @@ div.head {
     line-height: 1;
     letter-spacing: -0.02em;
   }
-
-  //
 
   div.information {
     margin: 0px 50px 0px 50px;
@@ -457,8 +449,6 @@ div.footer {
   padding: 0px;
   background: $footer-background-color;
 
-  // 著作権表示
-
   div.copyright {
     margin: 0px 0px 0px 50px;
     padding: 0px;
@@ -473,13 +463,9 @@ div.footer {
 
 * {
 
-  // 日本語フォント
-
   span.japanese {
     font-family: $japanese-serif-font-family !important;
   }
-
-  // 上付き & 下付き
 
   sup {
     font-size: 70%;

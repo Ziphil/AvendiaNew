@@ -1876,15 +1876,11 @@ div.top-link {
 
 * {
 
-  // ハイリア数
-
   span.hairia::before {
     font-size: 80%;
     vertical-align: 0.3906em;
     content: "H";
   }
-
-  // シャレイア語
 
   span.sans,
   a.sans {
@@ -1895,8 +1891,6 @@ div.top-link {
     line-height: $sans-font-size !important;
   }
   
-  // コードに関係する文字列
-
   span.monospace,
   a.monospace {
     font-family: $monospace-font-family;
@@ -1905,16 +1899,12 @@ div.top-link {
     letter-spacing: -1px;
   }
 
-  // 日本語フォント
-
   span.japanese {
     font-family: $japanese-serif-font-family !important;
     font-weight: $serif-font-weight;
     font-feature-settings: "palt" 0;
     line-height: 1;
   }
-
-  // 上付き & 下付き
 
   sup {
     font-size: 80%;
