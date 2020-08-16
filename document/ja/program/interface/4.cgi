@@ -5,7 +5,6 @@
 require 'date'
 require 'uri'
 require_relative 'module/backend'
-require_relative 'module/utilities'
 
 
 class HomepageInterface < BackendBase

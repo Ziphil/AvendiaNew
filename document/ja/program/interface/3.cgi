@@ -5,6 +5,8 @@
 require 'date'
 require 'uri'
 require_relative 'module/backend'
+require_relative 'module/request'
+require_relative 'module/shaleia'
 require_relative 'module/utilities'
 
 
