@@ -3,7 +3,7 @@
 
 \page<
   \name<局所表示可能圏の完備性>
-  \use-math;
+  \use-math|prefix="5"|;
 
   \h1<日記 (2020 年 8 月 3 日)>
   \p<
@@ -147,7 +147,7 @@
   >
   \prf<
     \p<
-      まず、\a|href="60.html"|<8 月 2 日>の定理 7 により、&m<\scr<A> \coloneqq; \sb<\bfrm<Pres>><`k> (\scr<C>)> は小である。
+      まず、\a|href="60.html#sm"|<定理 4.7> により &m<\scr<A> \coloneqq; \sb<\bfrm<Pres>><`k> (\scr<C>)> は小である。
       &m<\scr<C>> の任意の対象 &m<C> をとり、関手
       &mb<
         \array|align="rrcl"|<
@@ -169,7 +169,7 @@
       >
       は関手であり、&m<H \rtriangle; G = F> が成り立つ。
       したがって、&m<H> が終であることが示されれば、&m<\op<colim> G = \op<colim> F = C> となって &m<\scr<A>> が稠密であることが示される。
-      \a|href="57.html"|<7 月 27 日>の定理 6 により、任意に &m<\scr<A> `/ C> の対象 &m<a: A \to; C> をとって、&m<a \darr|bin|; H> が連結であることを示せば良い。
+      \a|href="57.html#fineq"|<定理 1.6> により、任意に &m<\scr<A> `/ C> の対象 &m<a: A \to; C> をとって、&m<a \darr|bin|; H> が連結であることを示せば良い。
     >
     \p<
       まず、&m<a \darr|bin|; H> が空でないことを示す。
