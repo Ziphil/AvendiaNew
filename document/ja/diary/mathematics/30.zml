@@ -3,7 +3,7 @@
 
 \page<
   \name<部分対象分類子>
-  \use-math;
+  \use-math|prefix="5"|;
 
   \h1<日記 (2019 年 8 月 25 日)>
   \p<
@@ -96,7 +96,7 @@
     \p<
       &m<\overline<S>> の最小性を示す。
       &m<S> を含む閉篩 &m<T> をとる。
-      任意の射 &m<f \in; \overline<S>> に対し、定義から &m<\sp<f><*> S \in; JD> が成り立つが、&m<S \subseteq; T> より &m<\sp<f><*>S \subseteq; \sp<f><*> T> であるから、\a|href="26.html"|<7 月 27 日>の命題 6 によって &m<\sp<f><*> T \in; JD> も成り立つ。
+      任意の射 &m<f \in; \overline<S>> に対し、定義から &m<\sp<f><*> S \in; JD> が成り立つが、&m<S \subseteq; T> より &m<\sp<f><*>S \subseteq; \sp<f><*> T> であるから、\a|href="26.html#shvup"|<命題 1.6> によって &m<\sp<f><*> T \in; JD> も成り立つ。
       今 &m<T> は閉だったので、&m<f \in; T> である。
       以上によって &m<\overline<S> \subseteq; T> が示されたので、&m<\overline<S>> は &m<S> を含む最小の閉篩である。
     >
@@ -109,13 +109,13 @@
   >
   \prf<
     \p<
-      &m<S \subseteq; \overline<S>> であるから &m<\sp<h><*> S \subseteq; \sp<h><*> \overline<S>> であるが、命題 \ref|type="thm",id="clstab"|; によって右辺は閉なので、両辺の閉包をとれば &m<\overline<\sp<h><*> S> \subseteq; \sp<h><*> \overline<S>> を得る。
+      &m<S \subseteq; \overline<S>> であるから &m<\sp<h><*> S \subseteq; \sp<h><*> \overline<S>> であるが、\ref|type="cthm",id="clstab"|; によって右辺は閉なので、両辺の閉包をとれば &m<\overline<\sp<h><*> S> \subseteq; \sp<h><*> \overline<S>> を得る。
       逆に、任意に &m<f \in; \sp<h><*> \overline<S>: E \to; D> をとると、&m<h \circ; f \in; \overline<S>> より &m<\sp<f><*> (\sp<h><*> S) \in; JE> であるから、すなわち &m<f \in; \overline<\sp<h><*> S>> が成り立つ。
       これより、&m<\overline<\sp<h><*> S> \supseteq; \sp<h><*> \overline<S>> も示された。
     >
   >
   \p<
-    命題 \ref|type="thm",id="clstab"|; によって、篩が閉であるという性質は引き戻しによって保存されるので、対象に対してその上の閉篩を返す対応は関手になる。
+    \ref|type="cthm",id="clstab"|; によって、篩が閉であるという性質は引き戻しによって保存されるので、対象に対してその上の閉篩を返す対応は関手になる。
   >
   \thm|type="def"|<
     \p<
@@ -196,7 +196,7 @@
       逆の包含関係である &m<\sp<f><*> U \supseteq; \sb<S><f>> は明らかに成り立つので、&m<\sp<f><*> U = \sb<S><f>> が成り立つ。
     >
     \p<
-      さて、&m<\sb<S><f>> は閉であることと命題 \ref|type="thm",id="starpres"|; を用いると、
+      さて、&m<\sb<S><f>> は閉であることと\ref|type="cthm",id="starpres"|; を用いると、
       &mb<
         \sp<f><*> \overline<U> = \overline<\sp<f><*> U> = \overline<\sb<S><f>> = \sb<S><f>
       >
@@ -236,7 +236,7 @@
       >
       が &m<\sb<\bfrm<Sh>><J> (\scr<C>)> における引き戻しであるとする。
       すなわち、部分対象分類子が定める対応によって、部分対象 &m<M> と対応する射 &m<`x> が存在したとする。
-      すると、\a|href="29.html"|<8 月 7 日>の定理 1 によって、層の極限は前層の極限として計算でき、前層の極限は各点で計算できるため、各対象 &m<C> に対し、
+      すると、\a|href="29.html#lim"|<定理 4.1> によって、層の極限は前層の極限として計算でき、前層の極限は各点で計算できるため、各対象 &m<C> に対し、
       &mb<
         \diag<
           \v<MC> \v<1> \br;

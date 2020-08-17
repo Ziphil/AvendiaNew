@@ -3,7 +3,7 @@
 
 \page<
   \name<篩と層>
-  \use-math;
+  \use-math|prefix="1"|;
 
   \h1<日記 (2019 年 7 月 27 日)>
   \p<
@@ -102,7 +102,7 @@
   \p<
     定義からすぐ分かることとして、Grothendieck 位相は上向きの包含関係と共通部分をとる操作に関して閉じている。
   >
-  \thm|type="prp"|<
+  \thm|type="prp",id="shvup"|<
     \p<
       圏 &m<\scr<C>> の Grothendieck 位相 &m<J> をとる。
       &m<\scr<C>> の任意の対象 &m<C> 上の篩 &m<S, T> に対して、&m<S \subseteq; T> かつ &m<S \in; JC> ならば、&m<T \in; JC> が成り立つ。
@@ -172,7 +172,7 @@
       元 &m<\bar<a> \in; PC> が &m<(\sb<a><f>) \sb<><f \in; S>> の\em<融合\fl<amalgamation>> であるとは、任意の射 &m<f \in; S: D \to; C> に対し、&m<\bar<a> \cdot; f = \sb<a><f>> が成り立つことである。
     >
   >
-  \thm|type="prp"|<
+  \thm|type="prp",id="shfeq"|<
     \p<
       景 &m<(\scr<C>, J)> をとる。
       前層 &m<P: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> に対し、4 条件

@@ -3,7 +3,7 @@
 
 \page<
   \name<層の極限と余極限>
-  \use-math;
+  \use-math|prefix="4"|;
 
   \h1<日記 (2019 年 8 月 7 日)>
   \p<
@@ -26,7 +26,7 @@
     >
     \p<
       任意に被覆篩 &m<S \in; JC> をとる。
-      各 &m<j \in; \scr<J>> に対して &m<`F j> は層だから、\a|href="26.html"|<7 月 27 日>の命題 13 によって、
+      各 &m<j \in; \scr<J>> に対して &m<`F j> は層だから、\a|href="26.html#shfeq"|<命題 1.13> によって、
       &mb<
         \diag<
           \v<(`F j) C> \v<\prod<f \in; S: D \to; C><> (`F j) D> \v< \prod<\stack<\cc<f \in; S: D \to; C> \cc<g: E \to; D>>><> (`F j) E>
@@ -58,7 +58,7 @@
   \prf<
     \p<
       図式 &m<`F: \scr<J> \to; \sb<\bfrm<Sh>><J> (\scr<C>)> および層 &m<G \in; \sb<\bfrm<Sh>><J> (\scr<C>)> をとる。
-      \a|href="28.html"|<8 月 2 日>の定理 5 で示した随伴 &m<\bf<a> \dashv; \bf<i>> を用いると、
+      \a|href="28.html#adj"|<定理 3.5> で示した随伴 &m<\bf<a> \dashv; \bf<i>> を用いると、
       &mb<
         \array|align="rcl"|<
           \c<\op<Hom> (\bf<a> \sfun; \op<colim> (\bf<i> \circ; `F), G)> \c<\cong;> \c<\op<Hom> (\op<colim> (\bf<i> \circ; `F), \bf<i> G)> \br;
@@ -85,7 +85,7 @@
   >
   \prf<
     \p<
-      定理 \ref|type="thm",id="lim"|; によって &m<\sb<\bfrm<Sh>><J> (\scr<C>)> の極限は &m<\bfrm<PSh> (\scr<C>)> の極限として計算でき、層化はプラス構成 2 回として定義されていたので、プラス構成関手 &m<\sp<\text<->><+>: \bfrm<PSh> (\scr<C>) \to; \bfrm<PSh> (\scr<C>)> が有限極限を保存することを示せば良い。
+      \ref|type="cthm",id="lim"|; によって &m<\sb<\bfrm<Sh>><J> (\scr<C>)> の極限は &m<\bfrm<PSh> (\scr<C>)> の極限として計算でき、層化はプラス構成 2 回として定義されていたので、プラス構成関手 &m<\sp<\text<->><+>: \bfrm<PSh> (\scr<C>) \to; \bfrm<PSh> (\scr<C>)> が有限極限を保存することを示せば良い。
     >
     \p<
       有限図式 &m<`F: \scr<J> \to; \bfrm<PSh> (\scr<C>)> および対象 &m<C> をとる。

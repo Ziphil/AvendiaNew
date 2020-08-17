@@ -3,7 +3,7 @@
 
 \page<
   \name<層化関手>
-  \use-math;
+  \use-math|prefix="2"|;
 
   \h1<日記 (2019 年 8 月 1 日)>
   \p<
@@ -128,7 +128,7 @@
   >
   \prf<
     \p<
-      \a|href="26.html"|<7 月 27 日>の命題 13 と同様である。
+      \a|href="26.html#shfeq"|<命題 1.13> と同様である。
     >
   >
   \p<
@@ -145,7 +145,7 @@
   \prf<
     \p<
       任意に被覆篩 &m<W \in; JC> をとる。
-      命題 \ref|type="thm",id="equiv"|; によって、
+      \ref|type="cthm",id="equiv"|; によって、
       &mb<
         \text<-> \circ; W: \op<Hom> (\bf<y> C, \sp<P><+>) \to; \op<Hom> (W, \sp<P><+>)
       >
@@ -213,7 +213,7 @@
   \prf<
     \p<
       任意に被覆篩 &m<W \in; JC> をとる。
-      \a|href="26.html"|<7 月 27 日>の命題 13 によって、
+      \a|href="26.html#shfeq"|<命題 1.13> によって、
       &mb<
         &mark<♤>
         \text<-> \circ; W: \op<Hom> (\bf<y> C, \sp<P><+>) \to; \op<Hom> (W, \sp<P><+>)
