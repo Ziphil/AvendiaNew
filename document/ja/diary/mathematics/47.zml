@@ -3,7 +3,7 @@
 
 \page<
   \name<順序数の定義と基本的な性質>
-  \use-math;
+  \use-math|prefix="1"|;
 
   \h1<日記 (2020 年 5 月 29 日)>
   \p<
@@ -140,7 +140,7 @@
     \p<
       定理中の 2 つの主張は明らかに同値なので、2 つ目の主張のみを示す。
       まず、左の条件から右の条件を導くため、&m<`b \subset; `a> を仮定する。
-      すると、&m<`a \setminus; `b \neq; \empty;> であり、定理 \ref|type="thm",id="wellord"|; によって &m<`a> は整列集合だから、&m<`j \in; \min; (`a \setminus; `b)> がとれる。
+      すると、&m<`a \setminus; `b \neq; \empty;> であり、\ref|type="cthm",id="wellord"|; によって &m<`a> は整列集合だから、&m<`j \in; \min; (`a \setminus; `b)> がとれる。
       以降、&m<`j = `b> であることを示す。
     >
     \p<
@@ -173,7 +173,7 @@
   >
   \p<
     任意の順序数は &m<\ineq;> によって順序付けられていると見なしたことを思い出そう。
-    ここで、定理 \ref|type="thm",id="elemord"|; によって順序数の元は順序数であり、定理 \ref|type="thm",id="elemsub"|; によって順序数同士であれば &m<\ineq;> と &m<\subseteq;> は同値であった。
+    ここで、\ref|type="cthm",id="elemord"|; によって順序数の元は順序数であり、\ref|type="cthm",id="elemsub"|; によって順序数同士であれば &m<\ineq;> と &m<\subseteq;> は同値であった。
     したがって、順序数は &m<\subseteq;> によって順序付けられていると見なしても、全く同じ順序集合が得られることになる。
     以降では、このことを踏まえて、順序数に関しては同値である &m<\ineq;> と &m<\subseteq;> をともに &m<\leq;> で表すことにする。
   >
@@ -194,11 +194,11 @@
   >
   \prf<
     \p<
-      &m<`g \coloneqq; `a \cap; `b> とおくと、定理 \ref|type="thm",id="ordcap"|; によってこれは順序数である。
+      &m<`g \coloneqq; `a \cap; `b> とおくと、\ref|type="cthm",id="ordcap"|; によってこれは順序数である。
       以降、&m<`g = `a> または &m<`g = `b> が成り立つことを背理法によって示す。
       そこで、&m<`g \neq; `a> かつ &m<`g \neq; `b> であると仮定する。
       まず、定義から &m<`g \subseteq; `a> であるから、&m<`g \subset; `a> が成り立つ。
-      すると、定理 \ref|type="thm",id="elemsub"|; によって &m<`g \in; `a> が得られる。 
+      すると、\ref|type="cthm",id="elemsub"|; によって &m<`g \in; `a> が得られる。 
       同様にして、&m<`g \in; `b> も得られる。
       したがって、&m<`g \in; `a \cap; `b = `g> が成り立つことになるが、これは基礎公理に矛盾する。
     >
@@ -221,7 +221,7 @@
     \p<
       次に、&m<\bigcup|in|; \scr<F>> の三分性を示す。
       任意に元 &m<`j, `h \in; \bigcup|in|; \scr<F>> をとると、ある順序数 &m<`a, `b \in; \scr<F>> が存在して &m<`j \in; `a> および &m<`h \in; `b> が成り立つ。
-      定理 \ref|type="thm",id="tri"|; によって、&m<`b = `a> もしくは &m<`b \subset; `a> もしくは &m<`b \supset; `a> のいずれかが成り立つから、各場合について議論する。
+      \ref|type="cthm",id="tri"|; によって、&m<`b = `a> もしくは &m<`b \subset; `a> もしくは &m<`b \supset; `a> のいずれかが成り立つから、各場合について議論する。
     >
     \p<
       &m<`b = `a> であれば &m<`j, `h \in; `a> であるから、&m<`a> の三分性によって &m<`h = `j> か &m<`h \in; `j> か &m<`h \ni; `j> のいずれかが成り立つことが分かる。
@@ -265,7 +265,7 @@
   \thm|type="thm",id="trans"|<
     \name<超限帰納法の原理\fl<principle of transfinite induction>>
     \p<
-      整列集合 &m<X> とその部分集合 &m<Z \subseteq; X> について、任意の元 &m<x \in; X> について &m<O (x) \subseteq; Z> ならば &m<x \in; Z> が成り立っているとする。
+      整列集合 &m<X> の部分集合 &m<Z \subseteq; X> について、任意の元 &m<x \in; X> に対して &m<O (x) \subseteq; Z> ならば &m<x \in; Z> が成り立っているとする。
       このとき、&m<Z = X> が成り立つ。
     >
   >
@@ -296,7 +296,7 @@
     >
     \p<
       任意に &m<`j \in; `a> をとり、&m<O (`j) \subseteq; Z> であるとする。
-      この仮定と補題 \ref|type="thm",id="segid"|; により、
+      この仮定と\ref|type="cthm",id="segid"|; により、
       &mb<
         \array|align="rcl"|<
           \c<f (`j)> \c<=> \c<O (f (`j))> \br;
@@ -372,7 +372,7 @@
   >
   \prf<
     \p<
-      一意性は定理 \ref|type="thm",id="isoeq"|; からすぐに従うので、以下では存在を示す。
+      一意性は\ref|type="cthm",id="isoeq"|; からすぐに従うので、以下では存在を示す。
       まず、元 &m<x \in; X> に対し、
       &mb<
         \array|align="rcl"|<
@@ -387,7 +387,7 @@
       >
       とおく。
       定義から、各 &m<x \in; Z> に対して、順序数 &m<`a> と順序同型写像 &m<f: \bar<O> (x) \to; `a> が存在する。
-      定理 \ref|type="thm",id="isoeq"|; によって &m<`a> は一意に定まり、さらに補題 \ref|type="thm",id="isouniq"|; によって &m<f> も一意に定まる。
+      \ref|type="cthm",id="isoeq"|; によって &m<`a> は一意に定まり、さらに\ref|type="cthm",id="isouniq"|; によって &m<f> も一意に定まる。
       したがって、以降はこれらをそれぞれ &m<\sb<`a><x>> と &m<\sb<f><x>> で表すことにする。
     >
     \p<
@@ -401,10 +401,10 @@
         \sb<f><x> `[\bar<O> (y)`] = \bar<O> (\sb<f><x> (y)) = O (\sb<f><x> (y)) \cup; `{\sb<f><x> (y)`}
       >
       が成り立つ。
-      &m<\sb<f><x> (y) \in; \sb<`a><y>> であって &m<\sb<`a><y>> は順序数だから、補題 \ref|type="thm",id="segid"|; によって &m<O (\sb<f><x> (y)) = \sb<f><x> (y)> が成り立つ。
-      また、定理 \ref|type="thm",id="elemord"|; によって &m<\sb<f><x> (y)> は順序数だから、さらに定理 \ref|type="thm",id="succ"|; によって &m<\sb<f><x> (y) \cup; `{\sb<f><x> (y)`}> も順序数である。
+      &m<\sb<f><x> (y) \in; \sb<`a><y>> であって &m<\sb<`a><y>> は順序数だから、\ref|type="cthm",id="segid"|; によって &m<O (\sb<f><x> (y)) = \sb<f><x> (y)> が成り立つ。
+      また、\ref|type="cthm",id="elemord"|; によって &m<\sb<f><x> (y)> は順序数だから、さらに\ref|type="cthm",id="succ"|; によって &m<\sb<f><x> (y) \cup; `{\sb<f><x> (y)`}> も順序数である。
       したがって、これと等しい &m<\sb<f><x> `[\bar<O> (y)`]> も順序数である。
-      ここで補題 \ref|type="thm",id="isoim"|; を使えば、制限 &m<\sb<f><x> \rvert; \sb<><\bar<O> (y)>: \bar<O> (y) \to; \sb<f><x> `[\bar<O> (y)`]> が順序同型写像であることが分かる。
+      ここで\ref|type="cthm",id="isoim"|; を使えば、制限 &m<\sb<f><x> \rvert; \sb<><\bar<O> (y)>: \bar<O> (y) \to; \sb<f><x> `[\bar<O> (y)`]> が順序同型写像であることが分かる。
       ところで、&m<\sb<f><y>: \bar<O> (y) \to; \sb<`a><y>> は &m<\bar<O> (y)> から何らかの順序数への一意な順序同型写像であったから、&m<\sb<f><x> \rvert; \sb<><\bar<O> (y)> = \sb<f><y>> でなければならない。
       すなわち、&m<\sb<f><y> \subseteq; \sb<f><x>> である。
     >
@@ -419,8 +419,8 @@
       この写像を &m<f> とおく。
       各 &m<\sb<f><y>> が順序同型写像であることから、この &m<f> が狭義単調増加な全射であることがすぐに従う。
       また、&m<f> の定義域 &m<\bigcup|in|<y> \bar<O> (y)> は &m<O (x)> に等しい。
-      さらに、定理 \ref|type="thm",id="ordcup"|; により、&m<f> の値域 &m<`a \coloneqq; \bigcup|in|<y> \sb<`a><y>> は順序数である。
-      したがって、補題 \ref|type="thm",id="isoim"|; によって &m<f> は順序同型写像である。
+      さらに、\ref|type="cthm",id="ordcup"|; により、&m<f> の値域 &m<`a \coloneqq; \bigcup|in|<y> \sb<`a><y>> は順序数である。
+      したがって、\ref|type="cthm",id="isoim"|; によって &m<f> は順序同型写像である。
     >
     \p<
       上記の議論で得られた順序同型写像 &m<f: O (x) \to; `a> の拡張として、
@@ -435,7 +435,7 @@
       >
       を考える。
       &m<\tilde<f>> は &m<f> に 1 点の行き先を追加した拡張であり、追加された 1 点とその像はそれぞれ定義域と値域の最大元であるから、&m<\tilde<f>> も順序同型写像である。
-      定理 \ref|type="thm",id="succ"|; によって &m<`a \cup; `{`a`}> は順序数であるから、これにより &m<x \in; Z> が示された。
+      \ref|type="cthm",id="succ"|; によって &m<`a \cup; `{`a`}> は順序数であるから、これにより &m<x \in; Z> が示された。
     >
     \p<
       以上により &m<Z = X> であるから、写像

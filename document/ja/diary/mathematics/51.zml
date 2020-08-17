@@ -3,7 +3,7 @@
 
 \page<
   \name<基数の定義と基本的な性質>
-  \use-math;
+  \use-math|prefix="5"|;
 
   \h1<日記 (2020 年 6 月 8 日)>
   \p<
@@ -12,7 +12,7 @@
   >
   \p<
     順序数とは、整列集合の同型類の代表元と見なすことができた。
-    実際、\a|href="47.html"|<5 月 29 日>の定理 19 として示したように、任意の整列集合に対してそれと順序同型となるような順序数が一意に存在していた。
+    実際、\a|href="47.html#typ"|<定理 1.19> として示したように、任意の整列集合に対してそれと順序同型となるような順序数が一意に存在していた。
     これと似て、基数とは、(順序が入っているとは限らない) 集合の等濃類の代表元と見なせるようなものである。
     すなわち、任意の集合に対してそれとの間に全単射をもつような基数が一意に存在する。
   >
@@ -27,7 +27,7 @@
   \p<
     さて、任意に集合 &m<X> が与えられたとして、それと等濃な基数をどのように対応付ければ良いだろうか。
     もし &m<X> が整列集合であれば、カノニカルな順序集合であるところの順序数を対応付けることができる。
-    幸い \a|href="50.html"|<6 月 5 日>の定理 4 によって、&m<X> 上の整列順序は常に存在するので、&m<X> を整列集合と見なすことができ、ある順序数と対応付けることができる。
+    幸い\a|href="50.html#wellthm"|<定理 4.4> によって、&m<X> 上の整列順序は常に存在するので、&m<X> を整列集合と見なすことができ、ある順序数と対応付けることができる。
     しかし、そのような整列順序は一意とは限らないので、整列順序のとり方によっては異なる順序数が対応してしまうことがあり得る。
     そこで、&m<X> と対応し得る順序数のうち最小のものを考え、それを &m<X> に対応する基数として定めることにする。
   >
@@ -68,7 +68,7 @@
         >
       >
       とおくと、置換公理図式によってこれは集合である。
-      \a|href="50.html"|<6 月 5 日>の定理 4 によって、&m<X> 上の整列順序は少なくとも 1 つ存在するから、&m<\scr<F> \neq; \empty;> である。
+      \a|href="50.html#wellthm"|<定理 4.4> によって、&m<X> 上の整列順序は少なくとも 1 つ存在するから、&m<\scr<F> \neq; \empty;> である。
       また、&m<\scr<F>> は順序数の大小関係について整列集合である。
       したがって、&m<`k \coloneqq; \min; \scr<F>> がとれ、明らかにこれが存在を示したかったものである。
     >
@@ -133,7 +133,7 @@
     \p<
       \label<条件 1 &m<\raarr;> 条件 2:>
       基数の定義により、ある集合 &m<X> が存在して &m<\lvert; X \rvert; = `k> が成り立つ。
-      特に &m<X \approx; `k> が成り立つから、補題 \ref|type="thm",id="isocard"|; を使えば &m<\lvert; X \rvert; = \lvert; `k \rvert;> が得られる。
+      特に &m<X \approx; `k> が成り立つから、\ref|type="cthm",id="isocard"|; を使えば &m<\lvert; X \rvert; = \lvert; `k \rvert;> が得られる。
       以上により、&m<\lvert; `k \rvert; = `k> が示された。
     >
     \p<
@@ -193,7 +193,7 @@
     \p<
       \label<条件 2 &m<\raarr;> 条件 1:>
       &m<p> と &m<\sp<q><-1>> は狭義単調増加だから、合成 &m<p \circ; f \circ; \sp<q><-1>: \op<ord> Y \to; \op<ord> X> も狭義単調増加である。
-      ここに \a|href="48.html"|<5 月 31 日>の補題 11 を使えば、&m<\op<ord> Y \leq; \op<ord> X> が得られる。
+      ここに\a|href="48.html#incord"|<補題 3.11> を使えば、&m<\op<ord> Y \leq; \op<ord> X> が得られる。
     >
   >
   \p<
@@ -269,7 +269,7 @@
         \lvert; Y \rvert; = \lvert; (p \circ; f) `[Y`] \rvert; = \lvert; \op<ord> [] (p \circ; f) `[Y`] \rvert; \leq; \op<ord> [] (p \circ; f) `[Y`]
       >
       が得られる。
-      一方で &m<(p \circ; f) `[Y`] \subseteq; \lvert; X \rvert;> であるが、これの包含写像が狭義単調増加であることから、定理 \ref|type="thm",id="ordord"|; によって、
+      一方で &m<(p \circ; f) `[Y`] \subseteq; \lvert; X \rvert;> であるが、これの包含写像が狭義単調増加であることから、\ref|type="cthm",id="ordord"|; によって、
       &mb<
         \op<ord> [] (p \circ; f) `[Y`] \leq; \op<ord> [] \lvert; X \rvert; = \lvert; X \rvert;
       >
@@ -289,7 +289,7 @@
   >
   \prf<
     \p<
-      定理 \ref|type="thm",id="cardord"|; により、仮定は &m<\lvert; Y \rvert; \leq; \lvert; X \rvert;> かつ &m<\lvert; X \rvert; \leq; \lvert; Y \rvert;> が成り立つということである。
+      \ref|type="cthm",id="cardord"|; により、仮定は &m<\lvert; Y \rvert; \leq; \lvert; X \rvert;> かつ &m<\lvert; X \rvert; \leq; \lvert; Y \rvert;> が成り立つということである。
       したがって &m<\lvert; Y \rvert; = \lvert; X \rvert;> であるから、&m<Y \approx; X> が得られた。
     >
   >
@@ -311,7 +311,7 @@
           \c; \c<x> \c<\longmapsto;> \c<`{x`}>
         >
       >
-      は明らかに単射だから、定理 \ref|type="thm",id="cardord"|; より &m<\lvert; X \rvert; \leq; \lvert; \frak<P> (X) \rvert;> が成り立つ。
+      は明らかに単射だから、\ref|type="cthm",id="cardord"|; より &m<\lvert; X \rvert; \leq; \lvert; \frak<P> (X) \rvert;> が成り立つ。
       したがって、あとは &m<\lvert; X \rvert; \neq; \lvert; \frak<P> (X) \rvert;> であることを示せば良い。
     >
     \p<

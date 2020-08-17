@@ -3,7 +3,7 @@
 
 \page<
   \name<再帰定理と整列可能定理>
-  \use-math;
+  \use-math|prefix="4"|;
 
   \h1<日記 (2020 年 6 月 5 日)>
   \p<
@@ -150,7 +150,7 @@
   \p<
     さて、再帰定理の応用として次の整列可能定理を示す。
   >
-  \thm|type="thm"|<
+  \thm|type="thm",id="wellthm"|<
     \name<整列可能定理\fl<well-ordering theorem>>
     \p<
       任意の集合 &m<X> に対し、&m<X> 上の整列順序が存在する。
