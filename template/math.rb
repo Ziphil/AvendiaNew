@@ -3,7 +3,7 @@
 
 THEOREM_TYPE_CLASSES = {"def" => "definition", "thm" => "theorem", "prp" => "proposition", "lem" => "lemma", "cor" => "corollary", "axm" => "axiom"}
 THEOREM_TYPE_NAMES = {"def" => "定義", "thm" => "定理", "prp" => "命題", "lem" => "補題", "cor" => "系", "axm" => "公理"}
-REFERENCE_TYPE_CLASSES = {"eq" => :equation, "thm" => :theorem, "cthm" => :clever_theorem, "bib" => :bibliography}
+REFERENCE_TYPES = {"eq" => :equation, "thm" => :theorem, "cthm" => :clever_theorem, "bib" => :bibliography}
 
 converter.define_singleton_method(:reset_variables) do
   variables[:latest] = false
@@ -174,11 +174,19 @@ end
 converter.add(["ref"], ["page"]) do |element|
   this = ""
   id = element.attribute("id")&.to_s
-  type = element.attribute("type")&.to_s
-  type_class = REFERENCE_TYPE_CLASSES[type]
-  this << Tag.build("span") do |this|
-    this["class"] = type_class.to_s
-    this << get_number(type_class, id).to_s
+  raw_type = element.attribute("type")&.to_s
+  type = REFERENCE_TYPES[raw_type]
+  base_type = type.to_s.gsub(/^clever_/, "").intern
+  this << Tag.build do |this|
+    this["class"] = base_type.to_s
+    case type
+    when :theorem, :clever_theorem
+      this.name = "a"
+      this["href"] = "#" + id
+    else
+      this.name = "span"
+    end
+    this << get_number(type, id).to_s
   end
 end
 
