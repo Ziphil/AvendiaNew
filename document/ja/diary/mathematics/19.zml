@@ -3,7 +3,7 @@
 
 \page<
   \name<2-関手と 2-自然変換>
-  \use-math;
+  \use-math|prefix="2"|;
 
   \h1<日記 (2018 年 8 月 28 日)>
   \p<

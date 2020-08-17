@@ -3,7 +3,7 @@
 
 \page<
   \name<2-圏の定義>
-  \use-math;
+  \use-math|prefix="1"|;
 
   \h1<日記 (2018 年 8 月 27 日)>
   \p<

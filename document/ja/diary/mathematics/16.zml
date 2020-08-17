@@ -3,7 +3,7 @@
 
 \page<
   \name<豊穣 Yoneda の補題>
-  \use-math;
+  \use-math|prefix="4"|;
 
   \h1<日記 (2018 年 8 月 5 日)>
   \p<
@@ -67,7 +67,7 @@
   \p<
     次に、命題中の全単射が &m<X> に関して自然であるとはどういうことなのか明確にする。
     この全単射の右辺の集合を &m<SX> と書くことにすると、&m<\scr<V>> の対象 &m<X> に対し集合 &m<SX> を対応させる規則は、以下のように関手 &m<S: \sp<\scr<V>><\circ;> \to; \bfrm<Set>> に拡張できる。
-    &m<\scr<V>> の射 &m<f: Y \to; X> に対し、&m<\scr<V>>-豊穣自然変換 &m<`g: X \otimes; F \hyphen; \raarr; G> は、\a|href="14.html"|<8 月 1 日>の命題 3 によって、&m<\scr<C>> の対象 &m<A> に対する &m<\scr<V>> の射 &m<\sb<`g><A>: X \otimes; FA \to; GA> の族であって、任意の &m<\scr<C>> の対象 &m<A, B> に対し、
+    &m<\scr<V>> の射 &m<f: Y \to; X> に対し、&m<\scr<V>>-豊穣自然変換 &m<`g: X \otimes; F \hyphen; \raarr; G> は、\a|href="14.html#nateq"|<命題 2.3> によって、&m<\scr<C>> の対象 &m<A> に対する &m<\scr<V>> の射 &m<\sb<`g><A>: X \otimes; FA \to; GA> の族であって、任意の &m<\scr<C>> の対象 &m<A, B> に対し、
     &mb<
       &mark<\wheart;>
       \diag<
@@ -226,7 +226,7 @@
   >
   \prf<
     \p<
-      定義 \ref|type="thm",id="natobj"|; により、任意の &m<\scr<V>> の対象 &m<X> に対し、全単射
+      \ref|type="cthm",id="natobj"|; により、任意の &m<\scr<V>> の対象 &m<X> に対し、全単射
       &mb<
         \op<Hom> (X, FK) \cong; `{ \scr<V> \text<-豊穣自然変換 > `g: X \otimes; `[K, \hyphen;`] \raarr; F `}
       >
@@ -322,7 +322,7 @@
       >
       が示された。
       あとはこの全単射が &m<X> に関して自然であることを示せば良い。
-      そのためには、命題 \ref|type="thm",id="natiso"|; のときと同様に上の式の右辺を &m<SX> と書くことにしたとき、
+      そのためには、\ref|type="cthm",id="natiso"|; のときと同様に上の式の右辺を &m<SX> と書くことにしたとき、
       &mb<
         \diag<
           \v<\op<Hom> (X, FK)> \v<SX> \br;
