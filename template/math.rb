@@ -9,32 +9,38 @@ converter.define_singleton_method(:reset_variables) do
   variables[:latest] = false
   variables[:number] = Hash.new{|h, s| h[s] = 0}
   variables[:numbers] = Hash.new{|h, s| h[s] = {}}
-  variables[:prefixes] = Hash.new{|h, s| h[s] = {}}
+  variables[:name_prefixes] = Hash.new{|h, s| h[s] = {}}
+  variables[:number_prefix] = nil
 end
 
-converter.define_singleton_method(:create_prefix) do |type, element = nil|
-  prefix = nil
+converter.define_singleton_method(:create_name_prefix) do |type, element = nil|
+  name_prefix = nil
   if element
     case type
     when :theorem
-      prefix = THEOREM_TYPE_NAMES[element.attribute("type")&.to_s]
+      name_prefix = THEOREM_TYPE_NAMES[element.attribute("type")&.to_s]
     end
   end
-  next prefix
+  next name_prefix
 end
 
 converter.define_singleton_method(:set_number) do |type, id, element = nil|
   variables[:number][type] += 1
   variables[:numbers][type][id] = variables[:number][type]
-  variables[:prefixes][type][id] = create_prefix(type, element)
+  variables[:name_prefixes][type][id] = create_name_prefix(type, element)
 end
 
 converter.define_singleton_method(:get_number) do |type, id|
-  number, prefix = "?", nil
+  number = "?"
+  name_prefix, number_prefix = nil, nil
   base_type = type.to_s.gsub(/^clever_/, "").intern
   if variables[:numbers][type].key?(id)
     number = variables[:numbers][type][id]
-    prefix = variables[:prefixes][base_type][id]
+    name_prefix = variables[:name_prefixes][base_type][id]
+    case type
+    when :theorem, :clever_theorem
+      number_prefix = variables[:number_prefix]
+    end
   else
     element = converter.document.root.each_xpath("//*[name()!='ref' and @id='#{id}']").to_a.first
     if element
@@ -43,18 +49,21 @@ converter.define_singleton_method(:get_number) do |type, id|
         number = element.each_xpath("preceding::math-block[@id]").to_a.size + 1
       when :theorem, :clever_theorem
         number = element.each_xpath("preceding::thm").to_a.size + 1
-        prefix = create_prefix(base_type, element)
+        name_prefix = create_name_prefix(base_type, element)
+        number_prefix = variables[:number_prefix]
       when :bibliography
         number = element.each_xpath("preceding-sibling::li").to_a.size + 1
       end
       variables[:numbers][type][id] = number
-      variables[:prefixes][base_type][id] = prefix
+      variables[:name_prefixes][base_type][id] = name_prefix
     end
   end
-  if prefix && type =~ /^clever_/
-    string = prefix.to_s + " " + number.to_s
-  else
-    string = number.to_s
+  string = number.to_s
+  if number_prefix
+    string = number_prefix.to_s + "." + string
+  end
+  if name_prefix && type =~ /^clever_/
+    string = name_prefix.to_s + " " + string
   end
   next string
 end
@@ -75,6 +84,9 @@ converter.add(["use-math"], ["header"]) do |element|
   this = ""
   converter.create_script_string
   converter.reset_variables
+  if element.attribute("prefix")
+    variables[:number_prefix] = element.attribute("prefix").to_s
+  end
   this << Tag.build("style") do |this|
     font_url = converter.url_prefix + "material/font/math.otf"
     this << ZoticaBuilder.create_style_string(font_url)
