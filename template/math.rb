@@ -180,7 +180,7 @@ converter.add(["ref"], ["page"]) do |element|
   this << Tag.build do |this|
     this["class"] = base_type.to_s
     case type
-    when :theorem, :clever_theorem
+    when :clever_theorem
       this.name = "a"
       this["href"] = "#" + id
     else
