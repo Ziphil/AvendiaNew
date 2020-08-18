@@ -175,12 +175,12 @@ converter.add(["ref"], ["page"]) do |element|
   this = ""
   id = element.attribute("id")&.to_s
   raw_type = element.attribute("type")&.to_s
+  no_link = !!element.attribute("nolink")
   type = REFERENCE_TYPES[raw_type]
   base_type = type.to_s.gsub(/^clever_/, "").intern
   this << Tag.build do |this|
     this["class"] = base_type.to_s
-    case type
-    when :clever_theorem
+    if !no_link && type == :clever_theorem
       this.name = "a"
       this["href"] = "#" + id
     else
