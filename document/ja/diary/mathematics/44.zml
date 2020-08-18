@@ -3,7 +3,7 @@
 
 \page<
   \name<アローの圏論的意味論 (その 4)>
-  \use-math;
+  \use-math|prefix="4"|;
 
   \h1<日記 (2020 年 4 月 18 日)>
   \p<
@@ -55,7 +55,7 @@
     >
   >
   \p<
-    この逆に、&m<\bfrm<Arrow>> のプリミティブな項として &m<\tt<first>> の代わりに上記の 5 つの等式を満たす &m<\tt<second>> を導入した場合でも、同様の方法で &m<\rm|tt|<first>> を定義することができ、それは \a|href="41.html"|<4 月 15 日>の定義中の 5 つの等式を満たす。
+    この逆に、&m<\bfrm<Arrow>> のプリミティブな項として &m<\tt<first>> の代わりに上記の 5 つの等式を満たす &m<\tt<second>> を導入した場合でも、同様の方法で &m<\rm|tt|<first>> を定義することができ、それは \a|href="41.html#arr"|<定義 1.4> 中の後半 5 つの等式を満たす。
     したがって、&m<\bfrm<Arrow>> を定義するときに、&m<\tt<first>> のみをプリミティブな項として入れるか、&m<\tt<second>> のみをプリミティブな項として入れるか、もしくは両方とも入れるかは、単に慣習の問題であって、どれを採用しても結局同値な体系になる。
     これ以降では、利便性のため &m<\tt<second>> もプリミティブに入っていたものとして議論する。
   >
@@ -147,7 +147,7 @@
           \c<\tt|fun|<second> (F \gggt|bin|; G)> \c<=> \c<\tt|fun|<second> F \gggt|bin|; \tt|fun|<second> G>
         >
       >
-      に帰着されるが、最初の 2 つの式は明らかに成り立ち、残りの 2 つの式は &m<\bfrm<Arrow>> の公理と命題 \ref|type="thm",id="second"|; の一部そのものである。
+      に帰着されるが、最初の 2 つの式は明らかに成り立ち、残りの 2 つの式は &m<\bfrm<Arrow>> の公理と\ref|type="cthm",id="second"|; の一部そのものである。
     >
     \p<
       さらに、&m<\scr<D>> に前モノイダル圏の構造を定める。
@@ -231,14 +231,14 @@
     以上で、圏論側で等式が成り立てば型システム側でも成り立つこと (完全性) も示されたことになる。
     前回の結果と合わせれば、以下が得られる。
   >
-  \thm|type="thm"|<
+  \thm|type="thm",id="sc"|<
     \p<
       &m<\bfrm<Arrow>> における型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、任意の豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つための必要十分条件は、&m<\bfrm<Arrow>> で &m<M = N> が成り立つことである。
     >
   >
   \prf<
     \p<
-      \a|href="43.html"|<4 月 18 日>の命題 1 と今回の命題 \ref|type="thm",id="comp"|; から従う。
+      \a|href="43.html#sound"|<命題 3.1> と\ref|type="cthm",id="comp"|; から従う。
     >
   >
   \p<

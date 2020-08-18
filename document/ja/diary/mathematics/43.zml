@@ -3,7 +3,7 @@
 
 \page<
   \name<アローの圏論的意味論 (その 3)>
-  \use-math;
+  \use-math|prefix="3"|;
 
   \h1<日記 (2020 年 4 月 18 日)>
   \p<
@@ -11,7 +11,7 @@
     前回までで、アローの形式化と豊穣 Freyd 圏の定義を終えた。
     今回は、アローを豊穣 Freyd 圏上で解釈し、ここまでに定義した 2 つの概念を結び付ける。
   >
-  \thm|type="prp"|<
+  \thm|type="prp",id="sound"|<
     \p<
       型システム &m<\bfrm<Arrow>> は、任意の豊穣 Freyd 圏で解釈をもつ。
       さらに、&m<\bfrm<Arrow>> における型割り当て &m<`G \vdash; M: A> および &m<`G \vdash; N: A> に対し、&m<\bfrm<Arrow>> で &m<M = N> が成り立つならば、任意の豊穣 Freyd 圏で &m<\overline<M> = \overline<N>> が成り立つ。
@@ -60,7 +60,7 @@
     >
     \p<
       以上により、&m<\bfrm<Arrow>> の &m<(\scr<C>`; \scr<D>, J)> における解釈が定まった。
-      以降、\a|href="41.html"|<4 月 15 日>の定義 4 で定められた &m<\bfrm<Arrow>> における 9 つの等式が、&m<\scr<C>> の射としても成り立つことを順に示す。
+      以降、\a|href="41.html#arr"|<定義 1.4> で定められた &m<\bfrm<Arrow>> における 9 つの等式が、&m<\scr<C>> の射としても成り立つことを順に示す。
     >
     \p<
       \label<等式 1:>

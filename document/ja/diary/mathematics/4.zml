@@ -3,7 +3,7 @@
 
 \page<
   \name<正規関手の圏と集合族の圏>
-  \use-math;
+  \use-math|prefix="4"|;
 
   \h1<日記 (2018 年 2 月 6 日)>
   \p<
@@ -148,7 +148,7 @@
       すなわち、&m<f> は同型射なので補題の主張が成り立つ。
     >
   >
-  \thm|type="thm"|<
+  \thm|type="thm",id="main"|<
     \p<
       圏同値
       &mb<
@@ -159,15 +159,15 @@
   >
   \prf<
     \p<
-      まず、\a|href="3.html"|<2 月 4 日>の定理 5 により、上で定義した &m<\widetildebelow<\text<->>> は同型の違いを除いて対象の間の全射になっている。
+      まず、\a|href="3.html#main"|<定理 3.5> により、上で定義した &m<\widetildebelow<\text<->>> は同型の違いを除いて対象の間の全射になっている。
       また、&m<\widetildebelow<\text<->>> が忠実であることも容易に示せる。
       したがって、&m<\widetildebelow<\text<->>> が充満であることを示せば証明が完了する。
     >
     \p<
       任意にカルテシアン自然変換 &m<`n: \widetildebelow<M> \to; \widetildebelow<M'>> をとる。
-      任意の &m<(`g, b) \in; \op<exp> A \times; B> と &m<x \in; M (`g, b)> に対し、補題 \ref|type="thm",id="iso"|; によって &m<(`g, (\sb<\rm<id>><`g>, x))> は &m<\bfrm<El> (\sp<\widetildebelow<M>><b>)> で正規対象である。
-      したがって、補題 \ref|type="thm",id="pres"|; によって &m<(`g, \sbsp<`n><`g><b> (\sb<\rm<id>><`g>, x))> は &m<\bfrm<El> (\widetildebelow<M'> \sp<><b>)> で正規対象でもある。
-      再び補題 \ref|type="thm",id="iso"|; を用いれば、ある元 &m<y \in; M' (`g, b)> が存在して、
+      任意の &m<(`g, b) \in; \op<exp> A \times; B> と &m<x \in; M (`g, b)> に対し、\ref|type="cthm",id="iso"|; によって &m<(`g, (\sb<\rm<id>><`g>, x))> は &m<\bfrm<El> (\sp<\widetildebelow<M>><b>)> で正規対象である。
+      したがって、\ref|type="cthm",id="pres"|; によって &m<(`g, \sbsp<`n><`g><b> (\sb<\rm<id>><`g>, x))> は &m<\bfrm<El> (\widetildebelow<M'> \sp<><b>)> で正規対象でもある。
+      再び\ref|type="cthm",id="iso"|; を用いれば、ある元 &m<y \in; M' (`g, b)> が存在して、
       &mb<
         (`g, \sbsp<`n><X><b> (\sb<\rm<id>><`g>, x)) \cong; (`g, (\sb<\rm<id>><`g>, y))
       >
@@ -187,7 +187,7 @@
         (`g, \sbsp<`n><`g><b> (\sb<\rm<id>><`g>, x)) \cong; (`g, (\sb<\rm<id>><`g>, \sb<`j><(`g, b)> x)) \cong; (`g, \widetildebelow<`j> \sbsp<><X><b> (\sb<\rm<id>><`g>, x))
       >
       が成り立つ。
-      補題 \ref|type="thm",id="iso"|; によって、&m<\bfrm<El> (\sp<\widetildebelow<M>><b>)> の正規対象は同型の違いを除いて全て &m<(`g, (\sb<\rm<id>><`g>, x))> の形だから、上の同型は &m<\sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>>> の射として &m<\widetildebelow<`j> = `n> が成り立つことを意味している。
+      \ref|type="cthm",id="iso"|; によって、&m<\bfrm<El> (\sp<\widetildebelow<M>><b>)> の正規対象は同型の違いを除いて全て &m<(`g, (\sb<\rm<id>><`g>, x))> の形だから、上の同型は &m<\sb<`[ \sp<\bfrm<Set>><A>, \sp<\bfrm<Set>><B> `]><\text<NF>>> の射として &m<\widetildebelow<`j> = `n> が成り立つことを意味している。
       すなわち、&m<\widetildebelow<\text<->>> は充満である。
     >
   >

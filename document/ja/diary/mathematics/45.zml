@@ -3,7 +3,7 @@
 
 \page<
   \name<アロー ＋ 適用計算>
-  \use-math;
+  \use-math|prefix="5"|;
 
   \h1<日記 (2020 年 5 月 12 日)>
   \p<
@@ -291,14 +291,14 @@
     >
   >
   \p<
-    さて、\a|href="44.html"|<4 月 18 日>の定理 3 により、型システム &m<\bfrm<Arrow>> は豊穣 Freyd 圏 &m<(\scr<C>`; \scr<D>, J)> とちょうど対応することが分かっていた。
+    さて、\a|href="44.html#sc"|<定理 4.3> により、型システム &m<\bfrm<Arrow>> は豊穣 Freyd 圏 &m<(\scr<C>`; \scr<D>, J)> とちょうど対応することが分かっていた。
     この対応を用いて、上の命題の条件 2 を圏の言葉で述べると次のようになる。
     すなわち、&m<\scr<C>> の対象 &m<A, B, C> に対し、
     &mb<
       \sb<`f><ABC> = \overline<h: `[A \times; B, C`] \vdash; \rm<`l> a. \sfun; \tt|fun|<arr> (\rm<`l> b. \sfun; \langle; a, b \rangle;) \gggt|bin|; h: A \buharprarr; `[B, C`]>
     >
     と定めると、これが &m<\scr<C>> で逆射 &m<\sb<`c><ABC>: A \buharprarr; `[B, C`] \to; `[A \times; B, C`]> をもつ。
-    このとき、補題 \ref|id="shnat",type="thm"|; によって &m<\sb<`f><ABC>> は全ての変数について自然だから、特に &m<\scr<C>> における自然な同型
+    このとき、\ref|type="cthm",id="shnat"|; によって &m<\sb<`f><ABC>> は全ての変数について自然だから、特に &m<\scr<C>> における自然な同型
     &mb<
       `[A \times; B, C`] \cong; A \buharprarr; `[B, C`] 
     >
@@ -330,7 +330,7 @@
   >
   \prf<
     \p<
-      \a|href="44.html"|<4 月 18 日>の定理 3 と今回の命題 \ref|type="thm",id="equiv"|; から従う。
+      \a|href="44.html#sc"|<定理 4.3> と\ref|type="cthm",id="equiv"|; から従う。
     >
   >
   \p<

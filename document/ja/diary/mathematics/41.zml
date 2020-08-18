@@ -3,7 +3,7 @@
 
 \page<
   \name<アローの圏論的意味論>
-  \use-math;
+  \use-math|prefix="1"|;
 
   \h1<日記 (2020 年 4 月 15 日)>
   \p<
@@ -122,7 +122,7 @@
     Hughes によって導入されたアローの定式化として、以下のような &m<\sb<\rm<`l>><1 \times|ord|;>> を拡張した型システムを考えることにする。
     基本的に Haskell における定義をそのまま写し取っただけである。
   >
-  \thm|type="def"|<
+  \thm|type="def",id="arr"|<
     \p<
       型システム &m<\bfrm<Arrow>> を &m<\sb<\rm<`l>><1 \times|ord|;>> の拡張として以下のように定める。
       まず、型 &m<A> と項 &m<M> を、

@@ -3,7 +3,7 @@
 
 \page<
   \name<解析的関手と弱正規形>
-  \use-math;
+  \use-math|prefix="1"|;
 
   \h1<日記 (2018 年 2 月 2 日)>
   \p<
@@ -157,7 +157,7 @@
   \p<
     そして、以下の定理が知られている。
   >
-  \thm|type="thm"|<
+  \thm|type="thm",id="norm"|<
     \p<
       関手 &m<F: \sp<\bfrm<Set>><A> \to; \bfrm<Set>> について、3 条件
     >

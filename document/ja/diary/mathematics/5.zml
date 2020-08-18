@@ -3,7 +3,7 @@
 
 \page<
   \name<正規関手を射とするカルテシアン閉圏>
-  \use-math;
+  \use-math|prefix="5"|;
 
   \h1<日記 (2018 年 2 月 7 日)>
   \p<
@@ -79,7 +79,7 @@
       積が上の形で与えられることは明らかなので、冪が上の形で与えられることを示す。
     >
     \p<
-      &m<\sb<\bfrm<CAAcc>><\text<NF>>> の別の対象 &m<\sp<\bfrm<Set>><C>> に対し、\a|href="4.html"|<2 月 6 日>の定理 6 を用いると、圏同値
+      &m<\sb<\bfrm<CAAcc>><\text<NF>>> の別の対象 &m<\sp<\bfrm<Set>><C>> に対し、\a|href="4.html#main"|<定理 4.7> を用いると、圏同値
       &mb<
         \array|align="rcl"|<
           \c<\sb<`[ \sp<\bfrm<Set>><C>, \sp<\bfrm<Set>><\op<exp> A \times; B> `]><\text<NF>>> \c<\cong;> \c<\sp<\bfrm<Set>><\op<exp> C \times; (\op<exp> A \times; B)>> \br;
