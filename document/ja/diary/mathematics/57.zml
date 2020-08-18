@@ -123,7 +123,7 @@
     \p<
       \label<条件 1 &m<\raarr;> 条件 2:>
       任意に &m<\scr<I>> の対象 &m<i> をとり、&m<F \coloneqq; \op<Hom> (i, \hyphen;): \scr<I> \to; \bfrm<Set>> とおく。
-      補題 \ref|type="thm",id="setcol"|; により、
+      \ref|type="cthm",id="setcol"|; により、
       &mb<
         \op<colim> (H \rtriangle; F) = \paren<\coprod<k \in; \scr<K>> \op<Hom> (i, Hk)> `/ \sim|ord|;
       >
@@ -136,7 +136,7 @@
       したがって、&m<x \sim; x'> であるとは、&m<i \darr|bin|; H> において &m<x> と &m<x'> が射で結ばれることを意味している。
     >
     \p<
-      一方、仮定から &m<\op<colim> F \cong; \op<colim> (H \rtriangle; F)> が成り立つが、補題 \ref|type="thm",id="onep"|; によって &m<\op<colim> F = 1> であるから、&m<\op<colim> (H \rtriangle; F) = 1> も成り立つ。
+      一方、仮定から &m<\op<colim> F \cong; \op<colim> (H \rtriangle; F)> が成り立つが、\ref|type="cthm",id="onep"|; によって &m<\op<colim> F = 1> であるから、&m<\op<colim> (H \rtriangle; F) = 1> も成り立つ。
       これにより、上の表示を使うと、任意の &m<\coprod|in|<k \in; \scr<K>> \op<Hom> (i, Hk)> の元が &m<\sim;> で結ばれるということが分かるが、&m<\sim;> とは 2 つの元が &m<i \darr|bin|; H> の射で結ばれるという関係であった。
       したがって、&m<i \darr|bin|; H> の任意の対象が射で結ばれることになり、さらに &m<i \darr|bin|; H> は空でないので、&m<i \darr|bin|; H> は連結である。
     >

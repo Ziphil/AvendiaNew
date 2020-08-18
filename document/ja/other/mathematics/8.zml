@@ -191,12 +191,12 @@
         \sp<><\forall;> M \in; \sp<\rm<`L>><\empty;> \ssbin; G \lceil; M \rceil; \sb|rel|<=><`b> \underline<$ \sp<M><*>>
       >
       を満たすものが存在する。
-      なお、&m<\sp<M><*>> は補題 \ref|type="thm",id="mstar"|; で定義されたものである。
+      なお、&m<\sp<M><*>> は\ref|type="cthm",id="mstar"|; で定義されたものである。
     >
   >
   \prf<
     \p<
-      補題 \ref|type="thm",id="mstar"|; の証明から、閉じたラムダ項 &m<M> に対し、&m<\sp<M><*>> は &m<M> から再帰的に決定できる。
+      \ref|type="cthm",id="mstar"|; の証明から、閉じたラムダ項 &m<M> に対し、&m<\sp<M><*>> は &m<M> から再帰的に決定できる。
       したがって、
       &mb<
         g: `# M \longmapsto; $ \sp<M><*>
@@ -220,7 +220,7 @@
   >
   \prf<
     \p<
-      補題 \ref|type="thm",id="deff"|; の &m<F> と補題 \ref|type="thm",id="defg"|; の &m<G> を用いて、
+      \ref|type="cthm",id="deff"|; の &m<F> と\ref|type="cthm",id="defg"|; の &m<G> を用いて、
       &mb<
         \bfrm<E> \equiv; \rm<`l> u. \sfun; u F (G u)
       >
@@ -424,7 +424,7 @@
         F \underline<n> (G \underline<n>) (\bfrm<E> \underline<n>) \sb|rel|<=><`b> F \underline<n> (G \underline<n>) (\bfrm<E> \sfun; \underline<m + n - 1>) 
       >
       が成り立つことである。
-      これと補題 \ref|type="thm",id="fuvw"|;, \ref|type="thm",id="gu"|; を用いれば、
+      これと\ref|type="cthm",id="fuvw"|; と\ref|type="cthm",id="gu"|; を用いれば、
       &mb<
         \array|align="rcl"|<
           \c<F \underline<n> (G \underline<n>) (\bfrm<E> \underline<n>)> \c<\sb|rel|<=><`b>> \c<F \underline<n> (F (\bfrm<`S> \underline<n>) (G (\bfrm<`S> \underline<n>)) (\bfrm<E> (\bfrm<`S> \underline<n>)) (G \underline<n>)) (\bfrm<E> \underline<n>)> \br;
@@ -448,7 +448,7 @@
   \prf<
     \p<
       &m<n = `# Z, n' = `# Z'> とおけば、&m<\bfrm<E> \underline<n> \sb|rel|<=><`b> Z, \bfrm<E> \underline<n'> \sb|rel|<=><`b> Z'> である。
-      したがって、補題 \ref|type="thm",id="fngnen"|; を用いれば、
+      したがって、\ref|type="cthm",id="fngnen"|; を用いれば、
       &mb<
         \array|align="rcl"|<
           \c<MZ> \c<\sb|rel|<=><`b>> \c<F \underline<0> (G \underline<0>) (\bfrm<E> \underline<n>)> \br;
@@ -511,9 +511,9 @@
       また、&m<(\rm<`l> w. \sfun; P) W \sb|rel|<\to;><h> Q> が成り立つ。
     >
     \p<
-      &m<\rm<`l> w. \sfun; P> は &m<`t> に含まれるラムダ項の中で最初のラムダ抽象項なので、補題 \ref|type="thm",id="srsq"|; によって &m<`t> を構成する全ての簡約は冠頭簡約である。
+      &m<\rm<`l> w. \sfun; P> は &m<`t> に含まれるラムダ項の中で最初のラムダ抽象項なので、\ref|type="cthm",id="srsq"|; によって &m<`t> を構成する全ての簡約は冠頭簡約である。
       したがって、&m<(\rm<`l> w. \sfun; P) W \sb|rel|<\to;><h> Q> と合わせて &m<FUVW \sb|rel|<\headrarr;><h> Q> が成り立つ。
-      さらに、&m<(\rm<`l> w. \sfun; P) W> は &m<`t> に含まれるラムダ項の中で最初のラムダ抽象項だから、補題 \ref|type="thm",id="fuvw"|; の証明で行った計算を見ることで、
+      さらに、&m<(\rm<`l> w. \sfun; P) W> は &m<`t> に含まれるラムダ項の中で最初のラムダ抽象項だから、\ref|type="cthm",id="fuvw"|; の証明で行った計算を見ることで、
       &mb<
         Q \equiv; FU (F (\bfrm<`S> U) (G (\bfrm<`S> U)) WV) (\bfrm<E> U)
       >
@@ -575,8 +575,8 @@
         `p: Q \to; \cdots; \to; Z'
       >
       は長さ &m<l> 未満の標準簡約列である。
-      また、補題 \ref|type="thm",id="srsq"|; により &m<FUV \sb|rel|<\headrarr;><h> Q> が成り立つ。
-      これより、補題 \ref|type="thm",id="fuvw"|; の証明の計算を見れば、
+      また、\ref|type="cthm",id="srsq"|; により &m<FUV \sb|rel|<\headrarr;><h> Q> が成り立つ。
+      これより、\ref|type="cthm",id="fuvw"|; の証明の計算を見れば、
       &mb<
         Q \equiv; \rm<`l> w. \sfun; FU (F (\bfrm<`S> U) (G (\bfrm<`S> U)) w V) (\bfrm<E> U)
       >
@@ -640,12 +640,12 @@
       >
       は長さ &m<l> 未満の標準簡約列である。
       &m<`t> の長さを &m<l'> とする。
-      また、補題 \ref|type="thm",id="srsq"|; により &m<FUVW \sb|rel|<\headrarr;><h> Q> が成り立つから、
+      また、\ref|type="cthm",id="srsq"|; により &m<FUVW \sb|rel|<\headrarr;><h> Q> が成り立つから、
       &mb<
         Q \equiv; FU (F (\bfrm<`S> U) (G (\bfrm<`S> G)) WV) (\bfrm<E> U)
       >
       が分かる。
-      &m<y \in; \op<FV> (F (\bfrm<`S> U) (G (\bfrm<`S> G)) WV)> かつ &m<y \nin; \op<FV> (Z)> だから、補題 \ref|type="thm",id="fuvwtoza"|; より、長さ &m<l'> 以下の標準簡約列
+      &m<y \in; \op<FV> (F (\bfrm<`S> U) (G (\bfrm<`S> G)) WV)> かつ &m<y \nin; \op<FV> (Z)> だから、\ref|type="cthm",id="fuvwtoza"|; より、長さ &m<l'> 以下の標準簡約列
       &mb<
         `r: F (\bfrm<`S> U) (G (\bfrm<`S> G)) WV \to; \cdots; \to; Z'
       >
@@ -683,8 +683,8 @@
     \p<
       &m<M> は閉じているので &m<y \nin; \op<FV> (Mx)> であり、&m<\op<FV> (Mx) \supseteq; \op<FV> (Z') = \op<FV> (Z)> が成り立つから、&m<y \nin; \op<FV> (Z)> でもある。
       また、明らかに &m<y \in; \op<FV> (y)> である。
-      さらに、&m<My \equiv; F \underline<0> (G \underline<0>) y> であるから、これは補題 \ref|type="thm",id="fuvwtozb"|; が使える形である。
-      したがって、補題 \ref|type="thm",id="fuvwtozb"|; により、あるラムダ項 &m<W'> が存在して、&m<y \sb|rel|<\headrarr;><`b> W'> かつ &m<y \nin; \op<FV> (W')> が成り立つ。
+      さらに、&m<My \equiv; F \underline<0> (G \underline<0>) y> であるから、これは\ref|type="cthm",id="fuvwtozb"|; が使える形である。
+      したがって、\ref|type="cthm",id="fuvwtozb"|; により、あるラムダ項 &m<W'> が存在して、&m<y \sb|rel|<\headrarr;><`b> W'> かつ &m<y \nin; \op<FV> (W')> が成り立つ。
       &m<y> は変項なので、&m<W' \equiv; y> でなければならず、これより &m<y \nin; \op<FV> (y)> となり矛盾である。
     >
   >
@@ -699,7 +699,7 @@
   >
   \prf<
     \p<
-      任意に閉じたラムダ項 &m<Z> をとると、&m<\bfrm<I>> も閉じたラムダ項だから、補題 \ref|type="thm",id="mzmz"|; によって &m<MZ \sb|rel|<=><`b> M \bfrm<I>> である。
+      任意に閉じたラムダ項 &m<Z> をとると、&m<\bfrm<I>> も閉じたラムダ項だから、\ref|type="cthm",id="mzmz"|; によって &m<MZ \sb|rel|<=><`b> M \bfrm<I>> である。
       一方、&m<N> の定義により、&m<NZ \sb|rel|<=><`b> M \bfrm<I>> である。
       したがって、&m<MZ \sb|rel|<=><`b`h> NZ> を得る。
     >
@@ -707,7 +707,7 @@
       &m<M \sb|rel|<=><`b`h> N> と仮定する。
       任意の変項 &m<x, y> に対し、&m<Mx \sb|rel|<=><`b`h> Nx> および &m<Mx \sb|rel|<=><`b`h> Ny> である。
       さらに &m<N> の定義から、&m<Nx \sb|rel|<=><`b`h> M \bfrm<I>> および &m<Ny \sb|rel|<=><`b`h> M \bfrm<I>> も成り立つ。
-      以上により &m<Mx \sb|rel|<=><`b`h> My> を得るが、これは補題 \ref|type="thm",id="mxmy"|; に反する。
+      以上により &m<Mx \sb|rel|<=><`b`h> My> を得るが、これは\ref|type="cthm",id="mxmy"|; に反する。
       したがって、&m<M \sb|rel|<\neq;><`b`h> N> である。
     >
   >

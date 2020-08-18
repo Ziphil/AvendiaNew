@@ -188,7 +188,7 @@
     >
   >
   \p<
-    以上の補題を用いると、定理 \ref|type="thm",id="main"|; の主張の必要性が証明できる。
+    以上の補題を用いると、\ref|type="cthm",id="main"|; の主張の必要性が証明できる。
   >
   \thm|type="prp"|<
     \p<
@@ -201,13 +201,13 @@
       また、対象と射を全くもたない圏を &m<\bfrm<0>> で表し、対象と射をそれぞれ 1 つしかもたない圏を &m<\bfrm<1>> で表す。
     >
     \p<
-      まず &m<\sb<Y><\bfrm<0>>> に補題 \ref|type="thm",id="adj"|; を適用すると &m<\exists; \sb<Y><\bfrm<0>> \dashv; \sp<\sb<Y><\bfrm<0>>><*>> が得られる。
-      さらに補題 \ref|type="thm",id="yoneda"|; を適用すれば &m<\sp<\sb<Y><\bfrm<0>>><*> \dashv; \sb<Y><\sp<\bfrm<Set>><\sp<\bfrm<0>><\circ;>>>> が得られる。
+      まず &m<\sb<Y><\bfrm<0>>> に\ref|type="cthm",id="adj"|; を適用すると &m<\exists; \sb<Y><\bfrm<0>> \dashv; \sp<\sb<Y><\bfrm<0>>><*>> が得られる。
+      さらに\ref|type="cthm",id="yoneda"|; を適用すれば &m<\sp<\sb<Y><\bfrm<0>>><*> \dashv; \sb<Y><\sp<\bfrm<Set>><\sp<\bfrm<0>><\circ;>>>> が得られる。
       ところで &m<\sp<\bfrm<Set>><\sp<\bfrm<0>><\circ;>> \cong; \bfrm<1>> であるから、最終的に &m<\exists; \sb<Y><\bfrm<0>> \dashv; \sp<\sb<Y><\bfrm<0>>><*> \dashv; \sb<Y><\bfrm<1>>> が得られたことになる。
     >
     \p<
-      この随伴列に補題 \ref|type="thm",id="adjprev"|; を適用すると &m<(\exists; \sb<Y><\bfrm<0>>) \sp<><*> \dashv; \sp<\sb<Y><\bfrm<0>>><**> \dashv; \sb<Y><\bfrm<1>> \sp<><*>> が得られる。
-      さらにこの両端の関手について、補題 \ref|type="thm",id="adj"|; によって &m<\exists; \exists; \sb<Y><\bfrm<0>> \dashv; (\exists; \sb<Y><\bfrm<0>>) \sp<><*>> が得られ、補題 \ref|type="thm",id="yoneda"|; によって &m<\sp<\sb<Y><\bfrm<1>>><*> \dashv; \sb<Y><\sp<\bfrm<Set>><\sp<\bfrm<1>><\circ;>>>> が得られる。
+      この随伴列に\ref|type="cthm",id="adjprev"|; を適用すると &m<(\exists; \sb<Y><\bfrm<0>>) \sp<><*> \dashv; \sp<\sb<Y><\bfrm<0>>><**> \dashv; \sb<Y><\bfrm<1>> \sp<><*>> が得られる。
+      さらにこの両端の関手について、\ref|type="cthm",id="adj"|; によって &m<\exists; \exists; \sb<Y><\bfrm<0>> \dashv; (\exists; \sb<Y><\bfrm<0>>) \sp<><*>> が得られ、\ref|type="cthm",id="yoneda"|; によって &m<\sp<\sb<Y><\bfrm<1>>><*> \dashv; \sb<Y><\sp<\bfrm<Set>><\sp<\bfrm<1>><\circ;>>>> が得られる。
       ところで &m<\sp<\bfrm<Set>><\sp<\bfrm<1>><\circ;>> \cong; \bfrm<Set>> であることから、結局、
       &mb<
         \exists; \exists; \sb<Y><\bfrm<0>> \dashv; (\exists; \sb<Y><\bfrm<0>>) \sp<><*> \dashv; \sp<\sb<Y><\bfrm<0>>><**> \dashv; \sb<Y><\bfrm<1>> \sp<><*> \dashv; \sb<Y><\bfrm<Set>>
@@ -265,7 +265,7 @@
     >
   >
   \p<
-    では次回は、定理 \ref|type="thm",id="main"|; の主張の十分性の方の証明を行おうと思う。
+    では次回は、\ref|type="cthm",id="main"|; の主張の十分性の方の証明を行おうと思う。
   >
   \h1<参考文献>
   \ol<

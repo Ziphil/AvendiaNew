@@ -76,7 +76,7 @@
   >
   \prf<
     \p<
-      命題 \ref|type="thm",id="proddir"|; から従う。
+      \ref|type="cthm",id="proddir"|; から従う。
     >
   >
   \thm|type="prp",id="prodind"|<
@@ -99,7 +99,7 @@
   \prf<
     \p<
       任意の &m<d \in; D, e \in; E> に対して &m<\sb<f><d>, \sb<f><e>> が全て連続であるとする。
-      この連続性と命題 \ref|type="thm",id="proddir"|; によって、&m<D \times; E> の有向部分集合 &m<S> に対し、
+      この連続性と\ref|type="cthm",id="proddir"|; によって、&m<D \times; E> の有向部分集合 &m<S> に対し、
       &mb<
         \array|align="rcl"|<
           \c<\bigsqcup<(a, b) \in; S> f (a, b)> \c<=> \c<\bigsqcup<a \in; \sb<`p><1> (S)> \bigsqcup<b \in; \sb<`p><2> (T)> \sb<f><a> (b)> \br;
@@ -115,7 +115,7 @@
     >
     \p<
       逆に、&m<f> が連続であるとする。
-      任意の &m<d \in; D> および 有向部分集合 &m<B \subseteq; E> に対し、再び命題 \ref|type="thm",id="proddir"|; によって、
+      任意の &m<d \in; D> および 有向部分集合 &m<B \subseteq; E> に対し、再び\ref|type="cthm",id="proddir"|; によって、
       &mb<
         \array|align="rcl"|<
           \c<\bigsqcup<b \in; B> \sb<f><d> (b)> \c<=> \c<\bigsqcup<b \in; B> f (d, b)> \br;

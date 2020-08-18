@@ -307,7 +307,7 @@
   >
   \prf<
     \p<
-      任意の &m<x \in; L> をとったとき、命題 \ref|type="thm",id="algebraic"|; の条件 2 における &m<K> 上有限次拡大を &m<L> 自身にとれば良い。
+      任意の &m<x \in; L> をとったとき、\ref|type="cthm",id="algebraic"|; の条件 2 における &m<K> 上有限次拡大を &m<L> 自身にとれば良い。
     >
   >
   \p<
@@ -361,7 +361,7 @@
       >
       は &m<K `[X, Y`] `/ \langle; P, Q \rangle;> の &m<K>-基底となるから、&m<K `[X, Y`] `/ \langle; P, Q \rangle;> は特に有限次元である。
       したがって、&m<\tilde<`f>> によるその像 &m<M> も有限次元であり、すなわち &m<M> は &m<K> の有限次拡大である。
-      さらに、補題 \ref|type="thm",id="finitefield"|; によって &m<M> は体になるから、命題 \ref|type="thm",id="algebraic"|; の条件 2 が満たされ、&m<f (x, y)> は &m<K> 上代数的である。
+      さらに、\ref|type="cthm",id="finitefield"|; によって &m<M> は体になるから、\ref|type="cthm",id="algebraic"|; の条件 2 が満たされ、&m<f (x, y)> は &m<K> 上代数的である。
     >
   >
   \h1|id="comp"|<合成体>
@@ -577,7 +577,7 @@
       &mb<
         S \coloneqq; `{y \in; K' \mid; P (y) = 0`}
       >
-      とおけば、補題 \ref|type="thm",id="morroot"|; によって、
+      とおけば、\ref|type="cthm",id="morroot"|; によって、
       &mb<
         `# S = `# \sb<\op<Mor>><K> (M, K')
       >
@@ -620,7 +620,7 @@
       &mb<
         S \coloneqq; `{y \in; K' \mid; P (y) = 0`}
       >
-      とおけば、補題 \ref|type="thm",id="morroot"|; によって、
+      とおけば、\ref|type="cthm",id="morroot"|; によって、
       &mb<
         `# S = `# \sb<\op<Mor>><K> (L, K')
       >
@@ -683,7 +683,7 @@
   >
   \p<
     なお、後に述べる分離拡大の言葉を用いて、この定理の同値な 3 条件を言い換えることができる。
-    これは定理 \ref|type="thm",id="mornumberb"|; を参照すること。
+    これは\ref|type="cthm",id="mornumberb"|; を参照すること。
   >
   \h1|id="rootadj"|<根の添加と分解体>
   \thm|type="def"|<
@@ -826,7 +826,7 @@
     \p<
       体 &m<K> とモニック多項式 &m<P \in; K `[X`]> をとる。
       また、&m<P> の最小分解体 &m<L> および &m<K> の拡大体 &m<K'> をとる。
-      &m<K'> 内の &m<P> の最小分解体は、命題 \ref|type="thm",id="splittinghom"|; の条件 2 の準同型写像 &m<`f: L \to; K'> の像に一致する。
+      &m<K'> 内の &m<P> の最小分解体は、\ref|type="cthm",id="splittinghom"|; の条件 2 の準同型写像 &m<`f: L \to; K'> の像に一致する。
     >
   >
   \prf<
@@ -862,8 +862,8 @@
   >
   \prf<
     \p<
-      命題 \ref|type="thm",id="splitting"|; によって最小分解体の存在は保証されている。
-      さらに命題 \ref|type="thm",id="splitinvar"|; によって、それらは全て同型であることが分かる。
+      \ref|type="cthm",id="splitting"|; によって最小分解体の存在は保証されている。
+      さらに\ref|type="cthm",id="splitinvar"|; によって、それらは全て同型であることが分かる。
     >
   >
   \p<
@@ -894,7 +894,7 @@
     が &m<P> の最小分解体である。
     この拡大次数 &m<`[\bb<Q> (\sb<`z><n>) \colon|rel|; \bb<Q>`]> は、1 以上 &m<n> 以下の整数の中で &m<n> と互いに素なものの個数に一致することが知られている。
     別の表現をすれば、&m<`[\bb<Q> (\sb<`z><n>) \colon|rel|; \bb<Q>`] = `# (\bb<Z> `/ n \bb<Z>) \sp<><\times;>> が成り立つ。
-    このことは後に定理 \ref|type="thm",id="gauss"|; として証明する。
+    このことは後に\ref|type="cthm",id="gauss"|; として証明する。
   >
   \p<
     &m<T> を不定元とする有理関数体 &m<K \coloneqq; \bb<Q> (T)> を考え、この上の多項式 &m<P \coloneqq; \sp<X><n> - T \in; K `[X`] \srel; (n \geq; 1)> を考える。
@@ -1107,7 +1107,7 @@
     >
   >
   \p<
-    命題 \ref|type="thm",id="conjsplit"|; の条件 3 において、&m<`i: K' \to; \sp<K><\ppr;>> を包含写像とすると、写像 
+    \ref|type="cthm",id="conjsplit"|; の条件 3 において、&m<`i: K' \to; \sp<K><\ppr;>> を包含写像とすると、写像 
     &mb<
       I: \sb<\op<Mor>><K> (L, K') \to; \sb<\op<Mor>><K> (L, \sp<K><\ppr;>)`; `s \mapsto; `i \circ; `s
   >
@@ -1117,7 +1117,7 @@
   \thm|type="prp",id="middlesurj"|<
     \p<
       体 &m<K>、および &m<K> の有限次拡大体 &m<L> と &m<K> の拡大体 &m<K'> をとる。
-      命題 \ref|type="thm",id="conjsplit"|; の同値な条件が満たされているとき、拡大 &m<L `/ K> の中間体 &m<M> に対し、
+      \ref|type="cthm",id="conjsplit",nolink|; の同値な条件が満たされているとき、拡大 &m<L `/ K> の中間体 &m<M> に対し、
       &mb<
         R: \sb<\op<Mor>><K> (L, K') \to; \sb<\op<Mor>><K> (M, K')`; `s \mapsto; `s \rvert; \sb<><M>
       >
@@ -1126,7 +1126,7 @@
   >
   \prf<
     \p<
-      &m<K, L, K'> が、命題 \ref|type="thm",id="conjsplit"|; の同値な条件のうち特に条件 1 を満たしているとする。
+      &m<K, L, K'> が、\ref|type="cthm",id="conjsplit"|; の同値な条件のうち特に条件 1 を満たしているとする。
       このとき、任意の &m<a \in; L> に対して、&m<a> の &m<K> 上最小多項式 &m<P \in; K `[X`]> は &m<K' `[X`]> において 1 次式の積に分解する。
     >
     \p<
@@ -1134,7 +1134,7 @@
       &m<a> の &m<M> 上最小多項式を &m<Q \in; M `[X`]> とする。
       &m<P \in; M `[X`]> と見なすと &m<P (a) = 0> であるから、&m<Q \mid; P> が成り立つ。
       &m<P> は &m<K' `[X`]> で 1 次式の積に分解できたのだから、それをわり切る &m<Q> も 1 次式の積に分解する。
-      したがって、&m<M, L, K'> に対しても命題 \ref|type="thm",id="conjsplit"|; の条件 1 が成り立つ。
+      したがって、&m<M, L, K'> に対しても\ref|type="cthm",id="conjsplit"|; の条件 1 が成り立つ。
       よって、命題の後半の主張によって、体の &m<M>-準同型写像 &m<`s: L \to; K'> が存在する。
       今、&m<`t> によって &m<K'> を &m<M> の拡大体と見ているのだから、図式 
       &mb<
@@ -1250,10 +1250,10 @@
       &m<P> の分解体を &m<K'> とする。
       条件 1 が成り立つとすると、&m<P'> は &m<K' `[X`]> において相異なる 1 次式の積に分解する。
       したがって、&m<\sp<(X - a)><2> \mid; P'> を満たす &m<a \in; K'> は存在しない。
-      よって補題 \ref|type="thm",id="seplema"|; より、&m<X - a \mid; P> かつ &m<X - a \mid; P'> なる &m<a \in; K'> は存在しない。
+      よって\ref|type="cthm",id="seplema"|; より、&m<X - a \mid; P> かつ &m<X - a \mid; P'> なる &m<a \in; K'> は存在しない。
       これは、&m<a \in; K'> が &m<X - a \mid; P> を満たせば &m<X - a \nmid; P'> であることを意味している。
       すなわち、&m<P> の因子を &m<P'> は因子としてもたないので、&m<P> と &m<P'> は &m<K' `[X`]> で互いに素であることになる。
-      これより補題 \ref|type="thm",id="seplemb"|; から、&m<P> と &m<P'> は &m<K `[X`]> でも互いに素になる。
+      これより\ref|type="cthm",id="seplemb"|; から、&m<P> と &m<P'> は &m<K `[X`]> でも互いに素になる。
       したがって、条件 2 が示された。
       この議論は逆にも辿れるので、2 つの条件の同値性が示された。
     >
@@ -1279,7 +1279,7 @@
     \p<
       \label<条件 1 &m<\raarr;> 条件 2:>
       条件 1 が成り立つとする。
-      このとき、命題 \ref|type="thm",id="diffsep"|; によって &m<P> と &m<P'> は互いに素ではない。
+      このとき、\ref|type="cthm",id="diffsep"|; によって &m<P> と &m<P'> は互いに素ではない。
       したがって、&m<P> と &m<P'> の最大公約式 &m<Q> は 0 であるか 1 次以上の多項式である。
       &m<Q \neq; 0> であるとすると、&m<Q \mid; P> が成り立つが &m<P> は既約なので、&m<Q> は &m<P> に一致しなければならない。
       したがって、&m<Q \mid; P'> より &m<P \mid; P'> を得るが、微分の定義より &m<\deg; P `> \deg; P'> であるからこれは矛盾である。
@@ -1336,7 +1336,7 @@
         P' = \sum<i = 1><n> pi \sb<a><i> \sp<X><pi - 1> = 0
       >
       が成り立つ。
-      よって、&m<P> と &m<P'> は互いに素とはならないから、命題 \ref|type="thm",id="diffsep"|; によって &m<P> は分離多項式ではなく、条件 1 が示された。
+      よって、&m<P> と &m<P'> は互いに素とはならないから、\ref|type="cthm",id="diffsep"|; によって &m<P> は分離多項式ではなく、条件 1 が示された。
     >
   >
   \h1|id="finite"|<有限体>
@@ -1347,8 +1347,8 @@
   >
   \p<
     有限体 &m<K> を任意にとり、&m<p \coloneqq; \op<char> K> とおく。
-    &m<p = 0> なら、命題 \ref|type="thm",id="primefield"|; によって &m<K> は &m<\bb<Q>> を部分体として含むことになり、&m<K> の有限性に矛盾する。
-    したがって &m<p `> 0> であるから、再び命題 \ref|type="thm",id="primefield"|; によって &m<K> は &m<\sb<\bb<F>><p> \coloneqq; \bb<Z> `/ p \bb<Z>> を含む。
+    &m<p = 0> なら、\ref|type="cthm",id="primefield"|; によって &m<K> は &m<\bb<Q>> を部分体として含むことになり、&m<K> の有限性に矛盾する。
+    したがって &m<p `> 0> であるから、再び\ref|type="cthm",id="primefield"|; によって &m<K> は &m<\sb<\bb<F>><p> \coloneqq; \bb<Z> `/ p \bb<Z>> を含む。
     ここで &m<n \coloneqq; `[K \colon|rel|; \sb<\bb<F>><p>`]> とおくと、&m<K> の有限性から &m<n `<\infty;> である。
     これより、&m<K> は &m<\sb<\bb<F>><p>>-線型空間として &m<n> 次元であり、&m<\sb<\bb<F>><p>> の元の個数は &m<p> であるから、&m<K> の元の個数は &m<\sp<p><n>> である。
   >
@@ -1387,7 +1387,7 @@
         (\sp<X><q> - X)' = q \sp<X><q - 1> - 1 = [-1] \neq; 0
       >
       であるから、&m<\sp<X><q> - X> と &m<(\sp<X><q> - X)'> は互いに素である。
-      したがって、命題 \ref|type="thm",id="diffsep"|; によって &m<\sp<X><q> - X> は分離多項式となるから、これを &m<L `[X`]> の元と見なせば相異なる 1 次式の積に分解する。
+      したがって、\ref|type="cthm",id="diffsep"|; によって &m<\sp<X><q> - X> は分離多項式となるから、これを &m<L `[X`]> の元と見なせば相異なる 1 次式の積に分解する。
       これにより、&m<\sp<X><q> - X> の根は相異なるから、
       &mb<
         \sb<L><0> \coloneqq; `{x \in; L \mid; \sp<x><q> - x = 0`}
@@ -1400,7 +1400,7 @@
       &mb<
         \sb<L><0> \coloneqq; `{x \in; L \mid; \sp<`f><n> (x) = \rm<id> (x)`}
       >
-      と書けるから、補題 \ref|type="thm",id="morsubfield"|; によってこれは体になる。
+      と書けるから、\ref|type="cthm",id="morsubfield"|; によってこれは体になる。
       ところで、最小分解体の定義から、&m<\sb<L><0>> の全ての元で &m<\sb<\bb<F>><p>> 上生成される体が &m<L> になるのであった。
       一方、&m<\sb<L><0>> はそれ自身が体であることが示されたので、&m<\sb<\bb<F>><p> (\sb<L><0>) \subseteq; \sb<L><0>> である。
       これによって &m<L \subseteq; \sb<L><0>> が分かったので &m<L = \sb<L><0>> である。
@@ -1413,7 +1413,7 @@
       したがって &m<`s \in; \sb<\op<Mor>><\sb<\bb<F>><p>> (K, K)> である。
       逆に &m<`s \in; \sb<\op<Mor>><\sb<\bb<F>><p>> (K, K)> をとると、&m<K> が有限であることから &m<`s> は全単射になるので、&m<`s \in; \op<Aut> (K)> が成り立つ。
       以上により、&m<\op<Aut> (K) = \sb<\op<Mor>><\sb<\bb<F>><p>> (K, K)> である。
-      すると、定理 \ref|type="thm",id="mornumbera"|; によって、
+      すると、\ref|type="cthm",id="mornumbera"|; によって、
       &mb<
         &mark<\sharp;>
         `# \op<Aut> (K) = `# \sb<\op<Mor>><\sb<\bb<F>><p>> (K, K) \leq; `[K \colon|rel|; \sb<\bb<F>><p>`] = n
@@ -1443,7 +1443,7 @@
       >
       という 1 次式の積に分解する。
       すなわち、&m<K> は &m<\sp<X><q> - X> の最小分解体である。
-      定理 \ref|type="thm",id="uniquesplitting"|; によって最小分解体は全て互いに同型だったので、元の個数が &m<q> の体の一意性も示された。
+      \ref|type="cthm",id="uniquesplitting"|; によって最小分解体は全て互いに同型だったので、元の個数が &m<q> の体の一意性も示された。
     >
   >
   \thm|type="def"|<
@@ -1514,7 +1514,7 @@
     したがって、&m<K> は &m<\sb<\bb<F>><p>> の分離拡大である。
   >
   \p<
-    分離拡大の言葉を用いて、定理 \ref|type="thm",id="mornumbera"|; に同値な条件をもう 1 つ付け加える。
+    分離拡大の言葉を用いて、\ref|type="cthm",id="mornumbera"|; に同値な条件をもう 1 つ付け加える。
   >
   \thm|type="thm",id="mornumberb"|<
     \p<
@@ -1546,7 +1546,7 @@
   >
   \prf<
     \p<
-      定理 \ref|type="thm",id="mornumbera"|; において、最初の主張と条件 1, 2, 3 の同値性はすでに示されている。
+      \ref|type="cthm",id="mornumbera"|; において、最初の主張と条件 1, 2, 3 の同値性はすでに示されている。
       したがって、条件 2 と条件 4 の同値性を示せば十分であるが、これは単に言葉を言い換えたに過ぎない。
     >
   >
@@ -1582,11 +1582,11 @@
     \p<
       \label<条件 2 &m<\raarr;> 条件 3:>
       条件 2 の &m<\sb<a><1>, \cdots;, \sb<a><n> \in; L> をとり、それぞれの最小多項式を &m<\sb<P><1>, \cdots;, \sb<P><n> \in; K `[X`]> とする。
-      &m<\sb<P><1> \cdots; \sb<P><n>> の分解体を &m<K'> とすれば、命題 \ref|type="thm",id="conjsplit"|; によって &m<K'> は &m<L> の任意の元の共役を全て属するので、定理 \ref|type="thm",id="mornumberb"|; の条件 3 と条件 1 の同値性により、示された。
+      &m<\sb<P><1> \cdots; \sb<P><n>> の分解体を &m<K'> とすれば、\ref|type="cthm",id="conjsplit"|; によって &m<K'> は &m<L> の任意の元の共役を全て属するので、\ref|type="cthm",id="mornumberb"|; の条件 3 と条件 1 の同値性により、示された。
     >
     \p<
       \label<条件 3 &m<\raarr;> 条件 1:>
-      定理 \ref|type="thm",id="mornumberb"|; の条件 1 と条件 4 の同値性から明らかである。
+      \ref|type="cthm",id="mornumberb"|; の条件 1 と条件 4 の同値性から明らかである。
     >
   >
   \thm|type="prp",id="midsplit"|<
@@ -1630,8 +1630,8 @@
   >
   \prf<
     \p<
-      命題 \ref|type="thm",id="split"|; により、&m<K> 上分離的な元 &m<\sb<a><1>, \cdots;, \sb<a><m>, \sb<b><1>, \cdots;, \sb<b><n> \in; L> が存在して、&m<\sb<L><1> = K (\sb<a><1>, \cdots;, \sb<a><m>)> および &m<\sb<L><2> = K (\sb<b><1>, \cdots;, \sb<b><n>)> が成り立つ。
-      このとき、&m<\sb<L><1> \cdot; \sb<L><2> = K (\sb<a><1>, \cdots;, \sb<a><m>, \sb<b><1>, \cdots;, \sb<b><n>)> であるから、再び命題 \ref|type="thm",id="split"|; によって &m<\sb<L><1> \cdot; \sb<L><2>> は &m<K> の分離拡大である。
+      \ref|type="cthm",id="split"|; により、&m<K> 上分離的な元 &m<\sb<a><1>, \cdots;, \sb<a><m>, \sb<b><1>, \cdots;, \sb<b><n> \in; L> が存在して、&m<\sb<L><1> = K (\sb<a><1>, \cdots;, \sb<a><m>)> および &m<\sb<L><2> = K (\sb<b><1>, \cdots;, \sb<b><n>)> が成り立つ。
+      このとき、&m<\sb<L><1> \cdot; \sb<L><2> = K (\sb<a><1>, \cdots;, \sb<a><m>, \sb<b><1>, \cdots;, \sb<b><n>)> であるから、再び\ref|type="cthm",id="split"|; によって &m<\sb<L><1> \cdot; \sb<L><2>> は &m<K> の分離拡大である。
     >
   >
   \thm|type="prp",id="splitclosure"|<
@@ -1646,7 +1646,7 @@
   \prf<
     \p<
       任意に &m<a, b \in; \sb<L><\rm<s>>> をとると、&m<K (a), K (b)> は &m<K> の分離拡大である。
-      したがって、命題 \ref|type="thm",id="compositsplit"|; によって、その合成体 &m<K (a, b)> も &m<K> の分離拡大である。
+      したがって、\ref|type="cthm",id="compositsplit"|; によって、その合成体 &m<K (a, b)> も &m<K> の分離拡大である。
       &m<a + b, ab, \sp<a><- 1>> は全て &m<K (a, b)> に属するから、これらは &m<K> 上分離的であり &m<\sb<L><\rm<s>>> に属する。
     >
   >
@@ -1707,14 +1707,14 @@
       \label<条件 2 &m<\raarr;> 条件 1:>
       条件 1 が成り立たないとする。
       このとき、分離的でない既約多項式 &m<P \in; K `[X`]> が存在する。
-      命題 \ref|type="thm",id="splitkp"|; によって、まず &m<p `> 0> であり、&m<Q \in; K `[X`] \setminus; \sp<K><p> `[X`]> が存在するから、特に &m<K \neq; \sp<K><p>> である。
+      \ref|type="cthm",id="splitkp"|; によって、まず &m<p `> 0> であり、&m<Q \in; K `[X`] \setminus; \sp<K><p> `[X`]> が存在するから、特に &m<K \neq; \sp<K><p>> である。
       したがって、条件 2 の否定が示された。
       対偶をとれば、条件 2 から条件 1 が導かれる。
     >
   >
   \thm|type="def"|<
     \p<
-      体 &m<K> が命題 \ref|type="thm",id="algebraicsplit"|; の同値な条件を満たすとき、&m<K> を\em<完全体>という。
+      体 &m<K> が\ref|type="cthm",id="algebraicsplit",nolink|; の同値な条件を満たすとき、&m<K> を\em<完全体>という。
     >
   >
   \p<
@@ -1726,12 +1726,12 @@
   \h1|id="splitmid"|<分離拡大の中間体>
   \p<
     有限次分離拡大 &m<L `/ K> があるとし、&m<K> の拡大体 &m<K'> が &m<L> の任意の元の &m<K> 上の共役を全て属するとする。
-    &m<S \coloneqq; \sb<\op<Mor>><K> (L, K')> とおくと、命題 \ref|type="thm",id="split"|; によって &m<`# S = `[L \colon|rel|; K`]> である。
-    もし &m<a \in; L> によって &m<L = K (a)> と書けるなら、補題 \ref|type="thm",id="morroot"|; によって、&m<a> の最小多項式の &m<K'> 上の根の個数が &m<`# S> に一致するのだった。
+    &m<S \coloneqq; \sb<\op<Mor>><K> (L, K')> とおくと、\ref|type="cthm",id="split"|; によって &m<`# S = `[L \colon|rel|; K`]> である。
+    もし &m<a \in; L> によって &m<L = K (a)> と書けるなら、\ref|type="cthm",id="morroot"|; によって、&m<a> の最小多項式の &m<K'> 上の根の個数が &m<`# S> に一致するのだった。
   >
   \p<
     さて、この有限次分離拡大 &m<L `/ K> の中間体 &m<M> について調べたい。
-    &m<\sb<S><M> \coloneqq; \sb<\op<Mor>><K> (M, K')> とすれば、命題 \ref|type="thm",id="middlesurj"|; によって、&m<`s \in; S> を &m<`s \rvert; \sb<><M> \in; \sb<S><M>> に移す写像は全射であった。
+    &m<\sb<S><M> \coloneqq; \sb<\op<Mor>><K> (M, K')> とすれば、\ref|type="cthm",id="middlesurj"|; によって、&m<`s \in; S> を &m<`s \rvert; \sb<><M> \in; \sb<S><M>> に移す写像は全射であった。
     したがって、&m<S> 上の関係 &m<\sb<\sim|ord|;><M>> を、
     &mb<
       `s \sb<\sim;><M> `t \coloniff; `s \rvert; \sb<><M> = `t \rvert; \sb<><M>
@@ -1804,7 +1804,7 @@
       &mb<
         `{x \in; L \mid; &raw<&m<`s \sb<\sim;><M> `t> ならば &m<`s (x) = `t (x)>>`} \subseteq; `{x \in; L \mid; &raw<&m<`s \sb<\sim;><M'> `t> ならば &m<`s (x) = `t (x)>>`}
       >
-      が分かるが、命題 \ref|type="thm",id="middleset"|; よりこの右辺は &m<M> と一致し左辺は &m<M'> と一致する。
+      が分かるが、\ref|type="cthm",id="middleset"|; よりこの右辺は &m<M> と一致し左辺は &m<M'> と一致する。
     >
   >
   \thm|type="prp"|<
@@ -1859,7 +1859,7 @@
       &m<\sb<\bb<F>><\sp<p><n>>> は &m<\sp<X><q> - X> の最小分解体だったから、&m<P> の分解体でもある。
       すなわち、&m<\sb<\bb<F>><\sp<p><n>>> は &m<\sb<\bb<F>><\sp<p><n>>> の任意の元の &m<\sb<\bb<F>><p>> 上共役を全て属する。
       以上によって、&m<K = \sb<\bb<F>><p>, L = \sb<\bb<F>><\sp<p><n>>, K' = \sb<\bb<F>><\sp<p><n>>> としたときの式 &m<\sharp;> を満たす &m<a \in; \sb<\bb<F>><\sp<p><n>>> を見つければ十分である。
-      Frobenius 写像を &m<`f: \sb<\bb<F>><\sp<p><n>> \to; \sb<\bb<F>><\sp<p><n>>> とおくと、定理 \ref|type="thm",id="frobeniusgen"|; によって &m<\op<Aut> (\sb<\bb<F>><\sp<p><n>>)> は &m<`f> を生成元とする &m<n> 次巡回群である。
+      Frobenius 写像を &m<`f: \sb<\bb<F>><\sp<p><n>> \to; \sb<\bb<F>><\sp<p><n>>> とおくと、\ref|type="cthm",id="frobeniusgen"|; によって &m<\op<Aut> (\sb<\bb<F>><\sp<p><n>>)> は &m<`f> を生成元とする &m<n> 次巡回群である。
       したがって、任意の &m<`s, `t \in; \op<Aut> (\sb<\bb<F>><\sp<p><n>>)> について &m<`s = \sp<`f><i>, `t = \sp<`f><j> \srel; (0 \leq; i, j `< n)> と表せる。
       このとき、
       &mb<
@@ -1907,16 +1907,16 @@
       \label<条件 1 &m<\raarr;> 条件 2:>
       任意に &m<`f \in; \sb<\op<Mor>><K> (M, L)> をとる。
       &m<M `/ K> は正規拡大なので、&m<M> は &m<M> の任意の元の &m<K> 上共役を全て属する。
-      したがって、命題 \ref|type="thm",id="conjsplit"|; の条件 1 と条件 3 の同値性により、&m<`f (M) \subseteq; M> が成り立つ。
+      したがって、\ref|type="cthm",id="conjsplit"|; の条件 1 と条件 3 の同値性により、&m<`f (M) \subseteq; M> が成り立つ。
       よって、条件 2 が示された。
     >
     \p<
       \label<条件 2 &m<\raarr;> 条件 1:>
       &m<L' \coloneqq; L \cdot; K'> とおき、&m<L \subseteq; L'> および &m<K' \subseteq; L'> と見る。
       任意に &m<K>-準同型写像 &m<`f: M \to; K'> をとると、これは &m<`f: M \to; L'> と見ることができる。
-      &m<L> は &m<M> の任意の元の共役を全て属するので、命題 \ref|type="thm",id="conjsplit"|; によって &m<`f (M) \subseteq; L> を満たす。
+      &m<L> は &m<M> の任意の元の共役を全て属するので、\ref|type="cthm",id="conjsplit"|; によって &m<`f (M) \subseteq; L> を満たす。
       これにより、&m<`f: M \to; L> と見なすことができ、条件 2 によって &m<`f (M) \subseteq; M> が成り立つ。
-      これは、命題 \ref|type="thm",id="conjsplit"|; を再び使うことで、&m<M> が &m<M> の任意の元の共役を全て属することを意味する。
+      これは、\ref|type="cthm",id="conjsplit"|; を再び使うことで、&m<M> が &m<M> の任意の元の共役を全て属することを意味する。
       すなわち、&m<M> は &m<K> の正規拡大であり、条件 1 が示された。
     >
   >
@@ -1928,7 +1928,7 @@
   >
   \prf<
     \p<
-      命題 \ref|type="thm",id="conjsplit"|; の条件 1 と条件 2 の同値性を使えば明らかである。
+      \ref|type="cthm",id="conjsplit"|; の条件 1 と条件 2 の同値性を使えば明らかである。
     >
   >
   \h1|id="galois"|<Galois 拡大>
@@ -1958,7 +1958,7 @@
     また、&m<\op<Gal> (\bb<C> `/ \bb<R>) \cong; \bb<Z> `/ 2 \bb<Z>> である。
   >
   \p<
-    素数冪 &m<\sp<p><n>> に対し、定理 \ref|type="thm",id="frobeniusgen"|; によって &m<\sb<\op<Aut>><\sb<\bb<F>><\sp<p><n>>> (\sb<\bb<F>><p>)> は &m<n> 次巡回群であったから、特に &m<`# \sb<\op<Aut>><\sb<\bb<F>><\sp<p><n>>> (\sb<\bb<F>><p>) = n> である。
+    素数冪 &m<\sp<p><n>> に対し、\ref|type="cthm",id="frobeniusgen"|; によって &m<\sb<\op<Aut>><\sb<\bb<F>><\sp<p><n>>> (\sb<\bb<F>><p>)> は &m<n> 次巡回群であったから、特に &m<`# \sb<\op<Aut>><\sb<\bb<F>><\sp<p><n>>> (\sb<\bb<F>><p>) = n> である。
     一方で &m<`[\sb<\bb<F>><\sp<p><n>> \colon|rel|; \sb<\bb<F>><p>`] = n> だから、拡大 &m<\sb<\bb<F>><\sp<p><n>> `/ \sb<\bb<F>><p>> は Galois 拡大であり &m<\op<Gal> (\sb<\bb<F>><\sp<p><n>> `/ \sb<\bb<F>><p>) \cong; \bb<Z> `/ n \bb<Z>> である。
   >
   \p<
@@ -1971,7 +1971,7 @@
         \c<T> \c<\coloneqq;> \c<\sb<\op<Mor>><K> (L, L) = \sb<\op<Aut>><K> (L)>
       >
     >
-    とおくと、補題 \ref|type="thm",id="morroot"|; により &m<S> と &m<T> の間に 1 対 1 対応があるのであった。
+    とおくと、\ref|type="cthm",id="morroot"|; により &m<S> と &m<T> の間に 1 対 1 対応があるのであった。
     &m<n \coloneqq; `[L \colon|rel|; K`]> とおけば、Galois 拡大の定義から &m<`# T = n> である。
     したがって &m<`# S = n> でもあるが、&m<P> の次数は &m<n> なので、&m<P> は &m<L `[X`]> で相異なる 1 次式の積に分解しなければならない。
     この分解を、
@@ -2006,7 +2006,7 @@
   >
   \prf<
     \p<
-      この命題の主張は、定理 \ref|type="thm",id="mornumberb"|; の条件 1 と条件 4 の同値性そのものである。
+      この命題の主張は、\ref|type="cthm",id="mornumberb"|; の条件 1 と条件 4 の同値性そのものである。
     >
   >
   \thm|type="prp",id="compositgalois"|<
@@ -2017,17 +2017,17 @@
   >
   \prf<
     \p<
-      命題 \ref|type="thm",id="compositsplit"|;, \ref|type="thm",id="compositnormal"|;, \ref|type="thm",id="galsplitnorm"|; を合わせれば明らかである。
+      \ref|type="cthm",id="compositsplit"|; と\ref|type="cthm",id="compositnormal"|; と\ref|type="cthm",id="galsplitnorm"|; を合わせれば明らかである。
     >
   >
   \p<
-    さて、命題 \ref|type="thm",id="galsplitnorm"|; により Galois 拡大では分離拡大であることが分かる。
+    さて、\ref|type="cthm",id="galsplitnorm"|; により Galois 拡大では分離拡大であることが分かる。
     ただし、全ての分離拡大が Galois 拡大になるとは限らない。
     しかし、以下のようにして、分離拡大を含むような Galois 拡大を構成することはできる。
   >
   \p<
     有限次分離拡大 &m<L `/ K> と &m<K> の拡大体 &m<K'> に対し、&m<K'> は &m<L> の任意の元の &m<K> 上共役を全て属するとする。
-    &m<n \coloneqq; `[L \colon|rel|; K`]> とおけば、定理 \ref|type="thm",id="mornumberb"|; によって &m<`# \sb<\op<Mor>><K> (L, K') = n> である。
+    &m<n \coloneqq; `[L \colon|rel|; K`]> とおけば、\ref|type="cthm",id="mornumberb"|; によって &m<`# \sb<\op<Mor>><K> (L, K') = n> である。
     そこで、&m<\sb<\op<Mor>><K> (L, K')> の相異なる元を &m<\sb<`s><1>, \cdots;, \sb<`s><n>> とすれば、&m<\sb<`s><1> (L), \cdots;, \sb<`s><n> (L)> は &m<K'> の部分体であるから、これら全ての合成体 &m<\tilde<L> \leq; K'> をとることができる。
   >
   \thm|type="prp"|<
@@ -2040,11 +2040,11 @@
     \p<
       各 &m<\sb<`s><i> (L)> は &m<L> と同型であるから &m<K> の有限次拡大になっている。
       したがって、それらの合成体である &m<\tilde<L>> も &m<K> の有限次拡大である。
-      同じように、各 &m<\sb<`s><i> (L)> は &m<K> の分離拡大でもあるので、命題 \ref|type="thm",id="compositsplit"|; によって &m<\tilde<L>> も &m<K> の分離拡大である。
+      同じように、各 &m<\sb<`s><i> (L)> は &m<K> の分離拡大でもあるので、\ref|type="cthm",id="compositsplit"|; によって &m<\tilde<L>> も &m<K> の分離拡大である。
     >
     \p<
       &m<\sb<`s><i> (L)> たちの &m<K> 上生成元を全て集めれば &m<\tilde<L>> の &m<K> 上生成元になる。
-      &m<K'> はこれらの生成元の共役は全て属するので、定理 \ref|type="thm",id="mornumberb"|; の条件 2 と条件 3 の同値性を使うことで、&m<K'> は &m<\tilde<L>> の任意の元の共役を全て属することが分かる。
+      &m<K'> はこれらの生成元の共役は全て属するので、\ref|type="cthm",id="mornumberb"|; の条件 2 と条件 3 の同値性を使うことで、&m<K'> は &m<\tilde<L>> の任意の元の共役を全て属することが分かる。
       ところで、任意の &m<`f \in; \sb<\op<Mor>><K> (\tilde<L>, K')> に対し、
       &mb<
         \array|align="rcl"|<
@@ -2055,10 +2055,10 @@
       が成り立つ。
       &m<`f \circ; \sb<`s><i> \in; \sb<\op<Mor>><K> (L, K')> であるから、&m<\tilde<L>> の定義から上式の最右辺は &m<\tilde<L>> に含まれる。
       したがって &m<`f (\tilde<L>) \subseteq; \tilde<L>> が示された。
-      これにより、&m<\tilde<L>> は &m<\tilde<L>> の任意の元の共役を全て属するから、命題 \ref|type="thm",id="normalmor"|; によって &m<\tilde<L>> は &m<K> の正規拡大である。
+      これにより、&m<\tilde<L>> は &m<\tilde<L>> の任意の元の共役を全て属するから、\ref|type="cthm",id="normalmor"|; によって &m<\tilde<L>> は &m<K> の正規拡大である。
     >
     \p<
-      以上により、命題 \ref|type="thm",id="galsplitnorm"|; によって &m<\tilde<L> `/ K> は有限次 Galois 拡大である。
+      以上により、\ref|type="cthm",id="galsplitnorm"|; によって &m<\tilde<L> `/ K> は有限次 Galois 拡大である。
     >
   >
   \thm|type="def"|<
@@ -2079,7 +2079,7 @@
     >
   >
   \p<
-    不変部分体が実際に体になることは補題 \ref|type="thm",id="morsubfield"|; から従う。
+    不変部分体が実際に体になることは\ref|type="cthm",id="morsubfield"|; から従う。
     これは拡大 &m<L `/ K> の中間体になっている。
   >
   \thm|type="thm",id="invariant"|<
@@ -2101,9 +2101,9 @@
   \prf<
     \p<
       \label<条件 1 &m<\raarr;> 条件 2:>
-      &m<L `/ K> は有限次 Galois 拡大なので、命題 \ref|type="thm",id="galsplitnorm"|; により &m<L `/ K> は有限次分離拡大でもある。
+      &m<L `/ K> は有限次 Galois 拡大なので、\ref|type="cthm",id="galsplitnorm"|; により &m<L `/ K> は有限次分離拡大でもある。
       &m<G> は Galois 群だから、&m<G = \sb<\op<Mor>><K> (L, L)> である。
-      命題 \ref|type="thm",id="middleset"|; を使えば、
+      \ref|type="cthm",id="middleset"|; を使えば、
       &mb<
         \array|align="rcl"|<
           \c<K> \c<=> \c<`{x \in; L \mid; &raw<任意の &m<`s, `t \in; \sb<\op<Mor>><K> (L, L)> に対し &m<`s \sb<\sim;><K> `t> ならば &m<`s (x) = `t (x)>>`}> \br;
@@ -2194,18 +2194,18 @@
     \p<
       &m<L `/ K> の中間体 &m<M> をとる。
       &m<L `/ M> は明らかに有限次拡大である。
-      &m<L `/ K> は分離拡大なので、命題 \ref|type="thm",id="midsplit"|; より &m<L `/ M> も分離拡大である。
+      &m<L `/ K> は分離拡大なので、\ref|type="cthm",id="midsplit"|; より &m<L `/ M> も分離拡大である。
       また、&m<L `/ K> は正規拡大なので、正規拡大の定義から明らかに &m<L `/ M> も正規拡大である。
       したがって、&m<L `/ M> は有限次 Galois 拡大である。
-      また、定理 \ref|type="thm",id="invariant"|; により、&m<M = \sp<L><H>> である。
+      また、\ref|type="cthm",id="invariant"|; により、&m<M = \sp<L><H>> である。
     >
     \p<
       逆に、&m<G> の部分群 &m<H> をとる。
-      定理 \ref|type="thm",id="invariant"|; により、&m<L `/ M> は有限次分離拡大であって &m<H> はその Galois 群である。
+      \ref|type="cthm",id="invariant"|; により、&m<L `/ M> は有限次分離拡大であって &m<H> はその Galois 群である。
     >
   >
   \p<
-    定理 \ref|type="thm",id="galoisfund"|; の主張は次のように言い換えることができる。
+    \ref|type="cthm",id="galoisfund"|; の主張は次のように言い換えることができる。
     すなわち、有限次 Galois 拡大 &m<L `/ K> に対し、
     &mb<
       \array|align="rcl"|<
@@ -2285,13 +2285,13 @@
   >
   \prf<
     \p<
-      &m<L `/ K> は特に分離拡大なので、命題 \ref|type="thm",id="midsplit"|; より &m<M `/ K> は分離拡大である。
+      &m<L `/ K> は特に分離拡大なので、\ref|type="cthm",id="midsplit"|; より &m<M `/ K> は分離拡大である。
       したがって、&m<M `/ K> が正規拡大であることと &m<H> が &m<G> の正規部分群であることの同値性を示せば良い。
     >
     \p<
       &m<L `/ K> は正規拡大なので、&m<L> は &m<M> の任意の元の共役を全て属する。
-      したがって、命題 \ref|type="thm",id="normalmor"|; により、&m<M `/ K> が正規拡大であることは、任意の &m<`s \in; \sb<\op<Mor>><K> (M, L)> に対して &m<`s (M) \subseteq; M> が成り立つことと同値である。
-      &m<L `/ K> は正規拡大なので、&m<L> は &m<L> の任意の元の共役を全て属するから、命題 \ref|type="thm",id="middlesurj"|; により、
+      したがって、\ref|type="cthm",id="normalmor"|; により、&m<M `/ K> が正規拡大であることは、任意の &m<`s \in; \sb<\op<Mor>><K> (M, L)> に対して &m<`s (M) \subseteq; M> が成り立つことと同値である。
+      &m<L `/ K> は正規拡大なので、&m<L> は &m<L> の任意の元の共役を全て属するから、\ref|type="cthm",id="middlesurj"|; により、
       &mb<
         R: \sb<\op<Mor>><K> (L, L) \to; \sb<\op<Mor>><K> (M, L)`; `t \mapsto; `t \rvert; \sb<><M>
       >
@@ -2299,7 +2299,7 @@
       すなわち、ある &m<`t \in; \sb<\op<Mor>><K> (L, L)> によって &m<`t \rvert; \sb<><M> = `s> と書ける。
       これより、任意の &m<`t \in; G> に対して &m<`t (M) \subseteq; M> が成り立つ。
       &m<`t> は単射なので &m<`t (M)> と &m<M> は同型だから、&m<`t (M) \subseteq; M> より &m<`t (M) = M> である。
-      Galois 群との対応を考えれば、&m<M> は &m<H> と対応し、命題 \ref|type="thm",id="sigmam"|; によって &m<`t (M)> は &m<`t H \sp<`t><- 1>> と対応するので、&m<H = `t H \sp<`t><- 1>> が成り立つ。
+      Galois 群との対応を考えれば、&m<M> は &m<H> と対応し、\ref|type="cthm",id="sigmam"|; によって &m<`t (M)> は &m<`t H \sp<`t><- 1>> と対応するので、&m<H = `t H \sp<`t><- 1>> が成り立つ。
       これが任意の &m<`t \in; G> について成り立つので、これはつまり &m<H> が &m<G> の正規部分群ということである。
       この議論は逆にも辿れるので、同値性が示された。
     >
@@ -2338,12 +2338,12 @@
       &m<L'> 内で &m<L' = K' (L)> と書けるから、&m<L' `/ K'> が有限次分離拡大なのは自明である。
       &m<L `/ K> は有限次拡大より、&m<L = K (\sb<a><1>, \cdots;, \sb<a><n>)> と書け、&m<L' = K' (\sb<a><1>, \cdots;, \sb<a><n>)> と表せる。
       各 &m<\sb<a><i> \in; L> の &m<K> 上最小多項式を &m<\sb<P><i> \in; K `[X`]> とすれば、&m<\sb<P><i>> は &m<L `[X`]> で 1 次式の積に分解するので、&m<L' `[X`]> でも 1 次式の積に分解する。
-      &m<\sb<P><i> \in; K' `[X`]> と見なせて &m<\sb<P><i> (\sb<a><i>) = 0> だから、命題 \ref|type="thm",id="conjsplit"|; の条件 2 と条件 1 の同値性により、&m<L'> は &m<L'> の &m<K'> 上共役を全て属する。
+      &m<\sb<P><i> \in; K' `[X`]> と見なせて &m<\sb<P><i> (\sb<a><i>) = 0> だから、\ref|type="cthm",id="conjsplit"|; の条件 2 と条件 1 の同値性により、&m<L'> は &m<L'> の &m<K'> 上共役を全て属する。
       これによって &m<L' `/ K'> は正規拡大なので、上の結果と合わせて &m<L' `/ K'> は有限次 Galois 拡大である。
     >
     \p<
       任意に &m<`s \in; G'> をとると、&m<`s \rvert; \sb<><L>: L \to; L'> は &m<K>-準同型写像である。
-      &m<L> が &m<L> の &m<K> 上共役を全て属すので、命題 \ref|type="thm",id="conjsplit"|; から &m<`s (L) \subseteq; L> が成り立つ。
+      &m<L> が &m<L> の &m<K> 上共役を全て属すので、\ref|type="cthm",id="conjsplit"|; から &m<`s (L) \subseteq; L> が成り立つ。
       しかし、&m<`s (L) \cong; L> なので、&m<`s (L) = L> である。
       すなわち、&m<`s \rvert; \sb<><L>: L \to; L> は同型写像であるから、&m<`s \rvert; \sb<><L> \in; G> である。
       これにより、&m<`F> は矛盾なく定義でき、明らかに群準同型写像である。
@@ -2380,7 +2380,7 @@
   \p<
     &m<d \mid; n> なる正整数 &m<d> をとり、&m<m \coloneqq; n `/ d> とする。
     &m<m \bb<Z> `/ n \bb<Z> \leq; \bb<Z> `/ n \bb<Z>> より、&m<m \bb<Z> `/ n \bb<Z>> に対応する中間体 &m<M> がある。
-    命題 \ref|type="thm",id="normalgroup"|; により、
+    \ref|type="cthm",id="normalgroup"|; により、
     &mb<
       \op<Gal> (M `/ \sb<\bb<F>><p>) \cong; (\bb<Z> `/ n \bb<Z>) `/ (m \bb<Z> `/ n \bb<Z>) \cong; \bb<Z> `/ m \bb<Z>
     >
@@ -2394,7 +2394,7 @@
   \p<
     体 &m<k> をとり、&m<n> 変数有理関数体 &m<L \coloneqq; k (\sb<X><1>, \cdots;, \sb<X><n>)> を考える。
     &m<G> を &m<n> 次対称群とすると、変数の添字の置換として &m<G> は &m<L> に作用する。
-    すると、定理 \ref|type="thm",id="galoisfund"|; によって &m<\op<Gal> (L `/ \sp<L><G>) = G> である。
+    すると、\ref|type="cthm",id="galoisfund"|; によって &m<\op<Gal> (L `/ \sp<L><G>) = G> である。
     この &m<\sp<L><G>> を具体的に求めたい。
   >
   \p<
@@ -2488,7 +2488,7 @@
     >
     とする。
     &m<\sp<X><n> - 1> とその微分 &m<n \sp<X><n - 1>> は &m<n \neq; 0> より互いに素なので、&m<\sp<X><n> - 1> は分離多項式である。
-    したがって &m<`# M = n> となり、命題 \ref|type="thm",id="finitecyclic"|; によって &m<M \cong; \bb<Z> `/ n \bb<Z>> となる。
+    したがって &m<`# M = n> となり、\ref|type="cthm",id="finitecyclic"|; によって &m<M \cong; \bb<Z> `/ n \bb<Z>> となる。
   >
   \thm|type="def"|<
     \p<
@@ -2583,7 +2583,7 @@
   >
   \prf<
     \p<
-      定理 \ref|type="thm",id="gauss"|; より、
+      \ref|type="cthm",id="gauss"|; より、
       &mb<
         \sb<P><n> = \prod<`s \in; \op<Gal> (\bb<Q> (\sb<`z><n>) `/ \bb<Q>)> (X - `s (\sb<`z><n>)) = \prod<i \in; (\bb<Z> `/ n \bb<Z>) \sp<><\times;>> (X - \sp<\sb<`z><n>><i>)
      >
@@ -2605,7 +2605,7 @@
     >
   >
   \p<
-    命題 \ref|type="thm",id="cycloprod"|; を用いると、円分多項式を簡単に求めることができる。
+    \ref|type="cthm",id="cycloprod"|; を用いると、円分多項式を簡単に求めることができる。
     例えば、素数 &m<p> に対して &m<d \mid; p> を満たす &m<d> は 1 と &m<p> しかないので、
     &mb<
       \sp<X><p> - 1 = \sb<P><p> \sb<P><1> = \sb<P><p> (X - 1)
@@ -2709,7 +2709,7 @@
     \p<
       一般に &m<L = K (\sqrt<\sb<a><1>><m>, \cdots;, \sqrt<\sb<a><n>><m>)> の場合を考える。
       &m<\sb<`a><j> \coloneqq; \sqrt<\sb<a><j>><m>> とおく。
-      &m<L> は &m<K (\sb<`a><j>)> たちの合成体だから、上の議論と命題 \ref|type="thm",id="compositgalois"|; によって &m<L `/ K> は Galois 拡大である。
+      &m<L> は &m<K (\sb<`a><j>)> たちの合成体だから、上の議論と\ref|type="cthm",id="compositgalois"|; によって &m<L `/ K> は Galois 拡大である。
       さらに、上で述べたようにして、単射準同型写像 
       &mb<
         \sb<`F><j>: \op<Gal> (K (\sb<`a><j>) `/ K) \to; M`; `s \mapsto; \frac<`s (\sb<`a><j>)><\sb<`a><j>>
@@ -2779,7 +2779,7 @@
     >
     \p<
       \label<条件 2 &m<\raarr;> 条件 3:>
-      &m<\sb<K><i + 1> `/ \sb<K><i>> が Kummer 拡大となっているから、命題 \ref|type="thm",id="kummerabel"|; より &m<\sb<K><i + 1> `/ \sb<K><i>> は Abel 拡大であり、すなわち &m<\op<Gal> (\sb<K><i + 1> `/ \sb<K><i>)> は Abel 群である。
+      &m<\sb<K><i + 1> `/ \sb<K><i>> が Kummer 拡大となっているから、\ref|type="cthm",id="kummerabel"|; より &m<\sb<K><i + 1> `/ \sb<K><i>> は Abel 拡大であり、すなわち &m<\op<Gal> (\sb<K><i + 1> `/ \sb<K><i>)> は Abel 群である。
       また、&m<\sb<K><i + 1> `/ \sb<K><i>> は特に Galois 拡大であるから、順に &m<\sb<K><i> `/ K> も Galois 拡大である。
       したがって、条件 3 が示された。
     >
@@ -2793,7 +2793,7 @@
         G = \sb<G><0> \geq; \sb<G><1> \geq; \cdots; \geq; \sb<G><m'> = 1
       >
       ができる。
-      &m<\sbsp<K><i + 1><\pr;> `/ \sbsp<K><i><\pr;>> は Galois 拡大だから、命題 \ref|type="thm",id="normalgroup"|; によって &m<\sb<G><i> \rhdeq; \sb<G><i + 1>> である。
+      &m<\sbsp<K><i + 1><\pr;> `/ \sbsp<K><i><\pr;>> は Galois 拡大だから、\ref|type="cthm",id="normalgroup"|; によって &m<\sb<G><i> \rhdeq; \sb<G><i + 1>> である。
       また、
       &mb<
         \sb<G><i> `/ \sb<G><i + 1> = \op<Gal> (\sbsp<K><m'><\pr;> `/ \sbsp<K><i><\pr;>) `/ \op<Gal> (\sbsp<K><m'><\pr;> `/ \sbsp<K><i + 1><\pr;>) \cong; \op<Gal> (\sbsp<K><i + 1><\pr;> `/ \sbsp<K><i><\pr;>)
@@ -2837,11 +2837,11 @@
   >
   \prf<
     \p<
-      &m<\sb<\mathrm<S>><n>> が可解となるための必要十分条件が &m<n \leq; 4> であるから、命題 \ref|type="thm",id="generalgalois"|; から明らかである。
+      &m<\sb<\mathrm<S>><n>> が可解となるための必要十分条件が &m<n \leq; 4> であるから、\ref|type="cthm",id="generalgalois"|; から明らかである。
     >
   >
   \p<
-    定理 \ref|type="thm",id="abelfive"|; により、5 次以上の多項式には根の公式が存在しないことが示された。
+    \ref|type="cthm",id="abelfive"|; により、5 次以上の多項式には根の公式が存在しないことが示された。
     一方、4 次以下の多項式については根の公式が存在することになるが、その具体的な式については Cardano と Ferrari などによって与えられている。
   >
   \h1|id="closure"|<代数閉包>
@@ -2930,7 +2930,7 @@
     \p<
       これにより、選択公理を用いて &m<B> の極大イデアル &m<\frak<m>> をとると、&m<M \coloneqq; B `/ \frak<m>> は体である。
       作り方から &m<M = K (\overline<\sb<X><f>> \mid; f \in; \sp<K `[X`]><*>)> であり、任意の &m<f \in; \sp<K `[X`]><*>> に対して &m<M> において &m<f (\overline<\sb<X><f>>) = 0> が成り立つ。
-      したがって、&m<M> は &m<K> の代数拡大であって、命題 \ref|type="thm",id="closurepoly"|; の条件 3 と条件 1 の同値性により &m<M> は代数閉体だから、&m<M> は &m<K> の代数閉包になる。
+      したがって、&m<M> は &m<K> の代数拡大であって、\ref|type="cthm",id="closurepoly"|; の条件 3 と条件 1 の同値性により &m<M> は代数閉体だから、&m<M> は &m<K> の代数閉包になる。
     >
   >
   \thm|type="thm"|<

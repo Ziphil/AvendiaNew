@@ -289,7 +289,7 @@
       &m<M \equiv; Z `[S'`]> となるような &m<S'> がある。
       このとき、&m<S'> には &m<R> が含まれ、この &m<R> を簡約すると &m<S> になる。
       また、&m<S'> が &m<`b>-基だとすると &m<S> は &m<S'> の残基になってしまい矛盾するので、&m<S'> は &m<`b>-基ではない。
-      したがって補題 \ref|type="thm",id="levylema"|; が適用できる。
+      したがって\ref|type="cthm",id="levylema"|; が適用できる。
     >
     \p<
       &m<S' \equiv; (\rm<`l> x. \sfun; P) Q T> かつ &m<P \equiv; \rm<`l> y. \sfun; U> となるときは、
@@ -317,7 +317,7 @@
       ここで、まず &m<P' \nequiv; x> が分かる。
       さらに &m<P'> は &m<`b>-基ではない。
       これは、もしそうだとすると &m<S> が残基になって矛盾するからである。
-      以上により、補題 \ref|type="thm",id="levylemb"|; が適用でき、&m<P' \nequiv; x> であることから、&m<P' \equiv; xT> かつ &m<Q \equiv; \rm<`l> y. \sfun; U> と表せる。
+      以上により、\ref|type="cthm",id="levylemb"|; が適用でき、&m<P' \nequiv; x> であることから、&m<P' \equiv; xT> かつ &m<Q \equiv; \rm<`l> y. \sfun; U> と表せる。
       &m<P \equiv; X `[P'`]> と書けば、
       &mb<
         \array|align="rcl"|<
@@ -376,7 +376,7 @@
   >
   \prf<
     \p<
-      補題 \ref|type="thm",id="levy"|; の 3 パターンを全て調べれば良い。
+      \ref|type="cthm",id="levy"|; の 3 パターンを全て調べれば良い。
     >
     \p<
       \label<場合 1:>
@@ -478,10 +478,10 @@
       このとき、&m<\op<red> (M)> に含まれる &m<`b>-基は、&m<\sbsp<S><1><\pr;>, \cdots;, \sbsp<S><l><\pr;>, \sbsp<T><1><\pr;>, \cdots;, \sbsp<T><m><\pr;>, \sbsp<U><1><\pr;>, \cdots;, \sbsp<U><n><\pr;>> で全てである。
     >
     \p<
-      補題 \ref|type="thm",id="lemresidue"|; より、&m<\op<dpt> (\sbsp<S><i><\pr;>) = \op<dpt> (\sb<S><i>)> また &m<\op<dpt> (\sbsp<T><ij><\pr;>) = \op<dpt> (\sb<T><i>)> である。
+      \ref|type="cthm",id="lemresidue"|; より、&m<\op<dpt> (\sbsp<S><i><\pr;>) = \op<dpt> (\sb<S><i>)> また &m<\op<dpt> (\sbsp<T><ij><\pr;>) = \op<dpt> (\sb<T><i>)> である。
       さらに、各 &m<\sb<T><i>> は &m<Q> に含まれているので、&m<R> より右側にある。
       &m<R> は最も右側にとっていたので、&m<\op<dpt> (\sbsp<T><ij><\pr;>) = \op<dpt> (\sb<T><i>) `<\op<dpt> (R)> が成り立つ。
-      また、補題 \ref|type="thm",id="lemredex"|; より、&m<\op<dpt> (\sbsp<U><i><\pr;>) `<\op<dpt> (R)> も成り立つ。
+      また、\ref|type="cthm",id="lemredex"|; より、&m<\op<dpt> (\sbsp<U><i><\pr;>) `<\op<dpt> (R)> も成り立つ。
       したがって、
       &mb<
         \array|align="rcl"|<
@@ -517,7 +517,7 @@
   \prf<
     \p<
       任意にラムダ項 &m<M> をとる。
-      定理 \ref|type="thm",id="wnt"|; により、&m<M> は &m<`b>-正規形 &m<N> をもつ。
+      \ref|type="cthm",id="wnt"|; により、&m<M> は &m<`b>-正規形 &m<N> をもつ。
       &m<`h>-簡約により &m<`b>-基が新たに生じることはなく、さらにラムダ項の長さは減少するので、&m<N> から始まる &m<`h>-簡約列は有限回のうちに &m<`b `h>-正規形 &m<L> で止まる。
       &m<M \sb<\headrarr;><`b> N \sb<\headrarr;><`h> L> であるから、&m<L> は &m<M> の &m<`b `h>-正規形である。
     >
@@ -670,7 +670,7 @@
       &m<M> に出現しない変項 &m<\sp<x><B>> を 1 つとると、1 つ目の主張に関する帰納法の仮定によって &m<x> は強計算可能である。
       したがって、強計算可能性の定義から &m<Mx> も強計算可能である。
       &m<Mx> は型 &m<C> だから、2 つ目の主張に関する帰納法の仮定により、&m<Mx> は強正規化可能である。
-      したがって、補題 \ref|type="thm",id="athreig"|; により、その部分項である &m<M> も強正規化可能である。
+      したがって、\ref|type="cthm",id="athreig"|; により、その部分項である &m<M> も強正規化可能である。
     >
   >
   \thm|type="lem",id="athrele"|<
@@ -697,12 +697,12 @@
       >
       と表す。
       また、任意に強計算可能なラムダ項 &m<\sp<\sb<N><1>><\sb<A><1>>, \cdots;, \sp<\sb<N><n>><\sb<A><n>>> をとる。
-      &m<M `[x \coloneqq; P`]> は強計算可能だから、補題 \ref|type="thm",id="athrfiv"|; によって &m<M `[x \coloneqq; P`] \sb<N><1> \cdots; \sb<N><n>> も強計算可能である。
+      &m<M `[x \coloneqq; P`]> は強計算可能だから、\ref|type="cthm",id="athrfiv"|; によって &m<M `[x \coloneqq; P`] \sb<N><1> \cdots; \sb<N><n>> も強計算可能である。
       &m<M `[x \coloneqq; P`] \sb<N><1> \cdots; \sb<N><n>> の型は原始型 &m<a> なので、強計算可能性の定義により、これは強正規化可能でもある。
-      したがって、補題 \ref|type="thm",id="athreig"|; によって、その部分項である &m<M `[x \coloneqq; P`], \sb<N><1>, \cdots;, \sb<N><n>> は全て強正規化可能である。
-      さらに補題 \ref|type="thm",id="athrnin"|; により、&m<M> も強正規化可能である。
+      したがって、\ref|type="cthm",id="athreig"|; によって、その部分項である &m<M `[x \coloneqq; P`], \sb<N><1>, \cdots;, \sb<N><n>> は全て強正規化可能である。
+      さらに\ref|type="cthm",id="athrnin"|; により、&m<M> も強正規化可能である。
       また、&m<x \in; \op<FV> (M)> であれば &m<M `[x \coloneqq; P`]> に &m<P> が部分項として含まれるから、&m<M `[x \coloneqq; P`]> が強正規化可能であることから &m<P> も強正規化可能である。
-      一方で &m<x \nin; \op<FV> (M)> であれば、仮定によって &m<P> は強計算可能だから、補題 \ref|type="thm",id="athrten"|; を用いて &m<P> は強正規化可能でもある。
+      一方で &m<x \nin; \op<FV> (M)> であれば、仮定によって &m<P> は強計算可能だから、\ref|type="cthm",id="athrten"|; を用いて &m<P> は強正規化可能でもある。
       よって、どちらの場合でも &m<P> は強正規化可能である。
     >
     \p<
@@ -727,7 +727,7 @@
       >
       という無限の長さの &m<`b>-簡約列を構成することができるが、これは &m<M `[x \coloneqq; P`] \sb<N><1> \cdots; \sb<N><n>> が強正規化可能であることに矛盾する。
       以上により、&m<(\rm<`l> x. \sfun; M) P \sb<N><1> \cdots; \sb<N><n>> は強正規化可能である。
-      &m<\sb<N><1>, \cdots;, \sb<N><n>> は任意だったから、補題 \ref|type="thm",id="athrfiv"|; によって &m<(\rm<`l> x. \sfun; M) P> は強正規化可能である。
+      &m<\sb<N><1>, \cdots;, \sb<N><n>> は任意だったから、\ref|type="cthm",id="athrfiv"|; によって &m<(\rm<`l> x. \sfun; M) P> は強正規化可能である。
     >
   >
   \thm|type="lem",id="athrtwe"|<
@@ -755,7 +755,7 @@
     \p<
       \label<場合 2:>
       &m<M \equiv; y> であって &m<y> はどの &m<\sb<x><i>> とも等しくないとき。
-      このとき、&m<\widetilde<M> \equiv; y> であるから、補題 \ref|type="thm",id="athrten"|; によって &m<M> は強計算可能である。
+      このとき、&m<\widetilde<M> \equiv; y> であるから、\ref|type="cthm",id="athrten"|; によって &m<M> は強計算可能である。
     >
     \p<
       \label<場合 3:>
@@ -780,7 +780,7 @@
         >
       >
       であるが、&m<N, \sb<P><1>, \cdots;, \sb<P><n>> は強計算可能であって、各 &m<i> で &m<y \nin; \op<FV> (\sb<P><i>)> だから、帰納法の仮定が適用できて、上式の最右辺は強計算可能である。
-      したがって、補題 \ref|type="thm",id="athrele"|; によって &m<(\rm<`l> y. \sfun; \widetilde<U>) N \equiv; \widetilde<M> N> も強計算可能である。
+      したがって、\ref|type="cthm",id="athrele"|; によって &m<(\rm<`l> y. \sfun; \widetilde<U>) N \equiv; \widetilde<M> N> も強計算可能である。
     >
   >
   \thm|type="thm",id="snt"|<
@@ -791,8 +791,8 @@
   >
   \prf<
     \p<
-      任意にラムダ項 &m<M> をとると、補題 \ref|type="thm",id="athrtwe"|; において、&m<n = 1> として &m<\sb<P><1> \equiv; \sb<x><1>> とすれば &m<\widetilde<M> \equiv; M> だから、&m<M> が強計算可能である。
-      したがって、補題 \ref|type="thm",id="athrten"|; により &m<M> は強正規化可能である。
+      任意にラムダ項 &m<M> をとると、\ref|type="cthm",id="athrtwe"|; において、&m<n = 1> として &m<\sb<P><1> \equiv; \sb<x><1>> とすれば &m<\widetilde<M> \equiv; M> だから、&m<M> が強計算可能である。
+      したがって、\ref|type="cthm",id="athrten"|; により &m<M> は強正規化可能である。
     >
   >
   \thm|type="thm"|<
@@ -803,11 +803,11 @@
   >
   \prf<
     \p<
-      上記の定理 \ref|type="thm",id="snt"|; の証明において、&m<`b>-簡約に関する強正規化可能性を &m<`b `h>-簡約に関する強正規化可能性だと思って読めば、そのままそれが証明として成立する。
-      ただし、補題 \ref|type="thm",id="athrele"|; の証明だけは以下の修正を要する。
+      上記の\ref|type="cthm",id="snt"|; の証明において、&m<`b>-簡約に関する強正規化可能性を &m<`b `h>-簡約に関する強正規化可能性だと思って読めば、そのままそれが証明として成立する。
+      ただし、\ref|type="cthm",id="athrele"|; の証明だけは以下の修正を要する。
     >
     \p<
-      補題 \ref|type="thm",id="athrele"|; の証明において、&m<(\rm<`l> x. \sfun; M) P \sb<N><1> \cdots; \sb<N><n>> から始まる無限の長さの &m<`b `h>-簡約列は、上の証明で述べた形の他に、
+      \ref|type="cthm",id="athrele"|; の証明において、&m<(\rm<`l> x. \sfun; M) P \sb<N><1> \cdots; \sb<N><n>> から始まる無限の長さの &m<`b `h>-簡約列は、上の証明で述べた形の他に、
       &mb<
         \array|align="rcl"|<
           \c<(\rm<`l> x. \sfun; M) P \sb<N><1> \cdots; \sb<N><n>> \c<\sb<\headrarr;><`b `h>> \c<(\rm<`l> x. \sfun; M') P' \sbsp<N><1><\pr;> \cdots; \sbsp<N><n><\pr;>> \br;
@@ -884,7 +884,7 @@
     >
     \p<
       &m<\sbsp<`b><\rm<K>><\circ;>>-簡約によって、新たな &m<`b>-基が生成されることはない。
-      実際、補題 \ref|type="thm",id="levy"|; の 3 パターンのうちどれを見ても、簡約されている &m<`b>-基が &m<\sbsp<`b><\rm<K>><\circ;>>-基になることはできない。
+      実際、\ref|type="cthm",id="levy"|; の 3 パターンのうちどれを見ても、簡約されている &m<`b>-基が &m<\sbsp<`b><\rm<K>><\circ;>>-基になることはできない。
       したがって、&m<S> は &m<M> に含まれるある &m<`b>-基 &m<S'> の残基である。
       &m<R> と &m<S'> の位置関係によって場合分けする。
     >
@@ -966,7 +966,7 @@
     \p<
       &m<M> は単純だから、&m<M> に含まれる &m<`b>-基は &m<\sb<`b><\rm<I>>>-基か &m<\sbsp<`b><\rm<K>><\circ;>>-基のどちらかである。
       &m<\sb<`b><\rm<I>>>-簡約によって &m<\sbsp<`b><\rm<K>><+>>-簡約が生じることはないので、&m<M \sb<\headrarr;><\sb<`b><\rm<I>> \sbsp<`b><\rm<K>><+>> Y> ならば &m<M \sb<\headrarr;><\sb<`b><\rm<I>>> Y> である。
-      補題 \ref|type="thm",id="stepsix"|; により、&m<M> から始まる全ての &m<\sb<`b><\rm<I>>>-簡約列は有限の長さなので、&m<M \sb<\headrarr;><\sb<`b><\rm<I>>> Y> を満たす &m<Y> は有限個しかない。
+      \ref|type="cthm",id="stepsix"|; により、&m<M> から始まる全ての &m<\sb<`b><\rm<I>>>-簡約列は有限の長さなので、&m<M \sb<\headrarr;><\sb<`b><\rm<I>>> Y> を満たす &m<Y> は有限個しかない。
       したがって、&m<\sb<\scr<Y>><1>> は有限集合である。
     >
     \p<
@@ -974,7 +974,7 @@
       したがって、&m<\sb<\scr<Y>><2> (Y)> も有限集合である。
     >
     \p<
-      ここで、任意の &m<N \in; \scr<X>> に対し、補題 \ref|type="thm",id="step7"|; によってあるラムダ項 &m<Y> が存在して、&m<M \sb<\headrarr;><\sb<`b><\rm<I>> \sbsp<`b><\rm<K>><+>> Y \sb<\headrarr;><\sbsp<`b><\rm<K>><\circ;>> N> が成り立つ。
+      ここで、任意の &m<N \in; \scr<X>> に対し、\ref|type="cthm",id="step7"|; によってあるラムダ項 &m<Y> が存在して、&m<M \sb<\headrarr;><\sb<`b><\rm<I>> \sbsp<`b><\rm<K>><+>> Y \sb<\headrarr;><\sbsp<`b><\rm<K>><\circ;>> N> が成り立つ。
       すなわち、&m<Y \in; \sb<\scr<Y>><1>> および &m<N \in; \sb<\scr<Y>><2> (Y)> が成り立つ。
       これにより、
       &mb<
@@ -1039,7 +1039,7 @@
       ここで、&m<\sb<y><1>, \cdots;, \sb<y><n>, \sb<u><1>, \cdots;, \sb<u><m>, z> は &m<M> に含まれていない新たな変項であるとする。
       このとき、&m<R' \sb<\headrarr;><`b `h> R> が成り立ち、&m<R'> は単純である。
       したがって、&m<M> に含まれる全ての &m<R \equiv; \rm<`l> x. \sfun; P> に対して上記のような &m<R'> を作り、各 &m<R> を &m<R'> に置き換えたものを &m<M'> とすれば、&m<M' \sb<\headrarr;><`b `h> M> であって、&m<M'> は単純である。
-      補題 \ref|type="thm",id="stepten"|; により、
+      \ref|type="cthm",id="stepten"|; により、
       &mb<
         M' \sb<\headrarr;><`b `h> M \sb<\to;><`b `h> \sb<M><1> \sb<\to;><`b `h> \sb<M><2> \sb<\to;><`b `h> \cdots;
       >

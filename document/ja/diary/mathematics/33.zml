@@ -144,7 +144,7 @@
   >
   \prf<
     \p<
-      命題 \ref|type="thm",id="comp"|; と同様である。
+      \ref|type="cthm",id="comp"|; と同様である。
     >
   >
   \p<
