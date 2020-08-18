@@ -3,7 +3,7 @@
 
 \page<
   \name<余自由余代数の構成>
-  \use-math;
+  \use-math|prefix="2"|;
 
   \h1<日記 (2019 年 11 月 9 日)>
   \p<
@@ -112,7 +112,7 @@
     >
     \p<
       任意に余代数 &m<D> と線型写像 &m<s: D \to; \sp<V><**>> をとる。
-      上の全単射とテンソル代数の普遍性と \a|href="31.html"|<11 月 8 日>の定理 11 を順に使うことで、
+      上の全単射とテンソル代数の普遍性と\a|href="31.html#madj"|<定理 1.12> を順に使うことで、
       &mb<
         \array|align="rcl"|<
           \c<\sb<\op<Hom>><\bfrm<Vect>> (D, \sp<V><**>)> \c<\cong;> \c<\sb<\op<Hom>><\bfrm<Vect>> (\sp<V><*>, \sp<D><*>)> \br;
@@ -143,7 +143,7 @@
   \thm|type="thm"|<
     \p<
       線型空間 &m<V> をとる。
-      定理 \ref|type="thm",id="cof"|; の通りに &m<`p> をとり、標準的に &m<V \subseteq; \sp<V><**>> と見なすとき、
+      \ref|type="cthm",id="cof",nolink|; の通りに &m<`p> をとり、標準的に &m<V \subseteq; \sp<V><**>> と見なすとき、
       &mb<
         C \coloneqq; \bigcup<\stack<\cc<E \subseteq; T (\sp<V><*>) \sp<><\diamond;> \text< 部分余代数>> \cc<`p (E) \subseteq; V>>> E
       >
@@ -152,11 +152,11 @@
   >
   \prf<
     \p<
-      定理 \ref|type="thm",id="cof"|; と補題 \ref|type="thm",id="sub"|; を組み合わせれば良い。
+      \ref|type="cthm",id="cof"|; と\ref|type="cthm",id="sub"|; を組み合わせれば良い。
     >
   >
   \p<
-    補題 \ref|type="thm",id="sub"|; の証明はまだ私もきちんと行ってないので省略したが、たぶんそんなに難しくないと思うので、できたらこの日記に追記しておこうと思う。
+    \ref|type="cthm",id="sub"|; の証明はまだ私もきちんと行ってないので省略したが、たぶんそんなに難しくないと思うので、できたらこの日記に追記しておこうと思う。
   >
   \p<
     この 2 日間で述べた余自由余代数の構成は、Sweedler\ref|type="bib",id="hax"|; によるものである。

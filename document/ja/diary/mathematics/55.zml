@@ -3,7 +3,7 @@
 
 \page<
   \name<λμ-計算と古典論理>
-  \use-math;
+  \use-math|prefix="4"|;
 
   \h1<日記 (2020 年 7 月 9 日)>
   \p<

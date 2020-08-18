@@ -3,7 +3,7 @@
 
 \page<
   \name<スター自律圏と Chu 構成>
-  \use-math;
+  \use-math|prefix="4"|;
 
   \h1<日記 (2020 年 4 月 8 日)>
   \p<
@@ -190,7 +190,7 @@
     >
   >
   \p<
-    命題 \ref|type="thm",id="stequiv"|; の証明によって、スター自律圏の対象 &m<A, B> に対し、モノイダル閉圏の構造と双対関手は &m<A \rmulti|bin|; B \cong; (A \otimes; \sp<B><*>) \sp<><*>> という関係で結びついていることが分かる。
+    \ref|type="cthm",id="stequiv"|; の証明によって、スター自律圏の対象 &m<A, B> に対し、モノイダル閉圏の構造と双対関手は &m<A \rmulti|bin|; B \cong; (A \otimes; \sp<B><*>) \sp<><*>> という関係で結びついていることが分かる。
     このことから、&m<\bfrm<Chu> (\scr<C>, \bbot;)> の対象 &m<(\sb<A><1>, \sb<A><2>, a), (\sb<B><1>, \sb<B><2>, b)> に対し、引き戻し
     &mb<
       \diag<

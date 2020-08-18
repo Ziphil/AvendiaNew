@@ -3,7 +3,7 @@
 
 \page<
   \name<代数的コンパクト性の十分条件>
-  \use-math;
+  \use-math|prefix="5"|;
 
   \h1<日記 (2019 年 12 月 7 日)>
   \p<
@@ -38,7 +38,7 @@
   >
   \p<
     では、本題に移る。
-    これから行う議論では、\a|href="23.html"|<11 月 23 日>で述べた鎖の余極限として始代数を構成する方法を用いるので、いくつかの概念の定義を確認しておく。
+    これから行う議論では、\a|href="23.html#inalg"|<定理 2.2> として述べた鎖の余極限として始代数を構成する方法を用いるので、いくつかの概念の定義を確認しておく。
   >
   \thm|type="def"|<
     \p<
@@ -67,7 +67,7 @@
     >
   >
   \p<
-    まず、\a|href="23.html"|<11 月 23 日>の定理 2 を復習しよう。
+    まず、\a|href="23.html#inalg"|<定理 2.2> を復習しよう。
   >
   \thm|type="thm",id="adamek"|<
     \p<
@@ -417,7 +417,7 @@
   >
   \prf<
     \p<
-      命題 \ref|type="thm",id="zero"|; によって、&m<\scr<C>> は始対象と終対象をともにもつから、図式
+      \ref|type="cthm",id="zero"|; によって、&m<\scr<C>> は始対象と終対象をともにもつから、図式
       &mb<
         \diag<
           \v<0> \v<F 0> \v<\sp<F><2> 0> \v<\cdots;> \br;
@@ -445,18 +445,18 @@
           >
         >
       >
-      とおくと、&m<F> が射集合の順序を保存することから、補題 \ref|type="thm",id="lem"|; の 4 つの条件を全て満たしていることが分かる。
-      したがって、補題 \ref|type="thm",id="lem"|; により、上部の鎖の余極限と下部の余鎖の極限がともに存在して一致する。
+      とおくと、&m<F> が射集合の順序を保存することから、\ref|type="cthm",id="lem"|; の 4 つの条件を全て満たしていることが分かる。
+      したがって、\ref|type="cthm",id="lem"|; により、上部の鎖の余極限と下部の余鎖の極限がともに存在して一致する。
       それを &m<S> とおく。
     >
     \p<
-      各自然数 &m<n, m> に対し、補題 \ref|type="thm",id="lem"|; の証明の通りに &m<\multi<p><m><n>: \sb<S><n> \to; \sb<T><m>, \multi<u><\infty;><n>: \sb<S><n> \to; S, \multi<v><n><\infty;>: S \to; \sb<T><n>> をとる。
+      各自然数 &m<n, m> に対し、\ref|type="cthm",id="lem"|; の証明の通りに &m<\multi<p><m><n>: \sb<S><n> \to; \sb<T><m>, \multi<u><\infty;><n>: \sb<S><n> \to; S, \multi<v><n><\infty;>: S \to; \sb<T><n>> をとる。
       すると、定義によって、
       &mb<
         \multi<p><m + 1><n + 1> = F \multi<p><m><n>
       >
       が成り立つことが容易に示せる。
-      さらに、定理 \ref|type="thm",id="adamek"|;, \ref|type="thm",id="coadamek"|; の通りに、射 &m<`s': S \to; FS, `t': FS \to; S> をとる。
+      さらに、\ref|type="cthm",id="adamek"|; と\ref|type="cthm",id="coadamek"|; の通りに、射 &m<`s': S \to; FS, `t': FS \to; S> をとる。
     >
     \p<
       任意の自然数 &m<n, m> に対し、
@@ -476,7 +476,7 @@
     >
     \p<
       以上により、&m<`s'> と &m<`t'> は互いに逆射だから同型射である。
-      したがって、定理 \ref|type="thm",id="adamek"|; によって &m<(S, `s'\sp<><-1>)> は &m<F>-始代数であり、定理 \ref|type="thm",id="coadamek"|; によって &m<(S, `s')> は &m<F>-終余代数である。
+      したがって、\ref|type="cthm",id="adamek"|; によって &m<(S, `s'\sp<><-1>)> は &m<F>-始代数であり、\ref|type="cthm",id="coadamek"|; によって &m<(S, `s')> は &m<F>-終余代数である。
       すなわち、&m<F> は代数的コンパクトである。
     >
   >
@@ -495,7 +495,7 @@
   >
   \h1<追記 (2019 年 12 月 13 日)>
   \p<
-    定理 \ref|type="thm",id="main"|; の議論が埋められていなかった箇所を埋め、全体を少し書き直しました。
+    \ref|type="cthm",id="main"|; の議論が埋められていなかった箇所を埋め、全体を少し書き直しました。
     元論文に書かれていた条件を見落としていたのが原因でした。
     このことを指摘してくださった \ae|href="https://twitter.com/Mizunashi_Mana"|<@Mizunashi_Mana> 氏には、この場を借りて感謝します。
   >

@@ -3,7 +3,7 @@
 
 \page<
   \name<局所的な書き換え規則への変換>
-  \use-math;
+  \use-math|prefix="2"|;
 
   \h1<日記 (2020 年 7 月 6 日)>
   \p<
@@ -134,7 +134,7 @@
   \p<
     以上のもと、次のような書き換え規則が定義できる。
   >
-  \thm|type="def"|<
+  \thm|type="def",id="locred"|<
     \p<
       計算体系 &m<\sb<\rm<`l>><\rm<c>>> の項の上の関係 &m<\sb<\rhd|ord|;><\rm<Lr>>> を、項 &m<M, N> と値 &m<V> に対し、
       &mb<
@@ -161,7 +161,7 @@
   \p<
     この関係は、最初に意図していた以下の性質を満たす。
   >
-  \thm|type="thm"|<
+  \thm|type="thm",id="locglb"|<
     \p<
       計算体系 &m<\sb<\rm<`l>><\rm<c>>> の任意の項 &m<P, Q> に対し、&m<P \sb<\squigrarr;><\rm<G>> Q> ならば &m<P \sbsp<\squigrarr;><\rm<L>><*> Q> が成り立つ。
     >

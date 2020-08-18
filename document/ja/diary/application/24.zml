@@ -3,7 +3,7 @@
 
 \page<
   \name<下方射と上方射の Haskell 実装>
-  \use-math;
+  \use-math|prefix="3"|;
 
   \h1<日記 (2019 年 11 月 28 日)>
   \p<
@@ -13,7 +13,7 @@
   \p<
     実装を見る前に、始代数の重要な性質を 1 つ証明する。
   >
-  \thm|type="prp"|<
+  \thm|type="prp",id="iniso"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
       &m<F>-代数 &m<(S, `s)> が始代数ならば、&m<`s> は同型射である。

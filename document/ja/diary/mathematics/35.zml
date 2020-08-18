@@ -3,7 +3,7 @@
 
 \page<
   \name<線型論理に対応する圏の比較>
-  \use-math;
+  \use-math|prefix="2"|;
 
   \h1<日記 (2020 年 4 月 5 日)>
   \p<
@@ -251,7 +251,7 @@
   \prf<
     \p<
       &m<\sb<\scr<C>><!>> が有限直積をもつことはすでに述べた通りである。
-      任意の &m<\scr<C>> の対象 &m<A, B, C> に対し、補題 \ref|type="thm",id="xinv"|; より &m<\sb<\tilde<`x>><CA>: FC \otimes; FA \to; F (C \times; A)> は同型射であるが、&m<F> の定義によってこれは &m<! C \otimes; ! A \cong; ! (C \times; A)> が成り立つということである。
+      任意の &m<\scr<C>> の対象 &m<A, B, C> に対し、\ref|type="cthm",id="xinv"|; より &m<\sb<\tilde<`x>><CA>: FC \otimes; FA \to; F (C \times; A)> は同型射であるが、&m<F> の定義によってこれは &m<! C \otimes; ! A \cong; ! (C \times; A)> が成り立つということである。
       これに加えて &m<\scr<C>> のモノイダル閉性を用いれば、
       &mb<
         \array|align="rcl"|<
@@ -278,7 +278,7 @@
   >
   \prf<
     \p<
-      命題 \ref|type="thm",id="kleiadj"|; より &m<! = F \circ; G> であるから、! のモノイダル構造は、各対象 &m<A, B> に対し、
+      \ref|type="cthm",id="kleiadj"|; より &m<! = F \circ; G> であるから、! のモノイダル構造は、各対象 &m<A, B> に対し、
       &mb<
         \array|align="rcl"|<
           \c<\sb<\tilde<`f>><AB>> \c<\coloneqq;> \c<\tort<\diag<
@@ -292,7 +292,7 @@
         >
       >
       で定まる。
-      さらに、補題 \ref|type="thm",id="xinv"|; を用いて、各対象 &m<A> に対し、
+      さらに、\ref|type="cthm",id="xinv"|; を用いて、各対象 &m<A> に対し、
       &mb<
         \array|align="rcl"|<
           \c<\sb<d><A>> \c<\coloneqq;> \c<\tort<\diag<

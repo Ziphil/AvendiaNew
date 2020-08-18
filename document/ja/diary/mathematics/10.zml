@@ -3,7 +3,7 @@
 
 \page<
   \name<カルテシアン射とファイブレーション>
-  \use-math;
+  \use-math|prefix="1"|;
 
   \h1<日記 (2018 年 6 月 27 日)>
   \p<
@@ -70,7 +70,7 @@
     >
   >
   \p<
-    命題 \ref|type="thm",id="uniqcart"|; によって、ファイブレーションに沿った持ち上げは同型の違いを除いて一意に定まる。
+    \ref|type="cthm",id="uniqcart"|; によって、ファイブレーションに沿った持ち上げは同型の違いを除いて一意に定まる。
   >
   \p<
     以降では、ファイブレーションを表すときは矢印の上に丸を付けて &m<p: \scr<E> \ring<\to;> \scr<B>> のように表すことにする。
@@ -141,7 +141,7 @@
   >
   \prf<
     \p<
-      命題 \ref|type="thm",id="arcart"|; より明らかである。
+      \ref|type="cthm",id="arcart"|; より明らかである。
     >
   >
   \thm|type="def"|<

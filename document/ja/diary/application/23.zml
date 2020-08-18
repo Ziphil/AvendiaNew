@@ -3,7 +3,7 @@
 
 \page<
   \name<始代数の余極限による構成>
-  \use-math;
+  \use-math|prefix="2"|;
 
   \h1<日記 (2019 年 11 月 23 日)>
   \p<
@@ -29,7 +29,7 @@
   \p<
     より簡潔に言えば、圏 &m<\scr<C>> 上の鎖とは、自然数全体の集合 &m<\bb<N>> を通常の大小関係で圏と見なしたときの関手 &m<K: \bb<N> \to; \scr<C>> のことである。
   >
-  \thm|type="thm"|<
+  \thm|type="thm",id="inalg"|<
     \p<
       圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> が、2 条件
     >
