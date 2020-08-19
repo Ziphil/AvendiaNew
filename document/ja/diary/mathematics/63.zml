@@ -139,7 +139,7 @@
   \p<
     これらの定理を用いると、以下の一意化定理が示せる。
   >
-  \thm|type="thm"|<
+  \thm|type="thm",id="uni"|<
     \name<一意化定理\fl<uniformisation theorem>>
     \p<
       任意に基数 &m<`s> をとる。

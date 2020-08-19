@@ -1,0 +1,172 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+\page<
+  \name<コンマ圏の到達可能性>
+  \use-math|prefix="8"|;
+
+  \h1<日記 (2020 年 8 月 20 日)>
+  \p<
+    今日は、到達可能関手のコンマ圏が到達可能になることを示し、その系として到達可能関手が解集合条件を満たすことを示す。
+  >
+  \thm|type="lem",id="cmacc"|<
+    \p<
+      正則基数 &m<`k> をとる。
+      関手 &m<`F: \scr<C> \to; \scr<E>, `C: \scr<D> \to; \scr<E>> を考える。
+      コンマ圏 &m<`F \bdarr; `C> の対象 &m<h: `F C \to; `C D> に対し、&m<`F C> と &m<`C D> がともに &m<\scr<E>> で &m<`k>-表示可能ならば、&m<h> は &m<`F \bdarr; `C> で &m<`k>-表示可能である。
+    >
+  >  
+  \prf<
+    \p<
+      ζ*'ヮ')ζ ＜ うう、難しいかも～･･･。
+    >
+  >
+  \p<
+    さて、コンマ圏の余極限が以下のように得られることを思い出そう。 
+  >
+  \thm|type="prp",id="cmcol"|<
+    \p<
+      関手 &m<`F: \scr<C> \to; \scr<E>, `C: \scr<D> \to; \scr<E>> をとり、コンマ圏からの忘却関手をそれぞれ &m<U: `F \bdarr; `C \to; \scr<C>, V: `F \bdarr; `C \to; \scr<D>> とする。
+      さらに、図式 &m<F: \scr<I> \to; `F \bdarr; `C> について、&m<C \coloneqq; \op<colim> (F \rtriangle; U)> と &m<D \coloneqq; \op<colim> (F \rtriangle; V)> が存在し、&m<`F> は余極限 &m<C> を保存するとする。
+      このとき、&m<`F C> の普遍性によって得られる &m<\scr<E>> の射 &m<h: `F C \to; `C D> は、&m<`F \bdarr; `C> の対象として &m<\op<colim> F> を与える。
+    >
+  >
+  \p<
+    このことから、到達可能関手のコンマ圏が到達可能になることが分かる。
+  >
+  \thm|type="thm"|<
+    \p<
+      到達可能関手 &m<`F: \scr<C> \to; \scr<E>, `C: \scr<D> \to; \scr<E>> に対し、コンマ圏 &m<`F \bdarr; `C> は到達可能である。
+    >
+  >
+  \prf<
+    \p<
+      \a|href="63.html#uni"|<定理 7.5> により、ある正則基数 &m<`k> がとれて、&m<`F> と &m<`C> がともに &m<`k>-到達可能かつ &m<`k>-表示対象を保つようにできる。
+      すると、&m<\scr<C>> と &m<\scr<D>> はともに &m<`k>-有向余極限をもち、さらに &m<`F> は &m<`k>-有向余極限を保つから、\ref|type="cthm",id="cmcol"|; によって &m<`F \bdarr; `C> は &m<`k>-有向余極限をもつ。
+      さらに、
+      &mb<
+        \scr<A> \coloneqq; `{h \in; `F \bdarr; `C: `F C \to; `C D \mid; &raw<&m<`F C> と &m<`C D> はともに &m<`k>-表示可能>`}
+      >
+      とおくと、\ref|type="cthm",id="cmcol"|; によってこの元は全て &m<`k>-到達可能である。
+      また、\a|href="60.html#pressm"|<定理 4.5> によって &m<\scr<E>> の &m<`k>-到達可能対象は同型の違いを除いて集合サイズしかないから、&m<\scr<A>> は本質的小である。
+      したがって、あとは &m<`F \bdarr; `C> の任意の対象が &m<\scr<A>> の元の &m<`k>-有向余極限として表せることを示せば良い。
+    >
+    \p<
+      任意に &m<`F \bdarr; `C> の対象 &m<f: `F C \to; `C D> をとる。
+      すると、&m<\scr<C>> の &m<`k>-表示可能対象の &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> とその余極限余錐 &m<(\sb<c><i>: Fi \to; C) \sb<><i \in; \scr<I>>> がとれる。
+      同様に、&m<\scr<D>> の &m<`k>-表示可能対象の &m<`k>-有向図式 &m<G: \scr<K> \to; \scr<D>> とその余極限余錐 &m<(\sb<d><i>: Gk \to; D) \sb<><k \in; \scr<K>>> もとれる。
+      これを用いて、
+      &mb<
+        \scr<H> \coloneqq; \set<h: `F F i \to; `C G k><&raw<
+          &m<\diag<
+            \v<`F F i> \v<`F C> \br;
+            \v<`C G k> \v<`C D>
+            \ar|s="1",e="2"|<`F \sb<c><i>> \ar|s="3",e="4",inv|<`C \sb<d><k>>
+            \ar|s="1",e="3",inv|<h> \ar|s="2",e="4"|<f>
+          >>
+          が可換
+        >>
+      >
+      とおく。
+      さらに、&m<\scr<H>> 上の順序関係 &m<\leq;> を次のように定める。
+      すなわち、&m<\scr<H>> の元 &m<h: `F F i \to; `C G k, h': `F F i' \to; `C G k'> に対し、&m<i \leq; i'> かつ &m<k \leq; k'> であって、
+      &mb<
+        \diag<
+          \v<`F F i> \v<`F F i'> \br;
+          \v<`C G k> \v<`C G k'>
+          \ar|s="1",e="2"|; \ar|s="3",e="4",inv|;
+          \ar|s="1",e="3",inv|<h> \ar|s="2",e="4"|<h'>
+        >
+      >
+      が可換になるとき、&m<h \leq; h'> であると定義する。
+      以下、この順序によって &m<\scr<H>> が &m<`k>-有向になることを示す。
+    >
+    \p<
+      &m<\scr<H>> の元からなる集合 &m<`{\sb<h><l>: `F F \sb<i><l> \to; `C G \sb<k><l>`} \sb<><l \in; L>> であって濃度が &m<`k> 未満のものをとる。
+      &m<\scr<I>> は &m<`k>-有向だから、&m<`{\sb<i><l>`} \sb<><l \in; L>> の上界 &m<\bar<i>> がとれる。
+      同様に、&m<`{\sb<k><l>`} \sb<><l \in; L>> の上界 &m<\bar<k>> もとれる。
+      ここで、&m<`F> は &m<`k>-表示可能対象を保つので、&m<`F F \bar<i>> は &m<\scr<E>> で &m<`k>-表示可能である。
+      また、&m<`C> は &m<`k>-有向余極限を保つので、&m<(`C \sb<d><k>: `C G k \to; `C D) \sb<><k \in; \scr<K>>> は &m<\scr<E>> 内の &m<`k>-有向余極限である。
+      したがって、ある &m<\scr<K>> の対象 &m<k> が存在して、
+      &mb<
+        \diag<
+          \v<`F F \bar<i>> \v<`F C> \v<`C D> \br;
+          \v; \v<`C G k> \v;
+          \ar|s="1",e="2"|<`F \sb<c><\bar<i>>> \ar|s="2",e="3"|<f>
+          \ar|s="1",e="5",dash,inv|<g> \ar|s="5",e="3",inv|<`C \sb<d><k>>
+        >
+      >
+      という分解ができる。
+      ここで、この &m<k> が &m<\bar<k>> であるとしても一般性は失われない。
+      実際、そうでなければ &m<k> と &m<\bar<k>> の上界を改めて &m<\bar<k>> とおけば良い。
+    >
+    \p<
+      さて、各 &m<L> の元 &m<l> に対し、
+      &mb<
+        \array|align="rcl"|<
+          \c<`F F \ltort; \sb<i><l> \hookrarr; \bar<i> \rtort; \rtriangle; g \rtriangle; `C \sb<d><\bar<k>>>
+          \c<=> \c<`F F \ltort; \sb<i><l> \hookrarr; \bar<i> \rtort; \rtriangle; `F \sb<c><\bar<i>> \rtriangle; f> \br;
+          \c; \c<=> \c<`F \sb<c><\sb<i><l>> \rtriangle; f> \br;
+          \c; \c<=> \c<\sb<h><l> \rtriangle; `C \sb<d><\sb<k><l>>> \br;
+          \c; \c<=> \c<\sb<h><l> \rtriangle; `C G \ltort; \sb<k><l> \hookrarr; \bar<k> \rtort; \rtriangle; `C \sb<d><\bar<k>>>
+        >
+      >
+      が成り立つ。
+      &m<`F F \sb<i><l>> は &m<`k>-表示可能であって &m<(`C \sb<d><k>: `C G k \to; `C D) \sb<><k \in; \scr<K>>> は &m<`k>-有向余極限だから、分解の本質的一意性によって、&m<\scr<K>> の対象 &m<\sbsp<k><l><\pr;>> が存在して、&m<\bar<k> \leq; \sbsp<k><l><\pr;>> であって、
+      &mb<
+        `F F \ltort; \sb<i><l> \hookrarr; \bar<i> \rtort; \rtriangle; g \rtriangle; `C G \ltort; \bar<k> \hookrarr; \sbsp<k><l><\pr;> \rtort;
+        = \sb<h><l> \rtriangle; `C G \ltort; \sb<k><l> \hookrarr; \bar<k> \rtort; \rtriangle; `C G \ltort; \bar<k> \hookrarr; \sbsp<k><l><\pr;> \rtort;
+      >
+      が成り立つ。
+      このようにして得られた &m<\scr<K>> の対象の集合 &m<`{\sbsp<k><l><\pr;>`} \sb<><l \in; L>> の上界 &m<\bar<k>'> をとると、任意の &m<L> の元 &m<l> に対し、
+      &mb<
+        `F F \ltort; \sb<i><l> \hookrarr; \bar<i> \rtort; \rtriangle; g \rtriangle; `C G \ltort; \bar<k> \hookrarr; \bar<k>' \rtort;
+        = \sb<h><l> \rtriangle; `C G \ltort; \sb<k><l> \hookrarr; \bar<k>' \rtort;
+      >
+      が一斉に成り立つ。
+      図式で書けば、
+      &mb<
+        \diag<
+          \v<`F F \sb<i><l>> \v<`F F \bar<i>> \br;
+          \v<> \v<`C G k> \br;
+          \v<`C G \sb<k><l>> \v<`C G \bar<k>'>
+          \ar|s="1",e="2"|; \ar|s="5",e="6"|;
+          \ar|s="1",e="5",inv|<\sb<h><l>> \ar|s="2",e="4"|<g> \ar|s="4",e="6"|;
+        >
+      >
+      は可換である。
+      これはすなわち、この右辺の垂直な射を &m<\bar<h>: `F F \bar<i> \to; `C G \bar<k>'> とおけば、&m<\bar<h>> は &m<`{\sb<h><l>`} \sb<><l \in; L>> の上界であるということである。
+      以上により、&m<\scr<H>> は &m<`k>-有向である。
+    >
+    \p<
+      さて、
+      &mb<
+        \array|align="rrcl"|<
+          \c<H:> \c<\scr<H>> \c<\longto;> \c<`F \bdarr; `C> \br;
+          \c; \c<h> \c<\longmapsto;> \c<h>
+        >
+      >
+      とおくと、これは &m<\scr<A>> の元の &m<`k>-有向図式である。
+      さらに、これの余錐 &m<((\sb<c><i>, \sb<d><k>): H h \to; f) \sb<><h \in; \scr<H>: `F F i \to; `C G k>> が余極限になることが容易に示せる。
+      これにより、&m<f> が &m<\scr<A>> の元の &m<`k>-有向余極限として表せた。
+    >
+  >
+  \p<
+    この定理の系として、到達可能関手は解集合条件を満たすことが示せる。
+  >
+  \thm|type="thm"|<
+    \p<
+      到達可能関手 &m<`F: \scr<C> \to; \scr<D>> に対し、&m<`F> は解集合条件を満たす。
+    >
+  >
+  \prf<
+    \p<
+      ζ*'ヮ')ζ ?
+    >
+  >
+  \h1<参考文献>
+  \ol<
+    \li|id="lpa"|<J. Adámek, J. Rosický (1994)『Locally Presentable and Accessible Categories』Cambridge University Press>
+  >
+
+>
