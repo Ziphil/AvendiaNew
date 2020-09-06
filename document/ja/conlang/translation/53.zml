@@ -7,52 +7,138 @@
 
   \h1<翻訳文>
   \h2<オープニング (病院)>
-  \p<
-    ## 10000
-    {…….}
-    {…?}
-    {fâ…, dêxes a'l te lôk avôl….}
-    {pa dufeketez vade pil li'l a ʻziszekleq?}
-    {…?}
-    {e fîq…. pa salat vade pil a delef e akaleg…? qetat ocavas a zat vo hif izi tel.}
+  ## 10000
+  \spch<\name<{ʻerinas}>
+    \p<
+      {fâ…, dêxes a'l te lôk avôl….}
+    >
   >
-  \p<
-    ## 10001
-    {pa^… pa salat e pâd a fêd? pa salat e ayét a kin déxet a'l vo cît izi ʻziszekleq o ʻmirus?}
-    {pa qetat vo pâd a tel? pa belsetac ca'l a ʻmirus ovop?}
-    {yo ʻziszekleq, yo ʻmirus, pa qetat vo pâd a loc avéf?}
-    {…….}
-    {sa^… salat a zel e aqorol. yo ʻziszekleq, qetat a tel vo fêd! qetat a ʻerinas vo fêd!}
-    {…!}
-    {kilat dìvkoxos a tel, bava salat a tel e hapet!}
-    {…….}
-    {kilat dìvkoxos a'l…?}
-    {pa^… pa dìvkoxac oyát a tel? revak a'l e'n rekdûlec a'l e cal!}
-    {pa kodat e pil? dukilot dìvkoxos a hapet!}
+  \spch<\name<{ʻerinas}>
+    \p<
+      {pa dufeketez vade pil li'l a ʻziszekleq?}
+    >
+  >
+  \spch<\name<{ʻerinas}>
+    \p<
+      {e fîq…. pa salat vade pil a delef e akaleg…?}
+      {qetat ocavas a zat vo hif izi tel.}
+    >
+  >
+  ## 10001
+  \spch<\name<{ʻerinas}>
+    \p<
+      {pa^… pa salat e pâd a fêd?}
+      {pa salat e ayét a kin déxet a'l vo cît izi ʻziszekleq o ʻmirus?}
+    >
+  >
+  \spch<\name<{ʻerinas}>
+    \p<
+      {pa qetat vo pâd a tel?}
+      {pa belsetac ca'l a ʻmirus ovop?}
+    >
+  >
+  \spch<\name<{ʻerinas}>
+    \p<
+      {yo ʻziszekleq, yo ʻmirus, pa qetat vo pâd a loc avéf?}
+    >
+  >
+  \spch<\name<{ʻerinas}>
+    \p<
+      {sa^… salat a zel e aqorol.}
+      {yo ʻziszekleq, qetat a tel vo fêd!}
+      {qetat a ʻerinas vo fêd!}
+    >
+  >
+  \spch<\name<{ʻerinas}>
+    \p<
+      {kilat dìvkoxos a tel, bava salat a tel e hapet!}
+    >
+  >
+  \spch<\name<{ʻerinas}>
+    \p<
+      {kilat dìvkoxos a'l…?}
+    >
+  >
+  \spch<\name<{ʻerinas}>
+    \p<
+      {pa^… pa dìvkoxac oyát a tel? revak a'l e'n rekdûlec a'l e cal!}
+    >
+  >
+  \spch<\name<{ʻerinas}>
+    \p<
+      {pa kodat e pil? dukilot dìvkoxos a hapet!}
+    >
   >
   \h2<オープニング (始まりの森)>
-  \p<
-    ## 12000
-    {sokat a'l e'n hilefat a zis aves e hapet, dà salat e adasos a kin evoc vomos raskefos otêl a vas.}
-    {fêzat vedemat etís e ces, dà nisis a zel aves ca asas vade déxxavac a ces….}
-    {hâ….}
-    {qetat a loc o focis avôl iti dimelac a'l e'n vodàkas a'l e'n salat a pas e pas. dà, e fér afik…. dufèkat ovel ebam a'l e fes.}
-    {lo^….}
-    {…….}
-    {pî….}
+  ## 12000
+  \spch<\name<{ʻirisus}>
+    \p<
+      {sokat a'l e'n hilefat a zis aves e hapet, dà salat e adasos a kin evoc vomos raskefos otêl a vas.}
+    >
   >
-  \p<
-    ## 12001
-    {e fîq….}
-    {pa^… pa salat e ayát a^….}
-    {pa salat a fér afik e^….}
-    {pa^ pa savat e pil? ducatikat ekoz a'l e fal! **!}
-    {dà, pa salat e asalaf a lasuf i tel? ri^….}
-    {ri lilosic a'l^….}
+  \spch<\name<{ʻirisus}>
+    \p<
+      {fêzat vedemat etís e ces, dà nisis a zel aves ca asas vade déxxavac a ces….}
+    >
+  >
+  \spch<\name<{ʻirisus}>
+    \p<
+      {hâ….}
+    >
+  >
+  \spch<\name<{ʻirisus}>
+    \p<
+      {qetat a loc o focis avôl iti dimelac a'l e'n vodàkas a'l e'n salat a pas e pas. dà, e fér afik…. dufèkat ovel ebam a'l e fes.}
+    >
+  >
+  \spch<\name<{ʻirisus}>
+    \p<
+      {lo^….}
+    >
+  >
+  \spch<\name<{ʻirisus}>
+    \p<
+      {pî….}
+    >
+  >
+  ## 12001
+  \spch<\name<{ʻirisus}>
+    \p<
+      {e fîq….}
+    >
+  >
+  \spch<\name<{ʻirisus}>
+    \p<
+      {pa^… pa salat e ayát a^….}
+    >
+  >
+  \spch<\name<{ʻirisus}>
+    \p<
+      {pa salat a fér afik e^….}
+    >
+  >
+  \spch<\name<{ʻirisus}>
+    \p<
+      {pa^ pa savat e pil?}
+      {ducatikat ekoz a'l e fal!}
+      {**!}
+    >
+  >
+  \spch<\name<{ʻirisus}>
+    \p<
+      {dà, pa salat e asalaf a lasuf i tel?}
+      {ri^….}
+    >
+  >
+  \spch<\name<{ʻirisus}>
+    \p<
+      {ri lilosic a'l^….}
+    >
   >
   \h1<解説>
   \p<
-    うさうさ。
+    CreSpirit 社によるアクションゲーム『Rabi-Ribi』(\ae|href="https://store.steampowered.com/app/400910"|<Steam> で購入可能) のイベントテキストを翻訳したものです。
+    リーダーのみなどテキストがない文は省略してあります。
   >
 
 >
