@@ -294,24 +294,40 @@
   \p<
     会話形式の講座などで、会話文を表示することがあります。
   >
-  \tablec<\cz<\p<
-    これは私の台詞です。
+  \spch<
+    \name<Ziphil>
+    \p<
+      これは私の台詞です。
+    >
+    \xl<
+      \li<\sh<{sîya.}>\ja<例文が挟まります。>>
+      \li<\sh<{sîya.}>\ja<もう 1 つ例文が挟まります。>>
+    >
+    \p<
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    >
   >
-  \xl<
-    \li<\sh<{sîya.}>\ja<例文が挟まります。>>
-  >>
-  \cf<\p<
-    わーい!
-  >>
-  \cz<\p<
-    Lorsque j'avais six ans j'ai vu, une fois, une magnifique image, dans un livre sur la Forêt Vierge qui s'appelait “Histoires Vécues”.
-    Ça représentait un serpent boa qui avalait un fauve.
-    Voilà la copie du dessin.
+  \spch|inv|<
+    \name<Filtia>
+    \p<
+      わーい!
+    >
   >
-  \p<
-    On disait dans le livre: “Les serpents boas avalent leur proie tout entière, sans la mâcher.
-    Ensuite ils ne peuvent plus bouger et ils dorment pendant les six mois de leur digestion.”
-  >>>
+  \spch<
+    \name<Ziphil>
+    \p<
+      Lorsque j'avais six ans j'ai vu, une fois, une magnifique image, dans un livre sur la Forêt Vierge qui s'appelait «Histoires Vécues».
+      Ça représentait un serpent boa qui avalait un fauve.
+      Voilà la copie du dessin.
+    >
+    \p<
+      On disait dans le livre: «Les serpents boas avalent leur proie tout entière, sans la mâcher.
+      Ensuite ils ne peuvent plus bouger et ils dorment pendant les six mois de leur digestion.»
+    >
+  >
   \h1|id="trans"|<対訳>
   \p<
     歌詞の翻訳などでは、原文と訳文を並べて表示したくなります。
