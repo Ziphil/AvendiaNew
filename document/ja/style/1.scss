@@ -958,8 +958,61 @@ article.main {
 
   // 会話文
 
-  table.conversation {
-    display: none;
+  div.speech-wrapper {
+    margin: $wide-vertical-margin 0px;
+    padding: 0px;
+    position: relative;
+    z-index: 5;
+  }
+
+  div.speech-wrapper div.border {
+    height: 100%;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    border-left: 1px $border-color solid;
+    pointer-events: none;
+    position: absolute;
+    left: $speech-horizontal-padding + $speech-name-width;
+    z-index: 2;
+  }
+
+  div.speech-wrapper div.speech {
+    display: flex;
+  }
+
+  div.speech-wrapper div.speech div.name {
+    width: $speech-name-width;
+    margin: 0px;
+    padding: 0px $speech-horizontal-padding 0px 0px;
+    font-size: 80%;
+    color: $border-color;
+    line-height: $line-height;
+    border-top: 1px $border-color solid;
+    flex-basis: $speech-name-width;
+    flex-shrink: 0;
+  }
+
+  div.speech-wrapper div.speech div.content {
+    margin: 0px 0px;
+    padding: 0px 0px 0px $speech-horizontal-padding;
+    flex-grow: 1;
+  }
+
+  div.speech-wrapper div.speech div.content *:first-child {
+    margin-top: 0px;
+  }
+
+  div.speech-wrapper div.speech div.content *:last-child {
+    margin-bottom: 0px;
+  }
+
+  div.speech-wrapper div.speech div.content ul.conlang {
+    margin-left: 0px - $main-horizontal-padding - $speech-horizontal-padding * 2 - $speech-name-width;
+    padding-left: $main-horizontal-padding + $speech-horizontal-padding * 2 + $speech-name-width;
+    @include smartphone {
+      margin-left: 0px - $main-smartphone-horizontal-padding - $result-horizontal-padding;
+      padding-left: $main-smartphone-horizontal-padding + $result-horizontal-padding;
+    }
   }
 
   // ソースコード

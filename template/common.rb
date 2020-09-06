@@ -418,6 +418,26 @@ converter.add(["ja", "sh"], ["page.trans.li"]) do |element|
   next this
 end
 
+converter.add(["spch"], ["page"]) do |element|
+  this = ""
+  name_element = element.elements.to_a("name").first
+  this << Tag.build("div", "speech-wrapper") do |this|
+    if element.attribute("inv")
+      this.class << " invert" 
+    end
+    this << Tag.new("div", "border")
+    this << Tag.build("div", "speech") do |this|
+      this << Tag.build("div", "name") do |this|
+        this << apply(name_element, "page")
+      end
+      this << Tag.build("div", "content") do |this|
+        this << apply(element, "page")
+      end
+    end
+  end
+  next this
+end
+
 converter.add(["section-table"], ["page"]) do |element|
   this = ""
   this << Tag.build("ul", "section-table") do |this|
