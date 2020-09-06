@@ -904,6 +904,7 @@ article.main {
 
   table.translation tr td:first-child {
     padding: 0px $table-cell-horizontal-padding 0px 0px;
+    border-right: 1px $border-color solid;
   }
 
   // グロス
@@ -972,7 +973,7 @@ article.main {
     border-left: 1px $border-color solid;
     pointer-events: none;
     position: absolute;
-    left: $speech-horizontal-padding + $speech-name-width;
+    left: $box-horizontal-padding + $speech-name-width;
     z-index: 2;
   }
 
@@ -983,7 +984,7 @@ article.main {
   div.speech-wrapper div.speech div.name {
     width: $speech-name-width;
     margin: 0px;
-    padding: 0px $speech-horizontal-padding 0px 0px;
+    padding: 0px $box-horizontal-padding 0px 0px;
     font-size: 80%;
     color: $border-color;
     line-height: $line-height;
@@ -994,7 +995,7 @@ article.main {
 
   div.speech-wrapper div.speech div.content {
     margin: 0px 0px;
-    padding: 0px 0px 0px $speech-horizontal-padding;
+    padding: 0px 0px 0px $box-horizontal-padding;
     flex-grow: 1;
   }
 
@@ -1007,11 +1008,11 @@ article.main {
   }
 
   div.speech-wrapper div.speech div.content ul.conlang {
-    margin-left: 0px - $main-horizontal-padding - $speech-horizontal-padding * 2 - $speech-name-width;
-    padding-left: $main-horizontal-padding + $speech-horizontal-padding * 2 + $speech-name-width;
+    margin-left: 0px - $main-horizontal-padding - $box-horizontal-padding * 2 - $speech-name-width;
+    padding-left: $main-horizontal-padding + $box-horizontal-padding * 2 + $speech-name-width;
     @include smartphone {
-      margin-left: 0px - $main-smartphone-horizontal-padding - $result-horizontal-padding;
-      padding-left: $main-smartphone-horizontal-padding + $result-horizontal-padding;
+      margin-left: 0px - $main-smartphone-horizontal-padding - $box-horizontal-padding;
+      padding-left: $main-smartphone-horizontal-padding + $box-horizontal-padding;
     }
   }
 
@@ -1564,7 +1565,7 @@ article.main {
 
   div.proof {
     margin: $vertical-margin 0px;
-    padding: 0px 0px 0px $proof-horizontal-padding;
+    padding: 0px 0px 0px $box-horizontal-padding;
     border-left: 1px $label-color dashed;
   }
 
@@ -1666,7 +1667,7 @@ article.main {
 
   div.result-wrapper div.result {
     margin: 0px;
-    padding: 0px 0px 0px $result-horizontal-padding;
+    padding: 0px 0px 0px $box-horizontal-padding;
     position: relative;
     z-index: 1;
   }
@@ -1722,11 +1723,11 @@ article.main {
   }
 
   div.result-wrapper div.result ul.conlang {
-    margin-left: 0px - $main-horizontal-padding - $result-horizontal-padding;
-    padding-left: $main-horizontal-padding + $result-horizontal-padding;
+    margin-left: 0px - $main-horizontal-padding - $box-horizontal-padding;
+    padding-left: $main-horizontal-padding + $box-horizontal-padding;
     @include smartphone {
-      margin-left: 0px - $main-smartphone-horizontal-padding - $result-horizontal-padding;
-      padding-left: $main-smartphone-horizontal-padding + $result-horizontal-padding;
+      margin-left: 0px - $main-smartphone-horizontal-padding - $box-horizontal-padding;
+      padding-left: $main-smartphone-horizontal-padding + $box-horizontal-padding;
     }
   }
 

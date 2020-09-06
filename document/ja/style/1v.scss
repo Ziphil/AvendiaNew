@@ -212,6 +212,8 @@ $subsection-horizontal-padding: 40px;
 $subsection-smartphone-horizontal-padding: 20px;
 // 余白 > 例文などのボックス
 $box-vertical-padding: 9px;
+// 余白 > 例文などのボックス (罫線や辺との間)
+$box-horizontal-padding: 12px;
 // 余白 > 表のセル
 $table-cell-horizontal-padding: 12px;
 // 余白 > テキスト入力欄
@@ -220,12 +222,6 @@ $input-horizontal-padding: 10px;
 // 余白 > ボタン
 $button-vertical-padding: 3px;
 $button-horizontal-padding: 15px;
-// 余白 > 会話文
-$speech-horizontal-padding: 12px;
-// 余白 > 証明環境
-$proof-horizontal-padding: 12px;
-// 余白 > 検索結果
-$result-horizontal-padding: 12px;
 // 余白 > トップリンク (下と右の余白)
 $top-link-margin: 20px;
 // 余白 > 全体
