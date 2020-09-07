@@ -139,7 +139,7 @@ nav.menu {
     opacity: 0;
     border-radius: $second-menu-border-radius;
     box-shadow: $shadow-setting $main-shadow-color;
-    z-index: 5;
+    z-index: 15;
     position: absolute;
     transition: all $second-menu-animation-duration ease;
   }
