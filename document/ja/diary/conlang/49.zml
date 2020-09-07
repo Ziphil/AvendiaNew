@@ -6,20 +6,28 @@
   \ver<3 代 5 期>
 
   \h1<日記 (旧 1502 年 2 月 17 日, \h<342>)>
-  \tablec<\cz<\p<
-    {ta dir, eset a del e ezim.}
-    {nu kajet a del e zas hosos e a del, zele }\red|length="6"|;{ a del e los.}
-    {…zae, ta tol, esat a del e nu ezim, o kajat a del e zas bodit….}
-    {ese, nu tausat lo'd a del e los.}
-  >>
-  \cs<\p<
-    {esot a tees e zas seiv sii'?}
-  >>
-  \cz<\p< 
-    {e zas }\red|length="39"|;[.]
-  >>
-  \cs<\p<
-    {….}
-  >>>
+  \spch<\name<Ziphil>
+    \p<
+      {ta dir, eset a del e ezim.}
+      {nu kajet a del e zas hosos e a del, zele }\red|length="6"|;{ a del e los.}
+      {…zae, ta tol, esat a del e nu ezim, o kajat a del e zas bodit….}
+      {ese, nu tausat lo'd a del e los.}
+    >
+  >
+  \spch<\name<Shastil>
+    \p<
+      {esot a tees e zas seiv sii'?}
+    >
+  >
+  \spch<\name<Ziphil>
+    \p< 
+      {e zas }\red|length="39"|;[.]
+    >
+  >
+  \spch<\name<Shastil>
+    \p<
+      {….}
+    >
+  >
 
 >
