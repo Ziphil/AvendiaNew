@@ -987,8 +987,7 @@ article.main {
     padding: 0px $box-horizontal-padding 0px 0px;
     font-size: 80%;
     color: $border-color;
-    line-height: $line-height;
-    border-top: 1px $border-color solid;
+    line-height: $line-height / 0.8;
     flex-basis: $speech-name-width;
     flex-shrink: 0;
   }
