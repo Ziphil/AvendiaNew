@@ -115,7 +115,7 @@ div.content div.main div.button input[type="button"].red {
 }
 
 div.content div.main div.button input[type="button"].green {
-  @include button(hsl(120, 50%, 45%));
+  @include button(hsl(180, 50%, 40%));
 }
 
 div.content div.main div.button input[type="button"].gray {
@@ -204,7 +204,7 @@ div.content div.left div.mark span.wrong {
 }
 
 div.content div.left div.mark span.correct {
-  color: hsl(120, 50%, 45%);
+  color: hsl(180, 50%, 40%);
   display: none;
 }
 
@@ -269,7 +269,7 @@ div.list-wrapper table tr td.wrong {
 }
 
 div.list-wrapper table tr td.correct {
-  color: hsl(120, 50%, 45%);
+  color: hsl(180, 50%, 40%);
 }
 
 div.statistics-wrapper {
@@ -293,7 +293,7 @@ div.statistics-wrapper div.statistics.red {
 }
 
 div.statistics-wrapper div.statistics.green {
-  color: hsl(120, 50%, 45%);
+  color: hsl(180, 50%, 40%);
 }
 
 div.statistics-wrapper div.statistics div.mark {
@@ -318,7 +318,7 @@ div.statistics-wrapper div.statistics.red div.number div.numerator {
 }
 
 div.statistics-wrapper div.statistics.green div.number div.numerator {
-  border-bottom: 1px hsl(120, 50%, 45%) solid;
+  border-bottom: 1px hsl(180, 50%, 40%) solid;
 }
 
 div.statistics-wrapper div.statistics div.number div.denominator {
