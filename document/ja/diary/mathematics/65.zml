@@ -48,7 +48,7 @@
     \p<
       まず、&m<\scr<P>> が生成子であることを示す。
       射 &m<f, f': P \to; Q> をとり、任意の &m<\scr<A>> の対象 &m<A> と任意の射 &m<a: \bf<y> A \to; P> に対して &m<a \rtriangle; f = a \rtriangle; f'> であると仮定する。
-      Yoneda の補題によって射 &m<a: \bf<y> A \to; P> と元 &m<a \in; PA> を同一視すれば、この仮定は、任意の &m<\scr<A>> の対象 &m<A> と任意の元 &m<a \in; PA> に対して &m<\sb<f><A> a = \sb<f'><A> a> であるということである。
+      Yoneda の補題によって射 &m<a: \bf<y> A \to; P> と元 &m<a \in; PA> を同一視すれば、この仮定は、任意の &m<\scr<A>> の対象 &m<A> と任意の元 &m<a \in; PA> に対して &m<\sb<f><A> a = \sbsp<f><A><\pr;> a> であるということである。
       したがって、&m<f = f'> が成り立つ。
     >
     \p<
@@ -115,7 +115,7 @@
     >
   >
   \p<
-    また、次のよく知られた性質も思い出そう。
+    また、次のよく知られた命題も思い出そう。
   >
   \thm|type="prp",id="adj"|<
     \name<随伴関手定理\fl<adjoint functor theorem>>
