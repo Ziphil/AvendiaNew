@@ -172,7 +172,7 @@
       このとき、&m<`F> は\em<解集合条件\fl<solution set condition>> を満たすといい、&m<`{\sb<g><l>: D \to; `F \sb<C><l>`} \sb<><l \in; L>> を &m<D> の\em<解集合\fl<solution set>> という。
     >
   >
-  \thm|type="thm"|<
+  \thm|type="thm",id="solset"|<
     \p<
       到達可能関手 &m<`F: \scr<C> \to; \scr<D>> に対し、&m<`F> は解集合条件を満たす。
     >
