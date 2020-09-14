@@ -145,9 +145,9 @@ export class Root extends RootBase<{}, RootState> {
           <label htmlFor="type-2">全文</label>
           <br/>
           <input type="radio" name="agree" value="0" id="agree-0" checked={this.state.type === 0} onChange={() => this.handleSearchChange({type: 0})}/>
-          <label htmlFor="agree-0">完全一致</label>{"　"}
+          <label htmlFor="agree-0">前方一致</label>{"　"}
           <input type="radio" name="agree" value="1" id="agree-1" checked={this.state.type === 1} onChange={() => this.handleSearchChange({type: 1})}/>
-          <label htmlFor="agree-1">部分一致</label>{"　"}
+          <label htmlFor="agree-1">正規表現</label>{"　"}
           <input type="radio" name="agree" value="2" id="agree-2" checked={this.state.type === 2} onChange={() => this.handleSearchChange({type: 2})}/>
           <label htmlFor="agree-2">最小対語</label>
           <br/>
