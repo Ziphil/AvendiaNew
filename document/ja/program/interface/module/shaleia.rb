@@ -433,7 +433,7 @@ end
 module ShaleiaStringUtilities
 
   ALPHABET_ORDERS = {
-    0 => "sztdkgfvpbcqxjrlmnhyaâáàeêéèiîoôòuûù",
+    0 => "sztdkgfvpbcqxjrlmnhyaâáàeêéèiîíìoôòuûù",
     1 => "skptfcxrlzgbdvqjnmyieaou",
     2 => "sztdkgfvpbxjrlmnhy'aeiou",
     3 => "sztdkgfvpbxjcqrlmnyaeiou",
