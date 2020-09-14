@@ -109,9 +109,12 @@ class ShaleiaInterface < BackendBase
       equivalent_string = equivalent.names.join(", ").gsub(/\/(.+?)\/|\{(.+?)\}|\[(.+?)\]/){$1 || $2 || $3}
       next "〈#{equivalent.category}〉#{equivalent_string}"
     end
-    meaning_content = word.contents.find{|s| s.type == "meaning"}
+    meaning_content = word.contents.find{|s| s.type == "語義"}
     output << equivalent_strings.join(" ")
-    output << " ❖ " + meaning_content.text if meaning_content
+    if meaning_content
+      output << " ❖ "
+      output << meaning_content.text.gsub(/\/(.+?)\/|\{(.+?)\}|\[(.+?)\]/){$1 || $2 || $3}
+    end
     output.gsub!(/&#x([0-9A-Fa-f]+);/){$1.to_i(16).chr}
     output << " "
     output << "http://ziphil.com/conlang/database/1.html?search=#{URI.encode(name)}&mode=search&type=0&agree=0"
