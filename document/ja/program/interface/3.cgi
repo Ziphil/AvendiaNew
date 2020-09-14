@@ -51,7 +51,7 @@ class ShaleiaInterface < BackendBase
     result = {}
     result["words"] = []
     result["suggestions"] = []
-    result["hitSize"] = hit_names.size
+    result["hitSize"] = 0
     unless search.empty?
       hit_names[page * 30, 30].each do |name|
         result["words"] << ShaleiaUtilities.parse(name, whole_data[name], version)
@@ -59,6 +59,7 @@ class ShaleiaInterface < BackendBase
       suggested_names.each do |explanation, name|
         result["suggestions"] << {"explanation" => explanation, "name" => name}
       end
+      result["hitSize"] = hit_names.size
     end
     respond(result)
   end
