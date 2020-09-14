@@ -22,33 +22,35 @@ class HomepageInterface < BackendBase
     page = self["page"].to_i
     paths = SearchUtilities.paths
     search_data = Hash.new{|h, k| h[k] = []}
-    paths.each do |path|
-      data = File.read(path)
-      count = 0
-      case mode
-      when 0
-        data.each_line do |line|
-          line = line.gsub(/<.+?>/, "").strip
-          if line_match = line.match(/#{search}/u)
-            first, last = line_match.offset(0)
-            split_first = [first - 50, 0].max
-            split_last = [last + 50, line.length].min
-            search_data[path] << [line[split_first...first], line[first...last], line[last...split_last]]
-            count += 1
+    unless search.empty?
+      paths.each do |path|
+        data = File.read(path)
+        count = 0
+        case mode
+        when 0
+          data.each_line do |line|
+            line = line.gsub(/<.+?>/, "").strip
+            if line_match = line.match(/#{search}/u)
+              first, last = line_match.offset(0)
+              split_first = [first - 50, 0].max
+              split_last = [last + 50, line.length].min
+              search_data[path] << [line[split_first...first], line[first...last], line[last...split_last]]
+              count += 1
+            end
+            break if count >= 10
           end
-          break if count >= 10
-        end
-      when 1
-        data.scan(/<span class\=\"sans\">(.+?)<\/span>/) do |matches|
-          match = matches[0].gsub(/<.+?>/, "").gsub("\n", "")
-          if match_match = match.match(/#{search}/u)
-            first, last = match_match.offset(0)
-            split_first = [first - 50, 0].max
-            split_last = [last + 50, line.length].min
-            search_data[path] << [line[split_first...first], line[first...last], line[last...split_last]]
-            count += 1
+        when 1
+          data.scan(/<span class\=\"sans\">(.+?)<\/span>/) do |matches|
+            match = matches[0].gsub(/<.+?>/, "").gsub("\n", "")
+            if match_match = match.match(/#{search}/u)
+              first, last = match_match.offset(0)
+              split_first = [first - 50, 0].max
+              split_last = [last + 50, line.length].min
+              search_data[path] << [line[split_first...first], line[first...last], line[last...split_last]]
+              count += 1
+            end
+            break if count >= 10
           end
-          break if count >= 10
         end
       end
     end
