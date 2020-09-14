@@ -24,25 +24,31 @@ class HomepageInterface < BackendBase
     search_data = Hash.new{|h, k| h[k] = []}
     paths.each do |path|
       data = File.read(path)
+      count = 0
       case mode
       when 0
-        data.scan(/(?:<p>(.+?)<\/p>|<td>(.+?)<\/td>|<li>(.+?)<\/li>)/m) do |matches|
-          match = matches.join
-          match.each_line do |line|
-            line = line.gsub(/<.+?>/, "").strip
-            if line_match = line.match(/#{search}/u)
-              first, last = line_match.offset(0)
-              search_data[path] << [line[0...first], line[first...last], line[last..-1]]
-            end
+        data.each_line do |line|
+          line = line.gsub(/<.+?>/, "").strip
+          if line_match = line.match(/#{search}/u)
+            first, last = line_match.offset(0)
+            split_first = [first - 50, 0].max
+            split_last = [last + 50, line.length].min
+            search_data[path] << [line[split_first...first], line[first...last], line[last...split_last]]
+            count += 1
           end
+          break if count >= 10
         end
       when 1
         data.scan(/<span class\=\"sans\">(.+?)<\/span>/) do |matches|
-          match = matches[0].gsub(/<.+?>/, "")
+          match = matches[0].gsub(/<.+?>/, "").gsub("\n", "")
           if match_match = match.match(/#{search}/u)
             first, last = match_match.offset(0)
-            search_data[path] << [match[0...first], match[first...last], match[last..-1]]
+            split_first = [first - 50, 0].max
+            split_last = [last + 50, line.length].min
+            search_data[path] << [line[split_first...first], line[first...last], line[last...split_last]]
+            count += 1
           end
+          break if count >= 10
         end
       end
     end
