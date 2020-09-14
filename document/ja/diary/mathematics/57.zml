@@ -71,7 +71,7 @@
   \prf<
     \p<
       集合 &m<C> を像とする定値関手を &m<\sb<`D><C>: \scr<I> \to; \bfrm<Set>> で表すと、&m<\op<Hom> (i, \hyphen;)> の余錐 &m<(\sb<c><j>: \op<Hom> (i, j) \to; C) \sb<><j \in; \scr<I>>> とは自然変換 &m<c: \op<Hom> (i, \hyphen;) \raarr; \sb<`D><C>> に他ならない。
-      Yoneda の補題によって、そのような自然変換は元 &m<\tilde<c> \in; C> と対応し、任意の &m<\scr<I>> の射 &m<f: i \to; j> に対して &m<\sb<c><j> (f) = \tilde<c>> が成り立つ。
+      Yoneda の補題によって、そのような自然変換は元 &m<\tilde<c> \in; C> と対応し、任意の &m<\scr<I>> の射 &m<f: i \to; j> に対して &m<\sb<c><j> f = \tilde<c>> が成り立つ。
       これはすなわち、図式
       &mb<
         \diag<
