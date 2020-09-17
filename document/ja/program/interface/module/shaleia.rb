@@ -37,7 +37,7 @@ module ShaleiaUtilities
               hit_names << name
             end
           end
-        elsif (type == 0 && modified_name.start_with?(search)) || (type == 1 && modified_name =~ /#{search}/)
+        elsif (type == 0 && modified_name == search) || (type == 3 && modified_name.start_with?(search)) || (type == 1 && modified_name =~ /#{search}/)
           hit_names << name
         end
         if type == 0 && version == 0
@@ -105,7 +105,7 @@ module ShaleiaUtilities
     end
     if mode == 1 || mode == 3
       equivalents.each do |name, names|
-        if (type == 0 && name.start_with?(search)) || (type == 1 && name =~ /#{search}/)
+        if (type == 0 && name == search) || (type == 3 && name.start_with?(search)) || (type == 1 && name =~ /#{search}/)
           hit_names.concat(names)
         end
       end

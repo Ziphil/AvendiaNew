@@ -78,7 +78,7 @@ export class Root extends RootBase<{}, RootState> {
   public state: RootState = {
     search: "",
     mode: 3,
-    type: 0,
+    type: 3,
     page: 0,
     version: 0,
     random: false,
@@ -108,7 +108,7 @@ export class Root extends RootBase<{}, RootState> {
     let nextState = {} as any;
     nextState.search = (typeof query["search"] === "string") ? query["search"] : "";
     nextState.mode = (typeof query["type"] === "string") ? +query["type"] : 3;
-    nextState.type = (typeof query["agree"] === "string") ? +query["agree"] : 0;
+    nextState.type = (typeof query["agree"] === "string") ? +query["agree"] : 3;
     nextState.version = (typeof query["version"] === "string") ? +query["version"] : 0;
     nextState.random = (typeof query["random"] === "string") ? query["random"] === "1" : false;
     nextState.page = (typeof query["page"] === "string") ? +query["page"] : 0;
@@ -144,8 +144,10 @@ export class Root extends RootBase<{}, RootState> {
           <input type="radio" name="type" value="2" id="type-2" checked={this.state.mode === 2} onChange={() => this.handleSearchChange({mode: 2})}/>
           <label htmlFor="type-2">全文</label>
           <br/>
+          <input type="radio" name="agree" value="3" id="agree-3" checked={this.state.type === 3} onChange={() => this.handleSearchChange({type: 3})}/>
+          <label htmlFor="agree-3">前方一致</label>{"　"}
           <input type="radio" name="agree" value="0" id="agree-0" checked={this.state.type === 0} onChange={() => this.handleSearchChange({type: 0})}/>
-          <label htmlFor="agree-0">前方一致</label>{"　"}
+          <label htmlFor="agree-0">完全一致</label>{"　"}
           <input type="radio" name="agree" value="1" id="agree-1" checked={this.state.type === 1} onChange={() => this.handleSearchChange({type: 1})}/>
           <label htmlFor="agree-1">正規表現</label>{"　"}
           <input type="radio" name="agree" value="2" id="agree-2" checked={this.state.type === 2} onChange={() => this.handleSearchChange({type: 2})}/>
