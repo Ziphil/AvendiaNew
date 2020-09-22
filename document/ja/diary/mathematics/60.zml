@@ -171,7 +171,7 @@
   \p<
     これを踏まえて、次の記号を用意しておく。
   >
-  \thm|type="def"|<
+  \thm|type="def",id="presdef"|<
     \p<
       正則基数 &m<`k> をとる。
       圏 &m<\scr<C>> に対し、
