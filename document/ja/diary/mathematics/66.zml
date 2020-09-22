@@ -82,12 +82,12 @@
   \thm|type="thm",id="orthpres"|<
     \p<
       小圏 &m<\scr<S>> をとる。
-      &m<\sp<\scr<S>><\circ;>> への関手のクラス &m<`{\sb<F><l>: \sb<\scr<I>><l> \to; \sp<\scr<S>><\circ;>`} \sb<><l \in; L>> であって、各 &m<L> の元 &m<l> に対して &m<\sb<F><l>> は &m<\sp<\scr<S>><\circ;>> で極限をもつとする。
-      各 &m<L> の元 &m<l> に対して、
+      終域が &m<\sp<\scr<S>><\circ;>> であるような関手から成るクラス &m<\scr<F>> であって、任意の &m<\scr<F>> の元は &m<\sp<\scr<S>><\circ;>> で極限をもつとする。
+      各 &m<\scr<F>> の元 &m<F: \scr<I> \to; \sp<\scr<S>><\circ;>> に対して、
       &mb<
-        \sb<m><l>: \un<\op<colim>><i \in; \sb<\scr<I>><l>> \sb<\op<Hom>><\sp<\scr<S>><\circ;>> (\sb<F><l> i, \hyphen;) \to; \sb<\op<Hom>><\sp<\scr<S>><\circ;>> (\un<\op<lim>><i \in; \sb<\scr<I>><l>> \sb<F><l> i, \hyphen;)
+        \sb<m><F>: \un<\op<colim>><i \in; \scr<I>> \sb<\op<Hom>><\sp<\scr<S>><\circ;>> (F i, \hyphen;) \to; \sb<\op<Hom>><\sp<\scr<S>><\circ;>> (\un<\op<lim>><i \in; \scr<I>> F i, \hyphen;)
       >
-      を余極限と極限から誘導される標準的な &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の射とし、これを用いて &m<\scr<M> \coloneqq; `{\sb<m><l>`} \sb<><l \in; L>> とおく。
+      を余極限と極限から誘導される標準的な &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の射とし、これを用いて &m<\scr<M> \coloneqq; `{\sb<m><F> \mid; F \in; \scr<F>`}> とおく。
       このとき、任意の前層 &m<P: \sp<\scr<S>><\circ;> \to; \bfrm<Set>> に対し、
     >
     \ol<
@@ -95,7 +95,7 @@
         &m<P> は &m<\sp<\scr<M>><\bot;>> に属する。
       >
       \li*<
-        任意の &m<L> の元 &m<l> に対して、&m<P> は &m<\sb<F><l>> の極限を保存する。
+        任意の &m<\scr<F>> の元 &m<F> に対して &m<P> は &m<F> の極限を保存する。
       >
     >
     \p<
@@ -103,13 +103,12 @@
     >
   >
   \p<
-    証明の前に、各 &m<L> の元 &m<l> に対する &m<\sb<m><l>> の定義に出てくる射集合は、全て &m<\scr<S>> ではなく &m<\sp<\scr<S>><\circ;>> でとっていることに注意すること。
+    証明の前に、各 &m<\scr<F>> の元 &m<F> に対する &m<\sb<m><F>> の定義に出てくる射集合は、全て &m<\scr<S>> ではなく &m<\sp<\scr<S>><\circ;>> でとっていることに注意すること。
     この証明中では &m<\sp<\scr<S>><\circ;>> の射を &m<\scr<S>> の射と見なすことはないので、&m<\sp<\scr<S>><\circ;>> を &m<\scr<S>> の反対圏と見なすのではなく、&m<\sp<\scr<S>><\circ;>> という 1 つの圏だと見なせば、混乱を防げるかもしれない。
   >
   \prf<
     \p<
-      &m<L> の元 &m<l> を 1 つ固定し、記号の簡略化のためしばらく添字の &m<l> を省略する。
-      また、&m<(\sb<s><i>: S \to; F i) \sb<><i \in; \scr<I>>> を &m<F> の極限錐とする。
+      &m<\scr<F>> の元 &m<F> を 1 つ固定し、&m<(\sb<s><i>: S \to; F i) \sb<><i \in; \scr<I>>> を &m<F> の極限錐とする。
       このとき、
     >
     \ol<
@@ -119,7 +118,7 @@
           \diag|hor="thn"|<
             \v<\sb<\op<colim>><i> \op<Hom> (F i, \hyphen;)> \v; \v<\op<Hom> (S, \hyphen;)> \br;
             \v; \v<A>
-            \ar|s="1",e="5",inv|<f> \ar|s="1",e="3"|<m> \ar|s="3",e="5",dash|<g>
+            \ar|s="1",e="5",inv|<f> \ar|s="1",e="3"|<\sb<m><F>> \ar|s="3",e="5",dash|<g>
           >
         >
         は可換である。
@@ -157,9 +156,9 @@
       実際、主張 1 と主張 2 の同値性は余極限の普遍性から従い、主張 2 と主張 3 の同値性は Yoneda の補題から従い、主張 3 と主張 4 と主張 5 は単なる言い換えである。
     >
     \p<
-      さて、&m<P> が &m<\sp<\scr<M>><\bot;>> に属するとは、任意の &m<L> の元 &m<l> に対して主張 1 が成り立つことであった。
-      一方、任意の &m<L> の元 &m<l> に対して &m<P> が &m<\sb<F><l>> の極限を保存するとは、任意の &m<L> の元 &m<l> に対して主張 5 が成り立つことである。
-      今これは同値であることを示したので、これで定理が示された。
+      さて、&m<P> が &m<\sp<\scr<M>><\bot;>> に属するとは、任意の &m<\scr<F>> の元 &m<F> に対して主張 1 が成り立つことであった。
+      今述べた内容により、このことは、任意の &m<\scr<F>> の元 &m<F> に対して主張 5 が成り立つことと同値である。
+      この同値性がまさに示したかった内容である。
     >
   >
   \p<
