@@ -165,7 +165,7 @@
       これにより、\a|href="64.html#solset"|<定理 8.5> が使えて &m<\bf<z>> が解集合条件を満たすことが分かる。
       また、&m<\bf<z>> が極限を保存することも容易に分かる。
       以上によって、\ref|type="cthm",id="adj"|; が使えて &m<\bf<z>> は左随伴をもつ。
-      さらに、\a|href="61.html#presden"|<定理 5.6> と\a|href="61.html#denff"|<定理 5.3> によって &m<\bf<z>> は忠実充満であるから、&m<\scr<C>> は &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の反射的部分圏と圏同値になる。
+      さらに、\a|href="61.html#presden"|<定理 5.6> と\a|href="61.html#denff"|<補題 5.3> によって &m<\bf<z>> は忠実充満であるから、&m<\scr<C>> は &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の反射的部分圏と圏同値になる。
       したがって、\ref|type="cthm",id="cocompsub"|; が使えて &m<\scr<C>> が余完備であることが示される。
     >
     \p<
