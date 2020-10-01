@@ -19,10 +19,6 @@
       とおき、これを &m<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> の充満部分圏と見なす。
     >
   >
-  \p<
-    表現可能関手は極限を保存するから、小圏 &m<\scr<S>> 上の Yoneda 埋め込み &m<\bf<y>: \scr<S> \to; \sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>> は、終域を制限して &m<\bf<y>: \scr<S> \to; \sb<\bfrm<Cont>><`k> (\sp<\scr<S>><\circ;>)> と見なすことができる。 
-    以降、しばしばこのように見なす。
-  >
   \thm|type="lem",id="pfil"|<
     \p<
       正則基数 &m<`k> をとる。
@@ -32,7 +28,13 @@
   >
   \prf<
     \p<
-      (っ'ヮ'| ･･･。
+      任意に &m<`k>-小な部分圏 &m<\scr<A> \subseteq; \bfrm<El> (P)> をとり、&m<\scr<A>> 上の錐が存在することを示せば良い。
+      &m<\bfrm<El> (P)> に関する忘却関手を &m<U: \bfrm<El> (P) \to; \scr<S>> とし、これの &m<\scr<A>> への制限を &m<F \coloneqq; U \rvert; \sb<><\scr<A>>: \scr<A> \to; \scr<S>> とおく。
+      &m<\scr<C>> は余完備で、\a|href="59.html#prescol"|<定理 3.4> より &m<\scr<S>> は &m<`k>-小余極限に関して閉じているから、&m<F> の余極限が &m<\scr<S>> に存在する。
+      その余極限余錐を &m<(\sb<s><(A, a)>: A \to; S) \sb<><(A, a) \in; \scr<A>>> とおく。
+      &m<P> は &m<`k>-極限を保存するから、&m<(P \sb<s><(A, a)>: PS \to; PA) \sb<><(A, a) \in; \sp<\scr<A>><\circ;>>> は &m<\sp<F><\circ;> \rtriangle; P> の極限である。
+      これは &m<\bfrm<Set>> における極限だから、\a|href="66.html#setlim"|<補題 10.4> の &m<\bfrm<Set>> での極限の具体的な表示を思い出せば、ある元 &m<t \in; PS> が存在して、任意の &m<\scr<A>> の対象 &m<(A, a)> に対して &m<(P \sb<s><(A, a)>) t = a> が成り立つことになる。
+      これより、&m<(\sb<s><(A, a)>: (A, a) \to; (S, t)) \sb<><(A, a) \in; \scr<A>>> は &m<\scr<A>> 上の錐になる。
     >
   >
   \thm|type="thm",id="equiv"|<
@@ -79,6 +81,10 @@
       以上により、&m<P> は &m<\tilde<\scr<C>>> に属する。
     >
   >
+  \p<
+    ここまでの結果をまとめると、次に述べる局所表示可能圏の表現定理が導かれる。
+    これは、局所表示可能圏と極限を保つ関手の圏と直交クラスとを結びつける定理である。
+  >
   \thm|type="thm",id="rep"|<
     \name<局所表示可能圏の表現定理\fl<representation theorem of locally presentable categories>>
     \p<
@@ -121,7 +127,7 @@
         \sb<m><F>: \un<\op<colim>><i \in; \scr<I>> \sb<\op<Hom>><\sp<\scr<S>><\circ;>> (F i, \hyphen;) \to; \sb<\op<Hom>><\sp<\scr<S>><\circ;>> (\un<\op<lim>><i \in; \scr<I>> F i, \hyphen;)
       >
       という形であった。
-      ここで、\a|href="65.html#reppres"|<補題 9.1> と\a|href="59.html#presup"|<定理 3.3> によって表現可能関手は &m<`k>-表示可能であることを思い出そう。
+      ここで、\a|href="65.html#reppres"|<補題 9.1> と\a|href="59.html#presup"|<定理 3.3> によって表現可能関手が &m<`k>-表示可能になることを思い出そう。
       このことから、まず &m<\sb<m><F>> の終域は &m<`k>-表示可能である。
       また、&m<\sb<m><F>> の始域は &m<`k>-表示可能対象の &m<`k>-小余極限だから、\a|href="59.html#prescol"|<定理 3.4> によって &m<`k>-表示可能である。
       以上で示された。
