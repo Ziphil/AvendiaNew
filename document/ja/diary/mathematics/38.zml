@@ -103,7 +103,7 @@
   \p<
     Lafont 圏の定義は非常にシンプルだが、これだけで線型圏に必要な構造が全て誘導される。
   >
-  \thm|type="thm"|<
+  \thm|type="thm",id="lafont"|<
     \p<
       Lafont 圏は線型圏である。
     >
