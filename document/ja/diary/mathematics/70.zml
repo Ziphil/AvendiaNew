@@ -42,20 +42,20 @@
   >
   \prf<
     \p<
-      全射 &m<f: A \headrarr; B> をとり、&m<A> は解であるとする。
+      全射 &m<f: B \headrarr; A> をとり、&m<B> は解であるとする。
       &m<F> は全射を保存するから、&m<Ff> も全射である。
       ここで、
       &mb<
-        \sb<`f><B> \circ; Ff = Gf \circ; \sb<`f><A> = Gf \circ; \sb<`c><A> = \sb<`f><B> \circ; Ff
+        \sb<`f><A> \circ; Ff = Gf \circ; \sb<`f><B> = Gf \circ; \sb<`c><B> = \sb<`f><A> \circ; Ff
       >
-      が成り立つから、&m<Ff> が全射であることより &m<\sb<`f><B> = \sb<`c><B>> が成り立つ。
-      したがって、&m<B> も解である。
+      が成り立つから、&m<Ff> が全射であることより &m<\sb<`f><A> = \sb<`c><A>> が成り立つ。
+      したがって、&m<A> も解である。
     >
   >
   \p<
     ここで、次の性質を思い出そう。
   >
-  \thm|type="thm"|<
+  \thm|type="thm",id="epimono"|<
     \p<
       圏 &m<\scr<C>> が完備かつ冪化可能ならば、&m<\scr<C>> の任意の射は全射と単射の合成として分解できる。
     >
@@ -65,7 +65,7 @@
       Borceux\ref|type="bib",id="hca"|; の命題 4.4.2 と命題 4.4.3 を参照。
     >
   >
-  \thm|type="prp"|<
+  \thm|type="prp",id="corefl"|<
     \p<
       圏 &m<\scr<C>> 上の方程式 &m<(F, G, `f, `c)> をとる。
       &m<\scr<C>> が完備かつ余完備で冪化可能であり、さらに &m<F> が余極限を保存するならば、部分圏 &m<\bfrm<Adm> (F, G, `f, `c) \subseteq; \scr<C>> は余反射的である。
@@ -87,7 +87,7 @@
     >
     \p<
       任意に解対象 &m<B> および射 &m<f: B \to; A> をとる。
-      &m<f> は完備かつ冪化可能だから、&m<f> の全射と単射による分解
+      &m<f> は完備かつ冪化可能だから、\ref|type="cthm",id="epimono"|; によって &m<f> の全射と単射による分解
       &mb<
         \diag|hor="thn"|<
           \v<B> \v; \v<A> \br;
@@ -109,6 +109,72 @@
       は可換である。
       さらに、&m<\sb<`j><A>> は単射だから、このような分解は常に一意である。
       以上により、&m<\bf<r>> は包含関手の右随伴関手となるから、&m<\bfrm<Adm> (F, G, `f, `c)> は余反射的である。
+    >
+  >
+  \thm|type="prp",id="ind"|<
+    \p<
+      モノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、&m<\scr<C>> は引き戻しをもつとする。
+      &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の射
+      &mb<
+        (f, \bar<f>): ((B, \bar<B>, b), (d', m'), (e', u')) \to; ((A, \bar<A>, a), (d, m), (e, u))
+      >
+      をとると、これは第 1 成分が &m<\bar<A>> であるような &m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> のある対象 &m<((\bar<A>, \sp<a><\pr; \sharp;>), \sp<m><\ppr;>, \sp<u><\ppr;>)> を誘導し、これに対して &m<\bar<f>> は &m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> の射 &m<\bar<f>: ((\bar<A>, \sp<a><\pr; \sharp;>), m'', u'') \to; ((\bar<B>, \sp<b><\sharp;>), m', u')> と見なせる。
+    >
+  >
+  \prf<
+    \p<
+      まず、
+      &mb<
+        \sp<a><\pr; \sharp;> \coloneqq; \tort<\diag<
+          \v<\bar<A>> \v<\bar<B>> \v<\sp<B><\bbot;>>
+          \ar|s="1",e="2"|<\bar<f>> \ar|s="2",e="3"|<\sp<b><\sharp;>>
+        >>
+      >
+      とおくと、&m<\scr<C> `/ \sp<B><\bbot;>> の対象 &m<(\bar<A>, \sp<a><\pr; \sharp;>)> が得られるから、&m<\scr<C> `/ \sp<B><\bbot;>> 上の &m<(\bar<A>, \sp<a><\pr; \sharp;>)> 同士の演算が引き戻し
+      &mb<
+        \diag<
+          \v<\bar<A> \sp<*><B> \bar<A>> \v<B \brmulti; \bar<A>> \br;
+          \v<B \brmulti; \bar<A>> \v<(B \otimes; B) \brmulti; \bbot;>
+          \ar|s="1",e="2",dash|<s> \ar|s="1",e="3",dash,inv|<r>
+          \ar|s="2",e="4"|<\widehat<a'>> \ar|s="3",e="4",inv|<\widehat<a'>>
+        >
+      >
+      として得られる。
+      一方、&m<\scr<C> `/ \sp<A><\bbot;>> の対象 &m<(\bar<A>, \sp<a><\sharp;>)> 同士の演算も引き戻し
+      &mb<
+        \diag<
+          \v<\bar<A> \sp<*><A> \bar<A>> \v<A \brmulti; \bar<A>> \br;
+          \v<A \brmulti; \bar<A>> \v<(A \otimes; A) \brmulti; \bbot;>
+          \ar|s="1",e="2",dash|<q> \ar|s="1",e="3",dash,inv|<p>
+          \ar|s="2",e="4"|<\widehat<a>> \ar|s="3",e="4",inv|<\widehat<a>>
+        >
+      >
+      として得られる。
+      すると、図式
+      &mb<
+        \diag<
+          \v<\bar<A> \sp<*><A> \bar<A>> \v<A \brmulti; \bar<A>> \v; \br;
+          \v<A \brmulti; \bar<A>> \v<\bar<A> \sp<*><B> \bar<A>> \v<B \brmulti; \bar<A>> \br;
+          \v; \v<B \brmulti; \bar<A>> \v<(B \otimes; B) \brmulti; \bbot;>
+          \ar|s="5",e="6"|<s> \ar|s="5",e="8",inv|<r>
+          \ar|s="6",e="9"|<\widehat<a'>> \ar|s="8",e="9",inv|<\widehat<a'>>
+          \ar|s="1",e="2"|<q> \ar|s="1",e="4",inv|<p>
+          \ar|s="2",e="6"|<f \brmulti; \rm<id>> \ar|s="4",e="8",inv|<f \brmulti; \rm<id>>
+          \ar|s="1",e="5",dash|<t>
+        >
+      >
+      の外側が可換であることが分かるので、破線の射 &m<t: \bar<A> \sp<*><A> \bar<A> \to; \bar<A> \sp<*><B> \bar<A>> が得られる。
+      これを用いて、
+      &mb<
+        \sp<m><\ppr;> \coloneqq; \tort<\diag<
+          \v<\bar<A>> \v<\bar<A> \sp<*><A> \bar<A>> \v<\bar<A> \sp<*><B> \bar<A>>
+          \ar|s="1",e="2"|<m> \ar|s="2",e="3"|<t>
+        >>
+      >
+      とおくと、これは &m<\scr<C> `/ \sp<B><\bbot;>> の射 &m<\sp<m><\ppr;>: (\bar<A>, \sp<a><\sharp;>) \to; (\bar<A>, \sp<a><\sharp;>) \sp<*><B> (\bar<A>, \sp<a><\sharp;>)> と見なせる。
+    >
+    \p<
+      ≡╹ω╹≡ なんかおかしい。
     >
   >
   \h1<参考文献>
