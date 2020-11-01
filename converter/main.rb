@@ -260,6 +260,7 @@ class WholeAvendiaConverter
       File.write(output_path, output)
     when "rb", "cgi"
       output = File.read(path)
+      output.sub!(/#!\s*ruby/, "#!" + CONFIG.program_path(:ruby))
       output.gsub!(/^\s*require_relative\s*('|")(.+)(\1)/) do
         raw_module_path = $2
         module_path = File.join(File.dirname(path), raw_module_path) + ".rb"

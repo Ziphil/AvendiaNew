@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#! ruby
 # coding: utf-8
 
 
