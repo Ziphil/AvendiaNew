@@ -76,6 +76,9 @@ browserify (変換前の絶対パス) -p [tsify -t ES6 --strict]
     "en": "log/en.txt",
     "error": "log/error.txt"
   },
+  "program_path": {  // CGI のプログラムのパス
+    "ruby": "/usr/bin/ruby"
+  },
   "macro_dir": "macro",  // ZenML マクロの定義ファイルが置かれるディレクトリの相対パス
   "template_dir": "template"  // HTML への変換規則ファイルが置かれるディレクトリの相対パス
 }
