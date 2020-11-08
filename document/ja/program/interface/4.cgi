@@ -45,8 +45,8 @@ class HomepageInterface < BackendBase
             if match_match = match.match(/#{search}/u)
               first, last = match_match.offset(0)
               split_first = [first - 50, 0].max
-              split_last = [last + 50, line.length].min
-              search_data[path] << [line[split_first...first], line[first...last], line[last...split_last]]
+              split_last = [last + 50, match.length].min
+              search_data[path] << [match[split_first...first], match[first...last], match[last...split_last]]
               count += 1
             end
             break if count >= 10
