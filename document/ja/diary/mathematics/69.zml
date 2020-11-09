@@ -206,9 +206,9 @@
   \p<
     さて、我々の目標は、忘却関手 &m<U: \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<Chu> (\scr<C>, \bbot;)> の右随伴関手を構成することである。
     実は今までの議論によって、これを構成するという作業は、忘却関手 &m<V: \bfrm<PComon> (\scr<C>) \to; \scr<C>> の右随伴関手を構成するという作業と、&m<\scr<C>> の各前コモノイド &m<(A, d, e)> に対して忘却関手 &m<\sb<W><A>: \bfrm<PMon> (\scr<C> `/ \sp<A><\bbot;>) \to; \scr<C> `/ \sp<A><\bbot;>> の左随伴関手を構成するという作業の、2 ステップに分割することができる。
-    実際、次の命題が成り立つ。
+    実際、次の定理が成り立つ。
   >
-  \thm|type="prp",id="adjcomp"|<
+  \thm|type="thm",id="adjcomp"|<
     \p<
       モノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、&m<\scr<C>> は引き戻しをもつとする。
       2 条件

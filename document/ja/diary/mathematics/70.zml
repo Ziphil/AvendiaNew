@@ -75,7 +75,7 @@
     \p<
       &m<F> は余極限を保存するから、\ref|type="cthm",id="close"|; によって &m<\bfrm<Adm> (F, G, `f, `c)> は余極限に関して閉じている。
       さらに、&m<\scr<C>> は余完備だから、これより &m<\bfrm<Adm> (F, G, `f, `c)> も余完備である。
-      したがって、&m<\scr<C>> は冪化可能であることから、関手
+      したがって、&m<\scr<C>> は冪化可能であることを合わせて、関手
       &mb<
         \array|align="rrcl"|<
           \c<\bf<r>:> \c<\scr<C>> \c<\longto;> \c<\bfrm<Adm> (F, G, `f, `c)> \br;
@@ -111,70 +111,139 @@
       以上により、&m<\bf<r>> は包含関手の右随伴関手となるから、&m<\bfrm<Adm> (F, G, `f, `c)> は余反射的である。
     >
   >
-  \thm|type="prp",id="ind"|<
+  \thm|type="prp",id="monomono"|<
     \p<
       モノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、&m<\scr<C>> は引き戻しをもつとする。
       &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の射
       &mb<
         (f, \bar<f>): ((B, \bar<B>, b), (d', m'), (e', u')) \to; ((A, \bar<A>, a), (d, m), (e, u))
       >
-      をとると、これは第 1 成分が &m<\bar<A>> であるような &m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> のある対象 &m<((\bar<A>, \sp<a><\pr; \sharp;>), \sp<m><\ppr;>, \sp<u><\ppr;>)> を誘導し、これに対して &m<\bar<f>> は &m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> の射 &m<\bar<f>: ((\bar<A>, \sp<a><\pr; \sharp;>), m'', u'') \to; ((\bar<B>, \sp<b><\sharp;>), m', u')> と見なせる。
+      をとる。
+      このとき、&m<(f, \bar<f>)> が &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> で単射ならば、&m<f: (B, d', e') \to; (A, d, e)> は &m<\bfrm<PComon> (\scr<C>)> で単射である。
     >
   >
   \prf<
     \p<
-      まず、
+      &m<f> が単射でないと仮定する。
+      すると、&m<\bfrm<PComon> (\scr<C>)> の射 &m<g, g': (C, \sp<d><\ppr;>, \sp<e><\ppr;>) \to; (B, d', e')> が存在して、&m<g \neq; g'> かつ &m<f \circ; g = f \circ; g'> が成り立つ。
+      ここで、
       &mb<
-        \sp<a><\pr; \sharp;> \coloneqq; \tort<\diag<
-          \v<\bar<A>> \v<\bar<B>> \v<\sp<B><\bbot;>>
-          \ar|s="1",e="2"|<\bar<f>> \ar|s="2",e="3"|<\sp<b><\sharp;>>
-        >>
-      >
-      とおくと、&m<\scr<C> `/ \sp<B><\bbot;>> の対象 &m<(\bar<A>, \sp<a><\pr; \sharp;>)> が得られるから、&m<\scr<C> `/ \sp<B><\bbot;>> 上の &m<(\bar<A>, \sp<a><\pr; \sharp;>)> 同士の演算が引き戻し
-      &mb<
-        \diag<
-          \v<\bar<A> \sp<*><B> \bar<A>> \v<B \brmulti; \bar<A>> \br;
-          \v<B \brmulti; \bar<A>> \v<(B \otimes; B) \brmulti; \bbot;>
-          \ar|s="1",e="2",dash|<s> \ar|s="1",e="3",dash,inv|<r>
-          \ar|s="2",e="4"|<\widehat<a'>> \ar|s="3",e="4",inv|<\widehat<a'>>
+        \array|align="rrcl"|<
+          \c<\bar<g>> \c<\coloneqq;> \c<\tort<\diag<
+            \v<\bar<B>> \v<\sp<B><\bbot;>> \v<\sp<C><\bbot;>>
+            \ar|s="1",e="2"|<\sp<b><\sharp;>> \ar|s="2",e="3"|<\sp<g><\bbot;>>
+          >>> \br;
+          \c<\bar<g>'> \c<\coloneqq;> \c<\tort<\diag<
+            \v<\bar<B>> \v<\sp<B><\bbot;>> \v<\sp<C><\bbot;>>
+            \ar|s="1",e="2"|<\sp<b><\sharp;>> \ar|s="2",e="3"|<\sp<g><\pr; \bbot;>>
+          >>>
         >
       >
-      として得られる。
-      一方、&m<\scr<C> `/ \sp<A><\bbot;>> の対象 &m<(\bar<A>, \sp<a><\sharp;>)> 同士の演算も引き戻し
+      とおくと、これらは &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の射
       &mb<
-        \diag<
-          \v<\bar<A> \sp<*><A> \bar<A>> \v<A \brmulti; \bar<A>> \br;
-          \v<A \brmulti; \bar<A>> \v<(A \otimes; A) \brmulti; \bbot;>
-          \ar|s="1",e="2",dash|<q> \ar|s="1",e="3",dash,inv|<p>
-          \ar|s="2",e="4"|<\widehat<a>> \ar|s="3",e="4",inv|<\widehat<a>>
-        >
+        (g, \bar<g>), (g', \bar<g>'): ((C, \sp<C><\bbot;>, \sb<`e><C>), (\sp<d><\ppr;>, \sp<d><\ppr; \bbot;>), (\sp<e><\ppr;>, \sp<e><\ppr; \bbot;>)) \to; ((B, \bar<B>, b), (d', m'), (e', u'))
       >
-      として得られる。
-      すると、図式
+      を定め、さらに &m<(f, \bar<f>) \circ; (g, \bar<g>) = (f, \bar<f>) \circ; (g', \bar<g>')> が成り立つ。
+      &m<(f, \bar<f>)> は単射だったから &m<(g, \bar<g>) = (g', \bar<g>')> が成り立つが、これは &m<g \neq; g'> に矛盾する。
+      以上により、&m<f> は単射である。
+    >
+  >
+  \thm|type="prp",id="monoepi"|<
+    \p<
+      モノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、&m<\scr<C>> は引き戻しをもつとする。
+      &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の射
       &mb<
-        \diag<
-          \v<\bar<A> \sp<*><A> \bar<A>> \v<A \brmulti; \bar<A>> \v; \br;
-          \v<A \brmulti; \bar<A>> \v<\bar<A> \sp<*><B> \bar<A>> \v<B \brmulti; \bar<A>> \br;
-          \v; \v<B \brmulti; \bar<A>> \v<(B \otimes; B) \brmulti; \bbot;>
-          \ar|s="5",e="6"|<s> \ar|s="5",e="8",inv|<r>
-          \ar|s="6",e="9"|<\widehat<a'>> \ar|s="8",e="9",inv|<\widehat<a'>>
-          \ar|s="1",e="2"|<q> \ar|s="1",e="4",inv|<p>
-          \ar|s="2",e="6"|<f \brmulti; \rm<id>> \ar|s="4",e="8",inv|<f \brmulti; \rm<id>>
-          \ar|s="1",e="5",dash|<t>
-        >
+        (f, \bar<f>): ((B, \bar<B>, b), (d', m'), (e', u')) \to; ((A, \bar<A>, a), (d, m), (e, u))
       >
-      の外側が可換であることが分かるので、破線の射 &m<t: \bar<A> \sp<*><A> \bar<A> \to; \bar<A> \sp<*><B> \bar<A>> が得られる。
-      これを用いて、
+      をとり、ある &m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> の射 &m<\bar<p>: ((\bar<X>, \sp<x><\sharp;>), \sp<m><\ppr;>, \sp<u><\ppr;>) \to; ((\bar<B>, \sp<b><\sharp;>), m', u')> が存在して、
       &mb<
-        \sp<m><\ppr;> \coloneqq; \tort<\diag<
-          \v<\bar<A>> \v<\bar<A> \sp<*><A> \bar<A>> \v<\bar<A> \sp<*><B> \bar<A>>
-          \ar|s="1",e="2"|<m> \ar|s="2",e="3"|<t>
-        >>
+        \diag|hor="thn"|<
+          \v<\bar<A>> \v; \v<\bar<B>> \br;
+          \v; \v<\bar<X>>
+          \ar|s="1",e="3"|<\bar<f>> \ar|s="5",e="3",inv|<\bar<p>> \ar|s="1",e="5",dash|;
+        > 
       >
-      とおくと、これは &m<\scr<C> `/ \sp<B><\bbot;>> の射 &m<\sp<m><\ppr;>: (\bar<A>, \sp<a><\sharp;>) \to; (\bar<A>, \sp<a><\sharp;>) \sp<*><B> (\bar<A>, \sp<a><\sharp;>)> と見なせる。
+      という分解ができるとする。
+      このとき、&m<(f, \bar<f>)> が &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> で単射ならば、&m<\bar<p>> は &m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> で全射である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\bar<p>> が全射でないと仮定する。
+      すると、&m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> の射 &m<\bar<g>, \bar<g>': ((\bar<B>, \sp<b><\sharp;>), m', u') \to; ((\bar<C>, \sp<c><\sharp;>), \sp<m><\ppr;>, \sp<u><\ppr;>)> が存在して、&m<\bar<g> \neq; \bar<g>'> かつ &m<\bar<g> \circ; \bar<p> = \bar<g>' \circ; \bar<p>> が成り立つ。
+      ここで、&m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の射
+      &mb<
+        (\rm<id>, \bar<g>), (\rm<id>, \bar<g>'): ((B, \sp<C><\bbot;>, c), (d', \sp<m><\ppr;>), (e', \sp<u><\ppr;>)) \to; ((B, \bar<B>, b), (d', m'), (e', u'))
+      >
+      が考えられるが、&m<\bar<g> \circ; \bar<p> = \bar<g>' \circ; \bar<p>> より  &m<\bar<g> \circ; \bar<f> = \bar<g>' \circ; \bar<f>> が得られるから、&m<(f, \bar<f>) \circ; (\rm<id>, \bar<g>) = (f, \bar<f>) \circ; (\rm<id>, \bar<g>')> が成り立つ。
+      &m<(f, \bar<f>)> は単射だったから &m<(\rm<id>, \bar<g>) = (\rm<id>, \bar<g>')> が成り立つが、これは &m<\bar<g> \neq; \bar<g>'> に矛盾する。
+      以上により、&m<\bar<p>> は全射である。
+    >
+  >
+  \thm|type="prp",id="wellpow"|<
+    \p<
+      局所表示可能モノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> に対し、&m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> は冪化可能である。
+    >
+  >
+  \prf<
+    \p<
+      &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の対象 &m<((A, \bar<A>, a), (d, m), (e, u))> を 1 つとって固定する。
+      これの部分対象が集合サイズしか存在しないことを示せば良い。
     >
     \p<
-      ≡╹ω╹≡ なんかおかしい。
+      部分対象
+      &mb<
+        (f, \bar<f>): ((B, \bar<B>, b), (d', m'), (e', u')) \tailrarr; ((A, \bar<A>, a), (d, m), (e, u))
+      >
+      をとると、\ref|type="cthm",id="monomono"|; によって &m<f: (B, d', e') \tailrarr; (A, d, e)> は &m<\bfrm<PComon> (\scr<C>)> における部分対象である。
+    >
+    \p<
+      一方、
+      &mb<
+        \sp<a><\pr; \sharp;> \coloneqq; \tort<\diag<
+          \v<\bar<A>> \v<\sp<A><\bbot;>> \v<\sp<B><\bbot;>>
+          \ar|s="1",e="2"|<\sp<a><\sharp;>> \ar|s="2",e="3"|<\sp<f><\bbot;>>
+        >>
+      >
+      とおくと、&m<\scr<C> `/ \sp<B><\bbot;>> の射 &m<\bar<f>: (\bar<A>, \sp<a><\pr; \sharp;>) \to; (\bar<B>, \sp<b><\sharp;>)> が考えられる。
+      ここで、定理 ?.? によって、忘却関手 &m<\sb<W><B>: \bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>) \to; \scr<C> `/ \sp<B><\bbot;>> には左随伴関手 &m<\sb<L><B>> が存在する。
+      これを用いて &m<((\bar<X>, \sp<x><\sharp;>), \sp<m><\ppr;>, \sp<u><\ppr;>) \coloneqq; \sb<L><B> (\bar<A>, \sp<a><\pr; \sharp;>)> とおけば、随伴によって、
+      &mb<
+        \sb<\op<Hom>><\scr<C> `/ \sp<B><\bbot;>> ((\bar<A>, \sp<a><\pr; \sharp;>), (B, \sp<b><\sharp;>))
+        \cong; \sb<\op<Hom>><\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> (((\bar<X>, \sp<x><\sharp;>), \sp<m><\ppr;>, \sp<u><\ppr;>), ((B, \sp<b><\sharp;>), m', u'))
+      >
+      が成り立つ。
+      &m<\bar<f>> はこの右辺に属するから、それに対応する左辺の元として &m<\bar<p>: ((\bar<X>, \sp<x><\sharp;>), \sp<m><\ppr;>, \sp<u><\ppr;>) \to; ((B, \sp<b><\sharp;>), m', u')> がとれ、随伴の単位から定まる射を &m<`j: (\bar<A>, \sp<a><\pr; \sharp;>) \to; (\bar<X>, \sp<x><\sharp;>)> とおけば、
+      &mb<
+        \diag|hor="thn"|<
+          \v<\bar<A>> \v; \v<\bar<B>> \br;
+          \v; \v<\bar<X>>
+          \ar|s="1",e="3"|<\bar<f>> \ar|s="5",e="3",inv|<\bar<p>> \ar|s="1",e="5",inv|<`j>
+        > 
+      >
+      は可換である。
+      したがって、\ref|type="cthm",id="monoepi"|; によって &m<\bar<p>> は &m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> における商対象である。
+    >
+    \p<
+      以上の議論により、&m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> における &m<((A, \bar<A>, a), (d, m), (e, u))> の部分対象 &m<(f, \bar<f>)> に対し、
+      &mb<
+        \coprod<\stack<\cc<f \in; \sb<\op<Sub>><\bfrm<PComon> (\scr<C>)> ((A, d, e))> \cc<(B, d', e') \coloneqq; \op<dom> (f)>>> \sfun;
+        \coprod<\sp<a><\pr; \sharp;> \in; \sb<\op<Hom>><\scr<C>> (A, \sp<B><\bbot;>)>
+        \sb<\op<Quot>><\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> (\sb<L><B> (A, \sp<a><\pr; \sharp;>))
+      >
+      の元 &m<(f, \sp<a><\pr; \sharp;>, \bar<p>)> が 1 つ定まり、この対応は単射である。
+      命題 ?.? によって &m<\bfrm<PComon> (\scr<C>)> は冪化可能で &m<\bfrm<PMon> (\scr<C> `/ \sp<B><\bbot;>)> は余冪化可能であるから、上のクラスは集合である。
+      したがって、&m<((A, \bar<A>, a), (d, m), (e, u))> の部分対象は集合サイズしかない。
+    >
+  >
+  \thm|type="thm",id="main"|<
+    \p<
+      局所表示可能モノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> に対し、包含関手 &m<I: \bfrm<Comon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の右随伴関手が存在する。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="cthm",id="wellpow"|; 使いたい･･･。
     >
   >
   \h1<参考文献>
