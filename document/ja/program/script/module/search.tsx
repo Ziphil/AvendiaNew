@@ -25,34 +25,34 @@ type RootBaseState = {
 export abstract class RootBase<P, S extends RootBaseState> extends Component<P, S> {
 
   public async componentDidMount(): Promise<void> {
-    this.serializeQuery(false, () => {
+    this.deserializeQuery(false, () => {
       this.updateResultsImmediately(false);
     });
   }
 
   protected abstract async updateResultsBase(): Promise<void>;
 
-  protected async updateResultsImmediately(deserialize: boolean = true): Promise<void> {
+  protected async updateResultsImmediately(serialize: boolean = true): Promise<void> {
     await this.updateResultsBase();
-    if (deserialize) {
-      this.deserializeQuery();
+    if (serialize) {
+      this.serializeQuery();
     }
   }
 
   @debounce(500)
-  protected async updateResults(deserialize: boolean = true): Promise<void> {
+  protected async updateResults(serialize: boolean = true): Promise<void> {
     await this.updateResultsBase();
-    if (deserialize) {
-      this.deserializeQuery();
+    if (serialize) {
+      this.serializeQuery();
     }
   }
 
-  protected abstract serializeQueryBase(): S;
+  protected abstract deserializeQueryBase(): S;
 
-  protected abstract deserializeQueryBase(overriddenState?: Partial<S>): string;
+  protected abstract serializeQueryBase(overriddenState?: Partial<S>): string;
 
-  protected serializeQuery(first: boolean, callback?: () => void): void {
-    let nextState = this.serializeQueryBase();
+  protected deserializeQuery(first: boolean, callback?: () => void): void {
+    let nextState = this.deserializeQueryBase();
     if (first) {
       this.state = Object.assign(this.state, nextState);
       if (callback) {
@@ -63,8 +63,8 @@ export abstract class RootBase<P, S extends RootBaseState> extends Component<P, 
     }
   }
 
-  protected deserializeQuery(callback?: () => void): void {
-    let queryString = this.deserializeQueryBase();
+  protected serializeQuery(callback?: () => void): void {
+    let queryString = this.serializeQueryBase();
     let url = window.location.origin + window.location.pathname;
     window.history.replaceState({}, document.title, url + "?" + queryString);
     if (callback) {
@@ -119,7 +119,7 @@ export abstract class RootBase<P, S extends RootBaseState> extends Component<P, 
     let leftArrowNode = (() => {
       if (page > 0) {
         let nextState = {page: page - 1} as any;
-        let queryString = this.deserializeQueryBase(nextState);
+        let queryString = this.serializeQueryBase(nextState);
         return <a className="left-arrow" href={url + "?" + queryString} onClick={(event) => this.handlePageChange(nextState, event)}/>;
       } else {
         return <span className="left-arrow invalid"/>;
@@ -128,7 +128,7 @@ export abstract class RootBase<P, S extends RootBaseState> extends Component<P, 
     let rightArrowNode = (() => {
       if (page * size + size < hitSize) {
         let nextState = {page: page + 1} as any;
-        let queryString = this.deserializeQueryBase(nextState);
+        let queryString = this.serializeQueryBase(nextState);
         return <a className="right-arrow" href={url + "?" + queryString} onClick={(event) => this.handlePageChange(nextState, event)}/>;
       } else {
         return <span className="right-arrow invalid"/>;

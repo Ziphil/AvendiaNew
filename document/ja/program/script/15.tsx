@@ -55,7 +55,7 @@ export class Root extends RootBase<{}, RootState> {
   };
 
   protected async updateResultsBase(): Promise<void> {
-    let response = await axios.get("../../program/interface/4.cgi?mode=search&" + this.deserializeQueryBase(), {validateStatus: () => true});
+    let response = await axios.get("../../program/interface/4.cgi?mode=search&" + this.serializeQueryBase(), {validateStatus: () => true});
     if (response.status === 200 && !("error" in response.data)) {
       let rawResult = response.data as RawResult;
       let matches = rawResult.matches.map((match) => new Match(match));
@@ -70,7 +70,7 @@ export class Root extends RootBase<{}, RootState> {
     }
   }
 
-  protected serializeQueryBase(): RootState {
+  protected deserializeQueryBase(): RootState {
     let query = queryParser.parse(window.location.search);
     let nextState = {} as any;
     nextState.search = (typeof query["search"] === "string") ? query["search"] : "";
@@ -79,7 +79,7 @@ export class Root extends RootBase<{}, RootState> {
     return nextState;
   }
 
-  protected deserializeQueryBase(overriddenState?: Partial<RootState>): string {
+  protected serializeQueryBase(overriddenState?: Partial<RootState>): string {
     let query = {} as any;
     let state = Object.assign({}, this.state, overriddenState);
     query["search"] = state.search;
