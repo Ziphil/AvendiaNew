@@ -338,7 +338,7 @@ export class SuggestionPane extends Component<{suggestion: Suggestion, version: 
   public render(): ReactNode {
     let suggestion = this.props.suggestion;
     let url = window.location.origin + window.location.pathname;
-    let href = `${url}?search=${suggestion.name}&type=0&agree=0&version=${this.props.version}`;
+    let href = `${url}?search=${encodeURIComponent(suggestion.name)}&type=0&agree=0&version=${this.props.version}`;
     let node = (
       <li>
         {suggestion.explanation}

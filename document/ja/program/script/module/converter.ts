@@ -21,25 +21,25 @@ export class StringConverter {
   }
 
   public static convert(string: string, options: StringConverterOptions = {}): string {
-    string = string.replace(/\bH(\d+)/g, (_, date) => {
+    string = string.replace(/\bH(\d+)/g, (whole, date) => {
       return `<span class=\"hairia\">${date}</span>`;
     });
-    string = string.replace(/\/(.+?)\//g, (_, innerString) => {
+    string = string.replace(/\/(.+?)\//g, (whole, innerString) => {
       return `<i>${innerString}</i>`;
     });
-    string = string.replace(/\{(.+?)\}|\[(.+?)\]/g, (_, ...innerStrings) => {
+    string = string.replace(/\{(.+?)\}|\[(.+?)\]/g, (whole, ...innerStrings) => {
       let innerString = innerStrings[0] ?? innerStrings[1];
       let link = !!innerStrings[0];
       let version = options.version ?? 0;
       return StringConverter.convertShaleian(innerString, link, version);
     });
     if (options.equivalentParen) {
-      string = string.replace(/\((.+?)\)\s*/g, (_, innerString) => {
+      string = string.replace(/\((.+?)\)\s*/g, (whole, innerString) => {
         return `<span class=\"small\">${innerString}</span>`;
       });
     }
     if (options.synonymAsterisk) {
-      string = string.replace(/\*/g, (_) => {
+      string = string.replace(/\*/g, (whole) => {
         return `<span class=\"asterisk\">†</span>`;
       });
     }
@@ -73,7 +73,7 @@ export class StringConverter {
     let leftNames = ["s'", "al'", "ac'", "di'"];
     if (link) {
       string = "%" + string.replace(/\s+/g, "% %").replace(/\-/g, "%-%") + "%";
-      string = string.replace(/%([\"\[«…]*)(.*?)([!\?\.,\"\]»…]*)%/g, (_, left, matchedName, right) => {
+      string = string.replace(/%([\"\[«…]*)(.*?)([!\?\.,\"\]»…]*)%/g, (whole, left, matchedName, right) => {
         let modifiedName = matchedName.replace(/<\/?\w+>/g, "");
         let innerMatch = matchedName.match(/(.+)'(.+)/);
         if (innerMatch !== null) {
@@ -86,12 +86,12 @@ export class StringConverter {
             if (abbreviationLeft.match(/^[0-9:]$/)) {
               html += abbreviationLeft + "'";
             } else {
-              html += `<a href=\"${url}?search=${modifiedLeft}'&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationLeft}'</a>`;
+              html += `<a href=\"${url}?search=${encodeURIComponent(modifiedLeft)}'&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationLeft}'</a>`;
             }
             if (abbreviationRight.match(/^[0-9:]$/)) {
               html += abbreviationRight;
             } else {
-              html += `<a href=\"${url}?search=${modifiedRight}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationRight}</a>`;
+              html += `<a href=\"${url}?search=${encodeURIComponent(modifiedRight)}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationRight}</a>`;
             }
             html += right;
             return html;
@@ -100,12 +100,12 @@ export class StringConverter {
             if (abbreviationLeft.match(/^[0-9:]$/)) {
               html += abbreviationLeft;
             } else {
-              html += `<a href=\"${url}?search=${modifiedLeft}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationLeft}</a>`;
+              html += `<a href=\"${url}?search=${encodeURIComponent(modifiedLeft)}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${abbreviationLeft}</a>`;
             }
             if (abbreviationRight.match(/^[0-9:]$/)) {
               html += "'" + abbreviationRight;
             } else {
-              html += `<a href=\"${url}?search='${modifiedRight}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">'${abbreviationRight}</a>`;
+              html += `<a href=\"${url}?search='${encodeURIComponent(modifiedRight)}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">'${abbreviationRight}</a>`;
             }
             html += right;
             return html;
@@ -115,7 +115,7 @@ export class StringConverter {
           if (matchedName.match(/^[0-9:]$|^ʻ|^—$/)) {
             html += matchedName;
           } else {
-            html += `<a href=\"${url}?search=${modifiedName}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${matchedName}</a>`;
+            html += `<a href=\"${url}?search=${encodeURIComponent(modifiedName)}&amp;type=0&amp;agree=0&amp;version=${version}\" rel=\"nofollow\">${matchedName}</a>`;
           }
           html += right;
           return html;
