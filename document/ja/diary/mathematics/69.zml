@@ -163,8 +163,8 @@
   >
   \thm|type="prp",id="chuslice"|<
     \p<
-      モノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、忘却関手 &m<Z: \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<PComon> (\scr<C>)> を考える。
-      任意の &m<\bfrm<PComon> (\scr<C>)> の対象 &m<(A, d, e)> に対し、圏同型
+      引き戻しをもつモノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、忘却関手 &m<Z: \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<PComon> (\scr<C>)> を考える。
+      このとき、任意の &m<\bfrm<PComon> (\scr<C>)> の対象 &m<(A, d, e)> に対し、圏同型
       &mb<
         \sp<Z><- 1> (A, d, e) \cong; &m<\bfrm<PMon> (\scr<C> `/ \sp<A><\bbot;>)> \sp<><\circ;>
       >
@@ -210,8 +210,7 @@
   >
   \thm|type="thm",id="adjcomp"|<
     \p<
-      モノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、&m<\scr<C>> は引き戻しをもつとする。
-      2 条件
+      引き戻しをもつモノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、2 条件
     >
     \ul<
       \li*<
