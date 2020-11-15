@@ -42,7 +42,7 @@
     &m<\scr<C>> 上の前コモノイドが成す圏を &m<\bfrm<PComon> (\scr<C>)> と書き、前モノイドが成す圏を &m<\bfrm<PMon> (\scr<C>)> と書くことにする。
   >
   \p<
-    さて、Chu 構成を考えるため、引き戻しをもつモノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> を固定する。
+    さて、Chu 構成を考えるため、引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> を固定する。
     &m<\scr<C>> 上の前コモノイド &m<(A, d, e)> をとり、記号の簡単のため &m<\sp<A><\bbot;> \coloneqq; A \brmulti; \bbot;> と書くことにする。
     このとき、&m<\bfrm<Chu> (\scr<C>, \bbot;)> に定まっているテンソル積を使うことで、スライス圏 &m<\scr<C> `/ \sp<A><\bbot;>> 上に新たな演算を定義することができる。
   >
@@ -163,7 +163,7 @@
   >
   \thm|type="prp",id="chuslice"|<
     \p<
-      引き戻しをもつモノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、忘却関手 &m<Z: \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<PComon> (\scr<C>)> を考える。
+      引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、忘却関手 &m<Z: \bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;)) \to; \bfrm<PComon> (\scr<C>)> を考える。
       このとき、任意の &m<\bfrm<PComon> (\scr<C>)> の対象 &m<(A, d, e)> に対し、圏同型
       &mb<
         \sp<Z><- 1> (A, d, e) \cong; &m<\bfrm<PMon> (\scr<C> `/ \sp<A><\bbot;>)> \sp<><\circ;>
@@ -210,7 +210,7 @@
   >
   \thm|type="thm",id="adjcomp"|<
     \p<
-      引き戻しをもつモノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、2 条件
+      引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、2 条件
     >
     \ul<
       \li*<

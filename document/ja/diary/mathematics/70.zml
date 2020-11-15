@@ -166,13 +166,13 @@
     >
   >
   \p<
-    さて、今回の我々の目標は、引き戻しをもつモノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> に対し、&m<\bfrm<Comon> (\bfrm<Chu> (\scr<C>, \bbot;))> が &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の余反射的部分圏になっていることを示すことであった。
+    さて、今回の我々の目標は、引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> に対し、&m<\bfrm<Comon> (\bfrm<Chu> (\scr<C>, \bbot;))> が &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の余反射的部分圏になっていることを示すことであった。
     最初に述べたように、&m<\bfrm<Comon> (\bfrm<Chu> (\scr<C>, \bbot;))> は &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> 上の方程式の解の圏と見なせるから、上の命題がちょうど使えそうである。
     そのためには、まず &m<\bfrm<Chu> (\scr<C>, \bbot;)> が冪化可能であることが必要だが、前回から行っているように、この条件もベースの圏 &m<\scr<C>> 自身と &m<\scr<C>> 上のスライス圏の条件に落とし込むことができる。
   >
   \thm|type="prp",id="monomono"|<
     \p<
-      引き戻しをもつモノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> を考える。
+      引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> を考える。
       &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の射
       &mb<
         (f, \bar<f>): ((B, \bar<B>, b), (d', m'), (e', u')) \to; ((A, \bar<A>, a), (d, m), (e, u))
@@ -209,7 +209,7 @@
   >
   \thm|type="prp",id="monoepi"|<
     \p<
-      引き戻しをもつモノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> を考える。
+      引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> を考える。
       &m<\bfrm<PComon> (\bfrm<Chu> (\scr<C>, \bbot;))> の射
       &mb<
         (f, \bar<f>): ((B, \bar<B>, b), (d', m'), (e', u')) \to; ((A, \bar<A>, a), (d, m), (e, u))
@@ -241,7 +241,7 @@
   >
   \thm|type="prp",id="wellpow"|<
     \p<
-      引き戻しをもつモノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、3 条件
+      引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、3 条件
     >
     \ul<
       \li*<
@@ -312,7 +312,7 @@
   >
   \thm|type="thm",id="main"|<
     \p<
-      引き戻しをもつモノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、5 条件
+      引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、5 条件
     >
     \ul<
       \li*<
@@ -350,7 +350,7 @@
   >
   \thm|type="thm",id="all"|<
     \p<
-      引き戻しをもつモノイダル圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、6 条件
+      引き戻しをもつモノイダル閉圏 &m<\scr<C>> とその対象 &m<\bbot;> をとり、6 条件
     >
     \ul<
       \li*<
