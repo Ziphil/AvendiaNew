@@ -160,7 +160,7 @@
   \thm|type="def"|<
     \p<
       関手 &m<`F: \scr<C> \to; \scr<D>> をとり、次の条件を満たすとする。
-      任意の &m<\scr<D>> の元 &m<D> に対し、&m<\scr<D>> の射から成る集合 &m<`{\sb<g><l>: D \to; `F \sb<C><l>`} \sb<><l \in; L>> が存在して、任意の &m<\scr<D>> の射 &m<f: D \to; FC> に対し、ある &m<L> の元 &m<l> と &m<\scr<C>> の射 &m<h: \sb<C><l> \to; C> が存在して、
+      任意の &m<\scr<D>> の元 &m<D> に対し、&m<\scr<D>> の射から成る集合 &m<`{\sb<g><l>: D \to; `F \sb<C><l>`} \sb<><l \in; L>> が存在して、任意の &m<\scr<D>> の射 &m<f: D \to; `F C> に対し、ある &m<L> の元 &m<l> と &m<\scr<C>> の射 &m<h: \sb<C><l> \to; C> が存在して、
       &mb<
         \diag|hor="thn"|<
           \v<D> \v; \v<`F C> \br;
@@ -184,10 +184,10 @@
       ここで、&m<\scr<A> \coloneqq; \op<Ob> (\sb<\bfrm<Pres>><`k> (D \bdarr; `F))> が解集合になることを示す。
     >
     \p<
-      任意に &m<\scr<D>> の射 &m<f: D \to; FC> をとる。
-      これは &m<D \bdarr; F> の対象だから、&m<D \bdarr; `F> の &m<`k>-表示可能対象の &m<`k>-有向図式 &m<F: \scr<I> \to; D \bdarr; `F> が存在して、&m<f = \op<colim> F> と書ける。
+      任意に &m<\scr<D>> の射 &m<f: D \to; `F C> をとる。
+      これは &m<D \bdarr; `F> の対象だから、&m<D \bdarr; `F> の &m<`k>-表示可能対象の &m<`k>-有向図式 &m<F: \scr<I> \to; D \bdarr; `F> が存在して、&m<f = \op<colim> F> と書ける。
       その余極限余錐を &m<(\sb<c><i>: Fi \to; f) \sb<><i \in; \scr<I>>> とおく。
-      ここで、特に &m<\scr<I>> は空でないから、&m<\scr<I>> の対象 &m<i> を 1 つ選べば、&m<D \bdarr; F> の射 &m<\sb<c><i>: Fi \to; f> が存在することになる。
+      ここで、特に &m<\scr<I>> は空でないから、&m<\scr<I>> の対象 &m<i> を 1 つ選べば、&m<D \bdarr; `F> の射 &m<\sb<c><i>: Fi \to; f> が存在することになる。
       &m<Fi> が &m<\scr<D>> の射として &m<Fi: D \to; `F \sb<C><i>> であるとすれば、これは、
       &mb<
         \diag|hor="thn"|<
