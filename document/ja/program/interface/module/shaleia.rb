@@ -40,7 +40,7 @@ module ShaleiaUtilities
         elsif (type == 0 && modified_name == search) || (type == 3 && modified_name.start_with?(search)) || (type == 1 && modified_name =~ /#{search}/)
           hit_names << name
         end
-        if type == 0 && version == 0
+        if (type == 0 || type == 3) && version == 0
           TENSES.each do |tense_type, tense|
             ASPECTS.each do |aspect_type, aspect|
               NEGATION_PREFIXES.each do |nagation_type, nagation|
