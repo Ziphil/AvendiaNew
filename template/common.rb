@@ -643,6 +643,19 @@ converter.add(["slide"], ["page"]) do |element|
   next this
 end
 
+converter.add(["youtube"], ["page"]) do |element|
+  this = ""
+  this << Tag.build("div", "youtube") do |this|
+    this << Tag.build("iframe") do |this|
+      this["allow"] = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      this["allowfullscreen"] = "allowfullscreen"
+      this["frameborder"] = "0"
+      this["src"] = "https://www.youtube.com/embed/" + element.attribute("id").to_s
+    end
+  end
+  next this
+end
+
 converter.add(["pre", "samp"], ["page"]) do |element|
   this = ""
   raw_string = element.texts.map{|s| s.to_s}.join.gsub(/\A\s*?\n/, "")

@@ -1357,6 +1357,23 @@ article.main {
     box-shadow: none !important;
   }
 
+  // 埋め込み YouTube 動画
+
+  div.youtube {
+    width: $main-width * 0.8;
+    max-width: $main-max-width * 0.8;
+    height: $main-width * 0.8 * 9 / 16;
+    max-height: $main-max-width * 0.8 * 9 / 16;
+    margin: $wide-vertical-margin auto;
+    padding: 0px;
+    display: block;
+  }
+
+  div.youtube iframe {
+    width: 100%;
+    height: 100%;
+  }
+
   // 埋め込み PDF ファイル
 
   object.pdf {
