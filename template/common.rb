@@ -544,7 +544,7 @@ converter.add(["table"], ["page", "page-wrapped"]) do |element, scope|
         addition_size.times do
           new_cell_elements << Element.new("td-dummy")
         end
-        cell_index += addition
+        cell_index += addition_size
       end
       (1..(row_span - 1)).each do |i|
         span_data[row_index + i][cell_index] = column_span
