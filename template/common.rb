@@ -36,7 +36,7 @@ NAMES = {
 }
 FOREIGN_LANGUAGES = {:ja => :en, :en => :ja}
 LANGUAGE_NAMES = {:ja => "日本語", :en => "English"}
-LATEST_VERSION_REGEX = /(5\s*代\s*5\s*期|Version\s*5\.5)/
+LATEST_VERSION_REGEX = /(5\s*代\s*5\s*期|S\s*代|Version\s*5\.5|Version\s*S)/
 DICTIONARY_URL = "conlang/database/1.html"
 
 INLINE_ELEMENT_NAMES = ["x", "xn", "a"]
