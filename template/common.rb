@@ -534,11 +534,37 @@ end
 
 converter.add(["table"], ["page", "page-wrapped"]) do |element, scope|
   this = ""
+  span_data = Hash.new{|h, s| h[s] = {}}
+  element.each_xpath("tr").with_index do |row_element, row_index|
+    cell_index, new_cell_elements = 0, []
+    row_element.elements.each_with_index do |cell_element|
+      row_span = (cell_element.attribute("row") || 1).to_s.to_i
+      column_span = (cell_element.attribute("col") || 1).to_s.to_i
+      if addition_size = span_data[row_index][cell_index]
+        addition_size.times do
+          new_cell_elements << Element.new("td-dummy")
+        end
+        cell_index += addition
+      end
+      (1..(row_span - 1)).each do |i|
+        span_data[row_index + i][cell_index] = column_span
+      end
+      new_cell_elements << cell_element
+      (column_span - 1).times do
+        new_cell_elements << Element.new("td-dummy")
+      end
+      cell_index += column_span
+    end
+    row_element.delete_if{true}
+    new_cell_elements.each do |new_cell_element|
+      row_element.add(new_cell_element)
+    end
+  end
   column_size = element.each_xpath("tr").map{|s| s.elements.size}.max
   head_column_sizes = element.each_xpath("tr").map do |row_element|
     array = row_element.elements.map do |cell_element|
       if cell_element.name == "th" || cell_element.name == "thl"
-        next [1, cell_element.attribute("col").to_s.to_i].max
+        next 1
       else
         next 0
       end
@@ -582,13 +608,13 @@ converter.add(["tr"], ["page.table"]) do |element|
   next this
 end
 
-converter.add(["th", "thl", "td"], ["page.table.tr"]) do |element|
+converter.add(["th", "thl", "td", "td-dummy"], ["page.table.tr"]) do |element|
   this = ""
   this << Tag.build do |this|
     case element.name
     when "th", "thl"
       this.name = "th"
-    when "td"
+    when "td", "td-dummy"
       this.name = "td"
     end
     if element.attribute("row")
@@ -600,6 +626,9 @@ converter.add(["th", "thl", "td"], ["page.table.tr"]) do |element|
     if element.attribute("line")
       this.class ||= ""
       this.class << element.attribute("line").to_s.split(" ").map{|s| s + "-line"}.join(" ")
+    end
+    if element.name == "td-dummy"
+      this["style"] = "display: none;"
     end
     this << apply(element, "page")
   end
