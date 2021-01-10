@@ -1,9 +1,9 @@
 ﻿# coding: utf-8
 
 
-GREEK_DIACTIRICS = {"a" => "´", "g" => "`", "sa" => "῎", "sg" => "῍", "ra" => "῞", "rg" => "῝"}
+GREEK_DIACTIRICS = {"a" => "´", "g" => "`", "s" => "᾿", "sa" => "῎", "sg" => "῍", "r" => "῾", "ra" => "῞", "rg" => "῝"}
 
-converter.add(["gt"], ["page"]) do |element|
+converter.add(["gt"], ["page", "page.section-table"]) do |element|
   this = ""
   diacritic_type = element.attribute("d").to_s
   this << Tag.build("span", "greek") do |this|
