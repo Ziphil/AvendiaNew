@@ -48,5 +48,3 @@ query.easing["easeInOutQuart"] = function (percent: number, t?: any, b?: any, c?
     return - c / 2 * ((t -= 2) * t * t * t - 2) + b;
   }
 };
-
-Executor.regsiter();
