@@ -1,8 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    ffi (1.13.1-x64-mingw32)
-    listen (3.2.1)
+    ffi (1.14.2-x64-mingw32)
+    listen (3.4.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     rb-fsevent (0.10.4)
@@ -10,10 +10,10 @@ GEM
       ffi (~> 1.0)
     sassc (2.4.0-x64-mingw32)
       ffi (~> 1.9)
-    ttfunk (1.6.2.1)
+    ttfunk (1.7.0)
     wdm (0.1.1)
     zenml (1.6.1)
-    zotica (1.5.0)
+    zotica (1.6.0)
       sassc (~> 2)
       ttfunk (~> 1)
       zenml (~> 1, >= 1.6.0)
@@ -30,4 +30,4 @@ DEPENDENCIES
   zotica
 
 BUNDLED WITH
-   2.1.4
+   2.2.7
