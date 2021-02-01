@@ -69,7 +69,7 @@
       任意に &m<\sb<\bfrm<Cont>><`k> (\sp<\scr<S>><\circ;>)> の対象 &m<P> をとる。
       よく知られているように、
       &mb<
-        P = \op<colim> [] \tort<\diag<
+        P = \op<colim> [] \tort<\diag|bl|<
           \v<\bfrm<El> (P)> \v<\scr<S>> \v<\sp<\bfrm<Set>><\sp<\scr<S>><\circ;>>>
           \ar|s="1",e="2"|; \ar|s="2",e="3"|<\bf<y>>
         >>
