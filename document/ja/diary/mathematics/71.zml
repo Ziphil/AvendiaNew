@@ -153,7 +153,7 @@
   >
   \p<
     なお、有向部分集合 &m<S \subseteq; A> に対して、&m<f (\bigcup|in|<a \in; S> a) = \bigcup|in|<a \in; S> f (a)> が成り立つことが &m<\bigcup|in|<a \in; S> f (a) \in; B> であることを含意していることを踏まえると、連続性から単調性が従うことが分かる。
-    したがって、安定性の定義に単調性と連続性を両方課すのは冗長である。
+    したがって、写像が安定であることの定義に単調性と連続性を両方課すのは冗長である。
     しかし、ある写像が安定であることを示す際、たいていの場合で単調性が自明で、連続性を示すときに単調性を使うことが多いため、ここでは単調性と連続性を両方を条件として書いた。
   >
   \p<
@@ -202,7 +202,7 @@
   \h1<参考文献>
   \ol<
     \li|id="gllx"|<J. Y. Girard (1987)「Linear logic」『Theoretical Computer Science』50:1–101>
-    \li|id="ptx"|<J. Y. Girard, Y. Lafont, P. Taylor (1989)『Proofs and Types』Cambridge University Press.>
+    \li|id="ptx"|<J. Y. Girard, Y. Lafont, P. Taylor (1989)『Proofs and Types』Cambridge University Press>
   >
 
 >
