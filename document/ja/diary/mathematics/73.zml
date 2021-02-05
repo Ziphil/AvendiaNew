@@ -17,19 +17,19 @@
       各 &m<a \in; A> および &m<y \in; \lvert; B \rvert;> に対し、
       &mb<
         \array|align="rcl"|<
-          \c<\rm<app> (a)> \c<\coloneqq;> \c<`{\ring<a> \mid; &raw<&m<\ring<a> \subseteq; a> は有限集合>`}> \br;
-          \c<\rm<elapp> (a, y)> \c<\coloneqq;> \c<`{\ring<a> \mid; \ring<a> \in; \rm<app> (a), y \in; f (\ring<a>)`}>
+          \c<\op<fin> (a)> \c<\coloneqq;> \c<`{\ring<a> \mid; &raw<&m<\ring<a> \subseteq; a> は有限集合>`}> \br;
+          \c<\op<elfin> (a, y)> \c<\coloneqq;> \c<`{\ring<a> \mid; \ring<a> \in; \op<fin> (a), y \in; f (\ring<a>)`}>
         >
       >
       と定める。
-      なお、&m<\rm<app> (a)> の元は &m<a> の\em<近似\fl<approximant>> と呼ばれる。
+      なお、&m<\op<fin> (a)> の元は &m<a> の\em<有限近似\fl<finite approximant>> と呼ばれる。
     >
   >
   \p<
-    整合空間 &m<A> とその元 &m<a \in; A> に対し、明らかに &m<\rm<app> (a) \subseteq; A> は有向であり、&m<a = \bigcup|in|<\ring<a> \in; \rm<app> (a)> \ring<a>> である。
-    したがって、別の整合空間 &m<B> への安定写像 &m<f: A \to; B> に対し、&m<f> の連続性によって、&m<f (a) = \bigcup|in|<\ring<a> \in; \rm<app> (a)> f (\ring<a>)> が成り立つ。
-    すなわち、安定写像 &m<f> による &m<a> の像は &m<\rm<app> (a)> の元の像から一意に定まる。
-    この意味で &m<\rm<app> (a)> の元は &m<a> の近似なのである。
+    整合空間 &m<A> とその元 &m<a \in; A> に対し、明らかに &m<\op<fin> (a) \subseteq; A> は有向であり、&m<a = \bigcup|in|<\ring<a> \in; \op<fin> (a)> \ring<a>> である。
+    したがって、別の整合空間 &m<B> への安定写像 &m<f: A \to; B> に対し、&m<f> の連続性によって、&m<f (a) = \bigcup|in|<\ring<a> \in; \op<fin> (a)> f (\ring<a>)> が成り立つ。
+    すなわち、安定写像 &m<f> による &m<a> の像は &m<\op<fin> (a)> の元の像から一意に定まる。
+    この意味で &m<\op<fin> (a)> の元は &m<a> の近似なのである。
   >
   \p<
     近似の概念を用いることで、安定写像の特徴付けが得られる。
@@ -38,16 +38,16 @@
   \thm|type="lem",id="minmin"|<
     \p<
       整合空間 &m<A, B> の間の写像 &m<f: A \to; B> をとり、さらに &m<a \in; A> および &m<y \in; \lvert; B \rvert;> をとる。
-      このとき、&m<\rm<elapp> (a, y)> に極小元が存在するならば、それは最小元である。
+      このとき、&m<\op<elfin> (a, y)> に極小元が存在するならば、それは最小元である。
     >
   >
   \prf<
     \p<
-      極小元 &m<\ring<a> \in; \rm<elapp> (a, y)> をとる。
-      任意の &m<a' \in; \rm<elapp> (a, y)> に対し、&m<\ring<a> \cup; a' \subseteq; a> かつ &m<a \in; A> だから、&m<\ring<a> \cup; a' \in; A> である。
+      極小元 &m<\ring<a> \in; \op<elfin> (a, y)> をとる。
+      任意の &m<a' \in; \op<elfin> (a, y)> に対し、&m<\ring<a> \cup; a' \subseteq; a> かつ &m<a \in; A> だから、&m<\ring<a> \cup; a' \in; A> である。
       したがって、&m<f> の安定性により、&m<f (\ring<a> \cap; a') = f (\ring<a>) \cap; f (a')> が成り立つ。
       &m<\ring<a>> と &m<a'> のとり方から &m<y \in; f (\ring<a>)> と &m<y \in; f (a')> であるから、今得られた等式によって、&m<y \in; f (\ring<a> \cap; a')> を得る。
-      これより、&m<\ring<a> \cap; a' \in; \rm<elapp> (a, y)> が成り立つ。
+      これより、&m<\ring<a> \cap; a' \in; \op<elfin> (a, y)> が成り立つ。
       ここで、&m<\ring<a> \cap; a' \subseteq; \ring<a>> であって &m<\ring<a>> は極小だから、&m<\ring<a> \cap; a' = \ring<a>> でなければならない。
       すなわち、&m<\ring<a> \subseteq; a'> である。
       以上により、&m<\ring<a>> は最小である。
@@ -80,7 +80,7 @@
       >
       \li*<
         &m<f> は単調である。
-        さらに、任意の &m<a \in; A> および &m<y \in; \lvert; B \rvert;> に対し、&m<y \in; f (a)> であれば、&m<\rm<elapp> (a, y)> に包含関係に関する最小元が存在する。
+        さらに、任意の &m<a \in; A> および &m<y \in; \lvert; B \rvert;> に対し、&m<y \in; f (a)> であれば、&m<\op<elfin> (a, y)> に包含関係に関する最小元が存在する。
       >
     >
     \p<
@@ -92,14 +92,14 @@
       \label<条件 1 &m<\raarr;> 条件 2:>
       まず、定義から &m<f> は単調である。
       そこで次に、任意に &m<a \in; A> および &m<y \in; \lvert; B \rvert;> をとり、&m<y \in; f (a)> が成り立っているとする。
-      すでに述べたように、&m<f> の連続性によって、&m<f (a) = \bigcup|in|<\ring<a> \in; \rm<app> (a)> f (\ring<a>)> が成り立つ。
-      したがって、ある &m<\ring<a> \in; \rm<app> (a)> が存在して &m<y \in; f (\ring<a>)> である。
-      すなわち、&m<\ring<a> \in; \rm<elapp> (a, y)> が成り立つ。
+      すでに述べたように、&m<f> の連続性によって、&m<f (a) = \bigcup|in|<\ring<a> \in; \op<fin> (a)> f (\ring<a>)> が成り立つ。
+      したがって、ある &m<\ring<a> \in; \op<fin> (a)> が存在して &m<y \in; f (\ring<a>)> である。
+      すなわち、&m<\ring<a> \in; \op<elfin> (a, y)> が成り立つ。
     >
     \p<
-      ここで &m<\rm<elapp> (\ring<a>, y)> を考えると、&m<\ring<a>> が有限集合であることから &m<\rm<elapp> (\ring<a>, y)> も有限集合である。
-      したがって、&m<\rm<elapp> (\ring<a>, y)> には必ず極小元が存在するが、\ref|type="cthm",id="minmin"|; によってそれは最小元である。
-      &m<\ring<a> \subseteq; a> より &m<\rm<elapp> (\ring<a>, y)> の最小元は &m<\rm<elapp> (a, y)> の最小元でもあるから、これで示された。
+      ここで &m<\op<elfin> (\ring<a>, y)> を考えると、&m<\ring<a>> が有限集合であることから &m<\op<elfin> (\ring<a>, y)> も有限集合である。
+      したがって、&m<\op<elfin> (\ring<a>, y)> には必ず極小元が存在するが、\ref|type="cthm",id="minmin"|; によってそれは最小元である。
+      &m<\ring<a> \subseteq; a> より &m<\op<elfin> (\ring<a>, y)> の最小元は &m<\op<elfin> (a, y)> の最小元でもあるから、これで示された。
     >
     \p<
       \label<条件 2 &m<\raarr;> 条件 1:>
@@ -109,7 +109,7 @@
       まず、&m<f> の連続性を示す。
       任意に有向部分集合 &m<S \subseteq; A> をとると、&m<f> の単調性によって &m<\bigcup|in|<a \in; S> f (a) \subseteq; f (\bigcup|in|<a \in; S> a)> は成り立つから、この逆の包含関係を示せば良い。
       そこで、&m<\bar<a> \coloneqq; \bigcup|in|<a \in; S> a> とおき、&m<y \in; f (\bar<a>)> をとる。
-      仮定から最小元 &m<\ring<a> \in; \rm<elapp> (\bar<a>, y)> がとれるが、&m<\ring<a>> は有限集合で &m<\ring<a> \subseteq; \bigcup|in|<a \in; S> a> であるから、\ref|type="cthm",id="finex"|; によって、ある &m<a \in; S> が存在して &m<\ring<a> \subseteq; a> が成り立つ。
+      仮定から最小元 &m<\ring<a> \in; \op<elfin> (\bar<a>, y)> がとれるが、&m<\ring<a>> は有限集合で &m<\ring<a> \subseteq; \bigcup|in|<a \in; S> a> であるから、\ref|type="cthm",id="finex"|; によって、ある &m<a \in; S> が存在して &m<\ring<a> \subseteq; a> が成り立つ。
       &m<f> の単調性から &m<f (\ring<a>) \subseteq; f (a)> なので &m<y \in; f (a)> が得られ、これより &m<y \in; \bigcup|in|<a \in; S> f (a)> が分かる。
       以上により、&m<f (\bigcup|in|<a \in; S> a) \subseteq; \bigcup|in|<a \in; S> f (a)> である。
     >
@@ -118,7 +118,7 @@
       任意に元 &m<a, a' \in; A> をとり、&m<a \cup; a' \in; A> であるとする。
       &m<f> の単調性によって &m<f (a \cap; a') \subseteq; f (a) \cap; f (a')> は成り立つから、この逆の包含関係を示せば良い。
       そこで、&m<y \in; f (a) \cap; f (a')> をとる。
-      仮定から、最小元 &m<\ring<a> \in; \op<elapp> (a, y)> と &m<\ring<a>' \in; \op<elapp> (a, y)> がとれるが、&m<a \subseteq; a \cup; a'> かつ &m<a' \subseteq; a \cup; a'> より、この 2 元は &m<\op<elapp> (a \cup; a', y)> の最小元でもある。
+      仮定から、最小元 &m<\ring<a> \in; \op<elfin> (a, y)> と &m<\ring<a>' \in; \op<elfin> (a, y)> がとれるが、&m<a \subseteq; a \cup; a'> かつ &m<a' \subseteq; a \cup; a'> より、この 2 元は &m<\op<elfin> (a \cup; a', y)> の最小元でもある。
       最小元は一意であるから &m<\ring<a> = \ring<a>'> が成り立つ。
       したがって、&m<\ring<a> \subseteq; a \cap; a'> が得られ、&m<f> の単調性から &m<f (\ring<a>) \subseteq; f (a \cap; a')> であるから、&m<y \in; f (a \cap; a')> が分かる。
       以上により、&m<f (a) \cap; f (a') \subseteq; f (a \cap; a')> である。
@@ -130,7 +130,7 @@
   \thm|type="def"|<
     \p<
       整合空間 &m<A, B> の間の安定写像 &m<f: A \to; B> をとる。
-      ある &m<\ring<a> \in; A> および &m<y \in; \lvert; B \rvert;> に対し、&m<(\ring<a>, y)> が &m<\rm<elapp> (\ring<a>, y)> の最小元であるとき、組 &m<(\ring<a>, y)> を &m<f> の\em<トレース\fl<trace>> という。
+      ある &m<\ring<a> \in; A> および &m<y \in; \lvert; B \rvert;> に対し、&m<(\ring<a>, y)> が &m<\op<elfin> (\ring<a>, y)> の最小元であるとき、組 &m<(\ring<a>, y)> を &m<f> の\em<トレース\fl<trace>> という。
       また、&m<f> のトレース全体の集合を &m<\op<tr> (f)> で表す。
     >
   >
@@ -142,7 +142,7 @@
       整合空間 &m<A, B> の間の安定写像 &m<f: A \to; B> を考える。
       任意の &m<a \in; A> に対し、
       &mb<
-        f (a) = `{y \mid; &raw<ある &m<\ring<a> \in; \op<app> (a)> に対して &m<(\ring<a>, y) \in; \op<tr> (f)>>`}
+        f (a) = `{y \mid; &raw<ある &m<\ring<a> \in; \op<fin> (a)> に対して &m<(\ring<a>, y) \in; \op<tr> (f)>>`}
       >
       が成り立つ。
     >
@@ -152,13 +152,13 @@
       右辺の集合を &m<g (a)> と書くことにし、両方の包含関係を示す。
     >
     \p<
-      任意の &m<y \in; f (a)> に対し、\ref|type="cthm",id="stbapp"|; によって、最小元 &m<\ring<a> \in; \op<elapp> (a, y)> がとれる。
-      しかし &m<\ring<a> \subseteq; a> だから、&m<\ring<a>> は &m<\op<elapp> (\ring<a>, y)> の最小元でもある。
+      任意の &m<y \in; f (a)> に対し、\ref|type="cthm",id="stbapp"|; によって、最小元 &m<\ring<a> \in; \op<elfin> (a, y)> がとれる。
+      しかし &m<\ring<a> \subseteq; a> だから、&m<\ring<a>> は &m<\op<elfin> (\ring<a>, y)> の最小元でもある。
       これより &m<(\ring<a>, y) \in; \op<tr> (f)> であり、&m<y \in; g (a)> が得られた。
       以上により、&m<f (a) \subseteq; g (a)> である。
     >
     \p<
-      逆に &m<y \in; g (a)> をとると、ある &m<\ring<a> \in; \op<app> (a)> が存在して &m<(\ring<a>, y) \in; \op<tr> (f)> が成り立つ。
+      逆に &m<y \in; g (a)> をとると、ある &m<\ring<a> \in; \op<fin> (a)> が存在して &m<(\ring<a>, y) \in; \op<tr> (f)> が成り立つ。
       したがって特に &m<y \in; f (\ring<a>)> であるが、&m<f> の単調性によって &m<f (\ring<a>) \subseteq; f (a)> だから、&m<y \in; f (a)> が成り立つ。
       以上により、&m<g (a) \subseteq; f (a)> である。
     >
@@ -235,7 +235,7 @@
       &mb<
         \array|align="rrcl"|<
           \c<f:> \c<A> \c<\longto;> \c<B> \br;
-          \c; \c<a> \c<\longmapsto;> \c<`{y \mid; &raw<ある &m<\ring<a> \in; \op<app> (a)> に対して &m<(\ring<a>, y) \in; c>>`}>
+          \c; \c<a> \c<\longmapsto;> \c<`{y \mid; &raw<ある &m<\ring<a> \in; \op<fin> (a)> に対して &m<(\ring<a>, y) \in; c>>`}>
         >
       >
       とおく。
