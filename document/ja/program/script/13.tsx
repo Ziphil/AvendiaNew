@@ -196,10 +196,27 @@ export class Root extends RootBase<{}, RootState> {
     return node;
   }
 
+  private renderOverview(): ReactNode {
+    let node = (
+      <Fragment>
+        <h1>概要</h1>
+        <p>
+          シャレイア語の公式オンライン辞典です。
+          辞典の見方については<a href="../document/17.html">こちら</a>をご覧ください。
+        </p>
+      </Fragment>
+    );
+    return node;
+  }
+
   public render(): ReactNode {
     let resultNode = (() => {
       if (this.state.errorMessage === null) {
-        return <Fragment>{this.renderResult()}{this.renderNumber(30)}</Fragment>;
+        if (this.state.search === "") {
+          return this.renderOverview();
+        } else {
+          return <Fragment>{this.renderResult()}{this.renderNumber(30)}</Fragment>;
+        }
       } else {
         return this.renderErrorMessage();
       }
