@@ -20,6 +20,8 @@ class ShaleiaInterface < BackendBase
       request
     when "download"
       download
+    when "update"
+      update
     when "save_history"
       save_history
     when "fetch_twitter"
@@ -88,6 +90,15 @@ class ShaleiaInterface < BackendBase
       name = "shaleia.xdc"
     end
     respond_download(file, name)
+  end
+
+  def update
+    version = self["version"]&.to_i || 0
+    size = ShaleiaUtilities.update(version)
+    result = {}
+    result["version"] = version
+    result["size"] = size
+    respond(result)
   end
 
   def save_history
