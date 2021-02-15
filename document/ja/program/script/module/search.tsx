@@ -30,7 +30,7 @@ export abstract class RootBase<P, S extends RootBaseState> extends Component<P, 
     });
   }
 
-  protected abstract async updateResultsBase(): Promise<void>;
+  protected abstract updateResultsBase(): Promise<void>;
 
   protected async updateResultsImmediately(serialize: boolean = true): Promise<void> {
     await this.updateResultsBase();
