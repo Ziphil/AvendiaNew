@@ -1647,13 +1647,16 @@ article.main {
     color: $subsection-color;
   }
 
+  div.head span.head-name {
+    margin: 0px $blank-padding 0px 0px;
+  }
+
   div.head span.pronunciation {
-    margin: 0px 0px 0px $blank-padding;
+    margin: 0px $blank-padding 0px 0px;
     font-size: 80%;
   }
 
-  div.head span.date,
-  div.head span.box {
+  div.head span.date {
     display: none;
   }
 
@@ -1688,6 +1691,7 @@ article.main {
     z-index: 1;
   }
 
+  div.head span.box,
   div.result-wrapper div.result span.box {
     margin: 0px $blank-padding 0px 0px;
     padding: 0px 3px;
@@ -1695,6 +1699,10 @@ article.main {
     line-height: 1;
     border: 1px $border-color solid;
     border-radius: $word-box-border-radius;
+  }
+
+  div.head span.box {
+    font-size: $font-size / $subsection-font-size * 80%;
   }
 
   div.result-wrapper div.result span.addition::before {
@@ -1711,10 +1719,14 @@ article.main {
     color: $gray-color;
   }
 
-  div.result-wrapper div.result div.explanation {
+  div.result-wrapper div.result div.explanation,
+  div.result-wrapper div.result div.synonym-wrapper {
     margin: $vertical-margin 0px;
     padding: 0px;
     border: 0px;
+  }
+
+  div.result-wrapper div.result div.explanation {
     display: flex;
     align-items: baseline;
   }
@@ -1727,13 +1739,23 @@ article.main {
     white-space: nowrap;
   }
 
-  div.result-wrapper div.result div.explanation div.content {
+  div.result-wrapper div.result div.explanation div.content,
+  div.result-wrapper div.result div.synonym-wrapper div.synonym {
     margin: 0px;
     padding: 0px;
     line-height: $line-height;
     text-align: justify;
   }
 
+  div.result-wrapper div.result div.synonym-wrapper div.synonym::before {
+    margin: 0px $blank-padding 0px 0px;
+    padding: 0px;
+    font-family: $list-icon-font-family;
+    font-size: 80%;
+    color: $border-color;
+    content: "\F002";
+  }
+  
   div.result-wrapper div.result ul.conlang {
     margin-left: 0px - $main-horizontal-padding - $box-horizontal-padding;
     padding-left: $main-horizontal-padding + $box-horizontal-padding;
@@ -1741,15 +1763,6 @@ article.main {
       margin-left: 0px - $main-smartphone-horizontal-padding - $box-horizontal-padding;
       padding-left: $main-smartphone-horizontal-padding + $box-horizontal-padding;
     }
-  }
-
-  div.result-wrapper div.result p.synonym::before {
-    margin: 0px $blank-padding 0px 0px;
-    padding: 0px;
-    font-family: $list-icon-font-family;
-    font-size: 80%;
-    color: $border-color;
-    content: "\F002";
   }
 
   div.result-wrapper div.result span.match {

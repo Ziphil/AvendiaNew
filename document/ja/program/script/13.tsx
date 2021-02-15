@@ -223,14 +223,17 @@ export class WordPane extends Component<{word: Word, version: number}> {
     let pronunciationNode = (word.pronunciation !== null) && (
       <span className="pronunciation">/{word.pronunciation}/</span>
     );
+    let sortNode = (word.sort !== null && word.sort.match(/^\s*$/) === null) && (
+      <span className="box">{word.sort}</span>
+    );
     let node = (
       <div className="head">
         <span className="head-name">
           <span className="sans">{word.name.replace("~", "")}</span>
         </span>
         {pronunciationNode}
+        {sortNode}
         <span className="date">{word.date}</span>
-        <span className="box">{word.sort}</span>
       </div>
     );
     return node;
@@ -295,11 +298,20 @@ export class WordPane extends Component<{word: Word, version: number}> {
   private renderSynonyms(): ReactNode {
     let word = this.props.word;
     let version = this.props.version;
-    let string = word.synonyms.map((synonym) => synonym.names.join(", ")).join("; ");
+    let innerNodes = word.synonyms.map((synonym, index) => {
+      let string = synonym.names.join(", ");
+      let innerNode = (
+        <div className="synonym" key={index}>
+          <span className="box">{synonym.category}</span>
+          {StringConverter.parse(string, {version, synonymAsterisk: true})}
+        </div>
+      );
+      return innerNode;
+    });
     let node = (
-      <p className="synonym">
-        {StringConverter.parse(string, {version, synonymAsterisk: true})}
-      </p>
+      <div className="synonym-wrapper">
+        {innerNodes}
+      </div>
     );
     return node;
   }
