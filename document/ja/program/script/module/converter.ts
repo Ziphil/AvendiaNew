@@ -40,7 +40,7 @@ export class StringConverter {
     }
     if (options.synonymAsterisk) {
       string = string.replace(/\*/g, (whole) => {
-        return `<span class=\"asterisk\">†</span>`;
+        return `<span class=\"asterisk\">*</span>`;
       });
     }
     string = StringConverter.convertPunctuation(string);
