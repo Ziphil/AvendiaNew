@@ -142,10 +142,15 @@ class ShaleiaInterface < BackendBase
   def fetch_discord
     whole_data = ShaleiaUtilities.fetch_whole_data(0)
     excluded_names = ShaleiaUtilities.fetch_excluded_names
-    candidates = whole_data.reject do |name, data|
-      next excluded_names.include?(name) || name.start_with?("META") || name.start_with?("$")
+    if self["name"]
+      name, data = whole_data.find{|s, t| s == self["name"]}
     end
-    name, data = candidates.to_a.sample
+    unless name
+      candidates = whole_data.reject do |name, data|
+        next excluded_names.include?(name) || name.start_with?("META") || name.start_with?("$")
+      end
+      name, data = candidates.to_a.sample
+    end
     word = ShaleiaUtilities.parse(name, data, 0, true)
     output = {}
     embed = {}
