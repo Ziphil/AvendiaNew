@@ -142,7 +142,7 @@ class ShaleiaInterface < BackendBase
   def fetch_discord
     whole_data = ShaleiaUtilities.fetch_whole_data(0)
     excluded_names = ShaleiaUtilities.fetch_excluded_names
-    if self["name"]
+    if self["name"] != ""
       name, data = whole_data.find{|s, t| s == self["name"]}
     else
       candidates = whole_data.reject do |name, data|
