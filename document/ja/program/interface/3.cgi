@@ -165,8 +165,9 @@ class ShaleiaInterface < BackendBase
       end
       embed["description"] = equivalent_strings.join("\n")
       embed["fields"] = []
-      embed["fields"] << {"name" => "発音", "value" => "/" + word.pronunciation + "/", "inline" => true}
-      embed["fields"] << {"name" => "造語日", "value" => "ᴴ" + word.date.to_s, "inline" => true}
+      embed["fields"] << {"name" => "品詞", "value" => "❬#{word.sort}❭", "inline" => true}
+      embed["fields"] << {"name" => "発音", "value" => "/#{word.pronunciation}/", "inline" => true}
+      embed["fields"] << {"name" => "造語日", "value" => "ᴴ#{word.date.to_s}", "inline" => true}
       content_fields = word.contents.map do |content|
         content_text = content.text.strip
         content_text.gsub!(/\/(.+?)\/|\{(.+?)\}|\[(.+?)\]/){$1 || $2 || $3}
@@ -176,7 +177,6 @@ class ShaleiaInterface < BackendBase
       end
       embed["fields"].push(*content_fields)
       embed["url"] = "http://ziphil.com/conlang/database/1.html?search=#{URI.encode(name)}&mode=search&type=0&agree=0"
-      embed["thumbnail"] = {"url" => "http://ziphil.com/material/logo/1.png"}
       embed["color"] = 0xFFAB33
       output["embeds"] = [embed]
       respond(output)
