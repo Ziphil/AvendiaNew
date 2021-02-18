@@ -144,39 +144,43 @@ class ShaleiaInterface < BackendBase
     excluded_names = ShaleiaUtilities.fetch_excluded_names
     if self["name"]
       name, data = whole_data.find{|s, t| s == self["name"]}
-    end
-    unless name
+    else
       candidates = whole_data.reject do |name, data|
         next excluded_names.include?(name) || name.start_with?("META") || name.start_with?("$")
       end
       name, data = candidates.to_a.sample
     end
-    word = ShaleiaUtilities.parse(name, data, 0, true)
-    output = {}
-    embed = {}
-    embed["title"] = word.name
-    equivalent_strings = word.equivalents.map do |equivalent|
-      equivalent_string = equivalent.names.join(", ").strip
-      equivalent_string.gsub!(/\/(.+?)\/|\{(.+?)\}|\[(.+?)\]/){$1 || $2 || $3}
-      equivalent_string.gsub!(/&#x([0-9A-Fa-f]+);/){$1.to_i(16).chr}
-      next "**❬#{equivalent.category}❭** #{equivalent_string}"
+    if name && data
+      word = ShaleiaUtilities.parse(name, data, 0, true)
+      output = {}
+      embed = {}
+      embed["title"] = word.name
+      equivalent_strings = word.equivalents.map do |equivalent|
+        equivalent_string = equivalent.names.join(", ").strip
+        equivalent_string.gsub!(/\/(.+?)\/|\{(.+?)\}|\[(.+?)\]/){$1 || $2 || $3}
+        equivalent_string.gsub!(/&#x([0-9A-Fa-f]+);/){$1.to_i(16).chr}
+        next "**❬#{equivalent.category}❭** #{equivalent_string}"
+      end
+      embed["description"] = equivalent_strings.join("\n")
+      embed["fields"] = []
+      embed["fields"] << {"name" => "発音", "value" => "/" + word.pronunciation + "/", "inline" => true}
+      embed["fields"] << {"name" => "造語日", "value" => "ᴴ" + word.date.to_s, "inline" => true}
+      content_fields = word.contents.map do |content|
+        content_text = content.text.strip
+        content_text.gsub!(/\/(.+?)\/|\{(.+?)\}|\[(.+?)\]/){$1 || $2 || $3}
+        content_text.gsub!(/&#x([0-9A-Fa-f]+);/){$1.to_i(16).chr}
+        next {"name" => content.type, "value" => content_text}
+      end
+      embed["fields"].push(*content_fields)
+      embed["url"] = "http://ziphil.com/conlang/database/1.html?search=#{URI.encode(name)}&mode=search&type=0&agree=0"
+      embed["thumbnail"] = {"url" => "http://ziphil.com/material/logo/1.png"}
+      embed["color"] = 0xFFAB33
+      output["embeds"] = [embed]
+      respond(output)
+    else
+      output = {}
+      respond(output)
     end
-    embed["description"] = equivalent_strings.join("\n")
-    embed["fields"] = []
-    embed["fields"] << {"name" => "発音", "value" => "/" + word.pronunciation + "/", "inline" => true}
-    embed["fields"] << {"name" => "造語日", "value" => "ᴴ" + word.date.to_s, "inline" => true}
-    content_fields = word.contents.map do |content|
-      content_text = content.text.strip
-      content_text.gsub!(/\/(.+?)\/|\{(.+?)\}|\[(.+?)\]/){$1 || $2 || $3}
-      content_text.gsub!(/&#x([0-9A-Fa-f]+);/){$1.to_i(16).chr}
-      next {"name" => content.type, "value" => content_text}
-    end
-    embed["fields"].push(*content_fields)
-    embed["url"] = "http://ziphil.com/conlang/database/1.html?search=#{URI.encode(name)}&mode=search&type=0&agree=0"
-    embed["thumbnail"] = {"url" => "http://ziphil.com/material/logo/1.png"}
-    embed["color"] = 0xFFAB33
-    output["embeds"] = [embed]
-    respond(output)
   end
 
   def fetch_twitter_example
