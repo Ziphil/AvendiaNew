@@ -66,7 +66,7 @@
     See \a|href="#8"|<Section 8> for details.
   >
   \p<
-    In 15`/10`/1506 of the Hairia calendar (29`/Nov`/2017 of the Gregorian calendar), the letterforms of the Shaleian alphabet were revised; the forms listed on this page are the post-revision forms. From this revision on, the new forms are used fundamentally, but the old forms may be used as well.
+    In 15`/10`/1506 of the Hairia calendar (29`/Nov`/2017 of the Gregorian calendar), the letterforms of the Shaleian alphabet were revised; the forms listed on this page are the post-revision forms. From this revision on, the new forms are used as the primary forms, but the old forms may be used as well.
     Consult \a|href="5.html"|<the grammar before the revision> for the old alphabet.
   >
   \h2|number="6"|<Numerals>
@@ -119,17 +119,16 @@
   \h2|number="8"|<Diacritical marks>
   \p<
     The five letters [a], [e], [i], [o] and [u] are sometimes used with one of the three diacritical marks as displayed in the following table.
-    It displays only small letters, but the same diacritics are also used for the corresponding capital letters.
     Letters with and without diacritics are treated as distinct letters.
   >
-  \img|src="../../file/character/18.png"|;
+  \img|src="../../file/character/21.png"|;
   \p<
     Diacritics are not omitted in a normal text, but sometimes omitted when some decoration is applied to letters with them, such as in a poster.
   >
   \h2|number="9"|<Alternative transliteration>
   \p<
     As mentioned in \a|href="#8"|<Section 8>, the transliteration of Shaleian alphabets uses Latin alphabets with diacritical marks, such as [â] or [á].
-    In the case where some technical difficulties prevent the use of diacritics, the alternative notation, listed below, is allowed to use.
+    In the case where technical difficulties prevent the use of diacritics, the alternative notation, listed below, may be used.
   >
   \table<
     \tr<\th<formal>\th<alternative>>
@@ -149,23 +148,22 @@
     \tr<\td<[ʻ] (U+02BB)>\td<[']>>
   >
   \p<
-    The alternative notation should be avoided as much as possible and it is highly recommended to use the formal transliteration, unless the formal one cannot be used because of some technical issues.
+    The alternative notation should be avoided as much as possible. It is highly recommended to use the formal transliteration unless technical issues prevent its use.
   >
   \h1<Pronunciation>
   \h2|number="10"|<Letters and their pronunciation>
   \p<
-    Shaleian language uses the following consonants.
-    A letter at the left of a phonetic symbol indicates the (transliteration of) corresponding Shaleian alphabet.
+    Shaleian uses the following consonants.
+    A letter at the left of a phonetic symbol indicates the (transliteration of) the corresponding Shaleian letter.
   >
   \img|src="../../file/other/36.png"|;
   \p<
     The letter [l] has complementary allophones`; it is pronounced `/l`/ when a vowel follows it, and `/ɾ`/ otherwise.
-    The phoneme `/w`/ appears only between a succession of certain letters.
-    This will be discussed in detail in \a|href="#12"|<Section 12>.
+    The phoneme `/w`/ appears only between a succession of certain letters (see \a|href="#12"|<Section 12> for details).
     The usage of `/ɴ`/ will be explained later.
   >
   \p<
-    The vowels are the following.
+    The vowels are listed below.
     The pronunciation of letters with diacritics will be explained in \a|href="#11"|<Section 11>.
   >
   \img|src="../../file/other/37.png"|;
@@ -173,20 +171,20 @@
     The three vowels `/ɪ`/, `/ʊ`/ and `/ɐ`/ appear as the second vowel of a diphthong, mentioned in \a|href="#11"|<Section 11>, and do not appear alone.
   >
   \p<
-    Basically, all letters are pronounced according to the correspondence of letters and phonemes displayed in the preceding tables, except when some phonological changes occur.
+    Basically, all letters are pronounced according to the correspondence of letters and phonemes displayed in the preceding tables, except when some phonological changes (described in \a|href="#12"|<Section 12>) occur.
     There are, however, a small number of exceptions.
     For example, {kin} is pronounced `/kiɴ`/`; the phoneme `/ɴ`/ appears only in {kin} and its abbreviation {'n}.
     The letter [h] also has a phonological exception.
-    When it is placed at the end of a syllable, it may be pronounced `/h`/, but in most cases it is not pronounced at all.
+    When it is placed at the end of a syllable, it may be pronounced `/h`/, but in most cases, it is not pronounced at all.
   >
   \h2|number="11"|<Long vowels and diphthongs>
   \p<
-    The letters [â], [ê], [î], [ô] and [û] originally represent long vowels, and are pronounced slightly longer than those without diacritics.
+    The letters [â], [ê], [î], [ô] and [û] originally represent long vowels and are pronounced slightly longer than those without diacritics.
     Recently, however, they have been shortened and pronounced just like letters without diacritics.
   >
   \p<
-    The other letters [á], [é], [í], [à], [è], [ì], [ò] and [ù] are pronounced as displayed in the table below.
-    Each of these diphthongs alone forms one syllable.
+    The other letters, [á], [é], [í], [à], [è], [ì], [ò] and [ù], are pronounced as in the table below.
+    Each of these diphthongs forms one syllable.
   >
   \table<
     \tr<\th<letter>\th<pronunciation>>
@@ -200,13 +198,13 @@
     \tr<\td<[ù]>\td<`/uɐ`/>>
   >
   \p<
-    As is the case with the long vowels, these diphthongs have recently been pronounced in the same way as the corresponding short vowels.
-    Even in such a case, however, the three connectives with diacritics ({á}, {é} and {à}) and their alternative forms ({lá}, {lé} and {dà}) are pronounced according to the table above, in order to distinguish them from other words.
+    As is the case with the long vowels, these diphthongs have recently been pronounced in the same way as the corresponding short vowels in many cases.
+    Even in such a case, however, the three connectives with diacritics ({á}, {é} and {à}) and their alternative forms ({lá}, {lé} and {dà}) are pronounced according to the table above in order to distinguish them from other words.
   >
   \h2|number="12"|<Phonological changes of consecutive vowels>
   \p<
     When one of the following eight patterns of consecutive vowels appears within a single word, it is pronounced with a certain semivowel inserted between its first and second vowels.
-    These patterns are seen in words borrowed from another language.
+    These patterns are seen in words borrowed from other languages.
   >
   \table<
     \tr<\th<pattern>\th<pronunciation>>
@@ -220,8 +218,8 @@
     \tr<\td<[uo]>\td<`/uwɔ`/>>
   >
   \p<
-    If two vowels are adjacent between two words, not within a single word, or in other words, if a word ending with a vowel precedes a word starting with a vowel, then `/l`/ is inserted between those two vowels in order to avoid the hiatus. 
-    However, in the case where the second word is a proper noun, `/l`/ is not inserted. 
+    If two vowels are adjacent between two words (rather than within a single word), or in other words, if a word ending with a vowel precedes a word starting with a vowel, then `/l`/ is inserted between those two vowels in order to avoid the hiatus. 
+    However, `/l`/ is not inserted if the second word is a proper noun. 
   >
   \h2|number="13"|<Syllable structure>
   \p<
@@ -230,35 +228,35 @@
     Every long vowel or diphthong is counted as a single vowel, and consecutive vowels form distinct syllables.
   >
   \p<
-    If a word contains consecutive consontants within a syllable when borrowed from a foreign language, [e] is suitably inserted between the consontants to divide the syllable.
+    If a word contains consecutive consontants within a syllable when borrowed from a foreign language, [e] is inserted between the consonants as appropriate to divide the syllable.
   >
-  \h2|number="14"|<Accents>
+  \h2|number="14"|<Accent>
   \p<
-    Accents in Shaleian are produced through stress, not through pitch.
+    In Shaleian, accent is produced through stress, not through pitch.
     Accented vowels are pronounced slightly longer than other vowels.
   >
   \p<
     Every word has an accent on the last vowel of its stem.
-    Here a “stem” means the part of a word obtained by removing all attached inflected affixes and negative prefixes from it.
+    Here, a “stem” means the part of a word obtained by removing all attached inflected affixes and negative prefixes from it.
   >
-  \h1<Categories>
-  \h2|number="15"|<Categories and sorts>
+  \h1<Parts of speech>
+  \h2|number="15"|<Sorts and categories>
   \p<
-    Shaleian language has seven parts of speech: verbal infinitive, nominal infinitive, adverbial infinitive, functional, particle, connective and interjection.
+    Shaleian has seven parts of speech: verbal infinitives, nominal infinitives, adverbial infinitives, functionals, particles, connectives and interjections.
     These are called “sorts” in Shaleian.
     Every word is classified into exactly one sort, and no words belong to two or more sorts.
-    For example, the word {yerif} is a verbal infinitive, and it is not simultaneously classified as a nominal infinitive or any other sorts.
+    For example, the word {yerif} is a verbal infinitive, and it is not simultaneously classified as a nominal infinitive or in any other sort.
   >
   \p<
-    On the other hand, every word of Shaleian language may play multiple roles in sentences.
+    On the other hand, the same word in Shaleian may play multiple different roles in sentences.
     Such a role in sentences is called a “category”.
-    There are seven kinds of categories: verb, noun, adjective, adverb, preposition, conjunction and interjection.
-    Every word may be used as multiple categories.
+    There are seven kinds of categories: verbs, nouns, adjectives, adverbs, prepositions, conjunctions and interjections.
+    Every word may be used in multiple categories.
     For example, {yerif}, whose sort is verbal infitive, has four categories: verb, noun, adjective and adverb.
   >
   \p<
-    As the table below shows, categories possible for each sort are completely determined.
-    One cannot use a word as any category which its sort is not allowed to take.
+    As shown in this table, the categories a word can take are completely determined by its sort.
+    A word cannot be used in a category not allowed by its sort.
   >
   \table<
     \tr<\th<sort>\th<category>>
@@ -271,15 +269,15 @@
     \tr<\td<interjection>\td<interjection>>
   >
   \p<
-    The frequency of each category depends on a word.
-    For example, {yerif}, which is a verbal infinitive, is mostly used as an adjective, and rarely used as a verb.
-    On the other hand, {kût}, which is also a verbal infinitive, is mostly used as a verb, but rarely as an adjective.
+    However, the frequency at which a word is used in a given category depends on the particular word.
+    For example, {yerif}, which is a verbal infinitive, is mostly used as an adjective but only rarely as a verb.
+    On the other hand, {kût}, which is also a verbal infinitive, is mostly used as a verb but only rarely as an adjective.
   >
   \h2|number="16"|<Decoratives>
   \p<
-    In Shaleian, morphemes which are placed before or after other words and change their meanings, usually called prefixes or suffixes, are called “decoratives”. 
+    In Shaleian, morphemes that are placed before or after other words and change their meanings, usually called prefixes or suffixes, are called “decoratives”. 
     Decoratives do not include inflected affixes.
-    Since they are not independent words, they are not classified into any sorts.
+    Since they are not independent words, they are not classified into any sort.
   >
   \h1<Inflections>
   \h2|number="17"|<Inflections of verbal infinitives>
