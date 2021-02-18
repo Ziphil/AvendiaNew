@@ -45,33 +45,29 @@
   \h1<Letters>
   \h2|number="5"|<Alphabets>
   \p<
-    Shaleian language is written in 26 letters named “Shaleian alphabets”.
-    These are all phonograms, namely, each letter corresponds to exactly one phoneme.
+    The Shaleian language is written with the 26 letters in the “Shaleian alphabet”.
+    These are all phonograms; namely, each letter corresponds to exactly one phoneme.
     See \a|href="#10"|<Section 10> for the details of this correspondence.
   >
   \p<
-    Since Shaleian alphabets are unique to Shaleian language, they are, of course, not covered by Unicode.
-    Therefore it is difficult to input or display them on computers. 
-    In order to make it easy, Latin alphabets, each corresponding to Shaleian alphabets, are often used instead. 
+    Since the Shaleian alphabet is unique to Shaleian language, it is, of course, not covered by Unicode.
+    Therefore, it is difficult to input or display the script on computers. 
+    For this reason, the Latin alphabet, with each letter corresponding to a Shaleian letter, is often used instead. 
     This notation is called the “Latin transliteration” (or the “romanisation”).
-    The transliteration is also used to make sentences easy to read for beginners not familiar with Shaleian alphabets.
+    The transliteration is also used to make sentences easier to read for beginners not familiar with the Shaleian alphabet.
   >
   \p<
-    Shaleian alphabets consist of small letters and capital (or decorative) letters.
     The small letters are listed as follows.
-    A figure at the center of each cell illustrates a shape of a Shaleian alphabet, and a Latin alphabet at the upper left is its transliteration.
+    A figure at the center of each cell illustrates the shape of a Shaleian letter, with its Latin transliteration at the top-left corner.
   >
-  \img|src="../../file/character/13.png"|;
+  \img|src="../../file/character/20.png"|;
   \p<
-    The following table illustrates the capital letters.
-    The capital letters are used for the first letter of every word, only when there is a particular need for emphasis or extra decoration, such as in a caption or a logo.
-    Since they are equal in height and more easy to discern the small letters, they are also used for all the letters of an expression, when they must be kept small or they are expected to be instantly recognised such as in a signpost.
-    The capital letters are not used in a normal text, even for the first letter of a sentence or a proper noun.
-  >
-  \img|src="../../file/character/14.png"|;
-  \p<
-    Furthermore, diacritical marks are sometimes put on some letters.
+    Furthermore, some letters can receive diacritical marks.
     See \a|href="#8"|<Section 8> for details.
+  >
+  \p<
+    In 15`/10`/1506 of the Hairia calendar (29`/Nov`/2017 of the Gregorian calendar), the letterforms of the Shaleian alphabet were revised; the forms listed on this page are the post-revision forms. From this revision on, the new forms are used fundamentally, but the old forms may be used as well.
+    Consult \a|href="5.html"|<the grammar before the revision> for the old alphabet.
   >
   \h2|number="6"|<Numerals>
   \p<
