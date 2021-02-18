@@ -168,6 +168,7 @@ class ShaleiaInterface < BackendBase
       content_fields = word.contents.map do |content|
         content_text = content.text.strip
         content_text.gsub!(/\/(.+?)\/|\{(.+?)\}|\[(.+?)\]/){$1 || $2 || $3}
+        content_text.gsub!(/\/(.+?)\/|\{(.+?)\}|\[(.+?)\]/){$1 || $2 || $3}
         content_text.gsub!(/&#x([0-9A-Fa-f]+);/){$1.to_i(16).chr}
         next {"name" => content.type, "value" => content_text}
       end
