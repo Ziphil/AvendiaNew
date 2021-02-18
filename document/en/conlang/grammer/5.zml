@@ -10,33 +10,37 @@
   \h1<Introduction>
   \h2|number="1"|<Effective date>
   \p<
-    The grammar of Shaleian language of version S has been used since 26`/09`/1504 of the Hairia calendar (07`/Nov`/2015 of the Gregorian calendar).
-    Note that sentences written before that, which are based on an older grammar, cannot be interpreted in the basis of the current one.
+    The grammar of version S of the Shaleian language has been used since 26`/09`/1504 of the Hairia calendar (07`/Nov`/2015 of the Gregorian calendar).
+    Note that sentences written before that date are based on an older grammar and cannot be interpreted using the current one.
   >
   \h2|number="2"|<Note on notation>
   \p<
-    Throughout this document, all sentences in Shaleian language are written in the Latin transliteration.
-    In order to avoid confusion, the roman typeface is used for the normal text, while the sans-serif typeface is used for words or sentences in Shaleian.
+    In this document, all sentences in Shaleian are written in a Latin transliteration.
+    In order to avoid confusion, a roman typeface is used for the normal text, while a sans-serif typeface is used for words or sentences in Shaleian.
   >
   \h2|number="3"|<Note on reading>
   \p<
-    The sections in this document are arranged in such an order that it is easy for advenced learners to confirm the grammar, not for beginners to learn the language for the first time.
+    The sections in this document are arranged in such an order that it is easy for advenced learners to check the grammar, not for beginners to learn the language for the first time.
+    Beginners are recommended to read the \a|href="../course/27.html"|<introduction> first.
   >
   \p<
-    Since this document is to explain the grammar of Shaleian language, it does not deal with detailed usages such as collocations except ones closely related to the structure of sentences.
+    Since this document is meant to explain the grammar of Shaleian language, it does not deal with detailed usages such as collocations except for ones closely related to the structure of sentences.
     All explanations are based on the written language.
     Expressions peculiar to the spoken language will be taken up separately in \a|href="#67"|<Section 67> and \a|href="#68"|<Section 68>.
   >
   \h2|number="4"|<Changes from version 5.4>
   \p<
-    Changes from version 5.4 are listed as follows:
+    Changes from version 5.4 are listed below:
   >
   \ul<
     \li<long vowels and diphthongs are shortened (\a|href="#11"|<Section 11>)>
     \li<the consonant inserted between adjacent vowels is changed (\a|href="#12"|<Section 12>)>
-    \li<the position of accents is changed (\a|href="#14"|<Section 14>)>
-    \li<the pronunciation of accented vowels is changed (\a|href="#14"|<Section 14>)>
+    \li<the position of stress is changed (\a|href="#14"|<Section 14>)>
+    \li<the pronunciations of stressed vowels are changed (\a|href="#14"|<Section 14>)>
     \li<the negative becomes a prefix (\a|href="#24"|<Section 24>)>
+    \li<short forms for cardinal and ordinal numerals (\a|href="#49"|<Section 49>)>
+    \li<expression of time (\a|href="#51"|<Section 51>)>
+    \li<abbreviations for dates and times (\a|href="#56"|<Section 56>)>
   >
   \h1<Letters>
   \h2|number="5"|<Alphabets>
