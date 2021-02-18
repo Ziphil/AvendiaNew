@@ -617,10 +617,10 @@
   \h1<Questions>
   \h2|number="28"|<Polar questions>
   \p<
-    Polar questions are those which ask whether something is true or not`; they expect to be replied with “yes” or “no”.
+    Polar questions ask whether something is true or not`; the reply is expected to be either “yes” or “no”.
     One can construct such a question by placing {pa} before the verb of a sentence which represents what one wants to verify.
     The word {pa} is named an “interrogative adverb”.
-    In addition to that, one must exchange the dek at the end of the sentence for a padek.
+    In addition to that, the dek at the end of the sentence is exchanged for a padek.
     No changes in word order are made.
   >
   \xl<
@@ -656,11 +656,11 @@
   >
   \xl<
     \li<\sh<{pa salot a loc e pas?}>\ja<Who are you?>>
-    \li<\sh<{pa sâfat a loc e fakel apéf?}>\ja<What type of woman do you like?>>
+    \li<\sh<{pa sâfat a loc e fakel apéf?}>\ja<What sort of woman do you like?>>
   >
   \p<
-    The following table shows major interrogative words.
-    Each word is used only as certein categories, so it is also shown.
+    The following table shows the main interrogative words.
+    Each word is used only in certain categories, so the categories are also listed.
   >
   \table<
     \tr<\th<word>\th<meaning>\th<category>>
@@ -672,7 +672,7 @@
     \tr<\td<{péf}>\td<how>\td<adjective, adverb>>
   >
   \p<
-    One can form interrogative phrases not included in the table by combining prepositions and interrogative pronouns.
+    One can form interrogative phrases not included in the table above by combining prepositions and interrogative pronouns.
     For example, combining the interrogative {pil} with the preposition {vade}, indicating a reason, yields a phrase meaning “for what reason” or “why”.
   >
   \xl<
@@ -688,14 +688,14 @@
     \tr<\td<{qi pil}>\td<how, by what means>>
   >
   \p<
-    To answer a nonpolar question, if the answer is a noun, one uses a phrase in the form of a preposition + a noun.
+    To answer a nonpolar question for which the answer is a noun, one uses a phrase in the form of a preposition + a noun.
   >
   \xl<
     \li<\sh<{pa lanes a loc ca amerikas te pet?} `/ {te tazik.}>\ja<When did you go to America? `/ Yesterday.>>
   >
   \p<
     In most cases where the interrogative word is {pil}, the answer is a nominal clause.
-    In such a case, one answers with the form of a preposition + {kin} + a clause.
+    In this case, one answers with the form of a preposition + {kin} + a clause.
   >
   \xl<
     \li<\sh<{pa leses a loc te tazik e pil?} `/ {e kin câses a tel e ʻyutih.}>\ja<What did you do yesterday? `/ I met Yutia.>>
@@ -706,22 +706,22 @@
     One cannot answer with only an adjective.
   >
   \xl<
-    \li<\sh<{pa sâfat a loc e zas apéf?} `/ {e zas asafey.}>\ja<What kind of people do you like? `/ Those who is friendly.>>
+    \li<\sh<{pa sâfat a loc e zas apéf?} `/ {e zas asafey.}>\ja<What kind of people do you like? `/ Those who are friendly.>>
   >
   \h2|number="30"|<Choice questions>
   \p<
     Choice questions, which require choosing one (or more) among several alternatives, can be constructed by creating a nonpolar question and specifying the alternatives with the preposition {ive}. 
     Since the {ive}-phrase qualifies the interrogative, it is put immediately after the interrogative.
     The alternatives are connected by the conjunction {o}.
-    When there are more than two alternatives, {o} is interposed between every two of them.
+    When there are more than two alternatives, {o} is interposed between each of the options.
     Shelaian has no equivalent for the word “which”, so {pas}, {pet} or {pil} is used instead.
   >
   \xl<
     \li<\sh<{pa sâfat a loc e pet ive zef o bag o nev?}>\ja<Which do you like, red, blue or yellow?>>
   >
   \p<
-    There is another way to perform it`; choice questions are also created by connecting more than one sentences with the conjunction {á}, which means “or”.
-    Note that the interrogative adverb {pa} is needed for the sentence after {á}.
+    There is another way to construct a choice question: two or more sentences can be connected with the conjunction {á}, which means “or”.
+    Note that the interrogative adverb {pa} is needed for the sentence after each {á}.
   >
   \xl<
     \li<\sh<{pa salat a qut e ahap emic, á pa salat a fit e ahap emic?}>\ja<Is that cheaper, or is this cheaper?>>
@@ -764,7 +764,7 @@
   >
   \h2|number="31"|<Indirect questions>
   \p<
-    In the case where a nonpolar or choice question forms a part of a sentence, it is embedded after the interrogative adverb {pa} is removed from it.
+    In the case where a nonpolar or choice question forms a part of a sentence, it can be embedded after the interrogative adverb {pa} is removed from it.
   >
   \p<
     For example, consider the following question:
@@ -774,7 +774,7 @@
   >
   \p<
     To embed this question in another sentence, one removes {pa} from it and use a {kin}-clause as follows.
-    Note that the new sentence is not a question, so put a dek at the end, not a padek.
+    Note that since the new sentence is not a question, we put a dek at the end, not a padek.
   >
   \xl<
     \li<\sh<{sokat a tel e kin qetat a sod i loc vo pâd.}>\ja<I know where your house is.>>
@@ -784,19 +784,19 @@
   >
   \p<
     Polar questions are embedded in a sentence in a different way.
-    As an example, we will construct an indirect question using the following sentence:
+    As an example, we construct an indirect question using the following sentence:
   >
   \xl<
     \li<\sh<{pa kavat a loc e nîl?}>\ja<Do you have brothers?>>
   >
   \p<
-    First one rewrites this sentence by using the expression with the conjunction {á} meaning “whether or not …”, as explained in \a|href="#30"|<Section 30>.
+    We first rewrite this sentence by using an expression with the conjunction {á} meaning “whether or not …”, as explained in \a|href="#30"|<Section 30>.
   >
   \xl<
     \li<\sh<{pa kavat a loc e nîl á pa dulat?}>\ja<Do you have brothers or not?>>
   >
   \p<
-    Next one embeds this question instead in the same manner as one explained above.
+    Next, we embed the rewritten question in the same manner as other types of questions.
     The two interrogative adverbs {pa} must be removed.
   >
   \xl<
