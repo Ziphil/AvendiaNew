@@ -508,8 +508,8 @@
     \li<\sh<{dusâfat a tel e loc.}>\ja<I do not like you.>>
   >
   \p<
-    The negative [du] can negate adjectives and adverbs other than verbs.
-    In such a case, [du] is placed after inflected prefixes.
+    The negative [du] can negate words other than verbs, such as adjectives and adverbs.
+    In such a case, [du] is placed after any inflected prefixes.
   >
   \xl<
     \li<\sh<{câses a tel te tazik e fér aduhál.}>\ja<I met a girl who is not cute yersterday.>>
@@ -518,7 +518,7 @@
     In this example, the adjective {ahál} is negated to mean “not cute”.
   >
   \p<
-    When [du] is attached to nouns, they mean “something other than …”.
+    When [du] is attached to nouns, it gives the meaning of “something other than …”.
   >
   \xl<
     \li<\sh<{salot a tel e dutific.}>\ja<I am not a child.>>
@@ -528,7 +528,7 @@
   >
   \h2|number="25"|<Partial and total negation>
   \p<
-    The negative [du] negates only the succeeding single word.
+    The negative [du] negates only the single word following it.
     One can apply this property to construct sentences with partial or total negation.
   >
   \p<
@@ -549,7 +549,7 @@
   >
   \p<
     In this case, [du] negates only {ovák} to form {oduvák}, which means “not always” or “with a temporal exception”.
-    It modifies {déxat}, meaning “sleeping”, and thus they all together mean “sleeping with a temporal exception” or “not always sleeping”.
+    {oduvák} then modifies {déxat}, meaning “sleeping”, and thus these words together mean “sleeping with a temporal exception” or “not always sleeping”.
   >
   \p<
     The following list shows words which form partial negation in this way.
@@ -568,26 +568,26 @@
     \li<\sh<{dulesot e kin déxas ovák a ces.}>\ja<He is not always sleeping.>>
   >
   \p<
-    In the sentence above, since the {kin}-clause, meaning “he is always sleeping”, is negated, the whole sentence forms partial negation standing for “he is not always sleeping”.
+    In the sentence above, the {kin}-clause, meaning “he is always sleeping”, is negated`; therefore, the whole sentence forms a partial negation meaning “he is not always sleeping”.
   >
   \h2|number="26"|<Negative words>
   \p<
-    Shelaian has several words which have a negative meaning without the negative prefix.
-    They are called “negative words”.
-    As an example, {dus} means “zero person does …” or “nobody does …”.
+    Shaleian has several words which have a negative meaning without the negative prefix.
+    Such words are called “negative words”.
+    As an example, {dus} means “zero people” or “nobody”.
   >
   \xl<
     \li<\sh<{keqit a dus e sod afik.}>\ja<Nobody will live in this house.>>
   >
   \p<
-    Some of those words which represent zero can be replaced with the negtive prefix and a noun without changing its meaning.
+    Some words that represent zero can be replaced with the negtive prefix and a noun without changing their meanings.
   >
   \xl<
     \li<\sh<{dukeqit a ris e sod afik.}>\ja<Nobody will live in this house.>>
   >
   \p<
-    The following table displays major negative words.
-    Each negative word is determined to be used as a certain category, so it is also shown below.
+    The following table displays the major negative words.
+    Each negative word is fixed to be used as a certain category, which is also listed below.
   >
   \table<
     \tr<\th<word>\th<meaning>\th<category>>
@@ -601,17 +601,17 @@
   >
   \p<
     The first five words in the table are proforms, discussed in \a|href="#65"|<Section 65>.
-    As mentioned above, one can substitute the negative prefix and elective proforms for these negative words.
+    As mentioned above, one can replace them with the negative prefix and an elective proform for these negative words.
   >
   \h2|number="27"|<Double negation>
   \p<
-    When a negative word, explained in \a|href="#26"|<Section 26>, and the negative prefix are used simultaneously to form double negation, the sentence makes strong affirmation.
+    When a negative word, explained in \a|href="#26"|<Section 26>, and the negative prefix are used simultaneously to form a double negative, the sentence makes strong affirmation.
   >
   \xl<
     \li<\sh<{dusalat a dol e asokes.}>\ja<Nothing is not important.>>
   >
   \p<
-    This sentence means “all is important”.
+    This sentence means “everything is important”.
     By using double negation, one can claim more strongly than simply saying {salat a zel aves e asokes}.
   >
   \h1<Questions>
