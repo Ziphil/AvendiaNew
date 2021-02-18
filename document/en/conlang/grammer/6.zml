@@ -71,54 +71,49 @@
   >
   \h2|number="6"|<Numerals>
   \p<
-    Shaleian language adopts the decimal numeral system for denoting numbers.
-    Therefore there are ten numerals, which are listed below.
+    Shaleian adopts the decimal numeral system for denoting numbers.
+    Therefore there are ten digits, which are listed below.
     The pronunciation and usage of the numerals will be explained in \a|href="#48"|<Section 48> and \a|href="#49"|<Section 49>.
   >
-  \img|src="../../file/character/15.png"|;
+  \img|src="../../file/character/22.png"|;
   \p<
-    The numerals have also both small and capital letters, which are distinguished from each other.
-    The capital numerals are illustrated as follows:
-  >
-  \img|src="../../file/character/16.png"|;
-  \p<
-    Numbers are written sometimes in numerals such as {dev il'}[6] or {ben ic'}[12], sometimes in their pronunciation such as {dev il'aric} or {ben ic'atisetqec}.
+    Numerals are written sometimes in digits such as {dev il'}[6] or {ben ic'}[12], and sometimes in their pronunciation such as {dev il'aric} or {ben ic'atisetqec}.
   >
   \h2|number="7"|<Punctuation marks>
   \p<
     Shaleian language mainly uses the punctuation marks listed below: 
   >
-  \img|src="../../file/character/17.png"|;
+  \img|src="../../file/character/23.png"|;
   \p<
-    Each mark has the following usage:
+    Each mark is used as follows:
   >
   \table<
     \tr<\th<trans>\th<name>\th<role>>
     \tr<\td<[.]>\td<{dek}>\td<indicates the end of a sentence>>
-    \tr<\td<[,]>\td<{tadek}>\td<indicates a pause of a sentence>>
+    \tr<\td<[,]>\td<{tadek}>\td<indicates a pause in a sentence>>
     \tr<\td<[!]>\td<{vadek}>\td<indicates the end of a sentence with emphasis>>
     \tr<\td<[?]>\td<{padek}>\td<indicates the end of a interrogative sentence>>
     \tr<\td<[']>\td<{nôk}>\td<indicates an abbreviation>>
-    \tr<\td<[ʻ]>\td<{dikak}>\td<marks the succeeding word as a proper noun>>
+    \tr<\td<[ʻ]>\td<{dikak}>\td<marks the following word as a proper noun>>
     \tr<\td<[-]>\td<{fêk}>\td<makes a compound word>>
     \tr<\td<[:]>\td<{kaltak}>\td<partitions data>>
     \tr<\td<[…]>\td<{fôhak}>\td<indicates a silence or a lingering>>
-    \tr<\td<[`[ `]]>\td<{rakut}>\td<specifies the expression inside is a conversation>>
+    \tr<\td<[`[ `]]>\td<{rakut}>\td<specifies that the expression inside is a dialogue>>
     \tr<\td<[“ ”]>\td<{vakut}>\td<specifies the expression inside is a quotation or emphasised>>
   >
   \p<
     Points contained in deks, tadeks, vadeks and padeks are sometimes written by hand with a sweeping stroke like commas.
   >
   \p<
-    Tadeks indicate a pause of a sentence, but their use is restricted to certain positions and therefore not completely free.
+    Tadeks indicate a pause in a sentence, but their use is restricted to certain positions and therefore are not completely free.
     They are, for example, put after a nonrestrictive use of a relative clause, mentioned in \a|href="#43"|<Section 43>, or an adverbial use of a conjunction, mentioned in \a|href="#43"|<Section 44>.
-    Nôks are used instead of the omitted letters when an abbreviation occurs.
-    The details will be explained in \a|href="#55"|<Section 55>.
+    Nôks are used in place of the omitted letters when an abbreviation occurs.
+    Contractions will be explained in more detail in \a|href="#55"|<Section 55>.
     Dikaks are put immediately before a word and indicate that it is a proper noun such as a person's name.
     The uses of fêks and kaltaks will be dealt with in \a|href="#57"|<Section 57> and \a|href="#56"|<Section 56>, respectively.
   >
   \p<
-    Rakuts and vakuts are both Shaleian equivalents of quotation marks.
+    Both rakuts and vakuts correspond to quotation marks.
     The former are used only for conversations, while the latter are for quotations and emphases.
   >
   \h2|number="8"|<Diacritical marks>
