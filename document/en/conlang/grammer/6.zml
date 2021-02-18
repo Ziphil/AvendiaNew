@@ -808,14 +808,14 @@
     Shelaian has four tenses: present, past, future and indeterminate.
   >
   \p<
-    The present tense is used to express what is happening just at that moment.
+    The present tense is used to express what is happening at the current moment.
   >
   \xl<
     \li<\sh<{xôyak a tel e sokul.}>\ja<I have finished tidying up the room.>>
   >
   \p<
     The past tense is for events which happened in the past.
-    Events with the past tense do not have any relationship to the present time.
+    Events expressed in the past tense do not have any relationship to the present time.
   >
   \xl<
     \li<\sh<{zedotes a tel e miv aquk.}>\ja<I tore that paper.>>
@@ -839,18 +839,18 @@
   >
   \p<
     It can also express facts which hold for a relatively long period of time.
-    For example, the fact that “he can speak Shaleian” will be denied when he dies, but it is unchangeably true for a long period in which he is alive.
-    Thus it can be expressed by the indeterminate tense.
+    For example, the fact that “he can speak Shaleian” will become false when he dies, but it is unchangeably true for the long period during which he is alive.
+    Thus, it can be expressed with the indeterminate tense.
   >
   \p<
-    The indeterminate tense is also used to express just an action not concerning when it is done.
+    The indeterminate tense is also used to express just an action without specifying when it is done.
   >
   \xl<
     \li<\sh<{sâfat a tel e kin likomos a tel e nayef.}>\ja<I like to look at flowers.>>
   >
   \p<
     In this example, “looking at flowers” indicates an action neither in the present time nor in the past, but an action itself of looking at flowers.
-    In such a case, the indeterminate tense is suitable.
+    In such a case, the indeterminate tense is appropriate.
   >
   \h2|number="33"|<Aspects>
   \p<
@@ -859,7 +859,7 @@
     The progressive and continuous aspects represent a certain period of time, and are called collectively “durative aspects”.
   >
   \p<
-    First we will see the momentaneous aspects.
+    First, we look at the momentaneous aspects.
     The inceptive aspect indicates the moment at which an act begins.
   >
   \xl<
@@ -875,10 +875,10 @@
     \li<\sh<{feketak a tel te sot.}>\ja<I have just got up now.>>
   >
   \p<
-    The terminative aspect indicates the moment at which the state after an act is finished stops to continue.
+    The terminative aspect indicates the moment at which the state after an act is finished ceases to hold.
   >
   \p<
-    Next we will see the durative aspects.
+    Next, we look at the durative aspects.
     The progressive aspect represents the period from the start of an act until its completion, or in other words the interval between the inceptive and perfect aspects.
   >
   \xl<
@@ -918,26 +918,26 @@
   >
   \h2|number="34"|<Transitivities>
   \p<
-    Acts are divided into two groups.
+    Actions are divided into two groups.
     One consists of those which one can carry out all by oneself, while the other consists of those of helping someone to do something.  
     In Shaleian, verbs for the former and the latter are called “intransitive” and “transitive” respectively.
     For example, “lie down” is an intransitive verb and “lay down” is a transitive one.
   >
   \p<
     Note that the notion of intransitive and transitive verbs in Shaleian is completely different from that which concerns the existence of an object.
-    Also take account of the difference between transitive verbs and causative expressions`; a transitive verb means “to help someone to achieve it”, while a causative expression means “to make someone do it perhaps without assisting”.
+    Also take account of the difference between transitive verbs and causative expressions: a transitive verb means “to help someone to achieve it”, while a causative expression means “to make someone do it without assisting”.
     Consider for example the distinction between “put someone to sleep” and “make someone sleep”.
   >
   \p<
-    Shelaian uses the same word for intransitive and transitive verbs, and distinguishes them by its conjunction.
-    See \a|href="#17"|<Section 17> for the conjunction.
+    Shelaian uses the same word for intransitive and transitive verbs, and distinguishes them by its conjugation.
+    See \a|href="#17"|<Section 17> for how verbs are conjugated.
   >
   \p<
     Objects of assistance of a transitive verb are indicated by a {li}-phrase.
   >
   \xl<
     \li<\sh<{déxes a del.}>\ja<I slept.>>
-    \li<\sh<{déxez a del li yaf.}>\ja<I put my sister to sleep.>>
+    \li<\sh<{déxez a del li yaf.}>\ja<I helped my sister sleep.>>
   >
   \h1<Special syntaxes for verbs>
   \h2|number="35"|<Auxiliary uses of verbs>
