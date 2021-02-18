@@ -122,15 +122,17 @@ class ShaleiaInterface < BackendBase
     output << word.name.gsub(/\~/, "")
     output << " /" + word.pronunciation + "/ "
     equivalent_strings = word.equivalents.map do |equivalent|
-      equivalent_string = equivalent.names.join(", ").gsub(/\/(.+?)\/|\{(.+?)\}|\[(.+?)\]/){$1 || $2 || $3}.strip
+      equivalent_string = equivalent.names.join(", ").strip
+      equivalent_string.gsub!(/\/(.+?)\/|\{(.+?)\}|\[(.+?)\]/){$1 || $2 || $3}
       next "〈#{equivalent.category}〉#{equivalent_string}"
     end
     output << equivalent_strings.join(" ")
     meaning_content = word.contents.find{|s| s.type == "語義"}
     if meaning_content
-      meaning_string = meaning_content.text.gsub(/\/(.+?)\/|\{(.+?)\}|\[(.+?)\]/){$1 || $2 || $3}.strip
-      if meaning_string != "?"
-        output << " ❖ " + meaning_string
+      meaning_text = meaning_content.text.strip
+      meaning_text.gsub!(/\/(.+?)\/|\{(.+?)\}|\[(.+?)\]/){$1 || $2 || $3}
+      if meaning_text != "?"
+        output << " ❖ " + meaning_text
       end
     end
     output.gsub!(/&#x([0-9A-Fa-f]+);/){$1.to_i(16).chr}
