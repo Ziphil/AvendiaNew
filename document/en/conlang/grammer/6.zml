@@ -46,7 +46,7 @@
   \h2|number="5"|<Alphabets>
   \p<
     The Shaleian language is written with the 26 letters in the “Shaleian alphabet”.
-    These are all phonograms; namely, each letter corresponds to exactly one phoneme.
+    These are all phonograms`; namely, each letter corresponds to exactly one phoneme.
     See \a|href="#10"|<Section 10> for the details of this correspondence.
   >
   \p<
@@ -66,7 +66,7 @@
     See \a|href="#8"|<Section 8> for details.
   >
   \p<
-    In 15`/10`/1506 of the Hairia calendar (29`/Nov`/2017 of the Gregorian calendar), the letterforms of the Shaleian alphabet were revised; the forms listed on this page are the post-revision forms. From this revision on, the new forms are used as the primary forms, but the old forms may be used as well.
+    In 15`/10`/1506 of the Hairia calendar (29`/Nov`/2017 of the Gregorian calendar), the letterforms of the Shaleian alphabet were revised`; the forms listed on this page are the post-revision forms. From this revision on, the new forms are used as the primary forms, but the old forms may be used as well.
     Consult \a|href="5.html"|<the grammar before the revision> for the old alphabet.
   >
   \h2|number="6"|<Numerals>
@@ -283,12 +283,12 @@
   \h2|number="17"|<Inflections of verbal infinitives>
   \p<
     Verbal infinitives change their form depending on their categories in sentences.
-    Their inflections are basically obtained by attaching some prefixes or suffixes to their stems, which are headwords of dictionaries.
+    To put it simply, they are inflected by attaching prefixes or suffixes to their stems, which are listed as headwords in dictionaries.
   >
   \p<
-    When a verbal infinitive is used as a verb, it is conjugated with two suffixes attached after its stem. 
+    When a verbal infinitive is used as a verb, it is conjugated by attaching two suffixes to its stem. 
     The first one indicates its tense, and the second one indicates its aspect and transitivity.
-    The suffixes which indicate tenses are the following:
+    The following table shows the tense suffixes:
   >
   \table<
     \tr<\th<suffix>\th<tense>>
@@ -298,7 +298,7 @@
     \tr<\td<[o]>\td<indeterminate>>
   >
   \p<
-    The suffixes which indicate aspects and transitivities are the following:
+    The following table shows the aspect-transitivity suffixes:
   >
   \table<
     \tr<\th<suffix>\th<aspect, transitivity>>
@@ -319,7 +319,7 @@
     For example, when the verbal infinitive {sâf} is used as an intransitive verb with the past tense and the terminative aspect, it is conjugated {sâfep}. 
   >
   \p<
-    When a verbal infinitive appears as an adjective or an adverb, the following prefix is attached before it.
+    When a verbal infinitive appears as an adjective or an adverb, one of the following prefixes is attached before it.
   >
   \table<
     \tr<\th<prefix>\th<category>>
@@ -327,7 +327,7 @@
     \tr<\td<[o]>\td<adverb>>
   >
   \p<
-    We will explain from \a|href="#32"|<Section 32> to \a|href="#34"|<Section 34> what tenses or aspects or transitivities of verbs mean.
+    The meanings of tenses, aspects, and transitivities of verbs are explained in \a|href="#32"|<Sections 32> – \a|href="#34"|<34>.
   >
   \h2|number="18"|<Inflections of adverbial infinitives>
   \p<
@@ -342,7 +342,7 @@
     Particles of the former type are called “normal particles”, and those of the latter type are called “special particles”.
   >
   \p<
-    When normal particles are used without prefixes, they form phrases which modify verbs, but when the inflected prefix [i] is attached to them, they form phrases which modify words excluding verbs.
+    When normal particles are used without prefixes, they form phrases which modify verbs, but when the inflected prefix [i] is attached to them, they form phrases which modify words other than verbs.
     For example, the particle {te} forms a prepositional phrase modifying a verb in the form of {te}, while it modifies a nonverb, such as a noun, in the form of {ite}.
     The form to which the prefix [i] is attached is called a “nonverb-modifying form”.
   >
@@ -350,17 +350,17 @@
     Special particles, as prepositions, cannot be used independently and always appear with the prefix [i].
   >
   \p<
-    Both normal and special particles are used in the form of their stems when they are conjunctions.
+    Both normal and special particles are used in the form of their stems when they are used as conjunctions.
   >
   \p<
     We will discuss the basic use of prepositions in \a|href="#20"|<Section 20> and \a|href="#21"|<Section 21>, and nonverb-modifying forms in \a|href="#36"|<Section 36> and \a|href="#63"|<Section 63>.
   >
-  \h1<Basic structure of sentences>
+  \h1<Basic sentence structure>
   \h2|number="20"|<Preposition + noun>
   \p<
     In Shaleian, nouns are always used with prepositions put before them, and do not appear independently.
     Such a cluster of a preposition and a noun is called a “prepositional phrase”.
-    To explicitly express the preposition used in it, it is also called like “{a}-phrase” or “{te}-phrase”.
+    Terms such as “{a}-phrase” or “{te}-phrase” are used to explicitly express the preposition used in such a phrase.
   >
   \p<
     Prepositions indicate the grammatical cases of the accompanying nouns.
@@ -370,22 +370,22 @@
   >
   \p<
     The sentence above has two prepositional phrases: {a tel} and {e yaf}.
-    The preposition {a} included in the phrase {a tel} indicates that {tel} is used as a subject of the sentence, and {e} in {e yaf} indicates that {yaf} is an object of the verb.
+    The preposition {a} included in the phrase {a tel} indicates that {tel} is used as a subject of the sentence, and the {e} in {e yaf} indicates that {yaf} is an object of the verb.
   >
   \p<
-    Nouns are always accompanied with prepositions, but not all prepositions are used only with nouns.
-    Only when prepositions qualify certain verbs, they may be used with adjectives.
+    Nouns are always accompanied with prepositions, but not all prepositions are used with nouns only.
+    When (and only when) prepositions qualify certain verbs, they may take adjectives as complements.
   >
   \xl<
     \li<\sh<{salat a nayef aquk e abig.}>\ja<That flower is blue.>>
   >
   \p<
     Here the adjective {abig} accompanies with the preposition {e}.
-    The same holds for prepositional phrases modifying {nis}, other than {sal}.
+    Along with {sal}, the verb {nis} also allows such prepositional phrases.
   >
   \p<
-    There are two kinds of prepositions`; one modifies verbs by forming a prepositional phrase, while the other modifies nonverbs.
-    The former is called a “verb-modifying preposition”, and the latter is called a “nonverb-modifying preposition”.
+    There are two kinds of prepositions: one modifies verbs by forming a prepositional phrase, while the other modifies nonverbs.
+    A preposition of the former kind is called a “verb-modifying preposition”, and the latter kind of preposition is called a “nonverb-modifying preposition”.
   >
   \xl<
     \li<\sh<{qetat a nîl i tel vo fîc ica fêd.}>\ja<My brother is around here.>>
@@ -396,7 +396,7 @@
   >
   \h2|number="21"|<Verb + prepositional phrase>
   \p<
-    In Shaleian, basically every sentence consists of a verb put on the beginning and verb-modifying prepositional phrases lined up after it. 
+    At a basic level, every sentence in Shaleian consists of a verb at the beginning with verb-modifying prepositional phrases lined up after it. 
   >
   \xl<
     \li<\sh<{cates a tel.}>\ja<I walked.>>
@@ -405,7 +405,7 @@
     In the sentence above, the verb {cates} is put at the beginning of the sentence and followed by the prepositional phrase {a tel}, which modifies it and expresses its subject.
   >
   \p<
-    More than one elements can modify a verb.
+    There can be more than one element modifying a verb.
     In this case, the elements modifying the verb are lined up one after another.
   >
   \xl<
@@ -414,25 +414,24 @@
   \p<
     In this sentence, the verb {feges} is modified by three postposed elements: {a tel}, indicating the subject, {e dezet}, indicating the object, and {vo vosis afik}, indicating the place.
     Here one can freely choose the order of modifying elements.
-    Therefore this sentence can be rewritten as: {feges vo vosis afik a tel e dezet}.
-    Note that the grammar does not restrict the order of prepositional phrases, but a nuance of a sentence changes depending on which phrase is placed at the beginning.
-    The details will be mentioned in \a|href="#23"|<Section 23>.
+    Therefore this sentence can be rewritten as {feges vo vosis afik a tel e dezet}.
+    Note that the grammar does not restrict the order of prepositional phrases, but the nuance of a sentence changes depending on which phrase is placed first, as explained more fully in \a|href="#23"|<Section 23>.
   >
   \h2|number="22"|<Adjectives and adverbs>
   \p<
-    In general, as phrases modifying verbs are put after them, modifiers follow modified words.
-    This rule is also applied to nouns and adjectives`; adjectives are placed after nouns modified by them.
+    In general, modifiers follow their heads, in the same way that phrases modifying verbs are put after the verbs.
+    This rule applies to nouns and adjectives as well: adjectives are placed after nouns that they modify.
   >
   \xl<
     \li<\sh<{lices a tel e nayef azaf.}>\ja<I looked at a red flower.>>
   >
   \p<
     In the example above, the adjective {azef} qualifies the preceding noun {nayef}.
-    When more than one adjectives modify a noun, they are placed in a row, just like verb-modifying phrases are put after verbs.
-    The order of adjectives make little difference in nuance.
+    When more than one adjectives modify a noun, they are placed in a row, just as verb-modifying phrases are put after verbs.
+    The order of adjectives makes almost no difference in nuance.
   >
   \xl<
-    \li<\sh<{kûtat a tel e dev axodol ajôm.}>\ja<I have an expencive black pen.>>
+    \li<\sh<{kûtat a tel e dev axodol ajôm.}>\ja<I have an expensive black pen.>>
   >
   \p<
     In this sentence, the two adjectives {axodol} and {ajôm} modify the noun {dev}.
@@ -447,7 +446,7 @@
     It is ungrammatical to change the {e}-phrase into {a nayef afik anav}.
   >
   \p<
-    When adverbs modify an adjective, they are put after the adjective, following the rule to place modifiers after modified words.
+    When an adverb modifies an adjective, it is put after the adjective according to the rule of placing modifiers after heads.
   >
   \xl<
     \li<\sh<{séqes a tel ca ces e xoq anisxok ebam.}>\ja<I gave him a very interesting book.>>
@@ -467,34 +466,34 @@
   >
   \h2|number="23"|<Order of prepositional phrases>
   \p<
-    The order of prepositional phrases can be arbitrarily determined, as mentioned in \a|href="#21"|<Section 21>.
-    There is, however, a conventional rule for ordering prepositional phrases.
+    As mentioned in \a|href="#21"|<Section 21>, prepositional phrases can be ordered freely.
+    There is, however, a convention for ordering prepositional phrases.
   >
   \p<
-    In Shaleian, a focus falls on the beginning of a sentence`; the beginning broaches a topic and the end offers information about it.
-    Therefore, prepositional phrases are ordered so that the topic which is already brought up in the context comes at the beginning, and new information which is not mentioned yet comes at the end.
+    In Shaleian, a focus falls on the end of a sentence`; the beginning introduces a topic and the end offers information about it.
+    Therefore, prepositional phrases are ordered so that the topic, which has already been brought up in the context, comes at the beginning, and new information, which has not yet been mentioned, comes at the end.
   >
   \xl<
     \li<\sh<{qoletes a tel e zeqil. séqes e cit ca tel a refet.}>\ja<I sold a table. It was given to me by my friend.>>
   >
   \p<
-    When the first sentence is written, there is no information beforehand.
+    When the first sentence is about to be written, there is no prior information.
     In such a case, the subject is usually placed at the first.
-    The sentence then gives information {zeqil} to the reader at the end, to impress on him`/her that “a table was sold”.
-    Thus, by placing the phrase {e cit} at the first of the second sentence, he`/she can easily understand that this “{cit}” is the table mentioned in the previous sentence.
-    Moreover, by putting {e refet} at the end, he`/she smoothly realises new information that the table was given by a friend of “{tel}”.
+    The sentence then gives information {zeqil} to the reader at the end to convey the information that “a table was sold”.
+    Thus, since the phrase {e cit} appears at the first prepositional phrase of the second sentence, the reader can easily understand that this “{cit}” is the table mentioned in the previous sentence.
+    Moreover, since {e refet} comes at the end, the reader obtains new information that the table was given by a friend of “{tel}”.
   >
   \p<
-    Here transpose the prepositional phrases in the second sentence:
+    Here, the prepositional phrases in the second sentence are transposed:
   >
   \xl<
     \li<\sh<{qoletes a tel e zeqil. séqes a refet ca tel e cit.}>\ja<I sold a table. My friend gave me that table.>>
   >
   \p<
-    Having done this, when the reader begins to read the second sentence, he`/she would suddenly get new information “a friend” while “a desk” is in his`/her head.
-    As a result, he`/she would wonder what about the desk and may get confused.
-    When the reader finishes reading the second sentence, he`/she would finally see that this sentence says about the desk. 
-    This causes a vague understanding.
+    When the reader begins to read the modified version of the second sentence, he`/she would suddenly get the new information of “a friend” while “a desk” is in his`/her head.
+    As a result, he`/she might wonder “what happened to the desk?” and get confused.
+    When the reader finishes reading the second sentence, he`/she would finally realise that this sentence is about the desk mentioned previously. 
+    Thus, the reader has trouble understanding the sentences.
   >
   \p<
     As stated above, prepositional phrases are ordered so that the reader can smoothly obtain information.
