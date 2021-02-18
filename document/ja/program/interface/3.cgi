@@ -156,7 +156,7 @@ class ShaleiaInterface < BackendBase
       word = ShaleiaUtilities.parse(name, data, 0, true)
       output = {}
       embed = {}
-      embed["title"] = word.name
+      embed["title"] = word.name.gsub(/\~/, "")
       equivalent_strings = word.equivalents.map do |equivalent|
         equivalent_string = equivalent.names.join(", ").strip
         equivalent_string.gsub!(/\/(.+?)\/|\{(.+?)\}|\[(.+?)\]/){$1 || $2 || $3}
