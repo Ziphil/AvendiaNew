@@ -1214,56 +1214,58 @@
     To show that something is the least instead of the greatest, one uses {dohiv}, meaning “the least”, instead of {hiv}.
     {dohiv} is used in exactly the same way as {domic}.
   >
-  \h1<Relative clauses>
-  \h2|number="42"|<Relative clauses>
+  \h1<Relative constructions>
+  \h2|number="42"|<Relative constructions>
   \p<
-    2 つの文を、片方の文がもう片方の文の名詞を修飾する形で 1 つの文にすることができる。
-    これをシャレイア語では「限定表現」と呼ぶ。
+    Two sentences can be joined to form one in which one sentence modifies a noun in the other.
+    This is called a “relative construction” in Shaleian.
   >
   \p<
-    例を挙げてそのような文の作り方を示す。
-    まず、以下の前提文がある。
+    We give an example of how to construct such a sentence.
+    First, we start off with the prerequisite sentence below.
   >
   \xl<
-    \li<\sh<{salot a qos e qazek.}>\ja<あの人は男性だ。>>
+    \li<\sh<{salot a qos e qazek.}>\ja<That person is a man.>>
   >
   \p<
-    この文の {qazek} を修飾する節として、以下の文を考える。
+    The following clause should modify {qazek} in the previous sentence.
   >
   \xl<
-    \li<\sh<{câses a tel e ces te tazik.}>\ja<私は昨日彼に会った。>>
+    \li<\sh<{câses a tel e ces te tazik.}>\ja<I met him yesterday.>>
   >
   \p<
-    2 文目の {ces} が 1 文目の {qazek} を表しているとすれば、この 2 つの文をまとめて「あの人は私が昨日会った男性」という意味を出すことができる。
-    そのためには、まず修飾する方の 2 つ目の文で、被修飾語と同じ意味の名詞を消す。
-    すると、名詞が伴わない単独の助詞が出現するが、これを動詞のすぐ後に移動させる。
-    そして、その単語を消した修飾する文を、被修飾語のすぐ後に置く。
-    このとき、名詞を修飾している方の節は「限定節」と呼ばれる。
+    If we suppose that the word {ces} in the second sentence represents {qazek} in the first sentence, then we can join these two sentences to mean “that person is the man whom I met yesterday”.
+    To do so, we first note that the second sentence is the one to modify a noun and omit the noun with the same meaning as the modified word.
+    The lone preposition that arises is moved to be immediately after the verb.
+    The modifying sentence is then placed immediately after the modified word.
+    The clause modifying the noun is thus called a “relative clause”.
   >
   \xl<
-    \li<\sh<{salot a qos e qazek câses e a tel te tazik.}>\ja<あの人は私が昨日会った男性だ。>>
+    \li<\sh<{salot a qos e qazek câses e a tel te tazik.}>\ja<That person is the man whom I met yesterday.>>
   >
   \p<
-    以下のように、消された名詞に伴っていた助詞が名詞を修飾していた場合、その助詞だけの位置を変えると意味が変化してしまうので、修飾している名詞を含む動詞修飾の助詞句全体を動詞の直後に移動させる。
+    When the preposition accompanying the omitted noun modifies the head noun, as shown below, changing its position itself changes the meaning.
+    In that case, the entire prepositional phrase of the modifying verb that contains the modified noun is moved immediately after the verb.
   >
   \xl<
-    \li<\sh<{sokat a tel e tiqat salot a qâz i e lasác.}>\ja<私は父親が教師である少年を知っている。>>
+    \li<\sh<{sokat a tel e tiqat salot a qâz i e lasác.}>\ja<I know a boy whose father is a teacher.>>
   >
   \p<
-    上の例では、{i} のみを移動して {salot i a qâz} としてしまうと {i} が修飾するものが分からなくなってしまうので、{a qâz i} 全体を動詞の直後に移動させている。
+    If we had moved only {i} in the preceding example, we would have {salot i a qâz} and the reader would not understand what {i} was modifying.
+    Therefore, we move {a qâz i} in its entirety to lie immediately after the verb.
   >
   \p<
-    限定節が修飾する名詞が別の形容詞でも修飾されている場合は限定節が後ろに置かれ、名詞 ＋ 形容詞 ＋ 限定節の順になる。
+    If the noun modified by a relative clause is modified by other adjectives, then the relative clause is placed in the back, in the order noun + adjective + relative clause.
   >
   \xl<
-    \li<\sh<{qetat vo sokul i tel a zeqil avaf ebam séqes e ca tel a ces.}>\ja<彼からもらったとても大きな机が私の部屋にある。>>
+    \li<\sh<{qetat vo sokul i tel a zeqil avaf ebam séqes e ca tel a ces.}>\ja<Inside my room, there is a very large desk that I received from him.>>
   >
   \p<
-    この例では、{zeqil} を {avaf ebam} という形容詞と {séqes} 以下の限定節の 2 つが修飾している。
+    In this example, {zeqil} is modified by two items: the adjective {avaf ebam} and the relative clause from {séqes} on.
   >
   \p<
-    限定節内の時制は、主節の表す時制に対する相対的な時を表す。
-    例えば、主節が過去時制で限定節が現在時制ならば、限定節は過去における現在を表すので、過去に起こった出来事であるということになる。
+    The tense within a relative clause shows time relative to the tense of the main clause.
+    For instance, if the main clause were in the past tense and the relative clause were in the present, then the relative clause would represent the present within the past and therefore describe an event that had occurred the past.
   >
   \h2|number="43"|<Nonrestrictive relative clauses>
   \p<
