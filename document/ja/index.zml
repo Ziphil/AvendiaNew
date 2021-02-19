@@ -184,14 +184,20 @@
             \div|class="row"|<
               \a|class="icon youtube",href="https://www.youtube.com/channel/UCF2sTP1NGBVFr79aJiKprsg/",target="_blank"|;
               \div|class="explanation"|<
-                制作過程を YouTube ライブで配信することがあります。
+                シャレイア語の制作過程を YouTube ライブで配信することがあります。
                 配信日時は Twitter で告知します。
+              >
+            >
+            \div|class="row"|<
+              \a|class="icon discord",href="https://discord.gg/qdRyE2ZExf",target="_blank"|;
+              \div|class="explanation"|<
+                シャレイア語の Discord サーバーを運営しています。
               >
             >
             \div|class="row"|<
               \a|class="icon github",href="https://github.com/Ziphil",target="_blank"|;
               \div|class="explanation"|<
-                人工言語の様々なデータはほとんど GitHub で管理しています。
+                シャレイア語に関する様々なデータはほとんど GitHub で管理しています。
               >
             >
           >

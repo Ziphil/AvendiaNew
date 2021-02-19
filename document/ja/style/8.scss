@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
+@import url("https://kit-free.fontawesome.com/releases/latest/css/free.min.css");
 @import "module/reset.scss";
 @import "module/common.scss";
 @import "8v.scss";
@@ -552,14 +553,14 @@ div.other {
   }
 
   div.content div.contact div.table div.row a.icon {
-    width: $icon-font-size;
+    width: $icon-width;
     height: $icon-font-size;
-    font-family: $footer-icon-font-family;
+    font-family: $awesome-icon-font-family;
     font-size: $icon-font-size;
     text-decoration: none;
     text-align: center;
     color: $icon-background-color;
-    flex: 0 0 $icon-font-size;
+    flex: 0 0 $icon-width;
     transition: color 0.2s ease-in-out;
   }
 
@@ -568,15 +569,19 @@ div.other {
   }
 
   div.content div.contact div.table div.row a.icon.twitter::before {
-    content: "\F000";
+    content: "\F099";
   }
 
   div.content div.contact div.table div.row a.icon.youtube::before {
-    content: "\F001";
+    content: "\F167";
   }
 
   div.content div.contact div.table div.row a.icon.github::before {
-    content: "\F003";
+    content: "\F09B";
+  }
+
+  div.content div.contact div.table div.row a.icon.discord::before {
+    content: "\F392";
   }
 
   div.content div.contact div.table div.row div.explanation {

@@ -108,6 +108,8 @@ $card-title-height: 50px;
 $arrow-height: 35px;
 // 大きさ > 矢印本体
 $tip-size: 20px;
+// 大きさ > アイコン
+$icon-width: 72px;
 
 // その他
 $small-smartphone-ratio: 0.8;
@@ -123,6 +125,7 @@ $gilit-font-family: "Gilit Web";
 $special-font-family: "Abril Fatface";
 $footer-icon-font-family: "Footer Icon";
 $list-icon-font-family: "List Icon";
+$awesome-icon-font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
 
 
 @mixin shrink($height) {
