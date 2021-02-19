@@ -1007,10 +1007,10 @@
     However, this nominal use is not so frequently used.
     There is a tendency to avoid it when there are many prepositional phrases qualifying the nominalised verbal infinitive.
   >
-  \h2|number="37"|<Expression for iteration>
+  \h2|number="37"|<Expression of iteration>
   \p<
-    To express a repetion of an action, one uses the verb {vom}, which means “to repeat”.
-    The verb {vom} often takes the adverbial use, explained in \a|href="#35"|<Section 35>.
+    To express the repetion of an action, the verb {vom}, which means “to repeat”, is used.
+    The verb {vom} often takes the auxiliary use, explained in \a|href="#35"|<Section 35>.
     The beginning, continuance and completion of an iteration are expressed by conjugating {vom} in the inceptive, progressive and perfect aspect, repsectively.
   >
   \xl<
@@ -1020,62 +1020,61 @@
     Note that the completion of an iteration and the perfect aspect have different meanings.
     Since the example above expresses an iteration, it indicates that the last iteration of repeating the action “to read the book” has been completed.
     If it began with {lîdak a tel} with the perfect aspect, it would express that the one-time action “to read the book” has been finished. 
-    The former expression implies that “I” have read all the way through the book, while the latter implie that “I” have simply finished the one-time action without mentioning whether or not “I” have read through the book.
+    The former expression implies that “I” have read all the way through the book, while the latter implies that “I” have simply finished the one-time action without mentioning whether or not “I” have read through the book.
   >
   \p<
-    Habit is a kind of iteration, so it is also expressed with {vom}.
-    Habits which are being kept at the present time are expressed with {vom} conjugated in the present tense and the progressive aspect.
+    Habits are a kind of iteration, so they are also expressed with {vom}.
+    Habits that are still being kept at the present are expressed with {vom} conjugated in the present tense and the progressive aspect.
     Habtis in the past are similarly expressed with {vom} in the past tense and the progressive aspect.
   >
   \xl<
     \li<\sh<{vomac vilisos a tel te pôd atov.}>\ja<I run every day.>>
   >
   \h1<Passives>
-  \h2|number="38"|<Passive-like expression>
+  \h2|number="38"|<Passive-like expressions>
   \p<
-    Shaleian does not make a distinction between the active and passive voice.
-    This is because the active and passive voices differ in that the topic of a sentence with the active voice is the subject while that of a sentence with the passive voice is the object.
-    As mentioned in \a|href="#23"|<Section 23>, one can specify the topic by transposing the prepositional phrases.
-    Thus different syntaxes are not needed to distinguish those two voices.
+    Shaleian does not distinguish between the active and passive voices.
+    The difference between the active and passive voices is that the topic of a sentence with the active voice is the subject, while that of a sentence with the passive voice is the object.
+    As mentioned in \a|href="#23"|<Section 23>, one can specify the topic by exchanging the prepositional phrases.
+    For that reason, different structures are not needed to distinguish the two voices.
   >
   \xl<
     \li<\sh<{sâfat e ces a zis aves.}>\ja<He is loved by everyone.>>
   >
   \p<
-    In this example, the {e}-phrase, which indicates the object, expresses the topic, substituting for the passive voice.
+    In this example, the {e}-phrase, which indicates the object, expresses the topic, giving a similar meaning as the passive voice.
   >
   \p<
-    Such an expression is sometimes called a “passive-like expression” in contrast to other languages which have the passive voice, but note that it is not a special syntax in Shaleian.
+    Such an expression is sometimes called a “passive-like expression” in comparison to other languages which have the passive voice, but note that it is not syntactically special in Shaleian.
   >
   \h1<Comparison>
   \h2|number="39"|<Comparatives>
   \p<
-    To express which is superior when two things are compared, one uses the adverb {emic}, meaning “more”, and the conjunction {ni}, a Shaleian equivalent for “than”.
+    To express which of two items being compared is greater by some standard, one uses the adverb {emic}, meaning “more”, and the conjunction {ni}, the Shaleian equivalent of “than”.
   >
   \p<
-    An expression for comparison is formed in the following manner.
-    First one makes a sentence without the object of the comparison.
+    In order to form an expression for comparison, one first makes a sentence without the object of the comparison.
   >
   \xl<
     \li<\sh<{salat a kadeg afik e adôg.}>\ja<This stone is heavy.>>
   >
   \p<
     Then one makes a sentence mentioning the object of the comparison.
-    Here this sentence must have the same structure as that of the first one.
+    This sentence must have the same structure as the first one.
   >
   \xl<
     \li<\sh<{salat a doldaz e adôg.}>\ja<Elephants are heavy.>>
   >
   \p<
-    Lastly one puts the conjunction {ni} before the sentence about the object of the comparison, and joins it to the first sentence.
-    At this time, {mic}, which means “more”, is placed after the adjective or adverb which expresses the standard of the comparison in the first sentence.
+    Finally, one puts the conjunction {ni} before the sentence about the object of the comparison and joins it to the first sentence.
+    At the same time, {mic}, which means “more”, is placed after the adjective or adverb that expresses the standard of the comparison in the first sentence.
     The word {mic} is used as an adverb and put immediately after the word indicating the standard.
   >
   \xl<
     \li<\sh<{salat a kadeg afik e adôg emic, ni salat a doldaz e adôg.}>\ja<This stone is heavier than elephants are.>>
   >
   \p<
-    Since this sentence is redundant because of the repeated expression, the common part is omitted from the {ni}-clause.
+    Since the repeated expressions in this sentence are redundant, the common part is omitted from the {ni}-clause.
     Note that verbs cannot be omitted, so the proverb {l} is used instead.
     We will explain the proverb later in \a|href="#54"|<Section 54>.
   >
@@ -1083,66 +1082,64 @@
     \li<\sh<{salat a kadag afik e adôg emic, ni lat a doldaz.}>\ja<This stone is heavier than elephants are.>>
   >
   \p<
-    上の例のように比較対象が名詞 1 つでも十分伝わる場合は、{ni} を非動詞修飾形の {ini} に変え、その後に名詞を続けても良い。
-    このとき、{ini} 句は {emic} の直後に移動される。
+    If it is sufficient to mention a single noun as the object of comparison as in the example above, then {ni} can be changed into its nonverb-modifying form, {ini}, with the noun as the object.
+    Here, the {ini}-phrase is moved to lie immediately after {emic}.
   >
   \xl<
-    \li<\sh<{salat a kadag afik e adôg emic ini doldaz.}>\ja<この石はゾウより重い。>>
+    \li<\sh<{salat a kadag afik e adôg emic ini doldaz.}>\ja<This stone is heavier than an elephant.>>
   >
   \p<
-    比較対象とどの程度異なるかを表すには、助詞の {ile} を用いる。
-    これは助詞 {le} の非動詞修飾形である。
+    The particle {ile}, the nonverb-modifying form of {le}, is used to show the degree by which something differs from the object of comparison.
   >
   \xl<
-    \li<\sh<{salat a tel e alot emic ile mulôt il'}[25 ]{ini ces.}>\ja<私は彼より 25 cm 背が高い。>>
+    \li<\sh<{salat a tel e alot emic ile mulôt il'}[25 ]{ini ces.}>\ja<I am 25 cm taller than him.>>
   >
   \p<
-    倍数表現も比較表現を用い、倍数は {ile} 句で表現する。
+    Comparative constructions are also used to express a factor by which one thing exceeds another, with an {ile}-phrase being used for the factor.
   >
   \xl<
-    \li<\sh<{kilat vilisos a tel ovit emic ile vâl il'aqot ini ces.}>\ja<私は彼の 2 倍速く走れる。>>
+    \li<\sh<{kilat vilisos a tel ovit emic ile vâl il'aqot ini ces.}>\ja<I can run twice as fast as him.>>
   >
   \p<
-    {ni} 節もしくは {ini} 句は省略することができる。
-    この場合、平均より優れているなどといった漠然とした比較を表す。
+    {ni}- or {ini}-phrases can be omitted.
+    In this case, the sentence shows a vague comparison, such as one comparing something to the average.
   >
   \xl<
-    \li<\sh<{salot a zecel afik e avituf emic.}>\ja<この問題はより単純だ。>>
+    \li<\sh<{salot a zecel afik e avituf emic.}>\ja<This problem is simpler.>>
   >
   \p<
-    この文は、他に存在する様々な問題に比べて比較的単純であることを意味する。
+    This sentence means that the problem in question is simple compared to other existing problems.
   >
   \p<
-    さて、ここまでの比較表現は比較対象が {ini} 句で表現できていたが、{ini} 句に置き換えられない場合も当然ある。
-    1 つの例を挙げる。
-    まず、以下の文がある。
+    Up to now, we have been looking at examples where the object of comparison can be in an {ini}-phrase, but there are natural examples where this is not the case.
+    We show such an example below.
   >
   \xl<
-    \li<\sh<{salot a xoq aquk e anisxok.}>\ja<あの本はおもしろい。>>
+    \li<\sh<{salot a xoq aquk e anisxok.}>\ja<That book is interesting.>>
   >
   \p<
-    比較対象に関する文として以下がある。
+    Below is another sentence related to the object of comparison.
   >
   \xl<
-    \li<\sh<{revat a loc e'n salot a xoq aquk e anisxok.}>\ja<あなたはあの本がおもしろいと思っている。>>
+    \li<\sh<{revat a loc e'n salot a xoq aquk e anisxok.}>\ja<You think that book is interesting.>>
   >
   \p<
-    この 2 つの文を比較表現にしてつなぎ合わせると、以下のようになる。
+    When these two sentences are linked together in a comparative construction, we get the following.
   >
   \xl<
-    \li<\sh<{salot a xoq aquk e anisxok emic, ni revat a loc e'n salot a xoq aquk e anisxok.}>\ja<あなたがあの本をおもしろいと思っているよりもあの本はおもしろい。>>
+    \li<\sh<{salot a xoq aquk e anisxok emic, ni revat a loc e'n salot a xoq aquk e anisxok.}>\ja<That book is more interesting than you think that book is interesting.>>
   >
   \p<
-    共通部分を省略して、最終的には以下の表現になる。
+    Eliding the shared parts gives us the final result.
   >
   \xl<
-    \li<\sh<{salot a xoq aquk e anisxok emic, ni revat a loc e'n lot.}>\ja<あの本はあなたが思っているよりもおもしろい。>>
+    \li<\sh<{salot a xoq aquk e anisxok emic, ni revat a loc e'n lot.}>\ja<This book is more interesting than you think.>>
   >
   \p<
-    英語の less を用いる比較表現のような「より～ではない」を表したい場合は、{mic} の代わりに {domic} を用いる。
+    To express a comparative construction meaning “less”, one uses {domic} instead of {mic}.
   >
   \xl<
-    \li<\sh<{salot a loc e asokes edomic ini ces.}>\ja<あなたは彼ほど大切ではない。>>
+    \li<\sh<{salot a loc e asokes edomic ini ces.}>\ja<You are less important than him.>>
   >
   \h2|number="40"|<Equatives>
   \p<
