@@ -939,24 +939,23 @@
     \li<\sh<{déxes a del.}>\ja<I slept.>>
     \li<\sh<{déxez a del li yaf.}>\ja<I helped my sister sleep.>>
   >
-  \h1<Special syntaxes for verbs>
+  \h1<Special verb structures>
   \h2|number="35"|<Auxiliary uses of verbs>
   \p<
-    Some of the verbs which can take a {kin}-clausal phrase allows to omit the {kin} and accompanying preposition.
-    This is called an “auxilirary use of verbs”.
+    Some verbs that can take a {kin}-clausal phrase allow omitting the {kin} and accompanying preposition.
+    This is called an “auxilirary use of a verb”.
   >
   \p<
-    We will explain the possibility expression as a typical example of an auxilirary use of verbs.
-    To express possibility, the verb {kil}, which means “be able to do …”, is used as in the following sentence:
+    We will explain the expression of possibility as a representative example of such a use.
+    To express possibility, the verb {kil}, which means “be able to do …”, is used as follows:
   >
   \xl<
     \li<\sh<{kilat a tel e kin ricamos a tel.}>\ja<I can swin.>>
   >
   \p<
-    Suppose that there is at most one prepositional phrase excluding a {kin}-clausal one which modifies the verb in the main clause.
-    In addition to that, suppose also that a phrase of the same form modifies the verb in the {kin}-clause or there is no prepositional phrase in the main clause other than the {kin}-clausal phrase.
+    Suppose that either there are no prepositional phrases, aside from the {kin}-clausal phrase, in the main clause, or there is at most one such prepositional phrase in the main clause that occurs in the same form in the {kin}-clause.
     Under these conditions, one can omit the prepositional phrase and {kin} in the main clause, as in the following sentence.
-    The phrase in the {kin}-clause same as the omitted one tends to be moved immediately after the verb.
+    The phrase in the {kin}-clause that is the same as the omitted one tends to be moved immediately after the verb.
   >
   \xl<
     \li<\sh<{kilat ricamos a tel.}>\ja<I can swim.>>
@@ -969,28 +968,28 @@
   >
   \p<
     This expression is also used to form imperative sentences.
-    Sheleian verbs do not have imperative forms, so the verb {dit}, meaning “order to do …”, is used together.
-    Here {dit} appears as an intransitive verb with the present tense and the continuous aspect. 
+    Sheleian verbs do not have imperative forms, so the verb {dit}, meaning “order to do …”, is used together with the lexical verb.
+    Here, {dit} appears as an intransitive verb with the present tense and the continuous aspect. 
     One cannot omit the object of the command.
   >
   \xl<
     \li<\sh<{ditat lanis a loc e zîdsax.}>\ja<Go to school.>>
   >
   \p<
-    Since this is rather redundant, {ditat} is often abbreviated to {di'}.
+    Since this is rather verbose, {ditat} is often abbreviated to {di'}.
     In spoken language, {ditat} itself is sometimes omitted. 
     We will see this phenomenon in \a|href="#68"|<Section 68>.
   >
   \p<
-    Verbs which allow the auxilirary use are limited`; they do not allow the auxilirary use just because the contitions are met.
-    Major verbs which have this use are {kil}, {qif}, {raf}, {doz} and {vom}. 
+    Verbs which allow the auxilirary use are limited`; that is, meeting the conditions does not automatically allow its use.
+    Verbs which allow the auxiliary use include {kil}, {qif}, {raf}, {doz} and {vom}.
   >
   \h2|number="36"|<Verbal infinitives as nouns>
   \p<
-    Verbal infinitives which are not conjugated at all can be used as nouns meaning “to do …”, that is to say, as gerunds.
+    Verbal infinitives that are not conjugated at all can be used as nouns meaning “the act of doing …”, that is to say, as gerunds.
   >
   \p<
-    A nominal use of a verbal infinitive allows us to replace a {kin}-clause by a nominal phrase without {kin}.
+    A nominal use of a verbal infinitive replaces a {kin}-clause by a nominal phrase without {kin}.
     We will take the following sentence as an example:
   >
   \xl<
@@ -998,15 +997,15 @@
   >
   \p<
     This sentence uses the verbal form {folsesos} of the verbal infinitive {foles} in the {kin}-clause.
-    By changing it into nominal {foles} and prepositions in phrases qualifying it into their nonverb-modifying forms, one can make a sentence which has the same meaning as the previous one.
-    At this time, prepositional phrases which contains obvious elements such as {tel} or {zis} may be omitted.
+    By changing the verb into the nominal {foles}, as well as changing the prepositions in phrases qualifying it into their nonverb-modifying forms, one can make a sentence which has the same meaning as the previous one.
+    At this time, prepositional phrases that contain obvious elements such as {tel} or {zis} may be omitted.
   >
   \xl<
     \li<\sh<{salot e abûd a foles ie kadeg ica zis.}>\ja<It is bad to throw a stone at someone.>>
   >
   \p<
-    This nominal use is, however, not so frequently used.
-    There is rather a tendency to avoid it when many prepositional phrases qualify the verbal infinitive used as a noun.
+    However, this nominal use is not so frequently used.
+    There is a tendency to avoid it when there are many prepositional phrases qualifying the nominalised verbal infinitive.
   >
   \h2|number="37"|<Expression for iteration>
   \p<
