@@ -1874,7 +1874,7 @@ footer {
   div.icon a {
     margin: 0px 5px;
     padding: 0px;
-    font-family: $footer-icon-font-family;
+    font-family: $awesome-icon-font-family;
     font-size: $footer-icon-font-size;
     color: $footer-icon-color;
     text-decoration: none;
@@ -1886,11 +1886,11 @@ footer {
   }
 
   div.icon a.twitter::before {
-    content: "\F000";
+    content: "\F099";
   }
 
   div.icon a.youtube::before {
-    content: "\F001";
+    content: "\F167";
   }
 
   div.icon a.mail::before {
@@ -1898,7 +1898,11 @@ footer {
   }
 
   div.icon a.github::before {
-    content: "\F003";
+    content: "\F09B";
+  }
+
+  div.icon a.discord::before {
+    content: "\F392";
   }
 
   // 著作権表示
