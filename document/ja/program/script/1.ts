@@ -44,7 +44,7 @@ export abstract class Calendar {
 export class OldHairian extends Calendar {
 
   public fromHairia(hairia: Hairia): AbstractDate {
-    let time = (hairia - 1) * 120000 + 1500 * 36000000;
+    let time = (hairia - 1) * 120000;
     let year = FloorMath.div(time, 36000000) + 1;
     let month = FloorMath.div(FloorMath.mod(time, 36000000), 3000000) + 1;
     let day = FloorMath.div(FloorMath.mod(FloorMath.mod(time, 36000000), 3000000), 120000) + 1;
@@ -55,7 +55,7 @@ export class OldHairian extends Calendar {
     let year = date.year;
     let month = date.month;
     let day = date.day;
-    let hairia = (year - 1501) * 300 + (month - 1) * 25 + day;
+    let hairia = (year - 1) * 300 + (month - 1) * 25 + day;
     return hairia;
   }
 
@@ -68,14 +68,14 @@ export class NewHairian extends Calendar {
     let count = hairia + 547862;
     let rawYear = FloorMath.div(4 * count + 3 + 4 * FloorMath.div(3 * (FloorMath.div(4 * (count + 1), 146097) + 1), 4), 1461);
     let remainder = count - (365 * rawYear + FloorMath.div(rawYear, 4) - FloorMath.div(rawYear, 100) + FloorMath.div(rawYear, 400));
-    let year = rawYear + 1;
+    let year = rawYear + 1 - 1500;
     let month = FloorMath.div(remainder, 33) + 1;
     let day = FloorMath.mod(remainder, 33) + 1;
     return new AbstractDate(year, month, day);
   }
 
   public toHairia(date: AbstractDate): Hairia {
-    let year = date.year;
+    let year = date.year + 1500;
     let month = date.month;
     let day = date.day;
     let hairia = 365 * (year - 1) + FloorMath.div(year - 1, 4) - FloorMath.div(year - 1, 100) + FloorMath.div(year - 1, 400) + (month - 1) * 33 + day - 547863;
