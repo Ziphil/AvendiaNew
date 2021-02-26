@@ -4,11 +4,12 @@
 \page<
   \name<文法変遷の過程>
   \ver<>
+  \use-math;
 
   \h1<時代区分一覧>
   \table<
     \tr<\th<代>\th<期>\th<適用期間>>
-    \tr<\td<P 代>\td<>\td<\h<前3> ～ \h<1>>>
+    \tr<\td<P 代>\td<>\td<\h<&m<-2>> ～ \h<1>>>
     \tr<\td|row="2"|<1 代>\td<1 期>\td<\h<1> ～ \h<12>>>
     \tr<\td<2 期>\td<\h<12> ～ \h<34>>>
     \tr<\td|row="7"|<2 代>\td<1 期>\td<\h<45> ～ \h<64>>>

@@ -3,7 +3,7 @@
 
 \page<
   \name<暦>
-  \ver<4 代 1 期～ 5 代 5 期>
+  \ver<4 代 1 期～ S 代>
   \use-math;
 
   \h1<日付>
@@ -55,7 +55,7 @@
     hairia = julian - 2455949
     raw_year = (4 * count + 3 + 4 * (3 * (4 * (count + 1) / 146097 + 1) / 4)) / 1461
     remainder = count - (365 * raw_year + raw_year / 4 - raw_year / 100 + raw_year / 400)
-    year = raw_year + 1 - 1500
+    year = raw_year - 1500 + 1
     month = remainder / 33 + 1
     day = remainder % 33 + 1
   >

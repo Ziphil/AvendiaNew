@@ -154,7 +154,7 @@ export class Root extends RootBase<{}, RootState> {
           <label htmlFor="agree-2">最小対語</label>
           <br/>
           <input type="radio" name="version" value="0" id="version-0" checked={this.state.version === 0} onChange={() => this.handleSearchChange({version: 0})}/>
-          <label htmlFor="version-0">5 代 5 期</label>{"　"}
+          <label htmlFor="version-0">S 代</label>{"　"}
           <input type="radio" name="version" value="2" id="version-2" checked={this.state.version === 2} onChange={() => this.handleSearchChange({version: 2})}/>
           <label htmlFor="version-2">3 代 6 期</label>{"　"}
           <input type="radio" name="version" value="4" id="version-4" checked={this.state.version === 4} onChange={() => this.handleSearchChange({version: 4})}/>
