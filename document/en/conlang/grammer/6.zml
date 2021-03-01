@@ -10,7 +10,7 @@
   \h1<Introduction>
   \h2|number="1"|<Effective date>
   \p<
-    The grammar of version S of the Shaleian language has been used since 26`/09`/1504 of the Hairia calendar (07`/Nov`/2015 of the Gregorian calendar).
+    The grammar of version S of the Shaleian language has been used since 26`/09`/04 of the Hairia calendar (07`/Nov`/2015 of the Gregorian calendar).
     Note that sentences written before that date are based on an older grammar and cannot be interpreted using the current one.
   >
   \h2|number="2"|<Note on notation>
@@ -66,7 +66,7 @@
     See \a|href="#8"|<Section 8> for details.
   >
   \p<
-    In 15`/10`/1506 of the Hairia calendar (29`/Nov`/2017 of the Gregorian calendar), the letterforms of the Shaleian alphabet were revised`; the forms listed on this page are the post-revision forms. From this revision on, the new forms are used as the primary forms, but the old forms may be used as well.
+    In 15`/10`/06 of the Hairia calendar (29`/Nov`/2017 of the Gregorian calendar), the letterforms of the Shaleian alphabet were revised`; the forms listed on this page are the post-revision forms. From this revision on, the new forms are used as the primary forms, but the old forms may be used as well.
     Consult \a|href="5.html"|<the grammar before the revision> for the old alphabet.
   >
   \h2|number="6"|<Numerals>
@@ -1289,28 +1289,28 @@
   \h1<Conjunctions>
   \h2|number="44"|<Connectives>
   \p<
-    シャレイア語の連結詞は {o}, {é}, {á}, {à} の 4 つのみで、これらは 2 つの語句や節を対等な関係で結ぶ。
-    そのため、つながれている語句や文を入れ替えても意味は変化しない。
-    これら 4 つの連結詞には、それぞれ {lo}, {lé}, {lá}, {dà} という別形が存在し、別形の方は節と節を結ぶときだけ使われる。
+    Shaleian has five connectives: {o}, {ò}, {é}, {á} and {à}, which connect two phrases or clauses in an equal relationship.
+    For that reason, the meaning does not change, even if the phrases or clauses connected are switched in order.
+    Out of these, {ò}, {é}, {á} and {à} have alternate forms {lo}, {lé}, {lá} and {dà}, which are used only to connect a clause to another clause.
   >
   \p<
-    連結詞が語句をつなぐ場合は、つなげたい語の間に接続詞を入れれば良い。
+    When a connective connects two phrases, it can be inserted between the words to be connected.
   >
   \xl<
-    \li<\sh<{cikekat a tel e dev o miv.}>\ja<私はペンと紙を持っている。>>
+    \li<\sh<{cikekat a tel e dev o miv.}>\ja<I have a pen and some paper.>>
   >
   \p<
-    上の例のように名詞だけでなく、形容詞や動詞などの様々な語句をつなげることができる。
+    Not only can nouns be connected, as above, but also other kinds of phrases such as adjectives and verbs.
   >
   \xl<
-    \li<\sh<{debat o dojat e tel.}>\ja<私は疲れているしつらい。>>
+    \li<\sh<{debat o dojat e tel.}>\ja<I'm tired and worn down.>>
   >
   \p<
-    連結詞で 2 つの文をつなげる場合は、文の前に連結詞をつけ、さらに節と節の間にタデックを打つ。
-    接続詞節が短い場合など、このタデックは任意に省略できる。
+    When a connective connects two sentences, it is placed before the sentence, and a datek is inserted between the two clauses.
+    If the connective phrase is short, this datek may be omitted at one's discretion.
   >
   \xl<
-    \li<\sh<{kavat a tel e xoq avôl, dà dulîdes a tel e met arak.}>\ja<私はたくさんの本を持っているが、どれも読んだことがない。>>
+    \li<\sh<{kavat a tel e xoq avôl, dà dulîdes a tel e met arak.}>\ja<I have a lot of books, but I haven't read any of them.>>
   >
   \h2|number="45"|<Particles>
   \p<
