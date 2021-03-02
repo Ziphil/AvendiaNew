@@ -481,7 +481,7 @@ module ShaleiaStringUtilities
     name = "aɪ" if name == "<á>"
     name = "eɪ" if name == "<é>"
     name = "aʊ" if name == "<à>"
-    name = "oɐ" if name == "<ò>"
+    name = "ɔɐ" if name == "<ò>"
     name = "laɪ" if name == "<l><á>"
     name = "leɪ" if name == "<l><é>"
     name = "daʊ" if name == "<d><à>"
