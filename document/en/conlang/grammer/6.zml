@@ -1463,16 +1463,16 @@
   >
   \h2|number="50"|<Nominal forms of numerals>
   \p<
-    \a|href="#49"|<第 49 節>で述べたように、基数や序数などを表すときに用いる数詞は形容詞である。
-    このような形容詞としての数詞は \a|href="#48"|<第 48 節>で述べた数の読み方に従って、綴ったり読んだりすれば良い。
+    As described in \a|href="#49"|<Section 49>, the numeral used in cardinal and ordinal numerals are adjectives.
+    Numerals used as such follow the reading rules described in \a|href="#48"|<Section 48> and may be spelt out or read.
   >
   \p<
-    一方、「3」そのものを表したいときなど、数詞を名詞として扱いたいときは数の読みが変わる。
-    具体的には、最終音節に含まれる母音が [a] → [e] → [i] → [a] および [o] → [u] → [o] という規則に従って変化する。
-    例えば、67 は形容詞としては {ricetsez} だが、名詞としては {ricetsiz} となる。
+    On the other hand, when one wants to use a numeral as a noun, such as when showing the idea of “3” itself, the reading of the number changes.
+    To be specific, the vowel of the final syllable is mutated according to the rules [a] → [e] → [i] → [a] and [o] → [u] → [o].
+    For example, 67 as an adjective is {ricetsez}, but as a noun, it is {ricetsiz}.
   >
   \xl<
-    \li<\sh<{salot a ricetsiz e atûl emic ini tisal.}>\ja<67 は 100 より小さい。>>
+    \li<\sh<{salot a ricetsiz e atûl emic ini tisal.}>\ja<67 is smaller than 100.>>
   >
   \h2|number="51"|<Expression for date and time>
   \p<
