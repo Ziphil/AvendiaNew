@@ -1387,11 +1387,11 @@
   \h1<Numerals>
   \h2|number="48"|<Numbers>
   \p<
-    シャレイア語では、数は 10 進法によって数える。
-    0 から 9 までの数の読み方については、以下の表に示す通りである。
+    Shaleian uses a base-10 system for counting.
+    The numbers from 0 to 9 are read as in the table below.
   >
   \table<
-    \tr<\th<単語>\th<数>>
+    \tr<\th<word>\th<number>>
     \tr<\td<{nof}>\td<0>>
     \tr<\td<{tis}>\td<1>>
     \tr<\td<{qec}>\td<2>>
@@ -1404,40 +1404,40 @@
     \tr<\td<{von}>\td<9>>
   >
   \p<
-    数が 4 桁以下の場合は、上に示した 1 桁分の数字の後に以下に示す位取りの語をつけて読めば良い。
-    位が 0 であるものは読まない。
+    Numbers with no more than four digits can be read by attaching the aforementioned numerals for each digit with the unit words shown below.
+    If there are digits with value 0, then they are not read.
   >
   \table<
-    \tr<\th<単語>\th<数>>
+    \tr<\th<word>\th<number>>
     \tr<\td<[et]>\td<10>>
     \tr<\td<[il]>\td<100>>
     \tr<\td<[as]>\td<1000>>
   >
   \p<
-    例えば、3487 は {yosaspivilkaqetsez} となる。
+    For instance, 3487 is {yosaspivilkaqetsez}.
   >
   \p<
-    5 桁以上の場合は、数を下の位から 4 桁ずつ区切って、それぞれを 4 桁以下の場合と同様に読み、区切りの位置に以下の位取りを表す語を入れる。
-    数の綴りを書くときは、以下の単語の直後にフェークを入れることがある。
+    To read a number with five or more digits, one splits the digits into four-digit groups from the least significant end and reads each group of digits using the case above, with the unit words below between the groups.
+    When such numerals are spelt out, fêks are placed immediately after the words listed below.
   >
   \table<
-    \tr<\th<単語>\th<数>>
-    \tr<\td<[otik]>\td<1 万 (10\sup<4>)>>
-    \tr<\td<[oqek]>\td<1 億 (10\sup<8>)>>
-    \tr<\td<[oyok]>\td<1 兆 (10\sup<12>)>>
-    \tr<\td<[opik]>\td<1 京 (10\sup<16>)>>
-    \tr<\td<[oxak]>\td<1 垓 (10\sup<20>)>>
+    \tr<\th<word>\th<number>>
+    \tr<\td<[otik]>\td<ten thousand (10\sup<4>)>>
+    \tr<\td<[oqek]>\td<one hundred million (10\sup<8>)>>
+    \tr<\td<[oyok]>\td<one trillion (10\sup<12>)>>
+    \tr<\td<[opik]>\td<ten quadrillion (10\sup<16>)>>
+    \tr<\td<[oxak]>\td<one hundred quintillion (10\sup<20>)>>
   >
   \p<
-    例えば、517002 は {xaletisotik-seqasqot} となる。
+    For instance, 517002 is {saletisotik-seqasqot}.
   >
   \p<
-    以上のように、日本語の数え方とよく似ている。
-    ただし、日本語では「五万一千」や「一百二十」ではなく「五万千」や「百二十」と言い、1 を省略することがあるが、シャレイア語で {tis} は省略できない。
-    例えば、10 は {tiset} で、11101 は {tisotik-tisastisiltis} となる。
+    The numeral system described above is similar to that of Japanese.
+    However, in Japanese, 51000 and 120 are read not as 「五万一千」 or 「一百二十」 but rather as 「五万千」 or 「百二十」; the “1” digits are elided in Japanese, but {tis} cannot be omitted in Shaleian.
+    For instance, 10 is {tiset}, and 11101 is {tisotik-tisastisiltis}.
   >
   \p<
-    大きな数を数字で書くときは、数の大きさの判断をしやすくするために、4 桁ずつ空白で区切って [51 7002] などと書くこともある。
+    When writing large numerals with digits, they are written with a space between groups of four digits, as in [51 7002], in order to make it easy to discern the size of the number.
   >
   \h2|number="49"|<Use of numerals>
   \p<
