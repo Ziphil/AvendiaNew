@@ -1355,34 +1355,34 @@
     However, it shows the relationship between the meanings of the former sentence and the latter one; namely that of effect and cause.
     If the datek immediately following the conjunction used adverbially is removed, and the dek of the preceding sentence is changed into a datek, the resulting sentence follows the ordinary use of a conjunction to join together two clauses.
   >
-  \h2|number="47"|<Conjunction {kin}>
+  \h2|number="47"|<The conjunction {kin}>
   \p<
-    少し特殊な接続詞として {kin} というものがある。
-    これは「～ということ」もしくは「～という状態」という意味で、節を名詞化する働きをもつ。
-    英語でいう to 不定詞, that 節, wh 疑問詞節の役割を全て担う。
-    この名詞化された節は「{kin} 節」と呼び、{kin} 節が付随する助詞句を「{kin} 節句」と呼ぶ。
+    Shaleian has a special conjunction, {kin}.
+    This conjunction means “the action of …” or “the state of …” and has the function of nominalising clauses.
+    It takes the roles of the “to”-infinitive, the “that”-clause and the “wh”-interrogative clause of English.
+    The nominalised clause is called a “{kin}-clause”, and the prepositional phrase to which the {kin}-clause is attached is called a “{kin}-clause phrase”.
   >
   \xl<
-    \li<\sh<{salot e asas a kin feraces a ces ca fax.}>\ja<彼が母親を手伝ったのは良いことだ。>>
+    \li<\sh<{salot e asas a kin feraces a ces ca fax.}>\ja<It was good that he helped his mother.>>
   >
   \p<
-    上の例文では、{feraces} 以下の節が名詞化され、{a} 句の要素となっている。
+    In the example above, the clause under {feraces} has been nominalised and become the object of {a}.
   >
   \p<
-    {kin} 節の内容全体を何らかの語で修飾したい場合は、その修飾語を {kin} の直後に置く。
+    If the entire content of a {kin}-clause is modified by some word, that modifier is placed immediately after the {kin}.
   >
   \xl<
-    \li<\sh<{haros e tel a kin etut yepelos a'l e yepil.}>\ja<私の気分を良くするのは歌を歌うことだけだ。>>
+    \li<\sh<{haros e tel a kin etut yepelos a'l.}>\ja<The only thing that makes me happy is singing.>>
   >
   \p<
-    上の文で {etut} を {yapelos} の直後に置くと、{etut} が {kin} 節全体ではなく {yapelos} を修飾してしまうので、意味が「歌を歌うだけで気分が良くなる」に変わってしまう。
+    If {etut} were placed immediately after {etut} in the above sentence, it would not modify the entire {kin}-clause but rather only {yepelos}, and the sentence would mean “I feel good just by singing”.
   >
   \p<
-    {kin} を用いて間接疑問の表現も構成できるが、これは\a|href="#31"|<第 31 節>で説明した。
+    {kin} can also be used to form indirect questions, as explained in \a|href="#31"|<Section 31>.
   >
   \p<
-    {kin} は接続詞だが、他の接続詞と異なり 2 つの要素をつなぐ役割はない。
-    {kin} 節内の時制は限定節と同じように、主節の時制と相対的に決まる。
+    Although {kin} is a conjunction, it does not have the role of connecting two items as other conjunctions do.
+    The tense within a {kin} clause is relative to that of the main clause, as with restrictive clauses.
   >
   \h1<Numerals>
   \h2|number="48"|<Numbers>
