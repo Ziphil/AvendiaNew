@@ -1561,22 +1561,23 @@
   \xl<
     \li<\sh<{cipases a tel ca ces e'n fegis a's e dev.}>\ja<I asked him to buy a pen.>>
   >
-  \h2|number="56"|<Abbereviation for date and time>
+  \h2|number="56"|<Abbereviations for dates and times>
   \p<
-    日付や時刻の表現は、数字だけをカルタックで区切る略記が用意されている。
-    このとき、年は 4 桁に、それ以外は 2 桁になるように、桁が足りない場合は先頭に 0 がつけ足される。
-    \a|href="#51"|<第 51 節>で述べたように、シャレイア語では小さい単位から日時を述べるので、日本で一般的に用いられる表記と数の順番が逆になるので注意すること。
+    Expressions for dates and times can be abbreviated by writing the numerals separated by kaltaks.
+    In this case, the year takes four digits and other numerals take two digits; if a numeral does not have enough digits, then it is padded with the digit [0] on the left.
+    As explained in \a|href="#51"|<Section 51>, dates are written with the smallest unit first in Shaleian.
+    Note that this order is opposite of the Japanese order.
   >
   \xl<
-    \li<\sh<{zêfes a tel vo fêd te}[ 23:05.]>\ja<私はここに 5 時 23 分に到着した。>>
+    \li<\sh<{zêfes a tel vo fêd te}[ 12:05.]>\ja<I arrived at 12:05.>>
   >
   \p<
-    上の例の [23:05] は「5 時 23 分」すなわち {meris ic'}[23 ]{tef ic'}[5] の略記であるが、「5 月 23 日」の {taq ic'}[23 ]{ben ic'}[5] の略記であるという可能性もある。
-    この略記法ではその区別はできず、文脈で判断される。
+    The expression [12:05] in the above example is short for “five minutes after twelve o'clock”, or in other words, {tat ile tef}[ 12 ]{meris}[ 5], but it could also stand for “May 12”, or {taq ac'}[12 ]{ben ac'}[5].
+    They cannot be distinguished from the abbreviation alone, only from the context.
   >
   \p<
-    この略記を読むときは、カルタックで区切られた数を {i} でつなげて 1 つずつ読む。
-    例えば [23:05] は {qecetyus i xel} と読む。
+    When reading this abbreviation aloud, the numerals delimited by the kaltaks are pronounced in succession.
+    For instance, [12:05] would be read as {tisetqic-xel}.
   >
   \h2|number="57"|<Creating compounds>
   \p<
