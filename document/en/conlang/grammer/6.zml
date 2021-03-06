@@ -1491,20 +1491,20 @@
   \h1<Omission and abbreviation>
   \h2|number="52"|<Omission of prepositional phrases>
   \p<
-    シャレイア語には、動詞に対して必ず必要な助詞句というものはない。
-    したがって、文法上では自由に助詞句を省略できる。
-    しかし、主語などを表す {a} 句、目的語を表す {e} 句、また動詞が他動詞として用いられる場合はその主語を表す {li} 句は、あまり積極的には省略されない。
+    Prepositional phrases, unlike verbs, are not always required in Shaleian.
+    Consequently, they can be omitted freely according to grammar.
+    However, the {a}-phrase, which shows the subject; the {e}-phrase, which shows the object; and the {li}-phrase, which shows the subject when a verb is used as a transitive verb are not omitted very aggressively.
   >
   \p<
-    明示されていない助詞句には、\a|href="#65"|<第 65 節>で説明する不定の意味の代詞があるものだとして解釈される。
+    A prepositional phrase that is not explicitly specified is interpreted to govern a pronoun of indefinite meaning, as explained in \a|href="#65"|<Section 65>.
   >
   \xl<
-    \li<\sh<{bozetes e tel.}>\ja<私は殴られた。>>
+    \li<\sh<{bozetes e tel.}>\ja<I was hit.>>
   >
   \p<
-    この例文では、主語を表す {a} 句が省略され、殴った主体が明示されていない。
-    この場合、読者は「誰か特定の人に殴られたのだろうが言及していない」と認識する。
-    別な言い方をすれば、{a zis} や {a zat} が省略されていると考える。
+    In this example, the {a}-phrase showing the subject is omitted, and the one who performed the hitting is not explicit.
+    In this case, the reader understands that the writer was hit by some particular person but is not referencing the attacker.
+    To put it in other words, it is thought to be omitting {a zis} or {a zat}.
   >
   \h2|number="53"|<Omission of repetitions>
   \p<
