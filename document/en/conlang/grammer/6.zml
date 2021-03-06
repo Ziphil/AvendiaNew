@@ -1506,30 +1506,31 @@
     In this case, the reader understands that the writer was hit by some particular person but is not referencing the attacker.
     To put it in other words, it is thought to be omitting {a zis} or {a zat}.
   >
-  \h2|number="53"|<Omission of repetitions>
+  \h2|number="53"|<Omission of repeated elements>
   \p<
-    語句の繰り返しは冗長で、シャレイア語では嫌われる。
-    そのため、2 回目以降は繰り返し部分が省略される。
-    シャレイア語では動詞を省略することが原則的に許されていないため、動詞を省略したい場合は代動詞の {l} を用いる。
-    また、同じ単語が複数回出てきてしまう場合は、2 回目以降を\a|href="#65"|<第 65 節>で述べる同種の代詞に置き換えることで、単語の重複を避けられる。
-    なお、否定副詞は繰り返されていても省略できない。
-    代動詞 {l} については\a|href="#54"|<第 54 節>を参照すること。
+    Repeating words or phrases is considered verbose and disliked in Shaleian.
+    For that reason, the repeated part is omitted from its second appearance forward.
+    Because verbs are generally not allowed to be omitted in Shaleian, they are replaced with the pro-verb {l} when they should be omitted.
+    In addition, when the same word appears several times, it is replaced with a pronoun of the same kind from its second appearance onward, as described in \a|href="#65"|<Section 65>, avoiding its repetition.
+    Furthermore, negative adverbs are not omitted, even when they are repeated.
+    See \a|href="#54"|<Section 54> for information on the pro-verb {l}.
   >
   \xl<
-    \li<\sh<{nises a hîx zi abig ca azaf, ce nises a hîx zi azaf ca ajôm.}>\ja<空は青から赤に変わり、空は赤から黒に変わった。>>
+    \li<\sh<{nises a hîx zi abig ca azaf, ce nises a hîx zi azaf ca ajôm.}>\ja<The sky changed from blue to red, and the sky changed from red to black.>>
   >
   \p<
-    この例文は、前半と後半の節に動詞 {nises} と助詞句 {a hîx} が共通して存在する。
-    そのため、これらは以下のように省略される。
+    In this example, the verb {nises} and the prepositional phrase {a hîx} exist in both the former and latter clauses.
+    For that reason, they are omitted as shown below.
   >
   \xl<
-    \li<\sh<{nises a hîx zi abig ca azav, ce les zi azaf ca ajôm.}>\ja<空は青から赤に変わり、赤から黒に変わった。>>
+    \li<\sh<{nises a hîx zi abig ca azav, ce les zi azaf ca ajôm.}>\ja<The sky changed from blue to red, and then from red to black.>>
   >
   \p<
-    まず、後半の節から {a hîx} が省略されて消え、{nises} は代動詞を使って {les} となっている。
+    First, {a hîx} is removed from the latter clause, and {nises} is changed to {les} by using the pro-verb.
   >
   \p<
-    \a|href="#39"|<第 39 節>および\a|href="#40"|<第 40 節>で解説した比較表現と同等表現では、接続詞 {ini} を用いて比較対象を表現するが、この {ini} 節では例外的に動詞まで省略ができる。
+    In comparative and equative expressions, explained in \a|href="#39"|<Sections 39> and \a|href="#40|<40>, the object of comparison is shown using the conjunction {ini}.
+    As an exception, the verb in such an {ini}-clause may be omitted.
   >
   \h2|number="54"|<Proverb {l}>
   \p<
