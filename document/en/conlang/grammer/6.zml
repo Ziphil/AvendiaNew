@@ -1510,10 +1510,10 @@
   \p<
     Repeating words or phrases is considered verbose and disliked in Shaleian.
     For that reason, the repeated part is omitted from its second appearance forward.
-    Because verbs are generally not allowed to be omitted in Shaleian, they are replaced with the pro-verb {l} when they should be omitted.
+    Because verbs are generally not allowed to be omitted in Shaleian, they are replaced with the proverb {l} when they should be omitted.
     In addition, when the same word appears several times, it is replaced with a pronoun of the same kind from its second appearance onward, as described in \a|href="#65"|<Section 65>, avoiding its repetition.
     Furthermore, negative adverbs are not omitted, even when they are repeated.
-    See \a|href="#54"|<Section 54> for information on the pro-verb {l}.
+    See \a|href="#54"|<Section 54> for information on the proverb {l}.
   >
   \xl<
     \li<\sh<{nises a hîx zi abig ca azaf, ce nises a hîx zi azaf ca ajôm.}>\ja<The sky changed from blue to red, and the sky changed from red to black.>>
@@ -1526,22 +1526,22 @@
     \li<\sh<{nises a hîx zi abig ca azav, ce les zi azaf ca ajôm.}>\ja<The sky changed from blue to red, and then from red to black.>>
   >
   \p<
-    First, {a hîx} is removed from the latter clause, and {nises} is changed to {les} by using the pro-verb.
+    First, {a hîx} is removed from the latter clause, and {nises} is changed to {les} by using the proverb.
   >
   \p<
     In comparative and equative expressions, explained in \a|href="#39"|<Sections 39> and \a|href="#40|<40>, the object of comparison is shown using the conjunction {ini}.
     As an exception, the verb in such an {ini}-clause may be omitted.
   >
-  \h2|number="54"|<Proverb {l}>
+  \h2|number="54"|<The proverb {l}>
   \p<
-    動詞の繰り返しがある場合は、2 回目以降の動詞を「代動詞」と呼ばれる {l} に置き換えることで、繰り返しを回避できる。 
-    この {l} は、直前に出てきた動詞とそれを修飾する助詞句全体の代わりをする。
+    When a verb is repeated, its second occurrence onward is replaced by {l}, known as the “proverb”, avoiding the repetition.
+    This {l} stands in for the verb in the clause immediately preceding it and all prepositional phrases that modify it.
   >
   \xl<
-    \li<\sh<{kavat a tel e monaf. lat a ʻmelfih avoc.}>\ja<私は猫を飼っている。メルフィアもそうだ。>>
+    \li<\sh<{kavat a tel e monaf. lat a ʻmelfih avoc.}>\ja<I have a cat. Melfia does too.>>
   >
   \p<
-    上の例では、{lat} は {kavat e monaf} の代わりをしている。
+    In the above example, {lat} stands for {kavat e monaf}.
   >
   \h2|number="55"|<Abbreviated forms>
   \p<
