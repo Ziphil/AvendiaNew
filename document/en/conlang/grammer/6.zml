@@ -1545,20 +1545,21 @@
   >
   \h2|number="55"|<Abbreviated forms>
   \p<
-    一人称を表す {tel} や二人称を表す {loc}、さらにすでに述べられた人や物を表す {ces} や {cit} は、文中で頻繁に出てくることが多いため、冗長になるのを防ぐために、同じ節で 2 回目以降に出てきた場合それぞれ {'l}, {'c}, {'s}, {'t} に縮約されることが多い。
-    このとき、付随する助詞と {'l}, {'c}, {'s}, {'t} の間のスペースはなくなる。
-    なお、この縮約が用いられるのは、1 つの文の中で 2 回目以降に出てきた場合のみであり、1 回目のものは縮約されないので注意すること。
-    また、{a}, {e}, {li}, {ca}, {zi}, {i} の 6 つの助詞の直後以外の位置で縮約されることは稀である。
+    The first-person pronoun {tel}, the second-person pronoun {loc}, as well as {ces} and {cit}, which refer to a person or object mentioned earlier, occur frequently in sentences.
+    In order to reduce verbosity, they are often abbreviated as {'l}, {'c}, {'s} and {'t}, respectively, starting from their second occurrence in the same clause.
+    In this case, there is no space between the preposition being attached to and the abbreviated form.
+    In addition, these abbreviations can be used only from the second occurrence onward within a sentence; they cannot be used at their first occurrence.
+    Moreover, they are rarely used except immediately after the six prepositions {a}, {e}, {li}, {ca}, {zi} and {i}.
   >
   \xl<
-    \li<\sh<{sâfat a tel e kin catos a'l vo fecil ica sod.}>\ja<私は家の周りを歩くのが好きだ。>>
+    \li<\sh<{sâfat a tel e kin catos a'l vo fecil ica sod.}>\ja<I like walking in the surroundings of my house.>>
   >
   \p<
-    また、{kin} 節もよく使われるので、{'n} という縮約形が使われる。
-    これは文の中の 1 回目の {kin} に対しても用いられる。
+    Furthermore, {kin}-clauses are used often; thus, {kin} is often abbreviated to {'n}.
+    This abbreviation can be used even for the first occurrence of {kin} in a sentence.
   >
   \xl<
-    \li<\sh<{cipases a tel ca ces e'n fegis a's e dev.}>\ja<私は彼に筆記具を買ってくるよう頼んだ。>>
+    \li<\sh<{cipases a tel ca ces e'n fegis a's e dev.}>\ja<I asked him to buy a pen.>>
   >
   \h2|number="56"|<Abbereviation for date and time>
   \p<
