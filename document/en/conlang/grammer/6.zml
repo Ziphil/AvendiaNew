@@ -1474,16 +1474,19 @@
   \xl<
     \li<\sh<{salot a ricetsiz e atûl emic ini tisal.}>\ja<67 is smaller than 100.>>
   >
-  \h2|number="51"|<Expression for date and time>
+  \h2|number="51"|<Dates and times>
   \p<
-    日時の表現には序数を用いる。
-    このとき、単位が小さい方から順に並べる。
-    例えば、「4 月 17 日」は {taq ic'}[17 ]{ben ic'}[4] と表し、「8 時 12 分 72 秒」は {tît ic'}[72 ]{meris ic'}[12 ]{tef ic'}[8] と表す。
-    名詞が連続してしまうが、この日時の表記のときに限って例外的に認められる。
+    To express dates, one uses ordinal numerals and connects the unit + {ac'} + numeral into a group.
+    The units are lined up from the smallest first.
+    For instance, “April 17” would be expressed as {taq ic'}[17 ]{ben ic'}[4].
   >
   \p<
-    なお、序数を使わずに基数を用いると、時刻ではなく時間を表すようになる。
-    すなわち {ben ic'}[4] と {ben il'}[4] はそれぞれ「4 月」と「4 ヶ月」を表す。
+    To express times, {tat ile} is followed by the unit and the numeral.
+    Unlike with dates, the units are lined up from the largest first.
+    For instance, the time “8:12” would be epxressed as  as {tat ile tef}[ 8 ]{meris}[ 12].
+  >
+  \p<
+    Although nouns are placed in succession in all sorts of expressions, these expressions of dates and times are recognised as a special case.
   >
   \h1<Omission and abbreviation>
   \h2|number="52"|<Omission of prepositional phrases>
