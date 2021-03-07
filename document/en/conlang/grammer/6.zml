@@ -1814,11 +1814,11 @@
   >
   \h2|number="68"|<Imperatives>
   \p<
-    \a|href="#35"|<第 35 節>で述べたように、命令を表現するには動詞 {dit} を用いるが、口語ではこの動詞が省略され、いきなり命令内容の動詞から文が始まることがある。
-    さらに、命令対象が二人称の {loc} である場合、{'c} に縮約されることが多い。
+    As explained in \a|href="#35"|<Section 35>, the verb {dit} is used to indicate commands, but this verb is sometimes omitted in colloquial language, such that the imperative sentence starts abruptly with the verb.
+    Furthermore, if the target of command is the second-person pronoun {loc}, it is often abbreviated to {'c}.
   >
   \xl<
-    \li<\sh<{pariqaf a'c!}>\ja<消えろ!>>
+    \li<\sh<{pariqaf a'c!}>\ja<Go away!>>
   >
   \h1<Detailed explanation for categories>
   \h2|number="69"|<Verbal infinitives>
