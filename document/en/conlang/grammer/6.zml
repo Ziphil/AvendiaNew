@@ -1306,8 +1306,8 @@
     \li<\sh<{debat o dojat e tel.}>\ja<I'm tired and worn down.>>
   >
   \p<
-    When a connective connects two sentences, it is placed before the sentence, and a datek is inserted between the two clauses.
-    If the connective phrase is short, this datek may be omitted at one's discretion.
+    When a connective connects two sentences, it is placed before the sentence, and a tadek is inserted between the two clauses.
+    If the connective phrase is short, this tadek may be omitted at one's discretion.
   >
   \xl<
     \li<\sh<{kavat a tel e xoq avôl, dà dulîdes a tel e met arak.}>\ja<I have a lot of books, but I haven't read any of them.>>
@@ -1319,7 +1319,7 @@
   >
   \p<
     The basic use of particles as conjunctions is to connect two clauses.
-    That is, the conjunction is attached before one of the clauses, and a datek is inserted between the two clauses.
+    That is, the conjunction is attached before one of the clauses, and a tadek is inserted between the two clauses.
     The clause with the particle used as the conjunction is called a “conjunction clause”.
   >
   \xl<
@@ -1345,7 +1345,7 @@
   \p<
     Although the function of a conjunction is to join two clauses in a single sentence, there are situations when it merely has the meaning of connecting two separate sentences.
     This is called an “adverbial use of a conjunction”.
-    In cases where one is used as such, a datek is always placed immediately after the connective or particle used as a conjunction.
+    In cases where one is used as such, a tadek is always placed immediately after the connective or particle used as a conjunction.
   >
   \xl<
     \li<\sh<{kavat a tel e xoq avôl. vade, sêfat a tel e met.}>\ja<I have a lot of books. That's because I like them.>>
@@ -1353,7 +1353,7 @@
   \p<
     In the example above, the conjunction {vade} does not connect clauses because the sentence is cut off mid-way.
     However, it shows the relationship between the meanings of the former sentence and the latter one; namely that of effect and cause.
-    If the datek immediately following the conjunction used adverbially is removed, and the dek of the preceding sentence is changed into a datek, the resulting sentence follows the ordinary use of a conjunction to join together two clauses.
+    If the tadek immediately following the conjunction used adverbially is removed, and the dek of the preceding sentence is changed into a tadek, the resulting sentence follows the ordinary use of a conjunction to join together two clauses.
   >
   \h2|number="47"|<The conjunction {kin}>
   \p<
@@ -1588,7 +1588,7 @@
   \h1<Rhetorical expressions>
   \h2|number="58"|<Insertion>
   \p<
-    As explained in \a|href="#20"|<Section 20>, an adverb modifying a verb falls immediately after the verb or at the end of a sentence; however, they can also be placed between two prepositional phrases, provided that dateks are placed before and after the adverbial phrase.
+    As explained in \a|href="#20"|<Section 20>, an adverb modifying a verb falls immediately after the verb or at the end of a sentence; however, they can also be placed between two prepositional phrases, provided that tadeks are placed before and after the adverbial phrase.
     This is called an “insertion of an adverb”.
   >
   \xl<
@@ -1600,7 +1600,7 @@
   >
   \h2|number="59"|<Emphasis>
   \p<
-    By moving a verb-modifying prepositional phrase placed after an ordinary verb before the verb and placing a datek after it, that prepositional phrase can be emphasized.
+    By moving a verb-modifying prepositional phrase placed after an ordinary verb before the verb and placing a tadek after it, that prepositional phrase can be emphasized.
   >
   \xl<
     \li<\sh<{e ʻmelfih, cafeles a tel.}>\ja<Melfia is the one I called.>>
@@ -1612,7 +1612,7 @@
     \li<\sh<{okôk, ditat lesis a'c e cal.}>\ja<Make sure to do that.>>
   >
   \p<
-    A verb-modifying prepositional phrase or adverb can also be emphasized by placing it at the end of a sentence and placing a datek before it.
+    A verb-modifying prepositional phrase or adverb can also be emphasized by placing it at the end of a sentence and placing a tadek before it.
     Compared to moving it before the verb as described earlier, this method gives less emphasis and is used for reminders of new information at the end of a sentence and such.
   >
   \xl<
@@ -1643,13 +1643,13 @@
   \h1<Other special expressions>
   \h2|number="62"|<Nonrestrictive uses of adjectives>
   \p<
-    形容詞は修飾する名詞を限定する働きをもつが、形容詞の前後にタデックを打つことで、名詞を限定する働きをなくすことができる。
-    形容詞が文末にある場合、タデックは形容詞の前に打つだけで良い。
-    このとき、この形容詞は名詞を補足的に説明していると捉えられる。
-    これは、「形容詞の非限定用法」と呼ばれ、\a|href="#43"|<第 43 節>で説明した限定節の非限定用法と意味の変化は同じである。
+    Although adjectives have the function of restricting the nouns that they modify, an adjective can be made to not restrict its heads by placing tadeks before and after it.
+    If the adjective occurs at the end of a sentence, it simply receives a tadek before it.
+    In this case, the adjective is understood to supplement the meaning of a noun.
+    This construction is called a “nonrestrictive use of an adjective”. The change in meaning is the same as that of nonrestrictive relative clauses, explained in \a|href="#43"|<Section 43>.
   >
   \xl<
-    \li<\sh<{kavat a ces e yaf, ahál.}>\ja<彼には妹がいるが、とてもかわいい。>>
+    \li<\sh<{kavat a ces e yaf, ahál.}>\ja<I have a younger sister, who is cute.>>
   >
   \h2|number="63"|<Alternative expression for relative clauses>
   \p<
