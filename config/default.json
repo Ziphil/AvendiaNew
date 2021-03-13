@@ -14,7 +14,8 @@
   },
   "document_dir": {
     "ja": "document/ja",
-    "en": "document/en"
+    "en": "document/en",
+    "common": "document/common"
   },
   "output_dir": {
     "ja": "C:/Apache24/htdocs/lbs",

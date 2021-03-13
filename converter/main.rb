@@ -240,48 +240,45 @@ class WholeAvendiaConverter
 
   def convert_normal(path, language)
     extension = File.extname(path).gsub(/^\./, "")
-    output_path = path.gsub(CONFIG.document_dir(language), CONFIG.output_dir(language))
-    output_path = modify_extension(output_path)
-    output_dir = File.dirname(output_path)
-    FileUtils.mkdir_p(output_dir)
-    case extension
-    when "zml"
-      @parser.update(File.read(path), path, language)
-      document = @parser.run
-      @converter.update(document, path, language)
-      output = @converter.convert
-      File.write(output_path, output)
-    when "scss"
-      option = {}
-      option[:style] = :compressed
-      option[:filename] = path
-      option[:cache_location] = File.join(CONFIG.output_dir(language), ".sass-cache")
-      output = SassC::Engine.new(File.read(path), option).render
-      File.write(output_path, output)
-    when "rb", "cgi"
-      output = File.read(path)
-      output.sub!(/#!\s*ruby/, "#!" + CONFIG.program_path(:ruby))
-      output.gsub!(/^\s*require_relative\s*('|")(.+)(\1)/) do
-        raw_module_path = $2
-        module_path = File.join(File.dirname(path), raw_module_path) + ".rb"
-        module_content = File.read(module_path)
-        next module_content
+    output_specs = get_output_specs(path, language).map{|(s, t)| [modify_extension(s), t]}
+    output_specs.each do |(output_path, language)|
+      case extension
+      when "zml"
+        @parser.update(File.read(path), path, language)
+        document = @parser.run
+        @converter.update(document, path, language)
+        output = @converter.convert
+      when "scss"
+        option = {}
+        option[:style] = :compressed
+        option[:filename] = path
+        option[:cache_location] = File.join(CONFIG.output_dir(language), ".sass-cache")
+        output = SassC::Engine.new(File.read(path), option).render
+      when "rb", "cgi"
+        output = File.read(path)
+        output.sub!(/#!\s*ruby/, "#!" + CONFIG.program_path(:ruby))
+        output.gsub!(/^\s*require_relative\s*('|")(.+)(\1)/) do
+          raw_module_path = $2
+          module_path = File.join(File.dirname(path), raw_module_path) + ".rb"
+          module_content = File.read(module_path)
+          next module_content
+        end
+      when "ts", "tsx"
+        command = "npm run -s browserify -- #{path}"
+        output = Command.exec(command)
+      when "css", "js"
+        output = File.read(path)
+      else
+        raise StandardError.new("unknown file type")
       end
+      FileUtils.mkdir_p(File.dirname(output_path))
       File.write(output_path, output)
-    when "ts", "tsx"
-      command = "npm run -s browserify -- #{path}"
-      output = Command.exec(command)
-      File.write(output_path, output)
-    when "css", "js"
-      output = File.read(path)
-      File.write(output_path, output)
-    else
-      raise StandardError.new("unknown file type")
     end
   end
 
   def convert_log(path, language)
     extension = File.extname(path).gsub(/^\./, "")
+    log_path = CONFIG.log_path(language)
     case extension
     when "zml"
       @parser.update(File.read(path), path, language)
@@ -290,20 +287,20 @@ class WholeAvendiaConverter
       output = @converter.convert("change-log")
       time = Time.now - 21600
       time_string = (language == :ja) ? time.strftime("%Y/%m/%d") : time.strftime("%d/%b/%Y")
-      log_path = CONFIG.log_path(language)
       log_entries = File.read(log_path).lines.map(&:chomp)
       log_entries.unshift(time_string + "; " + output)
       log_string = log_entries.take(LOG_SIZE).join("\n")
-      File.write(log_path, log_string)
     end
+    FileUtils.mkdir_p(File.dirname(log_path))
+    File.write(log_path, log_string)
   end
 
   def upload_normal(path, language)
-    local_path = path.gsub(CONFIG.document_dir(language), CONFIG.output_dir(language))
-    local_path = modify_extension(local_path)
-    remote_path = path.gsub(CONFIG.document_dir(language), CONFIG.remote_dir(language))
-    remote_path = modify_extension(remote_path)
-    @ftp&.puttextfile(local_path, remote_path)
+    local_paths = get_output_specs(path, language).map{|s| modify_extension(s.first)}
+    remote_paths = get_remote_paths(path, language).map{|s| modify_extension(s)}
+    [local_paths, remote_paths].transpose.each do |(local_path, remote_path)|
+      @ftp&.puttextfile(local_path, remote_path)
+    end
   end
 
   def print_normal(path, language, index, durations, result = nil)
@@ -332,7 +329,7 @@ class WholeAvendiaConverter
     end
     path_array = path.gsub(CONFIG.document_dir(language), "").split("/")
     path_array.map!{|s| (s =~ /\d/) ? "%3d" % s.to_i : s.gsub("index.zml", "  @").slice(0, 3)}
-    path_array.unshift(language)
+    path_array.unshift(language.to_s.slice(0, 2))
     output << path_array.join(" ")
     output << "\e[0m"
     output << "   "
@@ -370,6 +367,28 @@ class WholeAvendiaConverter
     File.open(CONFIG.error_log_path, "a") do |file|
       file.puts(output)
     end
+  end
+
+  def get_output_specs(path, language)
+    output_specs = []
+    if language == :common
+      output_specs << [path.gsub(CONFIG.document_dir(language), CONFIG.output_dir(:ja)), :ja]
+      output_specs << [path.gsub(CONFIG.document_dir(language), CONFIG.output_dir(:en)), :en]
+    else
+      output_specs << [path.gsub(CONFIG.document_dir(language), CONFIG.output_dir(language)), language]
+    end
+    return output_specs
+  end
+
+  def get_remote_paths(path, language)
+    output_paths = []
+    if language == :common
+      output_paths << path.gsub(CONFIG.document_dir(language), CONFIG.remote_dir(:ja))
+      output_paths << path.gsub(CONFIG.document_dir(language), CONFIG.remote_dir(:en))
+    else
+      output_paths << path.gsub(CONFIG.document_dir(language), CONFIG.remote_dir(language))
+    end
+    return output_paths
   end
 
   def create_paths
