@@ -103,7 +103,7 @@
 
     \div|class="introduction"|<
       \div|class="header"|<
-        \div|class="japanese"|<ABOUT CONLANG>
+        \div|class="japanese"|<About conlang>
         \div|class="shaleian"|<pA a QiLoXXAkOc>
       >
       \div|class="content"|<
@@ -148,8 +148,8 @@
       \div|class="content center"|<
         \div|class="count"|<
           \div|class="table"|<
-            \div|class="text"|<WORD COUNT>
-            \div|class="number",id="whole-count"|<?>
+            \div|class="text"|<\span|class="long"|<Current word>\span|class="short"|<Word> count>
+            \div|class="number",id="whole-count"|<2400>
           >
           \div|class="table small"|<
             \div|class="text"|<From a week ago>
@@ -171,7 +171,7 @@
       \div|class="content"|<
         \div|class="contact column"|<
           \div|class="header"|<
-            \div|class="japanese"|<CONTACT>
+            \div|class="japanese"|<Contact>
             \div|class="shaleian"|<qÎk IcA fEtEk>
           >
           \div|class="table"|<
@@ -205,7 +205,7 @@
         >
         \div|class="log column"|<
           \div|class="header"|<
-            \div|class="japanese"|<CHANGE LOG>
+            \div|class="japanese"|<Change log>
             \div|class="shaleian"|<zAt AfEc>
           >
           \change-log|size="5"|;

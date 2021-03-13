@@ -515,10 +515,17 @@ div.other {
     content: "+";
   }
 
-  div.content div.count span.redundant {
+  div.content div.count span.long {
     display: inline;
     @include smartphone {
       display: none;
+    }
+  }
+
+  div.content div.count span.short {
+    display: none;
+    @include smartphone {
+      display: inline;
     }
   }
 
