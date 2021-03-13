@@ -149,7 +149,7 @@
         \div|class="count"|<
           \div|class="table"|<
             \div|class="text"|<WORD COUNT>
-            \div|class="number",id="whole-count"|<2000>
+            \div|class="number",id="whole-count"|<?>
           >
           \div|class="table small"|<
             \div|class="text"|<From a week ago>
