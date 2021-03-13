@@ -289,9 +289,10 @@ class WholeAvendiaConverter
       @converter.update(document, path, language)
       output = @converter.convert("change-log")
       time = Time.now - 21600
+      time_string = (language == :ja) ? time.strftime("%Y/%m/%d") : time.strftime("%d/%b/%Y")
       log_path = CONFIG.log_path(language)
       log_entries = File.read(log_path).lines.map(&:chomp)
-      log_entries.unshift(time.strftime("%Y/%m/%d") + "; " + output)
+      log_entries.unshift(time_string + "; " + output)
       log_string = log_entries.take(LOG_SIZE).join("\n")
       File.write(log_path, log_string)
     end
