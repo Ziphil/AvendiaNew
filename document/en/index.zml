@@ -103,7 +103,7 @@
 
     \div|class="introduction"|<
       \div|class="header"|<
-        \div|class="japanese"|<About conlang>
+        \div|class="japanese"|<Conlang>
         \div|class="shaleian"|<pA a QiLoXXAkOc>
       >
       \div|class="content"|<
@@ -148,7 +148,7 @@
       \div|class="content center"|<
         \div|class="count"|<
           \div|class="table"|<
-            \div|class="text"|<\span|class="long"|<Current word>\span|class="short"|<Word> count>
+            \div|class="text"|<\span|class="long"|<Current words>\span|class="short"|<Words>>
             \div|class="number",id="whole-count"|<2400>
           >
           \div|class="table small"|<
