@@ -6,7 +6,7 @@
 
   \h1<人工言語>
   \p<
-    2020 年 11 月時点で私が把握している人工言語 (主に日本の Twitter で活動しているもの) のリストです。
+    2021 年 3 月時点で私が把握している人工言語 (主に日本の Twitter で活動しているもの) のリストです。
     専用のホームページがあるなど、ネット上でまとまった情報が得られるもののみを記載してあります。
     すでに制作が停止されているものも含めています。
     敬称略。
@@ -75,7 +75,7 @@
       \td<イジェール語>
       \td<Zaslon>
       \td<\ae|href="https://twitter.com/Zaslon"|<@Zaslon>>
-      \td<\ae|href="http://starlightensign.com/"|<Starlight Ensign>>
+      \td<\ae|href="https://zaslon.info/idyer/"|<Starlight Ensign>>
     >
     \tr<
       \td<Varhil>
@@ -84,16 +84,94 @@
       \td<\ae|href="https://hedalu244.github.io/varhil/"|<Varhil>>
     >
     \tr<
+      \td<ミザソーグ語>
+      \td<蒼山菘>
+      \td<\ae|href="https://twitter.com/nanakusa_003"|<@nanakusa_003>>
+      \td<>
+    >
+    \tr<
+      \td<カルコレーシュ語>
+      \td<らんべ>
+      \td<\ae|href="https://twitter.com/lambeluza"|<@lambeluza>>
+      \td<\ae|href="https://sites.google.com/view/calcoradish/"|<らんべの箱庭>>
+    >
+    \tr<
       \td<セルナーダ語>
       \td<梅津裕一>
       \td<\ae|href="https://twitter.com/u1_umetsu"|<@u1_umetsu>>
       \td<\ae|href="https://sites.google.com/view/yurfa/"|<セルナーダ語文法>>
     >
     \tr<
-      \td<ミザソーグ語>
-      \td<蒼山菘>
-      \td<\ae|href="https://twitter.com/nanakusa_003"|<@nanakusa_003>>
+      \td<アルファ祖語 (＋ 他)>
+      \td<pianists>
+      \td<\ae|href="https://twitter.com/pianists_s"|<@pianists_s>>
+      \td<\ae|href="https://pianists.github.io/PsMemoBlog/conworld/"|<仮想世界アルビス>>
+    >
+    \tr<
+      \td<wentiay-bangao>
+      \td<skytomo>
+      \td<\ae|href="https://twitter.com/skytomo221"|<@skytomo221>>
+      \td<\ae|href="https://skytomo221.github.io/wentiay-bangao/ja/"|<wentiay-bangao>>
+    >
+    \tr<
+      \td<レーゲン語>
+      \td<ヴァイウリア>
+      \td<\ae|href="https://twitter.com/lenqeetaszaves"|<@lenqeetaszaves>>
+      \td<\ae|href="https://sites.google.com/view/leigenlenq/"|<Xoikfilt le Leigenlenq!>>
+    >
+    \tr<
+      \td<ボウニム語>
+      \td<澵井 莉寧>
+      \td<\ae|href="https://twitter.com/ArIBakaRina"|<@ArIBakaRina>>
+      \td<\ae|href="http://zpdic.ziphil.com/dictionary/iximi"|<ボウニム語辞書 (博日辞書)>>
+    >
+    \tr<
+      \td<フーリカ語>
+      \td<さいは>
+      \td<\ae|href="https://twitter.com/pomepomekanom"|<@pomepomekanom>>
       \td<>
+    >
+    \tr<
+      \td<スヮドゥン語族>
+      \td<りめすとり>
+      \td<\ae|href="https://twitter.com/rhemestry"|<@rhemestry>>
+      \td<>
+    >
+    ## \tr<
+    ##   \td<ツァルフィス>
+    ##   \td<りめすとり>
+    ##   \td<\ae|href="https://twitter.com/rhemestry"|<@rhemestry>>
+    ##   \td<\ae|href="https://w.atwiki.jp/tsarhfis/"|<tsarhfis @ ウィキ>>
+    ## >
+    \tr<
+      \td<ノユラ語>
+      \td<k.ast>
+      \td<\ae|href="https://twitter.com/Asterisk6446229"|<@Asterisk6446229>>
+      \td<>
+    >
+    \tr<
+      \td<鴬語>
+      \td<やみせふぇ>
+      \td<\ae|href="https://twitter.com/phenyllithium"|<@phenyllithium>>
+      \td<\ae|href="https://w.atwiki.jp/phenyllithium"|<鴬語 @ ウィキ>>
+    >
+    \tr<
+      \td<ネサルゼルデ語>
+      \td<Nihil>
+      \td<\ae|href="https://twitter.com/Nihil_2000"|<@Nihil_2000>>
+      \td<\ae|href="https://nethalzerde.jimdofree.com/"|<Conlang Neþalzerde>>
+    >
+    \tr<
+      \td<ウィラ語>
+      \td<人工言語ウィラ語たん>
+      \td<\ae|href="https://twitter.com/wilaselija_ba"|<@wilaselija_ba>>
+      \td<\ae|href="https://w.atwiki.jp/wilaseli/"|<wilaseli @ ウィキ>>
+    >
+    \tr<
+      \td<メイユラング>
+      \td<WYU>
+      \td<\ae|href="https://twitter.com/aila_sunfa"|<@aila_sunfa>>
+      \td<\ae|href="http://www44.atwiki.jp/meijulange/"|<メイユラング文法等解説>>
     >
     \tr<
       \td<エミュンス語>
@@ -108,12 +186,6 @@
       \td<>
     >
     \tr<
-      \td<カルコレーシュ語>
-      \td<らんべ>
-      \td<\ae|href="https://twitter.com/lambeluza"|<@lambeluza>>
-      \td<\ae|href="https://sites.google.com/view/calcoradish/"|<らんべの箱庭>>
-    >
-    \tr<
       \td<柳霞>
       \td<高木柳沙>
       \td<>
@@ -123,13 +195,7 @@
       \td<レイア語>
       \td<Calnos Aqua>
       \td<\ae|href="https://twitter.com/Qunoxts"|<@Qunoxts>>
-      \td<\ae|href="https://sites.google.com/view/leiane/"|<レイア (Leiane) 語>>
-    >
-    \tr<
-      \td<メイユラング>
-      \td<WYU>
-      \td<\ae|href="https://twitter.com/aila_sunfa"|<@aila_sunfa>>
-      \td<\ae|href="http://www44.atwiki.jp/meijulange/"|<メイユラング文法等解説>>
+      \td<>
     >
     \tr<
       \td<ゼノス語>
@@ -150,18 +216,6 @@
       \td<\ae|href="https://saelawhiz.blog.fc2.com/"|<saela* blog>>
     >
     \tr<
-      \td<ウリ語 (＋ 他)>
-      \td<თარბოში>
-      \td<\ae|href="https://twitter.com/urigokaihatu"|<@urigokaihatu>>
-      \td<\ae|href="https://kartolitan.com/"|<たるぼしとジョージア語たん>>
-    >
-    \tr<
-      \td<アルファ祖語 (＋ 他)>
-      \td<pianists>
-      \td<\ae|href="https://twitter.com/pianists_s"|<@pianists_s>>
-      \td<\ae|href="https://pianists.github.io/PsMemoBlog/conworld/"|<仮想世界アルビス>>
-    >
-    \tr<
       \td<タコ語>
       \td<apupuna>
       \td<\ae|href="https://twitter.com/apupuna1"|<@apupuna1>>
@@ -172,6 +226,12 @@
       \td<Sirnoka>
       \td<\ae|href="https://twitter.com/koridentetsu"|<@koridentetsu>>
       \td<\ae|href="http://souzoumap.webcrow.jp/"|<想像地図研究所>>
+    >
+    \tr<
+      \td<ウリ語 (＋ 他)>
+      \td<თარბოში>
+      \td<\ae|href="https://twitter.com/urigokaihatu"|<@urigokaihatu>>
+      \td<\ae|href="https://kartolitan.com/"|<たるぼしとジョージア語たん>>
     >
     \tr<
       \td<クシモードス語>
@@ -210,46 +270,28 @@
       \td<\ae|href="https://sites.google.com/site/einerzypa/"|<人工言語 derle とその関連>>
     >
     \tr<
-      \td<テソタイエ>
-      \td<Rafenemine>
-      \td<\ae|href="https://twitter.com/rafenemine"|<@rafenemine>>
-      \td<\ae|href="https://sites.google.com/view/tesotaie/"|<TESOTAIE>>
-    >
-    \tr<
-      \td<ツァルフィス>
-      \td<りめすとり>
-      \td<\ae|href="https://twitter.com/rhemestry"|<@rhemestry>>
-      \td<\ae|href="https://w.atwiki.jp/tsarhfis/"|<tsarhfis @ ウィキ>>
-    >
-    \tr<
-      \td<レーゲン語>
-      \td<ヴァイウリア>
-      \td<\ae|href="https://twitter.com/lenqeetaszaves"|<@lenqeetaszaves>>
-      \td<\ae|href="https://sites.google.com/view/leigenlenq/"|<Xoikfilt le Leigenlenq!>>
-    >
-    \tr<
-      \td<ネサルゼルデ語>
-      \td<Nihil>
-      \td<\ae|href="https://twitter.com/Nihil_2000"|<@Nihil_2000>>
-      \td<\ae|href="https://nethalzerde.jimdofree.com/"|<Conlang Neþalzerde>>
-    >
-    \tr<
       \td<サイパオプ語>
       \td<>
       \td<>
       \td<\ae|href="https://sites.google.com/view/pergatte/"|<サイパオプのすべて>>
     >
     \tr<
+      \td<るる語>
+      \td<多々井ゆかり>
+      \td<\ae|href="https://twitter.com/rafenemine"|<@rafenemine>>
+      \td<>
+    >
+    ## \tr<
+    ##   \td<テソタイエ>
+    ##   \td<多々井ゆかり>
+    ##   \td<\ae|href="https://twitter.com/rafenemine"|<@rafenemine>>
+    ##   \td<\ae|href="https://sites.google.com/view/tesotaie/"|<叩塾>>
+    ## >
+    \tr<
       \td<LANDI>
       \td<清水隆紀>
       \td<\ae|href="https://twitter.com/tokipona_landi"|<@tokipona_landi>>
       \td<\ae|href="https://twitter.com/tokipona_landi/status/1239864526318661633"|<人工言語 LANDI>>
-    >
-    \tr<
-      \td<鴬語>
-      \td<やみせふぇ>
-      \td<\ae|href="https://twitter.com/phenyllithium"|<@phenyllithium>>
-      \td<\ae|href="https://w.atwiki.jp/phenyllithium"|<鴬語 @ ウィキ>>
     >
     \tr<
       \td<翊天語>
