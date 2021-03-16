@@ -1148,7 +1148,7 @@
       すなわち、&m<R (`s) = `s \rvert; \sb<><M> = `t> となるから、&m<R> は全射である。
     >
   >
-  \h1|id="split"|<分離多項式>
+  \h1|id="splitpoly"|<分離多項式>
   \thm|type="def"|<
     \p<
       体 &m<K> に対し、多項式 &m<P \in; K `[X`]> を考える。
