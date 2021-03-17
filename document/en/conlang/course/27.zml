@@ -20,16 +20,15 @@
   >
   \h1<PDF file>
   \p<
-    A PDF file containing only the grammar part and the table of contents is available for free.
-    In addition to these contents, the book version includes exercises and answers, and also a list of vocabulary.
-    Please note that the page numbers are different from those in the actual book, due to the exclusion of the practice pages.
+    The PDF file of the upcoming second edition is available for free. 
+    Compared to the first edition (which is currently available in book form), typographical errors have been corrected and some sections have been rewritten according to the latest grammar.
   >
-  \pdf|src="../../file/course/1.pdf"|;
+  \pdf|src="../../file/course/4.pdf"|;
   \p<
     You can also download the PDF file directly from the link below.
   >
   \form<
-    \a|class="form",href="../../file/course/1.pdf"|<Download>
+    \a|class="form",href="../../file/course/4.pdf"|<Download>
   >
 
 >
