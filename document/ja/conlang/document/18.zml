@@ -1,0 +1,165 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+\page<
+  \name<最初期のシャレイア語アーカイブ>
+  \ver<>
+
+  \h1<概要>
+  \p<
+    以下は、製作者が Twitter で呟いたツイートのうち、最初期のシャレイア語で書かれていると考えられる文を抜粋したものである。
+  >
+  \p<
+    当時のシャレイア語は言語としてまだ未熟で、文法や語法がしっかりと明文化されていなかったので、ここに書かれている文は文法的もしくは語法的な誤りを含む可能性がある。
+    また、単語の綴りも頻繁に変わっていたと推測されるので、現存する辞書に存在しない単語が使われているものもある。
+    しかし、当時の文法や語法を記録した資料がほとんど残っておらず、現状ではこれらの文の正誤を判定することができないため、当時のツイートの内容を修正せずにそのまま記載してある。
+  >
+  \h1<1 代 2 期>
+  \h2<\h<24>>
+  \p<
+    {kas pa zost zo vazil.}
+  >
+  \p<
+    {kas es e ziifil.}
+  >
+  \h2<\h<25>>
+  \p<
+    {kas lii avasil e jes kas siiboa.}
+    ## H40 で「siibal が昔は siiboa だった」という記述がある。
+  >
+  \h2<\h<28>>
+  \p<
+    {paip ra dii etail zo ast i kas!}
+  >
+  \p<
+    {e facast es le las qaan!}
+  >
+  \p<
+    {jas sat lii gaadol e badiaas ka es e qatolas ti asxalzia taxaaf.}
+  >
+  \p<
+    {siniiyas, taazi.}
+  >
+  \h2<\h<30>>
+  \p<
+    {kas lii foscal e vas!}
+  >
+  \h2<\h<31>>
+  \p<
+    {kit kas pa dovee palcas e ra es e….}
+  >
+  \h2<\h<32>>
+  \p<
+    {kas pa dovee lavix.}
+    {kas pa.}
+  >
+  \p<
+    {kas lii niifovas e lavixis….}
+    {kas lii foscal e vaip.}
+  >
+  \p<
+    {kas ne casii dospend e kojol i kas.}
+  >
+  \p<
+    {je, kas siibal.}
+  >
+  \h1<W\sub<1> 代>
+  \h2<\h<35>>
+  \p<
+    {jisii lii monial le kas.}
+  >
+  \p<
+    {ka es le jas sat lii gaadil e badiaas e qatolas ti asxalzia taxaaf.}
+    ## 「ka es」までが動詞、「le jas sat lii gaadil e badiaas le」が主語、「e qatolas ti asxalzia taxaaf」が目的語。
+    ## この段階で VSO 語順になっていた (1 代は H34 までなので記録通り)。
+  >
+  \p<
+    {naf le kas e meifit.}
+    {naf fe fas le kas e meifit.}
+  >
+  \p<
+    {vijee lavix le kas, taok dovee lavix le kas, taok bazoo lavix le kas.}
+  >
+  \p<
+    {taok bazoo lavix le kas!}
+  >
+  \p<
+    {lii niifovas le kas e lavixis!}
+  >
+  \p<
+    {yoo lii foscal le kas e lavixis!}
+  >
+  \p<
+    {ra siibal le kas.}
+  >
+  \h2<\h<38>>
+  \p<
+    {avasil le kas e kit siibal!}
+  >
+  \p<
+    {lii avasil le kas e kit siibal!}
+  >
+  \p<
+    {dovee zost le kas zo vazil.}
+  >
+  \h2<\h<42>>
+  \p<
+    {siibal i kas.}
+    {e siibalis cast.}
+    ## H40 に「2 代の案では 1 代の i が li になって 1 代の le が i になる」という記述がある。
+    ## この i は主語の助詞だと予測できる (現存の 1 代 2 期の辞書の記述に合う)。 
+  >
+  \p<
+    {ra dandav i kas fig zo las!}
+  >
+  \p<
+    {falii dandav i fas fi kas!}
+  >
+  \p<
+    {falii monial i kas fig!}
+  >
+  \p<
+    {fa es i kas e monialel!}
+  >
+  \p<
+    {bazo nee fopcas!}
+    {bazo kumood!}
+  >
+  \p<
+    {i kas, i kas, fa es i kas e monialel!}
+  >
+  \p<
+    {fa es e monialel i kas vaan!}
+  >
+  \p<
+    {ka zostix i kas ye meifit-lasmas.}
+    ## H42 に「動詞修飾の機能語は否定, 法, 時制, 相, 態, 自他」とある。
+    ## この機能語を全て使った例として nee femi ka li je so siibal が「寝かされていない方が良かった」の意味で紹介されている。
+  >
+  \p<
+    {foe ka rit i vas e kiist faimil.}
+  >
+  \h2<\h<43>>
+  \p<
+    {rali aaves i kas e tanas ta sat lavix i kas, zaok dove ra if i kas e lavixis.}
+  >
+  \h2<\h<44>>
+  \p<
+    {ra es i kas e monialel.}
+  >
+  \h1<2 代 1 期>
+  \h2<\h<46>>
+  \p<
+    {siniiyas.}
+    {le es i kas e ziifil alexlas.}
+    {noo le aaves i kas e katos ta sat lavix i kas.}
+    {falu niifovas i kas e lavixis.}
+    {xaok dove if i kas e lavixis.}
+    {aa, doo falu avasil i kas e kit lavix i kas?}
+    {femi fa if i kas e saip?}
+    {aa.}
+    ## H46 の画像ツイートを文字起こししたもの。
+    ## 文法は 2 代のものだが単語は 1 代のものらしい。
+  >
+
+>
