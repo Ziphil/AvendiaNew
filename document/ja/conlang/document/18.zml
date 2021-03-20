@@ -14,6 +14,11 @@
     また、単語の綴りも頻繁に変わっていたと推測されるので、現存する辞書に存在しない単語が使われているものもある。
     しかし、当時の文法や語法を記録した資料がほとんど残っておらず、現状ではこれらの文の正誤を判定することができないため、当時のツイートの内容を修正せずにそのまま記載してある。
   >
+  \p<
+    ツイートは日付別に章立てし、さらに 1 つのツイートが 1 つの段落に対応するように記載した。
+    したがって、同じ日のツイートでも、段落が違えば文脈が異なっている可能性がある。
+    ただし、明らかに文章として続いていると思われるものは、ツイートが別々でも同じ段落に記載してある。
+  >
   \h1<1 代 2 期>
   \h2<\h<24>>
   \p<
@@ -79,23 +84,14 @@
   >
   \p<
     {vijee lavix le kas, taok dovee lavix le kas, taok bazoo lavix le kas.}
-  >
-  \p<
     {taok bazoo lavix le kas!}
-  >
-  \p<
     {lii niifovas le kas e lavixis!}
-  >
-  \p<
     {yoo lii foscal le kas e lavixis!}
   >
   \p<
     {ra siibal le kas.}
   >
   \h2<\h<38>>
-  \p<
-    {avasil le kas e kit siibal!}
-  >
   \p<
     {lii avasil le kas e kit siibal!}
   >
@@ -111,14 +107,10 @@
   >
   \p<
     {ra dandav i kas fig zo las!}
-  >
-  \p<
     {falii dandav i fas fi kas!}
   >
   \p<
     {falii monial i kas fig!}
-  >
-  \p<
     {fa es i kas e monialel!}
   >
   \p<
@@ -127,8 +119,6 @@
   >
   \p<
     {i kas, i kas, fa es i kas e monialel!}
-  >
-  \p<
     {fa es e monialel i kas vaan!}
   >
   \p<
@@ -147,7 +137,7 @@
   \p<
     {ra es i kas e monialel.}
   >
-  \h1<2 代 1 期>
+  \h1<2 代 1 期～ 2 代 3 期>
   \h2<\h<46>>
   \p<
     {siniiyas.}
@@ -155,11 +145,106 @@
     {noo le aaves i kas e katos ta sat lavix i kas.}
     {falu niifovas i kas e lavixis.}
     {xaok dove if i kas e lavixis.}
-    {aa, doo falu avasil i kas e kit lavix i kas?}
+    {aa, doo falu avasil i kas e kit lavix i kas!}
     {femi fa if i kas e saip?}
     {aa.}
     ## H46 の画像ツイートを文字起こししたもの。
     ## 文法は 2 代のものだが単語は 1 代のものらしい。
+  >
+  \h2<\h<57>>
+  \p<
+    {aaa, femi pe al a del e sand, xenon li del?}
+    {xenon, kazo faa pe stel je del e kin vije pe al a del e sand!}
+  >
+  \h2<\h<58>>
+  \p<
+    {pe dooxen a kol.}
+  >
+  \p<
+    {zo tos a xai de sati, o a sati de falas, o a falas de bank.}
+    {o, ledi fandus a baad e valtia.}
+    {leya zoon a katot paki geem e misal.}
+    {zae, le es a keil teei e nobodiiti ole valtia, zae e bodiiti zep ole zostep fii.}
+    ## 2 文目は H59 の対訳画像から文字起こしした。
+  >
+  \h2<\h<66>>
+  \p<
+    {e kin kadi al a tees e teend ta keil galt, zo sef a tees, o zo zoon a tees….}
+  >
+  \h2<\h<67>>
+  \p<
+    {dooxen a del. akman.}
+  >
+  \h2<\h<68>>
+  \p<
+    {es a kumil li kol e vomp zep.}
+  >
+  \p<
+    {kazo es e gul a kumil!}
+  >
+  \p<
+    {es a kumil li kol e vomp zep gun!}
+  >
+  \h2<\h<69>>
+  \p<
+    {lelu run a del e kin te guel a tis.}
+    ## 「頭が痛い」の意味らしい。
+  >
+  \h2<\h<71>>
+  \p<
+    {lu zaag je kol zep!}
+    {scal e kin dooxen a del!}
+  >
+  \h2<\h<73>>
+  \p<
+    {aa, lelute guel a fet ka kol.}
+    {lelute guel a fet ka kol.}
+    {lelute guel a fet ka kol.}
+  >
+  \h2<\h<74>>
+  \p<
+    {e kin viidman, scal a kol!}
+    {scal a kol bin!}
+    {e kin iiv de debil, guut a kol!}
+    {guut a kol bin!}
+  >
+  \h2<\h<76>>
+  \p<
+    {stan a del e kin es a belt loon fik e loon jok.}
+  >
+  \p<
+    {vije le vinf a del, zae nu lelu iiv a del vinf, sali guut a del e vinf o pas vinf.}
+    ## 「急ぐべきだが急いで行かないのは急ぎそして急いでいる人が嫌いだからだ」の意味。
+    ## vinf は「急ぐ」と「急ぎ」と「急いでいる」と「急いで」の意味で使えるが、それを全部 1 文の中で使えるかという試みから生まれた文。
+  >
+  \p<
+    {es a find e pand bis e zo taqal a del qasi alkaiz e sezn koni elvin vi saxen bis je zo venj ye valtia li del sez tan.}
+  >
+  \h2<\h<78>>
+  \p<
+    {banz a del e suut.}
+  >
+  \h2<\h<79>>
+  \p<
+    {sete dooxen a kol.}
+  >
+  \p<
+    {lelu guel a tis ka kol zep e.}
+  >
+  \p<
+    {pete debas a teem li kol.}
+  >
+  \h2<\h<80>>
+  \p<
+    {sete dooxen a kol fe.}
+    {akman.}
+  >
+  \p<
+    {kazo iiv de valtia a del!}
+  >
+  \h2<\h<81>>
+  \p<
+    {zo lelu ilt a pand bis e pe viidman a kol e.}
   >
 
 >
