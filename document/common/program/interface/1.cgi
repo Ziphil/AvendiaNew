@@ -17,7 +17,7 @@ class ShaleiaUploader < BackendBase
   VERSIONS = {"5.5" => 0, "1.2" => 1, "3.6" => 2, "2.7" => 3, "3.4" => 4}
 
   def switch
-    fetch_github
+    fetch_zpdic
   end
 
   def fetch_github
@@ -42,7 +42,29 @@ class ShaleiaUploader < BackendBase
     respond(output, :text)
   end
 
+  def fetch_zpdic
+    if self["password"] == PASSWORD
+      output = {}
+      previous_size = ShaleiaUtilities.fetch_names.size
+      ShaleiaUtilities.upload(self["content"])
+      ShaleiaUtilities.update
+      new_size = ShaleiaUtilities.fetch_names.size
+      output["previous_size"] = previous_size
+      output["new_size"] = new_size
+      output["status"] = "done"
+      output["gas_output"] = ""
+      Kernel.open(GOOGLE_URL + "?mode=update&password=#{PASSWORD}&previous=#{previous_size}&new=#{new_size}") do |file|
+        file.each_line do |line| 
+          output["gas_output"] << line
+        end
+      end
+      respond(output)
+    else
+      respond_errpr("password incorrect")
+    end
+  end
+
 end
 
 
-ShaleiaUploader.new(STDIN.read, CGI.new).run
+ShaleiaUploader.new(nil, CGI.new).run

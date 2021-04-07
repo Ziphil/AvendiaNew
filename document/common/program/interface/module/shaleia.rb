@@ -375,7 +375,11 @@ module ShaleiaUtilities
 
   def upload(file, version = 0)
     File.open("../../file/dictionary/data/shaleia/#{version + 1}.xdc", "w") do |next_file|
-      next_file.write(file.read)
+      if file.respond_to?("read")
+        next_file.write(file.read)
+      else
+        next_file.write(file)
+      end
     end
   end
 
