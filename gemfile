@@ -10,6 +10,7 @@ gem 'bundler', require: [
 ]
 
 gem 'listen'
+gem 'rexml'
 gem 'sassc'
 gem 'zenml'
 gem 'zotica'

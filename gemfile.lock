@@ -8,6 +8,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    rexml (3.2.5)
     sassc (2.4.0-x64-mingw32)
       ffi (~> 1.9)
     ttfunk (1.7.0)
@@ -24,6 +25,7 @@ PLATFORMS
 DEPENDENCIES
   bundler
   listen
+  rexml
   sassc
   wdm (>= 0.1.0)
   zenml
