@@ -175,7 +175,7 @@
         このとき、関手
         &mb<
           \array|align="rrcl"|<
-            \c<\sp<`C><S>:> \c<\scr<C> \times; \sp<\scr<C>><\circ;>> \c<\longto;> \c<\scr<D>> \br;
+            \c<\sp<`C><S>:> \c<\sp<\scr<C>><\circ;> \times; \scr<C>> \c<\longto;> \c<\scr<D>> \br;
             \c; \c<(C, C')> \c<\longmapsto;> \c<\op<Hom> (KC, S) \odot; FC'>
           >
         >
