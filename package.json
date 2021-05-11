@@ -13,7 +13,7 @@
     "axios": "^0.19.2",
     "browserify": "^16.5.2",
     "jquery": "^3.5.1",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "query-string": "^6.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
