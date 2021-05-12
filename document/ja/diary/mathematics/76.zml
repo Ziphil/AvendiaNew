@@ -3,7 +3,7 @@
 
 \page<
   \name<Kan 拡張概略>
-  \use-math;
+  \use-math|prefix="1"|;
 
   \h1<日記 (2021 年 5 月 7 日)>
   \p<
@@ -112,7 +112,7 @@
       >
     >
     \p<
-      は全て同値である。
+      は同値である。
     >
   >
   \prf<
@@ -334,7 +334,7 @@
       >
     >
   >
-  \thm|type="prp"|<
+  \thm|type="thm",id="main"|<
     \p<
       関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとる。
       関手 &m<L: \scr<S> \to; \scr<D>> に対し、3 条件
@@ -348,7 +348,7 @@
         &mb<
           LS = \op<colim> \tort<\diag|bl|<
             \v<K \bdarr; S> \v<\scr<C>> \v<\scr<D>>
-            \ar|s="1",e="2"|<U> \ar|s="2",e="3"|<F>
+            \ar|s="1",e="2"|<> \ar|s="2",e="3"|<F>
           >>
         >
         が成り立つ。
@@ -417,6 +417,72 @@
     \p<
       \label<条件 2 &m<\lraarr;> 条件 3:>
       \ref|type="cthm",id="lem"|; によって条件 2 の余極限と条件 3 のコエンドは一致するから、条件 2 と条件 3 は明らかに同値である。
+    >
+  >
+  \p<
+    この定理からすぐに従う事実をいくつか並べておく。
+  >
+  \thm|type="thm",id="exist"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとる。
+      &m<\scr<D>> が余完備ならば、&m<\sb<\op<Lan>><K> F> が存在して各点である。 
+    >
+  >
+  \prf<
+    \p<
+      &m<\scr<D>> の余完備性から、各 &m<\scr<S>> の対象 &m<S> に対し、
+      &mb<
+        LS \coloneqq; \op<colim> \tort<\diag|bl|<
+          \v<K \bdarr; S> \v<\scr<C>> \v<\scr<D>>
+          \ar|s="1",e="2"|<> \ar|s="2",e="3"|<F>
+        >>
+      >
+      が存在する。
+      \ref|type="cthm",id="colimrep"|; によって、これは関手 &m<L: \scr<S> \to; \scr<D>> を定めて &m<L = \sb<\op<Lan>><K> F> を満たす。
+      また、\ref|type="cthm",id="main"|; によって、これは各点である。
+    >
+  >
+  \thm|type="prp",id="homrep"|<
+    \p<
+      関手 &m<F: \scr<C> \to; \scr<D>, K: \scr<C> \to; \scr<S>> をとる。
+      関手 &m<L: \scr<S> \to; \scr<D>> について、2 条件
+    >
+    \ol<
+      \li*<
+        &m<L = \sb<\op<Lan>><K> F> であり、さらにこれは各点である。
+      >
+      \li*<
+        任意の &m<\scr<S>> の対象 &m<S> と &m<\scr<D>> の対象 &m<D> について、全単射
+        &mb<
+          \sb<\op<Hom>><\scr<D>> (LS, D) \cong; \sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (K \hyphen;, S), \op<Hom> (F \hyphen;, D))
+        >
+        が成り立ち、これは &m<S> と &m<D> の両方について自然である。
+      >
+    >
+    \p<
+      は同値である。
+    >
+  >
+  \prf<
+    \p<
+      \ref|type="cthm",id="main"|; により、&m<L = \sb<\op<Lan>><K> F> であってこれが各点であることは、任意の &m<\scr<S>> の対象 &m<S> に対して、
+      &mb<
+        LS = \op<colim> \tort<\diag|bl|<
+          \v<K \bdarr; S> \v<\scr<C>> \v<\scr<D>>
+          \ar|s="1",e="2"|<> \ar|s="2",e="3"|<F>
+        >>
+      >
+      が成り立つことと同値である。
+      この余極限をとっている関手を &m<\sp<`F><S>> とおけば、このことは、任意の &m<\scr<S>> の対象 &m<S> と &m<\scr<D>> の対象 &m<D> に対して、
+      &mb<
+        \sb<\op<Hom>><\scr<D>> (LS, D) \cong; \op<Cocone> (\sp<`F><S>, D)
+      >
+      が自然に成り立つことと同値である。
+      さらに、\ref|type="cthm",id="lem"|; により、これは、
+      &mb<
+        \sb<\op<Hom>><\scr<D>> (LS, D) \cong; \sb<\op<Hom>><`[\sp<\scr<C>><\circ;>, \bfrm<Set>`]> (\op<Hom> (K \hyphen;, S), \op<Hom> (F \hyphen;, D))
+      >
+      が自然に成り立つことと同値である。
     >
   >
   \h1<参考文献>
