@@ -409,7 +409,7 @@ class WholeAvendiaConverter
         end
       end
     else
-      path = @rest_args.map{|s| s.gsub("\\", "/").gsub("c:/", "C:/")}[0].encode("utf-8")
+      path = @rest_args.map{|s| s.gsub("\\", "/").gsub(/^([a-z]):\//){"#{$1.upcase}:/"}}[0].encode("utf-8")
       language = CONFIG.document_dirs.find{|s, t| path.include?(t)}&.first
       if language
         paths << [path, language]
