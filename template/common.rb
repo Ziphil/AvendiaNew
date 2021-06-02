@@ -808,8 +808,16 @@ end
 
 converter.add(["red"], ["page"]) do |element|
   this = ""
+  title = element.attribute("title")&.to_s
+  length = element.attribute("length")&.to_s&.to_i
+  if !length && title
+    length = title.chars.map{|s| Unicode::DisplayWidth.of(s) * 1.5}.sum.to_i
+  end
   this << Tag.build("span", "redact") do |this|
-    this << "&nbsp;" * element.attribute("length").to_s.to_i
+    this << "&nbsp;" * (length || 0)
+    if title
+      this["title"] = title
+    end
   end
   next this
 end

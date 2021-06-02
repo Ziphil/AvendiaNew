@@ -12,6 +12,7 @@ GEM
     sassc (2.4.0-x64-mingw32)
       ffi (~> 1.9)
     ttfunk (1.7.0)
+    unicode-display_width (2.0.0)
     wdm (0.1.1)
     zenml (1.6.1)
     zotica (1.6.0)
@@ -27,6 +28,7 @@ DEPENDENCIES
   listen
   rexml
   sassc
+  unicode-display_width
   wdm (>= 0.1.0)
   zenml
   zotica
