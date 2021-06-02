@@ -466,7 +466,11 @@ article.main {
     color: $label-color;
   }
 
-  p span.redact {
+  span.lyrics-space {
+    margin-right: 0.5em;
+  }
+
+  span.redact {
     line-height: 100%;
     border: 1px $border-color solid;
     background: linear-gradient(-45deg, transparent 33%, $border-color 33%, $border-color 50%, transparent 50%, transparent 83%, $border-color 83%);

@@ -800,6 +800,12 @@ converter.add(["xn"], ["page", "page.section-table"]) do |element|
   next this
 end
 
+converter.add(["lys"], ["page"]) do |element|
+  this = ""
+  this << Tag.new("span", "lyrics-space")
+  next this
+end
+
 converter.add(["red"], ["page"]) do |element|
   this = ""
   this << Tag.build("span", "redact") do |this|
