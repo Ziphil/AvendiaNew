@@ -47,7 +47,7 @@
     >
     \p<
       まず、&m<\scr<A>> が生成子であることを示す。
-      射 &m<f, f': P \to; Q> をとり、任意の &m<\scr<S>> の対象 &m<S> と任意の射 &m<s: \bf<y> S \to; P> に対して &m<s \rtriangle; f = s \rtriangle; f'> であると仮定する。
+      射 &m<f, f': P \to; Q> をとり、任意の &m<\scr<S>> の対象 &m<S> と任意の射 &m<s: \bf<y> S \to; P> に対して &m<s \rcomp; f = s \rcomp; f'> であると仮定する。
       Yoneda の補題によって射 &m<s: \bf<y> S \to; P> と元 &m<s \in; PS> を同一視すれば、この仮定は、任意の &m<\scr<S>> の対象 &m<S> と任意の元 &m<s \in; PS> に対して &m<\sb<f><S> s = \sbsp<f><S><\pr;> s> であるということである。
       したがって、&m<f = f'> が成り立つ。
     >
@@ -97,7 +97,7 @@
     >
     \ol<
       \li*<
-        任意の &m<\scr<C>> の射 &m<f: S \to; D> に対し、ある &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<g: S \to; Fi> が存在して &m<f = g \rtriangle; \sb<d><i>> が成り立つ。
+        任意の &m<\scr<C>> の射 &m<f: S \to; D> に対し、ある &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<g: S \to; Fi> が存在して &m<f = g \rcomp; \sb<d><i>> が成り立つ。
         さらに、そのような &m<i> は本質的に一意である。
       >
       \li*<

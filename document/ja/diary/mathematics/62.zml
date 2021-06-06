@@ -356,7 +356,7 @@
       とおくと、仮定によってこれは &m<`l>-有向である。
       &m<\scr<K>> の元 &m<X> に対し、
       &mb<
-        GX \coloneqq; \op<colim> (\ltort; X \hookrarr; \scr<I> \rtort; \rtriangle; F) 
+        GX \coloneqq; \op<colim> (\ltort; X \hookrarr; \scr<I> \rtort; \rcomp; F) 
       >
       とおくと、&m<X> は &m<`k>-有向かつ &m<`l>-小であり、&m<F> の像は全て &m<\sb<\bfrm<Pres>><`k> (\scr<C>)> の対象であったから、&m<GX> は &m<\scr<A>> の元である。
       また、余極限の普遍性によって射 &m<\sb<d><X>: GX \to; C> がとれる。

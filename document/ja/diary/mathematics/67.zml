@@ -62,9 +62,9 @@
       も可換になる。
       すると、
       &mb<
-        \sb<`h><C> \rtriangle; f = h \rtriangle; \sb<a><i> = \sb<`h><C> \rtriangle; (g \rtriangle; \sb<a><i>)
+        \sb<`h><C> \rcomp; f = h \rcomp; \sb<a><i> = \sb<`h><C> \rcomp; (g \rcomp; \sb<a><i>)
       >
-      が成り立つから、反射に関する分解の一意性から &m<f = g \rtriangle; \sb<a><i>> が分かり、これが示したかった分解である。
+      が成り立つから、反射に関する分解の一意性から &m<f = g \rcomp; \sb<a><i>> が分かり、これが示したかった分解である。
       このような分解の本質的一意性は、図式 &m<\wheart;> の分解の本質的一意性から従う。
       以上により、&m<\sp<C><*>> は &m<\scr<A>> で &m<`k>-表示可能である。
     >

@@ -32,7 +32,7 @@
       &m<\bfrm<El> (P)> に関する忘却関手を &m<U: \bfrm<El> (P) \to; \scr<S>> とし、これの &m<\scr<A>> への制限を &m<F \coloneqq; U \rvert; \sb<><\scr<A>>: \scr<A> \to; \scr<S>> とおく。
       &m<\scr<C>> は余完備で、\a|href="59.html#prescol"|<定理 3.4> より &m<\scr<S>> は &m<`k>-小余極限に関して閉じているから、&m<F> の余極限が &m<\scr<S>> に存在する。
       その余極限余錐を &m<(\sb<s><(A, a)>: A \to; S) \sb<><(A, a) \in; \scr<A>>> とおく。
-      &m<P> は &m<`k>-極限を保存するから、&m<(P \sb<s><(A, a)>: PS \to; PA) \sb<><(A, a) \in; \sp<\scr<A>><\circ;>>> は &m<\sp<F><\circ;> \rtriangle; P> の極限である。
+      &m<P> は &m<`k>-極限を保存するから、&m<(P \sb<s><(A, a)>: PS \to; PA) \sb<><(A, a) \in; \sp<\scr<A>><\circ;>>> は &m<\sp<F><\circ;> \rcomp; P> の極限である。
       これは &m<\bfrm<Set>> における極限だから、\a|href="66.html#setlim"|<補題 10.4> の &m<\bfrm<Set>> での極限の具体的な表示を思い出せば、ある元 &m<t \in; PS> が存在して、任意の &m<\scr<A>> の対象 &m<(A, a)> に対して &m<(P \sb<s><(A, a)>) t = a> が成り立つことになる。
       これより、&m<(\sb<s><(A, a)>: (A, a) \to; (S, t)) \sb<><(A, a) \in; \scr<A>>> は &m<\scr<A>> 上の錐になる。
     >

@@ -65,7 +65,7 @@
         >
       >
       という分解ができる。
-      しかし、&m<m \rtriangle; e = \sb<\rm<id>><C>> であったから、この図式に前から &m<m> を合成することで、
+      しかし、&m<m \rcomp; e = \sb<\rm<id>><C>> であったから、この図式に前から &m<m> を合成することで、
       &mb<
         \diag|hor="thn"|<
           \v<C> \v<> \v<D> \br;
@@ -111,7 +111,7 @@
       とおくと、&m<`k \smt; `l> であることから\a|href="62.html#acck"|<定理 6.9> が使えて、これが &m<`l>-有向であることが分かる。
       ここで、&m<\scr<K>> の元 &m<X> に対し、
       &mb<
-        GX \coloneqq; \op<colim> (\ltort; X \hookrarr; \scr<I> \rtort; \rtriangle; F) 
+        GX \coloneqq; \op<colim> (\ltort; X \hookrarr; \scr<I> \rtort; \rcomp; F) 
       >
       とおくと、余極限の普遍性によって射 &m<\sb<d><X>: GX \to; C> がとれる。
       ここで、&m<\scr<K>> の対象 &m<X, X'> が &m<X \subseteq; X'> を満たすとすると、再び余極限の普遍性によって射 &m<GX \to; GX'> がとれるから、これによって関手 &m<G: \scr<K> \to; \scr<C>> と見なせる。

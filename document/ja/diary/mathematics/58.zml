@@ -50,7 +50,7 @@
       >
       \li*<
         &m<\scr<I>> の対象 &m<i, i'> をとる。
-        &m<\scr<I>> の射から成る集合 &m<`{\sb<u><l>: i \to; i'`} \sb<><l \in; L>> でその濃度が &m<`k> 未満であるものに対し、ある対象 &m<\bar<i>> および射 &m<\bar<u>: i' \to; \bar<i>> が存在し、各 &m<l \in; L> に対して &m<\sb<u><l> \rtriangle; \bar<u>> は &m<l> によらず全て等しい。
+        &m<\scr<I>> の射から成る集合 &m<`{\sb<u><l>: i \to; i'`} \sb<><l \in; L>> でその濃度が &m<`k> 未満であるものに対し、ある対象 &m<\bar<i>> および射 &m<\bar<u>: i' \to; \bar<i>> が存在し、各 &m<l \in; L> に対して &m<\sb<u><l> \rcomp; \bar<u>> は &m<l> によらず全て等しい。
       >
     >
     \p<
@@ -180,7 +180,7 @@
       &mb<
         \sb<\op<Hom>><\sp<\scr<A>><*>> (a, a') \coloneqq; \case<
           \c<\sb<\op<Hom>><\scr<A>> (a, a')> \c<(a \in; \scr<A>, a' \in; \scr<A>)> \br;
-          \c<`{\sb<u><a> \rtriangle; v`}> \c<(a \in; \scr<A>, a' = \top;)> \br;
+          \c<`{\sb<u><a> \rcomp; v`}> \c<(a \in; \scr<A>, a' = \top;)> \br;
           \c<\empty;> \c<(a = \top;, a' \in; \scr<A>)> \br;
           \c<`{\sb<\rm<id>><\top;>`}> \c<(a = \top;, a' = \top;)> \br;
         >

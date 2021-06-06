@@ -116,8 +116,8 @@
         &m<\bfrm<Gl> (\scr<C>, \bbot;)> の 2 つの対象 &m<(A`; S, \bar<S>), (B`; T, \bar<T>)> の間の射は、&m<\scr<C>> の射 &m<f: A \to; B> であって、任意の &m<\scr<C>> の射 &m<s: \top; \to; A, \bar<t>: B \to; \bbot;> に対し、
         &mb<
           \array|align="rcl"|<
-            \c<s \in; S> \c<\implies;> \c<s \rtriangle; f \in; T> \br;
-            \c<\bar<t> \in; \bar<T>> \c<\implies;> \c<f \rtriangle; \bar<t> \in; \bar<S>>
+            \c<s \in; S> \c<\implies;> \c<s \rcomp; f \in; T> \br;
+            \c<\bar<t> \in; \bar<T>> \c<\implies;> \c<f \rcomp; \bar<t> \in; \bar<S>>
           >
         >
         を満たすものとする。

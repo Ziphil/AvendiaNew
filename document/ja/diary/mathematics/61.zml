@@ -67,7 +67,7 @@
     >
     \p<
       &m<\scr<S>> が稠密であるということは、余錐 &m<(s: Gs \to; C) \sb<><s \in; \scr<S> `/ C>> が余極限であることであった。
-      これはすなわち、任意の余錐 &m<(\sb<d><s>: Gs \to; D) \sb<><s \in; \scr<S> `/ C>> に対し、射 &m<h: C \to; D> が一意に存在して、各 &m<\scr<S> `/ C> の対象 &m<s> に対して &m<s \rtriangle; h = \sb<d><s>> が成り立つということである。
+      これはすなわち、任意の余錐 &m<(\sb<d><s>: Gs \to; D) \sb<><s \in; \scr<S> `/ C>> に対し、射 &m<h: C \to; D> が一意に存在して、各 &m<\scr<S> `/ C> の対象 &m<s> に対して &m<s \rcomp; h = \sb<d><s>> が成り立つということである。
       上の観察により、このことは、任意の自然変換 &m<d: \bf<z> C \raarr; \bf<z> D> に対し、射 &m<h: C \to; D> が一意に存在して、&m<\bf<z> h = d> が成り立つということである。
       これは、&m<\bf<z>> が忠実充満であることを意味する。
     >
@@ -167,7 +167,7 @@
           \c; \c<i> \c<\longmapsto;> \c<\sb<c><i>>
         >
       >
-      は関手であり、&m<H \rtriangle; G = F> が成り立つ。
+      は関手であり、&m<H \rcomp; G = F> が成り立つ。
       したがって、&m<H> が終であることが示されれば、&m<\op<colim> G = \op<colim> F = C> となって &m<\scr<S>> が稠密であることが示される。
       \a|href="57.html#fineq"|<定理 1.6> により、任意に &m<\scr<S> `/ C> の対象 &m<s: S \to; C> をとって、&m<s \darr|bin|; H> が連結であることを示せば良い。
     >
@@ -189,18 +189,18 @@
       次に、任意に &m<s \darr|bin|; H> の対象 &m<g: s \to; Hi, g': s \to; Hi'> をとり、&m<g> と &m<g'> が &m<s \darr|bin|; H> の射で結ばれることを示す。
       &m<\scr<S> `/ C> の射として &m<g: s \to; Hi>, &m<g': s \to; Hi'> であるから、&m<\scr<C>> の射としては &m<g: S \to; Fi>, &m<g': S \to; Fi'> であり、
       &mb<
-        s = g \rtriangle; \sb<c><i> = g' \rtriangle; \sb<c><i'>
+        s = g \rcomp; \sb<c><i> = g' \rcomp; \sb<c><i'>
       >
       が成り立つ。
       すなわち、&m<s> の 2 通りの分解が存在することになるので、そのような分解が本質的に一意であることから、ある &m<\scr<I>> の対象 &m<\bar<i>> が存在して、&m<i \leq; \bar<i>> かつ &m<i' \leq; \bar<i>> であって、
       &mb<
-        g \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort; = g' \rtriangle; F \ltort; i' \hookrarr; \bar<i> \rtort;
+        g \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; = g' \rcomp; F \ltort; i' \hookrarr; \bar<i> \rtort;
       >
       が成り立つ。
       この等しい射を &m<\bar<g>: S \to; F \bar<i>> とおく。
       すると、
       &mb<
-        \bar<g> \rtriangle; \sb<c><\bar<i>> = g \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort; \rtriangle; \sb<c><\bar<i>> = g \rtriangle; \sb<c><i> = s
+        \bar<g> \rcomp; \sb<c><\bar<i>> = g \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; \rcomp; \sb<c><\bar<i>> = g \rcomp; \sb<c><i> = s
       >
       であるから、&m<\scr<S> `/ C> の射 &m<\bar<g>: s \to; H \bar<i>> と見なすことができ、したがって &m<\bar<g>> は &m<s \darr|bin|; H> の対象である。
       さらに、&m<\scr<I>> の射 &m<u: i \hookrarr; \bar<i>>, &m<u': i' \hookrarr; \bar<i>> はそれぞれ &m<s \darr|bin|; H> の射 &m<u: g \to; \bar<g>>, &m<u': g' \to; \bar<g>> と見なすことができる。

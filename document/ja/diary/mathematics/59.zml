@@ -26,13 +26,13 @@
       >
       \li*<
         &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> の余極限 &m<(\sb<d><i>: Fi \to; D) \sb<><i \in; \scr<I>>> をとる。
-        このとき、任意の &m<\scr<C>> の射 &m<f: C \to; D> に対し、ある &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<g: C \to; Fi> が存在して &m<f = g \rtriangle; \sb<d><i>> という分解ができる。
-        さらに、任意の &m<\scr<I>> の対象 &m<i, i'> と &m<\scr<C>> の射 &m<g: C \to; Fi, g': C \to; Fi'> について &m<f = g \rtriangle; \sb<d><i> = g' \rtriangle; \sb<d><i'>> であるならば、ある &m<\scr<I>> の対象 &m<\bar<i>> が存在して、&m<i \leq; \bar<i>> かつ &m<i' \leq; \bar<i>> であって &m<g \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort; = g' \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort;> が成り立つ。
+        このとき、任意の &m<\scr<C>> の射 &m<f: C \to; D> に対し、ある &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<g: C \to; Fi> が存在して &m<f = g \rcomp; \sb<d><i>> という分解ができる。
+        さらに、任意の &m<\scr<I>> の対象 &m<i, i'> と &m<\scr<C>> の射 &m<g: C \to; Fi, g': C \to; Fi'> について &m<f = g \rcomp; \sb<d><i> = g' \rcomp; \sb<d><i'>> であるならば、ある &m<\scr<I>> の対象 &m<\bar<i>> が存在して、&m<i \leq; \bar<i>> かつ &m<i' \leq; \bar<i>> であって &m<g \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; = g' \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort;> が成り立つ。
       >
       \li*<
         &m<`k>-フィルター図式 &m<F: \scr<I> \to; \scr<C>> の余極限 &m<(\sb<d><i>: Fi \to; D) \sb<><i \in; \scr<I>>> をとる。
-        このとき、任意の &m<\scr<C>> の射 &m<f: C \to; D> に対し、ある &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<g: C \to; Fi> が存在して &m<f = g \rtriangle; \sb<d><i>> という分解ができる。
-        さらに、任意の &m<\scr<I>> の対象 &m<i, i'> と &m<\scr<C>> の射 &m<g: C \to; Fi, g': C \to; Fi'> について &m<f = g \rtriangle; \sb<d><i> = g' \rtriangle; \sb<d><i'>> であるならば、ある &m<\scr<I>> の対象 &m<\bar<i>> と射 &m<u: i \to; \bar<i>, u': i' \to; \bar<i>> が存在して、&m<g \rtriangle; Fu = g' \rtriangle; Fu'> が成り立つ。
+        このとき、任意の &m<\scr<C>> の射 &m<f: C \to; D> に対し、ある &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<g: C \to; Fi> が存在して &m<f = g \rcomp; \sb<d><i>> という分解ができる。
+        さらに、任意の &m<\scr<I>> の対象 &m<i, i'> と &m<\scr<C>> の射 &m<g: C \to; Fi, g': C \to; Fi'> について &m<f = g \rcomp; \sb<d><i> = g' \rcomp; \sb<d><i'>> であるならば、ある &m<\scr<I>> の対象 &m<\bar<i>> と射 &m<u: i \to; \bar<i>, u': i' \to; \bar<i>> が存在して、&m<g \rcomp; Fu = g' \rcomp; Fu'> が成り立つ。
       >
     >
     \p<
@@ -83,7 +83,7 @@
     \p<
       &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> の余極限 &m<(\sb<d><i>: Fi \to; D) \sb<><i \in; \scr<I>>> および &m<\scr<C>> の射 &m<f: C \to; D> をとる。
       &m<f> が本質的に一意に分解できることを示せば良い。
-      まず、&m<\scr<K>> の各対象 &m<k> について &m<\sb<c><k> \rtriangle; f: Gk \to; D> を考えると、&m<Gk> が &m<`k>-表示可能で &m<D> が &m<`k>-有向余極限であることから、\ref|type="cthm",id="preseq"|; によってある &m<\scr<I>> の対象 &m<\sb<j><k>> が存在して、
+      まず、&m<\scr<K>> の各対象 &m<k> について &m<\sb<c><k> \rcomp; f: Gk \to; D> を考えると、&m<Gk> が &m<`k>-表示可能で &m<D> が &m<`k>-有向余極限であることから、\ref|type="cthm",id="preseq"|; によってある &m<\scr<I>> の対象 &m<\sb<j><k>> が存在して、
       &mb<
         \diag<
           \v<Gk> \v<C> \v<D> \br;
@@ -94,7 +94,7 @@
       >
       という分解が存在する。
       ここで、&m<\scr<K>> が &m<`k>-小であることから &m<\scr<K>> の対象の個数は &m<`k> 未満であり、&m<\scr<I>> は &m<`k>-有向なので、&m<`{\sb<j><k>`} \sb<><k \in; \scr<K>>> の上界 &m<\bar<j>> が存在する。
-      さらに、この &m<\bar<j>> について、&m<\scr<K>> の各対象 &m<k> について &m<\sb<c><k> \rtriangle; f> は、
+      さらに、この &m<\bar<j>> について、&m<\scr<K>> の各対象 &m<k> について &m<\sb<c><k> \rcomp; f> は、
       &mb<
         \diag<
           \v<Gk> \v<C> \v<D> \br;
@@ -109,10 +109,10 @@
       次に、&m<\scr<K>> の射 &m<u: k \to; k'> をとる。
       すると、&m<(\sb<c><k>) \sb<><k \in; \scr<K>>> が &m<G> の余錐であることから、
       &mb<
-        Gu \rtriangle; \sb<g><k'> \rtriangle; \sb<d><\bar<j>> =  Gu \rtriangle; \sb<c><k'> \rtriangle; f = \sb<c><k> \rtriangle; f = \sb<g><k> \rtriangle; \sb<d><\bar<j>>
+        Gu \rcomp; \sb<g><k'> \rcomp; \sb<d><\bar<j>> =  Gu \rcomp; \sb<c><k'> \rcomp; f = \sb<c><k> \rcomp; f = \sb<g><k> \rcomp; \sb<d><\bar<j>>
       >
       が成り立つ。
-      これはつまり、&m<\sb<c><k> \rtriangle; f> の &m<\sb<d><\bar<j>>> を経由する分解が、&m<\sb<g><k>> によるものと &m<Gu \rtriangle; \sb<g><k'>> によるものの 2 通りあるということである。
+      これはつまり、&m<\sb<c><k> \rcomp; f> の &m<\sb<d><\bar<j>>> を経由する分解が、&m<\sb<g><k>> によるものと &m<Gu \rcomp; \sb<g><k'>> によるものの 2 通りあるということである。
       そのような分解は本質的に一意であったから、ある &m<\scr<I>> の対象 &m<\sb<i><u>> が存在して、&m<\bar<j> \leq; \sb<i><u>> が成り立ち、
       &mb<
         \diag<
@@ -134,7 +134,7 @@
         >
       >
       が一斉に可換になる。
-      このことは、&m<(\sb<g><k> \rtriangle; F \ltort; \bar<j> \hookrarr; \bar<i> \rtort;: Gk \to; F \bar<j>) \sb<><k \in; \scr<K>>> が &m<G> の余錐になることを意味している。
+      このことは、&m<(\sb<g><k> \rcomp; F \ltort; \bar<j> \hookrarr; \bar<i> \rtort;: Gk \to; F \bar<j>) \sb<><k \in; \scr<K>>> が &m<G> の余錐になることを意味している。
     >
     \p<
       これにより、余極限の普遍性から、ある射 &m<g: C \to; F \bar<i>> が存在し、任意の &m<\scr<K>> の各対象 &m<k> に対し、
@@ -150,28 +150,28 @@
       は可換である。
       したがって、
       &mb<
-        \sb<c><k> \rtriangle; f = \sb<g><k> \rtriangle; \sb<d><\bar<j>> = \sb<g><k> \rtriangle; F \ltort; \bar<j> \hookrarr; \bar<i> \rtort; \rtriangle; \sb<d><\bar<i>> = \sb<c><k> \rtriangle; g \rtriangle; \sb<d><\bar<i>>
+        \sb<c><k> \rcomp; f = \sb<g><k> \rcomp; \sb<d><\bar<j>> = \sb<g><k> \rcomp; F \ltort; \bar<j> \hookrarr; \bar<i> \rtort; \rcomp; \sb<d><\bar<i>> = \sb<c><k> \rcomp; g \rcomp; \sb<d><\bar<i>>
       >
       が成り立つ。
-      &m<(\sb<c><k>) \sb<><k \in; \scr<K>>> は余極限だったので、分解の一意性により、&m<f = g \rtriangle; \sb<d><\bar<i>>> が成り立つ。
+      &m<(\sb<c><k>) \sb<><k \in; \scr<K>>> は余極限だったので、分解の一意性により、&m<f = g \rcomp; \sb<d><\bar<i>>> が成り立つ。
       これが、可能であることを示したかった &m<f> の分解である。
     >
     \p<
       次に、&m<f> の分解が本質的に一意であることを示す。
-      &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<g, g': C \to; Fi> を用いて、&m<f = g \rtriangle; \sb<d><i> = g' \rtriangle; \sb<d><i>> という 2 通りの分解ができたとする。
-      すると、任意の &m<\scr<K>> の対象 &m<k> に対して、&m<\sb<c><k> \rtriangle; f: Gk \to; D> の 2 通りの分解
+      &m<\scr<I>> の対象 &m<i> と &m<\scr<C>> の射 &m<g, g': C \to; Fi> を用いて、&m<f = g \rcomp; \sb<d><i> = g' \rcomp; \sb<d><i>> という 2 通りの分解ができたとする。
+      すると、任意の &m<\scr<K>> の対象 &m<k> に対して、&m<\sb<c><k> \rcomp; f: Gk \to; D> の 2 通りの分解
       &mb<
-        \sb<c><k> \rtriangle; f = \sb<c><k> \rtriangle; g \rtriangle; \sb<d><i> = \sb<c><k> \rtriangle; g' \rtriangle; \sb<d><i>
+        \sb<c><k> \rcomp; f = \sb<c><k> \rcomp; g \rcomp; \sb<d><i> = \sb<c><k> \rcomp; g' \rcomp; \sb<d><i>
       >
       が存在することになる。
       &m<Gk> は &m<`k>-表示可能で &m<D> は &m<`k>-有向余極限なので、\ref|type="cthm",id="preseq"|; によってある &m<\scr<I>> の対象 &m<\sb<i>> が存在して、
       &mb<
-        \sb<c><k> \rtriangle; g \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort; = \sb<c><k> \rtriangle; g' \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort;
+        \sb<c><k> \rcomp; g \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; = \sb<c><k> \rcomp; g' \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort;
       >
       が成り立つ。
       &m<(\sb<c><k>) \sb<><k \in; \scr<K>>> は余極限だったので、これより
       &mb<
-        g \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort; = g' \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort;
+        g \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; = g' \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort;
       >
       が成り立つが、これは &m<f> の分解が本質的に一意であるということである。
     >

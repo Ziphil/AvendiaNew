@@ -75,7 +75,7 @@
       &mb<
         \array|align="rrcl"|<
           \c<Ш:> \c<\sp<\op<Sub>><\rm<sp>> (A)> \c<\longto;> \c<\frak<P> (\op<Hom> (A, A))> \br;
-          \c; \c<\ltort; m: M \tailrarr; A \rtort;> \c<\longmapsto;> \c<`{c \rtriangle; m \mid; &raw<&m<c: A \to; M> は &m<m \rtriangle; c = \sb<\op<id>><M>> を満たす>`}>
+          \c; \c<\ltort; m: M \tailrarr; A \rtort;> \c<\longmapsto;> \c<`{c \rcomp; m \mid; &raw<&m<c: A \to; M> は &m<m \rcomp; c = \sb<\op<id>><M>> を満たす>`}>
         >
       >
       とおく。
@@ -93,7 +93,7 @@
         >
       >
       は可換である。
-      定義から &m<c \rtriangle; m> は &m<Ш m> に属するが、&m<Ш m = Ш m'> であるから &m<c \rtriangle; m> は &m<Ш m'> にも属する。
+      定義から &m<c \rcomp; m> は &m<Ш m> に属するが、&m<Ш m = Ш m'> であるから &m<c \rcomp; m> は &m<Ш m'> にも属する。
       すなわち、射 &m<c': A \to; M'> が存在して、
       &mb<
         \diag<
@@ -114,7 +114,7 @@
           \v<M> \v; \v<M'> \br;
           \v; \v<A>
           \ar|s="1",e="5",tip="tail",inv|<m> \ar|s="3",e="5",tip="tail"|<m'>
-          \ar|s="1",e="3",shift="3"|<m \rtriangle; c'> \ar|s="3",e="1",shift="3"|<m' \rtriangle; c>
+          \ar|s="1",e="3",shift="3"|<m \rcomp; c'> \ar|s="3",e="1",shift="3"|<m' \rcomp; c>
         >
       >
       は可換で、上辺の 2 本の射は互いに逆になっていることが分かる。
@@ -199,7 +199,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> の対象から成る集合 &m<\scr<A> \subseteq; \op<Ob> (\scr<C>)> をとる。
-      &m<\scr<C>> の射 &m<f, f': C \to; D> について、任意の &m<\scr<A>> の元 &m<A> と任意の &m<\scr<C>> の射 &m<a: A \to; C> に対して &m<a \rtriangle; f = a \rtriangle; f'> であるとすると、&m<f = f'> が成り立つとする。
+      &m<\scr<C>> の射 &m<f, f': C \to; D> について、任意の &m<\scr<A>> の元 &m<A> と任意の &m<\scr<C>> の射 &m<a: A \to; C> に対して &m<a \rcomp; f = a \rcomp; f'> であるとすると、&m<f = f'> が成り立つとする。
       このとき、&m<\scr<A>> を\em<生成子\fl<generator>> という。
     >
   >
@@ -234,10 +234,10 @@
       \label<条件 1 &m<\raarr;> 条件 2:>
       &m<\scr<A>> 自身が極限的生成子であることを示す。
       まず、&m<\scr<A>> が生成子であることを示す。
-      射 &m<f, f': C \to; D> をとり、任意の &m<\scr<A>> の元 &m<A> と任意の射 &m<a: A \to; C> に対して &m<a \rtriangle; f = a \rtriangle; f'> であると仮定する。
+      射 &m<f, f': C \to; D> をとり、任意の &m<\scr<A>> の元 &m<A> と任意の射 &m<a: A \to; C> に対して &m<a \rcomp; f = a \rcomp; f'> であると仮定する。
       さて、仮定により、&m<\scr<A>> に属する対象の &m<`k>-有向図式 &m<F: \scr<I> \to; \scr<C>> が存在して &m<C = \op<colim> F> と表せる。
       その余極限余錐を &m<(\sb<c><i>: Fi \to; C) \sb<><i \in; \scr<I>>> で書く。
-      すると、任意の &m<\scr<I>> の対象 &m<i> について、&m<F> のとり方から &m<Fi> は &m<\scr<A>> に属するから、仮定より &m<\sb<c><i> \rtriangle; f = \sb<c><i> \rtriangle; f'> が成り立つ。
+      すると、任意の &m<\scr<I>> の対象 &m<i> について、&m<F> のとり方から &m<Fi> は &m<\scr<A>> に属するから、仮定より &m<\sb<c><i> \rcomp; f = \sb<c><i> \rcomp; f'> が成り立つ。
       したがって、余極限の普遍性によって &m<f = f'> が得られる。
     >
     \p<
@@ -266,9 +266,9 @@
       が可換になる。
       すると、任意の &m<\scr<I>> の対象 &m<i> に対し、
       &mb<
-        \sb<c><i> \rtriangle; h \rtriangle; m = \sb<d><i> \rtriangle; m = \sb<c><i>
+        \sb<c><i> \rcomp; h \rcomp; m = \sb<d><i> \rcomp; m = \sb<c><i>
       >
-      が成り立つから、&m<h \rtriangle; m = \sb<\rm<id>><C>> である。
+      が成り立つから、&m<h \rcomp; m = \sb<\rm<id>><C>> である。
       以上により、&m<m> は単射かつ分裂全射なので同型射になる。
     >
     \p<
@@ -312,7 +312,7 @@
       よって、&m<m> が単射であることを示す。
     >
     \p<
-      &m<\scr<C>> の射 &m<f, f': B \to; \sp<C><*>> をとり、&m<f \rtriangle; m = f' \rtriangle; m> であるとする。
+      &m<\scr<C>> の射 &m<f, f': B \to; \sp<C><*>> をとり、&m<f \rcomp; m = f' \rcomp; m> であるとする。
       &m<\tilde<\scr<A>>> は生成子だから、&m<B> が &m<\tilde<\scr<A>>> の元であるとしても一般性を失わない。
       すると、&m<B> が &m<`k>-表示可能で &m<\sp<C><*>> は &m<`k>-フィルター余極限だから、ある &m<\scr<A> `/ C> の対象 &m<a: A \to; C, a': A' \to; C> が存在して、
       &mb<
@@ -354,11 +354,11 @@
       ここで、
       &mb<
         \array|align="c"|<
-          \c<g \rtriangle; \bar<a> = g \rtriangle; \sp<\bar<a>><*> \rtriangle; m = f \rtriangle; m> \br;
-          \c<g' \rtriangle; \bar<a> = g' \rtriangle; \sp<\bar<a>><*> \rtriangle; m = f' \rtriangle; m>
+          \c<g \rcomp; \bar<a> = g \rcomp; \sp<\bar<a>><*> \rcomp; m = f \rcomp; m> \br;
+          \c<g' \rcomp; \bar<a> = g' \rcomp; \sp<\bar<a>><*> \rcomp; m = f' \rcomp; m>
         >
       >
-      が成り立つが、最初に &m<f \rtriangle; m = f' \rtriangle; m> であると仮定しているので、これより &m<g \rtriangle; \bar<a> = g' \rtriangle; \bar<a>> を得る。
+      が成り立つが、最初に &m<f \rcomp; m = f' \rcomp; m> であると仮定しているので、これより &m<g \rcomp; \bar<a> = g' \rcomp; \bar<a>> を得る。
       したがって、余等化子の普遍性を使えば、射 &m<s: S \to; C> が存在して、
       &mb<
         \diag<
@@ -371,15 +371,15 @@
       が可換になることが分かる。
       ここで、&m<g> と &m<g'> はともに &m<\scr<A>> の射でもあり、&m<\scr<A>> は &m<`k>-小極限をとる操作について閉じていたので、&m<S> は &m<\scr<A>> の対象になる。
       したがって、&m<s> は &m<\scr<A> `/ C> の対象でもあり、&m<p> は &m<\scr<A> `/ C> の射 &m<p: \bar<a> \to; s> とも見なせる。
-      すると、&m<(\sp<a><*>) \sb<><a \in; \scr<A> `/ C>> が余錐であることから、&m<\sp<\bar<a>><*> = p \rtriangle; \sp<s><*>> が成り立つことが分かる。
+      すると、&m<(\sp<a><*>) \sb<><a \in; \scr<A> `/ C>> が余錐であることから、&m<\sp<\bar<a>><*> = p \rcomp; \sp<s><*>> が成り立つことが分かる。
       これを利用すると、
       &mb<
         \array|align="c"|<
-          \c<f = g \rtriangle; \sp<\bar<a>><*> = g \rtriangle; p \rtriangle; \sp<s><*>> \br;
-          \c<f' = g' \rtriangle; \sp<\bar<a>><*> = g' \rtriangle; p \rtriangle; \sp<s><*>> \br;
+          \c<f = g \rcomp; \sp<\bar<a>><*> = g \rcomp; p \rcomp; \sp<s><*>> \br;
+          \c<f' = g' \rcomp; \sp<\bar<a>><*> = g' \rcomp; p \rcomp; \sp<s><*>> \br;
         >
       >
-      が分かり、さらに &m<g \rtriangle; p = g' \rtriangle; p> であるから、&m<f = f'> が示された。
+      が分かり、さらに &m<g \rcomp; p = g' \rcomp; p> であるから、&m<f = f'> が示された。
       以上により、&m<m> は単射である。
     >
   >

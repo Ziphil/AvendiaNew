@@ -15,7 +15,7 @@
   \thm|type="prp",id="cmcol"|<
     \p<
       関手 &m<`F: \scr<C> \to; \scr<E>, `C: \scr<D> \to; \scr<E>> をとり、コンマ圏からの忘却関手をそれぞれ &m<U: `F \bdarr; `C \to; \scr<C>, V: `F \bdarr; `C \to; \scr<D>> とする。
-      さらに、図式 &m<F: \scr<I> \to; `F \bdarr; `C> について、&m<C \coloneqq; \op<colim> (F \rtriangle; U)> と &m<D \coloneqq; \op<colim> (F \rtriangle; V)> が存在し、&m<`F> は余極限 &m<C> を保存するとする。
+      さらに、図式 &m<F: \scr<I> \to; `F \bdarr; `C> について、&m<C \coloneqq; \op<colim> (F \rcomp; U)> と &m<D \coloneqq; \op<colim> (F \rcomp; V)> が存在し、&m<`F> は余極限 &m<C> を保存するとする。
       このとき、&m<`F C> の普遍性によって得られる &m<\scr<E>> の射 &m<h: `F C \to; `C D> は、&m<`F \bdarr; `C> の対象として &m<\op<colim> F> を与える。
     >
   >
@@ -107,24 +107,24 @@
       さて、各 &m<L> の元 &m<l> に対し、
       &mb<
         \array|align="rcl"|<
-          \c<`F F \ltort; \sb<i><l> \hookrarr; \bar<i> \rtort; \rtriangle; g \rtriangle; `C \sb<d><\bar<k>>>
-          \c<=> \c<`F F \ltort; \sb<i><l> \hookrarr; \bar<i> \rtort; \rtriangle; `F \sb<c><\bar<i>> \rtriangle; f> \br;
-          \c; \c<=> \c<`F \sb<c><\sb<i><l>> \rtriangle; f> \br;
-          \c; \c<=> \c<\sb<h><l> \rtriangle; `C \sb<d><\sb<k><l>>> \br;
-          \c; \c<=> \c<\sb<h><l> \rtriangle; `C G \ltort; \sb<k><l> \hookrarr; \bar<k> \rtort; \rtriangle; `C \sb<d><\bar<k>>>
+          \c<`F F \ltort; \sb<i><l> \hookrarr; \bar<i> \rtort; \rcomp; g \rcomp; `C \sb<d><\bar<k>>>
+          \c<=> \c<`F F \ltort; \sb<i><l> \hookrarr; \bar<i> \rtort; \rcomp; `F \sb<c><\bar<i>> \rcomp; f> \br;
+          \c; \c<=> \c<`F \sb<c><\sb<i><l>> \rcomp; f> \br;
+          \c; \c<=> \c<\sb<h><l> \rcomp; `C \sb<d><\sb<k><l>>> \br;
+          \c; \c<=> \c<\sb<h><l> \rcomp; `C G \ltort; \sb<k><l> \hookrarr; \bar<k> \rtort; \rcomp; `C \sb<d><\bar<k>>>
         >
       >
       が成り立つ。
       &m<`F F \sb<i><l>> は &m<`k>-表示可能であって &m<(`C \sb<d><k>: `C G k \to; `C D) \sb<><k \in; \scr<K>>> は &m<`k>-有向余極限だから、分解の本質的一意性によって、&m<\scr<K>> の対象 &m<\sbsp<k><l><\pr;>> が存在して、&m<\bar<k> \leq; \sbsp<k><l><\pr;>> であって、
       &mb<
-        `F F \ltort; \sb<i><l> \hookrarr; \bar<i> \rtort; \rtriangle; g \rtriangle; `C G \ltort; \bar<k> \hookrarr; \sbsp<k><l><\pr;> \rtort;
-        = \sb<h><l> \rtriangle; `C G \ltort; \sb<k><l> \hookrarr; \bar<k> \rtort; \rtriangle; `C G \ltort; \bar<k> \hookrarr; \sbsp<k><l><\pr;> \rtort;
+        `F F \ltort; \sb<i><l> \hookrarr; \bar<i> \rtort; \rcomp; g \rcomp; `C G \ltort; \bar<k> \hookrarr; \sbsp<k><l><\pr;> \rtort;
+        = \sb<h><l> \rcomp; `C G \ltort; \sb<k><l> \hookrarr; \bar<k> \rtort; \rcomp; `C G \ltort; \bar<k> \hookrarr; \sbsp<k><l><\pr;> \rtort;
       >
       が成り立つ。
       このようにして得られた &m<\scr<K>> の対象の集合 &m<`{\sbsp<k><l><\pr;>`} \sb<><l \in; L>> の上界 &m<\bar<k>'> をとると、任意の &m<L> の元 &m<l> に対し、
       &mb<
-        `F F \ltort; \sb<i><l> \hookrarr; \bar<i> \rtort; \rtriangle; g \rtriangle; `C G \ltort; \bar<k> \hookrarr; \bar<k>' \rtort;
-        = \sb<h><l> \rtriangle; `C G \ltort; \sb<k><l> \hookrarr; \bar<k>' \rtort;
+        `F F \ltort; \sb<i><l> \hookrarr; \bar<i> \rtort; \rcomp; g \rcomp; `C G \ltort; \bar<k> \hookrarr; \bar<k>' \rtort;
+        = \sb<h><l> \rcomp; `C G \ltort; \sb<k><l> \hookrarr; \bar<k>' \rtort;
       >
       が一斉に成り立つ。
       図式で書けば、

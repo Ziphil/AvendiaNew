@@ -11,7 +11,7 @@
   >
   \p<
     このシリーズを通して則ることにする記号に関する慣習について補足しておく。
-    射の合成は原則として左から右に記し、混乱を避けるために通常の記号から変えて &m<\rtriangle;> で表す。
+    射の合成は原則として左から右に記し、混乱を避けるために通常の記号から変えて &m<\rcomp;> で表す。
     圏は基本的にスクリプト体で表し、その対象はラテン大文字で表す。
     ただし、極限や余極限を考える際の図式の形となるつもりの圏 (だいたいの場合 &m<\scr<I>> か &m<\scr<K>> で表す) については、その対象は添字であるという気持ちがあるので、例外的にラテン小文字で表す。
   >
@@ -25,7 +25,7 @@
   \thm|type="def"|<
     \p<
       小圏の間の関手 &m<H: \scr<K> \to; \scr<I>> をとる。
-      任意の関手 &m<F: \scr<I> \to; \scr<C>> に対し、&m<\op<colim> F> と &m<\op<colim> (H \rtriangle; F)> のうちどちらか一方が存在するならばもう一方も存在し、そのとき自然な射 &m<\op<colim> (H \rtriangle; F) \to; \op<colim> F> は同型射であるとする。
+      任意の関手 &m<F: \scr<I> \to; \scr<C>> に対し、&m<\op<colim> F> と &m<\op<colim> (H \rcomp; F)> のうちどちらか一方が存在するならばもう一方も存在し、そのとき自然な射 &m<\op<colim> (H \rcomp; F) \to; \op<colim> F> は同型射であるとする。
       このとき、&m<H> は\em<終\fl<final>> であるという。
     >
   >
@@ -125,48 +125,48 @@
       任意に &m<\scr<I>> の対象 &m<i> をとり、&m<F \coloneqq; \op<Hom> (i, \hyphen;): \scr<I> \to; \bfrm<Set>> とおく。
       \ref|type="cthm",id="setcol"|; により、
       &mb<
-        \op<colim> (H \rtriangle; F) = \paren<\coprod<k \in; \scr<K>> \op<Hom> (i, Hk)> `/ \sim|ord|;
+        \op<colim> (H \rcomp; F) = \paren<\coprod<k \in; \scr<K>> \op<Hom> (i, Hk)> `/ \sim|ord|;
       >
       と書け、ここでの同値関係 &m<\sim;> は、&m<x: i \to; Hk> と &m<x': i \to; Hk'> に対して、
       &mb<
-        x \sim; x' \implied; \multi<u><><><><\exists;>: k \to; k' \ssbin; x \rtriangle; Hu = x'
+        x \sim; x' \implied; \multi<u><><><><\exists;>: k \to; k' \ssbin; x \rcomp; Hu = x'
       >
       を満たす最小の同値関係である。
-      ここで、&m<x \rtriangle; Hu = x'> が成り立つことは、&m<i \darr|bin|; H> の射として &m<u: x \to; x'> であることと同値である。
+      ここで、&m<x \rcomp; Hu = x'> が成り立つことは、&m<i \darr|bin|; H> の射として &m<u: x \to; x'> であることと同値である。
       したがって、&m<x \sim; x'> であるとは、&m<i \darr|bin|; H> において &m<x> と &m<x'> が射で結ばれることを意味している。
     >
     \p<
-      一方、仮定から &m<\op<colim> F \cong; \op<colim> (H \rtriangle; F)> が成り立つが、\ref|type="cthm",id="onep"|; によって &m<\op<colim> F = 1> であるから、&m<\op<colim> (H \rtriangle; F) = 1> も成り立つ。
+      一方、仮定から &m<\op<colim> F \cong; \op<colim> (H \rcomp; F)> が成り立つが、\ref|type="cthm",id="onep"|; によって &m<\op<colim> F = 1> であるから、&m<\op<colim> (H \rcomp; F) = 1> も成り立つ。
       これにより、上の表示を使うと、任意の &m<\coprod|in|<k \in; \scr<K>> \op<Hom> (i, Hk)> の元が &m<\sim;> で結ばれるということが分かるが、&m<\sim;> とは 2 つの元が &m<i \darr|bin|; H> の射で結ばれるという関係であった。
       したがって、&m<i \darr|bin|; H> の任意の対象が射で結ばれることになり、さらに &m<i \darr|bin|; H> は空でないので、&m<i \darr|bin|; H> は連結である。
     >
     \p<
       \label<条件 2 &m<\raarr;> 条件 1:>
       任意に関手 &m<F: \scr<I> \to; \scr<C>> をとる。
-      余極限とは余錐が成す圏の始対象であったから、&m<H \rtriangle; F> の余錐が成す圏と &m<F> の余錐が成す圏が圏同値であることを示せば良い。
+      余極限とは余錐が成す圏の始対象であったから、&m<H \rcomp; F> の余錐が成す圏と &m<F> の余錐が成す圏が圏同値であることを示せば良い。
       今の場合、特に圏同型であることが示せる。
     >
     \p<
-      任意に &m<H \rtriangle; F> の余錐 &m<(\sb<c><k>: FHk \to; C) \sb<><k \in; \scr<K>>> をとる。
+      任意に &m<H \rcomp; F> の余錐 &m<(\sb<c><k>: FHk \to; C) \sb<><k \in; \scr<K>>> をとる。
       &m<\scr<I>> の各対象 &m<i> に対し、仮定から &m<i \darr|bin|; H> は空ではないので、&m<\scr<K>> の対象 &m<\sb<k><i>> と射 &m<\sb<x><i>: i \to; H \sb<k><i>> が存在する。
-      ここで &m<\sb<\tilde<c>><i> \coloneqq; F \sb<x><i> \rtriangle; \sb<c><\sb<k><i>>> とおくと、これは &m<\sb<k><i>> と &m<\sb<x><i>> によらずに &m<i> だけで決まる。
+      ここで &m<\sb<\tilde<c>><i> \coloneqq; F \sb<x><i> \rcomp; \sb<c><\sb<k><i>>> とおくと、これは &m<\sb<k><i>> と &m<\sb<x><i>> によらずに &m<i> だけで決まる。
       実際、&m<\scr<K>> の対象 &m<\sb<k><i>>, &m<\sbsp<k><i><\pr;>> と射 &m<\sb<x><i>: i \to; H \sb<k><i>>, &m<\sbsp<x><i><\pr;>: i \to; H \sbsp<k><i><\pr;>> をとると、&m<i \darr|bin|; H> が連結であることから、&m<\sb<x><i>> と &m<\sbsp<x><i><\pr;>> は &m<i \darr|bin|; H> の射で結ばれる。
       一般性を失わず、射 &m<u: \sb<x><i> \to; \sbsp<x><i><\pr;>> が存在するとして良い。
       すると、&m<(\sb<c><k>) \sb<><k \in; \scr<K>>> が余錐であることから、
       &mb<
-        F \sb<x><i> \rtriangle; \sb<c><\sb<k><i>> = F \sb<x><i> \rtriangle; Fu \rtriangle; \sb<c><\sbsp<k><i><\pr;>> = F \sbsp<x><i><\pr;> \rtriangle; \sb<c><\sbsp<k><i><\pr;>>
+        F \sb<x><i> \rcomp; \sb<c><\sb<k><i>> = F \sb<x><i> \rcomp; Fu \rcomp; \sb<c><\sbsp<k><i><\pr;>> = F \sbsp<x><i><\pr;> \rcomp; \sb<c><\sbsp<k><i><\pr;>>
       >
       が得られた。
       以上により、&m<\scr<I>> の各対象 &m<i> に対して射 &m<\sb<\tilde<c>><i>: Fi \to; C> が定められたが、これらは &m<F> の余錐 &m<(\sb<\tilde<c>><i>: Fi \to; C) \sb<><i \in; \scr<I>>> を構成することが容易に示せる。
     >
     \p<
       逆に、&m<F> の余錐 &m<(\sb<\tilde<c>><i>: Fi \to; C) \sb<><i \in; \scr<I>>> が与えられたとする。
-      このときは、&m<\scr<K>> の各対象 &m<k> に対して &m<\sb<c><k> \coloneqq; \sb<\tilde<c>><Hk>> とおけば、これらは &m<H \rtriangle; F> の余錐 &m<(\sb<c><k>: FHk \to; C) \sb<><k \in; \scr<K>>> を構成する。
+      このときは、&m<\scr<K>> の各対象 &m<k> に対して &m<\sb<c><k> \coloneqq; \sb<\tilde<c>><Hk>> とおけば、これらは &m<H \rcomp; F> の余錐 &m<(\sb<c><k>: FHk \to; C) \sb<><k \in; \scr<K>>> を構成する。
       さらに、これは上記と逆の構成になっている。
     >
     \p<
-      また、&m<H \rtriangle; F> の 2 つの余錐 &m<(\sb<c><k>: FHk \to; C) \sb<><k \in; \scr<K>>, (\sbsp<c><k><\pr;>: FHk \to; C') \sb<><k \in; \scr<K>>> から、上記の構成で &m<F> の余錐 &m<(\sb<\tilde<c>><i>: Fi \to; C) \sb<><i \in; \scr<I>>, (\sbsp<\tilde<c>><i><\pr;>: Fi \to; C') \sb<><i \in; \scr<I>>> をそれぞれ構成すると、前者 2 つの余錐の間の射はそのまま後者 2 つの余錐の間の射になる。
-      以上のことから、&m<H \rtriangle; F> の余錐が成す圏と &m<F> の余錐が成す圏は圏同型であることが従う。
+      また、&m<H \rcomp; F> の 2 つの余錐 &m<(\sb<c><k>: FHk \to; C) \sb<><k \in; \scr<K>>, (\sbsp<c><k><\pr;>: FHk \to; C') \sb<><k \in; \scr<K>>> から、上記の構成で &m<F> の余錐 &m<(\sb<\tilde<c>><i>: Fi \to; C) \sb<><i \in; \scr<I>>, (\sbsp<\tilde<c>><i><\pr;>: Fi \to; C') \sb<><i \in; \scr<I>>> をそれぞれ構成すると、前者 2 つの余錐の間の射はそのまま後者 2 つの余錐の間の射になる。
+      以上のことから、&m<H \rcomp; F> の余錐が成す圏と &m<F> の余錐が成す圏は圏同型であることが従う。
     >
   >
   \h1<参考文献>

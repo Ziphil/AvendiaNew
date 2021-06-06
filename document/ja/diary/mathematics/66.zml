@@ -183,7 +183,7 @@
         \diag|hor="thn"|<
           \v<M> \v; \v<N> \br;
           \v; \v<Fi>
-          \ar|s="1",e="5",inv|<f \rtriangle; \sb<c><i>> \ar|s="1",e="3"|<m> \ar|s="3",e="5"|<\sb<g><i>>
+          \ar|s="1",e="5",inv|<f \rcomp; \sb<c><i>> \ar|s="1",e="3"|<m> \ar|s="3",e="5"|<\sb<g><i>>
         >
       >
       は可換である。
@@ -199,9 +199,9 @@
       は一斉に可換である。
       すると、任意の &m<\scr<I>> の対象 &m<i> に対して、
       &mb<
-        f \rtriangle; \sb<c><i> = m \rtriangle; \sb<g><i> = m \rtriangle; g \rtriangle; \sb<c><i>
+        f \rcomp; \sb<c><i> = m \rcomp; \sb<g><i> = m \rcomp; g \rcomp; \sb<c><i>
       >
-      が成り立つが、&m<(\sb<c><i>) \sb<><i \in; \scr<I>>> は極限錐だから、これより &m<f = m \rtriangle; g> を得る。
+      が成り立つが、&m<(\sb<c><i>) \sb<><i \in; \scr<I>>> は極限錐だから、これより &m<f = m \rcomp; g> を得る。
       このような &m<g> が一意であることも容易に分かる。
     >
   >
@@ -238,10 +238,10 @@
         >
       >
       も可換である。
-      すると、&m<f = m \rtriangle; (p \rtriangle; \sb<c><i>)> となり、示したかった分解が得られた。
+      すると、&m<f = m \rcomp; (p \rcomp; \sb<c><i>)> となり、示したかった分解が得られた。
     >
     \p<
-      この分解の一意性を示すため、射 &m<g, g': N \to; C> によって &m<f = m \rtriangle; g = m \rtriangle; g'> と 2 通りに分解できたとする。
+      この分解の一意性を示すため、射 &m<g, g': N \to; C> によって &m<f = m \rcomp; g = m \rcomp; g'> と 2 通りに分解できたとする。
       &m<N> は &m<`k>-表示可能だから、ある &m<\scr<I>> の対象 &m<i, i'> および射 &m<h: N \to; Fi>, &m<h': N \to; Fi'> が存在して、
       &mb<
         \diag|hor="thn"|<
@@ -256,23 +256,23 @@
         >
       >
       を可換にできる。
-      すると、&m<(m \rtriangle; h) \rtriangle; \sb<c><i> = (m \rtriangle; h') \rtriangle; \sb<c><i'>> が成り立つ。
+      すると、&m<(m \rcomp; h) \rcomp; \sb<c><i> = (m \rcomp; h') \rcomp; \sb<c><i'>> が成り立つ。
       &m<M> は &m<`k>-表示可能だから、このような分解の本質的一意性によって、ある &m<\scr<I>> の対象 &m<\bar<i>> が存在して、&m<i \leq; \bar<i>> かつ &m<i' \leq; \bar<i>> であって、
       &mb<
-        m \rtriangle; h \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort; = m \rtriangle; h' \rtriangle; F \ltort; i' \hookrarr; \bar<i> \rtort; 
+        m \rcomp; h \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; = m \rcomp; h' \rcomp; F \ltort; i' \hookrarr; \bar<i> \rtort; 
       >
       が成り立つ。
       &m<F \bar<i>> は &m<\sp<\scr<M>><\bot;>> の元なので、今度はこれを経由する分解の一意性によって、
       &mb<
-        h \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort; = h' \rtriangle; F \ltort; i' \hookrarr; \bar<i> \rtort; 
+        h \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; = h' \rcomp; F \ltort; i' \hookrarr; \bar<i> \rtort; 
       >
       が得られる。
       すると、
       &mb<
         \array|align="rcl"|<
-          \c<g> \c<=> \c<h \rtriangle; \sb<c><i>> \br;
-          \c; \c<=> \c<h \rtriangle; F \ltort; i \hookrarr; \bar<i> \rtort; \rtriangle; \sb<c><\bar<i>>> \br;
-          \c; \c<=> \c<h' \rtriangle; F \ltort; i' \hookrarr; \bar<i> \rtort; \rtriangle; \sb<c><\bar<i>>> \br;
+          \c<g> \c<=> \c<h \rcomp; \sb<c><i>> \br;
+          \c; \c<=> \c<h \rcomp; F \ltort; i \hookrarr; \bar<i> \rtort; \rcomp; \sb<c><\bar<i>>> \br;
+          \c; \c<=> \c<h' \rcomp; F \ltort; i' \hookrarr; \bar<i> \rtort; \rcomp; \sb<c><\bar<i>>> \br;
           \c; \c<=> \c<g'>
         >
       >
