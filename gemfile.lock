@@ -1,11 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    ffi (1.14.2-x64-mingw32)
-    listen (3.4.1)
+    ffi (1.15.1-x64-mingw32)
+    listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    rb-fsevent (0.10.4)
+    rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rexml (3.2.5)
@@ -15,7 +15,7 @@ GEM
     unicode-display_width (2.0.0)
     wdm (0.1.1)
     zenml (1.6.1)
-    zotica (1.6.0)
+    zotica (1.7.0)
       sassc (~> 2)
       ttfunk (~> 1)
       zenml (~> 1, >= 1.6.0)
