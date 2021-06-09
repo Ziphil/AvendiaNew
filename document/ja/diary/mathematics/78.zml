@@ -129,11 +129,12 @@
         が成り立つ。
       >
       \li*<
-        多射 &m<f: \langle; `G \rangle; \to; \langle; `D, A, `D' \rangle;>, &m<g: \langle; `L, A, `L' \rangle; \to; \langle; `S \rangle;> および対象列の置換 &m<`l: \langle; `G' \rangle; \to; \langle; `G \rangle;>, &m<`m: \langle; `D, A, `D' \rangle; \to; \langle; `F, A, `F' \rangle;>, &m<`n: \langle; `C, A, `C' \rangle; \to; \langle; `L, A, `L' \rangle;>, &m<`j: \langle; `S \rangle; \to; \langle; `S' \rangle;>, &m<`s: \langle; `C, `G', `C' \rangle; \to; \langle; `L, `G', `L' \rangle;>, &m<`t: \langle; `D, `S, `D' \rangle; \to; \langle; `F, `S', `F' \rangle;> に対し、
+        多射 &m<f: \langle; `G \rangle; \to; \langle; `D, A, `D' \rangle;>, &m<g: \langle; `L, A, `L' \rangle; \to; \langle; `S \rangle;> および対象列の置換 &m<`s: \langle; `G' \rangle; \to; \langle; `G \rangle;>, &m<`t: \langle; `D, A, `D' \rangle; \to; \langle; `F, A, `F' \rangle;>, &m<`l: \langle; `C, A, `C' \rangle; \to; \langle; `L, A, `L' \rangle;>, &m<`m: \langle; `S \rangle; \to; \langle; `S' \rangle;> に対し、
         &mb<
-          (`l \cdot; f \cdot; `m) \sb<\rcomp;><A> (`n \cdot; g \cdot; `j) = `s \cdot; (f \sb<\rcomp;><A> g) \cdot; `t
+          (`s \cdot; f \cdot; `t) \sb<\rcomp;><A> (`l \cdot; g \cdot; `m) = (`s \parallel|bin|; `l) \cdot; (f \sb<\rcomp;><A> g) \cdot; (`t \parallel|bin|; `m)
         >
         が成り立つ。
+        ここで、&m<`s \parallel|bin|; `l: \langle; `C, `G', `C' \rangle; \to; \langle; `L, `G, `L' \rangle;>, &m<`t \parallel|bin|; `m: \langle; `D, `S, `D' \rangle; \to; \langle; `F, `S', `F' \rangle;> はそれぞれ自然に定まる置換である。
       >
     >
     \p<
@@ -156,8 +157,8 @@
         &m<\scr<C>> の対象 &m<A> に対し、&m<\scr<D>> の対象 &m<FA> が定まっている。
       >
       \li*<
-        &m<\scr<C>> の多射 &m<f: \langle; `G \rangle; \to; \langle; `D \rangle;> に対し、&m<\scr<D>> の多射 &m<Ff: \langle; F`G \rangle; \to; \langle; F`D \rangle;> が定まっている。
-        ここで、&m<F`G> と &m<F`D> は、それぞれ &m<`G> と &m<`D> の各要素を &m<F> で移して得られる列である。
+        &m<\scr<C>> の多射 &m<f: \langle; `G \rangle; \to; \langle; `D \rangle;> に対し、&m<\scr<D>> の多射 &m<Ff: F \langle; `G \rangle; \to; F \langle; `D \rangle;> が定まっている。
+        ここで、&m<F \langle; `G \rangle;>, &m<F \langle; `D \rangle;> はそれぞれ &m<\langle; `G \rangle;>, &m<\langle; `D \rangle;> の各要素を &m<F> で移して得られる列である。
       >
     >
     \p<
@@ -184,7 +185,7 @@
           F (`s \cdot; f \cdot; `t) = F`s \cdot; Ff \cdot; F`t
         >
         が成り立つ。
-        ここで、&m<F`s> と &m<F`t> は、それぞれ &m<`s> と &m<`t> の始域と終域の列を &m<F> で移したものに置き換えて得られる置換である。
+        ここで、&m<F`s>, &m<F`t> はそれぞれ &m<`s>, &m<`t> の始域と終域の列を &m<F> で移したものに置き換えて得られる置換である。
       >
     >
     \p<
