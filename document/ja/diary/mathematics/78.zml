@@ -222,46 +222,46 @@
     >
     \ul<
       \li*<
-        ある対象 &m<A \bowtie; B> と多射 &m<\sb<\tilde<`f>><AB>: \langle; A, B \rangle; \to; \langle; A \bowtie; B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `G' \rangle;, \langle; `D \rangle;> に対して、写像
+        ある対象 &m<A \otimes; B> と多射 &m<\sb<\tilde<`f>><AB>: \langle; A, B \rangle; \to; \langle; A \otimes; B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `G' \rangle;, \langle; `D \rangle;> に対して、写像
         &mb<
           \array|align="rcl"|<
-            \c<\op<Hom> (`G, A \bowtie; B, `G' \mid; `D)> \c<\longto;> \c<\op<Hom> (`G, A, B, `G' \mid; `D)> \br;
-            \c<f> \c<\longmapsto;> \c<\sb<\tilde<`f>><AB> \sb<\rcomp;><A \bowtie; B> f>
+            \c<\op<Hom> (`G, A \otimes; B, `G' \mid; `D)> \c<\longto;> \c<\op<Hom> (`G, A, B, `G' \mid; `D)> \br;
+            \c<f> \c<\longmapsto;> \c<\sb<\tilde<`f>><AB> \sb<\rcomp;><A \otimes; B> f>
           >     
         >
         が同型射になるとする。
-        このとき、&m<A \bowtie; B> を &m<A> と &m<B> の\em<テンソル積\fl<tensor product>> という。
+        このとき、&m<A \otimes; B> を &m<A> と &m<B> の\em<テンソル積\fl<tensor product>> という。
       >
       \li*<
-        ある対象 &m<\tdtriangle;> と多射 &m<`f: \langle; \rangle; \to; \langle; \tdtriangle; \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `G' \rangle;, \langle; `D \rangle;> に対して、写像
+        ある対象 &m<\top;> と多射 &m<`f: \langle; \rangle; \to; \langle; \top; \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `G' \rangle;, \langle; `D \rangle;> に対して、写像
         &mb<
           \array|align="rcl"|<
-            \c<\op<Hom> (`G, \tdtriangle;, `G' \mid; `D)> \c<\longto;> \c<\op<Hom> (`G, `G' \mid; `D)> \br;
-            \c<f> \c<\longmapsto;> \c<`f \sb<\rcomp;><\tdtriangle;> f>
+            \c<\op<Hom> (`G, \top;, `G' \mid; `D)> \c<\longto;> \c<\op<Hom> (`G, `G' \mid; `D)> \br;
+            \c<f> \c<\longmapsto;> \c<`f \sb<\rcomp;><\top;> f>
           >     
         >
         が同型射になるとする。
-        このとき、&m<\tdtriangle;> を\em<単位\fl<unit>> という。
+        このとき、&m<\top;> を\em<単位\fl<unit>> という。
       >
       \li*<
-        ある対象 &m<A \bopenrarr; B> と多射 &m<\sb<`b><AB>: \langle; A \bopenrarr; B, A \rangle; \to; \langle; B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
+        ある対象 &m<A \brmulti; B> と多射 &m<\sb<`b><AB>: \langle; A \brmulti; B, A \rangle; \to; \langle; B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
         &mb<
           \array|align="rcl"|<
-            \c<\op<Hom> (`G \mid; `D, A \bopenrarr; B, `D')> \c<\longto;> \c<\op<Hom> (`G, A \mid; `D, B, `D')> \br;
-            \c<f> \c<\longmapsto;> \c<f \sb<\rcomp;><A \bopenrarr; B> \sb<`b><AB>>
+            \c<\op<Hom> (`G \mid; `D, A \brmulti; B, `D')> \c<\longto;> \c<\op<Hom> (`G, A \mid; `D, B, `D')> \br;
+            \c<f> \c<\longmapsto;> \c<f \sb<\rcomp;><A \brmulti; B> \sb<`b><AB>>
           >     
         >
         が同型射になるとする。
-        このとき、&m<A \bopenrarr; B> を &m<A> と &m<B> の\em<冪\fl<exponential>> という。
+        このとき、&m<A \brmulti; B> を &m<A> と &m<B> の\em<冪\fl<exponential>> という。
       >
       \li*<
-        ある対象 &m<\sp<A><\tutriangle;>> と多射 &m<\sb<`h><A>: \langle; \rangle; \to; \langle; A, \sp<A><\tutriangle;> \rangle;>, &m<\sb<`e><A>: \langle; \sp<A><\tutriangle;>, A \rangle; \to; \langle; \rangle;> について、
+        ある対象 &m<\sp<A><\bot;>> と多射 &m<\sb<`h><A>: \langle; \rangle; \to; \langle; A, \sp<A><\bot;> \rangle;>, &m<\sb<`e><A>: \langle; \sp<A><\bot;>, A \rangle; \to; \langle; \rangle;> について、
         &mb<
-          \sb<`h><A> \sb<\rcomp;><A> \sb<`e><A> = \sb<\rm<id>><\sp<A><\tutriangle;>> \qquad;
-          \sb<`h><A> \sb<\rcomp;><\sp<A><\tutriangle;>> \sb<`e><A> = \sb<\rm<id>><A>
+          \sb<`h><A> \sb<\rcomp;><A> \sb<`e><A> = \sb<\rm<id>><\sp<A><\bot;>> \qquad;
+          \sb<`h><A> \sb<\rcomp;><\sp<A><\bot;>> \sb<`e><A> = \sb<\rm<id>><A>
         >
         がともに成り立つとする。
-        このとき、&m<\sp<A><\tutriangle;>> を &m<A> の\em<双対\fl<dual>> という。
+        このとき、&m<\sp<A><\bot;>> を &m<A> の\em<双対\fl<dual>> という。
       >
     >
     \p<
