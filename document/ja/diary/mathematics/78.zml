@@ -244,6 +244,28 @@
         このとき、&m<\top;> を\em<単位\fl<unit>> という。
       >
       \li*<
+        ある対象 &m<A \oplus; B> と多射 &m<\sb<\tilde<`c>><AB>: \langle; A \oplus; B \rangle; \to; \langle; A, B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
+        &mb<
+          \array|align="rcl"|<
+            \c<\op<Hom> (`G \mid; `D, A \oplus; B, `D')> \c<\longto;> \c<\op<Hom> (`G \mid; `D, A, B, `D')> \br;
+            \c<f> \c<\longmapsto;> \c<f \sb<\rcomp;><A \oplus; B> \sb<\tilde<`c>><AB>>
+          >     
+        >
+        が同型射になるとする。
+        このとき、&m<A \oplus; B> を &m<A> と &m<B> の\em<余テンソル積\fl<cotensor product>> という。
+      >
+      \li*<
+        ある対象 &m<\bot;> と多射 &m<`c: \langle; \bot; \rangle; \to; \langle; \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
+        &mb<
+          \array|align="rcl"|<
+            \c<\op<Hom> (`G \mid; `D, \bot;, `D')> \c<\longto;> \c<\op<Hom> (`G \mid; `D, `D')> \br;
+            \c<f> \c<\longmapsto;> \c<f \sb<\rcomp;><\bot;> `c>
+          >     
+        >
+        が同型射になるとする。
+        このとき、&m<\bot;> を\em<余単位\fl<counit>> という。
+      >
+      \li*<
         ある対象 &m<A \brmulti; B> と多射 &m<\sb<`b><AB>: \langle; A \brmulti; B, A \rangle; \to; \langle; B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
         &mb<
           \array|align="rcl"|<
@@ -281,9 +303,10 @@
       1 対 1 対応
       &mb<
         \array|align="rcl"|<
-          \c<`{&raw<テンソル積と単位をもつ対称複圏>`}> \c<\cong;> \c<`{&raw<対称モノイダル圏>`}> \br;
-          \c<`{&raw<テンソル積と単位と冪をもつ対称複圏>`}> \c<\cong;> \c<`{&raw<対称モノイダル閉圏>`}> \br;
-          \c<`{&raw<テンソル積と単位と双対をもつ対称複圏>`}> \c<\cong;> \c<`{&raw<スター自律圏>`}>
+          \c<`{&raw<テンソル積, 単位をもつ対称複圏>`}> \c<\cong;> \c<`{&raw<対称モノイダル圏>`}> \br;
+          \c<`{&raw<テンソル積, 単位, 冪をもつ対称複圏>`}> \c<\cong;> \c<`{&raw<対称モノイダル閉圏>`}> \br;
+          \c<`{&raw<テンソル積, 単位, 余テンソル積, 余単位をもつ対称多圏>`}> \c<\cong;> \c<`{&raw<線型分配圏>`}> \br;
+          \c<`{&raw<テンソル積, 単位, 余テンソル積, 余単位, 双対をもつ対称多圏>`}> \c<\cong;> \c<`{&raw<スター自律圏>`}>
         >
       >
       が成立する。
