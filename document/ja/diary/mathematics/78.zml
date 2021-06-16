@@ -222,55 +222,55 @@
     >
     \ul<
       \li*<
-        ある対象 &m<A \otimes; B> と多射 &m<\sb<\tilde<`f>><AB>: \langle; A, B \rangle; \to; \langle; A \otimes; B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `G' \rangle;, \langle; `D \rangle;> に対して、写像
+        ある対象 &m<A \otimes; B> と多射 &m<\sb<`f><AB>: \langle; A, B \rangle; \to; \langle; A \otimes; B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `G' \rangle;, \langle; `D \rangle;> に対して、写像
         &mb<
           \array|align="rcl"|<
             \c<\op<Hom> (`G, A \otimes; B, `G' \mid; `D)> \c<\longto;> \c<\op<Hom> (`G, A, B, `G' \mid; `D)> \br;
-            \c<f> \c<\longmapsto;> \c<\sb<\tilde<`f>><AB> \sb<\rcomp;><A \otimes; B> f>
+            \c<f> \c<\longmapsto;> \c<\sb<`f><AB> \sb<\rcomp;><A \otimes; B> f>
           >     
         >
         が同型射になるとする。
         このとき、&m<A \otimes; B> を &m<A> と &m<B> の\em<テンソル積\fl<tensor product>> という。
       >
       \li*<
-        ある対象 &m<\top;> と多射 &m<`f: \langle; \rangle; \to; \langle; \top; \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `G' \rangle;, \langle; `D \rangle;> に対して、写像
+        ある対象 &m<\top;> と多射 &m<\sb<`f><\top;>: \langle; \rangle; \to; \langle; \top; \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `G' \rangle;, \langle; `D \rangle;> に対して、写像
         &mb<
           \array|align="rcl"|<
             \c<\op<Hom> (`G, \top;, `G' \mid; `D)> \c<\longto;> \c<\op<Hom> (`G, `G' \mid; `D)> \br;
-            \c<f> \c<\longmapsto;> \c<`f \sb<\rcomp;><\top;> f>
+            \c<f> \c<\longmapsto;> \c<\sb<`f><\top;> \sb<\rcomp;><\top;> f>
           >     
         >
         が同型射になるとする。
         このとき、&m<\top;> を\em<単位\fl<unit>> という。
       >
       \li*<
-        ある対象 &m<A \oplus; B> と多射 &m<\sb<\tilde<`c>><AB>: \langle; A \oplus; B \rangle; \to; \langle; A, B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
+        ある対象 &m<A \oplus; B> と多射 &m<\sb<`c><AB>: \langle; A \oplus; B \rangle; \to; \langle; A, B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
         &mb<
           \array|align="rcl"|<
             \c<\op<Hom> (`G \mid; `D, A \oplus; B, `D')> \c<\longto;> \c<\op<Hom> (`G \mid; `D, A, B, `D')> \br;
-            \c<f> \c<\longmapsto;> \c<f \sb<\rcomp;><A \oplus; B> \sb<\tilde<`c>><AB>>
+            \c<f> \c<\longmapsto;> \c<f \sb<\rcomp;><A \oplus; B> \sb<`c><AB>>
           >     
         >
         が同型射になるとする。
         このとき、&m<A \oplus; B> を &m<A> と &m<B> の\em<余テンソル積\fl<cotensor product>> という。
       >
       \li*<
-        ある対象 &m<\bot;> と多射 &m<`c: \langle; \bot; \rangle; \to; \langle; \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
+        ある対象 &m<\bot;> と多射 &m<\sb<`c><\bot;>: \langle; \bot; \rangle; \to; \langle; \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
         &mb<
           \array|align="rcl"|<
             \c<\op<Hom> (`G \mid; `D, \bot;, `D')> \c<\longto;> \c<\op<Hom> (`G \mid; `D, `D')> \br;
-            \c<f> \c<\longmapsto;> \c<f \sb<\rcomp;><\bot;> `c>
+            \c<f> \c<\longmapsto;> \c<f \sb<\rcomp;><\bot;> \sb<`c><\bot;>>
           >     
         >
         が同型射になるとする。
         このとき、&m<\bot;> を\em<余単位\fl<counit>> という。
       >
       \li*<
-        ある対象 &m<A \brmulti; B> と多射 &m<\sb<`b><AB>: \langle; A \brmulti; B, A \rangle; \to; \langle; B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
+        ある対象 &m<A \brmulti; B> と多射 &m<\sb<`j><AB>: \langle; A \brmulti; B, A \rangle; \to; \langle; B \rangle;> について、任意の対象列 &m<\langle; `G \rangle;, \langle; `D \rangle;, \langle; `D' \rangle;> に対して、写像
         &mb<
           \array|align="rcl"|<
             \c<\op<Hom> (`G \mid; `D, A \brmulti; B, `D')> \c<\longto;> \c<\op<Hom> (`G, A \mid; `D, B, `D')> \br;
-            \c<f> \c<\longmapsto;> \c<f \sb<\rcomp;><A \brmulti; B> \sb<`b><AB>>
+            \c<f> \c<\longmapsto;> \c<f \sb<\rcomp;><A \brmulti; B> \sb<`j><AB>>
           >     
         >
         が同型射になるとする。
