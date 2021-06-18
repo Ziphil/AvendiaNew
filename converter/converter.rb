@@ -23,12 +23,12 @@ module WordConverter
             if abbreviation_left =~ /^[0-9:]$/
               html << abbreviation_left + "'"
             else
-              html << "<a href=\"#{url}?search=#{modified_left}'&amp;mode=search&amp;type=0&amp;agree=0#{option_string}\" rel=\"nofollow\">#{abbreviation_left}'</a>"
+              html << "<a href=\"#{url}?search=#{modified_left}'&amp;mode=name&amp;type=exact#{option_string}\" rel=\"nofollow\">#{abbreviation_left}'</a>"
             end
             if abbreviation_right =~ /^[0-9:]$/
               html << abbreviation_right
             else
-              html << "<a href=\"#{url}?search=#{modified_right}&amp;mode=search&amp;type=0&amp;agree=0#{option_string}\" rel=\"nofollow\">#{abbreviation_right}</a>"
+              html << "<a href=\"#{url}?search=#{modified_right}&amp;mode=name&amp;type=exact#{option_string}\" rel=\"nofollow\">#{abbreviation_right}</a>"
             end
             html << right
             next html
@@ -37,12 +37,12 @@ module WordConverter
             if abbreviation_left =~ /^[0-9:]$/
               html << abbreviation_left
             else
-              html << "<a href=\"#{url}?search=#{modified_left}&amp;mode=search&amp;type=0&amp;agree=0#{option_string}\" rel=\"nofollow\">#{abbreviation_left}</a>"
+              html << "<a href=\"#{url}?search=#{modified_left}&amp;mode=name&amp;type=exact#{option_string}\" rel=\"nofollow\">#{abbreviation_left}</a>"
             end
             if abbreviation_right =~ /^[0-9:]$/
               html << "'" + abbreviation_right
             else
-              html << "<a href=\"#{url}?search='#{modified_right}&amp;mode=search&amp;type=0&amp;agree=0#{option_string}\" rel=\"nofollow\">'#{abbreviation_right}</a>"
+              html << "<a href=\"#{url}?search='#{modified_right}&amp;mode=name&amp;type=exact#{option_string}\" rel=\"nofollow\">'#{abbreviation_right}</a>"
             end
             html << right
             next html
@@ -52,7 +52,7 @@ module WordConverter
           if matched_name =~ /^[0-9:]$|^ʻ|^—$/
             html << matched_name
           else
-            html << "<a href=\"#{url}?search=#{modified_name}&amp;mode=search&amp;type=0&amp;agree=0#{option_string}\" rel=\"nofollow\">#{matched_name}</a>"
+            html << "<a href=\"#{url}?search=#{modified_name}&amp;mode=name&amp;type=exact#{option_string}\" rel=\"nofollow\">#{matched_name}</a>"
           end
           html << right
           next html

@@ -37,7 +37,7 @@ NAMES = {
 FOREIGN_LANGUAGES = {:ja => :en, :en => :ja}
 LANGUAGE_NAMES = {:ja => "日本語", :en => "English"}
 LATEST_VERSION_REGEX = /(5\s*代\s*5\s*期|S\s*代|Version\s*5\.5|Version\s*S)/
-DICTIONARY_URL = "conlang/database/1.html"
+DICTIONARY_URL = "https://dic.ziphil.com"
 
 INLINE_ELEMENT_NAMES = ["x", "xn", "a"]
 
@@ -778,25 +778,22 @@ end
 converter.add(["x"], ["page"]) do |element|
   this = ""
   content = apply(element, "page").to_s
-  url = converter.url_prefix + DICTIONARY_URL
   link = !!variables[:latest] && converter.path =~ /conlang\/.+\/\d+(\-\w{2})?\.zml/
-  this << WordConverter.convert(content, url, link)
+  this << WordConverter.convert(content, DICTIONARY_URL, link)
   next this
 end
 
 converter.add(["x"], ["page.section-table"]) do |element|
   this = ""
   content = apply(element, "page.section-table").to_s
-  url = converter.url_prefix + DICTIONARY_URL
-  this << WordConverter.convert(content, url, false)
+  this << WordConverter.convert(content, DICTIONARY_URL, false)
   next this
 end
 
 converter.add(["xn"], ["page", "page.section-table"]) do |element|
   this = ""
   content = apply(element, "page").to_s
-  url = converter.url_prefix + DICTIONARY_URL
-  this << WordConverter.convert(content, url, false)
+  this << WordConverter.convert(content, DICTIONARY_URL, false)
   next this
 end
 
