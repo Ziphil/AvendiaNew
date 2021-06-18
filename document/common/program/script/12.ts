@@ -30,12 +30,11 @@ export class Executor extends ExecutorBase {
   }
 
   private createUrl(mode: "current" | "difference", day: number): string {
-    let url = window.location.protocol + "//" + window.location.host + "/program/interface/3.cgi";
+    let url = window.location.protocol + "//dic.ziphil.com/api/dictionary";
     if (mode === "current") {
-      url += "?mode=fetch_word_size";
+      url += "/count";
     } else {
-      url += "?mode=fetch_progress";
-      url += "&duration=" + day;
+      url += "/difference?duration=" + day;
     }
     return url;
   }
