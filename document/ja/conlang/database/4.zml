@@ -4,49 +4,48 @@
 \page<
   \name<辞典データダウンロード>
   \ver<S 代>
-  \import-script|src="12.js"|;
 
   \h1<概要>
   \p<
-    辞書ソフトウェア『Personal Dictionary Unicode』および『ZpDIC』で使用できる辞書データがダウンロードできます。
-    ZpDIC は\a|href="../../application/download/2.html"|<こちら>からダウンロードできます。
+    シャレイア語の辞書データがダウンロードできます。
   >
   \h1<ダウンロード>
-  \h2<ZpDIC 版>
+  \h2<新シャレイア語辞典形式>
   \p<
-    全てのデータを含む完全版です。
-    オンライン辞典もこのデータを参照しています。
+    全てのデータが含まれます。
+    閲覧には \ae|href="https://github.com/Ziphil/ZpdicShaleian"|<ZpDIC for Shaleian> をご利用ください。
   >
   \form<
-    \a|class="form",href="../../program/interface/3.cgi?mode=download&type=zpdic"|<ダウンロード>　(\span|id="whole-count"|<?> 語)
+    \a|class="form",href="https://dic.ziphil.com/api/dictionary/download?kind=single"|<ダウンロード>
+  > 
+  \h2<旧シャレイア語辞典形式>
+  \p<
+    日本語のデータのみから成り、英語のデータは含まれていません。
+    閲覧には \a|href="../../application/download/2.html"|<ZpDIC> をご利用ください。
+  >
+  \form<
+    \a|class="form",href="https://dic.ziphil.com/api/dictionary/download?kind=oldShaleian"|<ダウンロード>
   >
   \h2<OneToMany-JSON 形式>
   \p<
+    造語日などの一部のデータは含まれていません。
     シャレイア語辞典形式からの自動生成なので、体裁などが見にくくなってしまっている可能性があります。 
+  >
+  \p<
+    現在準備中です。
+  >
+  \h2<PDIC 形式>
+  \p<
     造語日などの一部のデータは含まれていません。
+    シャレイア語辞典形式からの自動生成なので、体裁などが見にくくなってしまっている可能性があります。
   >
   \p<
-    生成と更新は手動なので、常に最新のデータであるわけではありません。
-  >
-  \form<
-    \a|class="form",href="../../program/interface/3.cgi?mode=download&type=otm"|<ダウンロード>
-  >
-  \h2<PDIC 版>
-  \p<
-    このデータは Unicode 版用のものなので、 Unicode 版ではない PDIC では正常に読み込めません。
-    また、 古いバージョンの PDIC を使っている場合、 データを読み込むときにエラーが出る場合があります。
-    その場合は、 最新版の PDIC にアップロードするようお願いします。
+    このデータは Unicode 版用のものなので、Unicode 版ではない PDIC では正常に読み込めません。
+    また、古いバージョンの PDIC を使っている場合、データを読み込むときにエラーが出る場合があります。
+    その場合は、最新版の PDIC にアップロードするようお願いします。
   >
   \p<
-    シャレイア語辞典形式からの自動生成なので、 体裁などが見にくくなってしまっている可能性があります。
-    造語日などの一部のデータは含まれていません。
-  >
-  \p<
-    生成と更新は手動なので、 常に最新のデータであるわけではありません。
-    このデータは特に古いので、 多くの新しい単語が登録されていません。
-  >
-  \form<
-    \a|class="form",href="../../program/interface/3.cgi?mode=download&type=pdic"|<ダウンロード>
+    現在準備中です。
   >
 
 >
