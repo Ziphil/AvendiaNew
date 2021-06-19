@@ -20,10 +20,10 @@ export class Executor extends ExecutorBase {
     request.send(null);
     request.addEventListener("readystatechange", (event) => {
       if (request.readyState === 4 && request.status === 200) {
-        let result = request.responseText;
+        let result = parseInt(request.responseText, 10);
         let element = document.querySelector(query);
         if (element !== null) {
-          element.textContent = result;
+          element.textContent = Math.max(result, 0).toString();
         }
       }
     });
