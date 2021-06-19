@@ -4,8 +4,10 @@
 \page<
   \name<シャレイア語辞典>
   \ver<>
-  \import-script|src="13.js"|;
 
-  \div|id="root"|;
+  \h1<おしらせ>
+  \p<
+    オンラインシャレイア語辞典は\a|href="https://dic.ziphil.com"|<こちら>に移転しました。
+  >
 
 >

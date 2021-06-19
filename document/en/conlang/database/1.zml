@@ -4,8 +4,10 @@
 \page<
   \name<Shaleian dictionary>
   \ver<>
-  \import-script|src="13.js"|;
 
-  \div|id="root"|;
+  \h1<Notice>
+  \p<
+    The online Shaleian dictionary has been moved \a|href="https://dic.ziphil.com"|<here>.
+  >
 
 >
