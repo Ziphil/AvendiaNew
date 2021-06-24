@@ -4,17 +4,11 @@
 \page<
   \name<造語依頼>
   \ver<S 代>
-  \import-script|src="14.js"|;
 
   \h1<造語依頼フォーム>
   \p<
     造語依頼したい単語を、1 行に 1 単語になるよう改行で区切って入力してください。
     同時に何単語でも依頼することができます。
   >
-  \form<
-    \textarea|class="normal",name="content",cols="50",rows="6"|;\br;
-    \input|type="submit",id="submit",value="依頼"|;
-  >
-  \div|id="result"|;
 
 >
