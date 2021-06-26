@@ -152,11 +152,12 @@
             \div|class="number",id="whole-count"|<2400>
           >
           \div|class="table small"|<
-            \div|class="text"|<From a week ago>
+            \div|class="text"|<In the last week>
             \div|class="number",id="week-count"|<?>
-            \div|class="text"|<From a month ago>
+            \div|class="text"|<In the last month>
             \div|class="number",id="month-count"|<?>
-          >
+            \div|class="text"|<In the last year>
+            \div|class="number",id="year-count"|<?>          >
         >
       >
     >

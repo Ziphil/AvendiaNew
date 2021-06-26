@@ -155,6 +155,8 @@
             \div|class="number",id="week-count"|<?>
             \div|class="text"|<1 ヶ月前から>
             \div|class="number",id="month-count"|<?>
+            \div|class="text"|<1 年前から>
+            \div|class="number",id="year-count"|<?>
           >
         >
       >
