@@ -285,8 +285,8 @@
       ところが、
       &mb<
         \array|align="rrcl"|<
-          \c<(g, \sp<g><\bbot;>):> \c<((B, \sp<B><\bbot;>, \sb<`e><B>), (d', \sp<d><\pr; \bbot;>), (e', \sp<e><\pr; \bbot;>))> \c<\to;> \c<((X, \sp<X><\bbot;>, \sb<`e><X>), (d, \sp<d><\bbot;>), (e, \sp<e><\bbot;>))> \br;
-          \c<(\rm<id>, \sp<b><\sharp;>):> \c<((B, \sp<B><\bbot;>, \sb<`e><B>), (d', \sp<d><\pr; \bbot;>), (e', \sp<e><\pr; \bbot;>))> \c<\to;> \c<((B, \bar<B>, b), (d', m'), (e', u'))>
+          \c<(g, \sp<g><\bbot;>):> \c<((B, \sp<B><\bbot;>, \sb<`e><B>), (d', \sp<d><\pr; \bbot;>), (e', \sp<e><\pr; \bbot;>))> \c<\longto;> \c<((X, \sp<X><\bbot;>, \sb<`e><X>), (d, \sp<d><\bbot;>), (e, \sp<e><\bbot;>))> \br;
+          \c<(\rm<id>, \sp<b><\sharp;>):> \c<((B, \sp<B><\bbot;>, \sb<`e><B>), (d', \sp<d><\pr; \bbot;>), (e', \sp<e><\pr; \bbot;>))> \c<\longto;> \c<((B, \bar<B>, b), (d', m'), (e', u'))>
         >
       >
       はともに &m<\bfrm<PComon> (\scr<X>)> の射でもある。
@@ -334,12 +334,12 @@
       を可換にする &m<\bfrm<PMon> (\scr<C> `/ \sp<X><\bbot;>)> の射 &m<\bar<r>: ((\bar<X>, \sp<x><\sharp;>), m, u) \to; ((\bar<Y>, \sp<y><\sharp;>), \sp<m><\ppr;>, \sp<u><\ppr;>)> が存在する。
       \ref|type="cthm",id="chuslice"|; によって、これは &m<\bfrm<PComon> (\scr<X>)> の射
       &mb<
-        (\rm<id>, \bar<r>): ((X, \bar<Y>, \sp<y><\sharp;>), (d, \sp<m><\ppr;>), (e, \sp<u><\ppr;>)) \to; ((X, \bar<X>, \sp<x><\sharp;>), (d, m), (e, u))
+        (\rm<id>, \bar<r>): ((X, \bar<Y>, \sp<y><\sharp;>), (d, \sp<m><\ppr;>), (e, \sp<u><\ppr;>)) \longto; ((X, \bar<X>, \sp<x><\sharp;>), (d, m), (e, u))
       >
       がとれたということである。
       すると、&m<\bfrm<PComon> (\scr<X>)> の射
       &mb<
-        (\rm<id>, \bar<r>) \circ; (g, \bar<p>): ((B, \bar<B>, b), (d', m'), (e', u')) \to; ((X, \bar<X>, x), (d, m), (e, u))
+        (\rm<id>, \bar<r>) \circ; (g, \bar<p>): ((B, \bar<B>, b), (d', m'), (e', u')) \longto; ((X, \bar<X>, x), (d, m), (e, u))
       >
       が得られ、この合成を &m<(g, \bar<g>)> と書くことにすれば、
       &mb<

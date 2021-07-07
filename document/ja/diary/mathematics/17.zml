@@ -157,34 +157,34 @@
     この対応は &m<\scr<V>>-豊穣関手 &m<S: \sp<\scr<C>><\circ;> \to; \scr<V>> に拡張できる。
     これを示すには、&m<\scr<C>> の対象 &m<A, B> に対し、射
     &mb<
-      \sb<S><AB>: `[B, A`] \to; \lbbracket; W, `[A, F \hyphen;`] \rbbracket; \rmulti|bin|; \lbbracket; W, `[B, F \hyphen;`] \rbbracket;
+      \sb<S><AB>: `[B, A`] \longto; \lbbracket; W, `[A, F \hyphen;`] \rbbracket; \rmulti|bin|; \lbbracket; W, `[B, F \hyphen;`] \rbbracket;
     >
     を構成する必要がある。
   >
   \p<
     初めに、豊穣 Yoneda の補題により、同型射
     &mb<
-      \sb<f><AB>: `[B, A`] \to; \lbbracket; `[A, \hyphen;`], `[B, \hyphen;`] \rbbracket;
+      \sb<f><AB>: `[B, A`] \longto; \lbbracket; `[A, \hyphen;`], `[B, \hyphen;`] \rbbracket;
     >
     が存在する。
     &m<\scr<V>>-豊穣関手 &m<`[A, \hyphen;`]: \scr<C> \to; \scr<V>> の明確の定義は \a|href="16.html"|<8 月 5 日>にすでにしているので、そちらを参照してほしい。
     次に、
     &mb<
-      \sb<g><AB>: \lbbracket; `[A, \hyphen;`], `[B, \hyphen;`] \rbbracket; \to; \lbbracket; `[A, F \hyphen;`], `[B, F \hyphen;`] \rbbracket;
+      \sb<g><AB>: \lbbracket; `[A, \hyphen;`], `[B, \hyphen;`] \rbbracket; \longto; \lbbracket; `[A, F \hyphen;`], `[B, F \hyphen;`] \rbbracket;
     >
     を構成する。
     &m<\scr<V>> の対象 &m<X> に対し、&m<\scr<V>>-豊穣自然変換 &m<`g: X \otimes; `[A, \hyphen;`] \raarr; `[B, \hyphen;`]> をとる。
     &m<\scr<J>> の対象 &m<I> に対して &m<\sb<`d><I> \coloneqq; \sb<`g><FI>> とおくと、これらは &m<\scr<V>>-豊穣自然変換 &m<`d: X \otimes; `[A, F \hyphen;`] \raarr; `[B, F \hyphen;`]> を定める。
     &m<`g> を &m<`d> に移す操作は、写像
     &mb<
-      \sb<\tilde<g>><AB>: \op<Hom> (X, \lbbracket; `[A, \hyphen;`], `[B, \hyphen;`] \rbbracket; ) \to; \op<Hom> (X, \lbbracket; `[A, F \hyphen; `], `[B, F \hyphen;`] \rbbracket;)
+      \sb<\tilde<g>><AB>: \op<Hom> (X, \lbbracket; `[A, \hyphen;`], `[B, \hyphen;`] \rbbracket; ) \longto; \op<Hom> (X, \lbbracket; `[A, F \hyphen; `], `[B, F \hyphen;`] \rbbracket;)
     >
     を 1 つ定める。
     この写像は、定義から明らかに &m<X> に関して自然である。
     したがって、通常の Yoneda の補題によって、構成したかった &m<\sb<g><AB>> が得られる。
     最後に、
     &mb<
-      \sb<h><AB>: \lbbracket; `[A, F \hyphen;`], `[B, F \hyphen;`] \rbbracket; \to; \lbbracket; W, `[A, F \hyphen;`] \rbbracket; \rmulti|bin|; \lbbracket; W, `[B, F \hyphen;`] \rbbracket;
+      \sb<h><AB>: \lbbracket; `[A, F \hyphen;`], `[B, F \hyphen;`] \rbbracket; \longto; \lbbracket; W, `[A, F \hyphen;`] \rbbracket; \rmulti|bin|; \lbbracket; W, `[B, F \hyphen;`] \rbbracket;
     >
     を構成する。
     &m<\scr<V>> の対象 &m<X> に対し、&m<\scr<V>>-豊穣自然変換 &m<`d: X \otimes; `[A, F \hyphen;`] \raarr; `[B, F \hyphen;`]> をとる。
@@ -200,7 +200,7 @@
     を &m<\sb<`z><I>> とおくと、これらは &m<\scr<V>>-豊穣自然変換 &m<`z: X \otimes; \lbbracket; W, `[A, F \hyphen;`] \rbbracket; \otimes; W \hyphen; \raarr; `[B, F \hyphen;`]> を定める。
     &m<`d> を &m<`z> に移す操作は、写像
     &mb<
-      \sb<\tilde<h>><AB>: \op<Hom> (X, \lbbracket; `[A, F \hyphen;`], `[B, F \hyphen;`] \rbbracket; ) \to; \op<Hom> (X \otimes; \lbbracket; W, `[A, F \hyphen;`] \rbbracket;, \lbbracket; W, `[B, F \hyphen;`] \rbbracket;)
+      \sb<\tilde<h>><AB>: \op<Hom> (X, \lbbracket; `[A, F \hyphen;`], `[B, F \hyphen;`] \rbbracket; ) \longto; \op<Hom> (X \otimes; \lbbracket; W, `[A, F \hyphen;`] \rbbracket;, \lbbracket; W, `[B, F \hyphen;`] \rbbracket;)
     >
     を 1 つ定める。
     この写像も明らかに &m<X> に関して自然なので、再び Yoneda の補題により、構成したかった &m<\sb<h><AB>> が得られる。

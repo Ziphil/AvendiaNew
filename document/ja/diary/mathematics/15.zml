@@ -50,12 +50,12 @@
       >
       とテンソル積の随伴で対応する射を
       &mb<
-        \sb<p><BC>: \prod<A \in; \scr<C>><> `[FA, GA`] \to; `[B, C`] \rmulti|bin|; `[FB, GC`]
+        \sb<p><BC>: \prod<A \in; \scr<C>><> `[FA, GA`] \longto; `[B, C`] \rmulti|bin|; `[FB, GC`]
       >
       とおく。
       この射たちは、
       &mb<
-        p: \prod<A \in; \scr<C>><> `[FA, GA`] \to; \prod<B, C \in; \scr<C>><> (`[B, C`] \rmulti|bin|; `[FB, GC`])
+        p: \prod<A \in; \scr<C>><> `[FA, GA`] \longto; \prod<B, C \in; \scr<C>><> (`[B, C`] \rmulti|bin|; `[FB, GC`])
       >
       を定める。
       同様にして、&m<\scr<C>> の対象 &m<B, C> に対し、合成
@@ -67,11 +67,11 @@
       >
       とテンソル積の随伴で対応する射を
       &mb<
-        \sb<q><BC>: \prod<A \in; \scr<C>><> `[FA, GA`] \to; `[B, C`] \rmulti|bin|; `[FB, GC`]
+        \sb<q><BC>: \prod<A \in; \scr<C>><> `[FA, GA`] \longto; `[B, C`] \rmulti|bin|; `[FB, GC`]
       >
       とおき、これらが定める射を
       &mb<
-        q: \prod<A \in; \scr<C>><> `[FA, GA`] \to; \prod<B, C \in; \scr<C>><> (`[B, C`] \rmulti|bin|; `[FB, GC`])
+        q: \prod<A \in; \scr<C>><> `[FA, GA`] \longto; \prod<B, C \in; \scr<C>><> (`[B, C`] \rmulti|bin|; `[FB, GC`])
       >
       とする。
       これによって平行な射が 2 本できたので、等化子
@@ -176,7 +176,7 @@
       を考え、これを &m<\sb<s><A>> とおく。
       この &m<\sb<s><A>> たちは、
       &mb<
-        s: \lbbracket; F, G \rbbracket; \otimes; \lbbracket; G, H \rbbracket; \to; \prod<A \in; \scr<C>><> `[FA, HA`]
+        s: \lbbracket; F, G \rbbracket; \otimes; \lbbracket; G, H \rbbracket; \longto; \prod<A \in; \scr<C>><> `[FA, HA`]
       >
       を定める。
     >
@@ -298,7 +298,7 @@
       を考えると、これは明らかに可換である。
       したがって、&m<\scr<C>> の各対象 &m<A> に対して、&m<\scr<D>> の恒等射を定める射 &m<\sb<j><FA>: 1 \to; `[FA, FA`]> たちが定める射を
       &mb<
-        t: 1 \to; \prod<A \in; \scr<C>><> `[FA, FA`]
+        t: 1 \longto; \prod<A \in; \scr<C>><> `[FA, FA`]
       >
       とおけば、上の議論と同様にして、図式
       &mb<

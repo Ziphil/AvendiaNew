@@ -127,17 +127,17 @@
     関手 &m<M: \scr<C> \to; \scr<D>, K: \scr<D> \to; \scr<S>> をとり、さらに &m<\scr<C>> の対象 &m<X> と &m<\scr<D>> の対象 &m<A> をとる。
     このとき、&m<K> によって写像
     &mb<
-      \sb<K><MX, A>: \sb<\op<Hom>><\scr<D>> (MX, A) \to; \sb<\op<Hom>><\scr<S>> (KMX, KA)
+      \sb<K><MX, A>: \sb<\op<Hom>><\scr<D>> (MX, A) \longto; \sb<\op<Hom>><\scr<S>> (KMX, KA)
     >
     が誘導される。
     ここで、&m<\scr<S>> が &m<(K \circ; M)>-テンソル付きであるとすると、テンソル対象の定義により、この写像に対応する &m<\scr<S>> の射として、
     &mb<
-      \sbsp<`z><X, A><K, M>: \sb<\op<Hom>><\scr<D>> (MX, A) \odot; KMX \to; KA
+      \sbsp<`z><X, A><K, M>: \sb<\op<Hom>><\scr<D>> (MX, A) \odot; KMX \longto; KA
     >
     がある。
     これは &m<X> に関して双自然なので、コエンドの普遍性により、
     &mb<
-      \sbsp<z><A><K, M>: \int<><X> (\sb<\op<Hom>><\scr<D>> (MX, A) \odot; KMX) \to; KA
+      \sbsp<z><A><K, M>: \int<><X> (\sb<\op<Hom>><\scr<D>> (MX, A) \odot; KMX) \longto; KA
     >
     が得られる。
   >
@@ -146,7 +146,7 @@
       関手 &m<M: \scr<C> \to; \scr<D>, K: \scr<D> \to; \scr<S>> を考え、&m<\scr<S>> は &m<(K \circ; M)>-テンソル付きであるとする。
       &m<\scr<D>> の対象 &m<A> に対し、上記によって得られる射
       &mb<
-        \sbsp<z><A><K, M>: \int<><X> (\sb<\op<Hom>><\scr<D>> (MX, A) \odot; KMX) \to; KA
+        \sbsp<z><A><K, M>: \int<><X> (\sb<\op<Hom>><\scr<D>> (MX, A) \odot; KMX) \longto; KA
       >
       を、一般に \em<Yoneda 射\fl<— morphism>> という。
     >
@@ -159,7 +159,7 @@
       関手 &m<K: \scr<D> \to; \scr<S>> を考える。
       任意の &m<\scr<D>> の対象 &m<A> に対し、&m<M = \sb<\rm<id>><\scr<D>>> としたときの Yoneda 射
       &mb<
-        \sbsp<z><A><K>: \int<><X> (\sb<\op<Hom>><\scr<D>> (X, A) \odot; KX) \to; KA
+        \sbsp<z><A><K>: \int<><X> (\sb<\op<Hom>><\scr<D>> (X, A) \odot; KX) \longto; KA
       >
       は同型射である。
     >
@@ -196,7 +196,7 @@
     添字は多くの場合で省略する。
     また、以降の議論では &m<\scr<S>> が &m<\bfrm<Set>> である場合が多く使われるが、&m<\bfrm<Set>> のテンソル対象は積で与えられるので、このときの Yoneda 射は、
     &mb<
-      \sbsp<z><A><K, M>: \sb<\op<Hom>><\scr<D>> (MX, A) \sp<\times;><X> KMX \to; KA
+      \sbsp<z><A><K, M>: \sb<\op<Hom>><\scr<D>> (MX, A) \sp<\times;><X> KMX \longto; KA
     >
     という形になる。
   >
@@ -226,7 +226,7 @@
       \li*<
         任意の &m<\scr<D>> の対象 &m<A> に対し、&m<\scr<C>> の対象 &m<X> で添字付けられた恒等写像と対応する射の族
         &mb<
-          \sb<`z><X>: \sb<\op<Hom>><\scr<D>> (MX, A) \odot; MX \to; A
+          \sb<`z><X>: \sb<\op<Hom>><\scr<D>> (MX, A) \odot; MX \longto; A
         >
         はコエンドを定める。
       >
@@ -326,7 +326,7 @@
   \thm|type="def"|<
     \p<
       圏 &m<\scr<C>> をとり、関手 &m<P: \sp<\scr<C>><\circ;> \times; \scr<C> \times; \scr<C> \to; \bfrm<Set>, J: \sp<\scr<C>><\circ;> \to; \bfrm<Set>> を考える。
-      ここで、&m<\scr<C>> の対象 &m<A, B, C, Z> に対して、3種類の同型写像
+      ここで、&m<\scr<C>> の対象 &m<A, B, C, Z> に対して、3 種類の同型写像
       &mb<
         \array|align="rrcl"|<
           \c<\sb<`a><A, B, C, Z>:> \c<P (X, A, B) \sp<\times;><X> P (Z, X, C)> \c<\to;> \c<P (X, B, C) \sp<\times;><X> P (Z, A, X)> \br;
@@ -395,8 +395,8 @@
         任意の &m<\scr<C>> の対象 &m<A, Z> および &m<\scr<D>> の対象 &m<D> に対し、
         &mb<
           \array|align="rrcl"|<
-            \c<z:> \c<\sb<\op<Hom>><\scr<D>> (MX, D) \sp<\times;><X> \sb<\op<Hom>><\scr<D>> (MZ, MX \otimes; MA)> \c<\to;> \c<\sb<\op<Hom>><\scr<D>> (MZ, D \otimes; MA)> \br;
-            \c<z:> \c<\sb<\op<Hom>><\scr<D>> (MX, D) \sp<\times;><X> \sb<\op<Hom>><\scr<D>> (MZ, MA \otimes; MX)> \c<\to;> \c<\sb<\op<Hom>><\scr<D>> (MZ, MA \otimes; D)>
+            \c<z:> \c<\sb<\op<Hom>><\scr<D>> (MX, D) \sp<\times;><X> \sb<\op<Hom>><\scr<D>> (MZ, MX \otimes; MA)> \c<\longto;> \c<\sb<\op<Hom>><\scr<D>> (MZ, D \otimes; MA)> \br;
+            \c<z:> \c<\sb<\op<Hom>><\scr<D>> (MX, D) \sp<\times;><X> \sb<\op<Hom>><\scr<D>> (MZ, MA \otimes; MX)> \c<\longto;> \c<\sb<\op<Hom>><\scr<D>> (MZ, MA \otimes; D)>
           >
         >
         の形の Yoneda 射は同型である。
@@ -647,9 +647,9 @@
       &m<P> による Day 畳み込みを &m<\otimes;> とするとき、任意の &m<\scr<C>> の対象 &m<A, Z> および &m<\widehat<\scr<C>>> の対象 &m<F> に対し、
       &mb<
         \array|align="rrcl"|<
-          \c<z:> \c<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> X, F) \sp<\times;><X> \sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \bf<y> X \otimes; \bf<y> A)> \c<\to;>
+          \c<z:> \c<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> X, F) \sp<\times;><X> \sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \bf<y> X \otimes; \bf<y> A)> \c<\longto;>
           \c<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, F \otimes; \bf<y> A)> \br;
-          \c<z:> \c<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> X, F) \sp<\times;><X> \sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \bf<y> A \otimes; \bf<y> X)> \c<\to;>
+          \c<z:> \c<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> X, F) \sp<\times;><X> \sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \bf<y> A \otimes; \bf<y> X)> \c<\longto;>
           \c<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \bf<y> A \otimes; F)>
         >
       >
@@ -659,7 +659,7 @@
   \prf<
     \p<
       &m<\scr<C>> の対象 &m<A, Z> をとる。
-      \ref|type="cthm",id="dayconvcl"|;によって、関手 &m<\hyphen; \otimes; \bf<y> A: \widehat<\scr<C>> \to; \widehat<\scr<C>>> は右随伴をもつ。
+      \ref|type="cthm",id="dayconvcl"|; によって、関手 &m<\hyphen; \otimes; \bf<y> A: \widehat<\scr<C>> \to; \widehat<\scr<C>>> は右随伴をもつ。
       さらに、関手 &m<\sb<\op<Hom>><\widehat<\scr<C>>> (\bf<y> Z, \hyphen;): \widehat<\scr<C>> \to; \bfrm<Set>> も右随伴をもつ。
       実際、
       &mb<
