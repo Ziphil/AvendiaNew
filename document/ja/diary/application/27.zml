@@ -104,7 +104,7 @@
   \thm|type="def"|<
     \p<
       有限積をもつ圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
-      対象 &m<M, X> に対し、全変数に関して自然な射 &m<\sb<`t><MX>: M \times; F X \to; F (M \times; X)> が定まっていて、任意の対象 &m<M, N, X> に対し、図式
+      対象 &m<M, X> に対し、全ての変数に関して自然な射 &m<\sb<`t><MX>: M \times; F X \to; F (M \times; X)> が定まっていて、任意の対象 &m<M, N, X> に対し、図式
       &mb<
         \array|align="c"|<
           \c<\diag<
@@ -132,7 +132,7 @@
   >
   \thm|type="def"|<
     \p<
-      モノイダル圏 &m<\scr<C>> 上の自己強関手 &m<(F, `t), (G, `s): \scr<C> \to; \scr<C>> および自然変換 &m<`u: F \raarr; G> をとる。
+      有限積をもつ圏 &m<\scr<C>> 上の自己強関手 &m<(F, `t), (G, `s): \scr<C> \to; \scr<C>> および自然変換 &m<`u: F \raarr; G> をとる。
       任意の対象 &m<M, X> に対し、
       &mb<
         \diag<
@@ -142,7 +142,7 @@
           \ar|s="1",e="3",inv|<\sb<`t><MX>> \ar|s="2",e="4"|<\sb<`s><MX>>
         >
       >
-      が可換であるとき、&m<`f> を\em<強自然変換\fl<strong natural transformation>> といい、&m<`u: (F, `t) \raarr; (G, `s)> で表す。
+      が可換であるとき、&m<`u> を\em<強自然変換\fl<strong natural transformation>> といい、&m<`u: (F, `t) \raarr; (G, `s)> で表す。
     >
   >
   \p<
