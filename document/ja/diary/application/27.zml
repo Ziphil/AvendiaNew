@@ -265,8 +265,7 @@
     >
     \p<
       自己強関手 &m<(F, `t)> を固定する。
-      任意の強自然変換 &m<`u: (\sp<E><\bar<A> A>, \sp<`r><\bar<A> A>) \raarr; (F, `t)> に対し、
-      &m<\sb<\rm<id>><A>: A \to; A> の転置を &m<\sb<\rm<jd>><A>: 1 \to; A \buharprarr; A> と書くことにして、
+      任意の強自然変換 &m<`u: (\sp<E><\bar<A> A>, \sp<`r><\bar<A> A>) \raarr; (F, `t)> に対し、&m<\sb<\rm<id>><A>: A \to; A> の転置を &m<\sb<\rm<jd>><A>: 1 \to; A \buharprarr; A> と書くことにして、
       &mb<
         `F `u \coloneqq; \tort<\diag|bl|<
           \v<\bar<A>> \v<1 \times; \bar<A>> \v<(A \buharprarr; A) \times; \bar<A>> \v<F A>

@@ -203,8 +203,37 @@
   >
   \prf<
     \p<
-      執筆中。
-      (*`>△`<) ＜応援ください!
+      この &m<(I \sp<E><\bar<A> A>, I \sp<`r><\bar<A> A>)> が実際に &m<\hyphen; (\bar<A>, A): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>> の表現対象であること、すなわち
+      &mb<
+        &mark<\wheart;>
+        \sb<\op<Hom>><\bfrm<Tamb> (\scr<C>)> ((I \sp<E><\bar<A> A>, I \sp<`r><\bar<A> A>), \hyphen;) \cong; \hyphen; (\bar<A>, A)
+      >
+      が成り立つことを以下に示す。
+    >
+    \p<
+      Tambara 加群 &m<(P, `z)> を固定する。
+      任意に Tambara 加群の射 &m<`u: (I \sp<E><\bar<A> A>, I \sp<`r><\bar<A> A>) \raarr; (P, `z)> をとると、その成分として写像
+      &mb<
+        \sb<`u><\bar<A> A>: \op<Hom> (\bar<A>, (A \buharprarr; A) \times; \bar<A>) \longto; P (\bar<A>, A)
+      >
+      が定まっている。
+      したがって、&m<\sb<\rm<id>><A>: A \to; A> の転置を &m<\sb<\rm<jd>><A>: 1 \to; A \buharprarr; A> と書くことにして、
+      &mb<
+        \sb<f><\bar<A> A> \coloneqq; \tort<\diag|bl|<
+          \v<\bar<A>> \v<1 \times; \bar<A>> \v<(A \buharprarr; A) \times; \bar<A>>
+          \ar|s="1",e="2"|; \ar|s="2",e="3"|<\sb<\rm<jd>><A> \times; \rm<id>>
+        >>
+      >
+      とおけば、この像として &m<P (\bar<A>, A)> の元 &m<`F `u \coloneqq; \sb<`u><\bar<A> A> \sb<f><\bar<A> A>> が得られる。
+      この操作は、写像
+      &mb<
+        \array|align="rrcl"|<
+          \c<`F:> \c<\sb<\op<Hom>><\bfrm<Tamb> (\scr<C>)> ((I \sp<E><\bar<A> A>, I \sp<`r><\bar<A> A>), (P, `z))> \c<\longto;> \c<P (\bar<A>, A)> \br;
+          \c; \c<`u> \c<\longmapsto;> \c<`F `u>
+        >
+      >
+      を定める。
+      逆に、&m<P (\bar<A>, A)> の元 &m<x> および対象 ≡╹ω╹≡。
     >
   >
   \thm|type="thm",id="homiso"|<
@@ -219,7 +248,7 @@
   >
   \prf<
     \p<
-      記号が煩雑になるのを防ぐため、
+      ここでは、記号が煩雑になるのを防ぐため、
       &mb<
         \sp<`F><\bar<A> A> \coloneqq; \hyphen; (\bar<A>, A): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>
       >
@@ -229,6 +258,7 @@
         \sp<`F><\bar<A> A> \circ; I = \op<Hom> (\bar<A>, \hyphen; A): \bfrm<StrEnd> (\scr<C>) \to; \bfrm<Set>
       >
       である。
+      また、自己強関手の強度や Tambara 加群の Tambara 構造は省略する。
     >
     \p<
       さて、図式
