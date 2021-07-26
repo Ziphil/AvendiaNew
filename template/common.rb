@@ -824,8 +824,8 @@ converter.add(["sup", "sub"], ["page", "page.section-table"]) do |element|
   next this
 end
 
-converter.add(["div", "span"], ["page"]) do |element|
-  this = pass_element(element, "page")
+converter.add(["div", "span"], [//]) do |element, scope|
+  this = pass_element(element, scope)
   next this
 end
 
