@@ -4,6 +4,7 @@
 \page<
   \name<『あさやけもゆうやけもないんだ』>
   \ver<S 代>
+  \import-script|src="16.js"|;
 
   \h1<対訳>
   \trans<
