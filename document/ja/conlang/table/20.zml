@@ -1,0 +1,117 @@
+﻿\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+\page<
+  \name<国名>
+  \ver<S 代>
+
+  \h1<国名一覧>
+  \p<
+    以下の表に、各国および地域について、シャレイア語での音写とそれのもととなった英語発音を記載する。
+    ただし、これは国の正式名称ではなく、日常会話などで用いる略称である。
+  >
+  \table<
+    \tr<\th<>\th<日本語>\th<シャレイア語>\th<音写元発音>>
+    \tr<\td<AD>\td<アンドラ>\td<{andôras}>\td<`/æn.dɔː.ɹə`/>>
+    \tr<\td<AE>\td<アラブ首長国連邦>\td<*>\td<*>>
+    \tr<\td<AF>\td<アフガニスタン>\td<{afganisetân}>\td<`/æf.ɡæn.ɪ.stɑːn`/>>
+    \tr<\td<AG>\td<アンティグア・バーブーダ>\td<{antîgasbâbûdas}>\td<`/æn.tiː.ɡə`/, `/bɑː.bjuː.də`/>>
+    \tr<\td<AI>\td<アンギラ>\td<{angevilas}>\td<`/æŋ.ɡwɪ.lə`/>>
+    \tr<\td<AL>\td<アルバニア>\td<{albénias}>\td<`/æl.beɪ.ni.ə`/>>
+    \tr<\td<AM>\td<アルメニア>\td<{âmînias}>\td<`/ɑː.miː.ni.ə`/>>
+    \tr<\td<AO>\td<アンゴラ>\td<{angèlas}>\td<`/æŋ.ɡəʊ.lə`/>>
+    \tr<\td<AR>\td<アルゼンチン>\td<{âjentînas}>\td<`/ɑː.d͡ʒən.tiː.nə`/>>
+    \tr<\td<AS>\td<アメリカ領サモア>\td<*>\td<*>>
+    \tr<\td<AT>\td<オーストリア>\td<{osterias}>\td<`/ɒs.tɹɪ.ə`/>>
+    \tr<\td<AU>\td<オーストラリア>\td<{osterélias}>\td<`/ɒs.tɹeɪ.lɪ.ə`/>>
+    \tr<\td<AW>\td<アルバ>\td<{arûbas}>\td<`/ə.ɹuː.bə`/>>
+    \tr<\td<AX>\td<オーランド諸島>\td<{ôlaned}>\td<`/ɔː.lənd`/>>
+    \tr<\td<AZ>\td<アゼルバイジャン>\td<{azebájân}>\td<`/æ.zə.baɪ.d͡ʒɑːn`/>>
+    \tr<\td<BA>\td<ボスニア・ヘルツェゴビナ>\td<{bozniashêsegovînas}>\td<`/bɒz.ni.ə`/, `/hɜːt.sə.ɡə.viː.nə`/>>
+    \tr<\td<BB>\td<バルバドス>\td<{bâbédos}>\td<`/bɑː.beɪ.dɒs`/>>
+    \tr<\td<BD>\td<バングラデシュ>\td<{bangeladex}>\td<`/bæŋ.ɡlə.deʃ`/>>
+    \tr<\td<BE>\td<ベルギー>\td<{beljim}>\td<`/bel.d͡ʒəm`/>>
+    \tr<\td<BF>\td<ブルキナファソ>\td<{bêkînafasès}>\td<`/bɜː.kiː.nə.fæ.səʊ`/>>
+    \tr<\td<BG>\td<ブルガリア>\td<{balgérias}>\td<`/bʌl.ɡeə.ri.ə`/>>
+    \tr<\td<BH>\td<バーレーン>\td<{bârén}>\td<`/bɑː.reɪn`/>>
+    \tr<\td<BI>\td<ブルンジ>\td<{burundis}>\td<`/bʊ.ɹʊn.di`/>>
+    \tr<\td<BJ>\td<ベナン>\td<{benîn}>\td<`/bɛ.niːn`/>>
+    \tr<\td<BL>\td<サン・バルテルミー>\td<*>\td<*>>
+    \tr<\td<BM>\td<バミューダ>\td<{bemûdas}>\td<`/bə.mjuː.də`/>>
+    \tr<\td<BN>\td<ブルネイ>\td<{berunás}>\td<`/brʊ.naɪ`/>>
+    \tr<\td<BO>\td<ボリビア>\td<{bolivias}>\td<`/bə.lɪ.vi.ə`/>>
+    \tr<\td<BQ>\td<BES 諸島>\td<*>\td<*>>
+    \tr<\td<BR>\td<ブラジル>\td<{berazil}>\td<`/brə.zɪl`/>>
+    \tr<\td<BS>\td<バハマ>\td<{bahâmaz}>\td<`/bə.hɑː.məz`/>>
+    \tr<\td<BT>\td<ブータン>\td<{bûtân}>\td<`/buː.tɑːn`/>>
+    \tr<\td<BV>\td<ブーベ島>\td<*>\td<*>>
+    \tr<\td<BW>\td<ボツワナ>\td<{bosvânas}>\td<`/bɒt.swɑː.nə`/>>
+    \tr<\td<BY>\td<ベラルーシ>\td<{belarûs}>\td<`/be.lə.ruːs`/>>
+    \tr<\td<BZ>\td<ベリーズ>\td<{belîz}>\td<`/bə.liːz`/>>
+    \tr<\td<CA>\td<カナダ>\td<{kanadas}>\td<`/kæ.nə.də`/>>
+    \tr<\td<CC>\td<ココス諸島>\td<*>\td<*>>
+    \tr<\td<CD>\td<コンゴ民主共和国>\td<*>\td<*>>
+    \tr<\td<CF>\td<中央アフリカ>\td<{afrikaskudis}>\td<`/æf.rɪ.kə`/, {kudis}「中心」>>
+    \tr<\td<CG>\td<コンゴ共和国>\td<*>\td<*>>
+    \tr<\td<CH>\td<スイス>\td<{seviselaned}>\td<`/swɪt.sə.lənd`/>>
+    \tr<\td<CI>\td<コートジボワール>\td<{kètdîvevâs}>\td<`/kəʊt.diː.vwɑː`/>>
+    \tr<\td<CK>\td<クック諸島>\td<{kuk}>\td<`/kʊk`/>>
+    \tr<\td<CL>\td<チリ>\td<{xilis}>\td<`/t͡ʃɪ.li`/>>
+    \tr<\td<CM>\td<カメルーン>\td<{kamerûn}>\td<`/kæ.mə.ruːn`/>>
+    \tr<\td<CN>\td<中国>\td<{xánas}>\td<`/t͡ʃaɪ.nə`/>>
+    \tr<\td<CO>\td<コロンビア>\td<{kolambias}>\td<`/kə.lʌm.bi.ə`/>>
+    \tr<\td<CR>\td<コスタリカ>\td<{kostarîkas}>\td<`/kɒs.tə.riː.kə`/>>
+    \tr<\td<CU>\td<キューバ>\td<{kûbas}>\td<`/kjuː.bə`/>>
+    \tr<\td<CV>\td<カーボベルデ>\td<{képvêd}>\td<`/keɪp.vɜːd`/>>
+    \tr<\td<CW>\td<キュラソー>\td<{kùrasès}>\td<`/kjʊə.rə.səʊ`/>>
+    \tr<\td<CX>\td<クリスマス島>\td<{kerismas}>\td<`/krɪs.məs`/>>
+    \tr<\td<CY>\td<キプロス>\td<{sáperus}>\td<`/saɪ.prəs`/>>
+    \tr<\td<CZ>\td<チェコ>\td<{xek}>\td<`/t͡ʃɛk`/>>
+    \tr<\td<DE>\td<ドイツ>\td<{jêmanis}>\td<`/dʒɜːməni`/>>
+    \tr<\td<DJ>\td<ジブチ>\td<{jibûtis}>\td<`/d͡ʒɪ.buː.ti`/>>
+    \tr<\td<DK>\td<デンマーク>\td<{denmâk}>\td<`/den.mɑːk`/>>
+    \tr<\td<DM>\td<ドミニカ国>\td<*>\td<*>>
+    \tr<\td<DO>\td<ドミニカ共和国>\td<*>\td<*>>
+    \tr<\td<DZ>\td<アルジェリア>\td<{aljírias}>\td<`/æl.d͡ʒɪə.ri.ə`/>>
+    \tr<\td<EC>\td<エクアドル>\td<{ekvadôs}>\td<`/ek.wə.dɔː`/>>
+    \tr<\td<EE>\td<エストニア>\td<{estènias}>\td<`/es.təʊ.ni.ə`/>>
+    \tr<\td<EG>\td<エジプト>\td<{îjipet}>\td<`/iː.d͡ʒɪpt`/>>
+    \tr<\td<EH>\td<西サハラ>\td<{sahârastedec}>\td<`/səˈhɑːɹə`/, {tedec}「西」>>
+    \tr<\td<ER>\td<エリトリア>\td<{eritréa}>\td<`/ɛ.rɪ.treɪ.ə`/>>
+    \tr<\td<ES>\td<スペイン>\td<{sepén}>\td<`/speɪn`/>>
+    \tr<\td<ET>\td<エチオピア>\td<{îcièpias}>\td<`/iː.θi.əʊ.pi.ə`/>>
+    \tr<\td<FI>\td<フィンランド>\td<{finlaned}>\td<`/fɪn.lənd`/>>
+    \tr<\td<FJ>\td<フィジー>\td<{fîjîs}>\td<`/fiː.d͡ʒiː`/>>
+    \tr<\td<FK>\td<フォークランド諸島>\td<{fôleklaned}>\td<`/fɔːlk.lənd`/>>
+    \tr<\td<FM>\td<ミクロネシア>\td<{mákeronîjas}>\td<`/maɪ.krə.niː.ʒə`/>>
+    \tr<\td<FO>\td<フェロー諸島>\td<{fêrès}>\td<`/ˈfɜː.ɹəʊ`/>>
+    \tr<\td<FR>\td<フランス>\td<{ferânes}>\td<`/frɑːns`/>>
+    \tr<\td<GA>\td<ガボン>\td<{gabon}>\td<`/ɡæ.bɒn`/>>
+    \tr<\td<GB>\td<イギリス>\td<{beriten}>\td<`/brɪtn`/>>
+    \tr<\td<GD>\td<グレナダ>\td<{grenédas}>\td<`/ɡrə.neɪ.də`/>>
+    \tr<\td<GE>\td<ジョージア>\td<{jôjas}>\td<`/d͡ʒɔː.d͡ʒə`/>>
+    \tr<\td<GF>\td<フランス領ギアナ>\td<*>\td<*>>
+    \tr<\td<GG>\td<ガーンジー>\td<{gênzis}>\td<`/ɡɜːn.zi`/>>
+    \tr<\td<GH>\td<ガーナ>\td<{gânas}>\td<`/ɡɑːnə`/>>
+    \tr<\td<GI>\td<ジブラルタル>\td<{jiberôltas}>\td<`/d͡ʒɪ.brɔːl.tə`/>>
+    \tr<\td<GL>\td<グリーンランド>\td<{gerînlaned}>\td<`/ɡɹiːn.lənd`/>>
+    \tr<\td<GM>\td<ガンビア>\td<{gambias}>\td<`/ɡæm.bi.ə`/>>
+    \tr<\td<GN>\td<ギニア>\td<{ginis}>\td<`/ɡɪni`/>>
+    \tr<\td<GP>\td<グアドループ>\td<{gevâdelûp}>\td<`/ɡwɑː.də.luːp`/>>
+    \tr<\td<GQ>\td<赤道ギニア>\td<*>\td<*>>
+    \tr<\td<GR>\td<ギリシャ>\td<{gerîs}>\td<`/ɡriːs`/>>
+    \tr<\td<GS>\td<*>\td<*>\td<*>>
+    \tr<\td<GT>\td<グアテマラ>\td<{gevâtemâlas}>\td<`/ɡwɑː.tə.mɑː.lə`/>>
+    \tr<\td<GU>\td<グアム>\td<{gevâm}>\td<`/ɡwɑːm`/>>
+    \tr<\td<GW>\td<ギニアビサウ>\td<{ginibisàs}>\td<`/ɡɪ.ni.bɪ.saʊ`/>>
+    \tr<\td<GY>\td<ガイアナ>\td<{gáanas}>\td<`/ɡaɪ.æ.nə`/>>
+    \tr<\td<*>\td<*>\td<*>\td<*>>
+  >
+  \h1<注意点>
+  \p<
+    英語では 2 単語以上から成る国名でも、and で繋がっている場合 (アンティグア・バーブーダなど) および一般名詞として訳す部分がある場合 (北マケドニアなど) を除き、全体を 1 単語として音写した。
+    そのため、英語における 1 単語目が母音で終わっていても、[s] は挿入しない。
+    これにはコスタリカやスリランカなどが相当する。
+  >
+
+>
