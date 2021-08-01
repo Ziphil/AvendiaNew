@@ -16,7 +16,7 @@
   \table<
     \tr<\th<>\th<日本語>\th<シャレイア語>\th<音写元発音>>
     \tr<\td<AD>\td<アンドラ>\td<{andôras}>\td<`/æn.dɔː.ɹə`/>>
-    \tr<\td<AE>\td<アラブ首長国連邦>\td<*>\td<*>>
+    \tr<\td<AE>\td<アラブ首長国連邦>\td<{arabemiras}>\td<`/ær.əb.em.ɪ.rət͡s`/>>
     \tr<\td<AF>\td<アフガニスタン>\td<{afganisetân}>\td<`/æf.ɡæn.ɪ.stɑːn`/>>
     \tr<\td<AG>\td<アンティグア・バーブーダ>\td<{antîgasbâbûdas}>\td<`/æn.tiː.ɡə`/, `/bɑː.bjuː.də`/>>
     \tr<\td<AL>\td<アルバニア>\td<{albénias}>\td<`/æl.beɪ.ni.ə`/>>
@@ -166,7 +166,54 @@
     \tr<\td<PW>\td<パラウ>\td<{palàs}>\td<`/pə.laʊ`/>>
     \tr<\td<PY>\td<パラグアイ>\td<{paragevás}>\td<`/pæɹ.ə.ɡwaɪ`/>>
     \tr<\td<QA>\td<カタール>\td<{katâs}>\td<`/kə.tɑː`/>>
-    \tr<\td<*>\td<*>\td<*>\td<*>>
+    \tr<\td<RO>\td<ルーマニア>\td<{rèménias}>\td<`/ɹəʊ.meɪ.ni.ə`/>>
+    \tr<\td<RS>\td<セルビア>\td<{sêbias}>\td<`/sɜː.bi.ə`/>>
+    \tr<\td<RU>\td<ロシア>\td<{raxas}>\td<`/ɹʌʃ.ə`/>>
+    \tr<\td<RW>\td<ルワンダ>\td<{rûandas}>\td<`/ɹuː.æn.də`/>>
+    \tr<\td<SA>\td<サウジアラビア>\td<{sàdiarébias}>\td<`/saʊ.di.ə.ɹeɪ.bi.ə`/>>
+    \tr<\td<SC>\td<セーシェル>\td<{séxelez}>\td<`/seɪ.ʃelz`/>>
+    \tr<\td<SD>\td<スーダン>\td<{sûdân}>\td<`/suː.dɑːn`/>>
+    \tr<\td<SE>\td<スウェーデン>\td<{sevîden}>\td<`/swiːdn`/>>
+    \tr<\td<SG>\td<シンガポール>\td<{sinapôs}>\td<`/sɪŋ.ə.pɔː`/>>
+    \tr<\td<SI>\td<スロベニア>\td<{selovînias}>\td<`/slə.viː.ni.ə`/>>
+    \tr<\td<SK>\td<スロバキア>\td<{selovakias}>\td<`/slə.væ.ki.ə`/>>
+    \tr<\td<SL>\td<シエラレオネ>\td<{sieralièn}>\td<`/si.ɛɹ.ə.li.əʊn`/>>
+    \tr<\td<SM>\td<サンマリノ>\td<{sanmarînès}>\td<`/sæn.mə.ɹiː.nəʊ`/>>
+    \tr<\td<SO>\td<ソマリア>\td<{somâlias}>\td<`/sə.mɑː.li.ə`/>>
+    \tr<\td<SR>\td<スリナム>\td<{sùrinam}>\td<`/sʊə.ɹɪ.næm`/>>
+    \tr<\td<SS>\td<南スーダン>\td<{sûdânsozit}>\td<`/suː.dɑːn`/, {sozit}「南」>>
+    \tr<\td<ST>\td<サントメ・プリンシペ>\td<{sàtomésperinsipés}>\td<`/saʊ.tə.meɪ`/, `/pɹɪn.sɪ.peɪ`/>>
+    \tr<\td<SV>\td<エルサルバドル>\td<{elsalvadôs}>\td<`/el.sæl.və.dɔː`/>>
+    \tr<\td<SY>\td<シリア>\td<{sirias}>\td<`/sɪɹ.i.ə`/>>
+    \tr<\td<SZ>\td<エスワティニ>\td<{esvâtînîs}>\td<`/ɛs.wɑː.tiː.niː`/>>
+    \tr<\td<TD>\td<チャド>\td<{xad}>\td<`/t͡ʃæd`/>>
+    \tr<\td<TG>\td<トーゴ>\td<{tègès}>\td<`/təʊ.ɡəʊ`/>>
+    \tr<\td<TH>\td<タイ>\td<{tálaned}>\td<`/taɪ.lænd`/>>
+    \tr<\td<TJ>\td<タジキスタン>\td<{tâjîkistân}>\td<`/tɑː.d͡ʒiː.kɪ.stɑːn`/>>
+    \tr<\td<TL>\td<東ティモール>\td<{tîmôlestés}>\td<`/tiː.mɔː.les.teɪ`/>>
+    \tr<\td<TM>\td<トルクメニスタン>\td<{tèkmenistân}>\td<`/tɜːk.men.ɪ.stɑːn`/>>
+    \tr<\td<TN>\td<チュニジア>\td<{xûnizias}>\td<`/t͡ʃuː.nɪ.zi.ə`/>>
+    \tr<\td<TO>\td<トンガ>\td<{tonas}>\td<`/tɒŋ.ə`/>>
+    \tr<\td<TR>\td<トルコ>\td<{têkis}>\td<`/tɜː.ki`/>>
+    \tr<\td<TT>\td<トリニダード・トバゴ>\td<{trinidadtobégès}>\td<`/trɪn.ɪ.dæd`/, `/tə.beɪ.ɡəʊ`/>>
+    \tr<\td<TV>\td<ツバル>\td<{tûvâlûs}>\td<`/tuː.vɑː.luː`/>>
+    \tr<\td<TW>\td<台湾>\td<{távân}>\td<`/taɪ.wɑːn`/>>
+    \tr<\td<TZ>\td<タンザニア>\td<{tanzanîas}>\td<`/tæn.zə.niː.ə`/>>
+    \tr<\td<UA>\td<ウクライナ>\td<{yûkerén}>\td<`/juː.kɹeɪn`/>>
+    \tr<\td<UG>\td<ウガンダ>\td<{yûgandas}>\td<`/juː.ɡæn.də`/>>
+    \tr<\td<US>\td<アメリカ>\td<{amerikas}>\td<`/ə.mer.ɪ.kə`/>>
+    \tr<\td<UY>\td<ウルグアイ>\td<{yùrugevás}>\td<`/jʊə.rə.ɡwaɪ`/>>
+    \tr<\td<UZ>\td<ウズベキスタン>\td<{uzbekistân}>\td<`/ʊz.bek.ɪ.stɑːn`/>>
+    \tr<\td<VA>\td<バチカン>\td<{vatikan}>\td<`/væt.ɪ.kən`/>>
+    \tr<\td<VC>\td<セントビンセント・グレナディーン>\td<{sénetvinsenetgerenadînez}>\td<`/seɪnt.vɪn.sənt`/, `/ɡrɛn.ə.diːnz`/>>
+    \tr<\td<VE>\td<ベネズエラ>\td<{venizevélas}>\td<`/vɛn.ɪ.zweɪ.lə`/>>
+    \tr<\td<VN>\td<ベトナム>\td<{vetnam}>\td<`/vjɛt.næm`/>>
+    \tr<\td<VU>\td<バヌアツ>\td<{vanûâtûs}>\td<`/væn.uː.ɑː.tuː`/>>
+    \tr<\td<VS>\td<サモア>\td<{samèas}>\td<`/sə.məʊ.ə`/>>
+    \tr<\td<YE>\td<イエメン>\td<{yemen}>\td<`/jem.ən`/>>
+    \tr<\td<ZA>\td<南アフリカ>\td<{afrikassozit}>\td<`/æf.ɹɪ.kə`/, {sozit}「南」>>
+    \tr<\td<ZM>\td<ザンビア>\td<{zambias}>\td<`/zæm.bi.ə`/>>
+    \tr<\td<ZW>\td<ジンバブエ>\td<{zimbâbvés}>\td<`/zɪm.bɑːb.weɪ`/>>
   >
   \h1<注意点>
   \p<
