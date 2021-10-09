@@ -37,15 +37,15 @@
   \thm|type="def"|<
     \p<
       有限積をもつ圏 &m<\scr<C>> をとる。
-      素朴レンズ &m<(g, p): (\bar<S>, S) \ring<\to;> (\bar<A>, A)>, &m<(g', p'): (\bar<A>, A) \ring<\to;> (B, \bar<B>)> に対し、
+      素朴レンズ &m<(g, p): (\bar<S>, S) \ring<\to;> (\bar<A>, A)>, &m<(g', p'): (\bar<A>, A) \ring<\to;> (\bar<B>, B)> に対し、
       &mb<
         \array|align="rcl"|<
           \c<\sp<g><\ppr;>> \c<\coloneqq;> \c<\tort<\diag|bl|<
-            \v<\bar<S>> \v<\bar<A>> \v<B>
+            \v<\bar<S>> \v<\bar<A>> \v<\bar<B>>
             \ar|s="1",e="2"|<g> \ar|s="2",e="3"|<g'>
           >>> \br;
           \c<\sp<p><\ppr;>> \c<\coloneqq;> \c<\tort<\diag|bl|<
-            \v<\bar<S> \times; \bar<B>> \v<\bar<S> \times; \bar<S> \times; \bar<B>> \v<\bar<S> \times; \bar<A> \times; \bar<B>> \v<\bar<S> \times; A> \v<S>
+            \v<\bar<S> \times; B> \v<\bar<S> \times; \bar<S> \times; B> \v<\bar<S> \times; \bar<A> \times; B> \v<\bar<S> \times; A> \v<S>
             \ar|s="1",e="2"|<\sb<\rm<diag>><\bar<S>> \times; \rm<id>> \ar|s="2",e="3"|<\rm<id> \times; g \times; \rm<id>>
             \ar|s="3",e="4"|<\rm<id> \times; p'> \ar|s="4",e="5"|<p>
           >>>
@@ -53,7 +53,7 @@
       >
       と定める。
       なお、図式中の &m<\sb<\rm<diag>><\bar<S>>: \bar<S> \to; \bar<S> \times; \bar<S>> は対角射である。
-      これによって得られる素朴レンズ &m<(\sp<g><\ppr;>, \sp<p><\ppr;>): (\bar<S>, S) \ring<\to;> (B, \bar<B>)> を &m<(g, p)> と &m<(g', p')> の\em<合成\fl<composition>> という。
+      これによって得られる素朴レンズ &m<(\sp<g><\ppr;>, \sp<p><\ppr;>): (\bar<S>, S) \ring<\to;> (\bar<B>, B)> を &m<(g, p)> と &m<(g', p')> の\em<合成\fl<composition>> という。
     >
   >
   \p<
