@@ -2,16 +2,28 @@
 \xml?|version="1.0",encoding="UTF-8"|;
 
 \page<
-  \name<レンズの圏論的考察>
+  \name<レンズの圏論的考察 (その 2)>
   \use-math|prefix="2"|;
 
-  \h1<日記 (2021 年 7 月 8 日)>
+  \h1<日記 (2021 年 10 月 9 日)>
   \p<
     \a|href="28.html"|<7 月 7 日>では、レンズの van Laarhoven エンコーディングの圏論的定式化を行い、それがゲッターとセッターのタプルという素朴なレンズと等価であることを示した。
     今回は、自己プロ関手を用いたレンズの別のエンコーディング方法を圏論的に定式化し、これも同じく素朴なレンズと等価であることを示す。
   >
   \p<
-    プロ関手について軽く復習しておこう。
+    なお、今回の議論の流れは \a|href="28.html"|<7 月 7 日>の議論とパラレルになっている。
+    以下に概念の対応表を掲げておくので、比較しながら読むと理解が深まるかもしれない。
+  >
+  \table<
+    \tr<\th<前回>\th<今回>>
+    \tr<\td<自己関手>\td<自己プロ関手>>
+    \tr<\td<強度>\td<Tambara 構造>>
+    \tr<\td<自己強関手>\td<Tambara 加群>>
+    \tr<\td<強自然変換>\td<Tambara 加群の射>>
+    \tr<\td<van Laarhoven レンズ>\td<プロ関手レンズ>>
+  >
+  \p<
+    まずはプロ関手について軽く復習しておこう。
   >
   \thm|type="def"|<
     \p<
@@ -23,31 +35,36 @@
     これにより、圏 &m<\scr<C>> 上の自己プロ関手とその間の自然変換は圏を成すので、以降それを &m<\bfrm<EndProf> (\scr<C>)> で書くことにする。
   >
   \p<
-    圏 &m<\scr<C>> 上の通常の自己関手 &m<F: \scr<C> \to; \scr<C>> は、自己プロ関手
+    圏 &m<\scr<C>> 上の通常の自己関手 &m<F: \scr<C> \to; \scr<C>> があると、これにより自己プロ関手
     &mb<
       \array|align="rrcl"|<
-        \c<IF:> \c<\sp<\scr<C>><\circ;> \times; \scr<C>> \c<\longto;> \c<\bfrm<Set>> \br;
+        \c<\bf<i> F:> \c<\sp<\scr<C>><\circ;> \times; \scr<C>> \c<\longto;> \c<\bfrm<Set>> \br;
         \c; \c<(\bar<X>, X)> \c<\longmapsto;> \c<\op<Hom> (\bar<X>, FX)>
       >
     >
-    を標準的に誘導する。
+    が誘導される。
     さらに、この操作は関手
     &mb<
       \array|align="rrcl"|<
-        \c<I:> \c<\bfrm<End> (\scr<C>)> \c<\longto;> \c<\bfrm<EndProf> (\scr<C>)> \br;
-        \c; \c<F> \c<\longmapsto;> \c<IF>
+        \c<\bf<i>:> \c<\bfrm<End> (\scr<C>)> \c<\longto;> \c<\bfrm<EndProf> (\scr<C>)> \br;
+        \c; \c<F> \c<\longmapsto;> \c<\bf<i> F>
       >
     >
     を定める。
+    この操作により、自己関手を自己プロ関手と見なすことができる。
   >
   \p<
     前回は、素朴なレンズとの 1 対 1 対応を作るため、単なる自己関手ではなく自己関手に強度という追加の構造を定めたものを考えた。
-    自己プロ関手にもこれに対応する追加の構造があり、Tambara 加群と呼ばれている。
+    自己プロ関手にもこれに対応する追加の構造があり、Tambara 構造と呼ばれている。
   >
   \thm|type="def"|<
     \p<
       有限積をもつ圏 &m<\scr<C>> 上の自己プロ関手 &m<P: \scr<C> \vertrarr; \scr<C>> をとる。
-      対象 &m<M, \bar<X>, X> に対し、全ての変数に関して自然な射 &m<\sb<`z><M \bar<X> X>: P (\bar<X>, X) \to; P (M \times; \bar<X>, M \times; X)> が定まっていて、任意の対象 &m<M, N, \bar<X>, X> に対し、図式
+      対象 &m<M, \bar<X>, X> に対し、全ての変数に関して自然な射
+      &mb<
+        \sb<`z><M \bar<X> X>: P (\bar<X>, X) \longto; P (M \times; \bar<X>, M \times; X)
+      >
+      が定まっていて、任意の対象 &m<M, N, \bar<X>, X> に対し、図式
       &mb<
         \array|align="c"|<
           \c<\diag|hor="thk"|<
@@ -110,18 +127,18 @@
   >
   \p<
     さて、これにより自己関手に追加の構造を定めた自己強関手と、自己プロ関手に追加の構造を定めた Tambara 加群が定義できた。
-    ここで、自己関手からは自己プロ関手を標準的に得られることを思い出そう。
+    ここで、自己関手からは自己プロ関手が標準的に得られることを思い出そう。
     この操作は、自己強関手から Tambara 加群を得る操作に拡張できる。
   >
   \thm|type="prp"|<
     \p<
-      関手 &m<I: \bfrm<End> (\scr<C>) \to; \bfrm<EndProf> (\scr<C>)> は関手 &m<I: \bfrm<StrEnd> (\scr<C>) \to; \bfrm<Tamb> (\scr<C>)> に拡張される。
+      関手 &m<\bf<i>: \bfrm<End> (\scr<C>) \to; \bfrm<EndProf> (\scr<C>)> は関手 &m<\bf<i>: \bfrm<StrEnd> (\scr<C>) \to; \bfrm<Tamb> (\scr<C>)> に拡張される。
       すなわち、
       &mb<
         \diag<
           \v<\bfrm<StrEnd> (\scr<C>)> \v<\bfrm<Tamb> (\scr<C>)> \br;
           \v<\bfrm<End> (\scr<C>)> \v<\bfrm<EndProf> (\scr<C>)>
-          \ar|s="1",e="2",dash|<I> \ar|s="3",e="4",inv|<I>
+          \ar|s="1",e="2",dash|<\bf<i>> \ar|s="3",e="4",inv|<\bf<i>>
           \ar|s="1",e="3"|; \ar|s="2",e="4"|;
         >
       >
@@ -131,21 +148,21 @@
   >
   \prf<
     \p<
-      自己関手 &m<F: \scr<C> \to; \scr<C>> 上の強度 &m<`t> から、自己プロ関手 &m<IF: \scr<C> \vertrarr; \scr<C>> 上の Tambara 構造 &m<I `t> を構成する。
+      自己関手 &m<F: \scr<C> \to; \scr<C>> 上の強度 &m<`t> から、自己プロ関手 &m<\bf<i> F: \scr<C> \vertrarr; \scr<C>> 上の Tambara 構造 &m<\bf<i> `t> を構成する。
       対象 &m<M, \bar<X>, X> に対し、
       &mb<
-        (I `t) \sb<><M \bar<X> X> \coloneqq; \tort<\diag|bl|<
+        (\bf<i> `t) \sb<><M \bar<X> X> \coloneqq; \tort<\diag|bl|<
           \v<\op<Hom> (\bar<X>, F X)> \v<\op<Hom> (M \times; \bar<X>, M \times; F X)> \v<\op<Hom> (M \times; \bar<X>, F (M \times; X))>
           \ar|s="1",e="2"|<M \times; \hyphen;> \ar|s="2",e="3"|<\sb<`t><MX> \circ; \hyphen;>
         >>
       >
       と定めると、これは全ての変数に関して自然である。
-      さらに、&m<`t> が強度であることから、今定義した &m<I `t> が Tambara 構造の公理を満たすことが従う。
+      さらに、&m<`t> が強度であることから、今定義した &m<\bf<i> `t> が Tambara 構造の公理を満たすことが従う。
       この操作によって関手
       &mb<
         \array|align="rrcl"|<
-          \c<I:> \c<\bfrm<StrEnd> (\scr<C>)> \c<\longto;> \c<\bfrm<Tamb> (\scr<C>)> \br;
-          \c; \c<(F, `t)> \c<\longmapsto;> \c<(IF, I `t)>
+          \c<\bf<i>:> \c<\bfrm<StrEnd> (\scr<C>)> \c<\longto;> \c<\bfrm<Tamb> (\scr<C>)> \br;
+          \c; \c<(F, `t)> \c<\longmapsto;> \c<(\bf<i> F, \bf<i> `t)>
         >
       >
       が定まるが、これが求めていたものである。
@@ -192,27 +209,28 @@
   >
 
   \p<
-    対象 &m<\bar<A>, A> に対し、関手 &m<\op<Hom> (\bar<A>, \hyphen; A): \bfrm<StrEnd> (\scr<C>) \to; \bfrm<Set>> は、ある自己強関手 &m<(\sp<E><\bar<A> A>, \sp<`r><\bar<A> A>)> によって表現可能であることが分かっている。
-    実は、関手 &m<\hyphen; (\bar<A>, A): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>> は、これが誘導する Tambara 加群 &m<(I \sp<E><\bar<A> A>, I \sp<`r><\bar<A> A>)> によって表現可能である。
+    \a|href="27.html#rep"|<定理 1.9> により、カルテシアン閉圏の対象 &m<\bar<A>, A> に対して、関手 &m<\op<Hom> (\bar<A>, \hyphen; A): \bfrm<StrEnd> (\scr<C>) \to; \bfrm<Set>> は表現可能である。
+    この表現対象となる自己強関手を &m<(\sp<E><\bar<A> A>, \sp<`r><\bar<A> A>)> で表そう。
+    すると実は、関手 &m<\hyphen; (\bar<A>, A): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>> は、これが誘導する Tambara 加群 &m<(\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>)> によって表現可能である。
   >
   \thm|type="thm",id="rep"|<
     \p<
       カルテシアン閉圏 &m<\scr<C>> をとる。
-      対象 &m<\bar<A>, A> に対し、関手 &m<\hyphen; (\bar<A>, A): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>> は表現可能であり、その表現対象は &m<(I \sp<E><\bar<A> A>, I \sp<`r><\bar<A> A>)> である。
+      対象 &m<\bar<A>, A> に対し、関手 &m<\hyphen; (\bar<A>, A): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>> は表現可能であり、その表現対象は &m<(\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>)> である。
     >
   >
   \prf<
     \p<
-      この &m<(I \sp<E><\bar<A> A>, I \sp<`r><\bar<A> A>)> が実際に &m<\hyphen; (\bar<A>, A): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>> の表現対象であること、すなわち
+      この &m<(\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>)> が実際に &m<\hyphen; (\bar<A>, A): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>> の表現対象であること、すなわち
       &mb<
         &mark<\wheart;>
-        \sb<\op<Hom>><\bfrm<Tamb> (\scr<C>)> ((I \sp<E><\bar<A> A>, I \sp<`r><\bar<A> A>), \hyphen;) \cong; \hyphen; (\bar<A>, A)
+        \sb<\op<Hom>><\bfrm<Tamb> (\scr<C>)> ((\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>), \hyphen;) \cong; \hyphen; (\bar<A>, A)
       >
       が成り立つことを以下に示す。
     >
     \p<
       Tambara 加群 &m<(P, `z)> を固定する。
-      任意に Tambara 加群の射 &m<`u: (I \sp<E><\bar<A> A>, I \sp<`r><\bar<A> A>) \raarr; (P, `z)> をとると、その成分として写像
+      任意に Tambara 加群の射 &m<`u: (\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>) \raarr; (P, `z)> をとると、その成分として写像
       &mb<
         \sb<`u><\bar<A> A>: \op<Hom> (\bar<A>, (A \buharprarr; A) \times; \bar<A>) \longto; P (\bar<A>, A)
       >
@@ -228,12 +246,49 @@
       この操作は、写像
       &mb<
         \array|align="rrcl"|<
-          \c<`F:> \c<\sb<\op<Hom>><\bfrm<Tamb> (\scr<C>)> ((I \sp<E><\bar<A> A>, I \sp<`r><\bar<A> A>), (P, `z))> \c<\longto;> \c<P (\bar<A>, A)> \br;
+          \c<`F:> \c<\sb<\op<Hom>><\bfrm<Tamb> (\scr<C>)> ((\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>), (P, `z))> \c<\longto;> \c<P (\bar<A>, A)> \br;
           \c; \c<`u> \c<\longmapsto;> \c<`F `u>
         >
       >
       を定める。
-      逆に、&m<P (\bar<A>, A)> の元 &m<x> および対象 ≡╹ω╹≡。
+    >
+    \p<
+      この逆向きの写像を作るためには、&m<P (\bar<A>, A)> の元 &m<x> および対象 &m<\bar<X>, X> に対し、
+      &mb<
+        (`C x) \sb<><\bar<X> X>: \bf<i> \sp<E><\bar<A> A> (\bar<X>, X) \to; P (\bar<X>, X)
+      >
+      を定めたい。
+      &m<\bf<i>> と &m<\sp<E><\bar<A> A>> の定義により、これは
+      &mb<
+        (`C x) \sb<><\bar<X> X>: \op<Hom> (\bar<X>, (A \buharprarr; X) \times; \bar<A>) \to; P (\bar<X>, X)
+      >
+      と表せる。
+      この左辺に属する射 &m<f: \bar<X> \to; (A \buharprarr; X) \times; \bar<A>> は、写像
+      &mb<
+        \sp<h><f> \coloneqq; \tort<\diag|bl|<
+          \v<P (\bar<A>, A)> \v<P ((A \buharprarr; X) \times; \bar<A>, (A \buharprarr; X) \times; A)> \v<P (\bar<X>, X)>
+          \ar|s="1",e="2"|<\sb<`z><A \buharprarr; X, \bar<A>, A>> \ar|s="2",e="3"|<P (f, \sb<\rm<ev>><AX>)>
+        >>
+      >
+      を定めるので、この写像による &m<x> の像として &m<P (\bar<X>, X)> の元 &m<\sp<h><f> x> が得られる。
+      これを改めて &m<(`C x) \sb<><\bar<X> X> f> とおくことで、写像
+      &mb<
+        (`C x) \sb<><\bar<X> X>: \op<Hom> (\bar<X>, (A \buharprarr; X) \times; \bar<A>) \to; P (\bar<X>, X)
+      >
+      を定めることができる。
+      これは &m<\bar<X>> と &m<X> に関して自然であることが確かめられるので、自然変換 &m<`C x: \bf<i> \sp<E><\bar<A> A> \raarr; P> が得られる。
+      さらに Tambra 加群の射 &m<`C x: (\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>) \raarr; (P, `z)> にもなっていることが示せる。
+      これにより、写像
+      &mb<
+        \array|align="rrcl"|<
+          \c<`C:> \c<P (\bar<A>, A)> \c<\longto;> \c<\sb<\op<Hom>><\bfrm<Tamb> (\scr<C>)> ((\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>), (P, `z))> \br;
+          \c; \c<x> \c<\longmapsto;> \c<`C x>
+        >
+      >
+      が得られる。
+    >
+    \p<
+      &m<`F> と &m<`C> は互いに逆になっており、さらに自然でもあるので、これより式 &m<\wheart;> が得られた。
     >
   >
   \thm|type="thm",id="homiso"|<
@@ -255,7 +310,7 @@
       とおく。
       すると、
       &mb<
-        \sp<`F><\bar<A> A> \circ; I = \op<Hom> (\bar<A>, \hyphen; A): \bfrm<StrEnd> (\scr<C>) \to; \bfrm<Set>
+        \sp<`F><\bar<A> A> \circ; \bf<i> = \op<Hom> (\bar<A>, \hyphen; A): \bfrm<StrEnd> (\scr<C>) \to; \bfrm<Set>
       >
       である。
       また、自己強関手の強度や Tambara 加群の Tambara 構造は省略する。
@@ -264,28 +319,28 @@
       さて、図式
       &mb<
         \diag<
-          \v<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A>, \sp<`F><\bar<S> S>)> \v<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (I \sp<E><\bar<A> A>, \hyphen;), \sp<`F><\bar<S> S>)> \br;
-          \v; \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (I \sp<E><\bar<A> A>, I \hyphen;), \sp<`F><\bar<S> S> \circ; I)> \br;
-          \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A> \circ; I, \sp<`F><\bar<S> S> \circ; I)> \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (\sp<E><\bar<A> A>, \hyphen;), \sp<`F><\bar<S> S> \circ; I)> \br;
+          \v<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A>, \sp<`F><\bar<S> S>)> \v<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (\bf<i> \sp<E><\bar<A> A>, \hyphen;), \sp<`F><\bar<S> S>)> \br;
+          \v; \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (\bf<i> \sp<E><\bar<A> A>, \bf<i> \hyphen;), \sp<`F><\bar<S> S> \circ; \bf<i>)> \br;
+          \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A> \circ; \bf<i>, \sp<`F><\bar<S> S> \circ; \bf<i>)> \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (\sp<E><\bar<A> A>, \hyphen;), \sp<`F><\bar<S> S> \circ; \bf<i>)> \br;
           \ar|s="1",e="2"|; \ar|s="5",e="6"|;
-          \ar|s="1",e="5",inv|<\hyphen; \circ; I> \ar|s="2",e="4"|<\hyphen; \circ; I>
+          \ar|s="1",e="5",inv|<\hyphen; \circ; \bf<i>> \ar|s="2",e="4"|<\hyphen; \circ; \bf<i>>
           \ar|s="4",e="6"|<Ш>
         >
       >
       を考える。
-      ここで、上下にある水平な写像は、\ref|type="cthm",id="rep"|; と\a|href="27.html#rep"|<定理 1.9> によって &m<\sp<`F><\bar<A> A>> と &m<\sp<`F><\bar<A> A> \circ; I> がそれぞれ &m<I \sp<E><\bar<A> A>> と &m<\sp<E><\bar<A> A>> によって表現されることから誘導される全単射である。 
-      また、右下の垂直な射 &m<Ш> は、&m<I> の関手性によって定まる写像 &m<\op<Hom> (\sp<E><\bar<A> A>, \hyphen;) \to; \op<Hom> (I \sp<E><\bar<A> A>, I \hyphen;)> の前合成である。
+      ここで、上下にある水平な写像は、\ref|type="cthm",id="rep"|; と\a|href="27.html#rep"|<定理 1.9> によって &m<\sp<`F><\bar<A> A>> と &m<\sp<`F><\bar<A> A> \circ; \bf<i>> がそれぞれ &m<\bf<i> \sp<E><\bar<A> A>> と &m<\sp<E><\bar<A> A>> によって表現されることから誘導される全単射である。 
+      また、右下の垂直な射 &m<Ш> は、&m<\bf<i>> の関手性によって定まる写像 &m<\op<Hom> (\sp<E><\bar<A> A>, \hyphen;) \to; \op<Hom> (\bf<i> \sp<E><\bar<A> A>, \bf<i> \hyphen;)> の前合成である。
       この図式は、水平な全単射の構成を具体的に見ることで、可換であることが分かる。
     >
     \p<
       次に、図式
       &mb<
         \diag<
-          \v<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (I \sp<E><\bar<A> A>, \hyphen;), \sp<`F><\bar<S> S>)> \v<\sp<`F><\bar<S> S> I \sp<E><\bar<A> A>> \br;
-          \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (I \sp<E><\bar<A> A>, I \hyphen;), \sp<`F><\bar<S> S> \circ; I)> \v; \br;
-          \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (\sp<E><\bar<A> A>, \hyphen;), \sp<`F><\bar<S> S> \circ; I)> \v<\sp<`F><\bar<S> S> I \sp<E><\bar<A> A>> \br;
+          \v<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (\bf<i> \sp<E><\bar<A> A>, \hyphen;), \sp<`F><\bar<S> S>)> \v<\sp<`F><\bar<S> S> \bf<i> \sp<E><\bar<A> A>> \br;
+          \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (\bf<i> \sp<E><\bar<A> A>, \bf<i> \hyphen;), \sp<`F><\bar<S> S> \circ; \bf<i>)> \v; \br;
+          \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (\sp<E><\bar<A> A>, \hyphen;), \sp<`F><\bar<S> S> \circ; \bf<i>)> \v<\sp<`F><\bar<S> S> \bf<i> \sp<E><\bar<A> A>> \br;
           \ar|s="1",e="2"|; \ar|s="5",e="6"|;
-          \ar|s="1",e="3",inv|<\hyphen; \circ; I> \ar|s="3",e="5",inv|<Ш>
+          \ar|s="1",e="3",inv|<\hyphen; \circ; \bf<i>> \ar|s="3",e="5",inv|<Ш>
           \ar|s="2",e="6",tip="none",line="2"|;
         >
       >
@@ -297,17 +352,17 @@
       上記の 2 つの可換図式を横に繋げると、可換図式
       &mb<
         \diag<
-          \v<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A>, \sp<`F><\bar<S> S>)> \v<\sp<`F><\bar<S> S> I \sp<E><\bar<A> A>> \br;
-          \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A> \circ; I, \sp<`F><\bar<S> S> \circ; I)> \v<\sp<`F><\bar<S> S> I \sp<E><\bar<A> A>> 
+          \v<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A>, \sp<`F><\bar<S> S>)> \v<\sp<`F><\bar<S> S> \bf<i> \sp<E><\bar<A> A>> \br;
+          \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A> \circ; \bf<i>, \sp<`F><\bar<S> S> \circ; \bf<i>)> \v<\sp<`F><\bar<S> S> \bf<i> \sp<E><\bar<A> A>> 
           \ar|s="1",e="2"|; \ar|s="3",e="4"|;
-          \ar|s="1",e="3",inv|<\hyphen; \circ; I>
+          \ar|s="1",e="3",inv|<\hyphen; \circ; \bf<i>>
           \ar|s="2",e="4",tip="none",line="2"|;
         >
       >
       が得られるが、水平な写像は全単射だったので、左側の垂直な写像も全単射になる。
       すなわち、
       &mb<
-        \sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A>, \sp<`F><\bar<S> S>) \cong; \sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A> \circ; I, \sp<`F><\bar<S> S> \circ; I)
+        \sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A>, \sp<`F><\bar<S> S>) \cong; \sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A> \circ; \bf<i>, \sp<`F><\bar<S> S> \circ; \bf<i>)
       >
       が成り立つということだが、この両辺の記号を戻せば
       &mb<
@@ -337,9 +392,13 @@
     >
   >
   \p<
-    ここからは余談。
-    \ref|type="cthm",id="rep"|; と\ref|type="cthm",id="homiso"|; の証明では、表現対象であることを保証する全単射を具体的に構成したり、図式の可換性を元の行き先を具体的に追って確かめたりしていて、あまり綺麗ではない。
-    \a|href="27.html#rep"|<定理 1.9> と\a|href="27.html#homiso"|<定理 1.10> から圏論の一般論の帰結としてより簡潔に示せそうな気がするが、あまりうまくいっていない。
+    以上により、素朴レンズ, van Laarhoven レンズ, プロ関手レンズという 3 通りのレンズの表現が全て等価であることが示せた。
+    次回は、コエンドを用いた 4 つ目のレンズの表現方法を紹介し、それを一般化してオプティックという概念を導入する。
+  >
+  \p<
+    ここからは余談である。
+    \ref|type="cthm",id="rep"|; と\ref|type="cthm",id="homiso"|; の証明では、表現対象であることを保証する全単射を具体的に構成したり、図式の可換性を元の行き先を具体的に追って確かめたりしているので、上の説明では省略した箇所を全て埋めようとすると地獄のような計算を強いられる。
+    \a|href="27.html#rep"|<定理 1.9> と\a|href="27.html#homiso"|<定理 1.10> から圏論の一般論の帰結としてより簡潔に示せそうな気がするが、今のところあまりうまくいっていない。
     何か助言をいただけると助かります。
   >
   \h1<参考文献>

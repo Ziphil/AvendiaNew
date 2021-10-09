@@ -11,9 +11,13 @@
     \ab|href="23.html",date="19/11/23"|<始代数の余極限による構成>
     \ab|href="22.html",date="19/11/16"|<代数と余代数と何とか morphism>
   >
+  \hb<レンズの圏論的考察>
+  \pb<
+    \ab|href="28.html",date="21/10/09"|<レンズの圏論的考察 (その 2)>
+    \ab|href="27.html",date="21/07/07"|<レンズの圏論的考察>
+  >
   \hb<Haskell>
   \pb<
-    \ab|href="27.html",date="21/07/07"|<レンズの圏論的考察>
     \ab|href="21.html",date="19/04/29"|<lens の仕組みを理解したい (その 2)>
     \ab|href="20.html",date="19/04/25"|<lens の仕組みを理解したい>
     \ab|href="19.html",date="19/03/11"|<\m<Monad> と \m<Applicative> の違い>
