@@ -211,7 +211,15 @@
   \p<
     \a|href="27.html#rep"|<定理 1.9> により、カルテシアン閉圏の対象 &m<\bar<A>, A> に対して、関手 &m<\op<Hom> (\bar<A>, \hyphen; A): \bfrm<StrEnd> (\scr<C>) \to; \bfrm<Set>> は表現可能である。
     この表現対象となる自己強関手を &m<(\sp<E><\bar<A> A>, \sp<`r><\bar<A> A>)> で表そう。
-    すると実は、関手 &m<\hyphen; (\bar<A>, A): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>> は、これが誘導する Tambara 加群 &m<(\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>)> によって表現可能である。
+    ここで、&m<\sp<E><\bar<A> A>> は、
+    &mb<
+      \array|align="rrcl"|<
+        \c<\sp<E><\bar<A> A>:> \c<\scr<C>> \c<\longto;> \c<\scr<C>> \br;
+        \c; \c<X> \c<\longmapsto;> \c<(A \buharprarr; X) \times; \bar<A>>
+      >
+    >
+    で与えられる関手であった。
+    実は、関手 &m<\hyphen; (\bar<A>, A): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>> は、この自己強関手が誘導する Tambara 加群 &m<(\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>)> によって表現可能である。
   >
   \thm|type="thm",id="rep"|<
     \p<
@@ -296,83 +304,27 @@
       カルテシアン閉圏 &m<\scr<C>> をとる。
       対象 &m<\bar<S>, S, \bar<A>, A> に対し、全単射
       &mb<
-        \sb<\op<Hom>><\bfrm<PLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A)) \cong; \sb<\op<Hom>><\bfrm<LLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A))
+        \sb<\op<Hom>><\bfrm<PLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A)) \cong; \sb<\op<Hom>><\bfrm<NLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A))
       >
       が存在する。
     >
   >
   \prf<
     \p<
-      ここでは、記号が煩雑になるのを防ぐため、
+      \ref|type="cthm",id="rep"|; と Yoneda の補題により、
       &mb<
-        \sp<`F><\bar<A> A> \coloneqq; \hyphen; (\bar<A>, A): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>
-      >
-      とおく。
-      すると、
-      &mb<
-        \sp<`F><\bar<A> A> \circ; \bf<i> = \op<Hom> (\bar<A>, \hyphen; A): \bfrm<StrEnd> (\scr<C>) \to; \bfrm<Set>
-      >
-      である。
-      また、自己強関手の強度や Tambara 加群の Tambara 構造は省略する。
-    >
-    \p<
-      さて、図式
-      &mb<
-        \diag<
-          \v<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A>, \sp<`F><\bar<S> S>)> \v<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (\bf<i> \sp<E><\bar<A> A>, \hyphen;), \sp<`F><\bar<S> S>)> \br;
-          \v; \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (\bf<i> \sp<E><\bar<A> A>, \bf<i> \hyphen;), \sp<`F><\bar<S> S> \circ; \bf<i>)> \br;
-          \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A> \circ; \bf<i>, \sp<`F><\bar<S> S> \circ; \bf<i>)> \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (\sp<E><\bar<A> A>, \hyphen;), \sp<`F><\bar<S> S> \circ; \bf<i>)> \br;
-          \ar|s="1",e="2"|; \ar|s="5",e="6"|;
-          \ar|s="1",e="5",inv|<\hyphen; \circ; \bf<i>> \ar|s="2",e="4"|<\hyphen; \circ; \bf<i>>
-          \ar|s="4",e="6"|<Ш>
+        \array|align="rcl"|<
+          \c<\sb<\op<Hom>><\bfrm<PLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A))> \c<=> \c<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\hyphen; (\bar<A>, A), \hyphen; (\bar<S>, S))> \br;
+          \c; \c<\cong;> \c<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\op<Hom> ((\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>), \hyphen;), \hyphen; (\bar<S>, S))> \br;
+          \c; \c<\cong;> \c<(\bf<i> \sp<E><\bar<A> A>) (\bar<S>, S)> \br;
+          \c; \c<\cong;> \c<\op<Hom> (\bar<S>, \sp<E><\bar<A> A> S))> \br;
+          \c; \c<\cong;> \c<\op<Hom> (\bar<S>, (A \buharprarr; S) \times; \bar<A>)> \br;
+          \c; \c<\cong;> \c<\op<Hom> (\bar<S>, A \buharprarr; S) \times; \op<Hom> (\bar<S>, \bar<A>)> \br;
+          \c; \c<\cong;> \c<\op<Hom> (\bar<S> \times; A, S) \times; \op<Hom> (\bar<S>, \bar<A>)> \br;
+          \c; \c<=> \c<\sb<\op<Hom>><\bfrm<NLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A))> \br;
         >
       >
-      を考える。
-      ここで、上下にある水平な写像は、\ref|type="cthm",id="rep"|; と\a|href="27.html#rep"|<定理 1.9> によって &m<\sp<`F><\bar<A> A>> と &m<\sp<`F><\bar<A> A> \circ; \bf<i>> がそれぞれ &m<\bf<i> \sp<E><\bar<A> A>> と &m<\sp<E><\bar<A> A>> によって表現されることから誘導される全単射である。 
-      また、右下の垂直な射 &m<Ш> は、&m<\bf<i>> の関手性によって定まる写像 &m<\op<Hom> (\sp<E><\bar<A> A>, \hyphen;) \to; \op<Hom> (\bf<i> \sp<E><\bar<A> A>, \bf<i> \hyphen;)> の前合成である。
-      この図式は、水平な全単射の構成を具体的に見ることで、可換であることが分かる。
-    >
-    \p<
-      次に、図式
-      &mb<
-        \diag<
-          \v<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (\bf<i> \sp<E><\bar<A> A>, \hyphen;), \sp<`F><\bar<S> S>)> \v<\sp<`F><\bar<S> S> \bf<i> \sp<E><\bar<A> A>> \br;
-          \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (\bf<i> \sp<E><\bar<A> A>, \bf<i> \hyphen;), \sp<`F><\bar<S> S> \circ; \bf<i>)> \v; \br;
-          \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (\sp<E><\bar<A> A>, \hyphen;), \sp<`F><\bar<S> S> \circ; \bf<i>)> \v<\sp<`F><\bar<S> S> \bf<i> \sp<E><\bar<A> A>> \br;
-          \ar|s="1",e="2"|; \ar|s="5",e="6"|;
-          \ar|s="1",e="3",inv|<\hyphen; \circ; \bf<i>> \ar|s="3",e="5",inv|<Ш>
-          \ar|s="2",e="6",tip="none",line="2"|;
-        >
-      >
-      を考える。
-      上下にある水平な写像は Yoneda の補題から保証される全単射である。
-      この全単射の構成により、この図式も可換であることが分かる。
-    >
-    \p<
-      上記の 2 つの可換図式を横に繋げると、可換図式
-      &mb<
-        \diag<
-          \v<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A>, \sp<`F><\bar<S> S>)> \v<\sp<`F><\bar<S> S> \bf<i> \sp<E><\bar<A> A>> \br;
-          \v<\sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A> \circ; \bf<i>, \sp<`F><\bar<S> S> \circ; \bf<i>)> \v<\sp<`F><\bar<S> S> \bf<i> \sp<E><\bar<A> A>> 
-          \ar|s="1",e="2"|; \ar|s="3",e="4"|;
-          \ar|s="1",e="3",inv|<\hyphen; \circ; \bf<i>>
-          \ar|s="2",e="4",tip="none",line="2"|;
-        >
-      >
-      が得られるが、水平な写像は全単射だったので、左側の垂直な写像も全単射になる。
-      すなわち、
-      &mb<
-        \sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A>, \sp<`F><\bar<S> S>) \cong; \sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\sp<`F><\bar<A> A> \circ; \bf<i>, \sp<`F><\bar<S> S> \circ; \bf<i>)
-      >
-      が成り立つということだが、この両辺の記号を戻せば
-      &mb<
-        \sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\hyphen; (\bar<A>, A), \hyphen; (\bar<S>, S)) \cong; \sb<\op<Hom>><`[\bfrm<StrEnd> (\scr<C>), \bfrm<Set>`]> (\op<Hom> (\bar<A>, \hyphen; A), \op<Hom> (\bar<S>, \hyphen; S))
-      >
-      が成り立つということであり、すなわち
-      &mb<
-        \sb<\op<Hom>><\bfrm<PLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A)) \cong; \sb<\op<Hom>><\bfrm<LLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A))
-      >
-      が得られた。
+      が成り立つので、示された。
     >
   >
   \thm|type="thm"|<
@@ -387,19 +339,14 @@
   >
   \prf<
     \p<
-      右の圏同型はすでに\a|href="27.html#homiso"|<定理 1.11> で示されているので左の圏同型を示せば良いが、そのためには\ref|type="cthm",id="homiso"|; の同型が合成を保つことを示せば良い。
+      圏同型 &m<\bfrm<LLens> (\scr<C>) \cong; \bfrm<NLens> (\scr<C>)> はすでに\a|href="27.html#homiso"|<定理 1.11> で示されている。
+      したがって、圏同型 &m<\bfrm<PLens> (\scr<C>) \cong; \bfrm<NLens> (\scr<C>)> を示せば良いが、そのためには\ref|type="cthm",id="homiso"|; の同型が合成を保つことを示せば良い。
       詳細は省略する。
     >
   >
   \p<
     以上により、素朴レンズ, van Laarhoven レンズ, プロ関手レンズという 3 通りのレンズの表現が全て等価であることが示せた。
     次回は、コエンドを用いた 4 つ目のレンズの表現方法を紹介し、それを一般化してオプティックという概念を導入する。
-  >
-  \p<
-    ここからは余談である。
-    \ref|type="cthm",id="rep"|; と\ref|type="cthm",id="homiso"|; の証明では、表現対象であることを保証する全単射を具体的に構成したり、図式の可換性を元の行き先を具体的に追って確かめたりしているので、上の説明では省略した箇所を全て埋めようとすると地獄のような計算を強いられる。
-    \a|href="27.html#rep"|<定理 1.9> と\a|href="27.html#homiso"|<定理 1.10> から圏論の一般論の帰結としてより簡潔に示せそうな気がするが、今のところあまりうまくいっていない。
-    何か助言をいただけると助かります。
   >
   \h1<参考文献>
   \ul<
