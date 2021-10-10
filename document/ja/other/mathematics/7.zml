@@ -1007,7 +1007,7 @@
   >
   \prf<
     \p<
-      Barendregt\cite<bu> の系 15.1.6 を参照。
+      Barendregt\ref|type="bib",id="bu"|; の系 15.1.6 を参照。
     >
   >
   \thm|type="lem",id="stepten"|<
