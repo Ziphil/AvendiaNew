@@ -7,11 +7,11 @@
 
   \h1<日記 (2021 年 10 月 9 日)>
   \p<
-    \a|href="28.html"|<7 月 7 日>では、レンズの van Laarhoven エンコーディングの圏論的定式化を行い、それがゲッターとセッターのタプルという素朴なレンズと等価であることを示した。
+    \a|href="27.html"|<7 月 7 日>では、レンズの van Laarhoven エンコーディングの圏論的定式化を行い、それがゲッターとセッターのタプルという素朴なレンズと等価であることを示した。
     今回は、自己プロ関手を用いたレンズの別のエンコーディング方法を圏論的に定式化し、これも同じく素朴なレンズと等価であることを示す。
   >
   \p<
-    なお、今回の議論の流れは \a|href="28.html"|<7 月 7 日>の議論とパラレルになっている。
+    なお、今回の議論の流れは \a|href="27.html"|<7 月 7 日>の議論とパラレルになっている。
     以下に概念の対応表を掲げておくので、比較しながら読むと理解が深まるかもしれない。
   >
   \table<
@@ -207,7 +207,6 @@
       によって定義する。
     >
   >
-
   \p<
     \a|href="27.html#rep"|<定理 1.9> により、カルテシアン閉圏の対象 &m<\bar<A>, A> に対して、関手 &m<\op<Hom> (\bar<A>, \hyphen; A): \bfrm<StrEnd> (\scr<C>) \to; \bfrm<Set>> は表現可能である。
     この表現対象となる自己強関手を &m<(\sp<E><\bar<A> A>, \sp<`r><\bar<A> A>)> で表そう。
@@ -263,12 +262,12 @@
     \p<
       この逆向きの写像を作るためには、&m<P (\bar<A>, A)> の元 &m<x> および対象 &m<\bar<X>, X> に対し、
       &mb<
-        (`C x) \sb<><\bar<X> X>: \bf<i> \sp<E><\bar<A> A> (\bar<X>, X) \to; P (\bar<X>, X)
+        (`C x) \sb<><\bar<X> X>: (\bf<i> \sp<E><\bar<A> A>) (\bar<X>, X) \longto; P (\bar<X>, X)
       >
       を定めたい。
       &m<\bf<i>> と &m<\sp<E><\bar<A> A>> の定義により、これは
       &mb<
-        (`C x) \sb<><\bar<X> X>: \op<Hom> (\bar<X>, (A \buharprarr; X) \times; \bar<A>) \to; P (\bar<X>, X)
+        (`C x) \sb<><\bar<X> X>: \op<Hom> (\bar<X>, (A \buharprarr; X) \times; \bar<A>) \longto; P (\bar<X>, X)
       >
       と表せる。
       この左辺に属する射 &m<f: \bar<X> \to; (A \buharprarr; X) \times; \bar<A>> は、写像
@@ -281,7 +280,7 @@
       を定めるので、この写像による &m<x> の像として &m<P (\bar<X>, X)> の元 &m<\sp<h><f> x> が得られる。
       これを改めて &m<(`C x) \sb<><\bar<X> X> f> とおくことで、写像
       &mb<
-        (`C x) \sb<><\bar<X> X>: \op<Hom> (\bar<X>, (A \buharprarr; X) \times; \bar<A>) \to; P (\bar<X>, X)
+        (`C x) \sb<><\bar<X> X>: \op<Hom> (\bar<X>, (A \buharprarr; X) \times; \bar<A>) \longto; P (\bar<X>, X)
       >
       を定めることができる。
       これは &m<\bar<X>> と &m<X> に関して自然であることが確かめられるので、自然変換 &m<`C x: \bf<i> \sp<E><\bar<A> A> \raarr; P> が得られる。
@@ -327,7 +326,7 @@
       が成り立つので、示された。
     >
   >
-  \thm|type="thm"|<
+  \thm|type="thm",id="catequiv"|<
     \p<
       カルテシアン閉圏 &m<\scr<C>> をとる。
       圏同型
@@ -339,8 +338,8 @@
   >
   \prf<
     \p<
-      圏同型 &m<\bfrm<LLens> (\scr<C>) \cong; \bfrm<NLens> (\scr<C>)> はすでに\a|href="27.html#homiso"|<定理 1.11> で示されている。
-      したがって、圏同型 &m<\bfrm<PLens> (\scr<C>) \cong; \bfrm<NLens> (\scr<C>)> を示せば良いが、そのためには\ref|type="cthm",id="homiso"|; の同型が合成を保つことを示せば良い。
+      圏同型 &m<\bfrm<LLens> (\scr<C>) \cong; \bfrm<NLens> (\scr<C>)> はすでに\a|href="27.html#catequiv"|<定理 1.11> で示されている。
+      したがって、圏同型 &m<\bfrm<PLens> (\scr<C>) \cong; \bfrm<NLens> (\scr<C>)> を示せば良いが、そのためには\ref|type="cthm",id="homiso"|; の全単射が合成を保つことを示せば良い。
       詳細は省略する。
     >
   >
