@@ -345,10 +345,10 @@
   >
   \p<
     以上により、素朴レンズ, van Laarhoven レンズ, プロ関手レンズという 3 通りのレンズの表現が全て等価であることが示せた。
-    次回は、コエンドを用いた 4 つ目のレンズの表現方法を紹介し、それを一般化してオプティックという概念を導入する。
+    次回は、コエンドを用いた 4 つ目のレンズの表現方法を紹介する。
   >
   \h1<参考文献>
-  \ul<
+  \ol<
     \li|id="cpoc"|<B. Clarke et al (2020)「Profunctor optics, a categorical update」arXiv:2001.07488>
     \li|id="rcox"|<M. Riley (2018)「Categories of optics」arXiv:1809.00738>
   >
