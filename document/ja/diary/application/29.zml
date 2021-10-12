@@ -20,7 +20,7 @@
       有限積をもつ圏 &m<\scr<C>> をとる。
       対象 &m<\bar<S>, S, \bar<A>, A> に対し、
       &mb<
-        \sb<\op<Lens>><\scr<C>> (\bar<S>, S`; \bar<A>, A) \coloneqq; \int<><M \in; \scr<C>> (\op<Hom> (\bar<S>, M \times; \bar<A>) \times; \op<Hom> (M \times; A, S))
+        \sb<\op<Lens>><\scr<C>> (\bar<S>, S`; \bar<A>, A) \coloneqq; \int<><K \in; \scr<C>> (\op<Hom> (\bar<S>, K \times; \bar<A>) \times; \op<Hom> (K \times; A, S))
       >
       とおく。
       この元 &m<`g> を\em<コエンドレンズ\fl<coend lens>> と呼び、&m<`g: (\bar<S>, S) \to; (\bar<A>, A)> で表す。
@@ -34,12 +34,12 @@
       有限積をもつ圏 &m<\scr<C>> をとる。
       対象 &m<\bar<S>, S, \bar<A>, A> に対し、
       &mb<
-        \sb<\op<Lens>><\scr<C>> (\bar<S>, S`; \bar<A>, A) = \frac<\coprod<M \in; \scr<C>> (\op<Hom> (\bar<S>, M \times; \bar<A>) \times; \op<Hom> (M \times; A, S))><\approx;>
+        \sb<\op<Lens>><\scr<C>> (\bar<S>, S`; \bar<A>, A) = \frac<\coprod<K \in; \scr<C>> (\op<Hom> (\bar<S>, K \times; \bar<A>) \times; \op<Hom> (K \times; A, S))><\approx;>
       >
       が成り立つ。
-      ただし、上記の &m<\approx;> とは、任意の射 &m<l: \bar<S> \to; M \times; \bar<A>>, &m<r': M' \times; A \to; S>, &m<h: M \to; M'> に対し、
+      ただし、上記の &m<\approx;> とは、任意の射 &m<l: \bar<S> \to; K \times; \bar<A>>, &m<r': K' \times; A \to; S>, &m<k: K \to; K'> に対し、
       &mb<
-        ((h \times; \sb<\rm<id>><\bar<A>>) \circ; l, r') \approx; (l, r' \circ; (h \times; \sb<\rm<id>><A>))
+        ((k \times; \sb<\rm<id>><\bar<A>>) \circ; l, r') \approx; (l, r' \circ; (k \times; \sb<\rm<id>><A>))
       >
       が成り立つような最小の同値関係とする。
     >
@@ -50,11 +50,11 @@
     >
   >
   \p<
-    上記の命題により、有限積をもつ圏の対象 &m<\bar<S>, S, \bar<A>, A> に対し、各コエンドレンズ &m<`g: (\bar<S>, S) \to; (\bar<A>, A)> は、ある対象 &m<M> を用いた 2 つの射 &m<l: \bar<S> \to; M \times; \bar<A>>, &m<r: M \times; A \to; S> によって代表される同値類として表せる。
-    そこで、このときに &m<`g> のことを &m<\langle; l, r \rangle; \sb<><M>> と書くことにする。
-    上記の命題中の同値関係の定義により、任意の射 &m<l: \bar<S> \to; M \times; \bar<A>>, &m<r': M' \times; A \to; S>, &m<h: M \to; M'> に対し、
+    上記の命題により、有限積をもつ圏の対象 &m<\bar<S>, S, \bar<A>, A> に対し、各コエンドレンズ &m<`g: (\bar<S>, S) \to; (\bar<A>, A)> は、ある対象 &m<K> を用いた 2 つの射 &m<l: \bar<S> \to; K \times; \bar<A>>, &m<r: K \times; A \to; S> によって代表される同値類として表せる。
+    そこで、このときに &m<`g> のことを &m<\langle; l, r \rangle; \sb<><K>> と書くことにする。
+    上記の命題中の同値関係の定義により、任意の射 &m<l: \bar<S> \to; K \times; \bar<A>>, &m<r': K' \times; A \to; S>, &m<k: K \to; K'> に対し、
     &mb<
-      \langle; (h \times; \sb<\rm<id>><\bar<A>>) \circ; l, r' \rangle; \sb<><M'> = \langle; l, r' \circ; (h \times; \sb<\rm<id>><A>) \rangle; \sb<><M>
+      \langle; (k \times; \sb<\rm<id>><\bar<A>>) \circ; l, r' \rangle; \sb<><K'> = \langle; l, r' \circ; (k \times; \sb<\rm<id>><A>) \rangle; \sb<><K>
     >
     が成り立つ。
   >
@@ -64,21 +64,21 @@
   \thm|type="def"|<
     \p<
       有限積をもつ圏 &m<\scr<C>> をとる。
-      コエンドレンズ &m<\langle; l, r \rangle; \sb<><M>: (\bar<S>, S) \to; (\bar<A>, A)>, &m<\langle; l', r' \rangle; \sb<><N>: (\bar<A>, A) \to; (\bar<B>, B)> に対し、
+      コエンドレンズ &m<\langle; l, r \rangle; \sb<><K>: (\bar<S>, S) \to; (\bar<A>, A)>, &m<\langle; l', r' \rangle; \sb<><L>: (\bar<A>, A) \to; (\bar<B>, B)> に対し、
       &mb<
         \array|align="rcl"|<
           \c<\sp<l><\ppr;>> \c<\coloneqq;> \c<\tort<\diag|bl|<
-            \v<\bar<S>> \v<M \times; \bar<A>> \v<M \times; N \times; \bar<B>>
+            \v<\bar<S>> \v<K \times; \bar<A>> \v<K \times; L \times; \bar<B>>
             \ar|s="1",e="2"|<l> \ar|s="2",e="3"|<\rm<id> \times; l'>
           >>> \br;
           \c<\sp<r><\ppr;>> \c<\coloneqq;> \c<\tort<\diag|bl|<
-            \v<M \times; N \times; B> \v<M \times; A> \v<S>
+            \v<K \times; L \times; B> \v<K \times; A> \v<S>
             \ar|s="1",e="2"|<\rm<id> \times; r'> \ar|s="2",e="3"|<r>
           >>>
         >
       >
       と定める。
-      これによって得られる素朴レンズ &m<\langle; \sp<l><\ppr;>, \sp<r><\ppr;> \rangle; \sb<><M \times; M'>: (\bar<S>, S) \to; (\bar<B>, B)> を &m<\langle; l, r \rangle; \sb<><M>> と &m<\langle; l', r' \rangle; \sb<><N>> の\em<合成\fl<composition>> という。
+      これによって得られる素朴レンズ &m<\langle; \sp<l><\ppr;>, \sp<r><\ppr;> \rangle; \sb<><K \times; L>: (\bar<S>, S) \to; (\bar<B>, B)> を &m<\langle; l, r \rangle; \sb<><K>> と &m<\langle; l', r' \rangle; \sb<><L>> の\em<合成\fl<composition>> という。
     >
   >
   \thm|type="def"|<
@@ -94,7 +94,7 @@
         &m<\bfrm<CLens> (\scr<C>)> の 2 つの対象 &m<(\bar<S>, S), (\bar<A>, A)> の間の射は、コエンドレンズ &m<`g: (\bar<S>, S) \to; (\bar<A>, A)> の全体とする。
         すなわち、
         &mb<
-          \sb<\op<Hom>><\bfrm<CLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A)) = \int<><M \in; \scr<C>> (\op<Hom> (\bar<S>, M \times; \bar<A>) \times; \op<Hom> (M \times; A, S))
+          \sb<\op<Hom>><\bfrm<CLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A)) = \int<><K \in; \scr<C>> (\op<Hom> (\bar<S>, K \times; \bar<A>) \times; \op<Hom> (K \times; A, S))
         >
         である。
       >
@@ -124,8 +124,8 @@
       コエンドに関する Yoneda の補題を用いると、
       &mb<
         \array|align="rcl"|<
-          \c<\sb<\op<Hom>><\bfrm<CLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A))> \c<=> \c<\int<><M \in; \scr<C>> (\op<Hom> (\bar<S>, M \times; \bar<A>) \times; \op<Hom> (M \times; A, S))> \br;
-          \c; \c<\cong;> \c<\int<><M \in; \scr<C>> (\op<Hom> (\bar<S>, M) \times; \op<Hom> (\bar<S>, \bar<A>) \times; \op<Hom> (M \times; A, S))> \br;
+          \c<\sb<\op<Hom>><\bfrm<CLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A))> \c<=> \c<\int<><K \in; \scr<C>> (\op<Hom> (\bar<S>, K \times; \bar<A>) \times; \op<Hom> (K \times; A, S))> \br;
+          \c; \c<\cong;> \c<\int<><K \in; \scr<C>> (\op<Hom> (\bar<S>, K) \times; \op<Hom> (\bar<S>, \bar<A>) \times; \op<Hom> (K \times; A, S))> \br;
           \c; \c<\cong;> \c<\op<Hom> (\bar<S>, \bar<A>) \times; \op<Hom> (\bar<S> \times; A, S)> \br;
           \c; \c<\cong;> \c<\sb<\op<Hom>><\bfrm<NLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A))> \br;
         >
@@ -135,17 +135,17 @@
   >
   \p<
     この全単射による元の対応は、以下のように具体的に書くこともできる。
-    コエンドレンズ &m<\langle; l, r \rangle; \sb<><M>: (\bar<S>, S) \to; (\bar<A>, A)> をとる。
-    &m<\sb<\rm<fst>><M \bar<A>>: M \times; \bar<A> \to; M> と &m<\sb<\rm<snd>><M \bar<A>>: M \times; \bar<A> \to; \bar<A>> をそれぞれ積の射影とすると、
+    コエンドレンズ &m<\langle; l, r \rangle; \sb<><K>: (\bar<S>, S) \to; (\bar<A>, A)> をとる。
+    &m<\sb<\rm<fst>><K \bar<A>>: K \times; \bar<A> \to; K> と &m<\sb<\rm<snd>><K \bar<A>>: K \times; \bar<A> \to; \bar<A>> をそれぞれ積の射影とすると、
     &mb<
       \array|align="rcl"|<
         \c<g> \c<\coloneqq;> \c<\tort<\diag|bl|<
-          \v<\bar<S>> \v<M \times; \bar<A>> \v<\bar<A>>
-          \ar|s="1",e="2"|<l> \ar|s="2",e="3"|<\sb<\rm<snd>><M \bar<A>>>
+          \v<\bar<S>> \v<K \times; \bar<A>> \v<\bar<A>>
+          \ar|s="1",e="2"|<l> \ar|s="2",e="3"|<\sb<\rm<snd>><K \bar<A>>>
         >>> \br;
         \c<p> \c<\coloneqq;> \c<\tort<\diag|bl|<
-          \v<\bar<S> \times; A> \v<M \times; \bar<A> \times; A> \v<M \times; A> \v<S>
-          \ar|s="1",e="2"|<l \times; \rm<id>> \ar|s="2",e="3"|<\sb<\rm<fst>><M \bar<A>> \times; \rm<id>> \ar|s="3",e="4"|<r>
+          \v<\bar<S> \times; A> \v<K \times; \bar<A> \times; A> \v<K \times; A> \v<S>
+          \ar|s="1",e="2"|<l \times; \rm<id>> \ar|s="2",e="3"|<\sb<\rm<fst>><K \bar<A>> \times; \rm<id>> \ar|s="3",e="4"|<r>
         >>>
       >
     >
@@ -200,7 +200,7 @@
     van Laarhoven レンズとプロ関手レンズに共通する特徴として、レンズの合成が本当の写像の合成として実現できるという点がある。
     4 つ目のコエンドレンズとは、特定のコエンドの元としてレンズを表現するもので、
     &mb<
-      \sb<\op<Hom>><\bfrm<CLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A)) = \int<><M \in; \scr<C>> (\op<Hom> (\bar<S>, M \times; \bar<A>) \times; \op<Hom> (M \times; A, S))
+      \sb<\op<Hom>><\bfrm<CLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A)) = \int<><K \in; \scr<C>> (\op<Hom> (\bar<S>, K \times; \bar<A>) \times; \op<Hom> (K \times; A, S))
     >
     の元であった。
     そして、これらの表現方法は全て等価なのであった。
@@ -216,7 +216,7 @@
   \ol<
     \li|id="cpoc"|<B. Clarke et al (2020)「Profunctor optics, a categorical update」arXiv:2001.07488>
     \li|id="ccx"|<F. Loregian (2021)『(Co)end Calculus』Cambridge University Press>
-    \li|id="rcox"|<M. Riley (2018)「Categories of optics」arXiv:1809.00738>
+    \li|id="rcox"|<K. Riley (2018)「Categories of optics」arXiv:1809.00738>
   >
 
 >
