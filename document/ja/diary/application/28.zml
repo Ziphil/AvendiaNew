@@ -39,7 +39,7 @@
     &mb<
       \array|align="rrcl"|<
         \c<\bf<i> F:> \c<\sp<\scr<C>><\circ;> \times; \scr<C>> \c<\longto;> \c<\bfrm<Set>> \br;
-        \c; \c<(\bar<X>, X)> \c<\longmapsto;> \c<\op<Hom> (\bar<X>, FX)>
+        \c; \c<(X, \bar<X>)> \c<\longmapsto;> \c<\op<Hom> (X, F \bar<X>)>
       >
     >
     が誘導される。
@@ -60,24 +60,24 @@
   \thm|type="def"|<
     \p<
       有限積をもつ圏 &m<\scr<C>> 上の自己プロ関手 &m<P: \scr<C> \vertrarr; \scr<C>> をとる。
-      対象 &m<M, \bar<X>, X> に対し、全ての変数に関して自然な射
+      対象 &m<M, X, \bar<X>> に対し、全ての変数に関して自然な射
       &mb<
-        \sb<`z><M \bar<X> X>: P (\bar<X>, X) \longto; P (M \times; \bar<X>, M \times; X)
+        \sb<`z><M X \bar<X>>: P (X, \bar<X>) \longto; P (M \times; X, M \times; \bar<X>)
       >
-      が定まっていて、任意の対象 &m<M, N, \bar<X>, X> に対し、図式
+      が定まっていて、任意の対象 &m<M, N, X, \bar<X>> に対し、図式
       &mb<
         \array|align="c"|<
           \c<\diag|hor="thk"|<
-            \v<P (\bar<X>, X)> \v<P ((M \times; N) \times; \bar<X>, (M \times; N) \times; X)> \br;
-            \v<P (N \times; \bar<X>, N \times; X)> \v<P (M \times; (N \times; \bar<X>), M \times; (N \times; X))>
-            \ar|s="1",e="2"|<\sb<`z><M \times; N, \bar<X>, X>>
-            \ar|s="1",e="3",inv|<\sb<`z><N \bar<X> X>> \ar|s="3",e="4",inv|<\sb<`z><M, N \times; \bar<X>, N \times; X>>
+            \v<P (X, \bar<X>)> \v<P ((M \times; N) \times; X, (M \times; N) \times; \bar<X>)> \br;
+            \v<P (N \times; X, N \times; \bar<X>)> \v<P (M \times; (N \times; X), M \times; (N \times; \bar<X>))>
+            \ar|s="1",e="2"|<\sb<`z><M \times; N, X, \bar<X>>>
+            \ar|s="1",e="3",inv|<\sb<`z><N X \bar<X>>> \ar|s="3",e="4",inv|<\sb<`z><M, N \times; X, N \times; \bar<X>>>
             \ar|s="2",e="4"|;
           >> \br;
           \c<\diag|hor="thn"|<
-            \v<P (\bar<X>, X)> \v; \v<P (1 \times; \bar<X>, 1 \times; X)> \br;
-            \v; \v<P (\bar<X>, X)> \v;
-            \ar|s="1",e="3"|<\sb<`z><1 \bar<X> X>>
+            \v<P (X, \bar<X>)> \v; \v<P (1 \times; X, 1 \times; \bar<X>)> \br;
+            \v; \v<P (X, \bar<X>)> \v;
+            \ar|s="1",e="3"|<\sb<`z><1 X \bar<X>>>
             \ar|s="1",e="5",tip="none",line="2"|; \ar|s="3",e="5"|;
           >>
         >
@@ -93,13 +93,13 @@
   \thm|type="def"|<
     \p<
       有限積をもつ圏 &m<\scr<C>> 上の Tambara 加群 &m<(P, `z), (Q, `j): \scr<C> \vertrarr; \scr<C>> および自然変換 &m<`u: P \raarr; Q> をとる。
-      任意の対象 &m<M, \bar<X>, X> に対し、
+      任意の対象 &m<M, X, \bar<X>> に対し、
       &mb<
         \diag|hor="thk"|<
-          \v<P (\bar<X>, X)> \v<Q (\bar<X>, X)> \br;
-          \v<P (M \times; \bar<X>, M \times; X)> \v<Q (M \times; \bar<X>, M \times; X)>
-          \ar|s="1",e="2"|<\sb<`u><\bar<X> X>> \ar|s="3",e="4",inv|<\sb<`u><M \times; \bar<X>, M \times; X>>
-          \ar|s="1",e="3",inv|<\sb<`z><M \bar<X> X>> \ar|s="2",e="4"|<\sb<`j><M \bar<X> X>>
+          \v<P (X, \bar<X>)> \v<Q (X, \bar<X>)> \br;
+          \v<P (M \times; X, M \times; \bar<X>)> \v<Q (M \times; X, M \times; \bar<X>)>
+          \ar|s="1",e="2"|<\sb<`u><X \bar<X>>> \ar|s="3",e="4",inv|<\sb<`u><M \times; X, M \times; \bar<X>>>
+          \ar|s="1",e="3",inv|<\sb<`z><M X \bar<X>>> \ar|s="2",e="4"|<\sb<`j><M X \bar<X>>>
         >
       >
       が可換であるとき、&m<`u> を \em<Tambara 加群の射\fl<morphism of — modules>> といい、&m<`u: (P, `z) \raarr; (Q, `j)> で表す。
@@ -149,11 +149,11 @@
   \prf<
     \p<
       自己関手 &m<F: \scr<C> \to; \scr<C>> 上の強度 &m<`t> から、自己プロ関手 &m<\bf<i> F: \scr<C> \vertrarr; \scr<C>> 上の Tambara 構造 &m<\bf<i> `t> を構成する。
-      対象 &m<M, \bar<X>, X> に対し、
+      対象 &m<M, X, \bar<X>> に対し、
       &mb<
-        (\bf<i> `t) \sb<><M \bar<X> X> \coloneqq; \tort<\diag|bl|<
-          \v<\op<Hom> (\bar<X>, F X)> \v<\op<Hom> (M \times; \bar<X>, M \times; F X)> \v<\op<Hom> (M \times; \bar<X>, F (M \times; X))>
-          \ar|s="1",e="2"|<M \times; \hyphen;> \ar|s="2",e="3"|<\sb<`t><MX> \circ; \hyphen;>
+        (\bf<i> `t) \sb<><M X \bar<X>> \coloneqq; \tort<\diag|bl|<
+          \v<\op<Hom> (X, F \bar<X>)> \v<\op<Hom> (M \times; X, M \times; F \bar<X>)> \v<\op<Hom> (M \times; X, F (M \times; \bar<X>))>
+          \ar|s="1",e="2"|<M \times; \hyphen;> \ar|s="2",e="3"|<\sb<`t><M\bar<X>> \circ; \hyphen;>
         >>
       >
       と定めると、これは全ての変数に関して自然である。
@@ -171,15 +171,15 @@
   \thm|type="def"|<
     \p<
       有限積をもつ圏 &m<\scr<C>> をとる。
-      対象 &m<\bar<A>, A> に対し、
+      対象 &m<A, \bar<A>> に対し、
       &mb<
         \array|align="rrcl"|<
-          \c<\hyphen; (\bar<A>, A):> \c<\bfrm<Tamb> (\scr<C>)> \c<\longto;> \c<\bfrm<Set>> \br;
-          \c; \c<(P, `z)> \c<\longmapsto;> \c<P (\bar<A>, A)>
+          \c<\hyphen; (A, \bar<A>):> \c<\bfrm<Tamb> (\scr<C>)> \c<\longto;> \c<\bfrm<Set>> \br;
+          \c; \c<(P, `z)> \c<\longmapsto;> \c<P (A, \bar<A>)>
         >
       >
       とおく。
-      このとき、対象 &m<\bar<S>, S, \bar<A>, A> に対し、自然変換 &m<`f: \hyphen; (\bar<A>, A) \raarr; \hyphen; (\bar<S>, S)> を\em<プロ関手レンズ\fl<profunctor lens>> という。
+      このとき、対象 &m<S, \bar<S>, A, \bar<A>> に対し、自然変換 &m<`f: \hyphen; (A, \bar<A>) \raarr; \hyphen; (S, \bar<S>)> を\em<プロ関手レンズ\fl<profunctor lens>> という。
     >
   >
   \thm|type="def"|<
@@ -189,13 +189,13 @@
     >
     \ul<
       \li*<
-        &m<\bfrm<PLens> (\scr<C>)> の対象は、&m<\scr<C>> の 2 つの対象の組 &m<(\bar<S>, S)> の全体とする。
+        &m<\bfrm<PLens> (\scr<C>)> の対象は、&m<\scr<C>> の 2 つの対象の組 &m<(S, \bar<S>)> の全体とする。
       >
       \li*<
-        &m<\bfrm<PLens> (\scr<C>)> の 2 つの対象 &m<(\bar<S>, S), (\bar<A>, A)> の間の射は、プロ関手レンズ &m<`f: \hyphen; (\bar<A>, A) \raarr; \hyphen; (\bar<S>, S)> の全体とする。
+        &m<\bfrm<PLens> (\scr<C>)> の 2 つの対象 &m<(S, \bar<S>), (A, \bar<A>)> の間の射は、プロ関手レンズ &m<`f: \hyphen; (A, \bar<A>) \raarr; \hyphen; (S, \bar<S>)> の全体とする。
         すなわち、
         &mb<
-          \sb<\op<Hom>><\bfrm<PLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A)) = \sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\hyphen; (\bar<A>, A), \hyphen; (\bar<S>, S))
+          \sb<\op<Hom>><\bfrm<PLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>)) = \sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\hyphen; (A, \bar<A>), \hyphen; (S, \bar<S>))
         >
         である。
       >
@@ -208,87 +208,87 @@
     >
   >
   \p<
-    \a|href="27.html#rep"|<定理 1.9> により、カルテシアン閉圏の対象 &m<\bar<A>, A> に対して、関手 &m<\op<Hom> (\bar<A>, \hyphen; A): \bfrm<StrEnd> (\scr<C>) \to; \bfrm<Set>> は表現可能である。
-    この表現対象となる自己強関手を &m<(\sp<E><\bar<A> A>, \sp<`r><\bar<A> A>)> で表そう。
-    ここで、&m<\sp<E><\bar<A> A>> は、
+    \a|href="27.html#rep"|<定理 1.9> により、カルテシアン閉圏の対象 &m<A, \bar<A>> に対して、関手 &m<\op<Hom> (A, \hyphen; \bar<A>): \bfrm<StrEnd> (\scr<C>) \to; \bfrm<Set>> は表現可能である。
+    この表現対象となる自己強関手を &m<(\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>)> で表そう。
+    ここで、&m<\sp<E><A \bar<A>>> は、
     &mb<
       \array|align="rrcl"|<
-        \c<\sp<E><\bar<A> A>:> \c<\scr<C>> \c<\longto;> \c<\scr<C>> \br;
-        \c; \c<X> \c<\longmapsto;> \c<(A \buharprarr; X) \times; \bar<A>>
+        \c<\sp<E><A \bar<A>>:> \c<\scr<C>> \c<\longto;> \c<\scr<C>> \br;
+        \c; \c<\bar<X>> \c<\longmapsto;> \c<(\bar<A> \buharprarr; \bar<X>) \times; A>
       >
     >
     で与えられる関手であった。
-    実は、関手 &m<\hyphen; (\bar<A>, A): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>> は、この自己強関手が誘導する Tambara 加群 &m<(\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>)> によって表現可能である。
+    実は、関手 &m<\hyphen; (A, \bar<A>): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>> は、この自己強関手が誘導する Tambara 加群 &m<(\bf<i> \sp<E><A \bar<A>>, \bf<i> \sp<`r><A \bar<A>>)> によって表現可能である。
   >
   \thm|type="thm",id="rep"|<
     \p<
       カルテシアン閉圏 &m<\scr<C>> をとる。
-      対象 &m<\bar<A>, A> に対し、関手 &m<\hyphen; (\bar<A>, A): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>> は表現可能であり、その表現対象は &m<(\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>)> である。
+      対象 &m<A, \bar<A>> に対し、関手 &m<\hyphen; (A, \bar<A>): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>> は表現可能であり、その表現対象は &m<(\bf<i> \sp<E><A \bar<A>>, \bf<i> \sp<`r><A \bar<A>>)> である。
     >
   >
   \prf<
     \p<
-      この &m<(\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>)> が実際に &m<\hyphen; (\bar<A>, A): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>> の表現対象であること、すなわち
+      この &m<(\bf<i> \sp<E><A \bar<A>>, \bf<i> \sp<`r><A \bar<A>>)> が実際に &m<\hyphen; (A, \bar<A>): \bfrm<Tamb> (\scr<C>) \to; \bfrm<Set>> の表現対象であること、すなわち
       &mb<
         &mark<\wheart;>
-        \sb<\op<Hom>><\bfrm<Tamb> (\scr<C>)> ((\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>), \hyphen;) \cong; \hyphen; (\bar<A>, A)
+        \sb<\op<Hom>><\bfrm<Tamb> (\scr<C>)> ((\bf<i> \sp<E><A \bar<A>>, \bf<i> \sp<`r><A \bar<A>>), \hyphen;) \cong; \hyphen; (A, \bar<A>)
       >
       が成り立つことを以下に示す。
     >
     \p<
       Tambara 加群 &m<(P, `z)> を固定する。
-      任意に Tambara 加群の射 &m<`u: (\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>) \raarr; (P, `z)> をとると、その成分として写像
+      任意に Tambara 加群の射 &m<`u: (\bf<i> \sp<E><A \bar<A>>, \bf<i> \sp<`r><A \bar<A>>) \raarr; (P, `z)> をとると、その成分として写像
       &mb<
-        \sb<`u><\bar<A> A>: \op<Hom> (\bar<A>, (A \buharprarr; A) \times; \bar<A>) \longto; P (\bar<A>, A)
+        \sb<`u><A \bar<A>>: \op<Hom> (A, (\bar<A> \buharprarr; \bar<A>) \times; A) \longto; P (A, \bar<A>)
       >
       が定まっている。
-      したがって、&m<\sb<\rm<id>><A>: A \to; A> の転置を &m<\sb<\rm<jd>><A>: 1 \to; A \buharprarr; A> と書くことにして、
+      したがって、&m<\sb<\rm<id>><\bar<A>>: \bar<A> \to; \bar<A>> の転置を &m<\sb<\rm<jd>><\bar<A>>: 1 \to; \bar<A> \buharprarr; \bar<A>> と書くことにして、
       &mb<
-        \sb<f><\bar<A> A> \coloneqq; \tort<\diag|bl|<
-          \v<\bar<A>> \v<1 \times; \bar<A>> \v<(A \buharprarr; A) \times; \bar<A>>
-          \ar|s="1",e="2"|; \ar|s="2",e="3"|<\sb<\rm<jd>><A> \times; \rm<id>>
+        \sb<f><A \bar<A>> \coloneqq; \tort<\diag|bl|<
+          \v<A> \v<1 \times; A> \v<(\bar<A> \buharprarr; \bar<A>) \times; A>
+          \ar|s="1",e="2"|; \ar|s="2",e="3"|<\sb<\rm<jd>><\bar<A>> \times; \rm<id>>
         >>
       >
-      とおけば、この像として &m<P (\bar<A>, A)> の元 &m<`F `u \coloneqq; \sb<`u><\bar<A> A> \sb<f><\bar<A> A>> が得られる。
+      とおけば、この像として &m<P (A, \bar<A>)> の元 &m<`F `u \coloneqq; \sb<`u><A \bar<A>> \sb<f><A \bar<A>>> が得られる。
       この操作は、写像
       &mb<
         \array|align="rrcl"|<
-          \c<`F:> \c<\sb<\op<Hom>><\bfrm<Tamb> (\scr<C>)> ((\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>), (P, `z))> \c<\longto;> \c<P (\bar<A>, A)> \br;
+          \c<`F:> \c<\sb<\op<Hom>><\bfrm<Tamb> (\scr<C>)> ((\bf<i> \sp<E><A \bar<A>>, \bf<i> \sp<`r><A \bar<A>>), (P, `z))> \c<\longto;> \c<P (A, \bar<A>)> \br;
           \c; \c<`u> \c<\longmapsto;> \c<`F `u>
         >
       >
       を定める。
     >
     \p<
-      この逆向きの写像を作るためには、&m<P (\bar<A>, A)> の元 &m<x> および対象 &m<\bar<X>, X> に対し、
+      この逆向きの写像を作るためには、&m<P (A, \bar<A>)> の元 &m<x> および対象 &m<X, \bar<X>> に対し、
       &mb<
-        (`C x) \sb<><\bar<X> X>: (\bf<i> \sp<E><\bar<A> A>) (\bar<X>, X) \longto; P (\bar<X>, X)
+        (`C x) \sb<><X \bar<X>>: (\bf<i> \sp<E><A \bar<A>>) (X, \bar<X>) \longto; P (X, \bar<X>)
       >
       を定めたい。
-      &m<\bf<i>> と &m<\sp<E><\bar<A> A>> の定義により、これは
+      &m<\bf<i>> と &m<\sp<E><A \bar<A>>> の定義により、これは
       &mb<
-        (`C x) \sb<><\bar<X> X>: \op<Hom> (\bar<X>, (A \buharprarr; X) \times; \bar<A>) \longto; P (\bar<X>, X)
+        (`C x) \sb<><X \bar<X>>: \op<Hom> (X, (\bar<A> \buharprarr; \bar<X>) \times; A) \longto; P (X, \bar<X>)
       >
       と表せる。
-      この左辺に属する射 &m<f: \bar<X> \to; (A \buharprarr; X) \times; \bar<A>> は、写像
+      この左辺に属する射 &m<f: X \to; (\bar<A> \buharprarr; \bar<X>) \times; A> は、写像
       &mb<
         \sp<h><f> \coloneqq; \tort<\diag|bl|<
-          \v<P (\bar<A>, A)> \v<P ((A \buharprarr; X) \times; \bar<A>, (A \buharprarr; X) \times; A)> \v<P (\bar<X>, X)>
-          \ar|s="1",e="2"|<\sb<`z><A \buharprarr; X, \bar<A>, A>> \ar|s="2",e="3"|<P (f, \sb<\rm<ev>><AX>)>
+          \v<P (A, \bar<A>)> \v<P ((\bar<A> \buharprarr; \bar<X>) \times; A, (\bar<A> \buharprarr; \bar<X>) \times; \bar<A>)> \v<P (X, \bar<X>)>
+          \ar|s="1",e="2"|<\sb<`z><\bar<A> \buharprarr; \bar<X>, A, \bar<A>>> \ar|s="2",e="3"|<P (f, \sb<\rm<ev>><\bar<A>\bar<X>>)>
         >>
       >
-      を定めるので、この写像による &m<x> の像として &m<P (\bar<X>, X)> の元 &m<\sp<h><f> x> が得られる。
-      これを改めて &m<(`C x) \sb<><\bar<X> X> f> とおくことで、写像
+      を定めるので、この写像による &m<x> の像として &m<P (X, \bar<X>)> の元 &m<\sp<h><f> x> が得られる。
+      これを改めて &m<(`C x) \sb<><X \bar<X>> f> とおくことで、写像
       &mb<
-        (`C x) \sb<><\bar<X> X>: \op<Hom> (\bar<X>, (A \buharprarr; X) \times; \bar<A>) \longto; P (\bar<X>, X)
+        (`C x) \sb<><X \bar<X>>: \op<Hom> (X, (\bar<A> \buharprarr; \bar<X>) \times; A) \longto; P (X, \bar<X>)
       >
       を定めることができる。
-      これは &m<\bar<X>> と &m<X> に関して自然であることが確かめられるので、自然変換 &m<`C x: \bf<i> \sp<E><\bar<A> A> \raarr; P> が得られる。
-      さらに Tambra 加群の射 &m<`C x: (\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>) \raarr; (P, `z)> にもなっていることが示せる。
+      これは &m<X> と &m<\bar<X>> に関して自然であることが確かめられるので、自然変換 &m<`C x: \bf<i> \sp<E><A \bar<A>> \raarr; P> が得られる。
+      さらに Tambra 加群の射 &m<`C x: (\bf<i> \sp<E><A \bar<A>>, \bf<i> \sp<`r><A \bar<A>>) \raarr; (P, `z)> にもなっていることが示せる。
       これにより、写像
       &mb<
         \array|align="rrcl"|<
-          \c<`C:> \c<P (\bar<A>, A)> \c<\longto;> \c<\sb<\op<Hom>><\bfrm<Tamb> (\scr<C>)> ((\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>), (P, `z))> \br;
+          \c<`C:> \c<P (A, \bar<A>)> \c<\longto;> \c<\sb<\op<Hom>><\bfrm<Tamb> (\scr<C>)> ((\bf<i> \sp<E><A \bar<A>>, \bf<i> \sp<`r><A \bar<A>>), (P, `z))> \br;
           \c; \c<x> \c<\longmapsto;> \c<`C x>
         >
       >
@@ -301,9 +301,9 @@
   \thm|type="thm",id="homiso"|<
     \p<
       カルテシアン閉圏 &m<\scr<C>> をとる。
-      対象 &m<\bar<S>, S, \bar<A>, A> に対し、全単射
+      対象 &m<S, \bar<S>, A, \bar<A>> に対し、全単射
       &mb<
-        \sb<\op<Hom>><\bfrm<PLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A)) \cong; \sb<\op<Hom>><\bfrm<NLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A))
+        \sb<\op<Hom>><\bfrm<PLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>)) \cong; \sb<\op<Hom>><\bfrm<NLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>))
       >
       が存在する。
     >
@@ -313,14 +313,14 @@
       \ref|type="cthm",id="rep"|; と Yoneda の補題により、
       &mb<
         \array|align="rcl"|<
-          \c<\sb<\op<Hom>><\bfrm<PLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A))> \c<=> \c<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\hyphen; (\bar<A>, A), \hyphen; (\bar<S>, S))> \br;
-          \c; \c<\cong;> \c<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\op<Hom> ((\bf<i> \sp<E><\bar<A> A>, \bf<i> \sp<`r><\bar<A> A>), \hyphen;), \hyphen; (\bar<S>, S))> \br;
-          \c; \c<\cong;> \c<(\bf<i> \sp<E><\bar<A> A>) (\bar<S>, S)> \br;
-          \c; \c<\cong;> \c<\op<Hom> (\bar<S>, \sp<E><\bar<A> A> S))> \br;
-          \c; \c<\cong;> \c<\op<Hom> (\bar<S>, (A \buharprarr; S) \times; \bar<A>)> \br;
-          \c; \c<\cong;> \c<\op<Hom> (\bar<S>, A \buharprarr; S) \times; \op<Hom> (\bar<S>, \bar<A>)> \br;
-          \c; \c<\cong;> \c<\op<Hom> (\bar<S> \times; A, S) \times; \op<Hom> (\bar<S>, \bar<A>)> \br;
-          \c; \c<=> \c<\sb<\op<Hom>><\bfrm<NLens> (\scr<C>)> ((\bar<S>, S), (\bar<A>, A))> \br;
+          \c<\sb<\op<Hom>><\bfrm<PLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>))> \c<=> \c<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\hyphen; (A, \bar<A>), \hyphen; (S, \bar<S>))> \br;
+          \c; \c<\cong;> \c<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<C>), \bfrm<Set>`]> (\op<Hom> ((\bf<i> \sp<E><A \bar<A>>, \bf<i> \sp<`r><A \bar<A>>), \hyphen;), \hyphen; (S, \bar<S>))> \br;
+          \c; \c<\cong;> \c<(\bf<i> \sp<E><A \bar<A>>) (S, \bar<S>)> \br;
+          \c; \c<\cong;> \c<\op<Hom> (S, \sp<E><A \bar<A>> \bar<S>))> \br;
+          \c; \c<\cong;> \c<\op<Hom> (S, (\bar<A> \buharprarr; \bar<S>) \times; A)> \br;
+          \c; \c<\cong;> \c<\op<Hom> (S, \bar<A> \buharprarr; \bar<S>) \times; \op<Hom> (S, A)> \br;
+          \c; \c<\cong;> \c<\op<Hom> (S \times; \bar<A>, \bar<S>) \times; \op<Hom> (S, A)> \br;
+          \c; \c<=> \c<\sb<\op<Hom>><\bfrm<NLens> (\scr<C>)> ((S, \bar<S>), (A, \bar<A>))> \br;
         >
       >
       が成り立つので、示された。
