@@ -182,22 +182,22 @@
   \thm|type="def"|<
     \p<
       オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
-      圏 &m<\bfrm<Lens> (\scr<W>)> を、
+      圏 &m<\bfrm<PLens> (\scr<W>)> を、
     >
     \ul<
       \li*<
-        &m<\bfrm<Lens> (\scr<W>)> の対象は、&m<\scr<C>> の対象と &m<\bar<\scr<C>>> の対象の組 &m<(S, \bar<S>)> の全体とする。
+        &m<\bfrm<PLens> (\scr<W>)> の対象は、&m<\scr<C>> の対象と &m<\bar<\scr<C>>> の対象の組 &m<(S, \bar<S>)> の全体とする。
       >
       \li*<
-        &m<\bfrm<Lens> (\scr<W>)> の 2 つの対象 &m<(S, \bar<S>), (A, \bar<A>)> の間の射は、プロ関手オプティック &m<`f: \hyphen; (A, \bar<A>) \raarr; \hyphen; (S, \bar<S>)> の全体とする。
+        &m<\bfrm<PLens> (\scr<W>)> の 2 つの対象 &m<(S, \bar<S>), (A, \bar<A>)> の間の射は、プロ関手オプティック &m<`f: \hyphen; (A, \bar<A>) \raarr; \hyphen; (S, \bar<S>)> の全体とする。
         すなわち、
         &mb<
-          \sb<\op<Hom>><\bfrm<Lens> (\scr<W>)> ((S, \bar<S>), (A, \bar<A>)) = \sb<\op<Hom>><`[\bfrm<Tamb> (\scr<W>), \bfrm<Set>`]> (\hyphen; (A, \bar<A>), \hyphen; (S, \bar<S>))
+          \sb<\op<Hom>><\bfrm<PLens> (\scr<W>)> ((S, \bar<S>), (A, \bar<A>)) = \sb<\op<Hom>><`[\bfrm<Tamb> (\scr<W>), \bfrm<Set>`]> (\hyphen; (A, \bar<A>), \hyphen; (S, \bar<S>))
         >
         である。
       >
       \li*<
-        &m<\bfrm<Lens> (\scr<W>)> の射の合成は、通常の自然変換の合成を逆向きに行うものとする。
+        &m<\bfrm<PLens> (\scr<W>)> の射の合成は、通常の自然変換の合成を逆向きに行うものとする。
       >
     >
     \p<
@@ -249,7 +249,7 @@
       オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
       対象 &m<S, \bar<S>, A, \bar<A>> に対し、全単射
       &mb<
-        \sb<\op<Hom>><\bfrm<Lens> (\scr<W>)> ((S, \bar<S>), (A, \bar<A>)) \cong; \sb<\op<Hom>><\bfrm<CLens> (\scr<W>)> ((S, \bar<S>), (A, \bar<A>))
+        \sb<\op<Hom>><\bfrm<PLens> (\scr<W>)> ((S, \bar<S>), (A, \bar<A>)) \cong; \sb<\op<Hom>><\bfrm<CLens> (\scr<W>)> ((S, \bar<S>), (A, \bar<A>))
       >
       が存在する。
     >
@@ -259,7 +259,7 @@
       \ref|type="cthm",id="rep"|; と Yoneda の補題により、
       &mb<
         \array|align="rcl"|<
-          \c<\sb<\op<Hom>><\bfrm<Lens> (\scr<W>)> ((S, \bar<S>), (A, \bar<A>))> \c<=> \c<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<W>), \bfrm<Set>`]> (\hyphen; (A, \bar<A>), \hyphen; (S, \bar<S>))> \br;
+          \c<\sb<\op<Hom>><\bfrm<PLens> (\scr<W>)> ((S, \bar<S>), (A, \bar<A>))> \c<=> \c<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<W>), \bfrm<Set>`]> (\hyphen; (A, \bar<A>), \hyphen; (S, \bar<S>))> \br;
           \c; \c<\cong;> \c<\sb<\op<Hom>><`[\bfrm<Tamb> (\scr<W>), \bfrm<Set>`]> (\op<Hom> ((\sp<L><A \bar<A>>, \sp<`h><A \bar<A>>), \hyphen;), \hyphen; (S, \bar<S>))> \br;
           \c; \c<\cong;> \c<\sp<W><A \bar<A>> (S, \bar<S>)> \br;
           \c; \c<=> \c<\sb<\rm<Optic>><\scr<W>> (S, \bar<S>`; A, \bar<A>)> \br;
@@ -274,7 +274,7 @@
       オプティック領域 &m<\scr<W>> をとる。
       圏同型
       &mb<
-        \bfrm<Lens> (\scr<W>) \cong; \bfrm<CLens> (\scr<W>)
+        \bfrm<PLens> (\scr<W>) \cong; \bfrm<CLens> (\scr<W>)
       >
       が成立する。
     >
