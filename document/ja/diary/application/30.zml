@@ -55,7 +55,7 @@
       オプティック領域 &m<\scr<W> \coloneqq; (\scr<C>, \bar<\scr<C>>, \scr<K>`; \oslash|ord|;, \obackslash|ord|;)> をとる。
       このとき、&m<\scr<C>> の対象 &m<S, A> と &m<\bar<\scr<C>>> の対象 &m<\bar<S>, \bar<A>> に対し、
       &mb<
-        \sb<\rm<Optic>><\scr<W>> (S, \bar<S>`; A, \bar<A>) \coloneqq; \int<><M \in; \scr<K>> (\sb<\op<Hom>><\scr<C>> (S, M \oslash; A) \times; \sb<\op<Hom>><\bar<\scr<C>>> (M \obackslash; \bar<A>, \bar<S>))
+        \sb<\rm<Optic>><\scr<W>> (S, \bar<S>`; A, \bar<A>) \coloneqq; \int<><K \in; \scr<K>> (\sb<\op<Hom>><\scr<C>> (S, K \oslash; A) \times; \sb<\op<Hom>><\bar<\scr<C>>> (K \obackslash; \bar<A>, \bar<S>))
       >
       の元 &m<`g> を\em<コエンドオプティック\fl<coend optic>> と呼び、&m<`g: (S, \bar<S>) \to; (A, \bar<A>)> で表す。
     >
