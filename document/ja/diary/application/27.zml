@@ -106,7 +106,7 @@
       有限積をもつ圏 &m<\scr<C>> 上の自己関手 &m<F: \scr<C> \to; \scr<C>> をとる。
       対象 &m<M, \bar<X>> に対し、全ての変数に関して自然な射
       &mb<
-        \sb<`t><M \bar<X>>: M \times; F \bar<X> \longto; F (M \times; \bar<X>)
+        \sb<`s><M \bar<X>>: M \times; F \bar<X> \longto; F (M \times; \bar<X>)
       >
       が定まっていて、任意の対象 &m<M, N, \bar<X>> に対し、図式
       &mb<
@@ -114,21 +114,21 @@
           \c<\diag<
             \v<(M \times; N) \times; F \bar<X>> \v; \v<F ((M \times; N) \times; \bar<X>)> \br;
             \v<M \times; (N \times; F \bar<X>)> \v<M \times; F (N \times; \bar<X>)> \v<F (M \times; (N \times; \bar<X>))>
-            \ar|s="1",e="3"|<\sb<`t><M \times; N, \bar<X>>>
-            \ar|s="4",e="5",inv|<\rm<id> \times; \sb<`t><N\bar<X>>> \ar|s="5",e="6",inv|<\sb<`t><M, N \times; \bar<X>>>
+            \ar|s="1",e="3"|<\sb<`s><M \times; N, \bar<X>>>
+            \ar|s="4",e="5",inv|<\rm<id> \times; \sb<`s><N\bar<X>>> \ar|s="5",e="6",inv|<\sb<`s><M, N \times; \bar<X>>>
             \ar|s="1",e="4"|; \ar|s="3",e="6"|;
           >> \br;
           \c<\diag|hor="thn"|<
             \v; \v<F \bar<X>> \v; \br;
             \v<1 \times; F \bar<X>> \v; \v<F (1 \times; \bar<X>)>
-            \ar|s="4",e="6",inv|<\sb<`t><1 \bar<X>>>
+            \ar|s="4",e="6",inv|<\sb<`s><1 \bar<X>>>
             \ar|s="2",e="4"|; \ar|s="2",e="6"|;
           >>
         >
       >
       が全て可換であるとする。
       なお、ラベルのない射は標準的な同型射を表している。
-      このとき、&m<`t> を &m<F> に対する\em<強度\fl<strength>> といい、組 &m<(F, `t)> を\em<自己強関手\fl<strong endofunctor>> という。
+      このとき、&m<`s> を &m<F> に対する\em<強度\fl<strength>> といい、組 &m<(F, `s)> を\em<自己強関手\fl<strong endofunctor>> という。
     >
   >
   \p<
@@ -136,17 +136,17 @@
   >
   \thm|type="def"|<
     \p<
-      有限積をもつ圏 &m<\scr<C>> 上の自己強関手 &m<(F, `t), (G, `s): \scr<C> \to; \scr<C>> および自然変換 &m<`u: F \raarr; G> をとる。
+      有限積をもつ圏 &m<\scr<C>> 上の自己強関手 &m<(F, `s), (G, `t): \scr<C> \to; \scr<C>> および自然変換 &m<`u: F \raarr; G> をとる。
       任意の対象 &m<M, \bar<X>> に対し、
       &mb<
         \diag<
           \v<M \times; F\bar<X>> \v<M \times; G\bar<X>> \br;
           \v<F (M \times; \bar<X>)> \v<G (M \times; \bar<X>)>
           \ar|s="1",e="2"|<\rm<id> \times; \sb<`u><\bar<X>>> \ar|s="3",e="4",inv|<\sb<`u><M \times; \bar<X>>>
-          \ar|s="1",e="3",inv|<\sb<`t><M \bar<X>>> \ar|s="2",e="4"|<\sb<`s><M \bar<X>>>
+          \ar|s="1",e="3",inv|<\sb<`s><M \bar<X>>> \ar|s="2",e="4"|<\sb<`t><M \bar<X>>>
         >
       >
-      が可換であるとき、&m<`u> を\em<強自然変換\fl<strong natural transformation>> といい、&m<`u: (F, `t) \raarr; (G, `s)> で表す。
+      が可換であるとき、&m<`u> を\em<強自然変換\fl<strong natural transformation>> といい、&m<`u: (F, `s) \raarr; (G, `t)> で表す。
     >
   >
   \p<
@@ -159,10 +159,10 @@
     >
     \ul<
       \li*<
-        &m<\bfrm<StrEnd> (\scr<C>)> の対象は、&m<\scr<C>> 上の自己強関手 &m<(F, `t)> の全体とする。
+        &m<\bfrm<StrEnd> (\scr<C>)> の対象は、&m<\scr<C>> 上の自己強関手 &m<(F, `s)> の全体とする。
       >
       \li*<
-        &m<\bfrm<StrEnd> (\scr<C>)> の 2 つの対象 &m<(F, `t), (G, `s)> の間の射は、強自然変換 &m<`u: (F, `t) \raarr; (G, `s)> の全体とする。
+        &m<\bfrm<StrEnd> (\scr<C>)> の 2 つの対象 &m<(F, `s), (G, `t)> の間の射は、強自然変換 &m<`u: (F, `s) \raarr; (G, `t)> の全体とする。
       >
     >
     \p<
@@ -181,7 +181,7 @@
       &mb<
         \array|align="rrcl"|<
           \c<\op<Hom> (A, \hyphen; \bar<A>):> \c<\bfrm<StrEnd> (\scr<C>)> \c<\longto;> \c<\bfrm<Set>> \br;
-          \c; \c<(F, `t)> \c<\longmapsto;> \c<\op<Hom> (A, F \bar<A>)>
+          \c; \c<(F, `s)> \c<\longmapsto;> \c<\op<Hom> (A, F \bar<A>)>
         >
       >
       とおく。
@@ -268,8 +268,8 @@
       が成り立つことを以下に示す。
     >
     \p<
-      自己強関手 &m<(F, `t)> を固定する。
-      任意の強自然変換 &m<`u: (\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>) \raarr; (F, `t)> に対し、&m<\sb<\rm<id>><\bar<A>>: \bar<A> \to; \bar<A>> の転置を &m<\sb<\rm<jd>><\bar<A>>: 1 \to; \bar<A> \buharprarr; \bar<A>> と書くことにして、
+      自己強関手 &m<(F, `s)> を固定する。
+      任意の強自然変換 &m<`u: (\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>) \raarr; (F, `s)> に対し、&m<\sb<\rm<id>><\bar<A>>: \bar<A> \to; \bar<A>> の転置を &m<\sb<\rm<jd>><\bar<A>>: 1 \to; \bar<A> \buharprarr; \bar<A>> と書くことにして、
       &mb<
         `F `u \coloneqq; \tort<\diag|bl|<
           \v<A> \v<1 \times; A> \v<(\bar<A> \buharprarr; \bar<A>) \times; A> \v<F \bar<A>>
@@ -279,7 +279,7 @@
       とおくと、これは写像
       &mb<
         \array|align="rrcl"|<
-          \c<`F:> \c<\sb<\op<Hom>><\bfrm<StrEnd> (\scr<C>)> ((\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>), (F, `t))> \c<\longto;> \c<\sb<\op<Hom>><\scr<C>> (A, F \bar<A>)> \br;
+          \c<`F:> \c<\sb<\op<Hom>><\bfrm<StrEnd> (\scr<C>)> ((\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>), (F, `s))> \c<\longto;> \c<\sb<\op<Hom>><\scr<C>> (A, F \bar<A>)> \br;
           \c; \c<`u> \c<\longmapsto;> \c<`F `u>
         >
       >
@@ -290,15 +290,15 @@
       &mb<
         (`C f) \sb<><\bar<X>> \coloneqq; \tort<\diag|bl|<
           \v<(\bar<A> \buharprarr; \bar<X>) \times; A> \v<(\bar<A> \buharprarr; \bar<X>) \times; F \bar<A>> \v<F ((\bar<A> \buharprarr; \bar<X>) \times; \bar<A>)> \v<F \bar<X>>
-          \ar|s="1",e="2"|<\rm<id> \times; f> \ar|s="2",e="3"|<\sb<`t><\bar<A> \buharprarr; \bar<X>, \bar<A>>> \ar|s="3",e="4"|<F \sb<\rm<ev>><\bar<A> \bar<X>>>
+          \ar|s="1",e="2"|<\rm<id> \times; f> \ar|s="2",e="3"|<\sb<`s><\bar<A> \buharprarr; \bar<X>, \bar<A>>> \ar|s="3",e="4"|<F \sb<\rm<ev>><\bar<A> \bar<X>>>
         >>
       >
       とおくと、これは &m<\bar<X>> に関して自然なので、自然変換 &m<`C f: \sp<E><A \bar<A>> \raarr; F> が得られる。
-      さらにこれは強自然変換 &m<`C f: (\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>) \raarr; (F, `t)> にもなっていることが確かめられる。
+      さらにこれは強自然変換 &m<`C f: (\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>) \raarr; (F, `s)> にもなっていることが確かめられる。
       これにより、写像
       &mb<
         \array|align="rrcl"|<
-          \c<`C:> \c<\sb<\op<Hom>><\scr<C>> (A, F \bar<A>)> \c<\longto;> \c<\sb<\op<Hom>><\bfrm<StrEnd> (\scr<C>)> ((\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>), (F, `t))> \br;
+          \c<`C:> \c<\sb<\op<Hom>><\scr<C>> (A, F \bar<A>)> \c<\longto;> \c<\sb<\op<Hom>><\bfrm<StrEnd> (\scr<C>)> ((\sp<E><A \bar<A>>, \sp<`r><A \bar<A>>), (F, `s))> \br;
           \c; \c<f> \c<\longmapsto;> \c<`C f>
         >
       >
