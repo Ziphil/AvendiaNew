@@ -7,7 +7,8 @@
 
 
 ## 概要
-シャレイア語公式サイト『[Avendia](http://ziphil.com/)』を生成するためのスクリプトとその原稿ファイルです。
+『[Avendia](http://ziphil.com/)』の生成スクリプトと原稿ファイルは、[TypeScript 実装](https://github.com/Ziphil/AvendiaTertia)を用いるものに移行しました。
+このリポジトリはこれ以上更新されません。
 
 ## 下準備
 
